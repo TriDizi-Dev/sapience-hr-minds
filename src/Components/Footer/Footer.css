@@ -112,6 +112,85 @@
     margin-top:2vw;
  }
 
- @media screen and (min-width:320px) and (max-width:720px) {
-    
- }
+ 
+ @media (min-width: 320px) and (max-width: 720px) {
+    .footer_main {
+      padding: 4vw;
+      flex-direction: column;
+    }
+  
+    .footer_outer {
+      flex-direction: column;
+      align-items: center;
+      gap: 4vw;
+    }
+  
+    .footer_logo {
+      font-size: 6vw;
+      text-align: center;
+    }
+  
+    .footer_left_para {
+      width: 90vw;
+      font-size: 3.5vw;
+      margin-top: 4vw;
+      text-align: justify;
+    }
+  
+    .footer_right_outer_main {
+      margin-top: 4vw;
+      gap: 3vw;
+    }
+  
+    .footer_right_outer {
+        display: flex;
+        justify-content: space-around;
+           width: 90vw;
+      }
+  
+    .footer_right_bottom_icons {
+      width: 90vw;
+      justify-content: center;
+      gap: 4vw;
+      margin-top: 3vw;
+    }
+  
+    .footer_icons_outer {
+      width: 8vw;
+      height: 8vw;
+    }
+  
+    .footer_icons {
+      font-size: 4vw;
+    }
+  
+    .footer_bottom {
+      align-items: center;
+      text-align: center;
+    }
+  
+    .services_headeing,
+    .footer_company_heading {
+      font-size: 4.2vw;
+      text-align: center;
+    }
+  
+    .footer_services_items,
+    .company_list_items {
+      font-size: 3.5vw;
+      text-align: center;
+    }
+  
+    .footer_bottom_line {
+      width: 90vw;
+      margin-top: 4vw;
+    }
+  
+    .footer_bottom_text {
+      width: 90vw;
+      font-size: 3.2vw;
+      margin-top: 4vw;
+      text-align: center;
+    }
+  }
+  
