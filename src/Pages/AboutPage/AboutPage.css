@@ -1,0 +1,363 @@
+.About_Main_Container {
+    width: 100%;
+    margin-top: 10vw;
+}
+
+.About_Heading,
+.Section3_Heading1 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.7vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #6E5258;
+
+}
+
+.About_Sub_Heading,
+.Section3_Heading2 {
+    font-weight: 700;
+    font-size: 3.3vw;
+    line-height: 100%;
+    letter-spacing: .1vw;
+    text-align: center;
+    color: #000000;
+    margin-top: 2.2vw;
+}
+
+.Image_Text_Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4vw;
+    margin-top: 2vw;
+}
+
+.Image_About img {
+    width: 100%;
+    height: 29.5vw;
+    /* 400px / 1440 * 100 */
+    border-radius: 1.39vw;
+    /* 20px / 1440 * 100 */
+}
+
+.Text_Container {
+    width: 39vw;
+    /* 552px / 1440 * 100 */
+    height: 21.67vw;
+    /* 312px / 1440 * 100 */
+}
+
+
+.Text_Container {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    margin-top: -3vw;
+}
+
+.Text_Container p {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.2vw;
+    line-height: 1.5vw;
+    letter-spacing: .1vw;
+    color: #000000B2;
+}
+
+.Images_Background {
+    /* display: flex; */
+    position: relative;
+    /* gap: 50vw; */
+    /* border: 1px solid; */
+    /* overflow: hidden; */
+}
+
+.blueLayer,
+.orangeLayer {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -100;
+}
+
+.orangeLayer {
+    top: -60vh;
+}
+
+.blueLayer {
+    top: -100vh;
+
+}
+
+.About_page_section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8vw;
+}
+
+.Head_Section2 {
+    font-weight: 700;
+    font-size: 3.3vw;
+    line-height: 100%;
+    letter-spacing: .1vw;
+    color: #000000;
+    margin-top: 2.2vw;
+}
+
+.Left_side_container {
+    margin-top: -10vw;
+}
+
+.Text_container_layer2 {
+    width: 41vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    margin-top: 2vw;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.2vw;
+    line-height: 1.5vw;
+    letter-spacing: .1vw;
+    color: #000000B2;
+}
+
+.Section_main_Container {
+    position: relative;
+}
+
+.Right_side_Images_container {
+    position: relative;
+    left: 5vw;
+    width: 45vw;
+    /* margin-left: 4vw; */
+}
+
+.PersonImage {
+    position: absolute;
+    top: -3vw;
+    height: 38vw;
+    right: 5vw;
+}
+
+.SquareGroup {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: -2vw;
+    top: -2vw;
+    z-index: -1;
+}
+
+.Tringle_Group {
+    position: absolute;
+    bottom: 10vw;
+    left: -8vw;
+}
+
+.TradeMark_image {
+    position: absolute;
+    top: 5vw;
+    left: -10vw;
+}
+
+.Circle_image {
+    position: absolute;
+    top: -4vw;
+    right: 6vw;
+}
+
+.plusIcon {
+    position: absolute;
+    bottom: 15vw;
+    right: 3vw;
+}
+
+.Section3_Main_Container {
+    margin-top: -4vw;
+}
+
+.Section3_Heading_para {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.2vw;
+    line-height: 2vw;
+    letter-spacing: .01vw;
+    width: 80vw;
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 2vw;
+    color: #000000B2;
+}
+
+.Section3_Container_Icons_Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vw;
+    gap: 6vw;
+}
+
+.Single_container_Icon {
+    width: 15vw;
+    /* height: 265px; */
+    text-align: center;
+}
+
+.Image_container_image {
+    width: fit-content;
+    padding: 1vw;
+    margin: 0 auto;
+    border-radius: 1vw;
+    background-color: #F2F2F2;
+}
+
+.Image_container_image img {
+    width: 4vw;
+    height: 4vw;
+}
+
+.Cards_Heading {
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #000000;
+    margin-top: 1vw;
+}
+
+.Horizontal_row {
+    border: 1px solid #000000B2;
+}
+
+.Cards_Sub_head {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1.1vw;
+    color: #000000;
+    margin-top: 1vw;
+}
+
+.Cards_Name {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.1vw;
+    line-height: 1.5vw;
+    text-align: center;
+    color: #000000B2;
+    margin-top: .8vw;
+}
+
+.Section4_Main_Container {
+    margin-top: 18vw;
+}
+
+.Missions_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 8.5vw;
+    gap: 8vw;
+}
+
+.Section4_Main_Heading {
+    /* font-family: Montserrat; */
+    font-weight: 700;
+    font-size: 3.3vw;
+    line-height: 3.8vw;
+    letter-spacing: .1vw;
+    text-align: center;
+    width: 54vw;
+    margin: 0 auto;
+}
+
+.Sub_Missions h1 {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 3.1vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+
+}
+
+.Sub_Missions p {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.2vw;
+    line-height: 100%;
+    letter-spacing: 0.01vw;
+    color: #000000B2;
+    margin-top: 1.5vw;
+}
+
+.Section5_Main_Container {
+    background-color: #EBEBFF;
+    padding: 3vw 4vw;
+    margin-top: 12vw;
+}
+
+.Faq_Main_head {
+    /* font-family: Montserrat; */
+    font-weight: 700;
+    font-size: 3.3vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+
+}
+
+.Faq_Container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3vw;
+    margin-top: 4vw;
+}
+
+.Faq_Sub_head {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.1vw;
+    line-height: 2vw;
+    letter-spacing: .01vw;
+    text-align: center;
+    width: 78vw;
+    margin: 0 auto;
+    color: #000000B2;
+    margin-top: 4vw;
+
+}
+
+.Single_Faq {
+    width: 38vw;
+    border-radius: 1vw;
+    /* border: 1px solid; */
+    padding: 1.2vw 1vw;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 4px 0px #00000040;
+
+}
+
+.Question {
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 1.1vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.Content_Questions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6vw;
+}
+.Pre_Footer_Container{
+    margin-top: 12vw;
+}
