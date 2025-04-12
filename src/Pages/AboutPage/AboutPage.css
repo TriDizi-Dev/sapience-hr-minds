@@ -25,7 +25,7 @@
     font-weight: 700;
     font-size: 3.3vw;
     line-height: 100%;
-    /* letter-spacing: .1vw; */
+    letter-spacing: .1vw;
     text-align: center;
     color: #000000;
     margin-top: 2.2vw;
@@ -166,7 +166,7 @@
 
 .TradeMark_image {
     position: absolute;
-    top: 5vw;
+    top: 0vw;
     left: -10vw;
 }
 
