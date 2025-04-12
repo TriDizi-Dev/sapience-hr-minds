@@ -51,7 +51,10 @@
     opacity: 0;
     transition: opacity 0.4s ease;
 }
-
+.nav_link{
+    text-decoration: none;
+    color: inherit;
+}
 .nav_underline.active1 {
     opacity: 1;
     width: 4.2vw;
