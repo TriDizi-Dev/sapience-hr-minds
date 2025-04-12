@@ -1,0 +1,62 @@
+.PreFooter_Main {
+    width: 90vw;
+    height: 25vw;
+    margin: 0 auto;
+    background-color: #020133;
+    /* padding: 2vw 4vw;     */
+    border-radius: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+}
+
+.Heading_PreFooter {
+    /* font-family: Montserrat; */
+    font-weight: 700;
+    font-size: 3vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 2vw;
+}
+
+.Para_PreFooter {
+    width: 90%;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.1vw;
+    line-height: 1.6vw;
+    letter-spacing: .01vw;
+    color: #FFFFFF;
+}
+
+.Button1,
+.Button22 {
+    width: 13vw;
+    height: 4vw;
+    border-radius: 20px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1.1vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    border: none;
+    cursor: pointer;
+}
+
+.Button22 {
+    background-color: #7C5CFC;
+    color: #FFFFFF;
+}
+
+.Button1 {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+.Buttons_Container{
+    display: flex;
+    gap: 2vw;
+}
