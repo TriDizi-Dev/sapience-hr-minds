@@ -27,6 +27,7 @@ export const Navbar = () => {
           <h1 className="nav_logo">Logo</h1>
         </div>
         <div className="nav_items_outer">
+          
           <li className="nav_items" onClick={() => handleNavActive('home')}>
             Home
             <div className="nav_underline_wrapper">
