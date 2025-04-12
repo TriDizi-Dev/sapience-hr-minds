@@ -1,0 +1,106 @@
+.footer_main{
+    border: 2px solid orange;
+    padding: 1vw;
+}
+.footer_outer{
+     display: flex;
+    justify-content: space-around;
+}
+
+ 
+.footer_logo{
+    font-size: 3.6vw;
+    font-weight: 700;
+    cursor: pointer;
+}
+.footer_left_para{
+    width:48vw;
+    text-align: justify;
+    font-size:1.18vw;
+    font-weight: 400;
+}
+
+
+.footer_right_outer_main{
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    border: 2px solid green;
+
+
+}
+.footer_right_outer{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width:25vw;
+     gap: 3vw;
+     margin-top: 1vw;
+}
+.footer_right_bottom_icons{
+    display: flex;
+    width: 25vw;
+     gap: 2vw;
+   
+}
+.footer_icons_outer{
+    width:3.5vw;
+    height: 3.5vw;
+    background-color: black;
+    border-radius: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.footer_icons{
+    font-size:1.8vw;
+    color: white;
+}
+
+.footer_bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.services_outer{
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8vw;
+}
+.services_headeing{
+    font-size:1.6vw;
+    font-weight: 600;
+}
+.footer_company{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8vw ;
+}
+.footer_company_heading{
+       font-size:1.6vw;
+    font-weight: 600;
+
+}
+.footer_services_items{
+    list-style: none;
+    font-size: 1vw;
+}
+.company_list_items{
+     list-style: none;
+    font-size: 1vw;
+}
+.footer_bottom_line{
+    margin-top: 1.8vw;
+    border-top: 0.2vw solid;
+    width:90vw;
+}
+ 
+.footer_bottom_text{
+    width: 86vw;
+    margin-top: 1vw;
+ }
