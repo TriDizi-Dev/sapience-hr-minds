@@ -1,7 +1,6 @@
 .footer_main{
      padding: 1vw;
-    /* border: 2px solid; */
-}
+ }
 .footer_outer{
      display: flex;
     justify-content: space-around;
