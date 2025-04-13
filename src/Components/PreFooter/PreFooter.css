@@ -1,5 +1,5 @@
 .PreFooter_Main {
-    width: 90vw;
+    width: 88vw;
     height: 25vw;
     margin: 0 auto;
     background-color: #020133;
@@ -15,9 +15,9 @@
 .Heading_PreFooter {
     /* font-family: Montserrat; */
     font-weight: 700;
-    font-size: 3vw;
+    font-size: 3.5vw;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: .05vw;
     color: #FFFFFF;
     text-align: center;
     margin-top: 2vw;
@@ -31,11 +31,12 @@
     line-height: 1.6vw;
     letter-spacing: .01vw;
     color: #FFFFFF;
+    margin-top: -1vw;
 }
 
 .Button1,
 .Button22 {
-    width: 13vw;
+    width: 14vw;
     height: 4vw;
     border-radius: 20px;
     font-family: Poppins;
