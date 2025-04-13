@@ -1,0 +1,107 @@
+.AlliancePartner_Main_Container {
+    text-align: center;
+    position: relative;
+    margin-top: 2vw;
+}
+
+.BlueLayer_HeroBanner {
+    position: absolute;
+    top: -25vw;
+    height: auto;
+    width: auto;
+    z-index: -1;
+}
+
+.Image_Conatiner img {
+    width: 89vw;
+    height: auto;
+}
+
+.Image_Upper_Text_Container {
+    width: 63vw;
+    height: auto;
+    box-shadow: 0px 10px 36px 0px #00000026;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    position: relative;
+    top: -11vw;
+    padding: 2.5vw 3vw 4vw 3vw;
+}
+
+.Header_Text {
+    /* font-family: Roboto; */
+    font-weight: 700;
+    font-size: 2.3vw;
+    /* line-height: 45px; */
+    text-align: center;
+    margin-top: -1vw;
+}
+
+.Header_Sub_Text {
+    /* font-family: Roboto; */
+    font-weight: 400;
+    font-size: 1.5vw;
+    text-align: center;
+    margin-top: 3vw;
+    color: #0C0C0D;
+}
+
+.Section2_Layer_AlliancePartner {
+    display: flex;
+    width: 99vw;
+    justify-content: center;
+    gap: 2vw;
+    margin-top: 5vw;
+    /* align-items: first baseline; */
+}
+
+.Left_Container_AlliancePartner {
+    width: 50vw;
+}
+
+.Right_Container_AlliancePartner {
+    position: relative;
+    width: 33vw;
+    /* border: 1px solid; */
+    /* height: 40vw; */
+}
+
+.SquareIcons_Cont_img img,
+.Person_Cont_img img {
+    position: absolute;
+}
+
+.SquareIcons_Cont_img img {
+    width: 30vw;
+    top: 0;
+    left: 2vw;
+}
+
+.Person_Cont_img img {
+    width: 37vw;
+    top: -8vw;
+}
+
+.Heading_text_AlliancePartner {
+    /* font-family: Roboto; */
+    font-weight: 700;
+    font-size: 2.6vw;
+    text-align: justify;
+}
+
+.para1_text_AlliancePartner,
+.para2_text_AlliancePartner {
+    /* font-family: Roboto; */
+    font-weight: 400;
+    font-size: 1vw;
+    text-align: justify;
+
+}
+
+.para1_text_AlliancePartner {
+    margin-top: 2vw;
+}
+
+.para2_text_AlliancePartner {
+    margin-top: 2vw;
+}
