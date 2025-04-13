@@ -17,6 +17,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { PreFooter } from "../../Components/PreFooter/PreFooter";
 
 export const AboutPage = () => {
+  
   const Content = [
     {
       id: 1,

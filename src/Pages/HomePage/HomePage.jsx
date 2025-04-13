@@ -9,7 +9,78 @@ import { FaPeopleGroup } from 'react-icons/fa6';
 import dummylogo from "../../assets/HomePage/dummylogo.svg"
 import layer4 from "../../assets/HomePage/layer4.svg"
 
+import Smallicon1 from "../../assets/AboutPage/Smallicon1.svg";
+import Smallicon2 from "../../assets/AboutPage/Smallicon2.svg";
+import Smallicon3 from "../../assets/AboutPage/Smallicon3.svg";
+import Smallicon4 from "../../assets/AboutPage/Smallicon4.svg";
+
+import bg1 from "../../assets/HomePage/bg1.svg"
+import bg2 from "../../assets/HomePage/bg2.svg"
+
+import man from "../../assets/HomePage/man.svg"
+import { PreFooter } from '../../Components/PreFooter/PreFooter';
+
 export const HomePage = () => {
+
+  const cardscontent=[
+    {
+          id: 1,
+          Logo: Smallicon1,
+          Head: "Learn More",
+          subHead: "Powerful Dashboard",
+          para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        },
+        {
+          id: 2,
+          Logo: Smallicon2,
+          Head: "Learn More",
+          subHead: "Powerful Dashboard",
+          para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        },
+        {
+          id: 3,
+          Logo: Smallicon3,
+          Head: "Learn More",
+          subHead: "Powerful Dashboard",
+          para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        },
+        {
+          id: 4,
+          Logo: Smallicon4,
+          Head: "Learn More",
+          subHead: "Powerful Dashboard",
+          para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        },
+    {
+          id: 1,
+          Logo: Smallicon1,
+          Head: "Learn More",
+          subHead: "Powerful Dashboard",
+          para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        },
+        {
+          id: 2,
+          Logo: Smallicon2,
+          Head: "Learn More",
+          subHead: "Powerful Dashboard",
+          para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        },
+        {
+          id: 3,
+          Logo: Smallicon3,
+          Head: "Learn More",
+          subHead: "Powerful Dashboard",
+          para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        },
+        {
+          id: 4,
+          Logo: Smallicon4,
+          Head: "Learn More",
+          subHead: "Powerful Dashboard",
+          para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        },
+
+  ]
   return (
     <div className="home_main">
       <div className="home_page_outer">
@@ -103,6 +174,8 @@ export const HomePage = () => {
 
       <div className="homepage_layer4_outer_main">
         <div className="homepage_layer4_outer">
+        <img src={bg1} alt="bg1" className="backgroud_img1" />
+
           <div className="homepage_layer4_left">
             <p className="homepage_layer4_heading">
             Our Core Functions
@@ -128,7 +201,7 @@ export const HomePage = () => {
               </div>
               <div className="homepage_layer4_card">
                 <div className="layer4_card_logo">
-
+                  
                 </div>
                 <h3 className="layer4_card_heading">
                 Powerful Dashboard
@@ -160,7 +233,182 @@ export const HomePage = () => {
          when an unknown printer took a galley of type and scrambled it to make a type specimen book
         </p>
        </div>
+       <div className="layer5_cards_outer">
+
+        {
+          cardscontent.map((data,ind)=>(
+            <div className="layer5_card">
+            <div className="layer5_card_logo_outer">
+              <img src={data.Logo} alt="logo" className="layer5_card_logo" />
+            </div>
+            <div className="card_bottom_line"></div>
+            <h6 className="layer5_card_heading">
+            {data.subHead}
+            </h6>
+            <p className="layer5_card_text">
+            {
+              data.para
+            }
+  
+          </p>
+            <p className="layer5_card_lernmore">
+            {data.Head}
+            </p>
+          </div>
+          ))
+        }
+     
+       </div>
         </div>
+      </div>
+
+      <div className="homepage_layer6_outer_main">
+        <div className="layer6_outer">
+            <div className="layer6_part1">
+              <h6 className="layer6_part1_heading">
+              Testimonials
+              </h6>
+              <h1 className="layer6_part1_heading2">
+              See Why Our Clients Love Us
+              </h1>
+            </div>
+
+            <div className="layer6_cards_outer">
+              <div className="layer6_card">
+                <p className="layer6_card_logo">
+                  Logo
+                </p>
+                <p className="layer6_card_para">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                 industry. Lorem Ipsum has been the industry's standard dummy text ever.
+                </p>
+                <div className="layer6_card_bottom">
+                 <div className="layer6_bottom_logo_outer">
+                  <img src={man} alt="man" className="card_bottom_logo" />
+                 </div>
+                 <div className="card_bottom_right_text">
+                  <h6 className="card_bottom_heading">Name</h6>
+                  <p className="card_bottom_para">
+                    Lorem Ipsum
+                  </p>
+                 </div>
+                </div>
+              </div>
+              <div className="layer6_card">
+                <p className="layer6_card_logo">
+                  Logo
+                </p>
+                <p className="layer6_card_para">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                 industry. Lorem Ipsum has been the industry's standard dummy text ever.
+                </p>
+                <div className="layer6_card_bottom">
+                 <div className="layer6_bottom_logo_outer">
+                  <img src={man} alt="man" className="card_bottom_logo" />
+                 </div>
+                 <div className="card_bottom_right_text">
+                  <h6 className="card_bottom_heading">Name</h6>
+                  <p className="card_bottom_para">
+                    Lorem Ipsum
+                  </p>
+                 </div>
+                </div>
+              </div>
+              <div className="layer6_card">
+                <p className="layer6_card_logo">
+                  Logo
+                </p>
+                <p className="layer6_card_para">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                 industry. Lorem Ipsum has been the industry's standard dummy text ever.
+                </p>
+                <div className="layer6_card_bottom">
+                 <div className="layer6_bottom_logo_outer">
+                  <img src={man} alt="man" className="card_bottom_logo" />
+                 </div>
+                 <div className="card_bottom_right_text">
+                  <h6 className="card_bottom_heading">Name</h6>
+                  <p className="card_bottom_para">
+                    Lorem Ipsum
+                  </p>
+                 </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div className="homepage_layer7_outer_main">
+
+      <img src={bg2} alt="bg2" className="bg2" />
+
+        <div className="layer7_outer">
+          <div className="layer7_part1">
+            <p className="layer7_part_heading">
+              Blogs
+            </p>
+            <h1 className="layer7_part_heading2">
+            Discover How We Make HR Better
+            </h1>
+          </div>
+          <div className="layer7_cards_outer">
+            <div className="layer7_card">
+              <p className="layer7_card_name">
+                Name
+              </p>
+              <p className="layer7_card_sub_name">
+                Lorem Ipsum
+              </p>
+              <div className="layer7_card_line"></div>
+              <p className="layer7_card_para">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+              </p>
+              <h6 className="layer7_card_explore">
+                Explore More
+              </h6>
+            </div>
+            <div className="layer7_card">
+              <p className="layer7_card_name">
+                Name
+              </p>
+              <p className="layer7_card_sub_name">
+                Lorem Ipsum
+              </p>
+              <div className="layer7_card_line"></div>
+              <p className="layer7_card_para">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+              </p>
+              <h6 className="layer7_card_explore">
+                Explore More
+              </h6>
+            </div>
+            <div className="layer7_card">
+              <p className="layer7_card_name">
+                Name
+              </p>
+              <p className="layer7_card_sub_name">
+                Lorem Ipsum
+              </p>
+              <div className="layer7_card_line"></div>
+              <p className="layer7_card_para">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+              </p>
+              <h6 className="layer7_card_explore">
+                Explore More
+              </h6>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div className="home_page_prefooter">
+        <PreFooter
+        Head='Lorem Ipsum is simply dummy text of the'
+        Content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+        />
       </div>
     </div>
    )
