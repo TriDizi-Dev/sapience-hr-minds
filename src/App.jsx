@@ -4,20 +4,37 @@ import { HomePage } from "./Pages/HomePage/HomePage";
 import { AboutPage } from "./Pages/AboutPage/AboutPage";
 import { Navbar } from "./Components/NavBar/Navbar";
 import { Footer } from "./Components/Footer/Footer";
+import { AlliancePartner } from "./Pages/AlliancePartner/AlliancePartner";
+import ContactForm from "./Pages/ContactUs/ContactUs";
+import { useLocation } from "react-router-dom";
+import { Service } from "./Components/Services/Service";
 import Carrier from "./Pages/Carrier/Carrier";
+
+// Layout component that uses `useLocation` inside <BrowserRouter>
+function Layout() {
+  const location = useLocation();
+  const hideFooter = location.pathname === "/contactus";
+
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/alliancepartner" element={<AlliancePartner />} />
+        <Route path="/contactus" element={<ContactForm />} />
+        <Route path="/carrier" element={<Carrier />}></Route>
+        <Route path="/service" element={<Service />}></Route>
+
+      </Routes>
+      {!hideFooter && <Footer />}
+    </>
+  );
+}
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-
-      <Routes>
-        <Route path="/" element={<HomePage />}></Route>
-        <Route path="/about" element={<AboutPage />}></Route>
-        <Route path="/services" element={<AboutPage />}></Route>
-        <Route path="/carrier" element={<Carrier />}></Route>
-      </Routes>
-      <Footer />
       <Layout />
     </BrowserRouter>
   );
