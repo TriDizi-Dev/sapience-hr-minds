@@ -54,7 +54,7 @@ export const Navbar = () => {
             </li>
           </Link>
 
-          <Link to="/" className="nav_link">
+          <Link to="/service" className="nav_link">
             <li
               className="nav_items"
               onClick={() => handleNavActive("services")}
@@ -115,7 +115,11 @@ export const Navbar = () => {
           </Link>
         </div>
         <div className="nav_button_outer">
+                  <Link to="/contactus" className="nav_link">
+
           <button>Contact Us</button>
+                  </Link>
+
         </div>
       </div>
 
