@@ -1,0 +1,304 @@
+.AlliancePartner_Main_Container {
+    text-align: center;
+    position: relative;
+    margin-top: 2vw;
+}
+
+.BlueLayer_HeroBanner {
+    position: absolute;
+    top: -25vw;
+    height: auto;
+    width: auto;
+    z-index: -1;
+}
+
+.Image_Conatiner img {
+    width: 89vw;
+    height: auto;
+}
+
+.Image_Upper_Text_Container {
+    width: 63vw;
+    height: auto;
+    box-shadow: 0px 10px 36px 0px #00000026;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    position: relative;
+    top: -11vw;
+    padding: 2.5vw 3vw 4vw 3vw;
+}
+
+.Header_Text {
+    /* font-family: Roboto; */
+    font-weight: 700;
+    font-size: 2.3vw;
+    /* line-height: 45px; */
+    text-align: center;
+    margin-top: -1vw;
+}
+
+.Header_Sub_Text {
+    /* font-family: Roboto; */
+    font-weight: 400;
+    font-size: 1.5vw;
+    text-align: center;
+    margin-top: 3vw;
+    color: #0C0C0D;
+}
+
+.Section2_Layer_AlliancePartner {
+    display: flex;
+    width: 99vw;
+    justify-content: center;
+    gap: 4vw;
+    margin-top: 5vw;
+    /* align-items: first baseline; */
+}
+
+.Left_Container_AlliancePartner {
+    width: 52vw;
+    margin-top: -3vw;
+}
+
+.Right_Container_AlliancePartner {
+    position: relative;
+    width: 33vw;
+    /* border: 1px solid; */
+    /* height: 40vw; */
+}
+
+.SquareIcons_Cont_img img,
+.Person_Cont_img img {
+    position: absolute;
+}
+
+.SquareIcons_Cont_img img {
+    width: 33vw;
+    top: -2vw;
+    left: 0vw;
+}
+
+.Person_Cont_img img {
+    width: 38vw;
+    top: -9vw;
+    left: -2vw;
+}
+
+.Heading_text_AlliancePartner {
+    /* font-family: Roboto; */
+    font-weight: 700;
+    font-size: 2.6vw;
+    text-align: justify;
+}
+
+.para1_text_AlliancePartner,
+.para2_text_AlliancePartner {
+    /* font-family: Roboto; */
+    font-weight: 400;
+    font-size: 1vw;
+    text-align: justify;
+    color: #0C0C0D;
+}
+
+.para1_text_AlliancePartner {
+    margin-top: 1.8vw;
+}
+
+.para2_text_AlliancePartner {
+    margin-top: 1.5vw;
+}
+
+.Section3_Alliance_Main_Container {
+    margin-top: 20vw;
+}
+
+.Section3_Alliance_Heading_para {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.2vw;
+    line-height: 2vw;
+    /* letter-spacing: .01vw; */
+    width: 82vw;
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 2vw;
+    color: #000000B2;
+}
+
+.Section3_Alliance_Container_Icons_Container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 4vw;
+    gap: 7vw;
+    position: relative;
+}
+
+.Single_Alliance_container_Icon {
+    width: 15vw;
+    /* height: 265px; */
+    text-align: center;
+}
+
+.Image_Alliance_container_image {
+    width: fit-content;
+    padding: 1vw;
+    margin: 0 auto;
+    border-radius: 1vw;
+    background-color: #F2F2F2;
+}
+
+.Image_Alliance_container_image img {
+    width: 4vw;
+    height: 4vw;
+}
+
+.Cards_Alliance_Heading {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1vw;
+    /* line-height: 100%; */
+    /* letter-spacing: 0%; */
+    text-align: center;
+    color: #000000;
+    margin-top: 1vw;
+}
+
+.Horizontal_Alliance_row {
+    border: .1vw solid #000000B2;
+    margin-top: 2.5vw;
+}
+
+.Cards_Alliance_Sub_head {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1.1vw;
+    color: #000000;
+    margin-top: 1vw;
+}
+
+.Cards_Alliance_Name {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.1vw;
+    line-height: 1.5vw;
+    text-align: center;
+    color: #000000B2;
+    margin-top: .8vw;
+}
+
+.Section3_Alliance_Heading1 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.8vw;
+    line-height: 100%;
+    color: #000000B2;
+    /* letter-spacing: 0%; */
+}
+
+.Section3_Alliance_Heading2 {
+    font-weight: 700;
+    font-size: 3.2vw;
+    line-height: 100%;
+    letter-spacing: .1vw;
+    text-align: center;
+    color: #000000;
+    margin-top: 2.2vw;
+}
+
+.orangeLayer_Contaner {
+    position: absolute;
+    right: 0;
+    bottom: -20vw;
+}
+
+.orangeLayer_Contaner img {
+    width: 50vw;
+}
+
+.Alliance_layer4_part1 {
+    text-align: center;
+}
+
+.Alliance_layer4_part1_heading {
+    font-size: 1.8vw;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.Alliance_layer4_part1_heading2 {
+    font-size: 3.4vw;
+    font-weight: 700;
+    margin-top: 1vw;
+}
+
+.Alliance_layer4_outer_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vw;
+    background-color: rgba(235, 235, 255, 1);
+}
+
+.Alliance_layer4_outer {
+    margin-top: 3.5vw;
+    width: 94vw;
+}
+
+.Alliance_layer4_cards_outer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4vw;
+}
+
+.Alliance_layer4_card {
+    width: 29vw;
+    height: 18vw;
+    display: flex;
+    flex-direction: column;
+    padding: 1.9vw 0 1.5vw 3vw;
+    background-color: white;
+    border-radius: 1vw;
+    margin-bottom: 4vw;
+}
+
+.Alliance_layer4_card_logo {
+    font-size: 0.8;
+    font-weight: 700;
+}
+
+.Alliance_layer4_card_para {
+    font-size: 1.2vw;
+    font-weight: 400;
+    width: 24vw;
+    margin-top: 1vw;
+}
+
+.Alliance_layer4_card_bottom {
+    display: flex;
+    gap: 1vw;
+    margin-top: 1vw;
+
+}
+
+.Alliance_card_bottom_heading {
+    font-size: 1.2vw;
+    font-weight: 600;
+    margin: 0;
+}
+
+.Alliance_card_bottom_para {
+    font-size: 1.1vw;
+    font-weight: 400;
+    margin: 0;
+}
+
+.Alliance_card_bottom_logo {
+    width: 3.5vw;
+}
+.Alliance_Pre_Footer_Container{
+    margin-top: 8vw;
+    margin-bottom: 9.5vw;
+}

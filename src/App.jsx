@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { HomePage } from "./Pages/HomePage/HomePage";
 import { AboutPage } from "./Pages/AboutPage/AboutPage";
@@ -18,6 +18,7 @@ function App() {
         <Route path="/carrier" element={<Carrier />}></Route>
       </Routes>
       <Footer />
+      <Layout />
     </BrowserRouter>
   );
 }

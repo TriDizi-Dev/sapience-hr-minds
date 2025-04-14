@@ -162,24 +162,31 @@
     position: absolute;
     bottom: 10vw;
     left: -8vw;
+    width: 7vw;
+
 }
 
 .TradeMark_image {
     position: absolute;
     top: 0vw;
     left: -10vw;
+    width: 7vw;
 }
 
 .Circle_image {
     position: absolute;
     top: -4vw;
     right: 6vw;
+    width: 4vw;
+
 }
 
 .plusIcon {
     position: absolute;
     bottom: 15vw;
     right: 3vw;
+    width: 2.2vw;
+
 }
 
 .Section3_Main_Container {
@@ -204,7 +211,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 2vw;
-    gap: 6vw;
+    gap: 7vw;
 }
 
 .Single_container_Icon {
@@ -229,7 +236,7 @@
 .Cards_Heading {
     font-family: Poppins;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 1.1vw;
     line-height: 100%;
     /* letter-spacing: 0%; */
     text-align: center;
@@ -238,7 +245,7 @@
 }
 
 .Horizontal_row {
-    border: 1px solid #000000B2;
+    border: .1vw solid #000000B2;
 }
 
 .Cards_Sub_head {
