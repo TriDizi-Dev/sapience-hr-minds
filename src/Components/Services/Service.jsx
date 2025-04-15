@@ -192,12 +192,12 @@ export const Service = () => {
               <img src={Speaker} alt="Instagram" />
             </p>
             <p className="SerViceImage_text_head">Lorem Ipsum</p>
-            <p className="SerViceImage_text">
+            <p className="SerViceImage_text first_services">
               is simply dummy text of the printing and typesetting industry.
               Lorem Ipsum has been the
             </p>
           </div>
-          <div className="Service_Icon_Container marginChnage">
+          <div className="Service_Icon_Container marginChnage second_marginChanges">
             <p className="Service_Img">
               <img src={Cursur} alt="Instagram" />
             </p>
@@ -207,7 +207,7 @@ export const Service = () => {
               Lorem Ipsum has been the
             </p>
           </div>
-          <div className="Service_Icon_Container">
+          <div className="Service_Icon_Container third_marginChanges">
             <p className="Service_Img">
               <img src={Play} alt="Instagram" />
             </p>
