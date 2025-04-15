@@ -5,6 +5,7 @@ import { AboutPage } from "./Pages/AboutPage/AboutPage";
 import { Navbar } from "./Components/NavBar/Navbar";
 import { Footer } from "./Components/Footer/Footer";
 import Carrier from "./Pages/Carrier/Carrier";
+import PrivacyAndTerms from "./Components/PrivacyAndTerms/PrivacyAndTerms";
 
 function App() {
   return (
@@ -16,9 +17,10 @@ function App() {
         <Route path="/about" element={<AboutPage />}></Route>
         <Route path="/services" element={<AboutPage />}></Route>
         <Route path="/carrier" element={<Carrier />}></Route>
+        <Route path="/privacy" element={<PrivacyAndTerms />}></Route>
       </Routes>
-      <Footer />
-      <Layout />
+      {/* <Footer /> */}
+      {/* <Layout /> */}
     </BrowserRouter>
   );
 }
