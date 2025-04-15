@@ -9,8 +9,8 @@ import ContactForm from "./Pages/ContactUs/ContactUs";
 import { useLocation } from "react-router-dom";
 import { Service } from "./Components/Services/Service";
 import Carrier from "./Pages/Carrier/Carrier";
+import { HrLearning } from "./Components/HrLearning/HrLearning";
 
-// Layout component that uses `useLocation` inside <BrowserRouter>
 function Layout() {
   const location = useLocation();
   const hideFooter = location.pathname === "/contactus";
@@ -23,9 +23,9 @@ function Layout() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/alliancepartner" element={<AlliancePartner />} />
         <Route path="/contactus" element={<ContactForm />} />
-        <Route path="/carrier" element={<Carrier />}></Route>
+        <Route path="/careers" element={<Carrier />}></Route>
         <Route path="/service" element={<Service />}></Route>
-
+        <Route path="/hrlearning" element={<HrLearning />}></Route>
       </Routes>
       {!hideFooter && <Footer />}
     </>

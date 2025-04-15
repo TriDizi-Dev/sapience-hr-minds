@@ -69,7 +69,7 @@ export const Navbar = () => {
               </div>
             </li>
           </Link>
-          <Link to="/" className="nav_link">
+          <Link to="/hrlearning" className="nav_link">
             <li
               className="nav_items"
               onClick={() => handleNavActive("hrlearning")}
