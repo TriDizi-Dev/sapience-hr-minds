@@ -1,0 +1,77 @@
+.Hr_Hero_container {
+    position: relative;
+    height: 30vw;
+    margin-top: 1vw;
+}
+
+.Hr_Hero_container img {
+    position: absolute;
+    left: 6vw;
+    width: 88vw;
+    height: 100%;
+}
+
+.Hr_Hero_container p {
+    position: absolute;
+    bottom: 2vw;
+    left: 11vw;
+    /* font-family: Lato; */
+    font-weight: 800;
+    font-size: 3.8vw;
+    color: #FFFFFF;
+}
+
+.Section2_Main_container {
+    width: 77vw;
+    /* border: 1px solid; */
+    margin: 0 auto;
+}
+
+.Section2_Heading_text {
+    /* font-family: Lato; */
+    font-weight: 700;
+    font-size: 1.5vw;
+    margin-left: 2vw;
+}
+
+.Left_Single_Side_Cards_Container {
+    width: 35vw;
+    border: 1px solid #1797C5;
+    padding: 2vw 1.5vw;
+    border-radius: 1vw;
+}
+
+.Single_Cards_head {
+    /* font-family: Lato; */
+    font-weight: 700;
+    font-size: 22px;
+    color: #1797C5;
+
+}
+
+.Single_Cards_Sub_heads_text {
+    display: flex;
+    gap: 1.5vw;
+}
+
+.Single_Cards_Sub_heads_text p {
+    background-color: #E7EBF1;
+    padding: .2vw .8vw;
+    /* font-family: Lato; */
+    font-weight: 600;
+    font-size: .9vw;
+    color: #4F5665;
+    border-radius: .5vw;
+}
+
+.Section2_Cards_Container {
+    margin-top: 3vw;
+}
+
+.Single_Cards_Sub_text {
+    /* font-family: Lato; */
+    font-weight: 400;
+    font-size: .9vw;
+
+
+}
