@@ -8,7 +8,10 @@ import logo3 from "../../assets/Carrier/logo3.svg"
 import logo4 from "../../assets/Carrier/logo4.svg"
 import logo5 from "../../assets/Carrier/logo5.svg"
 import logo6 from "../../assets/Carrier/logo6.svg"
-// import banner3 from "../assets/Carrier/banner3.svg"
+import card1 from "../../assets/Carrier/card1.jpg"
+import card2 from "../../assets/Carrier/card2.jpg"
+import card3 from "../../assets/Carrier/card3.jpg"
+
 
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -20,6 +23,10 @@ import { BsLinkedin } from "react-icons/bs";
 import { FaTwitter } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { SwiperSlide, Swiper } from "swiper/react";
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 
 
@@ -27,11 +34,49 @@ function Carrier() {
 
     const [expanded, setExpanded] = React.useState(false);
 
-    
+
     const handleChange = (panel) => (event, isExpanded) => {
         setExpanded(prev => (prev === panel ? null : panel));
-      };
+    };
 
+
+    const cards = [
+        {
+            id: 1,
+            img: card1,
+            heading1: 'Headline',
+            para: 'Sed imperdiet enim ligula,vitae vierra justo',
+            readmore: "Read More"
+        },
+        {
+            id: 2,
+            img: card2,
+            heading1: 'Headline',
+            para: 'Sed imperdiet enim ligula,vitae vierra justo',
+            readmore: "Read More"
+        },
+        {
+            id: 3,
+            img: card3,
+            heading1: 'Headline',
+            para: 'Sed imperdiet enim ligula,vitae vierra justo',
+            readmore: "Read More"
+        },
+        {
+            id: 4,
+            img: card1,
+            heading1: 'Headline',
+            para: 'Sed imperdiet enim ligula,vitae vierra justo',
+            readmore: "Read More"
+        },
+        {
+            id: 5,
+            img: card2,
+            heading1: 'Headline',
+            para: 'Sed imperdiet enim ligula,vitae vierra justo',
+            readmore: "Read More"
+        },
+    ]
     return (
         <div className="carriers_outer_main">
             <div className="carrier_banner_outer">
@@ -62,7 +107,7 @@ function Carrier() {
 
 
 
-            
+
             <div className="carrier_layer2_main_outer">
                 <div className="carrier_layer2_outer">
                     <div className="carrier_layer2_left">
@@ -80,6 +125,8 @@ function Carrier() {
 
 
                         <div className="carrier_right_cards_outer">
+
+
 
 
                             <div className="carrier_layer2_right_card">
@@ -202,8 +249,8 @@ function Carrier() {
                     <div className="layer3_part3_outer_main">
                         <div className="layer3_part3_outer">
                             <Accordion
-                               expanded={expanded === 'panel1'}
-                               onChange={handleChange('panel1')}
+                                expanded={expanded === 'panel1'}
+                                onChange={handleChange('panel1')}
                                 disableGutters
                                 elevation={0}
                                 square
@@ -211,7 +258,7 @@ function Carrier() {
                                     width: '100%',
                                     // height: expanded ? 'auto' : '6vw', 
                                     transition: 'all 0.3s ease',
-                                    marginTop:'3vw'
+                                    marginTop: '3vw'
                                 }}
                             >
                                 <AccordionSummary
@@ -254,7 +301,7 @@ function Carrier() {
                                 </AccordionSummary>
                                 <AccordionDetails
                                     sx={{
-                                         padding: 2,
+                                        padding: 2,
                                         // backgroundColor: 'red'
 
                                     }}
@@ -337,52 +384,52 @@ function Carrier() {
                                                     </div>
                                                 </div>
 
-                                               <div className="accordian_right_icons_button">
-                                                <button>Apply Now</button>
-                                               </div>
+                                                <div className="accordian_right_icons_button">
+                                                    <button>Apply Now</button>
+                                                </div>
                                                 <div className="accordian_right_details_outer">
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Location</p>
                                                         <p className="right_item">
-                                                        Bandung
+                                                            Bandung
                                                         </p>
                                                     </div>
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Type</p>
                                                         <p className="right_item">
-                                                        Full Time
+                                                            Full Time
                                                         </p>
                                                     </div>
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Quealification</p>
                                                         <p className="right_item">
-                                                        Fresh Graduation
+                                                            Fresh Graduation
                                                         </p>
                                                     </div>
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Posted</p>
                                                         <p className="right_item">
-                                                        22 jan 2023
+                                                            22 jan 2023
                                                         </p>
                                                     </div>
                                                 </div>
 
                                                 <div className="right_buttons">
 
-                                               
-                                                <div className="right_help_button_outer">
-                                                    <button>
-                                                    Ask for more help 
-                                                    <FaArrowRightLong  className='help_button_icon'/>
-                                                    </button>
 
-                                                </div>
-                                                <div className="right_about_company_button_outer">
-                                                <button>
-                                                    About Company
-                                                    <FaArrowRightLong  className='help_button_icon'/>
-                                                    </button>
-                                                </div>
+                                                    <div className="right_help_button_outer">
+                                                        <button>
+                                                            Ask for more help
+                                                            <FaArrowRightLong className='help_button_icon' />
+                                                        </button>
+
+                                                    </div>
+                                                    <div className="right_about_company_button_outer">
+                                                        <button>
+                                                            About Company
+                                                            <FaArrowRightLong className='help_button_icon' />
+                                                        </button>
+                                                    </div>
                                                 </div>
 
                                             </div>
@@ -402,7 +449,7 @@ function Carrier() {
                                     width: '100%',
                                     // height: expanded ? 'auto' : '6vw', 
                                     transition: 'all 0.3s ease',
-                                    marginTop:'3vw'
+                                    marginTop: '3vw'
                                 }}
                             >
                                 <AccordionSummary
@@ -435,16 +482,16 @@ function Carrier() {
                                         }}
                                     >
                                         <p className="accordian_top_text" style={{ margin: 0 }}>
-                                        Design
+                                            Design
                                         </p>
                                         <p className="accordia_header">
-                                        Staff Product Designer
+                                            Staff Product Designer
                                         </p>
                                     </Typography>
                                 </AccordionSummary>
                                 <AccordionDetails
                                     sx={{
-                                         padding: 2,
+                                        padding: 2,
                                         // backgroundColor: 'red'
 
                                     }}
@@ -527,52 +574,52 @@ function Carrier() {
                                                     </div>
                                                 </div>
 
-                                               <div className="accordian_right_icons_button">
-                                                <button>Apply Now</button>
-                                               </div>
+                                                <div className="accordian_right_icons_button">
+                                                    <button>Apply Now</button>
+                                                </div>
                                                 <div className="accordian_right_details_outer">
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Location</p>
                                                         <p className="right_item">
-                                                        Bandung
+                                                            Bandung
                                                         </p>
                                                     </div>
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Type</p>
                                                         <p className="right_item">
-                                                        Full Time
+                                                            Full Time
                                                         </p>
                                                     </div>
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Quealification</p>
                                                         <p className="right_item">
-                                                        Fresh Graduation
+                                                            Fresh Graduation
                                                         </p>
                                                     </div>
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Posted</p>
                                                         <p className="right_item">
-                                                        22 jan 2023
+                                                            22 jan 2023
                                                         </p>
                                                     </div>
                                                 </div>
 
                                                 <div className="right_buttons">
 
-                                               
-                                                <div className="right_help_button_outer">
-                                                    <button>
-                                                    Ask for more help 
-                                                    <FaArrowRightLong  className='help_button_icon'/>
-                                                    </button>
 
-                                                </div>
-                                                <div className="right_about_company_button_outer">
-                                                <button>
-                                                    About Company
-                                                    <FaArrowRightLong  className='help_button_icon'/>
-                                                    </button>
-                                                </div>
+                                                    <div className="right_help_button_outer">
+                                                        <button>
+                                                            Ask for more help
+                                                            <FaArrowRightLong className='help_button_icon' />
+                                                        </button>
+
+                                                    </div>
+                                                    <div className="right_about_company_button_outer">
+                                                        <button>
+                                                            About Company
+                                                            <FaArrowRightLong className='help_button_icon' />
+                                                        </button>
+                                                    </div>
                                                 </div>
 
                                             </div>
@@ -591,7 +638,7 @@ function Carrier() {
                                     width: '100%',
                                     // height: expanded ? 'auto' : '6vw', 
                                     transition: 'all 0.3s ease',
-                                    marginTop:'3vw'
+                                    marginTop: '3vw'
                                 }}
                             >
                                 <AccordionSummary
@@ -624,16 +671,16 @@ function Carrier() {
                                         }}
                                     >
                                         <p className="accordian_top_text" style={{ margin: 0 }}>
-                                        Product
+                                            Product
                                         </p>
                                         <p className="accordia_header">
-                                        Senior Product Manager, Asset   
+                                            Senior Product Manager, Asset
                                         </p>
                                     </Typography>
                                 </AccordionSummary>
                                 <AccordionDetails
                                     sx={{
-                                         padding: 2,
+                                        padding: 2,
                                         // backgroundColor: 'red'
 
                                     }}
@@ -716,52 +763,52 @@ function Carrier() {
                                                     </div>
                                                 </div>
 
-                                               <div className="accordian_right_icons_button">
-                                                <button>Apply Now</button>
-                                               </div>
+                                                <div className="accordian_right_icons_button">
+                                                    <button>Apply Now</button>
+                                                </div>
                                                 <div className="accordian_right_details_outer">
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Location</p>
                                                         <p className="right_item">
-                                                        Bandung
+                                                            Bandung
                                                         </p>
                                                     </div>
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Type</p>
                                                         <p className="right_item">
-                                                        Full Time
+                                                            Full Time
                                                         </p>
                                                     </div>
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Quealification</p>
                                                         <p className="right_item">
-                                                        Fresh Graduation
+                                                            Fresh Graduation
                                                         </p>
                                                     </div>
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Posted</p>
                                                         <p className="right_item">
-                                                        22 jan 2023
+                                                            22 jan 2023
                                                         </p>
                                                     </div>
                                                 </div>
 
                                                 <div className="right_buttons">
 
-                                               
-                                                <div className="right_help_button_outer">
-                                                    <button>
-                                                    Ask for more help 
-                                                    <FaArrowRightLong  className='help_button_icon'/>
-                                                    </button>
 
-                                                </div>
-                                                <div className="right_about_company_button_outer">
-                                                <button>
-                                                    About Company
-                                                    <FaArrowRightLong  className='help_button_icon'/>
-                                                    </button>
-                                                </div>
+                                                    <div className="right_help_button_outer">
+                                                        <button>
+                                                            Ask for more help
+                                                            <FaArrowRightLong className='help_button_icon' />
+                                                        </button>
+
+                                                    </div>
+                                                    <div className="right_about_company_button_outer">
+                                                        <button>
+                                                            About Company
+                                                            <FaArrowRightLong className='help_button_icon' />
+                                                        </button>
+                                                    </div>
                                                 </div>
 
                                             </div>
@@ -780,7 +827,7 @@ function Carrier() {
                                     width: '100%',
                                     // height: expanded ? 'auto' : '6vw', 
                                     transition: 'all 0.3s ease',
-                                    marginTop:'3vw'
+                                    marginTop: '3vw'
                                 }}
                             >
                                 <AccordionSummary
@@ -813,16 +860,16 @@ function Carrier() {
                                         }}
                                     >
                                         <p className="accordian_top_text" style={{ margin: 0 }}>
-                                        Engineering
+                                            Engineering
                                         </p>
                                         <p className="accordia_header">
-                                        Backend Engineer    
+                                            Backend Engineer
                                         </p>
                                     </Typography>
                                 </AccordionSummary>
                                 <AccordionDetails
                                     sx={{
-                                         padding: 2,
+                                        padding: 2,
                                         // backgroundColor: 'red'
 
                                     }}
@@ -905,52 +952,52 @@ function Carrier() {
                                                     </div>
                                                 </div>
 
-                                               <div className="accordian_right_icons_button">
-                                                <button>Apply Now</button>
-                                               </div>
+                                                <div className="accordian_right_icons_button">
+                                                    <button>Apply Now</button>
+                                                </div>
                                                 <div className="accordian_right_details_outer">
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Location</p>
                                                         <p className="right_item">
-                                                        Bandung
+                                                            Bandung
                                                         </p>
                                                     </div>
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Type</p>
                                                         <p className="right_item">
-                                                        Full Time
+                                                            Full Time
                                                         </p>
                                                     </div>
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Quealification</p>
                                                         <p className="right_item">
-                                                        Fresh Graduation
+                                                            Fresh Graduation
                                                         </p>
                                                     </div>
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Posted</p>
                                                         <p className="right_item">
-                                                        22 jan 2023
+                                                            22 jan 2023
                                                         </p>
                                                     </div>
                                                 </div>
 
                                                 <div className="right_buttons">
 
-                                               
-                                                <div className="right_help_button_outer">
-                                                    <button>
-                                                    Ask for more help 
-                                                    <FaArrowRightLong  className='help_button_icon'/>
-                                                    </button>
 
-                                                </div>
-                                                <div className="right_about_company_button_outer">
-                                                <button>
-                                                    About Company
-                                                    <FaArrowRightLong  className='help_button_icon'/>
-                                                    </button>
-                                                </div>
+                                                    <div className="right_help_button_outer">
+                                                        <button>
+                                                            Ask for more help
+                                                            <FaArrowRightLong className='help_button_icon' />
+                                                        </button>
+
+                                                    </div>
+                                                    <div className="right_about_company_button_outer">
+                                                        <button>
+                                                            About Company
+                                                            <FaArrowRightLong className='help_button_icon' />
+                                                        </button>
+                                                    </div>
                                                 </div>
 
                                             </div>
@@ -969,7 +1016,7 @@ function Carrier() {
                                     width: '100%',
                                     // height: expanded ? 'auto' : '6vw', 
                                     transition: 'all 0.3s ease',
-                                    marginTop:'3vw'
+                                    marginTop: '3vw'
                                 }}
                             >
                                 <AccordionSummary
@@ -1002,16 +1049,16 @@ function Carrier() {
                                         }}
                                     >
                                         <p className="accordian_top_text" style={{ margin: 0 }}>
-                                        Engineering
+                                            Engineering
                                         </p>
                                         <p className="accordia_header">
-                                        Senior Backend Engineer 
+                                            Senior Backend Engineer
                                         </p>
                                     </Typography>
                                 </AccordionSummary>
                                 <AccordionDetails
                                     sx={{
-                                         padding: 2,
+                                        padding: 2,
                                         // backgroundColor: 'red'
 
                                     }}
@@ -1094,52 +1141,52 @@ function Carrier() {
                                                     </div>
                                                 </div>
 
-                                               <div className="accordian_right_icons_button">
-                                                <button>Apply Now</button>
-                                               </div>
+                                                <div className="accordian_right_icons_button">
+                                                    <button>Apply Now</button>
+                                                </div>
                                                 <div className="accordian_right_details_outer">
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Location</p>
                                                         <p className="right_item">
-                                                        Bandung
+                                                            Bandung
                                                         </p>
                                                     </div>
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Type</p>
                                                         <p className="right_item">
-                                                        Full Time
+                                                            Full Time
                                                         </p>
                                                     </div>
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Quealification</p>
                                                         <p className="right_item">
-                                                        Fresh Graduation
+                                                            Fresh Graduation
                                                         </p>
                                                     </div>
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Posted</p>
                                                         <p className="right_item">
-                                                        22 jan 2023
+                                                            22 jan 2023
                                                         </p>
                                                     </div>
                                                 </div>
 
                                                 <div className="right_buttons">
 
-                                               
-                                                <div className="right_help_button_outer">
-                                                    <button>
-                                                    Ask for more help 
-                                                    <FaArrowRightLong  className='help_button_icon'/>
-                                                    </button>
 
-                                                </div>
-                                                <div className="right_about_company_button_outer">
-                                                <button>
-                                                    About Company
-                                                    <FaArrowRightLong  className='help_button_icon'/>
-                                                    </button>
-                                                </div>
+                                                    <div className="right_help_button_outer">
+                                                        <button>
+                                                            Ask for more help
+                                                            <FaArrowRightLong className='help_button_icon' />
+                                                        </button>
+
+                                                    </div>
+                                                    <div className="right_about_company_button_outer">
+                                                        <button>
+                                                            About Company
+                                                            <FaArrowRightLong className='help_button_icon' />
+                                                        </button>
+                                                    </div>
                                                 </div>
 
                                             </div>
@@ -1149,8 +1196,8 @@ function Carrier() {
                             </Accordion>
 
                             <Accordion
-                               expanded={expanded === 'panel6'}
-                               onChange={handleChange('panel6')}
+                                expanded={expanded === 'panel6'}
+                                onChange={handleChange('panel6')}
                                 disableGutters
                                 elevation={0}
                                 square
@@ -1158,7 +1205,7 @@ function Carrier() {
                                     width: '100%',
                                     // height: expanded ? 'auto' : '6vw', 
                                     transition: 'all 0.3s ease',
-                                    marginTop:'3vw'
+                                    marginTop: '3vw'
                                 }}
                             >
                                 <AccordionSummary
@@ -1191,18 +1238,18 @@ function Carrier() {
                                         }}
                                     >
                                         <p className="accordian_top_text" style={{ margin: 0 }}>
-                                        Engineering
+                                            Engineering
                                         </p>
                                         <p className="accordia_header">
-                                        Senior Frontend Engineer 
+                                            Senior Frontend Engineer
                                         </p>
                                     </Typography>
                                 </AccordionSummary>
                                 <AccordionDetails
                                     sx={{
-                                         padding: 2,
+                                        padding: 2,
                                         backgroundColor: 'none'
-                                        
+
 
                                     }}
                                 >
@@ -1284,52 +1331,52 @@ function Carrier() {
                                                     </div>
                                                 </div>
 
-                                               <div className="accordian_right_icons_button">
-                                                <button>Apply Now</button>
-                                               </div>
+                                                <div className="accordian_right_icons_button">
+                                                    <button>Apply Now</button>
+                                                </div>
                                                 <div className="accordian_right_details_outer">
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Location</p>
                                                         <p className="right_item">
-                                                        Bandung
+                                                            Bandung
                                                         </p>
                                                     </div>
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Type</p>
                                                         <p className="right_item">
-                                                        Full Time
+                                                            Full Time
                                                         </p>
                                                     </div>
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Quealification</p>
                                                         <p className="right_item">
-                                                        Fresh Graduation
+                                                            Fresh Graduation
                                                         </p>
                                                     </div>
                                                     <div className="detalis_items">
                                                         <p className="lef_item">Posted</p>
                                                         <p className="right_item">
-                                                        22 jan 2023
+                                                            22 jan 2023
                                                         </p>
                                                     </div>
                                                 </div>
 
                                                 <div className="right_buttons">
 
-                                               
-                                                <div className="right_help_button_outer">
-                                                    <button>
-                                                    Ask for more help 
-                                                    <FaArrowRightLong  className='help_button_icon'/>
-                                                    </button>
 
-                                                </div>
-                                                <div className="right_about_company_button_outer">
-                                                <button>
-                                                    About Company
-                                                    <FaArrowRightLong  className='help_button_icon'/>
-                                                    </button>
-                                                </div>
+                                                    <div className="right_help_button_outer">
+                                                        <button>
+                                                            Ask for more help
+                                                            <FaArrowRightLong className='help_button_icon' />
+                                                        </button>
+
+                                                    </div>
+                                                    <div className="right_about_company_button_outer">
+                                                        <button>
+                                                            About Company
+                                                            <FaArrowRightLong className='help_button_icon' />
+                                                        </button>
+                                                    </div>
                                                 </div>
 
                                             </div>
@@ -1341,22 +1388,81 @@ function Carrier() {
                     </div>
 
                     <div className="layer3_part4_outer_main">
-                    
-                    <div className="layer3_part4_outer">
-                        <h1 className="part4_heading">
-                            News and Updated
-                        </h1>
-                        <div className="bottom_line_outer">
 
+                        <div className="layer3_part4_outer">
+                            <h1 className="part4_heading">
+                                News and Updated
+                            </h1>
+                            <div className="bottom_line_outer">
+
+                            </div>
+                            <p className="part4_para">
+                                Integrate once and never worry about scaling again.
+                                Never deal with fragmented Layer 2 systems.
+                            </p>
                         </div>
-                        <p className="part4_para">
-                        Integrate once and never worry about scaling again.
-                         Never deal with fragmented Layer 2 systems.
-                        </p>
-                    </div>
                     </div>
                 </div>
 
+            </div>
+
+            <div className="carrier_cards_outer">
+
+                <Swiper
+                    modules={[Navigation, Pagination, Autoplay]}
+                    spaceBetween={0}
+                    slidesPerView={4}
+                    slidesPerGroup={1}
+                    slidesOffsetBefore={20}
+                    navigation={{
+                        prevEl: ".custom-prev-button",
+                        nextEl: ".custom-next-button",
+                    }}
+                    pagination={{ clickable: true }}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    }}
+                    speed={1000}
+                    loop={true}
+                    className="carrier_last_Cards"
+                    breakpoints={{
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 13,
+                        },
+                        721: {
+                            slidesPerView: 3,
+                            spaceBetween: 20,
+                        },
+                    }}
+                >
+
+                    {cards?.map((data, index) => (
+                        <SwiperSlide key={index}>
+                           <div className="carrier_card">
+                    <div className="carrier_img_outer">
+
+                        <img src={data.img} alt="card1" className="carrier_card_img" />
+                    </div>
+                    <div className="card_text_heading">
+                        <h6 className="card_hading_one">
+                            {data.heading1}
+                        </h6>
+                        <p className="card_para">
+                            {
+                                data.para
+                            }
+                         </p>
+                        <p className="card_readmore">
+                            {data.readmore}
+                        </p>
+                    </div>
+                </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+                
             </div>
         </div>
     )

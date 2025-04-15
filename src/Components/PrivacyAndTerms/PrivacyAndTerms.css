@@ -1,0 +1,48 @@
+.privacy_terms_outer_main{
+    border: 2px solid red;
+}
+.privacy_terms_banner_outer{
+    border: 2px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top:6vw;
+    position: relative;
+   
+}
+.bg_effect{
+    position: absolute;
+    width: 466.99998003128945px;
+    height: 1233.7934042747952px;
+    left: 0;
+}
+
+.privacy_terms_heading{
+    font-size:3.5vw;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 1);
+    margin-top: 3vw;
+}
+.privacy_terms_para{
+    font-size:1.2vw;
+    font-weight: 400;
+    color: #000000b3;
+    width: 90vw;
+    margin-top: 2vw;
+    text-align:center;
+}
+.privacy_terms_img{
+    width:90vw;
+    height:40vw;
+    margin-top: 4vw;
+}
+.privacy_terms_content_outer{
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+}
+.privacy_terms_content{
+border: 2px solid green;
+width: 85vw;
+}

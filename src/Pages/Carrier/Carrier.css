@@ -30,7 +30,7 @@
     justify-content: center;
     align-items: center;
     z-index: 10;
-    top:17.8vw;
+    top:15vw;
 }
 
 .carrier_heading {
@@ -515,16 +515,85 @@ flex-wrap: 800;
     text-align: center;
     width: 60vw;
 }
+/* .carrier_cards_outer{
+    border: 2px solid red;
+} */
+
+.carrier_card{
+     width:15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #cecbcb;
+    margin-top: 3vw;
+     
+    
+     
+}
+.carrier_img_outer{
+     width:14.5vw;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cecbcb;
+}
+.carrier_card_img{
+    width:14vw;
+    height:12vw;
+ 
+
+}
+.card_text_heading{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap:0.3vw;
+    width:15.3vw;
+    margin-left: 0.1vw;
+    height:10.4vw;
+    border-bottom-left-radius:1.5vw;
+    border-bottom-right-radius:1.5vw;
+    padding: 0.3vw;
+    background-color:white;
+}
+.card_hading_one{
+    font-size: 1vw;
+    font-weight: 600;
+    color: rgb(80, 79, 79);
+}
+.card_para{
+    font-size: 1.2vw;
+    font-weight: 500;
+    width:13vw;
+}
+.card_readmore{
+    font-size: 1.1vw;
+    color: #651fff;
+    font-weight: 600;
+}
+.carrier_cards_outer{
+     display: flex;
+    justify-content: space-around;
+}
+.carrier_last_Cards{
+     height: 30vw;
+    margin-top: 3vw;
+    padding-left: 9vw;
+    margin-left: 1.8vw;
+}
 
 
 @media (min-width: 320px) and (max-width: 720px) {
     .carrier_bg_heading {
-        font-size: 22vw;
+        font-size: 20vw;
         margin-top: -4vw;
     }
 
     .carrier_heading {
-        font-size: 7vw;
+        font-size: 6.5vw;
         text-align: center;
     }
 
@@ -557,11 +626,14 @@ flex-wrap: 800;
      margin-top: 30vw;
   
 }
-    .banner_left_icon,
+    
     .banner_right_icon {
-        display: none;
+       top: 50vw;
+        
     }
-
+    .banner_left_icon{
+        left: -4vw;
+    }
     .carrier_layer2_outer {
         flex-direction: column;
         align-items: center;
@@ -615,7 +687,7 @@ flex-wrap: 800;
     }
 
     .carrier_layer3_banner {
-        background-image: url("../assets//Carrier//banner3.svg");
+        background-image: url("../../assets//Carrier//banner3.svg");
         background-color: rgba(0, 0, 0, 1);
         background-repeat: no-repeat;
         background-position: center;
@@ -624,10 +696,10 @@ flex-wrap: 800;
         flex-direction: column;
         object-fit: cover; /* Not needed for background images */
         width: 80vw;
-        height:18vw; /* set a fixed height if you want to see the image contained */
+        height:25vw; /* set a fixed height if you want to see the image contained */
         padding: 5vw;
         top: -12vw;
-        left: 3vw;
+        left: 10vw;
     }
     
 
@@ -643,6 +715,7 @@ flex-wrap: 800;
         height: 8vw;
         font-size: 2.5vw;
         border-radius: 4vw;
+        margin-top: 3vw;
     }
 
     .layer3_part1_heading {
@@ -650,7 +723,7 @@ flex-wrap: 800;
     }
 
     .layer3_part2_nav_bar {
-        width: 90vw;
+        width:73vw;
         height: 10vw;
          border-radius:5vw;
         gap: 2vw;
@@ -787,4 +860,71 @@ flex-wrap: 800;
         font-size: 4vw;
         width: 90vw;
     }
+
+
+    .carrier_card{
+        width:60vw;
+        height: 100vw;
+       display: flex;
+       justify-content: center;
+        flex-direction: column;
+        margin-top: 10vw;
+         margin-left: 7vw;
+        
+       
+        
+   }
+   .carrier_img_outer{
+        width:60vw;
+       height:50vw;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+   .carrier_card_img{
+       width:58vw;
+       height:50vw;
+       margin-top: 3vw;
+    
+   
+   }
+   .card_text_heading{
+   
+       display: flex;
+       flex-direction: column;
+       justify-content: start;
+       gap:2vw;
+       width:60vw;
+       margin-left: 0.1vw;
+       height:100vw;
+       border-bottom-left-radius:1.5vw;
+       border-bottom-right-radius:1.5vw;
+       padding:2vw;
+       margin-top: 3vw;
+       padding-top: 3vw;
+    }
+   .card_hading_one{
+       font-size: 3vw;
+       font-weight: 600;
+    }
+   .card_para{
+       font-size:5vw;
+       font-weight: 500;
+       width:55vw;
+   }
+   .card_readmore{
+       font-size:4vw;
+        font-weight: 600;
+   }
+   .carrier_cards_outer{
+        display: flex;
+       justify-content: space-around;
+   }
+   .carrier_last_Cards{
+        height: 120vw;
+       margin-top: 3vw;
+       padding-left: 9vw;
+       margin-left: 1.8vw;
+   }
+   
 }

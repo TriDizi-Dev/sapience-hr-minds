@@ -9,6 +9,7 @@ import ContactForm from "./Pages/ContactUs/ContactUs";
 import { useLocation } from "react-router-dom";
 import { Service } from "./Components/Services/Service";
 import Carrier from "./Pages/Carrier/Carrier";
+import PrivacyAndTerms from "./Components/PrivacyAndTerms/PrivacyAndTerms";
 import { HrLearning } from "./Components/HrLearning/HrLearning";
 
 function Layout() {
@@ -26,6 +27,7 @@ function Layout() {
         <Route path="/careers" element={<Carrier />}></Route>
         <Route path="/service" element={<Service />}></Route>
         <Route path="/hrlearning" element={<HrLearning />}></Route>
+        <Route path="/privacy" element={<PrivacyAndTerms />}></Route>
       </Routes>
       {!hideFooter && <Footer />}
     </>
