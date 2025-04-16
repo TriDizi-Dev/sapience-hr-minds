@@ -232,11 +232,12 @@
     }
 
     .mobile_nav_underline {
-        height: 2vw;
+        height: 1vw;
         border-radius: 1vw;
         background: linear-gradient(to right, #7C5CFC, #FFD0FA);
         opacity: 0;
         transition: opacity 0.3s ease;
+        margin-top: 0.5vw;
     }
 
     .mobile_nav_underline.active1 {
