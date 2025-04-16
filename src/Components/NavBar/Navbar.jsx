@@ -431,8 +431,8 @@ export const Navbar = () => {
                 </li>
               </Link> */}
               <div className="nav_mobile_button_outer">
-                <Link to="/contactus" className="nav_link">
-                  <button>Contact Us</button>
+              <Link to="/contactus" className="nav_link">
+                <button onClick={()=>setOpenNavlist(!openNavlist)}>Contact Us</button>
                 </Link>
               </div>
             </div>
