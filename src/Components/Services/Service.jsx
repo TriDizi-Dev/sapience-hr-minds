@@ -122,11 +122,13 @@ export const Service = () => {
             src={TradeMark}
             alt="TradeMark"
             className="Service_Page_Section3_image1"
+            data-aos="fade-right"
           ></img>
           <img
             src={CircleGroup}
             alt="CircleGroup"
             className="Service_Page_Section3_image2"
+            data-aos="fade-left"
           ></img>
           <img
             src={OrangeLayer}
@@ -136,7 +138,7 @@ export const Service = () => {
 
           <div className="Image_Container_Section3_Main_Images">
             <div className="Image_Container_Section3_imge_Cont1">
-              <img src={Rocket} alt="Rocket"></img>
+              <img src={Rocket} alt="Rocket" data-aos="zoom-in"></img>
               <p
                 data-aos="fade-right"
                 data-aos-offset="300"
@@ -147,7 +149,7 @@ export const Service = () => {
               </p>
             </div>
             <div className="Image_Container_Section3_imge_Cont2">
-              <img src={Cup} alt="Cup"></img>
+              <img src={Cup} alt="Cup" data-aos="zoom-in"></img>
               <p
                 data-aos="fade-left"
                 data-aos-offset="300"
@@ -158,7 +160,7 @@ export const Service = () => {
               </p>
             </div>
             <div className="Image_Container_Section3_imge_Cont3">
-              <img src={Medal} alt="Medal"></img>
+              <img src={Medal} alt="Medal" data-aos="zoom-in"></img>
               <p
                 data-aos="fade-left"
                 data-aos-offset="300"
@@ -169,7 +171,7 @@ export const Service = () => {
               </p>
             </div>
             <div className="Image_Container_Section3_imge_Cont4">
-              <img src={Goal} alt="Goal"></img>
+              <img src={Goal} alt="Goal" data-aos="zoom-in"></img>
               <p
                 data-aos="fade-right"
                 data-aos-offset="300"
@@ -180,7 +182,7 @@ export const Service = () => {
               </p>
             </div>
             <div className="Image_Container_Section3_imge_Cont5">
-              <img src={Setting} alt="Setting"></img>
+              <img src={Setting} alt="Setting" data-aos="zoom-in"></img>
               <p
                 data-aos="fade-right"
                 data-aos-offset="300"
@@ -194,6 +196,7 @@ export const Service = () => {
               src={TringleGroup}
               alt="Triangle"
               className="Service_Page_Section3_Triangle"
+              data-aos="zoom-in"
             ></img>
           </div>
         </div>
@@ -202,7 +205,12 @@ export const Service = () => {
       <div className="Service_age_section4">
         <p className="Our_service_Head_title">Our Services</p>
         <div className="Service_Cards">
-          <div className="Service_Icon_Container">
+          <div
+            className="Service_Icon_Container"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
             <p className="Service_Img">
               <img src={Instagram} alt="Instagram" />
             </p>
@@ -212,7 +220,12 @@ export const Service = () => {
               Lorem Ipsum has been the
             </p>
           </div>
-          <div className="Service_Icon_Container">
+          <div
+            className="Service_Icon_Container"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
             <p className="Service_Img">
               <img src={Message} alt="Instagram" />
             </p>
@@ -222,7 +235,12 @@ export const Service = () => {
               Lorem Ipsum has been the
             </p>
           </div>
-          <div className="Service_Icon_Container marginChnage">
+          <div
+            className="Service_Icon_Container marginChnage"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
             <p className="Service_Img">
               <img src={Target} alt="Instagram" />
             </p>
@@ -232,7 +250,12 @@ export const Service = () => {
               Lorem Ipsum has been the
             </p>
           </div>
-          <div className="Service_Icon_Container Middle_service">
+          <div
+            className="Service_Icon_Container Middle_service"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
             <p className="Service_Img">
               <img src={Speaker} alt="Instagram" />
             </p>
@@ -242,7 +265,12 @@ export const Service = () => {
               Lorem Ipsum has been the
             </p>
           </div>
-          <div className="Service_Icon_Container marginChnage second_marginChanges">
+          <div
+            className="Service_Icon_Container marginChnage second_marginChanges"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
             <p className="Service_Img">
               <img src={Cursur} alt="Instagram" />
             </p>
@@ -252,7 +280,12 @@ export const Service = () => {
               Lorem Ipsum has been the
             </p>
           </div>
-          <div className="Service_Icon_Container third_marginChanges">
+          <div
+            className="Service_Icon_Container third_marginChanges"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
             <p className="Service_Img">
               <img src={Play} alt="Instagram" />
             </p>
@@ -262,7 +295,12 @@ export const Service = () => {
               Lorem Ipsum has been the
             </p>
           </div>
-          <div className="Service_Icon_Container">
+          <div
+            className="Service_Icon_Container"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
             <p className="Service_Img">
               <img src={Monitor} alt="Instagram" />
             </p>
@@ -276,10 +314,21 @@ export const Service = () => {
       </div>
 
       <div className="Service_last_secound_layer">
-        <p className="Service_last_secound_layer_Img">
+        <p
+          className="Service_last_secound_layer_Img"
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+        >
           <img src={LastImge} alt="LastImge" />
         </p>
-        <div className="Service_last_secound_layer_Right">
+        <div
+          className="Service_last_secound_layer_Right"
+          data-aos="fade-left"
+          data-aos-anchor="#example-anchor"
+          data-aos-offset="500"
+          data-aos-duration="1000"
+        >
           <p className="Service_last_secound_layer_Head">
             Transforming Ambition Into Achievement
           </p>
