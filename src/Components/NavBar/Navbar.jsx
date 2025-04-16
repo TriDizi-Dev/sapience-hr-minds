@@ -14,6 +14,7 @@ export const Navbar = () => {
 
   const handleNavActive = (ev) => {
     setNavActive(ev);
+    setOpenNavlist(!openNavlist);
   };
   const handleHome = () => {
     navigate("/");
@@ -206,6 +207,7 @@ export const Navbar = () => {
 
               </Link>
 
+              <Link to="/" className="nav_link">
               <li
                 className="mobile_nav_items"
                 onClick={() => handleNavActive("blog")}
@@ -219,6 +221,8 @@ export const Navbar = () => {
                   ></div>
                 </div>
               </li>
+              </Link>
+              <Link to="/alliancepartner" className="nav_link">
 
               <li
                 className="mobile_nav_items"
@@ -233,7 +237,7 @@ export const Navbar = () => {
                   ></div>
                 </div>
               </li>
-
+              </Link>
               <div className="nav_mobile_button_outer">
                 <button>Contact Us</button>
               </div>

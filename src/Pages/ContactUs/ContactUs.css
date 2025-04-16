@@ -168,3 +168,43 @@
   color: #ffffff;
   cursor: pointer;
 }
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+
+  .reach-box{
+    /* height: fit-content; */
+  }
+  .reach-container{
+    /* height: fit-content; */
+  }
+
+  .diamond{
+    width: 5vw;
+    height: 5vw;
+  }
+  .corner-box{
+    width: 5vw;
+    height: 5vw;
+  }
+  .reach-form{
+    width: 40vw;
+    left: 10vw;
+    top: 12vw;
+  }
+  .reach-form h2{
+    font-size: 5vw;
+  }
+  .subtext{
+    font-size: 3vw;
+    font-family: 'Poppins', sans-serif;
+  }
+  .reach-form label{
+    font-size: 4vw;
+  }
+  .reach-form input, .reach-form textarea{
+    height: 4vw;
+    font-size: 3vw;
+    padding: 1vw 1vw 3vw 1vw;
+  }
+
+}
