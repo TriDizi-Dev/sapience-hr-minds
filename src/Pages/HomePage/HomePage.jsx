@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "./HomePage.css";
 import { AiOutlinePlayCircle } from 'react-icons/ai';
 import homeimg from "../../assets/HomePage/homeimg.svg"
@@ -25,8 +25,26 @@ import { SwiperSlide, Swiper } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 export const HomePage = () => {
+
+
+  useEffect(() => {
+    AOS.init({
+      offset: 200, 
+      duration: 500, 
+      easing: "ease-in-sine", 
+      once: false, 
+    });
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
 
   const cardscontent = [
     {
@@ -193,7 +211,7 @@ export const HomePage = () => {
         </div>
         <div className="home_page_right">
           <div className="right_top_icon"><img src={rightvector} alt="rightvector" className="vector_right_icon" /></div>
-          <div className="left_top_icon"><img src={leftvector} alt="leftvector" className="home_vector_icon" /></div>
+          <div className="left_top_icon "><img src={leftvector} alt="leftvector" className="home_vector_icon" /></div>
           <div className="orange_circle"> </div>
           <div className="violet_circle"> </div>
 
@@ -226,7 +244,7 @@ export const HomePage = () => {
       </div>
 
       <div className="homepage_layer2_outer">
-        <div className="layer2_outer">
+        <div className="layer2_outer" >
           <p className="layer2_top_text">
             Trusted company over 1,000 business rely on humanet
           </p>
@@ -248,13 +266,13 @@ export const HomePage = () => {
       <div className="homepage_layer3_outer_main">
         <div className="homepage_layer3_outer">
           <div className="homepage_layer3_part1">
-            <h6 className="layer3_part1_heading">
+            <h6 className="layer3_part1_heading" data-aos="fade-left">
               About Us
             </h6>
-            <h1 className="layer3_part1_heading2">
+            <h1 className="layer3_part1_heading2" data-aos="zoom-in">
               Lorem Ipsum is simply dummy text
             </h1>
-            <p className="layer3_part1_para">
+            <p className="layer3_part1_para" data-aos="fade-right">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry.
               Lorem Ipsum has been the industry's standard dummy
               text ever since the 1500s, when an unknown printer took a galley of
@@ -271,7 +289,7 @@ export const HomePage = () => {
         <div className="homepage_layer4_outer">
           <img src={bg1} alt="bg1" className="backgroud_img1" />
 
-          <div className="homepage_layer4_left">
+          <div className="homepage_layer4_left" data-aos="fade-right">
             <p className="homepage_layer4_heading">
               Our Core Values
             </p>
@@ -309,7 +327,7 @@ export const HomePage = () => {
 
             </div>
           </div>
-          <div className="homepage_layer4_right">
+          <div className="homepage_layer4_right"  data-aos="fade-up">
             <img src={layer4} alt="layer4" className="homepage_layer4_img" />
           </div>
         </div>
@@ -318,13 +336,13 @@ export const HomePage = () => {
       <div className="homepage_layer5_outer_main">
         <div className="homepage_layer5_outer">
           <div className="layer5_part1">
-            <p className="layer5_part1_heading">
+            <p className="layer5_part1_heading" data-aos="fade-right">
               Our Core Values
             </p>
-            <h1 className="layer5_part1_heading2">
+            <h1 className="layer5_part1_heading2" data-aos="zoom-in">
               Lorem Ipsum is simply dummy text
             </h1>
-            <p className="layer5_part1_para">
+            <p className="layer5_part1_para" data-aos="fade-left">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
               when an unknown printer took a galley of type and scrambled it to make a type specimen book
             </p>
@@ -333,7 +351,7 @@ export const HomePage = () => {
 
             {
               cardscontent.map((data, ind) => (
-                <div className="layer5_card">
+                <div className="layer5_card" data-aos="flip-right">
                   <div className="layer5_card_logo_outer">
                     <img src={data.Logo} alt="logo" className="layer5_card_logo" />
                   </div>
@@ -505,7 +523,7 @@ export const HomePage = () => {
         </div>
       </div>
 
-      <div className="home_page_prefooter">
+      <div className="home_page_prefooter" data-aos="zoom-in">
         <PreFooter
           Head='Lorem Ipsum is simply dummy text of the'
           Content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
