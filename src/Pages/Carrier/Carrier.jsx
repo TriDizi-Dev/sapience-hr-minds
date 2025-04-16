@@ -228,7 +228,7 @@ function Carrier() {
                 </div>
 
                 <div className="carrier_layer3_part1">
-                    <h1 className="layer3_part1_heading">
+                    <h1 className="carrier_layer3_part1_heading">
                         Opened Positions
                     </h1>
                 </div>
