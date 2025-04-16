@@ -527,45 +527,45 @@ flex-wrap: 800;
 } */
 
 .carrier_card{
-     width:15vw;
+     width:20vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: #cecbcb;
     margin-top: 3vw;
-     
+      
     
      
 }
 .carrier_img_outer{
-     width:14.5vw;
-    
+     /* width:14.5vw; */
+     height:13vw;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #cecbcb;
 }
 .carrier_card_img{
-    width:14vw;
+    width:18.5vw;
     height:12vw;
+    border-radius: 0.5vw;
  
 
 }
 .card_text_heading{
-
     display: flex;
     flex-direction: column;
     justify-content: start;
     gap:0.3vw;
-    width:15.3vw;
+    width:20vw;
     margin-left: 0.1vw;
     height:10.4vw;
     border-bottom-left-radius:1.5vw;
     border-bottom-right-radius:1.5vw;
-    padding: 0.3vw;
+    padding: 0.6vw;
     background-color:white;
-}
+ }
 .card_hading_one{
     font-size: 1vw;
     font-weight: 600;
@@ -588,8 +588,9 @@ flex-wrap: 800;
 .carrier_last_Cards{
      height: 30vw;
     margin-top: 3vw;
-    padding-left: 9vw;
+    padding-left: 8vw;
     margin-left: 1.8vw;
+    
 }
 
 
@@ -908,8 +909,8 @@ flex-wrap: 800;
        width:60vw;
        margin-left: 0.1vw;
        height:100vw;
-       border-bottom-left-radius:1.5vw;
-       border-bottom-right-radius:1.5vw;
+       border-bottom-left-radius:7vw;
+       border-bottom-right-radius:7vw;
        padding:2vw;
        margin-top: 3vw;
        padding-top: 3vw;

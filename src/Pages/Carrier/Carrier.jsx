@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./Carrier.css"
 import lefticon from "../../assets/Carrier/lefticon.svg"
 import righticon from "../../assets/Carrier/righticon.svg"
@@ -28,9 +28,29 @@ import { SwiperSlide, Swiper } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 
 function Carrier() {
+
+
+
+     useEffect(() => {
+        AOS.init({
+          offset: 200, 
+          duration: 500, 
+          easing: "ease-in-sine", 
+          once: false, 
+        });
+      }, []);
+
+    
+      useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+    
 
     const [expanded, setExpanded] = React.useState(false);
 
@@ -81,16 +101,22 @@ function Carrier() {
         <div className="carriers_outer_main">
             <div className="carrier_banner_outer">
                 <div className="carriers_banner">
-                    <img src={lefticon} alt="lefticon" className="banner_left_icon" />
-                    <img src={righticon} alt="lefticon" className="banner_right_icon" />
+                    <img src={lefticon} alt="lefticon" className="banner_left_icon" data-aos="fade-right" />
+                    <img src={righticon} alt="lefticon" className="banner_right_icon" data-aos="zoom-in"/>
                     <h1 className="carrier_bg_heading">
                         CAREERS
                     </h1>
                     <div className="carrier_banner_heading_text">
-                        <h1 className="carrier_heading">
+                        <h1 className="carrier_heading" 
+                        data-aos="fade-zoom-in"
+                        data-aos-easing="ease-in-back"
+                        data-aos-delay="300"
+                        data-aos-offset="0"
+                        
+                        >
                             Be a Part of Our Journey
                         </h1>
-                        <p className="carrier_banner_para">
+                        <p className="carrier_banner_para" >
                             Integrate once and never worry about scaling again. Never deal with fragmented Layer 2 systems.
                         </p>
                     </div>
@@ -111,10 +137,10 @@ function Carrier() {
             <div className="carrier_layer2_main_outer">
                 <div className="carrier_layer2_outer">
                     <div className="carrier_layer2_left">
-                        <h1 className="layer2_heading">
+                        <h1 className="layer2_heading" data-aos="zoom-out-right">
                             The Benefit Working  Here
                         </h1>
-                        <p className="layer2_left_para">
+                        <p className="layer2_left_para" data-aos="zoom-out-right">
                             We recognize that compensation and benifits play a major part in making
                             sure that you feel you can foucs on your work.
                             We offer generous packages to make sure your
@@ -129,7 +155,7 @@ function Carrier() {
 
 
 
-                            <div className="carrier_layer2_right_card">
+                            <div className="carrier_layer2_right_card" data-aos="zoom-in" >
                                 <div className="layer2_card_logo_outer">
                                     <img src={logo1} alt="logo1" className="layer2_card_logo" />
                                 </div>
@@ -142,7 +168,7 @@ function Carrier() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="carrier_layer2_right_card">
+                            <div className="carrier_layer2_right_card" data-aos="zoom-in">
                                 <div className="layer2_card_logo_outer">
                                     <img src={logo2} alt="logo2" className="layer2_card_logo" />
                                 </div>
@@ -155,7 +181,7 @@ function Carrier() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="carrier_layer2_right_card">
+                            <div className="carrier_layer2_right_card" data-aos="zoom-in">
                                 <div className="layer2_card_logo_outer">
                                     <img src={logo3} alt="logo3" className="layer2_card_logo" />
                                 </div>
@@ -168,7 +194,7 @@ function Carrier() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="carrier_layer2_right_card">
+                            <div className="carrier_layer2_right_card" data-aos="zoom-in">
                                 <div className="layer2_card_logo_outer">
                                     <img src={logo4} alt="logo4" className="layer2_card_logo" />
                                 </div>
@@ -181,7 +207,7 @@ function Carrier() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="carrier_layer2_right_card">
+                            <div className="carrier_layer2_right_card" data-aos="zoom-in">
                                 <div className="layer2_card_logo_outer">
                                     <img src={logo5} alt="logo5" className="layer2_card_logo" />
                                 </div>
@@ -194,7 +220,7 @@ function Carrier() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="carrier_layer2_right_card">
+                            <div className="carrier_layer2_right_card" data-aos="zoom-in">
                                 <div className="layer2_card_logo_outer">
                                     <img src={logo6} alt="logo6" className="layer2_card_logo" />
                                 </div>
@@ -215,7 +241,7 @@ function Carrier() {
             </div>
 
             <div className="carrier_layer3_main">
-                <div className="carrier_layer3_outer">
+                <div className="carrier_layer3_outer" data-aos="zoom-in-up">
                     <div className="carrier_layer3_banner">
                         <p className="layer3_banner_para">
                             Suspendisse eleifend nunc non varius rhoncus.
@@ -249,6 +275,7 @@ function Carrier() {
                     <div className="layer3_part3_outer_main">
                         <div className="layer3_part3_outer">
                             <Accordion
+                                data-aos="zoom-out"
                                 expanded={expanded === 'panel1'}
                                 onChange={handleChange('panel1')}
                                 disableGutters
@@ -270,7 +297,7 @@ function Carrier() {
                                         backgroundColor: 'white',
                                         flexDirection: 'row-reverse',
                                         height: '6vw',
-                                        borderRadius: '2.5vw',
+                                        borderRadius: '2.8vw',
                                         boxShadow: '0px 6px 25px rgba(0, 0, 0, 0.15)',
                                         '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
                                             transform: 'rotate(90deg)',
@@ -441,6 +468,7 @@ function Carrier() {
 
 
                             <Accordion
+                             data-aos="zoom-out"
                                 expanded={expanded === 'panel2'}
                                 onChange={handleChange('panel2')}
                                 disableGutters
@@ -451,7 +479,9 @@ function Carrier() {
                                     // height: expanded ? 'auto' : '6vw', 
                                     transition: 'all 0.3s ease',
                                     marginTop: '3vw',
-                                     backgroundColor:"none"
+                                  backgroundColor:"white",
+                                //   border:"none"
+                                  border:"2px solid white"
                                 }}
                             >
                                 <AccordionSummary
@@ -462,7 +492,7 @@ function Carrier() {
                                         backgroundColor: 'white',
                                         flexDirection: 'row-reverse',
                                         height: '6vw',
-                                        borderRadius: '2.5vw',
+                                        borderRadius: '2.8vw',
                                         boxShadow: '0px 6px 25px rgba(0, 0, 0, 0.15)',
                                         '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
                                             transform: 'rotate(90deg)',
@@ -631,6 +661,7 @@ function Carrier() {
                             </Accordion>
 
                             <Accordion
+                             data-aos="zoom-out"
                                 expanded={expanded === 'panel3'}
                                 onChange={handleChange('panel3')}
                                 disableGutters
@@ -651,7 +682,7 @@ function Carrier() {
                                         backgroundColor: 'white',
                                         flexDirection: 'row-reverse',
                                         height: '6vw',
-                                        borderRadius: '2.5vw',
+                                        borderRadius: '2.8vw',
                                         boxShadow: '0px 6px 25px rgba(0, 0, 0, 0.15)',
                                         '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
                                             transform: 'rotate(90deg)',
@@ -820,6 +851,7 @@ function Carrier() {
                             </Accordion>
 
                             <Accordion
+                             data-aos="zoom-out"
                                 expanded={expanded === 'panel4'}
                                 onChange={handleChange('panel4')}
                                 disableGutters
@@ -840,7 +872,7 @@ function Carrier() {
                                         backgroundColor: 'white',
                                         flexDirection: 'row-reverse',
                                         height: '6vw',
-                                        borderRadius: '2.5vw',
+                                        borderRadius: '2.8vw',
                                         boxShadow: '0px 6px 25px rgba(0, 0, 0, 0.15)',
                                         '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
                                             transform: 'rotate(90deg)',
@@ -1009,6 +1041,7 @@ function Carrier() {
                             </Accordion>
 
                             <Accordion
+                             data-aos="zoom-out"
                                 expanded={expanded === 'panel5'}
                                 onChange={handleChange('panel5')}
                                 disableGutters
@@ -1029,7 +1062,7 @@ function Carrier() {
                                         backgroundColor: 'white',
                                         flexDirection: 'row-reverse',
                                         height: '6vw',
-                                        borderRadius: '2.5vw',
+                                        borderRadius: '2.8vw',
                                         boxShadow: '0px 6px 25px rgba(0, 0, 0, 0.15)',
                                         '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
                                             transform: 'rotate(90deg)',
@@ -1198,6 +1231,7 @@ function Carrier() {
                             </Accordion>
 
                             <Accordion
+                             data-aos="zoom-out"
                                 expanded={expanded === 'panel6'}
                                 onChange={handleChange('panel6')}
                                 disableGutters
@@ -1218,7 +1252,7 @@ function Carrier() {
                                         backgroundColor: 'white',
                                         flexDirection: 'row-reverse',
                                         height: '6vw',
-                                        borderRadius: '2.5vw',
+                                        borderRadius: '2.8vw',
                                         boxShadow: '0px 6px 25px rgba(0, 0, 0, 0.15)',
                                         '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
                                             transform: 'rotate(90deg)',
