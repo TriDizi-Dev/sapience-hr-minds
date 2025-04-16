@@ -266,7 +266,7 @@ export const HomePage = () => {
       <div className="homepage_layer3_outer_main">
         <div className="homepage_layer3_outer">
           <div className="homepage_layer3_part1">
-            <h6 className="layer3_part1_heading">
+            <h6 className="layer3_part1_heading" data-aos="fade-left">
               About Us
             </h6>
             <h1 className="layer3_part1_heading2" data-aos="zoom-in">
@@ -336,7 +336,7 @@ export const HomePage = () => {
       <div className="homepage_layer5_outer_main">
         <div className="homepage_layer5_outer">
           <div className="layer5_part1">
-            <p className="layer5_part1_heading">
+            <p className="layer5_part1_heading" data-aos="fade-right">
               Our Core Values
             </p>
             <h1 className="layer5_part1_heading2" data-aos="zoom-in">
@@ -351,7 +351,7 @@ export const HomePage = () => {
 
             {
               cardscontent.map((data, ind) => (
-                <div className="layer5_card">
+                <div className="layer5_card" data-aos="flip-right">
                   <div className="layer5_card_logo_outer">
                     <img src={data.Logo} alt="logo" className="layer5_card_logo" />
                   </div>
@@ -523,7 +523,7 @@ export const HomePage = () => {
         </div>
       </div>
 
-      <div className="home_page_prefooter">
+      <div className="home_page_prefooter" data-aos="zoom-in">
         <PreFooter
           Head='Lorem Ipsum is simply dummy text of the'
           Content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"

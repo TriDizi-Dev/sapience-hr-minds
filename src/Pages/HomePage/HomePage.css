@@ -582,8 +582,7 @@
     gap:1vw;
     margin-top: 3.5vw;
     margin-right: 0.3vw;
-    border: 2px solid red;
-}
+ }
 
 .layer5_card_logo_outer {
     width: 5.8vw;
@@ -629,6 +628,7 @@
     background-color: #7C5CFC;
     border-radius: 4vw;
     color: #fff;
+    cursor: pointer;
 }
 
 .card_bottom_line {
