@@ -11,6 +11,10 @@ import { Service } from "./Components/Services/Service";
 import Carrier from "./Pages/Carrier/Carrier";
 import PrivacyAndTerms from "./Components/PrivacyAndTerms/PrivacyAndTerms";
 import { HrLearning } from "./Components/HrLearning/HrLearning";
+import PricacyPolicy from "./Pages/PrivacyPolicy/PricacyPolicy";
+import TermsAndCondition from "./Pages/TermsAndCondition/TermsAndCondition";
+import Blog from "./Pages/Blog/Blog";
+import SingleBlogPage from "./Components/SingleBlogPage/SingleBlogPage";
 
 function Layout() {
   const location = useLocation();
@@ -28,6 +32,12 @@ function Layout() {
         <Route path="/service" element={<Service />}></Route>
         <Route path="/hrlearning" element={<HrLearning />}></Route>
         <Route path="/privacy" element={<PrivacyAndTerms />}></Route>
+        <Route path="/privacypolicy" element={<PricacyPolicy/>}></Route>
+        <Route path="/termsandconditions" element={<TermsAndCondition/>}></Route>
+        <Route path="/Blog" element={<Blog/>}></Route>
+        <Route path="/singleBlog" element={<SingleBlogPage/>}></Route>
+
+
       </Routes>
       {!hideFooter && <Footer />}
     </>

@@ -302,3 +302,175 @@
     margin-top: 8vw;
     margin-bottom: 9.5vw;
 }
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+
+
+    .Image_Conatiner img{
+        height: 60vw;
+        object-fit: cover;
+        border-radius: 2vw;
+    }
+    .Image_Upper_Text_Container{
+        width: 75vw;
+    }
+    .Header_Text{
+        font-size: 5vw;
+    }
+    .Header_Sub_Text{
+        font-size: 3vw;
+        text-align: justify;
+        margin-top: 1vw;
+    }
+    .Image_Upper_Text_Container{
+        top: -25vw;
+    }
+    .Section2_Layer_AlliancePartner{
+        flex-direction:column-reverse;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+        row-gap:80vw;
+    }
+    .Right_Container_AlliancePartner{
+        width: 80%;
+    }
+    .Person_Cont_img img{
+        width: 100%;
+        left: 0;
+    }
+    .SquareIcons_Cont_img img{
+        width: 100%;
+        /* left: 5vw; */
+    }
+    .Left_Container_AlliancePartner{
+        width: 80%;
+    }
+    .Heading_text_AlliancePartner{
+        font-size: 6vw;
+        text-align: center;
+    }
+    .para1_text_AlliancePartner, .para2_text_AlliancePartner{
+        font-size: 4vw;
+    }
+    .Section3_Alliance_Main_Container{
+        margin-top: 10vw;
+        /* width: 80%; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .Section3_Alliance_Heading1{
+        font-size: 5vw;
+        width: 80%;
+    }
+    .Section3_Alliance_Heading2{
+        font-size: 6vw;
+        width: 80%;
+        line-height: 7vw;
+    }
+    .Section3_Alliance_Heading_para{
+        width: 80%;
+        font-size: 4vw;
+        line-height: 6vw;
+        text-align: justify;
+        margin: 4vw auto 2vw auto;
+    }
+    .Section3_Alliance_Container_Icons_Container{
+        flex-direction: column;
+        width: 80%;
+    }
+    .Single_Alliance_container_Icon{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .Image_Alliance_container_image{
+        width: 20vw;
+        height: 20vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2vw;
+    }
+    .Image_Alliance_container_image img{
+        object-fit: cover;
+        width: 12vw;
+        height: 12vw;
+    }
+    .Horizontal_Alliance_row{
+        width: 90%;
+    }
+    .Cards_Alliance_Sub_head{
+        font-size: 5vw;
+    }
+    .Cards_Alliance_Name{
+        font-size: 4vw;
+        width: 80%;
+        line-height: 6vw;
+    }
+    .Cards_Alliance_Heading{
+        font-size: 4vw;
+    }
+    .BlueLayer_HeroBanner{
+        width: 100%;
+    }
+    .BlueLayer_HeroBanner img{
+        width: 100%;
+    }
+    .Alliance_layer4_part1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .Alliance_layer4_part1_heading{
+        font-size: 5vw;
+    }
+    .Alliance_layer4_part1_heading2{
+        font-size: 6vw;
+        width: 80%;
+    }
+
+    .Alliance_layer4_cards_outer{
+        margin-top: 3vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .Alliance_layer4_card{
+        width: 80%;
+        height: fit-content;
+        padding: 3vw;
+    }
+    .Alliance_layer4_card_logo{
+        font-size: 5vw;
+    }
+    .Alliance_layer4_card_para{
+        width: 100%;
+        font-size: 4vw;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        text-align: justify;
+    }
+    .card_bottom_logo, .Alliance_card_bottom_logo {
+        width: 12vw;
+        height: 12vw;
+    }
+    .Alliance_card_bottom_heading{
+        font-size: 4vw;
+    }
+    .Alliance_card_bottom_para{
+        font-size: 4vw;
+    }
+    .Alliance_layer4_card_bottom{
+        column-gap: 3vw;
+    }
+    .AlliancePartner_Main_Container{
+        margin-top: 7vw;
+    }
+}

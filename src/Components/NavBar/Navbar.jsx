@@ -14,6 +14,7 @@ export const Navbar = () => {
 
   const handleNavActive = (ev) => {
     setNavActive(ev);
+    setOpenNavlist(!openNavlist);
   };
   const handleHome = () => {
     navigate("/");
@@ -141,6 +142,7 @@ export const Navbar = () => {
                 openNavlist ? "show-menu" : "hide-menu"
               }`}
             >
+               <Link to="/" className="nav_link">
               <li
                 className="mobile_nav_items"
                 onClick={() => handleNavActive("home")}
@@ -154,7 +156,8 @@ export const Navbar = () => {
                   ></div>
                 </div>
               </li>
-
+              </Link>
+              <Link to="/about" className="nav_link">
               <li
                 className="mobile_nav_items"
                 onClick={() => handleNavActive("about")}
@@ -168,7 +171,9 @@ export const Navbar = () => {
                   ></div>
                 </div>
               </li>
+              </Link>
 
+              <Link to="/service" className="nav_link">
               <li
                 className="mobile_nav_items"
                 onClick={() => handleNavActive("services")}
@@ -182,6 +187,9 @@ export const Navbar = () => {
                   ></div>
                 </div>
               </li>
+              </Link>
+
+              <Link to="/hrlearning" className="nav_link">
 
               <li
                 className="mobile_nav_items"
@@ -197,6 +205,9 @@ export const Navbar = () => {
                 </div>
               </li>
 
+              </Link>
+
+              <Link to="/" className="nav_link">
               <li
                 className="mobile_nav_items"
                 onClick={() => handleNavActive("blog")}
@@ -210,6 +221,8 @@ export const Navbar = () => {
                   ></div>
                 </div>
               </li>
+              </Link>
+              <Link to="/alliancepartner" className="nav_link">
 
               <li
                 className="mobile_nav_items"
@@ -224,9 +237,11 @@ export const Navbar = () => {
                   ></div>
                 </div>
               </li>
-
+              </Link>
               <div className="nav_mobile_button_outer">
+              <Link to="/contactus" className="nav_link">
                 <button>Contact Us</button>
+                </Link>
               </div>
             </div>
           </div>
