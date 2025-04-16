@@ -75,3 +75,50 @@
 
 
 }
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+    .Hr_Hero_container{
+        height: 50vw;
+        margin-top: 5vw;
+    }
+    .Hr_Hero_container img{
+        height: 50vw;
+        object-fit: cover;
+        border-radius: 2vw;
+      
+    }
+    .Hr_Hero_container p{
+        font-size: 6vw;
+    }
+    .Section2_Main_container{
+        width: 80%;
+    }
+    .Section2_Heading_text{
+        font-size: 5vw;
+
+    }
+
+    .Left_Single_Side_Cards_Container{
+        width: 80vw;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding: 3vw 2vw;
+        row-gap: 1vw;
+    }
+    .Single_Cards_Sub_heads_text p{
+        font-size: 4vw;
+    }
+    .Single_Cards_Sub_text{
+        font-size: 4vw;
+    }
+    .Section2_Main_container{
+        margin: 4vw auto 2vw auto;
+    }
+    .Section2_Cards_Container{
+        margin-top: 2vw;
+    }
+
+}

@@ -188,6 +188,8 @@ export const Navbar = () => {
               </li>
               </Link>
 
+              <Link to="/hrlearning" className="nav_link">
+
               <li
                 className="mobile_nav_items"
                 onClick={() => handleNavActive("hrlearning")}
@@ -201,6 +203,8 @@ export const Navbar = () => {
                   ></div>
                 </div>
               </li>
+
+              </Link>
 
               <li
                 className="mobile_nav_items"
