@@ -160,8 +160,8 @@
     }
 
     .mobile_nav_list {
-        border: 2px solid orange;
-        list-style: none;
+        border:0.5vw solid rgb(203, 190, 242);
+         list-style: none;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -231,12 +231,15 @@
         font-weight: 600;
     }
 
+    
+
     .mobile_nav_underline {
-        height: 2vw;
+        height: 1vw;
         border-radius: 1vw;
         background: linear-gradient(to right, #7C5CFC, #FFD0FA);
         opacity: 0;
         transition: opacity 0.3s ease;
+        margin-top: 0.5vw;
     }
 
     .mobile_nav_underline.active1 {

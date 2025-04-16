@@ -252,7 +252,6 @@
 .part2_nav_items {
     width: 9.8vw;
     height: 3.1vw;
-    background-color: rgba(0, 0, 0, 1);
     color: white;
     display: flex;
     justify-content: center;
@@ -262,15 +261,23 @@
     font-size: 1.5vw;
 }
 
+.layer3_active{
+    background-color: rgba(0, 0, 0, 1);
+}
 .layer3_part3_outer {
     /* border: 2px solid; */
     width: auto;
     height: auto ;
     margin-top: 7vw;
 }
+ 
 .css-v3ougn-MuiPaper-root-MuiAccordion-root::before{
-background:none;
+    background-color: white !important;
+    /* border: 2px solid red; */
+    
+
 }
+ 
  
 .accordian_top_text {
     background-color: #651fff;
@@ -674,6 +681,9 @@ flex-wrap: 800;
         gap: 2vw;
         margin-top: 7vw;
     }
+    .layer3_active{
+        background-color: rgba(0, 0, 0, 1);
+    }
 
     .layer2_card_heding {
         font-size: 4vw;
@@ -735,6 +745,7 @@ flex-wrap: 800;
         font-size: 3vw;
         border-radius: 4vw;
     }
+
 
     .accordian_top_text {
         font-size: 3vw;
