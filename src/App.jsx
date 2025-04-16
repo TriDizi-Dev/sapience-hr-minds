@@ -34,7 +34,7 @@ function Layout() {
         <Route path="/privacy" element={<PrivacyAndTerms />}></Route>
         <Route path="/privacypolicy" element={<PricacyPolicy/>}></Route>
         <Route path="/termsandconditions" element={<TermsAndCondition/>}></Route>
-        <Route path="/Blog" element={<Blog/>}></Route>
+        <Route path="/blog" element={<Blog/>}></Route>
         <Route path="/singleBlog" element={<SingleBlogPage/>}></Route>
 
 
