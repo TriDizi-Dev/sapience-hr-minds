@@ -130,8 +130,8 @@
     }
   
     .footer_left_para {
-      width: 90vw;
-      font-size: 3.5vw;
+      width: 85vw;
+      font-size: 4vw;
       margin-top: 4vw;
       text-align: justify;
     }
@@ -170,13 +170,13 @@
   
     .services_headeing,
     .footer_company_heading {
-      font-size: 4.2vw;
+      font-size: 5vw;
       text-align: center;
     }
   
     .footer_services_items,
     .company_list_items {
-      font-size: 3.5vw;
+      font-size: 4vw;
       text-align: center;
     }
   

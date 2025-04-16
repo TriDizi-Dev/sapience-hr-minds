@@ -374,3 +374,277 @@
     margin-top: 12vw;
     margin-bottom: 10.5vw;
 }
+.Head_Section3{
+    display: none;
+}
+@media screen and (min-width: 320px) and (max-width: 720px) {
+    .About_Heading{
+        font-size: 6vw;
+    }
+    .About_Sub_Heading, .Section3_Heading2{
+        font-size: 5vw;
+        width: 80vw;
+        font-weight: 400;
+        line-height: 6vw;
+    }
+
+    .About_Main_Container{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        height: fit-content;
+        height: fit-content;
+    }
+    .Image_About img{
+        width: 100%;
+        height: 55vw;
+    }
+    .Image_Text_Container{
+        flex-direction: column;
+        width: 90%;
+        margin-top: 4vw;
+        row-gap: 4vw;
+    }
+    .Image_About{
+        width: 100%;
+    }
+    .Text_Container{
+        width: 90%;
+        display: flex;
+        height: fit-content;
+        display: flex;
+        row-gap: 2vw;
+        margin-top: 0;
+    }
+    .Text_Container p{
+        font-size: 4vw;
+        line-height: 5vw;
+        text-align: justify;
+      
+    }
+    .Section_main_Container{
+       margin-top: -3vw;
+    }
+
+    .About_page_section2{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        row-gap: 10vw;
+        margin-top: 15vw;
+    }
+    .Left_side_container{
+        width:80%;
+    }
+    .Head_Section2{
+        text-align: center;
+        font-size: 6vw;
+        /* margin-top: -20vw; */
+        display: none;
+    }
+    .Text_container_layer2{
+        width: 100%;
+        gap: 4vw;
+    }
+    .Text_container_layer2 p{
+        font-size: 4vw;
+        line-height: 5.5vw;
+        text-align: justify;    
+    }
+    .Right_side_Images_container{
+        width: 90%;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        height: fit-content;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+    .SquareGroup{
+        width: 80%;
+        left: 0;
+
+    }
+    .PersonImage{
+        top: 3vw;
+        right: 11vw;
+        width: 80%;
+        height: 68%;
+    }
+    .Circle_image{
+        top: 10vw;
+        width: 8vw;
+    }
+    .TradeMark_image{
+        left: 5vw;
+        top: 10vw;
+        width: 14vw;
+    }
+    .plusIcon{
+        bottom: 22vw;
+        width: 4vw;
+        right: 12vw;
+    }
+    .Tringle_Group{
+        width: 13vw;
+        left: 0;
+        bottom: 7vw;
+    }
+    .Section3_Main_Container{
+        margin-top:8vw;
+        /* width: 80%; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        
+    }
+    .Section3_Heading1{
+        font-size: 6vw;
+        font-weight: 600;
+    }
+    .Section3_Heading_para{
+        font-size: 4vw;
+        line-height: 5.5vw;
+        text-align: justify;
+        width: 78%;
+    }
+    .Section3_Container_Icons_Container{
+        flex-direction: column;
+        margin-top: 10vw;
+    }
+    .Single_container_Icon{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .Image_container_image img{
+        width: 14vw;
+        height: 14vw;
+
+    }
+    .Cards_Heading{
+        font-size: 5vw;
+    }
+    .Horizontal_row{
+        border: 1px solid #000000B2;
+        margin-top: 1vw;
+        width: 55%;
+    }
+    .Cards_Sub_head{
+        font-size: 5vw;
+    }
+    .Cards_Name{
+        font-size: 4vw;
+        width: 80%;
+        line-height: 5vw;
+        text-align: center;
+    }
+    .Section4_Main_Container{
+        margin-top: 8vw;
+    }
+    .Section4_Main_Heading{
+        font-size: 6vw;
+        line-height: 8vw;
+        width: 80%;
+    }
+    .Missions_container{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 6vw;
+    }
+    .Sub_Missions h1{
+        font-size: 6vw;
+    }
+    .Sub_Missions{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 2vw;
+    }
+    .Sub_Missions p{
+        font-size: 4vw;
+        margin-top: 0;
+    }
+    .Faq_Main_head{
+        font-size: 6vw;
+        line-height: 8vw;
+        width: 80%;
+    }
+    .Section5_Main_Container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 4vw  4vw  6vw  4vw;
+        margin-top: 7vw;
+    }
+    .Faq_Sub_head{
+        font-size: 4vw;
+        line-height: 6vw;
+        margin: 0 0;
+        margin-top: 2vw;
+        width: 90%;
+        text-align: justify;
+    }
+    .Faq_Container{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        gap: 4vw;
+    }
+    .Single_Faq{
+        width: 100%;
+        padding: 2vw;
+        border-radius: 3vw;
+    }
+    .Question{
+        font-size: 4vw;
+        line-height: 6vw;
+    }
+    .Heading_PreFooter{
+        font-size: 6vw;
+        line-height: 8vw;
+        width: 90%;
+    }
+    .PreFooter_Main{
+        height: fit-content;
+        padding: 2vw 2vw 4vw 2vw;
+        display: flex;
+        flex-direction: column;
+        row-gap: 3vw;
+    }
+    .Para_PreFooter{
+        font-size: 4vw;
+        line-height: 6vw;
+        text-align: justify;
+        width: 90%;
+    }
+    .Buttons_Container{
+        gap: 6vw;
+        margin: 1vw 0;
+    }
+    .Button1, .Button22{
+        width: 30vw;
+        height: 8vw;
+        font-size: 3vw;
+    }
+    .Pre_Footer_Container{
+        margin-bottom: 5vw;
+    }
+    .Head_Section3{
+        display: block;
+        margin-top: -10vw;
+        font-size: 6vw;
+    }
+}

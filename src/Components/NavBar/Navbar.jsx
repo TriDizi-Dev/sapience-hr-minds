@@ -141,6 +141,7 @@ export const Navbar = () => {
                 openNavlist ? "show-menu" : "hide-menu"
               }`}
             >
+               <Link to="/" className="nav_link">
               <li
                 className="mobile_nav_items"
                 onClick={() => handleNavActive("home")}
@@ -154,7 +155,8 @@ export const Navbar = () => {
                   ></div>
                 </div>
               </li>
-
+              </Link>
+              <Link to="/about" className="nav_link">
               <li
                 className="mobile_nav_items"
                 onClick={() => handleNavActive("about")}
@@ -168,7 +170,9 @@ export const Navbar = () => {
                   ></div>
                 </div>
               </li>
+              </Link>
 
+              <Link to="/service" className="nav_link">
               <li
                 className="mobile_nav_items"
                 onClick={() => handleNavActive("services")}
@@ -182,6 +186,9 @@ export const Navbar = () => {
                   ></div>
                 </div>
               </li>
+              </Link>
+
+              <Link to="/hrlearning" className="nav_link">
 
               <li
                 className="mobile_nav_items"
@@ -196,6 +203,8 @@ export const Navbar = () => {
                   ></div>
                 </div>
               </li>
+
+              </Link>
 
               <li
                 className="mobile_nav_items"

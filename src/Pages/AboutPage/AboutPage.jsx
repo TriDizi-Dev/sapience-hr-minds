@@ -119,6 +119,7 @@ export const AboutPage = () => {
             </div>
           </div>
           <div className="Right_side_Images_container">
+          <h1 className="Head_Section3">About Us</h1>
             <img src={Person} alt="PersonImage" className="PersonImage"></img>
             <img
               src={SquareGroup}
