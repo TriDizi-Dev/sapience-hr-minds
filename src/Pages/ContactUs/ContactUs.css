@@ -173,9 +173,11 @@
 
   .reach-box{
     /* height: fit-content; */
+    height: 70%;
   }
   .reach-container{
-    /* height: fit-content; */
+    height:140vw;
+   align-items: start;
   }
 
   .diamond{
@@ -206,5 +208,28 @@
     font-size: 3vw;
     padding: 1vw 1vw 3vw 1vw;
   }
+  .reach-info h3{
+    font-size: 5vw;
+    text-align: start;
+  }
+  .reach-info p{
+    margin: 1vw 0 0 2vw;
+    font-size: 3vw;
+    width: 100%;
+  }
+  .reach-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .reach-form button{
+    font-size: 5vw;
+    height: 10vw;
+    border-radius: 5vw;
+  }
 
+  .social-icons svg{
+    font-size: 3vw;
+  }
 }
