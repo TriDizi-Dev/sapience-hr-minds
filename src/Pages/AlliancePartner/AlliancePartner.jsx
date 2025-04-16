@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./AlliancePartner.css";
 import HeroImage from "../../assets/AlliancePartner/HeroImage.svg";
 import BlueLayer from "../../assets/AboutPage/blushade.svg";
@@ -11,8 +11,22 @@ import Smallicon3 from "../../assets/AboutPage/Smallicon3.svg";
 import Smallicon4 from "../../assets/AboutPage/Smallicon4.svg";
 import man from "../../assets/HomePage/man.svg";
 import { PreFooter } from "../../Components/PreFooter/PreFooter";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const AlliancePartner = () => {
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 1000,
+      easing: "ease-in-sine",
+      once: false,
+    });
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const Content = [
     {
       id: 1,
@@ -80,7 +94,7 @@ export const AlliancePartner = () => {
         <p className="Image_Conatiner">
           <img src={HeroImage} alt="HeroImage"></img>
         </p>
-        <div className="Image_Upper_Text_Container">
+        <div className="Image_Upper_Text_Container" data-aos="zoom-in">
           <p className="Header_Text">Lorem ipsum dolor</p>
           <p className="Header_Sub_Text">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -91,7 +105,7 @@ export const AlliancePartner = () => {
         </div>
       </div>
       <div className="Section2_Layer_AlliancePartner">
-        <div className="Left_Container_AlliancePartner">
+        <div className="Left_Container_AlliancePartner" data-aos="fade-right">
           <p className="Heading_text_AlliancePartner">Lorem ipsum dolor </p>
           <p className="para1_text_AlliancePartner">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -110,8 +124,8 @@ export const AlliancePartner = () => {
             simply dummy text of the printing and typesetting industry.
           </p>
         </div>
-        <div className="Right_Container_AlliancePartner">
-        <p className="right_Header_Text">Lorem ipsum dolor</p>
+        <div className="Right_Container_AlliancePartner" data-aos="flip-left">
+          <p className="right_Header_Text">Lorem ipsum dolor</p>
           <p className="SquareIcons_Cont_img">
             <img src={SquareIcons} alt="SquareIcons"></img>
           </p>
@@ -121,19 +135,27 @@ export const AlliancePartner = () => {
         </div>
       </div>
       <div className="Section3_Alliance_Main_Container">
-        <p className="Section3_Alliance_Heading1">Our Core Functions</p>
-        <p className="Section3_Alliance_Heading2">
+        <p className="Section3_Alliance_Heading1" data-aos="fade-right">
+          Our Core Functions
+        </p>
+        <p className="Section3_Alliance_Heading2" data-aos="zoom-in">
           Lorem Ipsum is simply dummy text
         </p>
-        <p className="Section3_Alliance_Heading_para">
+        <p className="Section3_Alliance_Heading_para" data-aos="fade-left">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book
         </p>
         <div className="Section3_Alliance_Container_Icons_Container">
-          {Content.map((item) => (
-            <div className="Single_Alliance_container_Icon">
+          {Content.map((item, i) => (
+            <div
+              className="Single_Alliance_container_Icon"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+              key={i}
+            >
               <p className="Image_Alliance_container_image">
                 <img src={item.Logo} alt={item.Logo} />
               </p>
@@ -150,7 +172,7 @@ export const AlliancePartner = () => {
       </div>
       <div className="Alliance_layer4_outer_main">
         <div className="Alliance_layer4_outer">
-          <div className="Alliance_layer4_part1">
+          <div className="Alliance_layer4_part1" data-aos="fade-down">
             <h6 className="Alliance_layer4_part1_heading">Testimonials</h6>
             <h1 className="Alliance_layer4_part1_heading2">
               See Why Our Clients Love Us
@@ -158,7 +180,12 @@ export const AlliancePartner = () => {
           </div>
 
           <div className="Alliance_layer4_cards_outer">
-            <div className="Alliance_layer4_card">
+            <div
+              className="Alliance_layer4_card"
+              data-aos="zoom-in"
+              data-aos-delay="500"
+              data-aos-duration="1500"
+            >
               <p className="Alliance_layer4_card_logo">Logo</p>
               <p className="Alliance_layer4_card_para">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -175,7 +202,12 @@ export const AlliancePartner = () => {
                 </div>
               </div>
             </div>
-            <div className="Alliance_layer4_card">
+            <div
+              className="Alliance_layer4_card"
+              data-aos="zoom-in"
+              data-aos-delay="1000"
+              data-aos-duration="2000"
+            >
               <p className="Alliance_layer4_card_logo">Logo</p>
               <p className="Alliance_layer4_card_para">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -196,7 +228,12 @@ export const AlliancePartner = () => {
                 </div>
               </div>
             </div>
-            <div className="Alliance_layer4_card">
+            <div
+              className="Alliance_layer4_card"
+              data-aos="zoom-in"
+              data-aos-delay="1500"
+              data-aos-duration="2000"
+            >
               <p className="Alliance_layer4_card_logo">Logo</p>
               <p className="Alliance_layer4_card_para">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
