@@ -240,7 +240,7 @@ export const Navbar = () => {
               </Link>
               <div className="nav_mobile_button_outer">
               <Link to="/contactus" className="nav_link">
-                <button>Contact Us</button>
+                <button onClick={()=>setOpenNavlist(!openNavlist)}>Contact Us</button>
                 </Link>
               </div>
             </div>

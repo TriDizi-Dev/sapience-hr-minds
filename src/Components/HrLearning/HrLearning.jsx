@@ -149,7 +149,7 @@ export const HrLearning = () => {
       </div>
       <div className="Section2_Main_container">
         <p className="Section2_Heading_text">What you learn in Internship?</p>
-        <div className="Background_Image_Container">
+        <div className="Background_Image_Container_1">
           <img src={BackgroundLayer} alt="BackgroundLayer"></img>
         </div>
         <div className="Section2_Cards_Container">

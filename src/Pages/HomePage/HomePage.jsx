@@ -33,56 +33,56 @@ export const HomePage = () => {
       id: 1,
       Logo: Smallicon1,
       Head: "Learn More",
-      subHead: "Powerful Dashboard",
+      subHead: "HR Compliance and Policy Development",
       para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     },
     {
       id: 2,
       Logo: Smallicon2,
       Head: "Learn More",
-      subHead: "Powerful Dashboard",
+      subHead: "Customized HR Consulting and Advisory Services",
       para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     },
     {
       id: 3,
       Logo: Smallicon3,
       Head: "Learn More",
-      subHead: "Powerful Dashboard",
+      subHead: "Virtual CHRO and Outsourcing of HR Operations",
       para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     },
     {
       id: 4,
       Logo: Smallicon4,
       Head: "Learn More",
-      subHead: "Powerful Dashboard",
+      subHead: "Talent Acquisition Solutions",
       para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     },
     {
       id: 1,
       Logo: Smallicon1,
       Head: "Learn More",
-      subHead: "Powerful Dashboard",
+      subHead: "Talent Management",
       para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     },
     {
       id: 2,
       Logo: Smallicon2,
       Head: "Learn More",
-      subHead: "Powerful Dashboard",
+      subHead: "Talent Engagement & Retention",
       para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     },
     {
       id: 3,
       Logo: Smallicon3,
       Head: "Learn More",
-      subHead: "Powerful Dashboard",
+      subHead: "Recruitment of Leadership & Mid-Level Team",
       para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     },
     {
       id: 4,
       Logo: Smallicon4,
       Head: "Learn More",
-      subHead: "Powerful Dashboard",
+      subHead: "Employee Insurance & Benefits",
       para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     },
 
@@ -180,15 +180,14 @@ export const HomePage = () => {
               Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </h1>
             <p className="home_page_para">
-              The best HR software for SMB companies and startup to manage employee,
-              payroll assistance, time off, attendance tracking with single software
+             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui voluptates tenetur facilis ex, corrupti officiis ipsa! Dignissimos minima dolore nesciunt.
             </p>
           </div>
           <div className="homepage_button_outer">
             <button className="homepage_left_button">Get started</button>
             <button className="homepage_right_button">
               <AiOutlinePlayCircle className='button_icon' />
-              How it works
+              Book A Meeting
             </button>
           </div>
         </div>
@@ -232,9 +231,16 @@ export const HomePage = () => {
             Trusted company over 1,000 business rely on humanet
           </p>
           <div className="layer2_logos_outer">
+            <div className='layer2_logos_inner'>
+
             <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
             <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
             <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
+            <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
+            <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
+            <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
+            <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
+            </div>
           </div>
         </div>
       </div>
@@ -243,7 +249,7 @@ export const HomePage = () => {
         <div className="homepage_layer3_outer">
           <div className="homepage_layer3_part1">
             <h6 className="layer3_part1_heading">
-              Product
+              About Us
             </h6>
             <h1 className="layer3_part1_heading2">
               Lorem Ipsum is simply dummy text
@@ -267,7 +273,7 @@ export const HomePage = () => {
 
           <div className="homepage_layer4_left">
             <p className="homepage_layer4_heading">
-              Our Core Functions
+              Our Core Values
             </p>
             <h1 className="homepage_layer4_heading2">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -282,7 +288,8 @@ export const HomePage = () => {
                 <div className="layer4_card_logo">
                 </div>
                 <h3 className="layer4_card_heading">
-                  Powerful Dashboard
+                  {/* Powerful Dashboard */}
+                  Vision
                 </h3>
                 <p className="layer4_card_para">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -293,7 +300,7 @@ export const HomePage = () => {
 
                 </div>
                 <h3 className="layer4_card_heading">
-                  Powerful Dashboard
+                  Mission
                 </h3>
                 <p className="layer4_card_para">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -312,7 +319,7 @@ export const HomePage = () => {
         <div className="homepage_layer5_outer">
           <div className="layer5_part1">
             <p className="layer5_part1_heading">
-              Our Core Functions
+              Our Core Values
             </p>
             <h1 className="layer5_part1_heading2">
               Lorem Ipsum is simply dummy text
