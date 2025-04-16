@@ -1,9 +1,8 @@
-.privacy_terms_outer_main{
+/* .privacy_terms_outer_main{
     border: 2px solid red;
-}
+} */
 .privacy_terms_banner_outer{
-    border: 2px solid green;
-    display: flex;
+     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -13,16 +12,17 @@
 }
 .bg_effect{
     position: absolute;
-    width: 466.99998003128945px;
-    height: 1233.7934042747952px;
+    width:38vw;
+    height:80vw;
     left: 0;
+    top: 12vw;
 }
 
 .privacy_terms_heading{
     font-size:3.5vw;
     font-weight: 700;
     color: rgba(0, 0, 0, 1);
-    margin-top: 3vw;
+    margin-top: 2vw;
 }
 .privacy_terms_para{
     font-size:1.2vw;
@@ -38,11 +38,47 @@
     margin-top: 4vw;
 }
 .privacy_terms_content_outer{
-    border: 2px solid red;
-    display: flex;
+     display: flex;
     justify-content: center;
+   
 }
 .privacy_terms_content{
-border: 2px solid green;
-width: 85vw;
+     width: 80vw;
+    height: auto;
+    padding:0vw 0 1vw 3.5vw;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    top: -10vw;
+    box-shadow: 0 1.5vw 2vw rgba(0, 0, 0, 0.5);
 }
+.side_circle_frame{
+    position: absolute;
+    right:-7vw;
+    top:50vw;
+    width: 3vw;
+    height: 3vw;
+}
+ .privacy_terms_content_heading{
+    font-size: 1.8vw;
+    margin-top: 2vw;
+ }
+ .privacy_terms_content_para{
+    font-size: 1.2vw;
+    width:72vw;
+    text-align:justify;
+    margin-top: 2vw;
+ }
+ .content_list_items_outer{
+     margin-top: 2vw;
+ }
+ .content_list_items{
+    font-size: 1.2vw;
+    width:72vw;
+    margin-top:1.3vw;
+    
+ }
+ .privacy_terms_prefooter{
+    margin-top: -2vw;
+ }
+ 
