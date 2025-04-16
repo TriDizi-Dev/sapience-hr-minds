@@ -86,7 +86,7 @@ export const Navbar = () => {
             </li>
           </Link>
 
-          <Link to="/" className="nav_link">
+          <Link to="/blog" className="nav_link">
             <li className="nav_items" onClick={() => handleNavActive("blog")}>
               Blog
               <div className="nav_underline_wrapper">
@@ -173,7 +173,7 @@ export const Navbar = () => {
               </li>
               </Link>
 
-              <Link to="/service" className="nav_link">
+              <Link to="/service" className="nav_link" >
               <li
                 className="mobile_nav_items"
                 onClick={() => handleNavActive("services")}
@@ -207,7 +207,7 @@ export const Navbar = () => {
 
               </Link>
 
-              <Link to="/" className="nav_link">
+              <Link to="/blog" className="nav_link">
               <li
                 className="mobile_nav_items"
                 onClick={() => handleNavActive("blog")}
