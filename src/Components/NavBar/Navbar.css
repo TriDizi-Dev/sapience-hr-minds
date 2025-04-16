@@ -160,8 +160,8 @@
     }
 
     .mobile_nav_list {
-        border: 2px solid orange;
-        list-style: none;
+        border:0.5vw solid rgb(203, 190, 242);
+         list-style: none;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -230,6 +230,8 @@
         font-size: 4.3vw;
         font-weight: 600;
     }
+
+    
 
     .mobile_nav_underline {
         height: 1vw;
