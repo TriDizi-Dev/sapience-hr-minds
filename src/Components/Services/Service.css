@@ -3,7 +3,7 @@
 }
 
 .Service_head_Container {
-  margin-top: 6.5vw;
+  margin-top: 0vw;
 }
 
 .Service_head_name {
@@ -137,7 +137,7 @@
   position: relative;
   height: 45vw;
   top: 10vw;
-  margin-bottom: 10vw;
+  margin-bottom: 5vw;
 }
 
 .Image_Container_Section3_imge_Cont1 {
