@@ -64,9 +64,8 @@
     cursor: pointer;
 
 }
-
-.homepage_right_button {
-    width: 11.8vw;
+.homepage_right_button{
+    width: 15vw;
     height: 3.5vw;
     background-color: #ffff;
     color: #7C5CFC;
@@ -341,12 +340,37 @@
     font-size: 1.2vw;
     font-weight: 500;
 }
+@keyframes scrollLogos {
+    0% {
+      transform: translateX(50%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
 
-.layer2_logos_outer {
+  }
+  
+  .layer2_logos_outer {
     width: 85vw;
-    display: flex;
-    justify-content: space-around;
+    overflow: hidden;
+    white-space: nowrap;
     margin-top: 1vw;
+    position: relative;
+  }
+  
+  .layer2_logos_inner {
+    display: inline-flex;
+    animation: scrollLogos 20s linear infinite;
+  }
+  
+  .layer2_logos {
+    height: 50px; /* or any preferred size */
+    margin: 0 1vw;
+  }
+  
+.layer2_logos{
+    width:21vw;
+    height:7vw;
 }
 
 .layer2_logos {
@@ -544,20 +568,21 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-top: 4vw;
+    margin-top: 0vw;
     width: 85vw;
 }
 
 .layer5_card {
     width: 18vw;
-    height: auto;
+    height:24vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.4vw;
+    gap:1vw;
     margin-top: 3.5vw;
     margin-right: 0.3vw;
+    border: 2px solid red;
 }
 
 .layer5_card_logo_outer {
@@ -571,13 +596,39 @@
     margin-bottom: 1vw;
 }
 
-/* .layer4_card_logo{
+ 
+.layer5_card_logo{
     width:3.3vw;
     height:3vw
-} */
-.layer5_card_logo {
-    width: 3.3vw;
-    height: 3vw
+}
+.card_bottom_line{
+    width: 15vw;
+    border-top:0.1vw solid rgba(0, 0, 0, 0.7);
+}
+.layer5_card_heading{
+    font-size:1.1vw;
+    font-weight:600;
+    text-align: center;
+    height: 4vw;
+    margin-top: 1vw;
+    width:18vw;
+}
+.layer5_card_text{
+    font-size:1.2vw;
+    font-weight:400;
+    color: rgba(0, 0, 0, 0.7);
+    width:18vw;
+    text-align: center;
+    margin-top: 0.3vw;
+}
+.layer5_card_lernmore{
+    font-size:1.2vw;
+    font-weight:600;
+    margin-top: 1vw;
+    padding: 0.2vw 1vw;
+    background-color: #7C5CFC;
+    border-radius: 4vw;
+    color: #fff;
 }
 
 .card_bottom_line {
@@ -1101,7 +1152,15 @@
     .layer5_card_text {
         font-size: 4vw;
     }
+<<<<<<< HEAD
 
+=======
+    .layer5_card_heading{
+        height: fit-content;
+        margin-top: 2vw;
+        width: 80%;
+    }
+>>>>>>> 7136f24212edd1c3d73fa64c3978fe13b29109c8
     .layer5_cards_outer {
         flex-direction: column;
         align-items: center;
@@ -1111,6 +1170,7 @@
         width: 14vw;
         height: 14vw;
         border-radius: 1.5vw;
+        margin-bottom: 2vw;
     }
 
     .layer5_card_logo {
@@ -1121,6 +1181,7 @@
     .card_bottom_line {
         width: 50vw;
     }
+<<<<<<< HEAD
 
     .layer5_card_text {
         width: 60vw;
@@ -1128,6 +1189,15 @@
 
     .layer5_card_lernmore {
         font-size: 4.5vw;
+=======
+    .layer5_card_text{
+        width: 80vw;
+    }
+    .layer5_card_lernmore{
+        font-size: 4vw;
+        padding: 0.5vw 3vw;
+        border-radius: 5vw;
+>>>>>>> 7136f24212edd1c3d73fa64c3978fe13b29109c8
     }
 
     .layer5_card {

@@ -4,7 +4,7 @@
     justify-content: space-around;
     padding: 0.5vw;
     background-color: white;
-    
+
 
 }
 
@@ -25,9 +25,10 @@
 
 .nav_items_outer {
     display: flex;
-    width: 52vw;
+    width: auto;
     justify-content: space-evenly;
     align-items: center;
+    gap: 2.5vw;
 }
 
 .nav_underline_wrapper {
@@ -43,7 +44,7 @@
     cursor: pointer;
     width: auto;
     margin: 0;
-
+    position: relative;
 }
 
 .nav_underline {
@@ -53,10 +54,12 @@
     opacity: 0;
     transition: opacity 0.4s ease;
 }
-.nav_link{
+
+.nav_link {
     text-decoration: none;
     color: inherit;
 }
+
 .nav_underline.active1 {
     opacity: 1;
     width: 4.2vw;
@@ -112,6 +115,85 @@
     display: none;
 }
 
+/* General navbar styles */
+.navbar {
+    background-color: #333;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.nav_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+
+/* Dropdown styles */
+.dropdown {
+    position: absolute;
+    background-color: #EBEBFF;
+    top: 100%;
+    left: 0%;
+    width: 18vw;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    /* gap: 1vw; */
+    /* padding: 1vw 1vw 1vw 1vw; */
+    border-radius: .5vw;
+    z-index: 1000;
+    box-shadow: 0px 10px 36px 0px #00000026;
+
+
+}
+
+.dropdown li {
+    position: relative;
+    list-style: none;
+    /* margin-top: 1vw; */
+    /* padding: 1vw; */
+    cursor: pointer;
+}
+
+.dropdown li a {
+    color: #000000;
+    padding: .5vw .5vw;
+    font-size: 1vw;
+    /* width: 10vw; */
+    display: block;
+    text-decoration: none;
+    font-family: Poppins;
+    /* font-weight: 400; */
+
+}
+
+.dropdown li a:hover {
+    background-color: #FFFFFF;
+    border-radius: .2vw;
+    /* padding-left: 1vw; */
+}
+
+/* Nested dropdown styles */
+.nested_dropdown:hover .sub-dropdown {
+    display: block;
+}
+
+.sub-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #555;
+    top: 0;
+    left: 100%;
+    padding-left: .5vw;
+    z-index: 1000;
+}
+
+.sub-dropdown li a:hover {
+    /* background-color: #666; */
+}
+
+
 @media screen and (min-width: 320px) and (max-width: 720px) {
     .navbar_outer {
         display: none;
@@ -120,7 +202,7 @@
     .nav_mobile_res_main {
         display: block;
         width: 100%;
-     }
+    }
 
     .nav_mobile_outer {
         display: flex;
@@ -160,8 +242,8 @@
     }
 
     .mobile_nav_list {
-        border:0.5vw solid rgb(203, 190, 242);
-         list-style: none;
+        border: 0.5vw solid rgb(203, 190, 242);
+        list-style: none;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -231,7 +313,7 @@
         font-weight: 600;
     }
 
-    
+
 
     .mobile_nav_underline {
         height: 1vw;
@@ -245,18 +327,23 @@
     .mobile_nav_underline.active1 {
         opacity: 1;
     }
+
     .mobile_nav_underline.active2 {
         opacity: 1;
     }
+
     .mobile_nav_underline.active3 {
         opacity: 1;
     }
+
     .mobile_nav_underline.active4 {
         opacity: 1;
     }
+
     .mobile_nav_underline.active5 {
         opacity: 1;
     }
+
     .mobile_nav_underline.active6 {
         opacity: 1;
     }

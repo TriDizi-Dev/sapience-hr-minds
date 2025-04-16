@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./AboutPage.css";
 import AboutMain1 from "../../assets/AboutPage/AboutMain1.svg";
 import Orangelayer from "../../assets/AboutPage/orangeshade.svg";
@@ -15,8 +15,17 @@ import Smallicon3 from "../../assets/AboutPage/Smallicon3.svg";
 import Smallicon4 from "../../assets/AboutPage/Smallicon4.svg";
 import { IoIosArrowDown } from "react-icons/io";
 import { PreFooter } from "../../Components/PreFooter/PreFooter";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const AboutPage = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration
+      once: true,     // whether animation should happen only once
+    });
+  }, []);
   
   const Content = [
     {
@@ -62,10 +71,10 @@ export const AboutPage = () => {
         <p className="About_Heading">About Us</p>
         <p className="About_Sub_Heading">About Our Company</p>
         <div className="Image_Text_Container">
-          <div className="Image_About">
+          <div className="Image_About" data-aos="zoom-out">
             <img src={AboutMain1} alt="AboutMain1"></img>
           </div>
-          <div className="Text_Container">
+          <div className="Text_Container" data-aos="zoom-out">
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -120,28 +129,32 @@ export const AboutPage = () => {
           </div>
           <div className="Right_side_Images_container">
           <h1 className="Head_Section3">About Us</h1>
-            <img src={Person} alt="PersonImage" className="PersonImage"></img>
+            <img src={Person} alt="PersonImage"  data-aos="zoom-out-up" className="PersonImage"></img>
             <img
               src={SquareGroup}
               alt="SquareGroup"
               className="SquareGroup"
+              data-aos="zoom-in"
             ></img>
             <img
               src={TringleGroup}
               alt="Tringle_Group"
               className="Tringle_Group"
+              data-aos="fade-up-right"
             ></img>
             <img
               src={TradeMark}
               alt="TradeMark_image"
               className="TradeMark_image"
+              data-aos="fade-right"
             ></img>
             <img
               src={CircleGroup}
               alt="Circle_image"
               className="Circle_image"
+              data-aos="fade-left"
             ></img>
-            <img src={plusIcon} alt="plusIcon" className="plusIcon"></img>
+            <img src={plusIcon} alt="plusIcon" className="plusIcon" data-aos="fade-up-left"></img>
           </div>
         </div>
       </div>
