@@ -111,6 +111,7 @@ export const AlliancePartner = () => {
           </p>
         </div>
         <div className="Right_Container_AlliancePartner">
+        <p className="right_Header_Text">Lorem ipsum dolor</p>
           <p className="SquareIcons_Cont_img">
             <img src={SquareIcons} alt="SquareIcons"></img>
           </p>
