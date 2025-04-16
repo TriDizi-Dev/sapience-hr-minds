@@ -422,6 +422,7 @@
   .Image_Container_Section3_imge_Cont5 p {
     font-size: 4vw;
     width: 80%;
+    text-align: center;
   }
   .Service_age_section4 {
     margin-top: 110vw;
@@ -463,7 +464,7 @@
     top: 10vw;
   }
   .third_marginChanges {
-    margin-top: 8vw;
+    margin-top: 9vw;
   }
   .Service_last_secound_layer {
     flex-direction: column;
