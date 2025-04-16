@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./Blog.css"
 import blogimg1 from "../../assets/Blogs/blog1.svg"
 import blogimg2 from "../../assets/Blogs/blog2.svg"
@@ -9,8 +9,25 @@ import layer4 from "../../assets/HomePage/layer4.svg"
 import { PreFooter } from '../../Components/PreFooter/PreFooter'
 import glow from "../../assets/Blogs/bg1.svg"
 
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Blog() {
+
+
+    useEffect(() => {
+      AOS.init({
+        offset: 200, 
+        duration: 500, 
+        easing: "ease-in-sine", 
+        once: false, 
+      });
+    }, []);
+  
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
 
     const blogs = [
         {
@@ -85,7 +102,7 @@ function Blog() {
                 <div className="blog_card_outer">
                     {
                         blogs.map((data)=>(
-                            <div className="blog_card">
+                            <div className="blog_card" data-aos="zoom-out-down">
                         <div className="blog_card_img_content">
                             <p className="blog_card_img_text">
                                 {
@@ -130,8 +147,8 @@ function Blog() {
 
             <div className="blog_page_layer2">
 
-                  <div className="homepage_layer4_outer_main">
-                        <div className="homepage_layer4_outer">
+                  <div className="homepage_layer4_outer_main" >
+                        <div className="homepage_layer4_outer" data-aos="fade-right">
                 
                           <div className="homepage_layer4_left">
                             <p className="homepage_layer4_heading">
@@ -170,7 +187,7 @@ function Blog() {
                 
                             </div>
                           </div>
-                          <div className="homepage_layer4_right">
+                          <div className="homepage_layer4_right" data-aos="zoom-in">
                             <img src={layer4} alt="layer4" className="homepage_layer4_img" />
                           </div>
                         </div>

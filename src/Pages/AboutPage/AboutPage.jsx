@@ -19,14 +19,19 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export const AboutPage = () => {
-
   useEffect(() => {
     AOS.init({
-      duration: 1000, // animation duration
-      once: true,     // whether animation should happen only once
+      offset: 200,
+      duration: 500,
+      easing: "ease-in-sine",
+      once: false,
     });
   }, []);
-  
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const Content = [
     {
       id: 1,
@@ -128,8 +133,13 @@ export const AboutPage = () => {
             </div>
           </div>
           <div className="Right_side_Images_container">
-          <h1 className="Head_Section3">About Us</h1>
-            <img src={Person} alt="PersonImage"  data-aos="zoom-out-up" className="PersonImage"></img>
+            <h1 className="Head_Section3">About Us</h1>
+            <img
+              src={Person}
+              alt="PersonImage"
+              data-aos="zoom-out-up"
+              className="PersonImage"
+            ></img>
             <img
               src={SquareGroup}
               alt="SquareGroup"
@@ -154,15 +164,25 @@ export const AboutPage = () => {
               className="Circle_image"
               data-aos="fade-left"
             ></img>
-            <img src={plusIcon} alt="plusIcon" className="plusIcon" data-aos="fade-up-left"></img>
+            <img
+              src={plusIcon}
+              alt="plusIcon"
+              className="plusIcon"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            ></img>
           </div>
         </div>
       </div>
 
       <div className="Section3_Main_Container">
-        <p className="Section3_Heading1">Our Core Functions</p>
-        <p className="Section3_Heading2">Lorem Ipsum is simply dummy text</p>
-        <p className="Section3_Heading_para">
+        <p className="Section3_Heading1" data-aos="fade-right">
+          Our Core Functions
+        </p>
+        <p className="Section3_Heading2" data-aos="zoom-in">
+          Lorem Ipsum is simply dummy text
+        </p>
+        <p className="Section3_Heading_para" data-aos="fade-left">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -170,7 +190,7 @@ export const AboutPage = () => {
         </p>
         <div className="Section3_Container_Icons_Container">
           {Content.map((item) => (
-            <div className="Single_container_Icon">
+            <div className="Single_container_Icon" data-aos="zoom-in-up">
               <p className="Image_container_image">
                 <img src={item.Logo} alt={item.Logo} />
               </p>
@@ -208,8 +228,20 @@ export const AboutPage = () => {
       </div>
 
       <div className="Section5_Main_Container">
-        <p className="Faq_Main_head">Frequently Asked Questions</p>
-        <p className="Faq_Sub_head">
+        <p
+          className="Faq_Main_head"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
+          Frequently Asked Questions
+        </p>
+        <p
+          className="Faq_Sub_head"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -217,7 +249,13 @@ export const AboutPage = () => {
         </p>
         <div className="Faq_Container">
           {questions.map((ques, id) => (
-            <div className="Single_Faq" key={id}>
+            <div
+              className="Single_Faq"
+              key={id}
+              data-aos="fade-right"
+              data-aos-offset={`${300 + 5 + id}`}
+              data-aos-easing="ease-in-sine"
+            >
               <div className="Content_Questions">
                 <span className="Question">{ques}</span>
                 <span className="Icons_class">

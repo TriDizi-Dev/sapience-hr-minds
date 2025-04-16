@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Service.css";
 import Image1 from "../../assets/Service/Image1.svg";
 import BlueLayer from "../../assets/Service/BlueBackground.svg";
@@ -20,13 +20,38 @@ import Play from "../../assets/Service/Play.svg";
 import Monitor from "../../assets/Service/Monitor.svg";
 import LastImge from "../../assets/Service/LastImage.svg";
 import { PreFooter } from "../PreFooter/PreFooter";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const Service = () => {
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 1000,
+      easing: "ease-in-sine",
+      once: false,
+    });
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="Service_MAin_Container">
       <div className="Service_head_Container">
-        <p className="Service_head_name">Service 1</p>
-        <p className="Service_content_name">
+        <p
+          className="Service_head_name"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+        >
+          Service 1
+        </p>
+        <p
+          className="Service_content_name"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+        >
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -34,11 +59,11 @@ export const Service = () => {
         </p>
       </div>
       <div className="Service_Page_Section2_Hero">
-        <div className="Image_Container_service_Left">
+        <div className="Image_Container_service_Left" data-aos="fade-right">
           <p>01</p>
           <img src={Image1} alt="Image1"></img>
         </div>
-        <div className="Middle_Content_Container">
+        <div className="Middle_Content_Container" data-aos="zoom-in">
           <p className="Middle_Secound_Head">Lorem ipsum dolor</p>
           <p className="Niddle_sub_content">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -80,7 +105,7 @@ export const Service = () => {
           </p>
         </div>
 
-        <div className="Image_Container_service_right">
+        <div className="Image_Container_service_right" data-aos="fade-left">
           <p>02</p>
           <img src={Image1} alt="Image1" />
         </div>
@@ -97,11 +122,13 @@ export const Service = () => {
             src={TradeMark}
             alt="TradeMark"
             className="Service_Page_Section3_image1"
+            data-aos="fade-right"
           ></img>
           <img
             src={CircleGroup}
             alt="CircleGroup"
             className="Service_Page_Section3_image2"
+            data-aos="fade-left"
           ></img>
           <img
             src={OrangeLayer}
@@ -111,36 +138,56 @@ export const Service = () => {
 
           <div className="Image_Container_Section3_Main_Images">
             <div className="Image_Container_Section3_imge_Cont1">
-              <img src={Rocket} alt="Rocket"></img>
-              <p>
+              <img src={Rocket} alt="Rocket" data-aos="zoom-in"></img>
+              <p
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
             </div>
             <div className="Image_Container_Section3_imge_Cont2">
-              <img src={Cup} alt="Cup"></img>
-              <p>
+              <img src={Cup} alt="Cup" data-aos="zoom-in"></img>
+              <p
+                data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
             </div>
             <div className="Image_Container_Section3_imge_Cont3">
-              <img src={Medal} alt="Medal"></img>
-              <p>
+              <img src={Medal} alt="Medal" data-aos="zoom-in"></img>
+              <p
+                data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
             </div>
             <div className="Image_Container_Section3_imge_Cont4">
-              <img src={Goal} alt="Goal"></img>
-              <p>
+              <img src={Goal} alt="Goal" data-aos="zoom-in"></img>
+              <p
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
             </div>
             <div className="Image_Container_Section3_imge_Cont5">
-              <img src={Setting} alt="Setting"></img>
-              <p>
+              <img src={Setting} alt="Setting" data-aos="zoom-in"></img>
+              <p
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
@@ -149,6 +196,7 @@ export const Service = () => {
               src={TringleGroup}
               alt="Triangle"
               className="Service_Page_Section3_Triangle"
+              data-aos="zoom-in"
             ></img>
           </div>
         </div>
@@ -157,7 +205,12 @@ export const Service = () => {
       <div className="Service_age_section4">
         <p className="Our_service_Head_title">Our Services</p>
         <div className="Service_Cards">
-          <div className="Service_Icon_Container">
+          <div
+            className="Service_Icon_Container"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
             <p className="Service_Img">
               <img src={Instagram} alt="Instagram" />
             </p>
@@ -167,7 +220,12 @@ export const Service = () => {
               Lorem Ipsum has been the
             </p>
           </div>
-          <div className="Service_Icon_Container">
+          <div
+            className="Service_Icon_Container"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
             <p className="Service_Img">
               <img src={Message} alt="Instagram" />
             </p>
@@ -177,7 +235,12 @@ export const Service = () => {
               Lorem Ipsum has been the
             </p>
           </div>
-          <div className="Service_Icon_Container marginChnage">
+          <div
+            className="Service_Icon_Container marginChnage"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
             <p className="Service_Img">
               <img src={Target} alt="Instagram" />
             </p>
@@ -187,7 +250,12 @@ export const Service = () => {
               Lorem Ipsum has been the
             </p>
           </div>
-          <div className="Service_Icon_Container Middle_service">
+          <div
+            className="Service_Icon_Container Middle_service"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
             <p className="Service_Img">
               <img src={Speaker} alt="Instagram" />
             </p>
@@ -197,7 +265,12 @@ export const Service = () => {
               Lorem Ipsum has been the
             </p>
           </div>
-          <div className="Service_Icon_Container marginChnage second_marginChanges">
+          <div
+            className="Service_Icon_Container marginChnage second_marginChanges"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
             <p className="Service_Img">
               <img src={Cursur} alt="Instagram" />
             </p>
@@ -207,7 +280,12 @@ export const Service = () => {
               Lorem Ipsum has been the
             </p>
           </div>
-          <div className="Service_Icon_Container third_marginChanges">
+          <div
+            className="Service_Icon_Container third_marginChanges"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
             <p className="Service_Img">
               <img src={Play} alt="Instagram" />
             </p>
@@ -217,7 +295,12 @@ export const Service = () => {
               Lorem Ipsum has been the
             </p>
           </div>
-          <div className="Service_Icon_Container">
+          <div
+            className="Service_Icon_Container"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
             <p className="Service_Img">
               <img src={Monitor} alt="Instagram" />
             </p>
@@ -231,10 +314,21 @@ export const Service = () => {
       </div>
 
       <div className="Service_last_secound_layer">
-        <p className="Service_last_secound_layer_Img">
+        <p
+          className="Service_last_secound_layer_Img"
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+        >
           <img src={LastImge} alt="LastImge" />
         </p>
-        <div className="Service_last_secound_layer_Right">
+        <div
+          className="Service_last_secound_layer_Right"
+          data-aos="fade-left"
+          data-aos-anchor="#example-anchor"
+          data-aos-offset="500"
+          data-aos-duration="1000"
+        >
           <p className="Service_last_secound_layer_Head">
             Transforming Ambition Into Achievement
           </p>

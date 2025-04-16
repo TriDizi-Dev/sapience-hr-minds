@@ -1,6 +1,6 @@
 .About_Main_Container {
     width: 100%;
-    margin-top: 10vw;
+    margin-top: 1vw;
 }
 
 .About_Heading,
@@ -23,7 +23,7 @@
 .About_Sub_Heading,
 .Section3_Heading2 {
     font-weight: 700;
-    font-size: 3.3vw;
+    font-size: 3vw;
     line-height: 100%;
     letter-spacing: .1vw;
     text-align: center;
@@ -113,7 +113,7 @@
 }
 
 .Left_side_container {
-    margin-top: -10vw;
+    margin-top: -15vw;
 }
 
 .Text_container_layer2 {
@@ -144,15 +144,15 @@
 
 .PersonImage {
     position: absolute;
-    top: -3vw;
-    height: 38vw;
-    right: 5vw;
+    top: -1vw;
+    height: 33vw;
+    right: 10vw;
 }
 
 .SquareGroup {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     left: -2vw;
     top: -2vw;
     z-index: -1;
@@ -169,7 +169,7 @@
 .TradeMark_image {
     position: absolute;
     top: 0vw;
-    left: -10vw;
+    left: -5vw;
     width: 7vw;
 }
 
@@ -184,8 +184,9 @@
 .plusIcon {
     position: absolute;
     bottom: 15vw;
-    right: 3vw;
+    right: 7vw;
     width: 2.2vw;
+    
 
 }
 
@@ -242,10 +243,12 @@
     text-align: center;
     color: #000000;
     margin-top: 1vw;
+    display: none;
 }
 
 .Horizontal_row {
     border: .1vw solid #000000B2;
+    margin-top: 1vw;
 }
 
 .Cards_Sub_head {
@@ -267,7 +270,7 @@
 }
 
 .Section4_Main_Container {
-    margin-top: 18vw;
+    margin-top: 5vw;
 }
 
 .Missions_container {
@@ -533,7 +536,7 @@
     }
     .Horizontal_row{
         border: 1px solid #000000B2;
-        margin-top: 1vw;
+        margin-top: 4vw;
         width: 55%;
     }
     .Cards_Sub_head{
