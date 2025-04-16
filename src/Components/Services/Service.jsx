@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Service.css";
 import Image1 from "../../assets/Service/Image1.svg";
 import BlueLayer from "../../assets/Service/BlueBackground.svg";
@@ -20,13 +20,38 @@ import Play from "../../assets/Service/Play.svg";
 import Monitor from "../../assets/Service/Monitor.svg";
 import LastImge from "../../assets/Service/LastImage.svg";
 import { PreFooter } from "../PreFooter/PreFooter";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const Service = () => {
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 1000,
+      easing: "ease-in-sine",
+      once: false,
+    });
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="Service_MAin_Container">
       <div className="Service_head_Container">
-        <p className="Service_head_name">Service 1</p>
-        <p className="Service_content_name">
+        <p
+          className="Service_head_name"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+        >
+          Service 1
+        </p>
+        <p
+          className="Service_content_name"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+        >
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -34,11 +59,11 @@ export const Service = () => {
         </p>
       </div>
       <div className="Service_Page_Section2_Hero">
-        <div className="Image_Container_service_Left">
+        <div className="Image_Container_service_Left" data-aos="fade-right">
           <p>01</p>
           <img src={Image1} alt="Image1"></img>
         </div>
-        <div className="Middle_Content_Container">
+        <div className="Middle_Content_Container" data-aos="zoom-in">
           <p className="Middle_Secound_Head">Lorem ipsum dolor</p>
           <p className="Niddle_sub_content">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -80,7 +105,7 @@ export const Service = () => {
           </p>
         </div>
 
-        <div className="Image_Container_service_right">
+        <div className="Image_Container_service_right" data-aos="fade-left">
           <p>02</p>
           <img src={Image1} alt="Image1" />
         </div>
@@ -112,35 +137,55 @@ export const Service = () => {
           <div className="Image_Container_Section3_Main_Images">
             <div className="Image_Container_Section3_imge_Cont1">
               <img src={Rocket} alt="Rocket"></img>
-              <p>
+              <p
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
             </div>
             <div className="Image_Container_Section3_imge_Cont2">
               <img src={Cup} alt="Cup"></img>
-              <p>
+              <p
+                data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
             </div>
             <div className="Image_Container_Section3_imge_Cont3">
               <img src={Medal} alt="Medal"></img>
-              <p>
+              <p
+                data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
             </div>
             <div className="Image_Container_Section3_imge_Cont4">
               <img src={Goal} alt="Goal"></img>
-              <p>
+              <p
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
             </div>
             <div className="Image_Container_Section3_imge_Cont5">
               <img src={Setting} alt="Setting"></img>
-              <p>
+              <p
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
