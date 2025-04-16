@@ -234,7 +234,7 @@ function Carrier() {
                 </div>
                 <div className="carrier_layer3_part2_outer">
                     <div className="layer3_part2_nav_bar">
-                        <p className="part2_nav_items">
+                        <p className="part2_nav_items layer3_active">
                             ALL
                         </p>
                         <p className="part2_nav_items">
@@ -258,7 +258,8 @@ function Carrier() {
                                     width: '100%',
                                     // height: expanded ? 'auto' : '6vw', 
                                     transition: 'all 0.3s ease',
-                                    marginTop: '3vw'
+                                    marginTop: '3vw',
+                                    backgroundColor:"none"
                                 }}
                             >
                                 <AccordionSummary
@@ -449,7 +450,8 @@ function Carrier() {
                                     width: '100%',
                                     // height: expanded ? 'auto' : '6vw', 
                                     transition: 'all 0.3s ease',
-                                    marginTop: '3vw'
+                                    marginTop: '3vw',
+                                     backgroundColor:"none"
                                 }}
                             >
                                 <AccordionSummary
