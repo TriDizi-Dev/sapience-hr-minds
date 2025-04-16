@@ -2,7 +2,7 @@ import React from 'react';
 import "./PreFooter.css";
 
 // {head,Content,Btn1,Btn2}
-export const PreFooter = ({Head,Content,Btn1="Get Started",Btn2="Request Demo"}) => {
+export const PreFooter = ({Head,Content,Btn1="Get Started",Btn2="Book A Meeting"}) => {
   return (
 <>
 <div className='PreFooter_Main'>

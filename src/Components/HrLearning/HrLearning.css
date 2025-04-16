@@ -35,12 +35,13 @@
     margin-top: 2vw;
 }
 
-.Background_Image_Container {
+.Background_Image_Container_1 {
     object-fit: cover;
     width: 100%;
     position: absolute;
     left: 0;
     top: 10vw;
+    z-index: -1;
 }
 
 .Left_Single_Side_Cards_Container {
@@ -226,7 +227,8 @@
         width: 80%;
     }
     .Section2_Heading_text{
-        font-size: 5vw;
+        font-size: 6vw;
+        text-align: center;
 
     }
 
@@ -245,12 +247,88 @@
     }
     .Single_Cards_Sub_text{
         font-size: 4vw;
+        line-height: 6vw;
     }
     .Section2_Main_container{
         margin: 4vw auto 2vw auto;
     }
     .Section2_Cards_Container{
         margin-top: 2vw;
+        flex-direction: column;
+    }
+    .Head_colour{
+        font-size: 5vw;
+    }
+    .Single_Cards_head{
+        font-size: 5vw;
+    }
+    .Background_Image_Container_1{
+        width: 100%;
     }
 
+    .Background_Image_Container_1 img{
+        width: 100%;
+    } 
+
+    .Right_Side_Container_Section2{
+        width: 100%;
+        margin-bottom: 5vw;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vw;
+    }
+    .Right_Side_Container_Header{
+        font-size: 5vw;
+    }
+    .Right_Side_Container_Section2_top_div{
+        padding: 2.5vw  2.5vw  10vw  2.5vw;
+    }
+    .Single_Cards_Sub_heads_text p, .Single_Cards_Sub_heads_text_right p{
+        font-size: 4vw;
+        border-radius: 2vw;
+        padding: 0.6vw 1vw;
+    }
+    .Single_Cards_Sub_heads_text_right_Sub_headings{
+        font-size: 3.5vw;
+    }
+    .Single_Cards_Sub_heads_text_right_Sub_text{
+        font-size: 3.5vw;
+        line-height: 5vw;
+        text-align: justify;
+        margin-bottom: 4vw;
+    }
+    .Single_Cards_Sub_heads_text_right_Sub_List_text{
+        padding: 0 0 0 2vw ;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1vw;
+    }
+    .Single_Cards_Sub_heads_text_right_Sub_List_text li{
+        font-size: 3.5vw;
+        line-height: 5vw;
+    }
+    .Apply_now_button_content_Hr_Learn{
+        font-size: 3vw;
+        border-radius: 1vw;
+        margin-top: 5vw;
+    }
+    .Privours_Data_Container_Head_text{
+        font-size: 5.5vw;
+    }
+    .Single_Privious_Data_Cont> :nth-child(1){
+        font-size: 4.5vw;
+    }
+    .Single_Privious_Data_Cont> :nth-child(2){
+        font-size: 4vw;
+        width: 100%;
+    }
+    .Left_Side_Container_Section2{
+        margin-left: 0;
+    }
+    .Privours_Data_Container_last{
+        padding: 3vw;
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.6vw;
+    }
 }
