@@ -15,6 +15,17 @@ import PricacyPolicy from "./Pages/PrivacyPolicy/PricacyPolicy";
 import TermsAndCondition from "./Pages/TermsAndCondition/TermsAndCondition";
 import Blog from "./Pages/Blog/Blog";
 import SingleBlogPage from "./Components/SingleBlogPage/SingleBlogPage";
+import { ServicePageOne } from "./Pages/Servicepages/ServicePageOne";
+import { ServicePageTwo } from "./Pages/Servicepages/ServicePageTwo";
+import { ServiceThree } from "./Pages/Servicepages/ServiceThree";
+import { ServicePageFour } from "./Pages/Servicepages/ServicePageFour";
+import { ServicePageFive } from "./Pages/Servicepages/ServicePageFive";
+import { ServicePageSix } from "./Pages/Servicepages/ServicePageSix";
+import { ServicePageSeven } from "./Pages/Servicepages/ServicePageSeven";
+import { ServicePageEight } from "./Pages/Servicepages/ServicePageEight";
+import InternshipHRLearning from "./Pages/InternshipHrLearning/InternshipHrLearning";
+import WorkshopsHrLearning from "./Pages/WorkshopsHrInternship/workshopHrLearning";
+import WebinarHRLearning from "./Pages/WebinarHrLearning/WebinarHrLearning";
 
 function Layout() {
   const location = useLocation();
@@ -26,11 +37,14 @@ function Layout() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/alliancepartner" element={<AlliancePartner />} />
+        <Route path="/alliance-partner" element={<AlliancePartner />} />
         <Route path="/contactus" element={<ContactForm />} />
         <Route path="/careers" element={<Carrier />}></Route>
         <Route path="/service" element={<Service />}></Route>
-        <Route path="/hrlearning" element={<HrLearning />}></Route>
+        {/* <Route path="/hrlearning" element={<HrLearning />}></Route> */}
+        <Route path="internship-hr-learning" element={<InternshipHRLearning/>}/>
+        <Route path="workshop-hr-learning" element={<WorkshopsHrLearning/>}/>
+        <Route path="webinar-hr-learning" element={<WebinarHRLearning/>}/>
         <Route path="/privacy" element={<PrivacyAndTerms />}></Route>
         <Route path="/privacypolicy" element={<PricacyPolicy />}></Route>
         <Route
@@ -39,6 +53,14 @@ function Layout() {
         ></Route>
         <Route path="/blog" element={<Blog />}></Route>
         <Route path="/singleBlog" element={<SingleBlogPage />}></Route>
+        <Route path="/hr-compliance" element={<ServicePageOne />}></Route>
+        <Route path="/hr-consulting" element={<ServicePageTwo />}></Route>
+        <Route path="/virtual-chro-and-outsourcing" element={<ServiceThree />}></Route>
+        <Route path="/talent-acquisition-solutions" element={<ServicePageFour />}></Route>
+        <Route path="/talent-management" element={<ServicePageFive />}></Route>
+        <Route path="/talent-engagement" element={<ServicePageSix />}></Route>
+        <Route path="/recruitment-of-leadership" element={<ServicePageSeven />}></Route>
+        <Route path="/employee-insurance-and-benefits" element={<ServicePageEight />}></Route>
       </Routes>
       {!hideFooter && <Footer />}
     </>
