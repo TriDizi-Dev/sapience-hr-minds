@@ -41,17 +41,17 @@
   position: relative;
 }
 .Image_Container_service_Left {
-  left: 0.5vw;
+  left: .9vw;
 }
 .Image_Container_service_right {
-  right: 0.5vw;
+  right: 0.9vw;
 }
 
 .Image_Container_service_Left p,
 .Image_Container_service_right p {
   border: 1px solid;
   position: absolute;
-  left: 0.6vw;
+  left: 0.9vw;
   padding: 1.3vw 1.5vw;
   background-color: #7c5cfc99;
   color: #ffffff;
