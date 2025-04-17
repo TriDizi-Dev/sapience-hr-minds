@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Service.css";
 import Image1 from "../../assets/Service/Image1.svg";
 import BlueLayer from "../../assets/Service/BlueBackground.svg";
 import OrangeLayer from "../../assets/Service/OrangeBackground.svg";
-import Rocket from "../../assets/Service/Rocket.svg";
-import Goal from "../../assets/Service/Goal.svg";
-import Cup from "../../assets/Service/Cup.svg";
-import Medal from "../../assets/Service/Medal.svg";
-import Setting from "../../assets/Service/Setting.svg";
+import Rocket from "../../assets/Service/first_img.svg";
+import Goal from "../../assets/Service/fourth_img.svg";
+import Cup from "../../assets/Service/second_img.svg";
+import Medal from "../../assets/Service/fiveth_img.svg";
+import Setting from "../../assets/Service/thrird_img.svg";
 import CircleGroup from "../../assets/AboutPage/CircleGroup.png";
 import TradeMark from "../../assets/AboutPage/trademark.svg";
 import TringleGroup from "../../assets/AboutPage/TriangleImages.svg";
@@ -40,6 +40,199 @@ export const Service = ({
   Para3Head,
   Para3Content1,
 }) => {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const target = 208;
+  const duration = 2000;
+  const ref = useRef(null);
+
+  const [AwardsCount, setAwardsCount] = useState(0);
+  const [AwardsIsVisible, setAwardsIsVisible] = useState(false);
+  const targetAwards = 76;
+  const durationAwards = 2000;
+
+  const [ClientCount, setClientCount] = useState(0);
+  const [ClientIsVisible, setClientIsVisible] = useState(false);
+  const targetClient = 43;
+  const durationClient = 2000;
+
+  const [ClientRatingCount, setClientRatingCount] = useState(0);
+  const [ClientRatingIsVisible, setClientRatingIsVisible] = useState(false);
+  const targetClientRating = 23;
+  const durationClientRating = 2000;
+
+  const [GoalCount, setGoalCount] = useState(0);
+  const [GoalIsVisible, setGoalIsVisible] = useState(false);
+  const targetGoal = 49;
+  const durationGoal = 2000;
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let start = 0;
+    const increment = Math.ceil(target / (duration / 50));
+    const interval = setInterval(() => {
+      start += increment;
+      if (start >= target) {
+        start = target;
+        clearInterval(interval);
+      }
+      setCount(start);
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, [isVisible]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setAwardsIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 } // Lowered threshold for easier triggering
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!AwardsIsVisible) return;
+
+    let start = 0;
+    const increment = Math.ceil(targetAwards / (durationAwards / 50));
+    const interval = setInterval(() => {
+      start += increment;
+      if (start >= targetAwards) {
+        start = targetAwards;
+        clearInterval(interval);
+      }
+      setAwardsCount(start);
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, [AwardsIsVisible]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setClientIsVisible(true); // Updated to ClientIsVisible
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!ClientIsVisible) return; // Updated to ClientIsVisible
+
+    let start = 0;
+    const increment = Math.ceil(targetClient / (durationClient / 50));
+    const interval = setInterval(() => {
+      start += increment;
+      if (start >= targetClient) {
+        start = targetClient;
+        clearInterval(interval);
+      }
+      setClientCount(start); // Updated to setClientCount
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, [ClientIsVisible]); // Updated dependency to ClientIsVisible
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setClientRatingIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!ClientRatingIsVisible) return;
+
+    let start = 0;
+    const increment = Math.ceil(
+      targetClientRating / (durationClientRating / 50)
+    );
+    const interval = setInterval(() => {
+      start += increment;
+      if (start >= targetClientRating) {
+        start = targetClientRating;
+        clearInterval(interval);
+      }
+      setClientRatingCount(start);
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, [ClientRatingIsVisible]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setGoalIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!ClientRatingIsVisible) return;
+
+    let start = 0;
+    const increment = Math.ceil(targetGoal / (durationGoal / 50));
+    const interval = setInterval(() => {
+      start += increment;
+      if (start >= targetGoal) {
+        start = targetGoal;
+        clearInterval(interval);
+      }
+      setGoalCount(start);
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, [GoalIsVisible]);
+
   useEffect(() => {
     AOS.init({
       offset: 200,
@@ -111,13 +304,13 @@ export const Service = ({
             src={TradeMark}
             alt="TradeMark"
             className="Service_Page_Section3_image1"
-            data-aos="fade-right"
+     
           ></img>
           <img
             src={CircleGroup}
             alt="CircleGroup"
             className="Service_Page_Section3_image2"
-            data-aos="fade-left"
+  
           ></img>
           <img
             src={OrangeLayer}
@@ -126,57 +319,44 @@ export const Service = ({
           ></img>
 
           <div className="Image_Container_Section3_Main_Images">
-            <div className="Image_Container_Section3_imge_Cont1">
-              <img src={Rocket} alt="Rocket" data-aos="zoom-in"></img>
-              <p
-                data-aos="fade-right"
-                data-aos-offset="300"
-                data-aos-easing="ease-in-sine"
-              >
+            <div className="Image_Container_Section3_imge_Cont1" ref={ref}>
+              <img src={Rocket} alt="Rocket"></img>
+              <span className="Rocket_count">{count}+</span>
+              <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
             </div>
             <div className="Image_Container_Section3_imge_Cont2">
-              <img src={Cup} alt="Cup" data-aos="zoom-in"></img>
-              <p
-                data-aos="fade-left"
-                data-aos-offset="300"
-                data-aos-easing="ease-in-sine"
-              >
+              <img src={Cup} alt="Cup"></img>
+              <span className="Cup_count">{AwardsCount}+</span>
+              <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
             </div>
             <div className="Image_Container_Section3_imge_Cont3">
-              <img src={Medal} alt="Medal" data-aos="zoom-in"></img>
-              <p
-                data-aos="fade-left"
-                data-aos-offset="300"
-                data-aos-easing="ease-in-sine"
-              >
+              <img src={Medal} alt="Medal"></img>
+              <span className="Cup_count">{ClientCount}+</span>
+
+              <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
             </div>
             <div className="Image_Container_Section3_imge_Cont4">
-              <img src={Goal} alt="Goal" data-aos="zoom-in"></img>
-              <p
-                data-aos="fade-right"
-                data-aos-offset="300"
-                data-aos-easing="ease-in-sine"
-              >
+              <img src={Goal} alt="Goal"></img>
+              <span className="Goal_count">{GoalCount}+</span>
+              <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
             </div>
             <div className="Image_Container_Section3_imge_Cont5">
-              <img src={Setting} alt="Setting" data-aos="zoom-in"></img>
-              <p
-                data-aos="fade-right"
-                data-aos-offset="300"
-                data-aos-easing="ease-in-sine"
-              >
+              <img src={Setting} alt="Setting"></img>
+              <span className="Setting_count">{ClientRatingCount}+</span>
+
+              <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
@@ -185,7 +365,6 @@ export const Service = ({
               src={TringleGroup}
               alt="Triangle"
               className="Service_Page_Section3_Triangle"
-              data-aos="zoom-in"
             ></img>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./AboutPage.css";
 import AboutMain1 from "../../assets/AboutPage/AboutMain1.svg";
 import Orangelayer from "../../assets/AboutPage/orangeshade.svg";
@@ -19,6 +19,161 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export const AboutPage = () => {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const target = 23;
+  const duration = 2000;
+  const ref = useRef(null);
+
+  const [AwardsCount, setAwardsCount] = useState(0);
+  const [AwardsIsVisible, setAwardsIsVisible] = useState(false);
+  const targetAwards = 10;
+  const durationAwards = 2000;
+
+  const [ClientCount, setClientCount] = useState(0);
+  const [ClientIsVisible, setClientIsVisible] = useState(false);
+  const targetClient = 99;
+  const durationClient = 2000;
+
+  const [ClientRatingCount, setClientRatingCount] = useState(0);
+  const [ClientRatingIsVisible, setClientRatingIsVisible] = useState(false);
+  const targetClientRating = 4.9;
+  const durationClientRating = 2000;
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let start = 0;
+    const increment = Math.ceil(target / (duration / 50));
+    const interval = setInterval(() => {
+      start += increment;
+      if (start >= target) {
+        start = target;
+        clearInterval(interval);
+      }
+      setCount(start);
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, [isVisible]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setAwardsIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 } // Lowered threshold for easier triggering
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!AwardsIsVisible) return;
+
+    let start = 0;
+    const increment = Math.ceil(targetAwards / (durationAwards / 50));
+    const interval = setInterval(() => {
+      start += increment;
+      if (start >= targetAwards) {
+        start = targetAwards;
+        clearInterval(interval);
+      }
+      setAwardsCount(start);
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, [AwardsIsVisible]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setClientIsVisible(true); // Updated to ClientIsVisible
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!ClientIsVisible) return; // Updated to ClientIsVisible
+
+    let start = 0;
+    const increment = Math.ceil(targetClient / (durationClient / 50));
+    const interval = setInterval(() => {
+      start += increment;
+      if (start >= targetClient) {
+        start = targetClient;
+        clearInterval(interval);
+      }
+      setClientCount(start); // Updated to setClientCount
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, [ClientIsVisible]); // Updated dependency to ClientIsVisible
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setClientRatingIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!ClientRatingIsVisible) return;
+
+    let start = 0;
+    const increment = Math.ceil(
+      targetClientRating / (durationClientRating / 50)
+    );
+    const interval = setInterval(() => {
+      start += increment;
+      if (start >= targetClientRating) {
+        start = targetClientRating;
+        clearInterval(interval);
+      }
+      setClientRatingCount(start);
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, [ClientRatingIsVisible]);
+
   useEffect(() => {
     AOS.init({
       offset: 200,
@@ -189,8 +344,12 @@ export const AboutPage = () => {
           scrambled it to make a type specimen book
         </p>
         <div className="Section3_Container_Icons_Container">
-          {Content.map((item) => (
-            <div className="Single_container_Icon" data-aos="zoom-in-up">
+          {Content.map((item, i) => (
+            <div
+              key={i}
+              className="Single_container_Icon"
+              data-aos="zoom-in-up"
+            >
               <p className="Image_container_image">
                 <img src={item.Logo} alt={item.Logo} />
               </p>
@@ -207,21 +366,21 @@ export const AboutPage = () => {
         <p className="Section4_Main_Heading">
           Our Mission is To Help Easy Organize Your Employee
         </p>
-        <div className="Missions_container">
+        <div className="Missions_container" ref={ref}>
           <div className="Sub_Missions">
-            <h1>23+</h1>
+            <h1>{count}+</h1>
             <p>Years of Experience</p>
           </div>
           <div className="Sub_Missions">
-            <h1>10+</h1>
+            <h1>{AwardsCount}+</h1>
             <p>Industry Awards</p>
           </div>
           <div className="Sub_Missions">
-            <h1>99%</h1>
+            <h1>{ClientCount}%</h1>
             <p>Client Satisfaction</p>
           </div>
           <div className="Sub_Missions">
-            <h1>4.9</h1>
+            <h1>{ClientRatingCount}</h1>
             <p>Client Rating</p>
           </div>
         </div>
