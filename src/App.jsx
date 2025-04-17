@@ -61,8 +61,10 @@ function Layout() {
         <Route path="/talent-engagement" element={<ServicePageSix />}></Route>
         <Route path="/recruitment-of-leadership" element={<ServicePageSeven />}></Route>
         <Route path="/employee-insurance-and-benefits" element={<ServicePageEight />}></Route>
+        <Route path="/singleBlog/:id" element={<SingleBlogPage />}></Route>
       </Routes>
       {!hideFooter && <Footer />}
+      
     </>
   );
 }

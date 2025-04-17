@@ -428,6 +428,14 @@
     border-top-left-radius: 1vw;
     background-color: rgba(217, 217, 217, 0.9);
 }
+.about_video{
+    width: 70vw;
+    height: 40vw;
+    object-fit: cover;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+}
+
 
 .homepage_layer4_outer_main {
     margin-top: 6vw;
@@ -940,6 +948,11 @@
         width: 86vw;
         height: 55vw;
     }
+    .about_video{
+        width: 86vw;
+        height: 55vw;
+        object-fit: cover;
+    }
 
     .left_top_icon {
         width: 10vw;
@@ -1126,11 +1139,12 @@
 
     .homepage_layer4_card {
         width: 90vw;
-        height: 60vw;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 2vw;
     }
 
     .layer4_card_para {
@@ -1147,19 +1161,13 @@
 
     .layer4_card_heading,
     .layer4_card_para,
-    .layer5_card_heading,
-    .layer5_card_text {
+     .layer5_card_text {
         font-size: 4vw;
     }
-<<<<<<< HEAD
-
-=======
     .layer5_card_heading{
-        height: fit-content;
-        margin-top: 2vw;
-        width: 80%;
+        font-size: 4vw;
+        width: 60vw;
     }
->>>>>>> 7136f24212edd1c3d73fa64c3978fe13b29109c8
     .layer5_cards_outer {
         flex-direction: column;
         align-items: center;
@@ -1180,27 +1188,19 @@
     .card_bottom_line {
         width: 50vw;
     }
-<<<<<<< HEAD
 
     .layer5_card_text {
         width: 60vw;
+        margin-top: 12vw;
     }
 
     .layer5_card_lernmore {
         font-size: 4.5vw;
-=======
-    .layer5_card_text{
-        width: 80vw;
-    }
-    .layer5_card_lernmore{
-        font-size: 4vw;
-        padding: 0.5vw 3vw;
-        border-radius: 5vw;
->>>>>>> 7136f24212edd1c3d73fa64c3978fe13b29109c8
     }
 
     .layer5_card {
         width: 90vw;
+        height: auto;
         margin-top: 7vw;
     }
 
