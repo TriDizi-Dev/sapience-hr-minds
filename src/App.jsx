@@ -64,6 +64,7 @@ function Layout() {
         <Route path="/singleBlog/:id" element={<SingleBlogPage />}></Route>
       </Routes>
       {!hideFooter && <Footer />}
+      
     </>
   );
 }
