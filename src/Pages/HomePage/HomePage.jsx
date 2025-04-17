@@ -17,6 +17,7 @@ import Smallicon4 from "../../assets/AboutPage/Smallicon4.svg";
 import bg1 from "../../assets/HomePage/bg1.svg"
 import bg2 from "../../assets/HomePage/bg2.svg"
 
+import homevideo from "../../assets/HomePage/hmv.mp4"
 import man from "../../assets/HomePage/man.svg"
 import { PreFooter } from '../../Components/PreFooter/PreFooter';
 
@@ -34,10 +35,10 @@ export const HomePage = () => {
 
   useEffect(() => {
     AOS.init({
-      offset: 200, 
-      duration: 500, 
-      easing: "ease-in-sine", 
-      once: false, 
+      offset: 200,
+      duration: 500,
+      easing: "ease-in-sine",
+      once: false,
     });
   }, []);
 
@@ -198,7 +199,7 @@ export const HomePage = () => {
               Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </h1>
             <p className="home_page_para">
-             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui voluptates tenetur facilis ex, corrupti officiis ipsa! Dignissimos minima dolore nesciunt.
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui voluptates tenetur facilis ex, corrupti officiis ipsa! Dignissimos minima dolore nesciunt.
             </p>
           </div>
           <div className="homepage_button_outer">
@@ -251,13 +252,13 @@ export const HomePage = () => {
           <div className="layer2_logos_outer">
             <div className='layer2_logos_inner'>
 
-            <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
-            <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
-            <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
-            <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
-            <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
-            <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
-            <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
+              <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
+              <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
+              <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
+              <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
+              <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
+              <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
+              <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
             </div>
           </div>
         </div>
@@ -280,7 +281,14 @@ export const HomePage = () => {
             </p>
           </div>
           <div className="homepage_layer3_part2">
-
+            <video
+              src={homevideo}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="about_video"
+            />
           </div>
         </div>
       </div>
@@ -327,7 +335,7 @@ export const HomePage = () => {
 
             </div>
           </div>
-          <div className="homepage_layer4_right"  data-aos="fade-up">
+          <div className="homepage_layer4_right" data-aos="fade-up">
             <img src={layer4} alt="layer4" className="homepage_layer4_img" />
           </div>
         </div>
@@ -504,13 +512,13 @@ export const HomePage = () => {
                     <p className="layer7_card_sub_name">
                       {
                         data.subname
-                    }
+                      }
                     </p>
                     <div className="layer7_card_line"></div>
                     <p className="layer7_card_para">
-                     {
-                      data.para
-                     }
+                      {
+                        data.para
+                      }
                     </p>
                     <h6 className="layer7_card_explore">
                       {data.explore}

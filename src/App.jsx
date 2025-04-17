@@ -52,17 +52,10 @@ function Layout() {
           element={<TermsAndCondition />}
         ></Route>
         <Route path="/blog" element={<Blog />}></Route>
-        <Route path="/singleBlog" element={<SingleBlogPage />}></Route>
-        <Route path="/hr-compliance" element={<ServicePageOne />}></Route>
-        <Route path="/hr-consulting" element={<ServicePageTwo />}></Route>
-        <Route path="/virtual-chro-and-outsourcing" element={<ServiceThree />}></Route>
-        <Route path="/talent-acquisition-solutions" element={<ServicePageFour />}></Route>
-        <Route path="/talent-management" element={<ServicePageFive />}></Route>
-        <Route path="/talent-engagement" element={<ServicePageSix />}></Route>
-        <Route path="/recruitment-of-leadership" element={<ServicePageSeven />}></Route>
-        <Route path="/employee-insurance-and-benefits" element={<ServicePageEight />}></Route>
+        <Route path="/singleBlog/:id" element={<SingleBlogPage />}></Route>
       </Routes>
       {!hideFooter && <Footer />}
+      
     </>
   );
 }
