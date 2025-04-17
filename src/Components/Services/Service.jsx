@@ -23,7 +23,23 @@ import { PreFooter } from "../PreFooter/PreFooter";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export const Service = () => {
+export const Service = ({
+  ServiceHeadName,
+  ServiceHeadContent,
+  ImageLeft,
+  ImageRight,
+  Para1Head,
+  Para1Content1,
+  Para1Content2,
+  Para2Head,
+  Para2Content2,
+  List1,
+  List2,
+  List3,
+  List4,
+  Para3Head,
+  Para3Content1,
+}) => {
   useEffect(() => {
     AOS.init({
       offset: 200,
@@ -45,17 +61,14 @@ export const Service = () => {
           data-aos="fade-up"
           data-aos-anchor-placement="top-bottom"
         >
-          Service 1
+          {ServiceHeadName}
         </p>
         <p
           className="Service_content_name"
           data-aos="fade-up"
           data-aos-anchor-placement="bottom-bottom"
         >
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book
+          {ServiceHeadContent}
         </p>
       </div>
       <div className="Service_Page_Section2_Hero">
@@ -64,45 +77,21 @@ export const Service = () => {
           <img src={Image1} alt="Image1"></img>
         </div>
         <div className="Middle_Content_Container" data-aos="zoom-in">
-          <p className="Middle_Secound_Head">Lorem ipsum dolor</p>
-          <p className="Niddle_sub_content">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book Lorem Ipsum is simply
-            dummy text of the printing and typesetting industry.{" "}
-          </p>
-          <p className="Niddle_sub_content">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book Lorem Ipsum is simply
-            dummy text of the printing and typesetting industry.{" "}
-          </p>
+          <p className="Middle_Secound_Head">{Para1Head}</p>
+          <p className="Niddle_sub_content">{Para1Content1} </p>
+          <p className="Niddle_sub_content">{Para1Content2} </p>
 
-          <p className="Middle_Secound_Head">Lorem ipsum dolor</p>
-          <p className="Niddle_sub_content">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book Lorem Ipsum is simply
-            dummy text of the printing and typesetting industry.{" "}
-          </p>
+          <p className="Middle_Secound_Head">{Para2Head}</p>
+          <p className="Niddle_sub_content">{Para2Content2} </p>
 
           <ul className="List_Items_Middle">
-            <li>Non magni quisquam</li>
-            <li>Eum aperiam facilis</li>
-            <li>Id quibusdam corporis et voluptate minus</li>
-            <li>Qui internos impedit vel unde</li>
+            <li>{List1}</li>
+            <li>{List2}</li>
+            <li>{List3}</li>
+            <li>{List4}</li>
           </ul>
-          <p className="Middle_Secound_Head">Lorem ipsum dolor</p>
-          <p className="Niddle_sub_content">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book Lorem Ipsum is simply
-            dummy text of the printing and typesetting industry.{" "}
-          </p>
+          <p className="Middle_Secound_Head">{Para3Head}</p>
+          <p className="Niddle_sub_content">{Para3Content1} </p>
         </div>
 
         <div className="Image_Container_service_right" data-aos="fade-left">
