@@ -304,16 +304,16 @@ export const Navbar = () => {
               <ul className="dropdown">
                 <li>
                   <Link
-                    to="/alliancepartner"
-                    onClick={() => handleNavActive("alliancepartner")}
+                    to="/alliance-partner"
+                    onClick={() => handleNavActive("alliance-partner")}
                   >
                     Alliance Partner
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/hrlearning"
-                    onClick={() => handleNavActive("hrlearning")}
+                    to="/internship-hr-learning"
+                    onClick={() => handleNavActive("internship-hr-learning")}
                   >
                     Internships
                   </Link>
@@ -321,16 +321,16 @@ export const Navbar = () => {
 
                 <li>
                   <Link
-                    to="/hrlearning"
-                    onClick={() => handleNavActive("hrlearning")}
+                    to="/workshop-hr-learning"
+                    onClick={() => handleNavActive("workshop-hr-learning")}
                   >
                     Workshops
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/hrlearning"
-                    onClick={() => handleNavActive("hrlearning")}
+                    to="/webinar-hr-learning"
+                    onClick={() => handleNavActive("webinar-hr-learning")}
                   >
                     Webinars
                   </Link>
