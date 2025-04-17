@@ -231,10 +231,14 @@ export const AboutPage = () => {
         <p className="About_Heading">About Us</p>
         <p className="About_Sub_Heading">About Our Company</p>
         <div className="Image_Text_Container">
-          <div className="Image_About" data-aos="zoom-out">
+          <div className="Image_About" 
+          data-aos="zoom-out"  
+          >
             <img src={AboutMain1} alt="AboutMain1"></img>
           </div>
-          <div className="Text_Container" data-aos="zoom-out">
+          <div className="Text_Container"
+           data-aos="fade-right"
+           >
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -268,7 +272,9 @@ export const AboutPage = () => {
           <div className="Left_side_container">
             <h1 className="Head_Section2">About Us</h1>
             <div className="Text_container_layer2">
-              <p>
+              <p 
+              data-aos="fade-right"
+              >
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
@@ -276,7 +282,9 @@ export const AboutPage = () => {
                 Ipsum is simply dummy text of the printing and typesetting
                 industry.{" "}
               </p>
-              <p>
+              <p
+              data-aos="fade-right"
+              >
                 Lorem Ipsum has been the industry's standard dummy text ever
                 since the 1500s, when an unknown printer took a galley of type
                 and scrambled it to make a type specimen bookLorem Ipsum is
@@ -305,25 +313,25 @@ export const AboutPage = () => {
               src={TringleGroup}
               alt="Tringle_Group"
               className="Tringle_Group"
-              data-aos="fade-up-right"
+              data-aos="zoom-in"
             ></img>
             <img
               src={TradeMark}
               alt="TradeMark_image"
               className="TradeMark_image"
-              data-aos="fade-right"
+              data-aos="zoom-in"
             ></img>
             <img
               src={CircleGroup}
               alt="Circle_image"
               className="Circle_image"
-              data-aos="fade-left"
+              data-aos="zoom-in"
             ></img>
             <img
               src={plusIcon}
               alt="plusIcon"
               className="plusIcon"
-              data-aos="fade-up"
+              data-aos="zoom-in"
               data-aos-duration="1000"
             ></img>
           </div>
@@ -331,13 +339,19 @@ export const AboutPage = () => {
       </div>
 
       <div className="Section3_Main_Container">
-        <p className="Section3_Heading1" data-aos="fade-right">
+        <p className="Section3_Heading1" 
+        data-aos="fade-right"
+        >
           Our Core Functions
         </p>
-        <p className="Section3_Heading2" data-aos="zoom-in">
+        <p className="Section3_Heading2" 
+        data-aos="zoom-in"
+        >
           Lorem Ipsum is simply dummy text
         </p>
-        <p className="Section3_Heading_para" data-aos="fade-left">
+        <p className="Section3_Heading_para"
+         data-aos="fade-right"
+         >
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -348,7 +362,7 @@ export const AboutPage = () => {
             <div
               key={i}
               className="Single_container_Icon"
-              data-aos="zoom-in-up"
+              data-aos="flip-right"
             >
               <p className="Image_container_image">
                 <img src={item.Logo} alt={item.Logo} />
@@ -390,16 +404,16 @@ export const AboutPage = () => {
         <p
           className="Faq_Main_head"
           data-aos="fade-down"
-          data-aos-easing="linear"
-          data-aos-duration="1500"
+          // data-aos-easing="linear"
+          // data-aos-duration="1500"
         >
           Frequently Asked Questions
         </p>
         <p
           className="Faq_Sub_head"
-          data-aos="fade-down"
-          data-aos-easing="linear"
-          data-aos-duration="1500"
+          data-aos="fade-up"
+          // data-aos-easing="linear"
+          // data-aos-duration="1500"
         >
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -411,11 +425,11 @@ export const AboutPage = () => {
             <div
               className="Single_Faq"
               key={id}
-              data-aos="fade-right"
-              data-aos-offset={`${300 + 5 + id}`}
-              data-aos-easing="ease-in-sine"
+              // data-aos="fade-left"
+              // data-aos-offset={`${300 + 5 + id}`}
+              // data-aos-easing="ease-in-sine"
             >
-              <div className="Content_Questions">
+              <div className="Content_Questions"  data-aos="fade-right" >
                 <span className="Question">{ques}</span>
                 <span className="Icons_class">
                   <IoIosArrowDown />
