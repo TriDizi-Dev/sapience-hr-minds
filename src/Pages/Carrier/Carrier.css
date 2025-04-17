@@ -20,6 +20,7 @@
     text-align: center;
     /* position: absolute;   */
     margin-top: -10vw;
+    
 
 }
 
@@ -37,6 +38,8 @@
     font-size:4.9vw;
     font-weight: 800;
     margin: 0;
+
+    
 }
 
 .carrier_banner_para {
@@ -532,7 +535,7 @@ flex-wrap: 800;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #cecbcb;
+    background-color: #e7e3e37a;
     margin-top: 3vw;
       
     
@@ -540,11 +543,11 @@ flex-wrap: 800;
 }
 .carrier_img_outer{
      /* width:14.5vw; */
-     height:13vw;
+     height:13.2vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #cecbcb;
+    background-color: #e7e3e37a;
 }
 .carrier_card_img{
     width:18.5vw;
@@ -559,8 +562,7 @@ flex-wrap: 800;
     justify-content: start;
     gap:0.3vw;
     width:20vw;
-    margin-left: 0.1vw;
-    height:10.4vw;
+        height:10.4vw;
     border-bottom-left-radius:1.5vw;
     border-bottom-right-radius:1.5vw;
     padding: 0.6vw;
@@ -804,6 +806,8 @@ flex-wrap: 800;
 
     .accoridian_content_outer {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 4vw;
     }
 
@@ -937,6 +941,12 @@ flex-wrap: 800;
        margin-top: 3vw;
        padding-left: 9vw;
        margin-left: 1.8vw;
+   }
+   .accordain_left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
    }
    
 }

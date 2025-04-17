@@ -505,6 +505,13 @@
     height: 4.2vw;
     background-color: rgba(242, 242, 242, 1);
     border-radius: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.layer4_logo{
+    width: 2vw;
+    height: 2vw;
 }
 
 .layer4_card_heading {
@@ -828,9 +835,16 @@
     width: 24.5vw;
     border-top: 0.1vw solid rgba(0, 0, 0, 0.7);
 }
+.layer7_card_para_outer{
+    background-color: rgba(124, 92, 252, 0.42);
+    width: 25vw;
+    padding: 0.5vw 0 0.5vw 0.9vw;
+    border-radius: 0.8vw;
+
+}
 
 .layer7_card_para {
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     font-weight: 400;
     color: rgba(0, 0, 0, 0.7)
 }
@@ -1258,6 +1272,13 @@
     .layer7_card_line {
         width: 80vw;
     }
+    .layer7_card_para_outer{
+        background-color: rgba(124, 92, 252, 0.42);
+        width:80vw;
+        padding: 0.5vw 0 0.5vw 1.9vw;
+        border-radius: 0.8vw;
+    
+    }
 
     .layer7_card_sub_name {
         font-size: 4vw;
@@ -1270,7 +1291,7 @@
     .home_gallery_cardswiper1,
     .home_gallery_cardswiper2 {
         width: 95vw;
-        height: 65vw;
+        height: 68vw;
     }
 
     .layer5_part1_para {
