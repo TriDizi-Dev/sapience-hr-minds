@@ -38,7 +38,7 @@ function Layout() {
           element={<TermsAndCondition />}
         ></Route>
         <Route path="/blog" element={<Blog />}></Route>
-        <Route path="/singleBlog" element={<SingleBlogPage />}></Route>
+        <Route path="/singleBlog/:id" element={<SingleBlogPage />}></Route>
       </Routes>
       {!hideFooter && <Footer />}
     </>
