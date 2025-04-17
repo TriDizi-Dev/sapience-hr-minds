@@ -11,6 +11,7 @@
     background-color: white;
     box-shadow: 0 1.5vw 2vw rgba(0, 0, 0, 0.1);
     margin-top: 2vw;  
+    cursor: pointer;
 }
 .blog_card_img_content{
     background-color: rgba(124, 92, 252, 0.42);
