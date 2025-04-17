@@ -4,157 +4,29 @@ import HrBanner from "../../assets/HrLearning/HrLearnHero.svg";
 import BackgroundLayer from "../../assets/HrLearning/BackgroundLayer.svg";
 import { PreFooter } from "../PreFooter/PreFooter";
 
-export const HrLearning = () => {
-  const [selectedData, setselectedData] = useState({});
+export const HrLearning = ({ HRLearning, imgTitle,questionTitle}) => {
+  const [selectedData, setSelectedData] = useState({});
 
-  const Cards = [
-    {
-      id: 1,
-      head: "HR Operations",
-      subhead1: "Duration",
-      subhead2: "Lorem",
-      subhead3: "Lorem",
-      paragraph:
-        " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took....",
-      PrimaryResponsibilityHeading: "Primary Responsibility:",
-      PrimaryResponsibilityPara:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer tookLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took....Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took....Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took........",
-      jobspecificationsHeading: "Job Specification:",
-      jobspecifications: [
-        "Proficiency in front-end technologies HTML, CSS, JavaScript  frameworks like React or Angular",
-        "Proficiency in back-end technologies Node.js, Python, Ruby, Java, etc.",
-        "Experience in designing and managing databases (SQL and NoSQL)",
-        "Proficiency in schema design and query optimization.",
-        "Strong knowledge of version control systems, particularly Git.",
-        "Expertise in managing and collaborating on code repositories.",
-        "Knowledge of web security best practices.",
-        "Experience with performance optimization techniques.",
-        " Excellent collaboration skills for working effectively in a team environment",
-        "Ability to communicate technical concepts to non-technical stakeholders.",
-      ],
-    },
-
-    {
-      id: 2,
-      head: "Payroll Management",
-      subhead1: "Duration",
-      subhead2: "Lorem",
-      subhead3: "Lorem",
-      paragraph:
-        " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took....",
-      PrimaryResponsibilityHeading: "Primary Responsibility:",
-      PrimaryResponsibilityPara:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer tookLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took....Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took....Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took........",
-      jobspecificationsHeading: "Job Specification:",
-      jobspecifications: [
-        "Proficiency in front-end technologies HTML, CSS, JavaScript  frameworks like React or Angular",
-        "Proficiency in back-end technologies Node.js, Python, Ruby, Java, etc.",
-        "Experience in designing and managing databases (SQL and NoSQL)",
-        "Proficiency in schema design and query optimization.",
-        "Strong knowledge of version control systems, particularly Git.",
-        "Expertise in managing and collaborating on code repositories.",
-        "Knowledge of web security best practices.",
-        "Experience with performance optimization techniques.",
-        " Excellent collaboration skills for working effectively in a team environment",
-        "Ability to communicate technical concepts to non-technical stakeholders.",
-      ],
-    },
-    {
-      id: 3,
-      head: "Recruitment",
-      subhead1: "Duration",
-      subhead2: "Lorem",
-      subhead3: "Lorem",
-      paragraph:
-        " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took....",
-      PrimaryResponsibilityHeading: "Primary Responsibility:",
-      PrimaryResponsibilityPara:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer tookLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took....Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took....Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took........",
-      jobspecificationsHeading: "Job Specification:",
-      jobspecifications: [
-        "Proficiency in front-end technologies HTML, CSS, JavaScript  frameworks like React or Angular",
-        "Proficiency in back-end technologies Node.js, Python, Ruby, Java, etc.",
-        "Experience in designing and managing databases (SQL and NoSQL)",
-        "Proficiency in schema design and query optimization.",
-        "Strong knowledge of version control systems, particularly Git.",
-        "Expertise in managing and collaborating on code repositories.",
-        "Knowledge of web security best practices.",
-        "Experience with performance optimization techniques.",
-        " Excellent collaboration skills for working effectively in a team environment",
-        "Ability to communicate technical concepts to non-technical stakeholders.",
-      ],
-    },
-    {
-      id: 4,
-      head: "Employee Relations",
-      subhead1: "Duration",
-      subhead2: "Lorem",
-      subhead3: "Lorem",
-      paragraph:
-        " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took....",
-      PrimaryResponsibilityHeading: "Primary Responsibility:",
-      PrimaryResponsibilityPara:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer tookLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took....Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took....Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took........",
-      jobspecificationsHeading: "Job Specification:",
-      jobspecifications: [
-        "Proficiency in front-end technologies HTML, CSS, JavaScript  frameworks like React or Angular",
-        "Proficiency in back-end technologies Node.js, Python, Ruby, Java, etc.",
-        "Experience in designing and managing databases (SQL and NoSQL)",
-        "Proficiency in schema design and query optimization.",
-        "Strong knowledge of version control systems, particularly Git.",
-        "Expertise in managing and collaborating on code repositories.",
-        "Knowledge of web security best practices.",
-        "Experience with performance optimization techniques.",
-        " Excellent collaboration skills for working effectively in a team environment",
-        "Ability to communicate technical concepts to non-technical stakeholders.",
-      ],
-    },
-    {
-      id: 5,
-      head: "Mern Stack Developer",
-      subhead1: "Duration",
-      subhead2: "Lorem",
-      subhead3: "Lorem",
-      paragraph:
-        " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took....",
-      PrimaryResponsibilityHeading: "Primary Responsibility:",
-      PrimaryResponsibilityPara:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer tookLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took....Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took....Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took........",
-      jobspecificationsHeading: "Job Specification:",
-      jobspecifications: [
-        "Proficiency in front-end technologies HTML, CSS, JavaScript  frameworks like React or Angular",
-        "Proficiency in back-end technologies Node.js, Python, Ruby, Java, etc.",
-        "Experience in designing and managing databases (SQL and NoSQL)",
-        "Proficiency in schema design and query optimization.",
-        "Strong knowledge of version control systems, particularly Git.",
-        "Expertise in managing and collaborating on code repositories.",
-        "Knowledge of web security best practices.",
-        "Experience with performance optimization techniques.",
-        " Excellent collaboration skills for working effectively in a team environment",
-        "Ability to communicate technical concepts to non-technical stakeholders.",
-      ],
-    },
-  ];
   useEffect(() => {
-    setselectedData(Cards[0]);
+    setSelectedData(HRLearning[0]);
   }, []);
   const Handledatachnage = (data) => {
-    setselectedData(data);
+    setSelectedData(data);
   };
   return (
     <>
       <div className="Hr_Hero_container">
         <img src={HrBanner} alt="HrBanner"></img>
-        <p>Internships</p>
+        <p>{imgTitle}</p>
       </div>
       <div className="Section2_Main_container">
-        <p className="Section2_Heading_text">What you learn in Internship?</p>
+        <p className="Section2_Heading_text">What you learn in {questionTitle}?</p>
         <div className="Background_Image_Container_1">
           <img src={BackgroundLayer} alt="BackgroundLayer"></img>
         </div>
         <div className="Section2_Cards_Container">
           <div className="Left_Side_Container_Section2">
-            {Cards.map((item, id) => (
+            {HRLearning.map((item, id) => (
               <div
                 className={`Left_Single_Side_Cards_Container ${
                   item.id === selectedData.id ? "card_boarder" : ""
@@ -196,8 +68,8 @@ export const HrLearning = () => {
                 {selectedData.jobspecificationsHeading}
               </p>
               <ul className="Single_Cards_Sub_heads_text_right_Sub_List_text">
-                {selectedData?.jobspecifications?.map((item) => (
-                  <li>{item}</li>
+                {selectedData?.jobspecifications?.map((item, i) => (
+                  <li key={i}>{item}</li>
                 ))}
               </ul>
               <p className="Apply_now_button_content_Hr_Learn">Apply Now</p>

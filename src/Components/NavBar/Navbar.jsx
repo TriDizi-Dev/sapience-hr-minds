@@ -280,8 +280,8 @@ export const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to="/hrlearning"
-                    onClick={() => handleNavActive("hrlearning")}
+                    to="/internshipHrLearning"
+                    onClick={() => handleNavActive("InternshipHrLearning")}
                   >
                     Internships
                   </Link>
@@ -289,16 +289,16 @@ export const Navbar = () => {
 
                 <li>
                   <Link
-                    to="/hrlearning"
-                    onClick={() => handleNavActive("hrlearning")}
+                    to="/workshopHrLearning"
+                    onClick={() => handleNavActive("workshopHrLearning")}
                   >
                     Workshops
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/hrlearning"
-                    onClick={() => handleNavActive("hrlearning")}
+                    to="/webinarHRLearning"
+                    onClick={() => handleNavActive("webinarHRLearning")}
                   >
                     Webinars
                   </Link>

@@ -15,6 +15,9 @@ import PricacyPolicy from "./Pages/PrivacyPolicy/PricacyPolicy";
 import TermsAndCondition from "./Pages/TermsAndCondition/TermsAndCondition";
 import Blog from "./Pages/Blog/Blog";
 import SingleBlogPage from "./Components/SingleBlogPage/SingleBlogPage";
+import InternshipHRLearning from "./Pages/InternshipHrLearning/InternshipHrLearning";
+import WorkshopsHrLearning from "./Pages/WorkshopsHrInternship/workshopHrLearning";
+import WebinarHRLearning from "./Pages/WebinarHrLearning/WebinarHrLearning";
 
 function Layout() {
   const location = useLocation();
@@ -30,7 +33,10 @@ function Layout() {
         <Route path="/contactus" element={<ContactForm />} />
         <Route path="/careers" element={<Carrier />}></Route>
         <Route path="/service" element={<Service />}></Route>
-        <Route path="/hrlearning" element={<HrLearning />}></Route>
+        {/* <Route path="/hrlearning" element={<HrLearning />}></Route> */}
+        <Route path="internshipHrLearning" element={<InternshipHRLearning/>}/>
+        <Route path="workshopHrLearning" element={<WorkshopsHrLearning/>}/>
+        <Route path="webinarHRLearning" element={<WebinarHRLearning/>}/>
         <Route path="/privacy" element={<PrivacyAndTerms />}></Route>
         <Route path="/privacypolicy" element={<PricacyPolicy />}></Route>
         <Route
