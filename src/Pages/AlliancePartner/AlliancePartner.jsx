@@ -142,7 +142,7 @@ export const AlliancePartner = () => {
         <p className="Section3_Alliance_Heading2" data-aos="zoom-in">
           Lorem Ipsum is simply dummy text
         </p>
-        <p className="Section3_Alliance_Heading_para" >
+        <p className="Section3_Alliance_Heading_para" data-aos="fade-right">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
