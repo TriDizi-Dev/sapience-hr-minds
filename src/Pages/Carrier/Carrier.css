@@ -540,7 +540,7 @@ flex-wrap: 800;
 }
 .carrier_img_outer{
      /* width:14.5vw; */
-     height:13vw;
+     height:13.2vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -559,8 +559,7 @@ flex-wrap: 800;
     justify-content: start;
     gap:0.3vw;
     width:20vw;
-    margin-left: 0.1vw;
-    height:10.4vw;
+        height:10.4vw;
     border-bottom-left-radius:1.5vw;
     border-bottom-right-radius:1.5vw;
     padding: 0.6vw;
