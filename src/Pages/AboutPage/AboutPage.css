@@ -292,8 +292,7 @@
 }
 
 .Sub_Missions h1 {
-    font-family: Roboto;
-    font-weight: 700;
+     font-weight: 700;
     font-size: 3.1vw;
     line-height: 100%;
     /* letter-spacing: 0%; */
@@ -587,8 +586,11 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding: 4vw  4vw  6vw  4vw;
+        /* padding: 4vw  4vw  6vw  4vw; */
         margin-top: 7vw;
+        width: 100vw;
+        padding-bottom: 6vw;
+        padding-top: 6vw;
     }
     .Faq_Sub_head{
         font-size: 4vw;

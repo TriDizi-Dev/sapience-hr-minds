@@ -4,7 +4,7 @@ import HeroImage from "../../assets/AlliancePartner/HeroImage.svg";
 import BlueLayer from "../../assets/AboutPage/blushade.svg";
 import orangeLayer from "../../assets/AboutPage/orangeshade.svg";
 import SquareIcons from "../../assets/AlliancePartner/LayerContainer.svg";
-import PersonImage from "../../assets/AlliancePartner/PersonImg.svg";
+import PersonImage from "../../assets/AlliancePartner/education.avif";
 import Smallicon1 from "../../assets/AboutPage/Smallicon1.svg";
 import Smallicon2 from "../../assets/AboutPage/Smallicon2.svg";
 import Smallicon3 from "../../assets/AboutPage/Smallicon3.svg";
@@ -16,6 +16,7 @@ import "aos/dist/aos.css";
 
 export const AlliancePartner = () => {
   useEffect(() => {
+
     AOS.init({
       offset: 200,
       duration: 1000,
@@ -124,13 +125,13 @@ export const AlliancePartner = () => {
             simply dummy text of the printing and typesetting industry.
           </p>
         </div>
-        <div className="Right_Container_AlliancePartner" data-aos="flip-left">
+        <div className="Right_Container_AlliancePartner" >
           <p className="right_Header_Text">Lorem ipsum dolor</p>
-          <p className="SquareIcons_Cont_img">
+          {/* <p className="SquareIcons_Cont_img">
             <img src={SquareIcons} alt="SquareIcons"></img>
-          </p>
+          </p> */}
           <p className="Person_Cont_img">
-            <img src={PersonImage} alt="PersonImage"></img>
+            <img src={PersonImage} alt="PersonImage" data-aos="zoom-in"></img>
           </p>
         </div>
       </div>
@@ -152,17 +153,14 @@ export const AlliancePartner = () => {
             <div
               className="Single_Alliance_container_Icon"
               data-aos="flip-left"
-              data-aos-easing="ease-out-cubic"
-              data-aos-duration="2000"
-              key={i}
-            >
+             >
               <p className="Image_Alliance_container_image">
                 <img src={item.Logo} alt={item.Logo} />
               </p>
               <p className="Horizontal_Alliance_row"></p>
               <p className="Cards_Alliance_Sub_head">{item.subHead}</p>
               <p className="Cards_Alliance_Name">{item.para}</p>
-              <p className="Cards_Alliance_Heading">{item.Head}</p>
+              {/* <p className="Cards_Alliance_Heading">{item.Head}</p> */}
             </div>
           ))}
           <p className="orangeLayer_Contaner">
@@ -183,8 +181,7 @@ export const AlliancePartner = () => {
             <div
               className="Alliance_layer4_card"
               data-aos="zoom-in"
-              data-aos-delay="500"
-              data-aos-duration="1500"
+              
             >
               <p className="Alliance_layer4_card_logo">Logo</p>
               <p className="Alliance_layer4_card_para">
@@ -205,8 +202,7 @@ export const AlliancePartner = () => {
             <div
               className="Alliance_layer4_card"
               data-aos="zoom-in"
-              data-aos-delay="1000"
-              data-aos-duration="2000"
+              
             >
               <p className="Alliance_layer4_card_logo">Logo</p>
               <p className="Alliance_layer4_card_para">
@@ -231,8 +227,7 @@ export const AlliancePartner = () => {
             <div
               className="Alliance_layer4_card"
               data-aos="zoom-in"
-              data-aos-delay="1500"
-              data-aos-duration="2000"
+              
             >
               <p className="Alliance_layer4_card_logo">Logo</p>
               <p className="Alliance_layer4_card_para">

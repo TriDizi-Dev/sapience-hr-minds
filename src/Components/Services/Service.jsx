@@ -265,29 +265,29 @@ export const Service = ({
         </p>
       </div>
       <div className="Service_Page_Section2_Hero">
-        <div className="Image_Container_service_Left" data-aos="fade-right">
+        <div className="Image_Container_service_Left"  data-aos="fade-right">
           <p>01</p>
           <img src={Image1} alt="Image1"></img>
         </div>
-        <div className="Middle_Content_Container" data-aos="zoom-in">
-          <p className="Middle_Secound_Head">{Para1Head}</p>
-          <p className="Niddle_sub_content">{Para1Content1} </p>
-          <p className="Niddle_sub_content">{Para1Content2} </p>
+        <div className="Middle_Content_Container"  >
+          <p className="Middle_Secound_Head" data-aos="fade-right">{Para1Head}</p>
+          <p className="Niddle_sub_content" data-aos="fade-right">{Para1Content1} </p>
+          <p className="Niddle_sub_content" data-aos="fade-right">{Para1Content2} </p>
 
-          <p className="Middle_Secound_Head">{Para2Head}</p>
-          <p className="Niddle_sub_content">{Para2Content2} </p>
+          <p className="Middle_Secound_Head" data-aos="zoom-in">{Para2Head}</p>
+          <p className="Niddle_sub_content" data-aos="zoom-in">{Para2Content2} </p>
 
           <ul className="List_Items_Middle">
-            <li>{List1}</li>
-            <li>{List2}</li>
-            <li>{List3}</li>
-            <li>{List4}</li>
+            <li data-aos="fade-right">{List1}</li>
+            <li data-aos="fade-right"> {List2}</li>
+            <li data-aos="fade-right">{List3}</li>
+            <li data-aos="fade-right">{List4}</li>
           </ul>
-          <p className="Middle_Secound_Head">{Para3Head}</p>
-          <p className="Niddle_sub_content">{Para3Content1} </p>
+          <p className="Middle_Secound_Head" data-aos="zoom-in">{Para3Head}</p>
+          <p className="Niddle_sub_content" data-aos="zoom-in">{Para3Content1} </p>
         </div>
 
-        <div className="Image_Container_service_right" data-aos="fade-left">
+        <div className="Image_Container_service_right"  data-aos="fade-left" >
           <p>02</p>
           <img src={Image1} alt="Image1" />
         </div>

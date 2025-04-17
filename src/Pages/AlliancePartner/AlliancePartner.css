@@ -2,6 +2,7 @@
     text-align: center;
     position: relative;
     margin-top: 2vw;
+     
 }
 
 .BlueLayer_HeroBanner {
@@ -48,7 +49,7 @@
 
 .Section2_Layer_AlliancePartner {
     display: flex;
-    width: 99vw;
+    width: 98vw;
     justify-content: center;
     gap: 4vw;
     margin-top: 5vw;
@@ -74,14 +75,16 @@
 
 .SquareIcons_Cont_img img {
     width: 33vw;
-    top: -2vw;
+    top: 2vw;
     left: 0vw;
 }
 
 .Person_Cont_img img {
-    width: 38vw;
-    top: -9vw;
-    left: -2vw;
+    width: 35vw;
+    height: 20vw;
+    top: -3vw;
+    left: -1vw;
+    border-radius: 0.8vw;
 }
 
 .Heading_text_AlliancePartner {
@@ -109,7 +112,7 @@
 }
 
 .Section3_Alliance_Main_Container {
-    margin-top: 18vw;
+    margin-top: 8vw;
 }
 
 .Section3_Alliance_Heading_para {
@@ -347,13 +350,15 @@
         align-items: center;
         width: 100%;
         height: fit-content;
-        row-gap:80vw;
+        row-gap:55vw;
     }
     .Right_Container_AlliancePartner{
         width: 80%;
     }
     .Person_Cont_img img{
         width: 100%;
+        height: 50vw;
+        border-radius: 1vw;
         left: 0;
     }
     .SquareIcons_Cont_img img{
