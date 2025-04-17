@@ -19,10 +19,7 @@ export const Navbar = () => {
     const currentPath = location.pathname; 
     setNavActive(currentPath);
   }, [location]);
-  
-  const handleNavActive = () => {
-    setOpenNavlist(!openNavlist);
-  };
+
   const handleHome = () => {
     navigate("/");
   };
@@ -37,7 +34,7 @@ export const Navbar = () => {
         </div>
         <div className="nav_items_outer">
           <Link to="/" className="nav_link">
-            <li className="nav_items" onClick={() => handleNavActive("/")}>
+            <li className="nav_items">
               Home
               <div className="nav_underline_wrapper">
                 <div
@@ -50,7 +47,7 @@ export const Navbar = () => {
           </Link>
 
           <Link to="/about" className="nav_link">
-            <li className="nav_items" onClick={() => handleNavActive()}>
+            <li className="nav_items">
               About
               <div className="nav_underline_wrapper">
                 <div
@@ -65,7 +62,7 @@ export const Navbar = () => {
           {/* <Link to="/service" className="nav_link">
             <li
               className="nav_items"
-              onClick={() => handleNavActive("services")}
+              onClick={() => handleNavList("services")}
             >
               Services
               <div className="nav_underline_wrapper">
@@ -85,7 +82,7 @@ export const Navbar = () => {
             <Link
               to="/service"
               className="nav_link"
-              onClick={() => handleNavActive("services")}
+              onClick={() => handleNavList("services")}
             >
               Services
               <div className="nav_underline_wrapper">
@@ -172,7 +169,7 @@ export const Navbar = () => {
                   <Link
                     to="/hr-compliance"
                     onClick={() => (
-                      setShowDropdown(false), handleNavActive()
+                      setShowDropdown(false)
                     )}
                   >
                     HR Compliance and Policy Development
@@ -182,7 +179,7 @@ export const Navbar = () => {
                   <Link
                     to="/hr-consulting"
                     onClick={() => (
-                      setShowDropdown(false), handleNavActive()
+                      setShowDropdown(false)
                     )}
                   >
                     Customized HR Consulting and Advisory Services
@@ -193,8 +190,7 @@ export const Navbar = () => {
                   <Link
                     to="/virtual-chro-and-outsourcing"
                     onClick={() => (
-                      setShowDropdown(false),
-                      handleNavActive()
+                      setShowDropdown(false)
                     )}
                   >
                     Virtual CHRO and Outsourcing of HR Operations
@@ -231,7 +227,6 @@ export const Navbar = () => {
                   <Link
                     to="/talent-acquisition-solutions"
                     onClick={() => (
-                      handleNavActive(),
                       setTalentManagement(false)
                     )}
                   >
@@ -242,8 +237,7 @@ export const Navbar = () => {
                   <Link
                     to="/talent-management"
                     onClick={() => (
-                      setTalentManagement(false),
-                      handleNavActive()
+                      setTalentManagement(false)
                     )}
                   >
                     Talent Management
@@ -254,8 +248,7 @@ export const Navbar = () => {
                   <Link
                     to="/talent-engagement"
                     onClick={() => (
-                      setTalentManagement(false),
-                      handleNavActive()
+                      setTalentManagement(false)
                     )}
                   >
                     Talent Engagement & Retention
@@ -265,8 +258,7 @@ export const Navbar = () => {
                   <Link
                     to="/recruitment-of-leadership"
                     onClick={() => (
-                      setTalentManagement(false),
-                      handleNavActive()
+                      setTalentManagement(false)
                     )}
                   >
                     Recruitment of Leadership & Mid-Level Team
@@ -276,8 +268,7 @@ export const Navbar = () => {
                   <Link
                     to="/employee-insurance-and-benefits"
                     onClick={() => (
-                      setTalentManagement(false),
-                      handleNavActive()
+                      setTalentManagement(false)
                     )}
                   >
                     Employee Insurance & Benefits
@@ -313,7 +304,7 @@ export const Navbar = () => {
                   <Link
                     to="/alliance-partner"
                     onClick={() => (
-                      setEducation(false), handleNavActive()
+                      setEducation(false)
                     )}
                   >
                     Alliance Partner
@@ -323,8 +314,7 @@ export const Navbar = () => {
                   <Link
                     to="/internship-hr-learning"
                     onClick={() => (
-                      setEducation(false),
-                      handleNavActive()
+                      setEducation(false)
                     )}
                   >
                     Internships
@@ -335,8 +325,7 @@ export const Navbar = () => {
                   <Link
                     to="/workshop-hr-learning"
                     onClick={() => (
-                      setEducation(false),
-                      handleNavActive()
+                      setEducation(false)
                     )}
                   >
                     Workshops
@@ -346,8 +335,7 @@ export const Navbar = () => {
                   <Link
                     to="/webinar-hr-learning"
                     onClick={() => (
-                      setEducation(false),
-                      handleNavActive()
+                      setEducation(false)
                     )}
                   >
                     Webinars
@@ -359,7 +347,7 @@ export const Navbar = () => {
           {/* <Link to="/" className="nav_link">
             <li
               className="nav_items"
-              onClick={() => handleNavActive("")}
+              onClick={() => handleNavList("")}
             >
               Education & Learning
               <div className="nav_underline_wrapper">
@@ -373,7 +361,7 @@ export const Navbar = () => {
           </Link> */}
 
           <Link to="/blog" className="nav_link">
-            <li className="nav_items" onClick={() => handleNavActive()}>
+            <li className="nav_items">
               Blog
               <div className="nav_underline_wrapper">
                 <div
@@ -388,7 +376,7 @@ export const Navbar = () => {
           {/* <Link to="/alliancepartner" className="nav_link">
             <li
               className="nav_items"
-              onClick={() => handleNavActive("alliance")}
+              onClick={() => handleNavList("alliance")}
             >
               Alliance Partner
               <div className="nav_underline_wrapper">
@@ -429,7 +417,7 @@ export const Navbar = () => {
               <Link to="/" className="nav_link">
                 <li
                   className="mobile_nav_items"
-                  onClick={() => handleNavActive()}
+                  onClick={() => handleNavList()}
                 >
                   Home
                   <div className="mobile_nav_underline_wrapper">
@@ -444,7 +432,7 @@ export const Navbar = () => {
               <Link to="/about" className="nav_link">
                 <li
                   className="mobile_nav_items"
-                  onClick={() => handleNavActive()}
+                  onClick={() => handleNavList()}
                 >
                   About
                   <div className="mobile_nav_underline_wrapper">
@@ -483,7 +471,7 @@ export const Navbar = () => {
                   <Link
                     to="/hr-compliance"
                     onClick={() => (
-                      setShowDropdown(false), handleNavActive()
+                      setShowDropdown(false), handleNavList()
                     )}
                   >
                     HR Compliance and Policy Development
@@ -493,7 +481,7 @@ export const Navbar = () => {
                   <Link
                     to="/hr-consulting"
                     onClick={() => (
-                      setShowDropdown(false), handleNavActive()
+                      setShowDropdown(false), handleNavList()
                     )}
                   >
                     Customized HR Consulting and Advisory Services
@@ -505,7 +493,7 @@ export const Navbar = () => {
                     to="/virtual-chro-and-outsourcing"
                     onClick={() => (
                       setShowDropdown(false),
-                      handleNavActive()
+                      handleNavList()
                     )}
                   >
                     Virtual CHRO and Outsourcing of HR Operations
@@ -542,7 +530,7 @@ export const Navbar = () => {
                   <Link
                     to="/talent-acquisition-solutions"
                     onClick={() => (
-                      handleNavActive(),
+                      handleNavList(),
                       setTalentManagement(false)
                     )}
                   >
@@ -554,7 +542,7 @@ export const Navbar = () => {
                     to="/talent-management"
                     onClick={() => (
                       setTalentManagement(false),
-                      handleNavActive()
+                      handleNavList()
                     )}
                   >
                     Talent Management
@@ -566,7 +554,7 @@ export const Navbar = () => {
                     to="/talent-engagement"
                     onClick={() => (
                       setTalentManagement(false),
-                      handleNavActive()
+                      handleNavList()
                     )}
                   >
                     Talent Engagement & Retention
@@ -577,7 +565,7 @@ export const Navbar = () => {
                     to="/recruitment-of-leadership"
                     onClick={() => (
                       setTalentManagement(false),
-                      handleNavActive()
+                      handleNavList()
                     )}
                   >
                     Recruitment of Leadership & Mid-Level Team
@@ -588,7 +576,7 @@ export const Navbar = () => {
                     to="/employee-insurance-and-benefits"
                     onClick={() => (
                       setTalentManagement(false),
-                      handleNavActive()
+                      handleNavList()
                     )}
                   >
                     Employee Insurance & Benefits
@@ -624,7 +612,7 @@ export const Navbar = () => {
                   <Link
                     to="/alliance-partner"
                     onClick={() => (
-                      setEducation(false), handleNavActive()
+                      setEducation(false), handleNavList()
                     )}
                   >
                     Alliance Partner
@@ -635,7 +623,7 @@ export const Navbar = () => {
                     to="/internship-hr-learning"
                     onClick={() => (
                       setEducation(false),
-                      handleNavActive()
+                      handleNavList()
                     )}
                   >
                     Internships
@@ -647,7 +635,7 @@ export const Navbar = () => {
                     to="/workshop-hr-learning"
                     onClick={() => (
                       setEducation(false),
-                      handleNavActive()
+                      handleNavList()
                     )}
                   >
                     Workshops
@@ -658,7 +646,7 @@ export const Navbar = () => {
                     to="/webinar-hr-learning"
                     onClick={() => (
                       setEducation(false),
-                      handleNavActive()
+                      handleNavList()
                     )}
                   >
                     Webinars
@@ -671,7 +659,7 @@ export const Navbar = () => {
               {/* <Link to="/service" className="nav_link">
                 <li
                   className="mobile_nav_items"
-                  onClick={() => handleNavActive("services")}
+                  onClick={() => handleNavList("services")}
                 >
                   Services
                   <div className="mobile_nav_underline_wrapper">
@@ -687,7 +675,7 @@ export const Navbar = () => {
               <Link to="/hrlearning" className="nav_link">
                 <li
                   className="mobile_nav_items"
-                  onClick={() => handleNavActive("hrlearning")}
+                  onClick={() => handleNavList("hrlearning")}
                 >
                   HR Learning
                   <div className="mobile_nav_underline_wrapper">
@@ -703,7 +691,7 @@ export const Navbar = () => {
               <Link to="/blog" className="nav_link">
                 <li
                   className="mobile_nav_items"
-                  onClick={() => handleNavActive()}
+                  onClick={() => handleNavList()}
                 >
                   Blog
                   <div className="mobile_nav_underline_wrapper">
@@ -718,7 +706,7 @@ export const Navbar = () => {
               {/* <Link to="/alliancepartner" className="nav_link">
                 <li
                   className="mobile_nav_items"
-                  onClick={() => handleNavActive("alliance")}
+                  onClick={() => handleNavList("alliance")}
                 >
                   Alliance Partner
                   <div className="mobile_nav_underline_wrapper">

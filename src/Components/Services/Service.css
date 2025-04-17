@@ -32,7 +32,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
-  margin-top: 5vw;
+  margin-top: 4vw;
   position: relative;
 }
 
@@ -63,7 +63,7 @@
 .Image_Container_service_Left img,
 .Image_Container_service_right img {
   width: 100%;
-  height: 73vh;
+  height: 70vh;
 }
 
 .Middle_Content_Container {
@@ -211,6 +211,38 @@
 .Image_Container_Section3_imge_Cont4 img,
 .Image_Container_Section3_imge_Cont5 img {
   width: 10vw;
+}
+
+.Rocket_count{
+  position: absolute;
+  bottom: 1vw;
+  right: 1vw;
+  font-size: 1.5vw;
+  font-weight: 600;
+  
+}
+.Setting_count{
+  position: absolute;
+  bottom: 1vw;
+  right:6vw;
+  font-size: 1.5vw;
+  font-weight: 600;
+  
+}
+
+.Cup_count{
+  position: absolute;
+  bottom: 0.5vw;
+  left: 6vw;
+  font-size: 1.5vw;
+  font-weight: 600;
+}
+.Goal_count{
+  position: absolute;
+  bottom: 6vw;
+  right: 7vw;
+  font-size: 1.5vw;
+  font-weight: 600;
 }
 
 .Service_Page_Section3_OrangeLayer {
@@ -508,4 +540,38 @@
 .Image_Container_Section3_imge_Cont5 img {
   width: 15vw;
 }
+
+.Rocket_count{
+  position: absolute;
+  top: 11vw;
+  right: 44%;
+  font-size: 2vw;
+  font-weight: 600;
+  
+}
+.Setting_count{
+  position: absolute;
+  top: 11vw;
+  right:52%;
+  font-size: 2vw;
+  font-weight: 600;
+  
+}
+
+.Cup_count{
+  position: absolute;
+  top:11vw;
+  left: 52%;
+  font-size: 2vw;
+  font-weight: 600;
+}
+.Goal_count{
+  position: absolute;
+  top:11vw;
+  right: 44%;
+  font-size: 2vw;
+  font-weight: 600;
+}
+
+
 }
