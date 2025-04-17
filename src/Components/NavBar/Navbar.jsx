@@ -151,7 +151,11 @@ export const Navbar = () => {
               <div className="nav_underline_wrapper">
                 <div
                   className={`nav_underline ${
-                    navActive === "service" ? "active3" : ""
+                    navActive === "hr-compliance" ||
+                    navActive === "hr-consulting" ||
+                    navActive === "virtual-chro-and-outsourcing"
+                      ? "active3"
+                      : ""
                   }`}
                 ></div>
               </div>
@@ -161,16 +165,20 @@ export const Navbar = () => {
               <ul className="dropdown">
                 <li>
                   <Link
-                    to="/service"
-                    onClick={() => handleNavActive("service")}
+                    to="/hr-compliance"
+                    onClick={() => (
+                      setShowDropdown(false), handleNavActive("hr-compliance")
+                    )}
                   >
                     HR Compliance and Policy Development
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/service"
-                    onClick={() => handleNavActive("service")}
+                    to="/hr-consulting"
+                    onClick={() => (
+                      setShowDropdown(false), handleNavActive("hr-consulting")
+                    )}
                   >
                     Customized HR Consulting and Advisory Services
                   </Link>
@@ -178,8 +186,11 @@ export const Navbar = () => {
 
                 <li>
                   <Link
-                    to="/service"
-                    onClick={() => handleNavActive("service")}
+                    to="/virtual-chro-and-outsourcing"
+                    onClick={() => (
+                      setShowDropdown(false),
+                      handleNavActive("virtual-chro-and-outsourcing")
+                    )}
                   >
                     Virtual CHRO and Outsourcing of HR Operations
                   </Link>
@@ -197,7 +208,13 @@ export const Navbar = () => {
               <div className="nav_underline_wrapper">
                 <div
                   className={`nav_underline ${
-                    navActive === "service" ? "active3" : ""
+                    navActive === "talent-acquisition-solutions" ||
+                    navActive === "talent-management" ||
+                    navActive === "talent-engagement" ||
+                    navActive === "recruitment-of-leadership" ||
+                    navActive === "employee-insurance-and-benefits"
+                      ? "active3"
+                      : ""
                   }`}
                 ></div>
               </div>
@@ -207,16 +224,22 @@ export const Navbar = () => {
               <ul className="dropdown">
                 <li>
                   <Link
-                    to="/service"
-                    onClick={() => handleNavActive("service")}
+                    to="/talent-acquisition-solutions"
+                    onClick={() => (
+                      handleNavActive("talent-acquisition-solutions"),
+                      setTalentManagement(false)
+                    )}
                   >
                     Talent Acquisition Solutions
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/service"
-                    onClick={() => handleNavActive("service")}
+                    to="/talent-management"
+                    onClick={() => (
+                      setTalentManagement(false),
+                      handleNavActive("talent-management")
+                    )}
                   >
                     Talent Management
                   </Link>
@@ -224,24 +247,33 @@ export const Navbar = () => {
 
                 <li>
                   <Link
-                    to="/service"
-                    onClick={() => handleNavActive("service")}
+                    to="/talent-engagement"
+                    onClick={() => (
+                      setTalentManagement(false),
+                      handleNavActive("talent-engagement")
+                    )}
                   >
                     Talent Engagement & Retention
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/service"
-                    onClick={() => handleNavActive("service")}
+                    to="/recruitment-of-leadership"
+                    onClick={() => (
+                      setTalentManagement(false),
+                      handleNavActive("recruitment-of-leadership")
+                    )}
                   >
                     Recruitment of Leadership & Mid-Level Team
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/service"
-                    onClick={() => handleNavActive("service")}
+                    to="/employee-insurance-and-benefits"
+                    onClick={() => (
+                      setTalentManagement(false),
+                      handleNavActive("employee-insurance-and-benefits")
+                    )}
                   >
                     Employee Insurance & Benefits
                   </Link>
@@ -408,170 +440,170 @@ export const Navbar = () => {
               </Link>
 
               <li
-            className="nav_items dropdown_parent"
-            onMouseEnter={() => setShowDropdown(true)}
-            onMouseLeave={() => setShowDropdown(false)}
-          >
-            <Link to="" className="nav_link mobile_nav_items">
-              StartUps Mentoring
-              <div className="nav_underline_wrapper">
-                <div
-                  className={`nav_underline ${
-                    navActive === "service" ? "active3" : ""
-                  }`}
-                ></div>
-              </div>
-            </Link>
+                className="nav_items dropdown_parent"
+                onMouseEnter={() => setShowDropdown(true)}
+                onMouseLeave={() => setShowDropdown(false)}
+              >
+                <Link to="" className="nav_link mobile_nav_items">
+                  StartUps Mentoring
+                  <div className="nav_underline_wrapper">
+                    <div
+                      className={`nav_underline ${
+                        navActive === "service" ? "active3" : ""
+                      }`}
+                    ></div>
+                  </div>
+                </Link>
 
-            {showDropdown && (
-              <ul className="dropdown">
-                <li>
-                  <Link
-                    to="/service"
-                    onClick={() => handleNavActive("service")}
-                  >
-                    HR Compliance and Policy Development
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/service"
-                    onClick={() => handleNavActive("service")}
-                  >
-                    Customized HR Consulting and Advisory Services
-                  </Link>
-                </li>
+                {showDropdown && (
+                  <ul className="dropdown">
+                    <li>
+                      <Link
+                        to="/hrCompliance"
+                        onClick={() => handleNavActive("hrCompliance")}
+                      >
+                        HR Compliance and Policy Development
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/service"
+                        onClick={() => handleNavActive("service")}
+                      >
+                        Customized HR Consulting and Advisory Services
+                      </Link>
+                    </li>
 
-                <li>
-                  <Link
-                    to="/service"
-                    onClick={() => handleNavActive("service")}
-                  >
-                    Virtual CHRO and Outsourcing of HR Operations
-                  </Link>
-                </li>
-              </ul>
-            )}
-          </li>
-          <li
-            className="nav_items dropdown_parent"
-            onMouseEnter={() => setTalentManagement(true)}
-            onMouseLeave={() => setTalentManagement(false)}
-          >
-            <Link to="" className="nav_link mobile_nav_items">
-              Talent Management
-              <div className="nav_underline_wrapper">
-                <div
-                  className={`nav_underline ${
-                    navActive === "service" ? "active3" : ""
-                  }`}
-                ></div>
-              </div>
-            </Link>
+                    <li>
+                      <Link
+                        to="/service"
+                        onClick={() => handleNavActive("service")}
+                      >
+                        Virtual CHRO and Outsourcing of HR Operations
+                      </Link>
+                    </li>
+                  </ul>
+                )}
+              </li>
+              <li
+                className="nav_items dropdown_parent"
+                onMouseEnter={() => setTalentManagement(true)}
+                onMouseLeave={() => setTalentManagement(false)}
+              >
+                <Link to="" className="nav_link mobile_nav_items">
+                  Talent Management
+                  <div className="nav_underline_wrapper">
+                    <div
+                      className={`nav_underline ${
+                        navActive === "service" ? "active3" : ""
+                      }`}
+                    ></div>
+                  </div>
+                </Link>
 
-            {TalentManagement && (
-              <ul className="dropdown">
-                <li>
-                  <Link
-                    to="/service"
-                    onClick={() => handleNavActive("service")}
-                  >
-                    Talent Acquisition Solutions
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/service"
-                    onClick={() => handleNavActive("service")}
-                  >
-                    Talent Management
-                  </Link>
-                </li>
+                {TalentManagement && (
+                  <ul className="dropdown">
+                    <li>
+                      <Link
+                        to="/service"
+                        onClick={() => handleNavActive("service")}
+                      >
+                        Talent Acquisition Solutions
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/service"
+                        onClick={() => handleNavActive("service")}
+                      >
+                        Talent Management
+                      </Link>
+                    </li>
 
-                <li>
-                  <Link
-                    to="/service"
-                    onClick={() => handleNavActive("service")}
-                  >
-                    Talent Engagement & Retention
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/service"
-                    onClick={() => handleNavActive("service")}
-                  >
-                    Recruitment of Leadership & Mid-Level Team
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/service"
-                    onClick={() => handleNavActive("service")}
-                  >
-                    Employee Insurance & Benefits
-                  </Link>
-                </li>
-              </ul>
-            )}
-          </li>
-          <li
-            className="nav_items dropdown_parent"
-            onMouseEnter={() => setEducation(true)}
-            onMouseLeave={() => setEducation(false)}
-          >
-            <Link to="" className="nav_link mobile_nav_items">
-              Education & Learning
-              <div className="nav_underline_wrapper">
-                <div
-                  className={`nav_underline ${
-                    navActive === "alliancepartner" ||
-                    navActive === "hrlearning"
-                      ? "active3"
-                      : ""
-                  }`}
-                ></div>
-              </div>
-            </Link>
+                    <li>
+                      <Link
+                        to="/service"
+                        onClick={() => handleNavActive("service")}
+                      >
+                        Talent Engagement & Retention
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/service"
+                        onClick={() => handleNavActive("service")}
+                      >
+                        Recruitment of Leadership & Mid-Level Team
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/service"
+                        onClick={() => handleNavActive("service")}
+                      >
+                        Employee Insurance & Benefits
+                      </Link>
+                    </li>
+                  </ul>
+                )}
+              </li>
+              <li
+                className="nav_items dropdown_parent"
+                onMouseEnter={() => setEducation(true)}
+                onMouseLeave={() => setEducation(false)}
+              >
+                <Link to="" className="nav_link mobile_nav_items">
+                  Education & Learning
+                  <div className="nav_underline_wrapper">
+                    <div
+                      className={`nav_underline ${
+                        navActive === "alliancepartner" ||
+                        navActive === "hrlearning"
+                          ? "active3"
+                          : ""
+                      }`}
+                    ></div>
+                  </div>
+                </Link>
 
-            {Education && (
-              <ul className="dropdown">
-                <li>
-                  <Link
-                    to="/alliancepartner"
-                    onClick={() => handleNavActive("alliancepartner")}
-                  >
-                    Alliance Partner
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/hrlearning"
-                    onClick={() => handleNavActive("hrlearning")}
-                  >
-                    Internships
-                  </Link>
-                </li>
+                {Education && (
+                  <ul className="dropdown">
+                    <li>
+                      <Link
+                        to="/alliancepartner"
+                        onClick={() => handleNavActive("alliancepartner")}
+                      >
+                        Alliance Partner
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/hrlearning"
+                        onClick={() => handleNavActive("hrlearning")}
+                      >
+                        Internships
+                      </Link>
+                    </li>
 
-                <li>
-                  <Link
-                    to="/hrlearning"
-                    onClick={() => handleNavActive("hrlearning")}
-                  >
-                    Workshops
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/hrlearning"
-                    onClick={() => handleNavActive("hrlearning")}
-                  >
-                    Webinars
-                  </Link>
-                </li>
-              </ul>
-            )}
-          </li>
+                    <li>
+                      <Link
+                        to="/hrlearning"
+                        onClick={() => handleNavActive("hrlearning")}
+                      >
+                        Workshops
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/hrlearning"
+                        onClick={() => handleNavActive("hrlearning")}
+                      >
+                        Webinars
+                      </Link>
+                    </li>
+                  </ul>
+                )}
+              </li>
 
               {/* <Link to="/service" className="nav_link">
                 <li

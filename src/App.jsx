@@ -15,6 +15,14 @@ import PricacyPolicy from "./Pages/PrivacyPolicy/PricacyPolicy";
 import TermsAndCondition from "./Pages/TermsAndCondition/TermsAndCondition";
 import Blog from "./Pages/Blog/Blog";
 import SingleBlogPage from "./Components/SingleBlogPage/SingleBlogPage";
+import { ServicePageOne } from "./Pages/Servicepages/ServicePageOne";
+import { ServicePageTwo } from "./Pages/Servicepages/ServicePageTwo";
+import { ServiceThree } from "./Pages/Servicepages/ServiceThree";
+import { ServicePageFour } from "./Pages/Servicepages/ServicePageFour";
+import { ServicePageFive } from "./Pages/Servicepages/ServicePageFive";
+import { ServicePageSix } from "./Pages/Servicepages/ServicePageSix";
+import { ServicePageSeven } from "./Pages/Servicepages/ServicePageSeven";
+import { ServicePageEight } from "./Pages/Servicepages/ServicePageEight";
 
 function Layout() {
   const location = useLocation();
@@ -39,6 +47,14 @@ function Layout() {
         ></Route>
         <Route path="/blog" element={<Blog />}></Route>
         <Route path="/singleBlog" element={<SingleBlogPage />}></Route>
+        <Route path="/hr-compliance" element={<ServicePageOne />}></Route>
+        <Route path="/hr-consulting" element={<ServicePageTwo />}></Route>
+        <Route path="/virtual-chro-and-outsourcing" element={<ServiceThree />}></Route>
+        <Route path="/talent-acquisition-solutions" element={<ServicePageFour />}></Route>
+        <Route path="/talent-management" element={<ServicePageFive />}></Route>
+        <Route path="/talent-engagement" element={<ServicePageSix />}></Route>
+        <Route path="/recruitment-of-leadership" element={<ServicePageSeven />}></Route>
+        <Route path="/employee-insurance-and-benefits" element={<ServicePageEight />}></Route>
       </Routes>
       {!hideFooter && <Footer />}
     </>
