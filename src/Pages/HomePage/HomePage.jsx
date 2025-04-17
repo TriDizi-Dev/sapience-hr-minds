@@ -319,7 +319,10 @@ export const HomePage = () => {
 
             <div className="homepage_layer4_cards_outer">
               <div className="homepage_layer4_card">
-                <div className="layer4_card_logo"></div>
+                <div className="layer4_card_logo">
+                <img src={Smallicon2} alt="Smallicon1" className="layer4_logo" />
+
+                </div>
                 <h3 className="layer4_card_heading">
                   {/* Powerful Dashboard */}
                   Vision
@@ -330,7 +333,10 @@ export const HomePage = () => {
                 </p>
               </div>
               <div className="homepage_layer4_card">
-                <div className="layer4_card_logo"></div>
+                <div className="layer4_card_logo">
+                <img src={Smallicon1} alt="Smallicon1" className="layer4_logo" />
+
+                </div>
                 <h3 className="layer4_card_heading">Mission</h3>
                 <p className="layer4_card_para">
                   Lorem Ipsum is simply dummy text of the printing and
@@ -496,7 +502,10 @@ export const HomePage = () => {
                     <p className="layer7_card_name">{data.Name}</p>
                     <p className="layer7_card_sub_name">{data.subname}</p>
                     <div className="layer7_card_line"></div>
+                    <div className="layer7_card_para_outer">
+
                     <p className="layer7_card_para">{data.para}</p>
+                    </div>
                     <h6 className="layer7_card_explore">{data.explore}</h6>
                   </div>
                 </SwiperSlide>
