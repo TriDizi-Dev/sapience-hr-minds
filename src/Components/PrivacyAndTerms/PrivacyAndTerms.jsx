@@ -1,11 +1,30 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./PrivacyAndTerms.css"
 import circleframe from "../../assets/PrivacyandTerms/Frame.svg"
 import banner from "../../assets/PrivacyandTerms/privacy.svg"
 import bgeffect from "../../assets/PrivacyandTerms/bgeffect.svg"
 import { PreFooter } from '../PreFooter/PreFooter'
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function PrivacyAndTerms({BannerHeading,BannerText,subheading1,subheading2,text1,text2,list1,list2,list3,list4}) {
+
+
+     useEffect(() => {
+       AOS.init({
+         offset: 200,
+         duration: 1000,
+         easing: "ease-in-sine",
+         once: false,
+       });
+     }, []);
+
+       useEffect(() => {
+         window.scrollTo(0, 0);
+       }, []);
+       
+
   return (
   <div className="privacy_terms_outer_main">
     <div className="privacy_terms_banner_outer">
@@ -23,87 +42,87 @@ function PrivacyAndTerms({BannerHeading,BannerText,subheading1,subheading2,text1
         <div className="privacy_terms_content">
       <img src={circleframe} alt="circleframe" className="side_circle_frame" />
             
-                <h2 className="privacy_terms_content_heading">
+                <h2 className="privacy_terms_content_heading" data-aos="zoom-in">
                  {
                     subheading1
                  }
                 </h2>
-                <p className="privacy_terms_content_para">
+                <p className="privacy_terms_content_para" data-aos="fade-right">
                  {
                     text1
                  }
                  </p>
-                <p className="privacy_terms_content_para">
+                <p className="privacy_terms_content_para" data-aos="fade-right">
                  {
                     text2
                  }
                  </p>
                  
-                 <h2 className="privacy_terms_content_heading">
+                 <h2 className="privacy_terms_content_heading" data-aos="zoom-in">
                  {
                     subheading1
                  }
                  </h2>
-                 <p className="privacy_terms_content_para">
+                 <p className="privacy_terms_content_para" data-aos="fade-right">
                  {
                    text1
                  }
                  </p>
 
                  <div className="content_list_items_outer">
-                    <li className="content_list_items">
+                    <li className="content_list_items" data-aos="fade-right">
                     {
                      list1
                     }
                     </li>
-                    <li className="content_list_items">
+                    <li className="content_list_items" data-aos="fade-right">
                    {
                      list2
                    }
                     </li>
-                    <li className="content_list_items">
+                    <li className="content_list_items" data-aos="fade-right">
                      {
                         list3
                      }
                     </li>
-                    <li className="content_list_items">
+                    <li className="content_list_items" data-aos="fade-right">
                     {
                      list4
                     }
                     </li>
                  </div>
-                 <h2 className="privacy_terms_content_heading">
+                 <h2 className="privacy_terms_content_heading" data-aos="zoom-in">
                  
                  { subheading1}
                  </h2>
-                 <p className="privacy_terms_content_para">
+                 <p className="privacy_terms_content_para" data-aos="fade-right">
                      {
                         text1
                      }
                  </p>
 
 
-                 <h2 className="privacy_terms_content_heading">
+                 <h2 className="privacy_terms_content_heading" data-aos="zoom-in">
                 { subheading2}
                  </h2>
-                 <p className="privacy_terms_content_para">
+                 <p className="privacy_terms_content_para" data-aos="fade-right">
                      {
                         text1
                      }
                  </p>
-                 <p className="privacy_terms_content_para">
+                 <p className="privacy_terms_content_para" data-aos="fade-right">
                      {
                         text1
                      }
                  </p>
 
 
-                 <h2 className="privacy_terms_content_heading">
+                 <h2 className="privacy_terms_content_heading" data-aos="zoom-in">
                  {
                   subheading1
                  }
                  </h2>
-                 <p className="privacy_terms_content_para">
+                 <p className="privacy_terms_content_para" data-aos="fade-right">
                  {
                   text1
                  }

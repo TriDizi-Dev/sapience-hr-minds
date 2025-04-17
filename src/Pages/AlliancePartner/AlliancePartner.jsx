@@ -15,8 +15,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export const AlliancePartner = () => {
-  useEffect(() => {
 
+  useEffect(() => {
     AOS.init({
       offset: 200,
       duration: 1000,
@@ -28,6 +28,7 @@ export const AlliancePartner = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   const Content = [
     {
       id: 1,
@@ -106,7 +107,7 @@ export const AlliancePartner = () => {
         </div>
       </div>
       <div className="Section2_Layer_AlliancePartner">
-        <div className="Left_Container_AlliancePartner" data-aos="fade-right">
+        <div className="Left_Container_AlliancePartner" data-aos="fade-right" >
           <p className="Heading_text_AlliancePartner">Lorem ipsum dolor </p>
           <p className="para1_text_AlliancePartner">
             Lorem Ipsum is simply dummy text of the printing and typesetting
