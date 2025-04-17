@@ -284,7 +284,7 @@ function Carrier() {
 
 
                                     <Accordion
-                                        data-aos="zoom-out"
+                                        // data-aos="zoom-out"
                                         expanded={expanded === 'panel1'}
                                         onChange={handleChange('panel1')}
                                         disableGutters
@@ -477,7 +477,7 @@ function Carrier() {
 
 
                                     <Accordion
-                                        data-aos="zoom-out"
+                                        // data-aos="zoom-out"
                                         expanded={expanded === 'panel2'}
                                         onChange={handleChange('panel2')}
                                         disableGutters
@@ -670,7 +670,7 @@ function Carrier() {
                                     </Accordion>
 
                                     <Accordion
-                                        data-aos="zoom-out"
+                                        // data-aos="zoom-out"
                                         expanded={expanded === 'panel3'}
                                         onChange={handleChange('panel3')}
                                         disableGutters
@@ -862,7 +862,7 @@ function Carrier() {
 
 
                                     <Accordion
-                                        data-aos="zoom-out"
+                                        // data-aos="zoom-out"
                                         expanded={expanded === 'panel4'}
                                         onChange={handleChange('panel4')}
                                         disableGutters
@@ -1052,7 +1052,7 @@ function Carrier() {
                                     </Accordion>
 
                                     <Accordion
-                                        data-aos="zoom-out"
+                                        // data-aos="zoom-out"
                                         expanded={expanded === 'panel5'}
                                         onChange={handleChange('panel5')}
                                         disableGutters
@@ -1242,7 +1242,7 @@ function Carrier() {
                                     </Accordion>
 
                                     <Accordion
-                                        data-aos="zoom-out"
+                                        // data-aos="zoom-out"
                                         expanded={expanded === 'panel6'}
                                         onChange={handleChange('panel6')}
                                         disableGutters
@@ -2021,7 +2021,7 @@ function Carrier() {
                                 activeNav === "Clients" && <>
                                 
                                 <Accordion
-                                        data-aos="zoom-out"
+                                        // data-aos="zoom-out"
                                         expanded={expanded === 'panel4'}
                                         onChange={handleChange('panel4')}
                                         disableGutters
