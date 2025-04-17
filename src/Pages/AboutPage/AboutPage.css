@@ -448,6 +448,7 @@
     .Text_container_layer2{
         width: 100%;
         gap: 4vw;
+        margin-top: 7vw;
     }
     .Text_container_layer2 p{
         font-size: 4vw;
