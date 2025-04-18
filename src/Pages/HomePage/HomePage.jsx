@@ -17,6 +17,10 @@ import Smallicon4 from "../../assets/AboutPage/Smallicon4.svg";
 import bg1 from "../../assets/HomePage/bg1.svg";
 import bg2 from "../../assets/HomePage/bg2.svg";
 
+import blog1 from "../../assets/Blogs/image1.png";
+import blog2 from "../../assets/Blogs/image2.png";
+import blog3 from "../../assets/Blogs/image3.png";
+
 import homevideo from "../../assets/HomePage/hmv.mp4";
 import man from "../../assets/HomePage/man.svg";
 import { PreFooter } from "../../Components/PreFooter/PreFooter";
@@ -28,9 +32,10 @@ import "swiper/css/pagination";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const HomePage = () => {
+  const navigate = useNavigate();
   useEffect(() => {
     AOS.init({
       offset: 200,
@@ -153,37 +158,102 @@ export const HomePage = () => {
   const Blogs = [
     {
       id: 1,
-      Name: "Name",
+      bannerheading: "The Importance of Workforce Upskilling and Reskilling in Today’s Economy",
       subname: "Lorem Ipsum",
-      para: `   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      bannertext: `   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,`,
       explore: "Explore More",
+      path: "/singleBlog",
+      img:blog1,
+      toptext:"By Babitha on April 24, 2025 - 5 min read",
+      
+      firstheading:"Lorem ipsum dolor",
+      secondheading:"Lorem ipsum dolor sit amet",
+      thirdheading:"Lorem ipsum dolor sit amet",
+      fourthheading:"Lorem ipsum dolor sit amet",
+
+
+
+      firstpara:"  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      secondpara:"  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      thirdpara:"  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      fourthpara:"  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+
+      listitems1:"Non magni quisquam",
+      listitems2:"Eum aperiam facilis",
+      listitems3:"Id quibusdam corporis et voluptate minus",
+      listitems4:"Qui internos impedit vel unde",
     },
     {
-      id: 1,
-      Name: "Name",
+      id: 2,
+      bannerheading: "The Role of HR Analytics in Data-Driven Decision Making",
       subname: "Lorem Ipsum",
-      para: `   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      bannertext: `   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,`,
       explore: "Explore More",
+      path: "/singleBlog",
+      img: blog2,
+      toptext:"By Babitha on April 25, 2025 - 4 min read",
+      
+      firstheading:"Lorem ipsum dolor",
+      secondheading:"Lorem ipsum dolor sit amet",
+      thirdheading:"Lorem ipsum dolor sit amet",
+      fourthheading:"Lorem ipsum dolor sit amet",
+
+
+
+      firstpara:"  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      secondpara:"  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      thirdpara:"  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      fourthpara:"  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+
+      listitems1:"Non magni quisquam",
+      listitems2:"Eum aperiam facilis",
+      listitems3:"Id quibusdam corporis et voluptate minus",
+      listitems4:"Qui internos impedit vel unde",
     },
     {
-      id: 1,
-      Name: "Name",
+      id: 3,
+      bannerheading: "The Vital Role of Leadership Development and Succession Planning",
       subname: "Lorem Ipsum",
-      para: `   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      bannertext: `   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,`,
       explore: "Explore More",
+      path: "/singleBlog",
+      img: blog3,
+      toptext:"By Babitha on April 26, 2025 - 6 min read",
+      
+      firstheading:"Lorem ipsum dolor",
+      secondheading:"Lorem ipsum dolor sit amet",
+      thirdheading:"Lorem ipsum dolor sit amet",
+      fourthheading:"Lorem ipsum dolor sit amet",
+
+
+
+      firstpara:"  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      secondpara:"  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      thirdpara:"  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      fourthpara:"  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+
+      listitems1:"Non magni quisquam",
+      listitems2:"Eum aperiam facilis",
+      listitems3:"Id quibusdam corporis et voluptate minus",
+      listitems4:"Qui internos impedit vel unde",
     },
-    {
-      id: 1,
-      Name: "Name",
-      subname: "Lorem Ipsum",
-      para: `   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,`,
-      explore: "Explore More",
-    },
+    // {
+    //   id: 4,
+    //   Name: "Transforming Ambition Into Achievement",
+    //   subname: "Lorem Ipsum",
+    //   para: `   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    //             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,`,
+    //   explore: "Explore More",
+    //   path: "/blog",
+    // },
   ];
+
+  const handleSignleBlog = (ev,id)=>{
+    navigate(`/singleBlog/${id}`,{state:ev})
+  }
 
   return (
     <div className="home_main">
@@ -499,14 +569,16 @@ export const HomePage = () => {
               {Blogs?.map((data, index) => (
                 <SwiperSlide key={index}>
                   <div className="layer7_card">
-                    <p className="layer7_card_name">{data.Name}</p>
-                    <p className="layer7_card_sub_name">{data.subname}</p>
+                    <p className="layer7_card_name">{data?.bannerheading}</p>
+                    <p className="layer7_card_sub_name">{data?.subname}</p>
                     <div className="layer7_card_line"></div>
                     <div className="layer7_card_para_outer">
 
-                    <p className="layer7_card_para">{data.para}</p>
+                    <p className="layer7_card_para">{data?.bannertext}</p>
                     </div>
-                    <h6 className="layer7_card_explore">{data.explore}</h6>
+                    
+                    <h6 className="layer7_card_explore" onClick={()=>handleSignleBlog(data,data.id)}>{data.explore}</h6>
+                 
                   </div>
                 </SwiperSlide>
               ))}
