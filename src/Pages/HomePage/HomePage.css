@@ -342,7 +342,7 @@
 }
 @keyframes scrollLogos {
     0% {
-      transform: translateX(50%);
+      transform: translateX(0%);
     }
     100% {
       transform: translateX(-50%);
@@ -351,7 +351,7 @@
   }
   
   .layer2_logos_outer {
-    width: 85vw;
+    width: 84vw;
     overflow: hidden;
     white-space: nowrap;
     margin-top: 1vw;
@@ -360,7 +360,7 @@
   
   .layer2_logos_inner {
     display: inline-flex;
-    animation: scrollLogos 20s linear infinite;
+    animation: scrollLogos 18s linear infinite;
   }
   
   .layer2_logos {
