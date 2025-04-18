@@ -1,9 +1,9 @@
 .home_page_outer {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 3vw;
-  padding-top: 2vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 8vw;
+    padding-top: 2vw;
 }
 
 .home_page_right {
@@ -889,18 +889,12 @@
   padding: 1.5vw;
 }
 .modal-overlay-homepage {
-  position: fixed;
-  top: 10vw;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  /* background-color: rgba(0, 0, 0, 0.1); */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-.home_page_modal {
+    position: fixed;
+    top: 7vw;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: rgba(0, 0, 0, 0.1); */
     display: flex;
     justify-content: center;
     align-items: center;

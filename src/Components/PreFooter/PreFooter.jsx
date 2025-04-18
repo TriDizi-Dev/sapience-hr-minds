@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./PreFooter.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { ImCross } from "react-icons/im";
 // {head,Content,Btn1,Btn2}
 export const PreFooter = ({
   Head,
@@ -32,11 +33,21 @@ export const PreFooter = ({
     name: "",
     email: "",
     message: "",
+    phone: "",
   });
   const modalRef = useRef(null);
-
+  const preFooterRef = useRef(null); // add this line
   const handleOpenForm = () => {
-    setShowForm(true);
+    if (preFooterRef.current) {
+      preFooterRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+
+    setTimeout(() => {
+      setShowForm(true);
+    }, 200); // wait a bit to let scroll finish
   };
 
   const handleCloseForm = () => {
@@ -55,16 +66,15 @@ export const PreFooter = ({
     }
   };
 
-
   useEffect(() => {
     if (showForm) {
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener("mousedown", handleClickOutside);
     } else {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [showForm]);
 
@@ -76,12 +86,13 @@ export const PreFooter = ({
       name: "",
       email: "",
       message: "",
+      phone: "",
     });
   };
 
   return (
     <>
-      <div className="PreFooter_Main" data-aos="zoom-in">
+      <div className="PreFooter_Main" data-aos="zoom-in" ref={preFooterRef}>
         <p className="Heading_PreFooter">{Head}</p>
         <p className="Para_PreFooter">{Content}</p>
         <div className="Buttons_Container">
@@ -96,7 +107,15 @@ export const PreFooter = ({
       {showForm && (
         <div className="modal-overlay">
           <div className="modal-box" ref={modalRef}>
-            <h2>Contact Form</h2>
+            <div className="Cancel_and_form_head">
+              <h2>Contact Form</h2>
+              <p>
+                <ImCross
+                  className="Icons_X"
+                  onClick={() => handleCloseForm()}
+                />
+              </p>
+            </div>
             <form onSubmit={handleSubmit} className="form">
               <label className="Label">
                 Name:
@@ -122,7 +141,18 @@ export const PreFooter = ({
                 />
               </label>
               <label className="Label">
-                Message
+                Phone Number:
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  className="Input"
+                />
+              </label>
+              <label className="Label">
+                Message:
                 <textarea
                   type="text"
                   name="message"

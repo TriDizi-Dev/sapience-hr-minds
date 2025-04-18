@@ -4,7 +4,7 @@
 }
 .footer_outer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .footer_logo {
@@ -31,10 +31,13 @@
 }
 .footer_right_outer_main_1 {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5vw;
+  width: 65vw;
+  /* flex-direction: column; */
+  justify-content: space-around;
+  /* align-items: center; */
+  /* width: 60vw; */
+  /* gap:2vw; */
+  /* border: 1px solid; */
   /* margin-top: 1vw; */
 }
 .footer_right_outer {
@@ -47,16 +50,17 @@
 }
 .footer_center_outer {
   display: flex;
-  justify-content: start;
-  align-items: start;
-  width: 45vw;
+  justify-content: flex-end;
+  /* align-items: flex-end; */
+  /* width: 45vw; */
+  margin-left: 5vw;
   gap: 2vw;
   margin-top: 4vw;
 }
 .footer_right_bottom_icons {
   display: flex;
   justify-content: center;
-  width: 70vw;
+  /* width: 70vw; */
   gap: 2vw;
 }
 .footer_icons_outer {
@@ -77,17 +81,18 @@
 .footer_bottom {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 .services_outer {
   display: flex;
   flex-direction: column;
   row-gap: 0vw;
-  width: 15vw;
+  width: 14vw;
+  /* border: 1px solid; */
 }
 .services_headeing {
-  font-size: 1.6vw;
+  font-size: 1.2vw;
   font-weight: 600;
   margin-bottom: 0.5vw;
 }
@@ -97,24 +102,35 @@
   gap: 0vw;
 }
 .footer_company_heading {
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   font-weight: 600;
   margin-bottom: 0.5vw;
   
 }
 .footer_services_items {
   list-style: none;
-  font-size: 0.9vw;
+  font-size: 1vw;
   font-weight: 400;
   cursor: pointer;
-  height: 3vw;
+  margin-top: .2vw;
+  /* height: 4vw; */
+  border-bottom: 1px solid transparent;
+  width: fit-content;
+
 }
+.footer_services_items:hover {
+border-bottom: 1px solid;
+color: #7C5CFC;
+}
+.footer_services_items
 .company_list_items {
   list-style: none;
   font-size: 0.9vw;
   font-weight: 400;
   cursor: pointer;
-  height: 3vw;
+  margin-top: .2vw;
+
+  /* height: 3vw; */
 }
 .footer_bottom_line {
   margin-top: 0vw;
@@ -131,10 +147,13 @@
 .footer_teems_policy_container {
   margin: 1vw 0;
   display: flex;
+  justify-content: space-around;
+  gap: 24vw;
+  margin-left: 30%;
 }
 .footer_teems_policy_container_sub {
   display: flex;
-  padding-left: 7vw;
+  /* padding-left: 7vw; */
   column-gap: 2vw;
   justify-items: center;
   align-items: center;
@@ -142,6 +161,25 @@
 .terms {
   font-size: 0.9vw;
   font-weight: normal;
+  border-bottom: 1px solid transparent;
+}
+.terms:hover {
+  border-bottom: 1px solid;
+  color: #7C5CFC;
+
+}
+.Contact_heading{
+  font-size: 1.2vw;
+  font-weight: 600;
+  margin-top: 1vw;
+}
+.Contact_sub_headings{
+  font-size: 1.1vw;
+  /* font-weight: 500; */
+}
+.footer_logo_outer{
+  width: 20vw;
+  /* border: 1px solid; */
 }
 
 @media (min-width: 320px) and (max-width: 720px) {
@@ -184,7 +222,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 10vw;
+    margin-left: 10vw;
+    /* row-gap: 10vw; */
   }
 
   .footer_right_bottom_icons {

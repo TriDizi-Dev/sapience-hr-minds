@@ -306,6 +306,7 @@ export const HomePage = () => {
     name: "",
     email: "",
     message: "",
+    phone: "",
   });
 
   const handleOpenForm = () => {
@@ -331,6 +332,7 @@ export const HomePage = () => {
       name: "",
       email: "",
       message: "",
+      phone: "",
     });
   };
   const handleClickOutside = (e) => {
@@ -421,7 +423,18 @@ export const HomePage = () => {
                     />
                   </label>
                   <label className="Label">
-                    Message
+                    Phone Number:
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      required
+                      className="Input"
+                    />
+                  </label>
+                  <label className="Label">
+                    Message:
                     <textarea
                       type="text"
                       name="message"
