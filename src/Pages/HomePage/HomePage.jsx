@@ -184,7 +184,9 @@ export const HomePage = () => {
       explore: "Explore More",
     },
   ];
-
+const hadleNavigate = ()=>{
+  window.open('https://calendly.com/babitha-sapienceminds-pfmn/45min', '_blank')
+}
   return (
     <div className="home_main">
       <div className="home_page_outer">
@@ -203,7 +205,7 @@ export const HomePage = () => {
           </div>
           <div className="homepage_button_outer">
             <button className="homepage_left_button">Get started</button>
-            <button className="homepage_right_button">
+            <button className="homepage_right_button" onClick={()=>hadleNavigate()}>
               <AiOutlinePlayCircle className="button_icon" />
               Book A Meeting
             </button>
