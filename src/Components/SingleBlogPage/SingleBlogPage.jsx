@@ -104,7 +104,9 @@ function SingleBlogPage() {
         <div className="sinle_blog_banner">
 
         {/* <img src={bannerimg} alt="bannerimg" className="single_blog_banner_img" /> */}
-        <div className="single_blog_banner_img">
+        <div className="single_blog_banner_img" style={{
+            backgroundImage: `url(${data?.img})`,
+        }}>
             <p className="single_blog_top_text">
 
                 {
