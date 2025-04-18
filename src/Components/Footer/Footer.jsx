@@ -86,13 +86,13 @@ export const Footer = () => {
                 <li className="footer_services_items">Alliance-Partner</li>
               </Link>
               <Link to="/internship-hr-learning" className="nav_link">
-                <li className="footer_services_items">Internship</li>
+                <li className="footer_services_items">Internships</li>
               </Link>
               <Link to="/workshop-hr-learning" className="nav_link">
-                <li className="footer_services_items">Workshop</li>
+                <li className="footer_services_items">Workshops</li>
               </Link>
               <Link to="/webinar-hr-learning" className="nav_link">
-                <li className="footer_services_items">Webinar</li>
+                <li className="footer_services_items">Webinars</li>
               </Link>
             </div>
           </div>
