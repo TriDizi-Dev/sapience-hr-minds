@@ -32,6 +32,9 @@ function SingleBlogPage() {
 
     const data = location.state
 
+    console.log(data, "data");
+    
+
      const blogs = [
             {
                 id: 1,
@@ -104,7 +107,9 @@ function SingleBlogPage() {
         <div className="sinle_blog_banner">
 
         {/* <img src={bannerimg} alt="bannerimg" className="single_blog_banner_img" /> */}
-        <div className="single_blog_banner_img">
+        <div className="single_blog_banner_img" style={{
+            backgroundImage: `url(${data?.img})`,
+        }}>
             <p className="single_blog_top_text">
 
                 {
@@ -134,56 +139,56 @@ function SingleBlogPage() {
             <div className="single_blog_content">
                 <img src={triangle} alt="triangle" className="single_blog_triangle_icon" />
                 <h1 className="single_blog_content_heading"  data-aos="zoom-in">
-                {data.firstheading}
+                {data?.firstheading}
                 </h1>
                 <p className="single_blog_content_para"  data-aos="fade-right">
                  {
-                    data.firstpara
+                    data?.firstpara
                  }
                 </p>
-                <p className="single_blog_content_para"  data-aos="fade-right">
+                {/* <p className="single_blog_content_para"  data-aos="fade-right">
                     {
                         data.secondpara
                     }
-                 </p>
+                 </p> */}
 
                 <h1 className="single_blog_content_heading"  data-aos="zoom-in">
                 {
-                    data.secondheading
+                    data?.secondheading
             }
                 </h1>
                 <p className="single_blog_content_para"  data-aos="fade-right" >
 
                     {
-                        data.thirdpara
+                        data?.secondpara
                     }
 
                 </p>
                 <div className="single_blog_list_items_outer">
                     <li className="sigle_blog_list"  data-aos="zoom-in" >
-                        {data.listitems1}
+                        {data?.listitems1}
                     </li>
                     <li className="sigle_blog_list" data-aos="zoom-in">
-                    {data.listitems2}
+                    {data?.listitems2}
                     </li>
                     <li className="sigle_blog_list" data-aos="zoom-in">
-                    {data.listitems3}
+                    {data?.listitems3}
                      </li>
                     <li className="sigle_blog_list" data-aos="zoom-in">
-                    {data.listitems4}
+                    {data?.listitems4}
                      </li>
 
                 </div>
 
                   <h1 className="single_blog_content_heading" data-aos="zoom-in">
                     {
-                        data.thirdheading
+                        data?.thirdheading
                     }
                 </h1>
                 <p className="single_blog_content_para" data-aos="fade-right">
                
                {
-                data.fourthpara
+                data?.thirdpara 
                }
                 </p>
 
@@ -194,10 +199,19 @@ function SingleBlogPage() {
             <img src={background} alt="background" className="single_blog_bg_img" />
             <div className="single_blog_layer3_main">
 
-           
-            <h1 className="single_blog_layer3_heading" data-aos="zoom-in">
-                {data.fourthheading}
+           {
+            data?.fourthheading && data?.fourthheading.length>0 &&(
+
+            <h1 className="single_blog_content_heading" data-aos="zoom-in">
+                {data?.fourthheading}
             </h1>
+            )
+           }
+            <p className="single_blog_content_para" data-aos="fade-right">
+{
+    data?.fourthpara
+}
+            </p>
             <div className="single_layer3_blogs_outer">
             <div className="blog_card_outer">
                     {
