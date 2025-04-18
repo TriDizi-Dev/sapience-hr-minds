@@ -57,14 +57,15 @@
     background-color: #FFFFFF;
     color: #000000;
 }
-.Buttons_Container{
+
+.Buttons_Container {
     display: flex;
     gap: 2vw;
 }
 
 .modal-overlay {
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -73,55 +74,88 @@
     justify-content: center;
     align-items: center;
     z-index: 999;
-  }
-  
-  .modal-box {
+}
+
+.modal-box {
     background: white;
     padding: 2vw;
     border-radius: 1vw;
     width: 40vw;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  }
-  
-  .form {
+}
+
+.modal-box h2 {
+    font-size: 1.8vw;
+}
+
+.form {
     display: flex;
     flex-direction: column;
     gap: 1vw;
-  }
-  
-  .Label {
+}
+
+.Label {
     display: flex;
     flex-direction: column;
     font-weight: bold;
-  }
-  
-  .Input {
+    font-size: 1.3vw;
+}
+
+.Input {
     padding: .8vw;
     border-radius: .5vw;
     border: 1px solid #ccc;
-  }
-  
-  .form-buttons {
+    font-size: 1vw;
+}
+
+.form-buttons {
     display: flex;
     justify-content: space-between;
-  }
-  
-  .form-buttons button {
+}
+
+.form-buttons button {
     padding: .5vw 1vw;
     border: none;
     border-radius: .6vw;
     background-color: #7C5CFC;
     color: white;
     cursor: pointer;
-  }
-  
-  .form-buttons button[type="button"] {
+}
+
+.form-buttons button[type="button"] {
     background-color: #6c757d;
-  }
-  .form textarea {
+}
+
+.form textarea {
     resize: none;
     height: 15vh;
-  }
-  
+}
 
-  
+@media screen and (min-width: 320px) and (max-width: 720px) {
+    .Label {
+        padding: 1vw;
+        font-size: 3vw;
+    }
+
+    .Input {
+        font-size: 2vw;
+        padding: 1.2vw;
+
+    }
+
+    .modal-box {
+        background: white;
+        padding: 4vw;
+        border-radius: 1vw;
+        width: 80vw;
+    }
+
+    .modal-box h2 {
+        font-size: 4vw;
+    }
+
+    .form textarea {
+        height: 10vh;
+    }
+
+}

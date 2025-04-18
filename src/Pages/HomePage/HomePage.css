@@ -1353,4 +1353,8 @@
     .layer7_part_heading2 {
         font-size: 6vw;
     }
+    .modal-overlay-homepage{
+        top: 0;
+
+    }
 }
