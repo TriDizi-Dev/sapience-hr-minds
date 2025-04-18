@@ -15,7 +15,7 @@ export const Footer = () => {
       <div className="footer_outer">
         <div className="footer_left">
           <div className="footer_logo_outer">
-            <h1 className="footer_logo" onClikc={hadleHome}>
+            <h1 className="footer_logo" onClick={hadleHome}>
               Logo
             </h1>
             <p className="footer_left_para">
