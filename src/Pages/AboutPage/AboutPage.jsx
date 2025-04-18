@@ -229,7 +229,7 @@ export const AboutPage = () => {
   return (
     <>
       <div className="About_Main_Container">
-        <p className="About_Heading">About Us</p>
+        {/* <p className="About_Heading">About Us</p> */}
         <p className="About_Sub_Heading">About Our Company</p>
         <div className="Image_Text_Container">
           <div className="Image_About" 

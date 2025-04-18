@@ -73,19 +73,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    z-index: 9999;
 }
 
 .modal-box {
+    position: relative;
     background: white;
     padding: 2vw;
     border-radius: 1vw;
-    width: 40vw;
+    width: 38vw;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+
 }
 
 .modal-box h2 {
-    font-size: 1.8vw;
+    font-size: 1.5vw;
 }
 
 .form {
@@ -98,14 +101,14 @@
     display: flex;
     flex-direction: column;
     font-weight: bold;
-    font-size: 1.3vw;
+    font-size: 1vw;
 }
 
 .Input {
-    padding: .8vw;
+    padding: .5vw;
     border-radius: .5vw;
     border: 1px solid #ccc;
-    font-size: 1vw;
+    font-size: .8vw;
 }
 
 .form-buttons {
@@ -128,7 +131,17 @@
 
 .form textarea {
     resize: none;
-    height: 15vh;
+    height: 12vh;
+}
+.Cancel_and_form_head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.Icons_X{
+    cursor: pointer;
+    font-size: 1.4vw;
 }
 
 @media screen and (min-width: 320px) and (max-width: 720px) {

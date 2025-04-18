@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 3vw;
+    margin-top: 8vw;
     padding-top: 2vw;
 }
 
@@ -900,7 +900,7 @@
 }
 .modal-overlay-homepage {
     position: fixed;
-    top: 10vw;
+    top: 7vw;
     left: 0;
     right: 0;
     bottom: 0;
