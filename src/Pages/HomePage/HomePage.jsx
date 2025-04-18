@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./HomePage.css";
 import { AiOutlinePlayCircle } from "react-icons/ai";
 import homeimg from "../../assets/HomePage/homeimg.svg";
@@ -43,6 +43,7 @@ export const HomePage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const modalRef = useRef(null);
 
   const cardscontent = [
     {
@@ -185,6 +186,62 @@ export const HomePage = () => {
     },
   ];
 
+  const hadleNavigate = () => {
+    window.open(
+      "https://calendly.com/babitha-sapienceminds-pfmn/45min",
+      "_blank"
+    );
+  };
+
+  const [showForm, setShowForm] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleOpenForm = () => {
+    setShowForm(true);
+  };
+
+  const handleCloseForm = () => {
+    setShowForm(false);
+  };
+
+  const handleChange = (e) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form Data:", formData);
+    setShowForm(false);
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
+  };
+  const handleClickOutside = (e) => {
+    if (modalRef.current && !modalRef.current.contains(e.target)) {
+      handleCloseForm();
+    }
+  };
+
+  useEffect(() => {
+    if (showForm) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showForm]);
   return (
     <div className="home_main">
       <div className="home_page_outer">
@@ -202,12 +259,72 @@ export const HomePage = () => {
             </p>
           </div>
           <div className="homepage_button_outer">
-            <button className="homepage_left_button">Get started</button>
-            <button className="homepage_right_button">
+            <button
+              className="homepage_left_button"
+              onClick={() => handleOpenForm()}
+            >
+              Get started
+            </button>
+            <button
+              className="homepage_right_button"
+              onClick={() => hadleNavigate()}
+            >
               <AiOutlinePlayCircle className="button_icon" />
               Book A Meeting
             </button>
           </div>
+
+          {/* Prefooter Css Applied In this PopUp */}
+          {showForm && (
+            <div className="modal-overlay-homepage">
+              <div className="modal-box" ref={modalRef}>
+                <h2>Contact Form</h2>
+                <form onSubmit={handleSubmit} className="form">
+                  <label className="Label">
+                    Name:
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="Input"
+                    />
+                  </label>
+
+                  <label className="Label">
+                    Email:
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="Input"
+                    />
+                  </label>
+                  <label className="Label">
+                    Message
+                    <textarea
+                      type="text"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                      className="Input"
+                    />
+                  </label>
+
+                  <div className="form-buttons">
+                    <button type="submit">Submit</button>
+                    <button type="button" onClick={handleCloseForm}>
+                      Cancel
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          )}
         </div>
         <div className="home_page_right">
           <div className="right_top_icon">
@@ -320,8 +437,11 @@ export const HomePage = () => {
             <div className="homepage_layer4_cards_outer">
               <div className="homepage_layer4_card">
                 <div className="layer4_card_logo">
-                <img src={Smallicon2} alt="Smallicon1" className="layer4_logo" />
-
+                  <img
+                    src={Smallicon2}
+                    alt="Smallicon1"
+                    className="layer4_logo"
+                  />
                 </div>
                 <h3 className="layer4_card_heading">
                   {/* Powerful Dashboard */}
@@ -334,8 +454,11 @@ export const HomePage = () => {
               </div>
               <div className="homepage_layer4_card">
                 <div className="layer4_card_logo">
-                <img src={Smallicon1} alt="Smallicon1" className="layer4_logo" />
-
+                  <img
+                    src={Smallicon1}
+                    alt="Smallicon1"
+                    className="layer4_logo"
+                  />
                 </div>
                 <h3 className="layer4_card_heading">Mission</h3>
                 <p className="layer4_card_para">
@@ -380,9 +503,12 @@ export const HomePage = () => {
                 <div className="card_bottom_line"></div>
                 <h6 className="layer5_card_heading">{data.subHead}</h6>
                 <p className="layer5_card_text">{data.para}</p>
-                <Link to={data?.path} style={{
-                  textDecoration:'none'
-                }}>
+                <Link
+                  to={data?.path}
+                  style={{
+                    textDecoration: "none",
+                  }}
+                >
                   <p className="layer5_card_lernmore">{data.Head}</p>
                 </Link>
               </div>
@@ -503,8 +629,7 @@ export const HomePage = () => {
                     <p className="layer7_card_sub_name">{data.subname}</p>
                     <div className="layer7_card_line"></div>
                     <div className="layer7_card_para_outer">
-
-                    <p className="layer7_card_para">{data.para}</p>
+                      <p className="layer7_card_para">{data.para}</p>
                     </div>
                     <h6 className="layer7_card_explore">{data.explore}</h6>
                   </div>
