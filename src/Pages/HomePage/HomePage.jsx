@@ -11,6 +11,8 @@ import layer4 from "../../assets/HomePage/layer4.svg";
 
 import Smallicon1 from "../../assets/AboutPage/Smallicon1.svg";
 import Smallicon2 from "../../assets/AboutPage/Smallicon2.svg";
+
+
 import Smallicon3 from "../../assets/AboutPage/Smallicon3.svg";
 import Smallicon4 from "../../assets/AboutPage/Smallicon4.svg";
 
@@ -22,7 +24,13 @@ import blog2 from "../../assets/Blogs/image2.png";
 import blog3 from "../../assets/Blogs/image3.png";
 
 import homevideo from "../../assets/HomePage/hmv.mp4";
-import man from "../../assets/HomePage/man.svg";
+import man from "../../assets/HomePage/Testimony_1.png";
+import man_2 from "../../assets/HomePage/man_2.png";
+import man_3 from "../../assets/HomePage/man_3.png";
+import man_4 from "../../assets/HomePage/man_4.png";
+import man_5 from "../../assets/HomePage/man_5.png";
+import man_6 from "../../assets/HomePage/man_6.png";
+import woman_1 from "../../assets/HomePage/woman_1.png";
 import { PreFooter } from "../../Components/PreFooter/PreFooter";
 
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
@@ -36,6 +44,8 @@ import { Link, useNavigate } from "react-router-dom";
 
 export const HomePage = () => {
   const navigate = useNavigate();
+  const [readMore, setReadMore] = useState(false);
+  const [singleTestimonial, setSingleTestimonial] = useState(null);
   useEffect(() => {
     AOS.init({
       offset: 200,
@@ -121,38 +131,58 @@ export const HomePage = () => {
     {
       id: 1,
       logo: "Logo",
-      para: `Lorem Ipsum is simply dummy text of the printing and typesetting
-                 industry. Lorem Ipsum has been the industry's standard dummy text ever.`,
+      para: `I am happy to recommend Babitha for her exceptional contributions to our organization as a Human Resources professional. During her tenure, Babitha showcased an impressive array of skills that truly set her apart. Babitha's proficiency in communication and follow-up was unparalleled. She effectively liaised between departments, ensuring smooth communication channels and prompt responses. Her dedication to follow through on tasks ensured that things progressed seamlessly. Moreover, Babitha introduced invaluable processes to our recruitment procedures, streamlining operations and enhancing efficiency. Her comprehensive understanding of HR processes and regulations made her an invaluable resource for our organization. Babitha's knowledge and expertise not only optimized our recruitment efforts but also fostered a positive work environment conducive to growth and development. In summary, after a considerable time, I am delighted to have witnessed such an exceptional HR professional within our organization. Babitha's dedication, expertise, and ability to implement positive change make her a standout colleague and asset to any team fortunate enough to have her.`,
       img: man,
-      bottomname: "Name",
-      bottomtext: "Lorem Ipsum",
+      bottomname: "Achutha Herur",
+      bottomtext: "Technical Director, ESI Group",
     },
     {
       id: 2,
       logo: "Logo",
-      para: `Lorem Ipsum is simply dummy text of the printing and typesetting
-                 industry. Lorem Ipsum has been the industry's standard dummy text ever.`,
-      img: man,
-      bottomname: "Name",
-      bottomtext: "Lorem Ipsum",
+      para: `Babitha is a very strong HR Director I was lucky to work with for several years. I've hired Babitha to reinforce and to restructure the HR org in India (more than 300 people) and to take the lead on the different topics and to cover both sites (Bangalore and Pune). As Babitha was really capable and shown great aptitudes to the change management and the HR structuring, we've asked her to take part of Global and international HR projects to sustain the HR development all over the Group. If i would have the opportunity to work again with Babitha, I won't hesitate one sec as she is easy to work with, cooperative, problem solver and always very positive and smiling.`,
+      img: man_2,
+      bottomname: "Sylvain Cotin",
+      bottomtext: "Senior Human Resources Director, OpenText",
     },
     {
       id: 3,
       logo: "Logo",
-      para: `Lorem Ipsum is simply dummy text of the printing and typesetting
-                 industry. Lorem Ipsum has been the industry's standard dummy text ever.`,
-      img: man,
-      bottomname: "Name",
-      bottomtext: "Lorem Ipsum",
+      para: `Babitha is a perfect example of an excellent Global HR director. She is focused, dependable & objectives-oriented. We worked with Babitha on various topics viz. Global & Local transformation, Talent management, CSR activities, campus hiring etc. She has exceptional skills in the HR field, besides being a helpful human with a sympathetic attitude. Her knowledge about tools, its impact on transition and mass demonstration/adoption skills are exceptional. Apart from the above, the collaboration with business leaders and leadership team was remarkable. Babitha has proven leadership skills in building and structuring the HR team to drive excellence and efficiency.`,
+      img: man_3,
+      bottomname: "Venugopal Alambady Balappa",
+      bottomtext: "Manager, ESI Group",
     },
     {
       id: 4,
       logo: "Logo",
-      para: `Lorem Ipsum is simply dummy text of the printing and typesetting
-                 industry. Lorem Ipsum has been the industry's standard dummy text ever.`,
-      img: man,
-      bottomname: "Name",
-      bottomtext: "Lorem Ipsum",
+      para: `During our collaboration, I've come to appreciate her exceptional skills, her unfailing commitment and her ability to manage complex issues. In addition to her technical expertise, Babitha has demonstrated great communication skills. She is able to convey complex ideas clearly and concisely, making her a valuable asset to any team. Beyond her professional skills, Babitha is a reliable and collaborative colleague. Her positive attitude and ability to work with others makes a significant contribution to the team's dynamics. Integrating Babitha into your team means offer it a dynamic, efficient and creative collaborator`,
+      img: man_4,
+      bottomname: "Eugenie Bocquet Appel",
+      bottomtext: "Corporate HR Director, ESI Group ",
+    },
+    {
+      id: 5,
+      logo: "Logo",
+      para: `If you are looking for, a People First person, to upgrade the culture of your organization, look no further than Babitha. Her well curated Programmes and HR best practices have helped navigate departments through a journey of Organizational Transformation, both at Local and Global levels. Gifted with an exceptionally high EQ coupled with great listening and oratory skills, Babitha has consistently demonstrated Walk The Talk. With her Onboard, any organization can figure out novel ways of the managing its greatest asset of Human Resources and unleashing them as Self Driven Armies that can conquer the toughest of challenges`,
+      img: man_5,
+      bottomname: "Roshan Nataraj",
+      bottomtext: "Technical Experts Leader, ESI Group",
+    },
+    {
+      id: 6,
+      logo: "Logo",
+      para: `Babitha has a pleasing personality and extremely focussed, systematic approach. Great control on work life balance too. Possesses immense persuasive leadership skills and highly talented in all areas of`,
+      img: man_6,
+      bottomname: "Anup Nair",
+      bottomtext: "Managing Director- India & South Asia, Martin Engineering",
+    },
+    {
+      id: 6,
+      logo: "Logo",
+      para: `We recently had the pleasure of working with Sapience Minds on our critical hiring needs. From the initial consultation to the final placement, their team exhibited professionalism, dedication, and a genuine commitment to finding the perfect fit for both the candidate and the employer. Sapience Minds took the time to understand our company's unique needs and culture, ensuring they matched us with candidates who not only had the required skills but also aligned with our values. Their meticulous screening process saved us countless hours and resulted in a shortlist of highly qualified individuals. One of the standout aspects of Sapience is their exceptional communication. They kept us informed at every stage of the recruitment process, providing regular updates and valuable insights. Their responsiveness and attention to detail made the entire experience seamless and stress-free. Thanks to Sapience Minds, we have successfully hired talented individuals. Their expertise and personalized approach have made a significant impact on our hiring process, and we look forward to continuing our partnership with them in the future. Are you stuck with critical hiring??? - You have Sapience Minds that goes above and beyond to deliver outstanding results!!`,
+      img: woman_1,
+      bottomname: "Seema S Rao",
+      bottomtext: " Sr. VP - HR & Finance,  Wolken Software Pvt Ltd",
     },
   ];
 
@@ -161,9 +191,8 @@ export const HomePage = () => {
       id: 1,
       bannerheading:
         "The Importance of Workforce Upskilling and Reskilling in Today’s Economy",
-      subname: "Lorem Ipsum",
-      bannertext: `   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,`,
+      subname: "Human Resources",
+      bannertext: `In today’s rapidly evolving economy, workforce upskilling and reskilling have become crucial for organizations aiming to stay competitive.`,
       explore: "Explore More",
       path: "/singleBlog",
       img: blog1,
@@ -192,9 +221,8 @@ export const HomePage = () => {
     {
       id: 2,
       bannerheading: "The Role of HR Analytics in Data-Driven Decision Making",
-      subname: "Lorem Ipsum",
-      bannertext: `   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,`,
+      subname: "Human Resources",
+      bannertext: `Human Resources (HR) analytics, also known as people analytics, involves gathering, analyzing, and interpreting data related to human resources. `,
       explore: "Explore More",
       path: "/singleBlog",
       img: blog2,
@@ -223,9 +251,8 @@ export const HomePage = () => {
       id: 3,
       bannerheading:
         "The Vital Role of Leadership Development and Succession Planning",
-      subname: "Lorem Ipsum",
-      bannertext: `   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,`,
+      subname: "Business Management",
+      bannertext: `In today’s fast-paced business environment, leadership development is more crucial than ever. Companies need to invest in nurturing their future leaders .`,
       explore: "Explore More",
       path: "/singleBlog",
       img: blog3,
@@ -324,6 +351,12 @@ export const HomePage = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [showForm]);
+
+  const readMoreHandeler = (targeted) => {
+    setReadMore(true);
+    setSingleTestimonial(targeted);
+  };
+
   return (
     <div className="home_main">
       <div className="home_page_outer">
@@ -585,7 +618,7 @@ export const HomePage = () => {
           </div>
           <div className="layer5_cards_outer">
             {cardscontent.map((data, ind) => (
-              <div className="layer5_card" key={ind} data-aos="flip-right">
+              <div className="layer5_card" key={ind} data-aos="zoom-in-up">
                 <div className="layer5_card_logo_outer">
                   <img
                     src={data.Logo}
@@ -651,8 +684,8 @@ export const HomePage = () => {
               {testmonials?.map((data, index) => (
                 <SwiperSlide key={index}>
                   <div className="layer6_card">
-                    <p className="layer6_card_logo">{data.logo}</p>
-                    <p className="layer6_card_para">{data.para}</p>
+                    {/* <p className="layer6_card_logo">{data.logo}</p> */}
+
                     <div className="layer6_card_bottom">
                       <div className="layer6_bottom_logo_outer">
                         <img
@@ -667,6 +700,15 @@ export const HomePage = () => {
                         </h6>
                         <p className="card_bottom_para">{data.bottomtext}</p>
                       </div>
+                    </div>
+                    <p className="layer6_card_para">{data.para}</p>
+                    <div>
+                      <button
+                        className="read_more_btn"
+                        onClick={() => readMoreHandeler(data)}
+                      >
+                        Read More
+                      </button>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -727,7 +769,7 @@ export const HomePage = () => {
 
                     <h6
                       className="layer7_card_explore"
-                      onClick={() => handleSignleBlog(data, data.id)}
+                      onClick={() => handleSignleBlog(data, data.bannerheading)}
                     >
                       {data.explore}
                     </h6>
@@ -737,6 +779,40 @@ export const HomePage = () => {
             </Swiper>
           </div>
         </div>
+        {readMore === true && (
+          <div className="home_page_modal" onClick={() => setReadMore(false)}>
+            {readMore === true && (
+              <div className="read_more_modal">
+                <div className="read_more_content">
+                  <div className="layer6_card_bottom">
+                    <div className="layer6_bottom_logo_outer">
+                      <img
+                        src={singleTestimonial.img}
+                        alt="man"
+                        className="singleTestimonial_bottom_logo"
+                      />
+                    </div>
+                    <div className="card_bottom_right_text">
+                      <h6 className="card_bottom_heading">
+                        {singleTestimonial.bottomname}
+                      </h6>
+                      <p className="singleTestimonial_bottom_para">
+                        {singleTestimonial.bottomtext}
+                      </p>
+                    </div>
+                  </div>
+                  <p>{singleTestimonial.para}</p>
+                  <button
+                    className="read_more_close_btn"
+                    onClick={() => setReadMore(false)}
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
       <div className="home_page_prefooter" data-aos="zoom-in">

@@ -15,7 +15,7 @@ export const Footer = () => {
       <div className="footer_outer">
         {/* <div className="footer_left"> */}
           <div className="footer_logo_outer">
-            <h1 className="footer_logo" onClikc={hadleHome}>
+            <h1 className="footer_logo" onClick={hadleHome}>
               Logo
             </h1>
             <p className="Contact_heading">Head Office</p>
@@ -82,13 +82,13 @@ export const Footer = () => {
                 <li className="footer_services_items">Alliance-Partner</li>
               </Link>
               <Link to="/internship-hr-learning" className="nav_link">
-                <li className="footer_services_items">Internship</li>
+                <li className="footer_services_items">Internships</li>
               </Link>
               <Link to="/workshop-hr-learning" className="nav_link">
-                <li className="footer_services_items">Workshop</li>
+                <li className="footer_services_items">Workshops</li>
               </Link>
               <Link to="/webinar-hr-learning" className="nav_link">
-                <li className="footer_services_items">Webinar</li>
+                <li className="footer_services_items">Webinars</li>
               </Link>
             </div>
 
