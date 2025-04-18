@@ -46,6 +46,7 @@ export const HomePage = () => {
   const navigate = useNavigate();
   const [readMore, setReadMore] = useState(false);
   const [singleTestimonial, setSingleTestimonial] = useState(null);
+  const swiperRef = useRef(null);
   useEffect(() => {
     AOS.init({
       offset: 200,
@@ -353,6 +354,9 @@ export const HomePage = () => {
   const readMoreHandeler = (targeted) => {
     setReadMore(true);
     setSingleTestimonial(targeted);
+    if (swiperRef.current) {
+      swiperRef.current.autoplay?.stop();
+    }
   };
 
   return (
@@ -667,6 +671,9 @@ export const HomePage = () => {
                   spaceBetween: 20,
                 },
               }}
+              onSwiper={(swiper) => {
+                swiperRef.current = swiper; // Assign Swiper instance to swiperRef
+              }}
             >
               {testmonials?.map((data, index) => (
                 <SwiperSlide key={index}>
@@ -727,7 +734,7 @@ export const HomePage = () => {
               }}
               pagination={{ clickable: true }}
               autoplay={{
-                delay: 3000,
+                delay: 2000,
                 disableOnInteraction: false,
               }}
               speed={1000}
@@ -767,7 +774,11 @@ export const HomePage = () => {
           </div>
         </div>
         {readMore === true && (
-          <div className="home_page_modal" onClick={() => setReadMore(false)}>
+          <div className="home_page_modal" data-aos="zoom-in" onClick={() => {setReadMore(false)
+            if (swiperRef.current) {
+              swiperRef.current.autoplay?.start();
+            }
+          }}>
             {readMore === true && (
               <div className="read_more_modal">
                 <div className="read_more_content">
@@ -791,7 +802,11 @@ export const HomePage = () => {
                   <p>{singleTestimonial.para}</p>
                   <button
                     className="read_more_close_btn"
-                    onClick={() => setReadMore(false)}
+                    onClick={() => {setReadMore(false)
+                      if (swiperRef.current) {
+                        swiperRef.current.autoplay?.start();
+                      }
+                    }}
                   >
                     Close
                   </button>

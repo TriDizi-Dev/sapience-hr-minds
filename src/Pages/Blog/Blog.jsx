@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import "./Blog.css"
-import blogimg1 from "../../assets/Blogs/blog1.svg"
-import blogimg2 from "../../assets/Blogs/blog2.svg"
+import blogimg1 from "../../assets/Blogs/image1.png"
+import blogimg2 from "../../assets/Blogs/image2.png"
+import blogimg3 from "../../assets/Blogs/image3.png"
 
 import layer4 from "../../assets/HomePage/layer4.svg"
 
@@ -98,7 +99,7 @@ function Blog() {
     },
     {
       id: 3,
-      img: blogimg1,
+      img: blogimg3,
       imgtext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       cardheading: ' Transforming Ambition Into Achievement',
       date: " 06/1/2024",
@@ -125,151 +126,151 @@ function Blog() {
       listitems3: "Id quibusdam corporis et voluptate minus",
       listitems4: "Qui internos impedit vel unde",
     },
-    {
-      id: 4,
-      img: blogimg2,
-      imgtext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      cardheading: ' Transforming Ambition Into Achievement',
-      date: " 06/1/2024",
-      knowmore: "konw More",
+    // {
+    //   id: 4,
+    //   img: blogimg2,
+    //   imgtext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+    //   cardheading: ' Transforming Ambition Into Achievement',
+    //   date: " 06/1/2024",
+    //   knowmore: "konw More",
 
-      toptext: "By Babitha on April 24, 2025 - 5 min read",
-      bannerheading: "Transforming Ambition Into Achievement",
-      bannertext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+    //   toptext: "By Babitha on April 24, 2025 - 5 min read",
+    //   bannerheading: "Transforming Ambition Into Achievement",
+    //   bannertext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
 
-      firstheading: "Lorem ipsum dolor",
-      secondheading: "Lorem ipsum dolor sit amet",
-      thirdheading: "Lorem ipsum dolor sit amet",
-      fourthheading: "Lorem ipsum dolor sit amet",
-
-
-
-      firstpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      secondpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      thirdpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      fourthpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-
-      listitems1: "Non magni quisquam",
-      listitems2: "Eum aperiam facilis",
-      listitems3: "Id quibusdam corporis et voluptate minus",
-      listitems4: "Qui internos impedit vel unde",
-    },
-    {
-      id: 5,
-      img: blogimg1,
-      imgtext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      cardheading: ' Transforming Ambition Into Achievement',
-      date: " 06/1/2024",
-      knowmore: "konw More",
-
-      toptext: "By Babitha on April 24, 2025 - 5 min read",
-      bannerheading: "Transforming Ambition Into Achievement",
-      bannertext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-
-      firstheading: "Lorem ipsum dolor",
-      secondheading: "Lorem ipsum dolor sit amet",
-      thirdheading: "Lorem ipsum dolor sit amet",
-      fourthheading: "Lorem ipsum dolor sit amet",
+    //   firstheading: "Lorem ipsum dolor",
+    //   secondheading: "Lorem ipsum dolor sit amet",
+    //   thirdheading: "Lorem ipsum dolor sit amet",
+    //   fourthheading: "Lorem ipsum dolor sit amet",
 
 
 
-      firstpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      secondpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      thirdpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      fourthpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    //   firstpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    //   secondpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    //   thirdpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    //   fourthpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
 
-      listitems1: "Non magni quisquam",
-      listitems2: "Eum aperiam facilis",
-      listitems3: "Id quibusdam corporis et voluptate minus",
-      listitems4: "Qui internos impedit vel unde",
-    },
-    {
-      id: 6,
-      img: blogimg2,
-      imgtext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      cardheading: ' Transforming Ambition Into Achievement',
-      date: " 06/1/2024",
-      knowmore: "konw More",
+    //   listitems1: "Non magni quisquam",
+    //   listitems2: "Eum aperiam facilis",
+    //   listitems3: "Id quibusdam corporis et voluptate minus",
+    //   listitems4: "Qui internos impedit vel unde",
+    // },
+    // {
+    //   id: 5,
+    //   img: blogimg1,
+    //   imgtext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+    //   cardheading: ' Transforming Ambition Into Achievement',
+    //   date: " 06/1/2024",
+    //   knowmore: "konw More",
 
-      toptext: "By Babitha on April 24, 2025 - 5 min read",
-      bannerheading: "Transforming Ambition Into Achievement",
-      bannertext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+    //   toptext: "By Babitha on April 24, 2025 - 5 min read",
+    //   bannerheading: "Transforming Ambition Into Achievement",
+    //   bannertext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
 
-      firstheading: "Lorem ipsum dolor",
-      secondheading: "Lorem ipsum dolor sit amet",
-      thirdheading: "Lorem ipsum dolor sit amet",
-      fourthheading: "Lorem ipsum dolor sit amet",
-
-
-
-      firstpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      secondpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      thirdpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      fourthpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-
-      listitems1: "Non magni quisquam",
-      listitems2: "Eum aperiam facilis",
-      listitems3: "Id quibusdam corporis et voluptate minus",
-      listitems4: "Qui internos impedit vel unde",
-    },
-    {
-      id: 7,
-      img: blogimg1,
-      imgtext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      cardheading: ' Transforming Ambition Into Achievement',
-      date: " 06/1/2024",
-      knowmore: "konw More",
-
-      toptext: "By Babitha on April 24, 2025 - 5 min read",
-      bannerheading: "Transforming Ambition Into Achievement",
-      bannertext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-
-      firstheading: "Lorem ipsum dolor",
-      secondheading: "Lorem ipsum dolor sit amet",
-      thirdheading: "Lorem ipsum dolor sit amet",
-      fourthheading: "Lorem ipsum dolor sit amet",
+    //   firstheading: "Lorem ipsum dolor",
+    //   secondheading: "Lorem ipsum dolor sit amet",
+    //   thirdheading: "Lorem ipsum dolor sit amet",
+    //   fourthheading: "Lorem ipsum dolor sit amet",
 
 
 
-      firstpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      secondpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      thirdpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      fourthpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    //   firstpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    //   secondpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    //   thirdpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    //   fourthpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
 
-      listitems1: "Non magni quisquam",
-      listitems2: "Eum aperiam facilis",
-      listitems3: "Id quibusdam corporis et voluptate minus",
-      listitems4: "Qui internos impedit vel unde",
-    },
-    {
-      id: 8,
-      img: blogimg2,
-      imgtext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      cardheading: ' Transforming Ambition Into Achievement',
-      date: " 06/1/2024",
-      knowmore: "konw More",
+    //   listitems1: "Non magni quisquam",
+    //   listitems2: "Eum aperiam facilis",
+    //   listitems3: "Id quibusdam corporis et voluptate minus",
+    //   listitems4: "Qui internos impedit vel unde",
+    // },
+    // {
+    //   id: 6,
+    //   img: blogimg2,
+    //   imgtext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+    //   cardheading: ' Transforming Ambition Into Achievement',
+    //   date: " 06/1/2024",
+    //   knowmore: "konw More",
 
-      toptext: "By Babitha on April 24, 2025 - 5 min read",
-      bannerheading: "Transforming Ambition Into Achievement",
-      bannertext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+    //   toptext: "By Babitha on April 24, 2025 - 5 min read",
+    //   bannerheading: "Transforming Ambition Into Achievement",
+    //   bannertext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
 
-      firstheading: "Lorem ipsum dolor",
-      secondheading: "Lorem ipsum dolor sit amet",
-      thirdheading: "Lorem ipsum dolor sit amet",
-      fourthheading: "Lorem ipsum dolor sit amet",
+    //   firstheading: "Lorem ipsum dolor",
+    //   secondheading: "Lorem ipsum dolor sit amet",
+    //   thirdheading: "Lorem ipsum dolor sit amet",
+    //   fourthheading: "Lorem ipsum dolor sit amet",
 
 
 
-      firstpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      secondpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      thirdpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      fourthpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    //   firstpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    //   secondpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    //   thirdpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    //   fourthpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
 
-      listitems1: "Non magni quisquam",
-      listitems2: "Eum aperiam facilis",
-      listitems3: "Id quibusdam corporis et voluptate minus",
-      listitems4: "Qui internos impedit vel unde",
-    },
+    //   listitems1: "Non magni quisquam",
+    //   listitems2: "Eum aperiam facilis",
+    //   listitems3: "Id quibusdam corporis et voluptate minus",
+    //   listitems4: "Qui internos impedit vel unde",
+    // },
+    // {
+    //   id: 7,
+    //   img: blogimg1,
+    //   imgtext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+    //   cardheading: ' Transforming Ambition Into Achievement',
+    //   date: " 06/1/2024",
+    //   knowmore: "konw More",
+
+    //   toptext: "By Babitha on April 24, 2025 - 5 min read",
+    //   bannerheading: "Transforming Ambition Into Achievement",
+    //   bannertext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+
+    //   firstheading: "Lorem ipsum dolor",
+    //   secondheading: "Lorem ipsum dolor sit amet",
+    //   thirdheading: "Lorem ipsum dolor sit amet",
+    //   fourthheading: "Lorem ipsum dolor sit amet",
+
+
+
+    //   firstpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    //   secondpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    //   thirdpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    //   fourthpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+
+    //   listitems1: "Non magni quisquam",
+    //   listitems2: "Eum aperiam facilis",
+    //   listitems3: "Id quibusdam corporis et voluptate minus",
+    //   listitems4: "Qui internos impedit vel unde",
+    // },
+    // {
+    //   id: 8,
+    //   img: blogimg2,
+    //   imgtext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+    //   cardheading: ' Transforming Ambition Into Achievement',
+    //   date: " 06/1/2024",
+    //   knowmore: "konw More",
+
+    //   toptext: "By Babitha on April 24, 2025 - 5 min read",
+    //   bannerheading: "Transforming Ambition Into Achievement",
+    //   bannertext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+
+    //   firstheading: "Lorem ipsum dolor",
+    //   secondheading: "Lorem ipsum dolor sit amet",
+    //   thirdheading: "Lorem ipsum dolor sit amet",
+    //   fourthheading: "Lorem ipsum dolor sit amet",
+
+
+
+    //   firstpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    //   secondpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    //   thirdpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    //   fourthpara: "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+
+    //   listitems1: "Non magni quisquam",
+    //   listitems2: "Eum aperiam facilis",
+    //   listitems3: "Id quibusdam corporis et voluptate minus",
+    //   listitems4: "Qui internos impedit vel unde",
+    // },
   ]
 
   const handleSignleBlog = (ev, id) => {
