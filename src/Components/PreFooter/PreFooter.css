@@ -61,3 +61,67 @@
     display: flex;
     gap: 2vw;
 }
+
+.modal-overlay {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal-box {
+    background: white;
+    padding: 2vw;
+    border-radius: 1vw;
+    width: 40vw;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+  }
+  
+  .Label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+  }
+  
+  .Input {
+    padding: .8vw;
+    border-radius: .5vw;
+    border: 1px solid #ccc;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-buttons button {
+    padding: .5vw 1vw;
+    border: none;
+    border-radius: .6vw;
+    background-color: #7C5CFC;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .form-buttons button[type="button"] {
+    background-color: #6c757d;
+  }
+  .form textarea {
+    resize: none;
+    height: 15vh;
+  }
+  
+
+  
