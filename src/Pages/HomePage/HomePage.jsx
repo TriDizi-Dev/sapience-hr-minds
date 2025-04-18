@@ -260,13 +260,13 @@ export const HomePage = () => {
           </div>
           <div className="homepage_button_outer">
             <button
-              className="homepage_left_button"
+              className="homepage_left_button "
               onClick={() => handleOpenForm()}
             >
               Get started
             </button>
             <button
-              className="homepage_right_button"
+              className="homepage_right_button liquid"
               onClick={() => hadleNavigate()}
             >
               <AiOutlinePlayCircle className="button_icon" />
