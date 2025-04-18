@@ -11,6 +11,8 @@ import layer4 from "../../assets/HomePage/layer4.svg";
 
 import Smallicon1 from "../../assets/AboutPage/Smallicon1.svg";
 import Smallicon2 from "../../assets/AboutPage/Smallicon2.svg";
+
+
 import Smallicon3 from "../../assets/AboutPage/Smallicon3.svg";
 import Smallicon4 from "../../assets/AboutPage/Smallicon4.svg";
 
