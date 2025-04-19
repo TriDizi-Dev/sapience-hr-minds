@@ -11,7 +11,7 @@
 
 .reach-box {
   width: 88%;
-  height: 100%;
+  height: 102%;
   display: flex;
   background: white;
   position: relative;
@@ -173,7 +173,7 @@
 
   .reach-box{
     /* height: fit-content; */
-    height: 70%;
+    height: 74%;
   }
   .reach-container{
     height:140vw;
@@ -209,19 +209,23 @@
     padding: 1vw 1vw 3vw 1vw;
   }
   .reach-info h3{
+    margin-top: -10vw;
     font-size: 5vw;
     text-align: start;
   }
   .reach-info p{
-    margin: 1vw 0 0 2vw;
+    margin: 1vw 0 0 0vw;
     font-size: 3vw;
-    width: 100%;
+    width: 30vw;
   }
   .reach-info{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 35vw;
+    /* height: 50vw; */
+
   }
   .reach-form button{
     font-size: 5vw;
