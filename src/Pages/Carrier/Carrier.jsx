@@ -585,7 +585,7 @@ function Carrier() {
                                 <p className="right_item">Full Time</p>
                               </div>
                               <div className="detalis_items">
-                                <p className="lef_item">Quealification</p>
+                                <p className="lef_item">Qualification</p>
                                 <p className="right_item">Fresh Graduation</p>
                               </div>
                               <div className="detalis_items">

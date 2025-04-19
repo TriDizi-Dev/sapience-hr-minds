@@ -47,6 +47,12 @@
     border: none;
     cursor: pointer;
 }
+.Button1:hover,
+.Button22:hover{
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(190, 188, 188, 0.589);
+    transition: .5s linear;
+ }
 
 .Button22 {
     background-color: #7C5CFC;
