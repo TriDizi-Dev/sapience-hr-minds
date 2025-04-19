@@ -26,10 +26,12 @@ import { ServicePageEight } from "./Pages/Servicepages/ServicePageEight";
 import InternshipHRLearning from "./Pages/InternshipHrLearning/InternshipHrLearning";
 import WorkshopsHrLearning from "./Pages/WorkshopsHrInternship/workshopHrLearning";
 import WebinarHRLearning from "./Pages/WebinarHrLearning/WebinarHrLearning";
+import { CreateBlog } from "./Pages/BlogCreationPage/blogcreation";
+import CareerCreation from "./Pages/careerCreation/careerCreation";
 
 function Layout() {
   const location = useLocation();
-  const hideFooter = location.pathname === "/contactus";
+  const hideFooter = location.pathname === "/contactus" || location.pathname === "/blog-creation" ||location.pathname === "/career-creation" ;
 
   return (
     <>
@@ -51,8 +53,8 @@ function Layout() {
           path="/termsandconditions"
           element={<TermsAndCondition />}
         ></Route>
-        <Route path="/blog" element={<Blog />}></Route>
-        <Route path="/singleBlog" element={<SingleBlogPage />}></Route>
+        <Route path="/blogs" element={<Blog />}></Route>
+        {/* <Route path="/singleBlog" element={<SingleBlogPage />}></Route> */}
         <Route path="/hr-compliance" element={<ServicePageOne />}></Route>
         <Route path="/hr-consulting" element={<ServicePageTwo />}></Route>
         <Route path="/virtual-chro-and-outsourcing" element={<ServiceThree />}></Route>
@@ -61,7 +63,9 @@ function Layout() {
         <Route path="/talent-engagement" element={<ServicePageSix />}></Route>
         <Route path="/recruitment-of-leadership" element={<ServicePageSeven />}></Route>
         <Route path="/employee-insurance-and-benefits" element={<ServicePageEight />}></Route>
-        <Route path="/singleBlog/:id" element={<SingleBlogPage />}></Route>
+        <Route path="/blog/:id" element={<SingleBlogPage />}></Route>
+        <Route path="/blog-creation" element={<CreateBlog />}></Route>   
+        <Route path="/career-creation" element={<CareerCreation />}></Route>
       </Routes>
       {!hideFooter && <Footer />}
       

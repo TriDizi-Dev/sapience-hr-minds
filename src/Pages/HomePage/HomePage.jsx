@@ -195,7 +195,7 @@ export const HomePage = () => {
       subname: "Human Resources",
       bannertext: `In today’s rapidly evolving economy, workforce upskilling and reskilling have become crucial for organizations aiming to stay competitive.`,
       explore: "Explore More",
-      path: "/singleBlog",
+      path: "/blog",
       img: blog1,
       toptext: "By Babitha on April 24, 2025 - 5 min read",
 
@@ -225,7 +225,7 @@ export const HomePage = () => {
       subname: "Human Resources",
       bannertext: `Human Resources (HR) analytics, also known as people analytics, involves gathering, analyzing, and interpreting data related to human resources. `,
       explore: "Explore More",
-      path: "/singleBlog",
+      path: "/blog",
       img: blog2,
       toptext: "By Babitha on April 25, 2025 - 4 min read",
 
@@ -255,7 +255,7 @@ export const HomePage = () => {
       subname: "Business Management",
       bannertext: `In today’s fast-paced business environment, leadership development is more crucial than ever. Companies need to invest in nurturing their future leaders .`,
       explore: "Explore More",
-      path: "/singleBlog",
+      path: "/blog",
       img: blog3,
       toptext: "By Babitha on April 26, 2025 - 6 min read",
 
@@ -291,7 +291,7 @@ export const HomePage = () => {
   ];
 
   const handleSignleBlog = (ev, id) => {
-    navigate(`/singleBlog/${id}`, { state: ev });
+    navigate(`/blog/${id}`, { state: ev });
   };
 
   const hadleNavigate = () => {
