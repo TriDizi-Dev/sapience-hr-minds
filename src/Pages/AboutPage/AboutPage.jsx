@@ -13,7 +13,7 @@ import Smallicon1 from "../../assets/AboutPage/Smallicon1.svg";
 import Smallicon2 from "../../assets/AboutPage/Smallicon2.svg";
 import Smallicon3 from "../../assets/AboutPage/Smallicon3.svg";
 import Smallicon4 from "../../assets/AboutPage/Smallicon4.svg";
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { PreFooter } from "../../Components/PreFooter/PreFooter";
 
 import AOS from "aos";
@@ -38,9 +38,15 @@ export const AboutPage = () => {
 
   const [ClientRatingCount, setClientRatingCount] = useState(0);
   const [ClientRatingIsVisible, setClientRatingIsVisible] = useState(false);
+  const [showdata, setshowdata] = useState(false);
+  const [clickedid, setclickedid] = useState("");
   const targetClientRating = 4.9;
   const durationClientRating = 2000;
 
+  const changebool = (id) => {
+    setshowdata(!showdata);
+    setclickedid(id);
+  };
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -219,12 +225,42 @@ export const AboutPage = () => {
     },
   ];
   const questions = [
-    "How can I stay informed about new job openings?",
-    "How can I stay informed about new job openings?",
-    "How can I stay informed about new job openings?",
-    "How can I stay informed about new job openings?",
-    "How can I stay informed about new job openings?",
-    "How can I stay informed about new job openings?",
+    {
+      id: 1,
+      question: "How can I stay informed about new job openings?",
+      answer:
+        "check the careers page of companies I'm interested in and subscribe to their job alert newsletters.",
+    },
+    {
+      id: 2,
+      question: "How can I stay informed about new job openings?",
+      answer:
+        "check the careers page of companies I'm interested in and subscribe to their job alert newsletters.",
+    },
+    {
+      id: 3,
+      question: "How can I stay informed about new job openings?",
+      answer:
+        "check the careers page of companies I'm interested in and subscribe to their job alert newsletters.",
+    },
+    {
+      id: 4,
+      question: "How can I stay informed about new job openings?",
+      answer:
+        "check the careers page of companies I'm interested in and subscribe to their job alert newsletters. bvghvvhjvjjbj",
+    },
+    {
+      id: 5,
+      question: "How can I stay informed about new job openings?",
+      answer:
+        "check the careers page of companies I'm interested in and subscribe to their job alert newsletters.",
+    },
+    {
+      id: 6,
+      question: "How can I stay informed about new job openings?",
+      answer:
+        "check the careers page of companies I'm interested in and subscribe to their job alert newsletters.",
+    },
   ];
   return (
     <>
@@ -232,14 +268,10 @@ export const AboutPage = () => {
         {/* <p className="About_Heading">About Us</p> */}
         <p className="About_Sub_Heading">About Our Company</p>
         <div className="Image_Text_Container">
-          <div className="Image_About" 
-          data-aos="zoom-out"  
-          >
+          <div className="Image_About" data-aos="zoom-out">
             <img src={AboutMain1} alt="AboutMain1"></img>
           </div>
-          <div className="Text_Container"
-           data-aos="fade-right"
-           >
+          <div className="Text_Container" data-aos="fade-right">
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -273,9 +305,7 @@ export const AboutPage = () => {
           <div className="Left_side_container">
             <h1 className="Head_Section2">About Us</h1>
             <div className="Text_container_layer2">
-              <p 
-              data-aos="fade-right"
-              >
+              <p data-aos="fade-right">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
@@ -283,9 +313,7 @@ export const AboutPage = () => {
                 Ipsum is simply dummy text of the printing and typesetting
                 industry.{" "}
               </p>
-              <p
-              data-aos="fade-right"
-              >
+              <p data-aos="fade-right">
                 Lorem Ipsum has been the industry's standard dummy text ever
                 since the 1500s, when an unknown printer took a galley of type
                 and scrambled it to make a type specimen bookLorem Ipsum is
@@ -340,19 +368,13 @@ export const AboutPage = () => {
       </div>
 
       <div className="Section3_Main_Container">
-        <p className="Section3_Heading1" 
-        data-aos="fade-right"
-        >
+        <p className="Section3_Heading1" data-aos="fade-right">
           Our Core Functions
         </p>
-        <p className="Section3_Heading2" 
-        data-aos="zoom-in"
-        >
+        <p className="Section3_Heading2" data-aos="zoom-in">
           Lorem Ipsum is simply dummy text
         </p>
-        <p className="Section3_Heading_para"
-         data-aos="fade-right"
-         >
+        <p className="Section3_Heading_para" data-aos="fade-right">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -426,23 +448,31 @@ export const AboutPage = () => {
             <div
               className="Single_Faq"
               key={id}
-              // data-aos="fade-left"
-              // data-aos-offset={`${300 + 5 + id}`}
-              // data-aos-easing="ease-in-sine"
+              onClick={() => changebool(ques?.id)}
+              data-aos="fade-right"
             >
-              <div className="Content_Questions"  data-aos="fade-right" >
-                <span className="Question">{ques}</span>
+              <div className="Content_Questions" >
+                <span className="Question">{ques.question}</span>
                 <span className="Icons_class">
-                  <IoIosArrowDown />
+                  {showdata && ques.id === clickedid ? (
+                    <IoIosArrowUp className="Icons_class_size"/>
+                  ) : (
+                    <IoIosArrowDown className="Icons_class_size"/>
+                  )}
                 </span>
               </div>
+              {showdata && ques.id === clickedid && (
+                <div className="FaqAnswers" >
+                  <p>{ques.answer}</p>
+                </div>
+              )}
             </div>
           ))}
         </div>
       </div>
       <div className="Pre_Footer_Container">
         <PreFooter
-        sourcepages="AboutUs"
+          sourcepages="AboutUs"
           Head="Unlock The Power Of Cloud HR Solutions"
           Content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
         />

@@ -42,9 +42,11 @@
 .Image_Container_service_right {
   position: relative;
 }
+
 .Image_Container_service_Left {
   left: .9vw;
 }
+
 .Image_Container_service_right {
   right: 0.9vw;
 }
@@ -61,7 +63,8 @@
   font-weight: 700;
   font-size: 1.4vw;
 }
-.Image_Container_service_Left p{
+
+.Image_Container_service_Left p {
   border: 1px solid;
   position: absolute;
   left: 0.9vw;
@@ -227,31 +230,33 @@
   width: 10vw;
 }
 
-.Rocket_count{
+.Rocket_count {
   position: absolute;
   bottom: 1vw;
   right: 1vw;
   font-size: 1.5vw;
   font-weight: 600;
-  
-}
-.Setting_count{
-  position: absolute;
-  bottom: 1vw;
-  right:6vw;
-  font-size: 1.5vw;
-  font-weight: 600;
-  
+
 }
 
-.Cup_count{
+.Setting_count {
+  position: absolute;
+  bottom: 1vw;
+  right: 6vw;
+  font-size: 1.5vw;
+  font-weight: 600;
+
+}
+
+.Cup_count {
   position: absolute;
   bottom: 0.5vw;
   left: 6vw;
   font-size: 1.5vw;
   font-weight: 600;
 }
-.Goal_count{
+
+.Goal_count {
   position: absolute;
   bottom: 6vw;
   right: 7vw;
@@ -370,6 +375,7 @@
   font-size: 1.1vw;
   color: #000000b2;
 }
+
 .Pre_Footer_Service_Container {
   margin-top: 8vw;
   margin-bottom: 8vw;
@@ -383,38 +389,56 @@
     flex-direction: column;
     width: 100%;
   }
+
   .Service_head_Container {
     width: 80%;
   }
+
   .Service_head_name {
     font-size: 6vw;
   }
+
   .Service_content_name {
     font-size: 4vw;
     line-height: 5.5vw;
     padding: 0 0 0 0;
   }
+
   .Middle_Secound_Head {
     font-size: 4.5vw;
   }
+
   .Niddle_sub_content {
     font-size: 2.5vw;
   }
+
   .Service_Page_Section2_Hero {
     width: 90%;
     height: fit-content;
   }
+
   .Image_Container_service_Left p,
   .Image_Container_service_right p {
     font-size: 4vw;
   }
+
+  .Image_Container_service_right p {
+    right: 0;
+  }
+
+  .Image_Container_service_Left p {
+    left: 0;
+  }
+
   .Image_Container_service_Left img,
   .Image_Container_service_right img {
     height: fit-content;
   }
+
   .List_Items_Middle li {
     font-size: 3vw;
   }
+
   .Middle_Content_Container {
     padding: 0vw 2.5vw 3vw 2.5vw;
     height: fit-content;
@@ -436,6 +460,7 @@
     flex-direction: column;
     row-gap: 1vw;
   }
+
   .Image_Container_Section3_imge_Cont3 {
     flex-direction: row;
     left: -48vw;
@@ -444,6 +469,7 @@
     width: 95vw;
     flex-direction: column;
   }
+
   .Image_Container_Section3_imge_Cont4 {
     flex-direction: row;
     left: -48vw;
@@ -452,13 +478,14 @@
     width: 95vw;
     flex-direction: column;
   }
+
   .Image_Container_Section3_imge_Cont5 {
     flex-direction: row;
     left: -48vw;
     top: 57vw;
     row-gap: 1vw;
     width: 95vw;
-       flex-direction: column;
+    flex-direction: column;
   }
 
   .Image_Container_Section3_imge_Cont1 p,
@@ -470,6 +497,7 @@
     width: 80%;
     text-align: center;
   }
+
   .Service_age_section4 {
     margin-top: 110vw;
     display: flex;
@@ -478,14 +506,17 @@
     align-items: center;
     width: 100%;
   }
+
   .Our_service_Head_title {
     font-size: 6vw;
   }
+
   .Service_Cards {
     flex-direction: column;
     width: 90%;
     row-gap: 4vw;
   }
+
   .Service_Icon_Container {
     width: 100%;
     padding: 3vw 2vw;
@@ -494,98 +525,116 @@
   .Service_Img img {
     width: 10vw;
   }
+
   .SerViceImage_text_head {
     font-size: 4vw;
   }
+
   .SerViceImage_text {
     font-size: 4vw;
   }
+
   .marginChnage {
     top: 0vw;
   }
+
   .Middle_service {
     top: 5vw;
   }
+
   .second_marginChanges {
     top: 10vw;
   }
+
   .third_marginChanges {
     margin-top: 9vw;
   }
+
   .Service_last_secound_layer {
     flex-direction: column;
     height: fit-content;
     justify-content: center;
     align-items: center;
   }
+
   .Service_last_secound_layer_Img {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   .Service_last_secound_layer_Img img {
     width: 80%;
     height: 50%;
   }
+
   .Service_last_secound_layer_Right {
     width: 80%;
   }
+
   .Service_last_secound_layer_Head {
     font-size: 5vw;
     text-align: center;
   }
+
   .Service_last_secound_layer_text {
     font-size: 4vw;
     text-align: center;
   }
+
   .first_services {
     font-size: 3.3vw;
   }
-  .Background_Image_Container{
-    width:100%;
+
+  .Background_Image_Container {
+    width: 100%;
   }
-  .Service_Page_Section3{
+
+  .Service_Page_Section3 {
     height: fit-content;
   }
+
   .Image_Container_Section3_imge_Cont1 img,
-.Image_Container_Section3_imge_Cont2 img,
-.Image_Container_Section3_imge_Cont3 img,
-.Image_Container_Section3_imge_Cont4 img,
-.Image_Container_Section3_imge_Cont5 img {
-  width: 15vw;
-}
+  .Image_Container_Section3_imge_Cont2 img,
+  .Image_Container_Section3_imge_Cont3 img,
+  .Image_Container_Section3_imge_Cont4 img,
+  .Image_Container_Section3_imge_Cont5 img {
+    width: 15vw;
+  }
 
-.Rocket_count{
-  position: absolute;
-  top: 11vw;
-  right: 44%;
-  font-size: 2vw;
-  font-weight: 600;
-  
-}
-.Setting_count{
-  position: absolute;
-  top: 11vw;
-  right:52%;
-  font-size: 2vw;
-  font-weight: 600;
-  
-}
+  .Rocket_count {
+    position: absolute;
+    top: 11vw;
+    right: 44%;
+    font-size: 2vw;
+    font-weight: 600;
 
-.Cup_count{
-  position: absolute;
-  top:11vw;
-  left: 52%;
-  font-size: 2vw;
-  font-weight: 600;
-}
-.Goal_count{
-  position: absolute;
-  top:11vw;
-  right: 44%;
-  font-size: 2vw;
-  font-weight: 600;
-}
+  }
+
+  .Setting_count {
+    position: absolute;
+    top: 11vw;
+    right: 52%;
+    font-size: 2vw;
+    font-weight: 600;
+
+  }
+
+  .Cup_count {
+    position: absolute;
+    top: 11vw;
+    left: 52%;
+    font-size: 2vw;
+    font-weight: 600;
+  }
+
+  .Goal_count {
+    position: absolute;
+    top: 11vw;
+    right: 44%;
+    font-size: 2vw;
+    font-weight: 600;
+  }
 
 
 }

@@ -32,18 +32,18 @@
     width: auto;
     justify-content: space-evenly;
     align-items: center;
-    gap: 2.5vw;
+    gap: 2vw;
 }
 
 .nav_underline_wrapper {
     height: 0.4vw;
-    margin-top: -0.8vw;
+    margin-top: -0.7vw;
 }
 
 
 .nav_items {
     list-style: none;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     font-weight: 500;
     cursor: pointer;
     width: auto;
@@ -113,11 +113,12 @@
     background-color: #7C5CFC;
     color: #ffff;
     cursor: pointer;
- 
+
 }
-.nav_button_outer button:hover{
+
+.nav_button_outer button:hover {
     box-shadow: 0 0.7vw 1.5vw rgba(124, 92, 252, 0.6);
- }
+}
 
 .nav_mobile_res_main {
     display: none;
@@ -355,7 +356,8 @@
     .mobile_nav_underline.active6 {
         opacity: 1;
     }
-    .nav_underline{
+
+    .nav_underline {
         height: .4vw;
     }
 
@@ -380,48 +382,48 @@
     }
 
     /* Dropdown styles */
-.dropdown {
-    width: 100%;
-}
+    .dropdown {
+        width: 100%;
+    }
 
-.dropdown li {
-    position: relative;
-    list-style: none;
-    /* margin-top: 1vw; */
-    /* padding: 1vw; */
-    cursor: pointer;
-}
+    .dropdown li {
+        position: relative;
+        list-style: none;
+        /* margin-top: 1vw; */
+        /* padding: 1vw; */
+        cursor: pointer;
+    }
 
-.dropdown li a {
-    color: #000000;
-    padding: 1.5vw;
-    font-size: 3vw;
-    /* width: 10vw; */
-    display: block;
-    text-decoration: none;
-    font-family: Poppins;
-    /* font-weight: 400; */
+    .dropdown li a {
+        color: #000000;
+        padding: 1.5vw;
+        font-size: 3vw;
+        /* width: 10vw; */
+        display: block;
+        text-decoration: none;
+        font-family: Poppins;
+        /* font-weight: 400; */
 
-}
+    }
 
-.dropdown li a:hover {
-    background-color: #FFFFFF;
-    border-radius: .2vw;
-    /* padding-left: 1vw; */
-}
+    .dropdown li a:hover {
+        background-color: #FFFFFF;
+        border-radius: .2vw;
+        /* padding-left: 1vw; */
+    }
 
-/* Nested dropdown styles */
-.nested_dropdown:hover .sub-dropdown {
-    display: block;
-}
+    /* Nested dropdown styles */
+    .nested_dropdown:hover .sub-dropdown {
+        display: block;
+    }
 
-.sub-dropdown {
-    display: none;
-    position: absolute;
-    background-color: #555;
-    top: 0;
-    left: 100%;
-    padding-left: .5vw;
-    z-index: 1000;
-}
+    .sub-dropdown {
+        display: none;
+        position: absolute;
+        background-color: #555;
+        top: 0;
+        left: 100%;
+        padding-left: .5vw;
+        z-index: 1000;
+    }
 }

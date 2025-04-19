@@ -58,91 +58,6 @@ export const Navbar = () => {
               </div>
             </li>
           </Link>
-
-          {/* <Link to="/service" className="nav_link">
-            <li
-              className="nav_items"
-              onClick={() => handleNavList("services")}
-            >
-              Services
-              <div className="nav_underline_wrapper">
-                <div
-                  className={`nav_underline ${
-                    navActive === "services" ? "active3" : ""
-                  }`}
-                ></div>
-              </div>
-            </li>
-          </Link> */}
-          {/* <li
-            className="nav_items dropdown_parent"
-            onMouseEnter={() => setShowDropdown(true)}
-            onMouseLeave={() => setShowDropdown(false)}
-          >
-            <Link
-              to="/service"
-              className="nav_link"
-              onClick={() => handleNavList("services")}
-            >
-              Services
-              <div className="nav_underline_wrapper">
-                <div
-                  className={`nav_underline ${
-                    navActive === "services" ? "active3" : ""
-                  }`}
-                ></div>
-              </div>
-            </Link>
-
-            {showDropdown && (
-              <ul className="dropdown">
-                <li>
-                  <Link to="/service/design">
-                    Hr Compliance and Policy Development
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/service/design">
-                    Customized HR Consulting and Advisory Services
-                  </Link>
-                </li>
-              
-                <li>
-                  <Link to="/service/seo">
-                    Virtual CHRO and Outsourcing of Hr Operations
-                  </Link>
-                </li>
-                <li className="nested_dropdown">
-                  <Link to="#">Talent Management Solutions ▸</Link>
-                  <ul className="sub-dropdown">
-                    <li>
-                      <Link to="/service/frontend">Learning & Development</Link>
-                    </li>
-                    <li>
-                      <Link to="/service/backend">
-                        Employee Engagement & Retention Strategies
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/service/backend">Performance Management</Link>
-                    </li>
-                    <li>
-                      <Link to="/service/backend">
-                        Job Architecture and Competence Framework
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <Link to="/service/seo">
-                    Recruitment of Leadership & Mid-Level Team
-                  </Link>
-                </li>
-
-              </ul>
-            )}
-          </li> */}
-          
           <li
             className="nav_items dropdown_parent"
             onMouseEnter={() => setShowDropdown(true)}
@@ -344,21 +259,6 @@ export const Navbar = () => {
               </ul>
             )}
           </li>
-          {/* <Link to="/" className="nav_link">
-            <li
-              className="nav_items"
-              onClick={() => handleNavList("")}
-            >
-              Education & Learning
-              <div className="nav_underline_wrapper">
-                <div
-                  className={`nav_underline ${
-                    navActive === "" ? "active4" : ""
-                  }`}
-                ></div>
-              </div>
-            </li>
-          </Link> */}
 
           <Link to="/blogs" className="nav_link">
             <li className="nav_items">
@@ -373,21 +273,6 @@ export const Navbar = () => {
             </li>
           </Link>
 
-          {/* <Link to="/alliancepartner" className="nav_link">
-            <li
-              className="nav_items"
-              onClick={() => handleNavList("alliance")}
-            >
-              Alliance Partner
-              <div className="nav_underline_wrapper">
-                <div
-                  className={`nav_underline ${
-                    navActive === "alliance" ? "active6" : ""
-                  }`}
-                ></div>
-              </div>
-            </li>
-          </Link> */}
         </div>
         <div className="nav_button_outer">
           <Link to="/contactus" className="nav_link">

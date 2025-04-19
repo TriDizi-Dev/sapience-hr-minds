@@ -628,7 +628,7 @@
 
 .layer5_card {
   width: 18vw;
-  height: 24vw;
+  height: 22vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -678,7 +678,7 @@
 }
 
 .layer5_card_lernmore {
-  font-size: 1.2vw;
+  font-size: 1.3vw;
   font-weight: 600;
   margin-top: 0vw;
   padding: 0.2vw 1vw;
@@ -686,6 +686,12 @@
   border-radius: 4vw;
   color: #fff;
   cursor: pointer;
+}
+.layer5_card_lernmore:hover{
+  box-shadow: 0 6px 10px rgba(124, 92, 252, 0.477);
+  /* transform: scale(1.1); */
+  transition:0.3s linear;
+
 }
 
 .card_bottom_line {
@@ -706,10 +712,7 @@
   text-align: center;
 }
 
-.layer5_card_lernmore {
-  font-size: 1.3vw;
-  font-weight: 600;
-}
+
 
 .layer6_part1 {
   text-align: center;
@@ -757,6 +760,12 @@
   background-color: white;
   border-radius: 1vw;
   margin-bottom: 4vw;
+}
+.layer6_card:hover{
+transform: scale(1.03);
+transition: .5s linear;
+box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+
 }
 
 .layer6_card_logo {
@@ -880,6 +889,12 @@
   box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.4);
   background-color: white;
 }
+.layer7_card:hover{
+  transform: scale(1.03);
+  transition: .5s linear;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  
+  }
 
 .layer7_card_name {
   font-size: 1.2vw;
