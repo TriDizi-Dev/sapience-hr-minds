@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Carrier.css";
 import lefticon from "../../assets/Carrier/lefticon.svg";
 import righticon from "../../assets/Carrier/righticon.svg";
@@ -29,8 +29,14 @@ import "swiper/css/pagination";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { ImCross } from "react-icons/im";
+import { Link, useNavigate } from "react-router-dom";
+import blog1 from "../../assets/Blogs/image1.png";
+import blog2 from "../../assets/Blogs/image2.png";
+import blog3 from "../../assets/Blogs/image3.png";
 
 function Carrier() {
+    const navigate = useNavigate();
   useEffect(() => {
     AOS.init({
       offset: 200,
@@ -51,47 +57,200 @@ function Carrier() {
   };
   const [activeNav, setActiveNav] = useState("All");
 
+  const [showForm, setShowForm] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    message: "",
+    sourcepage: "",
+  });
+  const modalRef = useRef(null);
+  const preFooterRef = useRef(null); // add this line
+  const handleOpenForm = (value) => {
+    if (preFooterRef.current) {
+      preFooterRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+    setFormData((prevData) => ({
+      ...prevData,
+      sourcepage: value,
+    }));
+
+    setTimeout(() => {
+      setShowForm(true);
+    }, 200); // wait a bit to let scroll finish
+  };
+
+  const handleCloseForm = () => {
+    setShowForm(false);
+  };
+
+  const handleClickOutside = (e) => {
+    if (modalRef.current && !modalRef.current.contains(e.target)) {
+      handleCloseForm();
+    }
+  };
+
+  const inputHandleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
   const handleNav = (ev) => {
     setActiveNav(ev);
   };
 
-  const cards = [
+  const handleSignleBlog = (ev, id) => {
+
+    navigate(`/blog/${id}`, { state: ev });
+  };
+
+  const Blogs = [
     {
       id: 1,
-      img: card1,
-      heading1: "Headline",
-      para: "Sed imperdiet enim ligula,vitae vierra justo",
-      readmore: "Read More",
+      bannerheading:
+        "The Importance of Workforce Upskilling and Reskilling in Today’s Economy",
+      subname: "Human Resources",
+      bannertext: `In today’s rapidly evolving economy, workforce upskilling and reskilling have become crucial for organizations aiming to stay competitive.`,
+      explore: "Explore More",
+      path: "/blog",
+      img: blog1,
+      toptext: "By Babitha on April 24, 2025 - 5 min read",
+
+      firstheading: "Introduction to Workforce Upskilling and Reskilling",
+      secondheading: "The Benefits of Upskilling",
+      thirdheading: "The Need for Reskilling",
+      fourthheading:
+        "Implementing Effective Upskilling and Reskilling Programs",
+
+      firstpara:
+        "In today’s rapidly evolving economy, workforce upskilling and reskilling have become crucial for organizations aiming to stay competitive. As technology advances and market demands shift, employees need to acquire new skills or enhance existing ones to meet these changes effectively.",
+      secondpara:
+        "Upskilling refers to providing current employees with additional training to learn new skills relevant to their current job roles. This practice not only helps employees stay updated with the latest industry trends but also boosts their confidence and productivity. For organizations, upskilling can lead to increased innovation, higher employee retention rates, and a more agile workforce.",
+      thirdpara:
+        "Reskilling, on the other hand, involves training employees to take on entirely new roles within the organization. This is particularly important when certain job functions become obsolete due to technological advancements or shifts in market needs. Reskilling ensures that valuable employees can transition to new positions, thereby retaining institutional knowledge and reducing turnover costs.",
+      fourthpara:
+        "To implement effective upskilling and reskilling programs, organizations should first conduct a skills gap analysis to identify areas where training is needed. Collaborating with educational institutions and leveraging online learning platforms can provide employees with access to high-quality training resources. Additionally, fostering a culture of continuous learning within the organization can encourage employees to take charge of their professional development.",
+
+      listitems1: "Non magni quisquam",
+      listitems2: "Eum aperiam facilis",
+      listitems3: "Id quibusdam corporis et voluptate minus",
+      listitems4: "Qui internos impedit vel unde",
     },
     {
       id: 2,
-      img: card2,
-      heading1: "Headline",
-      para: "Sed imperdiet enim ligula,vitae vierra justo",
-      readmore: "Read More",
+      bannerheading: "The Role of HR Analytics in Data-Driven Decision Making",
+      subname: "Human Resources",
+      bannertext: `Human Resources (HR) analytics, also known as people analytics, involves gathering, analyzing, and interpreting data related to human resources. `,
+      explore: "Explore More",
+      path: "/blog",
+      img: blog2,
+      toptext: "By Babitha on April 25, 2025 - 4 min read",
+
+      firstheading: "Introduction to HR Analytics",
+      secondheading: "Benefits of Data-Driven Decision Making",
+      thirdheading: "Implementing HR Analytics",
+      fourthheading: "Challenges and Considerations",
+
+      firstpara:
+        "Human Resources (HR) analytics, also known as people analytics, involves gathering, analyzing, and interpreting data related to human resources. It helps organizations make informed decisions based on data rather than intuition or experience alone. In today’s competitive business environment, leveraging HR analytics has become crucial for effective workforce planning and management.",
+      secondpara:
+        "Data-driven decision making in HR offers numerous benefits. It enhances the ability to predict future trends, improve employee performance, and increase overall organizational efficiency. By analyzing data, HR professionals can identify patterns and trends that may not be visible at first glance. This leads to more strategic decisions that align with long-term business goals.",
+      thirdpara:
+        "Implementing HR analytics involves collecting data from various sources such as employee performance reviews, attendance records, and engagement surveys. Advanced analytical tools and software can then process this data to provide actionable insights. It is essential to ensure data accuracy and integrity for reliable analysis. Organizations should also invest in training HR professionals to effectively interpret and utilize the data.",
+      fourthpara:
+        "While HR analytics offers substantial benefits, it also comes with challenges. Data privacy and security are critical concerns, as handling sensitive employee information requires strict compliance with regulations. Additionally, integrating data from disparate sources can be complex and time-consuming. Organizations must address these challenges to fully realize the potential of HR analytics in data-driven decision making.",
+
+      listitems1: "Non magni quisquam",
+      listitems2: "Eum aperiam facilis",
+      listitems3: "Id quibusdam corporis et voluptate minus",
+      listitems4: "Qui internos impedit vel unde",
     },
     {
       id: 3,
-      img: card3,
-      heading1: "Headline",
-      para: "Sed imperdiet enim ligula,vitae vierra justo",
-      readmore: "Read More",
+      bannerheading:
+        "The Vital Role of Leadership Development and Succession Planning",
+      subname: "Business Management",
+      bannertext: `In today’s fast-paced business environment, leadership development is more crucial than ever. Companies need to invest in nurturing their future leaders .`,
+      explore: "Explore More",
+      path: "/blog",
+      img: blog3,
+      toptext: "By Babitha on April 26, 2025 - 6 min read",
+
+      firstheading: "Understanding Leadership Development",
+      secondheading: "The Importance of Succession Planning",
+      thirdheading:
+        "Integrating Leadership Development with Succession Planning",
+      fourthheading: "",
+
+      firstpara:
+        "In today’s fast-paced business environment, leadership development is more crucial than ever. Companies need to invest in nurturing their future leaders to ensure they are prepared to tackle challenges and drive the organization forward. Leadership development encompasses a range of activities such as mentoring, training programs, and hands-on experience that help individuals enhance their leadership skills and competencies.",
+      secondpara:
+        "Succession planning is a strategic approach to ensure that businesses have the right leaders ready to step into key roles when needed. It involves identifying and developing potential leaders within the organization who can fill critical positions as they become available. This proactive approach minimizes disruptions and ensures continuity in leadership, which is vital for maintaining organizational stability and achieving long-term goals.",
+      thirdpara:
+        "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      fourthpara:
+        "Combining leadership development with succession planning creates a robust framework for building a strong leadership pipeline. Organizations should identify high-potential employees early on and provide them with targeted development opportunities. By aligning leadership development initiatives with succession planning, companies can ensure that their future leaders are well-equipped to take on greater responsibilities and lead the organization to success.In conclusion, leadership development and succession planning are interconnected processes that play a vital role in the sustained success of any organization. By focusing on these areas, companies can build a resilient leadership team capable of navigating future challenges and driving growth.",
+
+      listitems1: "Non magni quisquam",
+      listitems2: "Eum aperiam facilis",
+      listitems3: "Id quibusdam corporis et voluptate minus",
+      listitems4: "Qui internos impedit vel unde",
     },
-    {
-      id: 4,
-      img: card1,
-      heading1: "Headline",
-      para: "Sed imperdiet enim ligula,vitae vierra justo",
-      readmore: "Read More",
-    },
-    {
-      id: 5,
-      img: card2,
-      heading1: "Headline",
-      para: "Sed imperdiet enim ligula,vitae vierra justo",
-      readmore: "Read More",
-    },
+    // {
+    //   id: 4,
+    //   Name: "Transforming Ambition Into Achievement",
+    //   subname: "Lorem Ipsum",
+    //   para: `   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    //             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,`,
+    //   explore: "Explore More",
+    //   path: "/blog",
+    // },
   ];
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbxXgFjRfloUaeWB49YcK1iBraoxMuObtJrnu6EHALeQAxyuEaMFf70OMwbLWHQpV4Ru/exec";
+
+    try {
+      const formPayload = new FormData();
+      for (let key in formData) {
+        formPayload.append(key, formData[key]);
+      }
+
+      console.log(formPayload, "formPayloadformPayload");
+
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        body: formPayload, // No 'Content-Type' header for FormData
+      });
+      console.log(response, "resssssss");
+
+      if (response.ok) {
+        alert("Form submitted successfully!");
+        console.log("submited succes", response);
+        setFormData({
+          name: "",
+          email: "",
+          phoneNumber: "",
+          message: "",
+        });
+        handleCloseForm();
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Error submitting the form. Please check your connection.");
+    }
+  };
+
   return (
     <div className="carriers_outer_main">
       <div className="carrier_banner_outer">
@@ -125,13 +284,19 @@ function Carrier() {
             </p>
           </div>
           <div className="carriers_banner_buttons">
-            <button className="banner_left_button">EXPLORE OPPORTUNITY</button>
-            <button className="carrier_right_button">SEE THE BENEFIT</button>
+            <a href="#positions">
+              <button className="banner_left_button">
+                EXPLORE OPPORTUNITY
+              </button>
+            </a>
+            <a href="#benefit">
+              <button className="carrier_right_button">SEE THE BENEFIT</button>
+            </a>
           </div>
         </div>
       </div>
 
-      <div className="carrier_layer2_main_outer">
+      <div className="carrier_layer2_main_outer" id="benefit">
         <div className="carrier_layer2_outer">
           <div className="carrier_layer2_left">
             <h1 className="layer2_heading" data-aos="zoom-out-right">
@@ -236,7 +401,7 @@ function Carrier() {
           </div>
         </div>
 
-        <div className="carrier_layer3_part1">
+        <div className="carrier_layer3_part1" id="positions">
           <h1 className="carrier_layer3_part1_heading">Opened Positions</h1>
         </div>
         <div className="carrier_layer3_part2_outer">
@@ -431,16 +596,22 @@ function Carrier() {
 
                             <div className="right_buttons">
                               <div className="right_help_button_outer">
-                                <button>
+                                <button
+                                  onClick={() =>
+                                    handleOpenForm("Career-All-Head of Product")
+                                  }
+                                >
                                   Ask for more help
                                   <FaArrowRightLong className="help_button_icon" />
                                 </button>
                               </div>
                               <div className="right_about_company_button_outer">
-                                <button>
-                                  About Company
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
+                                <Link to="/about" className="nav_link">
+                                  <button>
+                                    About Company
+                                    <FaArrowRightLong className="help_button_icon" />
+                                  </button>
+                                </Link>
                               </div>
                             </div>
                           </div>
@@ -612,16 +783,24 @@ function Carrier() {
 
                             <div className="right_buttons">
                               <div className="right_help_button_outer">
-                                <button>
+                                <button
+                                  onClick={() =>
+                                    handleOpenForm(
+                                      "Career-All- Staff Product Designer"
+                                    )
+                                  }
+                                >
                                   Ask for more help
                                   <FaArrowRightLong className="help_button_icon" />
                                 </button>
                               </div>
                               <div className="right_about_company_button_outer">
-                                <button>
-                                  About Company
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
+                                <Link to="/about" className="nav_link">
+                                  <button>
+                                    About Company
+                                    <FaArrowRightLong className="help_button_icon" />
+                                  </button>
+                                </Link>
                               </div>
                             </div>
                           </div>
@@ -790,16 +969,24 @@ function Carrier() {
 
                             <div className="right_buttons">
                               <div className="right_help_button_outer">
-                                <button>
+                                <button
+                                  onClick={() =>
+                                    handleOpenForm(
+                                      "Career-All-Senior Product Manager, Asset"
+                                    )
+                                  }
+                                >
                                   Ask for more help
                                   <FaArrowRightLong className="help_button_icon" />
                                 </button>
                               </div>
                               <div className="right_about_company_button_outer">
-                                <button>
-                                  About Company
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
+                                <Link to="/about" className="nav_link">
+                                  <button>
+                                    About Company
+                                    <FaArrowRightLong className="help_button_icon" />
+                                  </button>
+                                </Link>
                               </div>
                             </div>
                           </div>
@@ -966,16 +1153,24 @@ function Carrier() {
 
                             <div className="right_buttons">
                               <div className="right_help_button_outer">
-                                <button>
+                                <button
+                                  onClick={() =>
+                                    handleOpenForm(
+                                      "Career-All-Backend Engineer"
+                                    )
+                                  }
+                                >
                                   Ask for more help
                                   <FaArrowRightLong className="help_button_icon" />
                                 </button>
                               </div>
                               <div className="right_about_company_button_outer">
-                                <button>
-                                  About Company
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
+                                <Link to="/about" className="nav_link">
+                                  <button>
+                                    About Company
+                                    <FaArrowRightLong className="help_button_icon" />
+                                  </button>
+                                </Link>
                               </div>
                             </div>
                           </div>
@@ -1144,16 +1339,24 @@ function Carrier() {
 
                             <div className="right_buttons">
                               <div className="right_help_button_outer">
-                                <button>
+                                <button
+                                  onClick={() =>
+                                    handleOpenForm(
+                                      "Career-All-Senior Backend Engineer"
+                                    )
+                                  }
+                                >
                                   Ask for more help
                                   <FaArrowRightLong className="help_button_icon" />
                                 </button>
                               </div>
                               <div className="right_about_company_button_outer">
-                                <button>
-                                  About Company
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
+                                <Link to="/about" className="nav_link">
+                                  <button>
+                                    About Company
+                                    <FaArrowRightLong className="help_button_icon" />
+                                  </button>
+                                </Link>
                               </div>
                             </div>
                           </div>
@@ -1322,16 +1525,24 @@ function Carrier() {
 
                             <div className="right_buttons">
                               <div className="right_help_button_outer">
-                                <button>
+                                <button
+                                  onClick={() =>
+                                    handleOpenForm(
+                                      "Career-All-Senior Frontend Engineer"
+                                    )
+                                  }
+                                >
                                   Ask for more help
                                   <FaArrowRightLong className="help_button_icon" />
                                 </button>
                               </div>
                               <div className="right_about_company_button_outer">
-                                <button>
-                                  About Company
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
+                                <Link to="/about" className="nav_link">
+                                  <button>
+                                    About Company
+                                    <FaArrowRightLong className="help_button_icon" />
+                                  </button>
+                                </Link>
                               </div>
                             </div>
                           </div>
@@ -1504,16 +1715,22 @@ function Carrier() {
 
                             <div className="right_buttons">
                               <div className="right_help_button_outer">
-                                <button>
+                                <button
+                                  onClick={() =>
+                                    handleOpenForm("Career-Our-Head of Product")
+                                  }
+                                >
                                   Ask for more help
                                   <FaArrowRightLong className="help_button_icon" />
                                 </button>
                               </div>
                               <div className="right_about_company_button_outer">
-                                <button>
-                                  About Company
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
+                                <Link to="/about" className="nav_link">
+                                  <button>
+                                    About Company
+                                    <FaArrowRightLong className="help_button_icon" />
+                                  </button>
+                                </Link>
                               </div>
                             </div>
                           </div>
@@ -1685,16 +1902,24 @@ function Carrier() {
 
                             <div className="right_buttons">
                               <div className="right_help_button_outer">
-                                <button>
+                                <button
+                                  onClick={() =>
+                                    handleOpenForm(
+                                      "Career-Our-Staff Product Designer"
+                                    )
+                                  }
+                                >
                                   Ask for more help
                                   <FaArrowRightLong className="help_button_icon" />
                                 </button>
                               </div>
                               <div className="right_about_company_button_outer">
-                                <button>
-                                  About Company
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
+                                <Link to="/about" className="nav_link">
+                                  <button>
+                                    About Company
+                                    <FaArrowRightLong className="help_button_icon" />
+                                  </button>
+                                </Link>
                               </div>
                             </div>
                           </div>
@@ -1863,16 +2088,24 @@ function Carrier() {
 
                             <div className="right_buttons">
                               <div className="right_help_button_outer">
-                                <button>
+                                <button
+                                  onClick={() =>
+                                    handleOpenForm(
+                                      "Career-Our-Senior Product Manager, Asset"
+                                    )
+                                  }
+                                >
                                   Ask for more help
                                   <FaArrowRightLong className="help_button_icon" />
                                 </button>
                               </div>
                               <div className="right_about_company_button_outer">
-                                <button>
-                                  About Company
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
+                                <Link to="/about" className="nav_link">
+                                  <button>
+                                    About Company
+                                    <FaArrowRightLong className="help_button_icon" />
+                                  </button>
+                                </Link>
                               </div>
                             </div>
                           </div>
@@ -2043,16 +2276,24 @@ function Carrier() {
 
                             <div className="right_buttons">
                               <div className="right_help_button_outer">
-                                <button>
+                                <button
+                                  onClick={() =>
+                                    handleOpenForm(
+                                      " Career-Clients Backend Engineer"
+                                    )
+                                  }
+                                >
                                   Ask for more help
                                   <FaArrowRightLong className="help_button_icon" />
                                 </button>
                               </div>
                               <div className="right_about_company_button_outer">
-                                <button>
-                                  About Company
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
+                                <Link to="/about" className="nav_link">
+                                  <button>
+                                    About Company
+                                    <FaArrowRightLong className="help_button_icon" />
+                                  </button>
+                                </Link>
                               </div>
                             </div>
                           </div>
@@ -2221,16 +2462,24 @@ function Carrier() {
 
                             <div className="right_buttons">
                               <div className="right_help_button_outer">
-                                <button>
+                                <button
+                                  onClick={() =>
+                                    handleOpenForm(
+                                      " Career-Clients Senior Backend Engineer"
+                                    )
+                                  }
+                                >
                                   Ask for more help
                                   <FaArrowRightLong className="help_button_icon" />
                                 </button>
                               </div>
                               <div className="right_about_company_button_outer">
-                                <button>
-                                  About Company
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
+                                <Link to="/about" className="nav_link">
+                                  <button>
+                                    About Company
+                                    <FaArrowRightLong className="help_button_icon" />
+                                  </button>
+                                </Link>
                               </div>
                             </div>
                           </div>
@@ -2399,16 +2648,24 @@ function Carrier() {
 
                             <div className="right_buttons">
                               <div className="right_help_button_outer">
-                                <button>
+                                <button
+                                  onClick={() =>
+                                    handleOpenForm(
+                                      " Career-Clients-Senior Frontend Engineer"
+                                    )
+                                  }
+                                >
                                   Ask for more help
                                   <FaArrowRightLong className="help_button_icon" />
                                 </button>
                               </div>
                               <div className="right_about_company_button_outer">
-                                <button>
-                                  About Company
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
+                                <Link to="/about" className="nav_link">
+                                  <button>
+                                    About Company
+                                    <FaArrowRightLong className="help_button_icon" />
+                                  </button>
+                                </Link>
                               </div>
                             </div>
                           </div>
@@ -2464,7 +2721,7 @@ function Carrier() {
             },
           }}
         >
-          {cards?.map((data, index) => (
+          {Blogs?.map((data, index) => (
             <SwiperSlide key={index}>
               <div className="carrier_card">
                 <div className="carrier_img_outer">
@@ -2475,15 +2732,90 @@ function Carrier() {
                   />
                 </div>
                 <div className="card_text_heading">
-                  <h6 className="card_hading_one">{data.heading1}</h6>
-                  <p className="card_para">{data.para}</p>
-                  <p className="card_readmore">{data.readmore}</p>
+                  <h6 className="card_hading_one">{data?.bannerheading}</h6>
+                  <p className="card_para">{data?.bannertext}</p>
+                  <p
+                    className="card_readmore"
+                    onClick={() => handleSignleBlog(data, data.bannerheading)}
+                  >
+                    {data?.explore}
+                  </p>
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
+
+      {showForm && (
+        <div className="modal-overlay">
+          <div className="modal-box" ref={modalRef}>
+            <div className="Cancel_and_form_head">
+              <h2>Contact Form</h2>
+              <p>
+                <ImCross
+                  className="Icons_X"
+                  onClick={() => handleCloseForm()}
+                />
+              </p>
+            </div>
+            <form onSubmit={handleSubmit} className="form">
+              <label className="Label">
+                Name:
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={inputHandleChange}
+                  required
+                  className="Input"
+                />
+              </label>
+
+              <label className="Label">
+                Email:
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={inputHandleChange}
+                  required
+                  className="Input"
+                />
+              </label>
+              <label className="Label">
+                Phone Number:
+                <input
+                  type="tel"
+                  name="phoneNumber"
+                  value={formData.phoneNumber}
+                  onChange={inputHandleChange}
+                  required
+                  className="Input"
+                />
+              </label>
+              <label className="Label">
+                Message:
+                <textarea
+                  type="text"
+                  name="message"
+                  value={formData.message}
+                  onChange={inputHandleChange}
+                  required
+                  className="Input"
+                />
+              </label>
+
+              <div className="form-buttons">
+                <button type="submit">Submit</button>
+                <button type="button" onClick={handleCloseForm}>
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

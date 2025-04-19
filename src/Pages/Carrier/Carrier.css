@@ -570,19 +570,21 @@ flex-wrap: 800;
     background-color:white;
  }
 .card_hading_one{
-    font-size: 1vw;
+    font-size: 0.9vw;
     font-weight: 600;
-    color: rgb(80, 79, 79);
+    color: black;
 }
 .card_para{
-    font-size: 1.2vw;
-    font-weight: 500;
-    width:13vw;
+    font-size: 0.8vw;
+    font-weight: normal;
+    width:100%;
+    height: fit-content;
 }
 .card_readmore{
     font-size: 1.1vw;
     color: #651fff;
     font-weight: 600;
+    cursor: pointer;
 }
 .carrier_cards_outer{
      display: flex;
@@ -921,13 +923,13 @@ flex-wrap: 800;
        padding-top: 3vw;
     }
    .card_hading_one{
-       font-size: 3vw;
+       font-size: 4vw;
        font-weight: 600;
     }
    .card_para{
-       font-size:5vw;
-       font-weight: 500;
-       width:55vw;
+       font-size:4vw;
+       font-weight: normal;
+       width:   100%;
    }
    .card_readmore{
        font-size:4vw;
@@ -938,7 +940,7 @@ flex-wrap: 800;
        justify-content: space-around;
    }
    .carrier_last_Cards{
-        height: 120vw;
+        height: 135vw;
        margin-top: 3vw;
        padding-left: 9vw;
        margin-left: 1.8vw;
