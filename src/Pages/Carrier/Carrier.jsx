@@ -36,7 +36,7 @@ import blog2 from "../../assets/Blogs/image2.png";
 import blog3 from "../../assets/Blogs/image3.png";
 
 function Carrier() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   useEffect(() => {
     AOS.init({
       offset: 200,
@@ -106,7 +106,6 @@ function Carrier() {
   };
 
   const handleSignleBlog = (ev, id) => {
-
     navigate(`/blog/${id}`, { state: ev });
   };
 
@@ -328,7 +327,7 @@ function Carrier() {
                   <img src={logo2} alt="logo2" className="layer2_card_logo" />
                 </div>
                 <div className="layer2_card_text">
-                  <h6 className="layer2_card_heding">Working Remotely</h6>
+                  <h6 className="layer2_card_heding">Performance Bonus</h6>
                   <div className="layer2_card_para">
                     Ut sed eros finibus,placerat orci id,dapibus mauris.
                     Vestibulum consequant hendrerit lacus.
@@ -340,7 +339,7 @@ function Carrier() {
                   <img src={logo3} alt="logo3" className="layer2_card_logo" />
                 </div>
                 <div className="layer2_card_text">
-                  <h6 className="layer2_card_heding">Working Remotely</h6>
+                  <h6 className="layer2_card_heding">Health & Insurance</h6>
                   <div className="layer2_card_para">
                     Ut sed eros finibus,placerat orci id,dapibus mauris.
                     Vestibulum consequant hendrerit lacus.
@@ -352,7 +351,7 @@ function Carrier() {
                   <img src={logo4} alt="logo4" className="layer2_card_logo" />
                 </div>
                 <div className="layer2_card_text">
-                  <h6 className="layer2_card_heding">Working Remotely</h6>
+                  <h6 className="layer2_card_heding">Continues Learning</h6>
                   <div className="layer2_card_para">
                     Ut sed eros finibus,placerat orci id,dapibus mauris.
                     Vestibulum consequant hendrerit lacus.
@@ -364,7 +363,7 @@ function Carrier() {
                   <img src={logo5} alt="logo5" className="layer2_card_logo" />
                 </div>
                 <div className="layer2_card_text">
-                  <h6 className="layer2_card_heding">Working Remotely</h6>
+                  <h6 className="layer2_card_heding">Parental Leave</h6>
                   <div className="layer2_card_para">
                     Ut sed eros finibus,placerat orci id,dapibus mauris.
                     Vestibulum consequant hendrerit lacus.
@@ -376,7 +375,7 @@ function Carrier() {
                   <img src={logo6} alt="logo6" className="layer2_card_logo" />
                 </div>
                 <div className="layer2_card_text">
-                  <h6 className="layer2_card_heding">Working Remotely</h6>
+                  <h6 className="layer2_card_heding">Free Lunch</h6>
                   <div className="layer2_card_para">
                     Ut sed eros finibus,placerat orci id,dapibus mauris.
                     Vestibulum consequant hendrerit lacus.

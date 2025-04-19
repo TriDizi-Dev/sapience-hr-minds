@@ -104,3 +104,39 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
+@media screen and (min-width:320px) and (max-width:720px) {
+    .career_creation_container {
+        padding: 2vw 2vw 2vw 2vw;
+        height: fit-content;
+    }
+    .career_details_sub {
+        width: 90vw;
+    }
+    .career_creation_form {
+        justify-content: center;
+     
+    }
+    .input_container {
+        width: 100%;
+    }
+    .career_creation_form_container {
+        flex-direction: column;
+        row-gap: 1vw;
+        width: 90%;
+        /* border: 1px solid #ccc; */
+        
+    }
+    .career_labels {
+        font-size: 3.5vw;
+    }
+    .career_input, .career_textarea {
+        font-size: 3.5vw;
+        padding: 2vw 3vw;
+      
+    }
+    .create_career_button, .cancel_career_button{
+        font-size: 3.5vw;
+        padding: 1.5vw 4vw; 
+    }
+}
