@@ -6,6 +6,9 @@ import { Link, useNavigate } from "react-router-dom";
 
 export const Footer = () => {
   const navigate = useNavigate();
+  const handleOpenTab = (link) => {
+    window.open(link, "_blank", "noopener,noreferrer");
+  };
 
   const hadleHome = () => {
     navigate("/");
@@ -14,19 +17,19 @@ export const Footer = () => {
     <div className="footer_main">
       <div className="footer_outer">
         {/* <div className="footer_left"> */}
-          <div className="footer_logo_outer">
-            <h1 className="footer_logo" onClick={hadleHome}>
-              Logo
-            </h1>
-            <p className="Contact_heading">Head Office</p>
-            <p className="Contact_sub_headings">Bengaluru, Karnataka, India</p>
+        <div className="footer_logo_outer">
+          <h1 className="footer_logo" onClick={hadleHome}>
+            Logo
+          </h1>
+          <p className="Contact_heading">Head Office</p>
+          <p className="Contact_sub_headings">Bengaluru, Karnataka, India</p>
 
-            <p className="Contact_heading">Call Us</p>
-            <p className="Contact_sub_headings">Phone :+91 90360 62378</p>
+          <p className="Contact_heading">Call Us</p>
+          <p className="Contact_sub_headings">Phone :+91 90360 62378</p>
 
-            <p className="Contact_heading">Email us</p>
-            <p className="Contact_sub_headings">reachus@sapienceminds.com</p>
-          </div>
+          <p className="Contact_heading">Email us</p>
+          <p className="Contact_sub_headings">reachus@sapienceminds.com</p>
+        </div>
         {/* </div> */}
         <div className="footer_right_outer_main_1">
           <div className="footer_center_outer">
@@ -94,20 +97,21 @@ export const Footer = () => {
 
             <div className="services_outer">
               <h4 className="services_headeing">Company</h4>
+              <Link to="/contactus" className="nav_link">
+                <li className="footer_services_items">Contact Us </li>
+              </Link>
               <Link to="/about" className="nav_link">
                 <li className="footer_services_items">About Us </li>
               </Link>
               <Link to="/careers" className="nav_link">
                 <li className="footer_services_items">Careers</li>
               </Link>
-              <Link to="/blog" className="nav_link">
-                <li className="footer_services_items">Blog</li>
+              <Link to="/blogs" className="nav_link">
+                <li className="footer_services_items">Blogs</li>
               </Link>
             </div>
           </div>
         </div>
-
-     
       </div>
       <div className="footer_teems_policy_container">
         <div className="footer_teems_policy_container_sub">
@@ -120,7 +124,7 @@ export const Footer = () => {
         </div>
         <div className="footer_right_bottom_icons">
           <div className="footer_icons_outer">
-            <FaLinkedin className="footer_icons" />{" "}
+            <FaLinkedin className="footer_icons" onClick={()=>handleOpenTab("https://www.linkedin.com/company/sapience-minds/")}/>{" "}
           </div>
           <div className="footer_icons_outer">
             <IoLogoYoutube className="footer_icons" />{" "}

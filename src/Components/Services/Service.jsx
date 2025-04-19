@@ -265,17 +265,27 @@ export const Service = ({
         </p>
       </div>
       <div className="Service_Page_Section2_Hero">
-        <div className="Image_Container_service_Left"  data-aos="fade-right">
+        <div className="Image_Container_service_Left" data-aos="fade-right">
           <p>01</p>
           <img src={Image1} alt="Image1"></img>
         </div>
-        <div className="Middle_Content_Container"  >
-          <p className="Middle_Secound_Head" data-aos="fade-right">{Para1Head}</p>
-          <p className="Niddle_sub_content" data-aos="fade-right">{Para1Content1} </p>
-          <p className="Niddle_sub_content" data-aos="fade-right">{Para1Content2} </p>
+        <div className="Middle_Content_Container">
+          <p className="Middle_Secound_Head" data-aos="fade-right">
+            {Para1Head}
+          </p>
+          <p className="Niddle_sub_content" data-aos="fade-right">
+            {Para1Content1}{" "}
+          </p>
+          <p className="Niddle_sub_content" data-aos="fade-right">
+            {Para1Content2}{" "}
+          </p>
 
-          <p className="Middle_Secound_Head" data-aos="zoom-in">{Para2Head}</p>
-          <p className="Niddle_sub_content" data-aos="zoom-in">{Para2Content2} </p>
+          <p className="Middle_Secound_Head" data-aos="zoom-in">
+            {Para2Head}
+          </p>
+          <p className="Niddle_sub_content" data-aos="zoom-in">
+            {Para2Content2}{" "}
+          </p>
 
           <ul className="List_Items_Middle">
             <li data-aos="fade-right">{List1}</li>
@@ -283,11 +293,15 @@ export const Service = ({
             <li data-aos="fade-right">{List3}</li>
             <li data-aos="fade-right">{List4}</li>
           </ul>
-          <p className="Middle_Secound_Head" data-aos="zoom-in">{Para3Head}</p>
-          <p className="Niddle_sub_content" data-aos="zoom-in">{Para3Content1} </p>
+          <p className="Middle_Secound_Head" data-aos="zoom-in">
+            {Para3Head}
+          </p>
+          <p className="Niddle_sub_content" data-aos="zoom-in">
+            {Para3Content1}{" "}
+          </p>
         </div>
 
-        <div className="Image_Container_service_right"  data-aos="fade-left" >
+        <div className="Image_Container_service_right" data-aos="fade-left">
           <p>02</p>
           <img src={Image1} alt="Image1" />
         </div>
@@ -304,13 +318,11 @@ export const Service = ({
             src={TradeMark}
             alt="TradeMark"
             className="Service_Page_Section3_image1"
-     
           ></img>
           <img
             src={CircleGroup}
             alt="CircleGroup"
             className="Service_Page_Section3_image2"
-  
           ></img>
           <img
             src={OrangeLayer}
@@ -517,6 +529,7 @@ export const Service = ({
 
       <div className="Pre_Footer_Service_Container">
         <PreFooter
+          sourcepages={ServiceHeadName}
           Head="Lorem Ipsum is simply dummy text of the"
           Content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
         />

@@ -9,6 +9,7 @@ export const PreFooter = ({
   Content,
   Btn1 = "Get Started",
   Btn2 = "Book A Meeting",
+  sourcepages
 }) => {
   useEffect(() => {
     AOS.init({
@@ -29,12 +30,7 @@ export const PreFooter = ({
     );
   };
   const [showForm, setShowForm] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-    phone: "",
-  });
+
   const modalRef = useRef(null);
   const preFooterRef = useRef(null); // add this line
   const handleOpenForm = () => {
@@ -54,12 +50,6 @@ export const PreFooter = ({
     setShowForm(false);
   };
 
-  const handleChange = (e) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
   const handleClickOutside = (e) => {
     if (modalRef.current && !modalRef.current.contains(e.target)) {
       handleCloseForm();
@@ -78,17 +68,61 @@ export const PreFooter = ({
     };
   }, [showForm]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Data:", formData);
-    setShowForm(false);
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-      phone: "",
-    });
+ const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    message: "",
+    sourcepage: sourcepages,
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbxXgFjRfloUaeWB49YcK1iBraoxMuObtJrnu6EHALeQAxyuEaMFf70OMwbLWHQpV4Ru/exec";
+
+    try {
+      const formPayload = new FormData();
+      for (let key in formData) {
+        formPayload.append(key, formData[key]);
+      }
+
+      console.log(formPayload, "formPayloadformPayload");
+
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        body: formPayload, // No 'Content-Type' header for FormData
+      });
+      console.log(response, "resssssss");
+
+      if (response.ok) {
+        alert("Form submitted successfully!");
+        console.log("submited succes", response);
+        setFormData({
+          name: "",
+          email: "",
+          phoneNumber: "",
+          message: "",
+        });
+        handleCloseForm()
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Error submitting the form. Please check your connection.");
+    }
+  };
+
+  console.log(sourcepages,"sourcepages")
 
   return (
     <>
@@ -144,8 +178,8 @@ export const PreFooter = ({
                 Phone Number:
                 <input
                   type="tel"
-                  name="phone"
-                  value={formData.phone}
+                  name="phoneNumber"
+                  value={formData.phoneNumber}
                   onChange={handleChange}
                   required
                   className="Input"

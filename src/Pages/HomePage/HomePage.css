@@ -1,9 +1,9 @@
 .home_page_outer {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 8vw;
-    padding-top: 2vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 8vw;
+  padding-top: 2vw;
 }
 
 .home_page_right {
@@ -65,6 +65,7 @@
 .homepage_left_button:hover {
   box-shadow: 0 0.7vw 1.5vw rgba(124, 92, 252, 0.6);
 }
+
 .homepage_right_button {
   position: relative;
   width: 15vw;
@@ -87,8 +88,7 @@
 
 /* Liquid Fill Effect */
 .liquid {
-  background: linear-gradient(#7c5cfc 0 0) no-repeat calc(200% - var(--p, 0%))
-    100% / 200% var(--p, 0.2em);
+  background: linear-gradient(#7c5cfc 0 0) no-repeat calc(200% - var(--p, 0%)) 100% / 200% var(--p, 0.2em);
   transition: 0.3s var(--t, 0s),
     background-position 0.3s calc(0.3s - var(--t, 0s));
 }
@@ -117,6 +117,38 @@
   justify-content: center;
   align-items: center;
   animation: slideTopBottom2 2.5s ease-in-out infinite alternate;
+}
+
+.home_page_modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  /* Changed from absolute */
+  top: 0;
+  left: 0;
+  z-index: 999;
+  /* Increased for better layering */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Optional: add backdrop */
+}
+
+.read_more_modal {
+  width: 30vw;
+  min-height: 100px;
+  background-color: #fff;
+  /* Add background for clarity */
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 1vw;
+  border: 1px solid #7c5cfc;
+  border-radius: 8px;
+  /* Optional: rounded corners */
+  box-shadow: 0 layer4_logo4px 8px rgba(0, 0, 0, 0.2);
+  /* Optional: shadow for popup effect */
 }
 
 @keyframes slideTopBottom2 {
@@ -347,10 +379,12 @@
   font-size: 1.2vw;
   font-weight: 500;
 }
+
 @keyframes scrollLogos {
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -370,7 +404,8 @@
 }
 
 .layer2_logos {
-  height: 50px; /* or any preferred size */
+  height: 50px;
+  /* or any preferred size */
   margin: 0 1vw;
 }
 
@@ -403,6 +438,7 @@
   color: #000000b3;
   margin-top: 5vw;
 }
+
 .layer3_part1_heading2 {
   font-size: 3vw;
   font-weight: 700;
@@ -433,6 +469,7 @@
   border-top-left-radius: 1vw;
   background-color: rgba(217, 217, 217, 0.9);
 }
+
 .about_video {
   width: 70vw;
   height: 40vw;
@@ -512,6 +549,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .layer4_logo {
   width: 2vw;
   height: 2vw;
@@ -615,10 +653,12 @@
   width: 3.3vw;
   height: 3vw;
 }
+
 .card_bottom_line {
   width: 15vw;
   border-top: 0.1vw solid rgba(0, 0, 0, 0.7);
 }
+
 .layer5_card_heading {
   font-size: 1.1vw;
   font-weight: 600;
@@ -627,6 +667,7 @@
   /* margin-top: 1vw; */
   width: 18vw;
 }
+
 .layer5_card_text {
   font-size: 1.2vw;
   font-weight: 400;
@@ -635,6 +676,7 @@
   text-align: center;
   margin-top: 0.3vw;
 }
+
 .layer5_card_lernmore {
   font-size: 1.2vw;
   font-weight: 600;
@@ -735,7 +777,7 @@
 .layer6_card_bottom {
   display: flex;
   gap: 1vw;
-  margin-top: 0vw;
+  /* margin-top: 0vw; */
   justify-content: start;
   align-items: center;
 }
@@ -746,7 +788,8 @@
   margin: 0;
 }
 
-.card_bottom_para, .singleTestimonial_bottom_para {
+.card_bottom_para,
+.singleTestimonial_bottom_para {
   font-size: 0.8vw;
   font-weight: 400;
   margin: 0;
@@ -761,19 +804,20 @@
   cursor: pointer;
 }
 
-.read_more_close_btn{
-    font-size: 1vw;
-    padding: 0.3vw 1vw;
-    background-color: #651fff;
-    color: #fff;
-    border: none;
-    border-radius: 2vw;
-    margin: 1vw 0 0 0;
-    cursor: pointer;
+.read_more_close_btn {
+  font-size: 1vw;
+  padding: 0.3vw 1vw;
+  background-color: #651fff;
+  color: #fff;
+  border: none;
+  border-radius: 2vw;
+  margin: 1vw 0 0 0;
+  cursor: pointer;
 
 }
 
-.card_bottom_logo, .singleTestimonial_bottom_logo {
+.card_bottom_logo,
+.singleTestimonial_bottom_logo {
   width: 3.5vw;
   border-radius: 5vw;
 }
@@ -852,6 +896,7 @@
   width: 24.5vw;
   border-top: 0.1vw solid rgba(0, 0, 0, 0.7);
 }
+
 .layer7_card_para_outer {
   background-color: rgba(124, 92, 252, 0.42);
   width: 25vw;
@@ -888,37 +933,27 @@
   height: 25vw;
   padding: 1.5vw;
 }
+
 .modal-overlay-homepage {
-    position: fixed;
-    top: 7vw;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* background-color: rgba(0, 0, 0, 0.1); */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999; 
-    background-color:transparent; 
+  position: fixed;
+  top: 7vw;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: transparent;
 }
 
-.read_more_modal {
-    width: 40vw;
-    min-height: 100px;
-    background-color: #fff;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 2vw;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 0.5vw; 
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); 
-}
+
 
 @media screen and (min-width: 320px) and (max-width: 720px) {
   .home_page_outer {
@@ -1008,6 +1043,7 @@
     width: 86vw;
     height: 55vw;
   }
+
   .about_video {
     width: 86vw;
     height: 55vw;
@@ -1217,12 +1253,14 @@
   .layer5_card_text {
     font-size: 4vw;
   }
+
   .layer5_card_heading {
     font-size: 4vw;
     width: 60vw;
     height: fit-content;
     margin-top: 1vw;
   }
+
   .layer5_cards_outer {
     flex-direction: column;
     align-items: center;
@@ -1289,17 +1327,19 @@
   }
 
   .layer6_card_bottom {
-    margin-top: 2vw;
+    /* margin-top: 8vw; */
     gap: 2.5vw;
   }
 
-  .card_bottom_logo, .singleTestimonial_bottom_logo {
+  .card_bottom_logo,
+  .singleTestimonial_bottom_logo {
     width: 6vw;
     height: 6vw;
   }
 
   .card_bottom_heading,
-  .card_bottom_para, .singleTestimonial_bottom_para {
+  .card_bottom_para,
+  .singleTestimonial_bottom_para {
     font-size: 3.5vw;
   }
 
@@ -1310,6 +1350,7 @@
   .layer7_card_line {
     width: 80vw;
   }
+
   .layer7_card_para_outer {
     background-color: rgba(124, 92, 252, 0.42);
     width: 80vw;
@@ -1347,10 +1388,42 @@
   .layer7_part_heading2 {
     font-size: 6vw;
   }
+
   .modal-overlay-homepage {
     top: 0;
   }
-  .read_more_btn{
-    font-size: 4vw;
+
+  .layer4_logo {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .read_more_btn {
+    font-size: 3.5vw;
+  }
+
+
+  .read_more_modal {
+    width: 90vw;
+    min-height: 1px;
+    /* max-height: 60vh; */
+    overflow: auto;
+    /*  padding: 1vw; */
+  }
+
+  .read_more_modal::-webkit-scrollbar {
+    display: none;
+  }
+
+  .read_more_close_btn {
+    font-size: 3.2vw;
+    padding: 1vw 2vw;
+    background-color: #651fff;
+    color: #fff;
+    border: none;
+    border-radius: 2vw;
+    margin: 1vw 0 0 0;
+    cursor: pointer;
+
   }
 }
