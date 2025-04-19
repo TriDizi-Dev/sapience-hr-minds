@@ -4,7 +4,7 @@ import HeroImage from "../../assets/AlliancePartner/HeroImage.svg";
 import BlueLayer from "../../assets/AboutPage/blushade.svg";
 import orangeLayer from "../../assets/AboutPage/orangeshade.svg";
 import SquareIcons from "../../assets/AlliancePartner/LayerContainer.svg";
-import PersonImage from "../../assets/AlliancePartner/education.avif";
+import PersonImage from "../../assets/AlliancePartner/image.png";
 import Smallicon1 from "../../assets/AboutPage/Smallicon1.svg";
 import Smallicon2 from "../../assets/AboutPage/Smallicon2.svg";
 import Smallicon3 from "../../assets/AboutPage/Smallicon3.svg";
@@ -220,6 +220,12 @@ export const AlliancePartner = () => {
           <p className="Person_Cont_img">
             <img src={PersonImage} alt="PersonImage" data-aos="zoom-in"></img>
           </p>
+          <div className="alliance_right_said content">
+            <h3>Krishnan Ravishankar</h3>
+            <p>Principal Architect</p>
+            <p>Behavior & Performance Optimisation</p>
+            <p>(Solutions Partner- Harrison Assessments)</p>
+          </div>
         </div>
       </div>
       <div className="Section3_Alliance_Main_Container">

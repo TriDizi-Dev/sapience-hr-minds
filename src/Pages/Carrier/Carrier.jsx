@@ -399,7 +399,7 @@ function Carrier() {
 
                                                     </div>
                                                     <div className="accordian_right">
-                                                        <div className="right_top_icons_outer">
+                                                        {/* <div className="right_top_icons_outer">
                                                             <p className="share">
                                                                 Share
                                                             </p>
@@ -419,7 +419,7 @@ function Carrier() {
                                                                 <IoIosMail className='accordian_icons' />
 
                                                             </div>
-                                                        </div>
+                                                        </div> */}
 
                                                         <div className="accordian_right_icons_button">
                                                             <button>Apply Now</button>
@@ -593,7 +593,7 @@ function Carrier() {
 
                                                     </div>
                                                     <div className="accordian_right">
-                                                        <div className="right_top_icons_outer">
+                                                        {/* <div className="right_top_icons_outer">
                                                             <p className="share">
                                                                 Share
                                                             </p>
@@ -613,7 +613,7 @@ function Carrier() {
                                                                 <IoIosMail className='accordian_icons' />
 
                                                             </div>
-                                                        </div>
+                                                        </div> */}
 
                                                         <div className="accordian_right_icons_button">
                                                             <button>Apply Now</button>
@@ -783,7 +783,7 @@ function Carrier() {
 
                                                     </div>
                                                     <div className="accordian_right">
-                                                        <div className="right_top_icons_outer">
+                                                        {/* <div className="right_top_icons_outer">
                                                             <p className="share">
                                                                 Share
                                                             </p>
@@ -803,7 +803,7 @@ function Carrier() {
                                                                 <IoIosMail className='accordian_icons' />
 
                                                             </div>
-                                                        </div>
+                                                        </div> */}
 
                                                         <div className="accordian_right_icons_button">
                                                             <button>Apply Now</button>
@@ -975,7 +975,7 @@ function Carrier() {
 
                                                     </div>
                                                     <div className="accordian_right">
-                                                        <div className="right_top_icons_outer">
+                                                        {/* <div className="right_top_icons_outer">
                                                             <p className="share">
                                                                 Share
                                                             </p>
@@ -995,7 +995,7 @@ function Carrier() {
                                                                 <IoIosMail className='accordian_icons' />
 
                                                             </div>
-                                                        </div>
+                                                        </div> */}
 
                                                         <div className="accordian_right_icons_button">
                                                             <button>Apply Now</button>
@@ -1165,7 +1165,7 @@ function Carrier() {
 
                                                     </div>
                                                     <div className="accordian_right">
-                                                        <div className="right_top_icons_outer">
+                                                        {/* <div className="right_top_icons_outer">
                                                             <p className="share">
                                                                 Share
                                                             </p>
@@ -1185,7 +1185,7 @@ function Carrier() {
                                                                 <IoIosMail className='accordian_icons' />
 
                                                             </div>
-                                                        </div>
+                                                        </div> */}
 
                                                         <div className="accordian_right_icons_button">
                                                             <button>Apply Now</button>
@@ -1356,7 +1356,7 @@ function Carrier() {
 
                                                     </div>
                                                     <div className="accordian_right">
-                                                        <div className="right_top_icons_outer">
+                                                        {/* <div className="right_top_icons_outer">
                                                             <p className="share">
                                                                 Share
                                                             </p>
@@ -1376,7 +1376,7 @@ function Carrier() {
                                                                 <IoIosMail className='accordian_icons' />
 
                                                             </div>
-                                                        </div>
+                                                        </div> */}
 
                                                         <div className="accordian_right_icons_button">
                                                             <button>Apply Now</button>
@@ -1554,7 +1554,7 @@ function Carrier() {
 
                                                     </div>
                                                     <div className="accordian_right">
-                                                        <div className="right_top_icons_outer">
+                                                        {/* <div className="right_top_icons_outer">
                                                             <p className="share">
                                                                 Share
                                                             </p>
@@ -1574,7 +1574,7 @@ function Carrier() {
                                                                 <IoIosMail className='accordian_icons' />
 
                                                             </div>
-                                                        </div>
+                                                        </div> */}
 
                                                         <div className="accordian_right_icons_button">
                                                             <button>Apply Now</button>
@@ -1748,7 +1748,7 @@ function Carrier() {
 
                                                     </div>
                                                     <div className="accordian_right">
-                                                        <div className="right_top_icons_outer">
+                                                        {/* <div className="right_top_icons_outer">
                                                             <p className="share">
                                                                 Share
                                                             </p>
@@ -1768,7 +1768,7 @@ function Carrier() {
                                                                 <IoIosMail className='accordian_icons' />
 
                                                             </div>
-                                                        </div>
+                                                        </div> */}
 
                                                         <div className="accordian_right_icons_button">
                                                             <button>Apply Now</button>
@@ -1938,7 +1938,7 @@ function Carrier() {
 
                                                     </div>
                                                     <div className="accordian_right">
-                                                        <div className="right_top_icons_outer">
+                                                        {/* <div className="right_top_icons_outer">
                                                             <p className="share">
                                                                 Share
                                                             </p>
@@ -1958,7 +1958,7 @@ function Carrier() {
                                                                 <IoIosMail className='accordian_icons' />
 
                                                             </div>
-                                                        </div>
+                                                        </div> */}
 
                                                         <div className="accordian_right_icons_button">
                                                             <button>Apply Now</button>
@@ -2134,7 +2134,7 @@ function Carrier() {
 
                                                     </div>
                                                     <div className="accordian_right">
-                                                        <div className="right_top_icons_outer">
+                                                        {/* <div className="right_top_icons_outer">
                                                             <p className="share">
                                                                 Share
                                                             </p>
@@ -2154,7 +2154,7 @@ function Carrier() {
                                                                 <IoIosMail className='accordian_icons' />
 
                                                             </div>
-                                                        </div>
+                                                        </div> */}
 
                                                         <div className="accordian_right_icons_button">
                                                             <button>Apply Now</button>
@@ -2324,7 +2324,7 @@ function Carrier() {
 
                                                     </div>
                                                     <div className="accordian_right">
-                                                        <div className="right_top_icons_outer">
+                                                        {/* <div className="right_top_icons_outer">
                                                             <p className="share">
                                                                 Share
                                                             </p>
@@ -2344,7 +2344,7 @@ function Carrier() {
                                                                 <IoIosMail className='accordian_icons' />
 
                                                             </div>
-                                                        </div>
+                                                        </div> */}
 
                                                         <div className="accordian_right_icons_button">
                                                             <button>Apply Now</button>
@@ -2515,7 +2515,7 @@ function Carrier() {
 
                                                     </div>
                                                     <div className="accordian_right">
-                                                        <div className="right_top_icons_outer">
+                                                        {/* <div className="right_top_icons_outer">
                                                             <p className="share">
                                                                 Share
                                                             </p>
@@ -2535,7 +2535,7 @@ function Carrier() {
                                                                 <IoIosMail className='accordian_icons' />
 
                                                             </div>
-                                                        </div>
+                                                        </div> */}
 
                                                         <div className="accordian_right_icons_button">
                                                             <button>Apply Now</button>
