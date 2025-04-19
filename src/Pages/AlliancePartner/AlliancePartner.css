@@ -52,38 +52,60 @@
     width: 98vw;
     justify-content: center;
     gap: 4vw;
-    margin-top: 5vw;
+    margin-top: 2vw;
+    height: fit-content;
     /* align-items: first baseline; */
 }
 
 .Left_Container_AlliancePartner {
     width: 52vw;
-    margin-top: -3vw;
+    margin-top: 0vw;
 }
 
 .Right_Container_AlliancePartner {
-    position: relative;
+    /* position: relative; */
     width: 33vw;
-    /* border: 1px solid; */
-    /* height: 40vw; */
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap:2vw;
+}
+
+
+.alliance_right_said{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.1vw;
+}
+.alliance_right_said h3{
+    font-size:2.5vw;
+    /* margin-bottom: 0.5vw; */
+}
+
+.alliance_right_said p{
+    font-size: 1vw;
 }
 
 .SquareIcons_Cont_img img,
 .Person_Cont_img img {
-    position: absolute;
+    /* position: absolute; */
 }
 
 .SquareIcons_Cont_img img {
     width: 33vw;
-    top: 2vw;
-    left: 0vw;
+    /* top: 2vw;
+    left: 0vw; */
 }
 
 .Person_Cont_img img {
-    width: 35vw;
-    height: 20vw;
-    top: -3vw;
-    left: -1vw;
+    width: 30vw;
+    height: 30vw;
+    /* top: -3vw;
+    left: 0vw; */
     border-radius: 0.8vw;
 }
 
@@ -331,11 +353,14 @@
     }
     .right_Header_Text{
         display: block;
-        position: absolute;
-        top: -20vw;
-        left: 12vw;
+        /* position: absolute; */
+        /* top: -20vw;
+        left: 12vw; */
         font-size: 6vw;
         font-weight: 600;
+    }
+    .Person_Cont_img img{
+        width: 100%;
     }
     .Heading_text_AlliancePartner{
         display: none;
@@ -354,14 +379,14 @@
         align-items: center;
         width: 100%;
         height: fit-content;
-        row-gap:55vw;
+        row-gap:6vw;
     }
     .Right_Container_AlliancePartner{
         width: 80%;
     }
     .Person_Cont_img img{
-        width: 100%;
-        height: 50vw;
+        width: 80vw;
+        height: 80vw;
         border-radius: 1vw;
         left: 0;
     }
@@ -497,5 +522,15 @@
     }
     .AlliancePartner_Main_Container{
         margin-top: 7vw;
+    }
+    .alliance_right_said{
+        row-gap: 1vw;
+    }
+    .alliance_right_said h3{
+        font-size: 5vw;
+        margin-bottom: 2vw;
+    }
+    .alliance_right_said p{
+        font-size: 3vw;
     }
 }

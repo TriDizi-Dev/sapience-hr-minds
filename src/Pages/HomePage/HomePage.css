@@ -1350,4 +1350,7 @@
   .modal-overlay-homepage {
     top: 0;
   }
+  .read_more_btn{
+    font-size: 4vw;
+  }
 }

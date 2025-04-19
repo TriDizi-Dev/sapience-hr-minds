@@ -360,13 +360,13 @@ export const Navbar = () => {
             </li>
           </Link> */}
 
-          <Link to="/blog" className="nav_link">
+          <Link to="/blogs" className="nav_link">
             <li className="nav_items">
-              Blog
+              Blogs
               <div className="nav_underline_wrapper">
                 <div
                   className={` ${
-                    navActive === "/blog" ? "nav_underline" : ""
+                    navActive === "/blogs" ? "nav_underline" : ""
                   }`}
                 ></div>
               </div>
@@ -688,16 +688,16 @@ export const Navbar = () => {
                 </li>
               </Link>
 
-              <Link to="/blog" className="nav_link">
+              <Link to="/blogs" className="nav_link">
                 <li
                   className="mobile_nav_items"
                   onClick={() => handleNavList()}
                 >
-                  Blog
+                  Blogs
                   <div className="mobile_nav_underline_wrapper">
                     <div
                       className={` ${
-                        navActive === "/blog" ? "mobile_nav_underline" : ""
+                        navActive === "/blogs" ? "mobile_nav_underline" : ""
                       }`}
                     ></div>
                   </div>
