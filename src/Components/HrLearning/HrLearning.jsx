@@ -3,6 +3,8 @@ import "./HrLearning.css";
 import HrBanner from "../../assets/HrLearning/HrLearnHero.svg";
 import BackgroundLayer from "../../assets/HrLearning/BackgroundLayer.svg";
 import { PreFooter } from "../PreFooter/PreFooter";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 
 export const HrLearning = ({ HRLearning, imgTitle, questionTitle }) => {
   const [selectedData, setSelectedData] = useState({});
@@ -13,14 +15,23 @@ export const HrLearning = ({ HRLearning, imgTitle, questionTitle }) => {
   const Handledatachnage = (data) => {
     setSelectedData(data);
   };
+
+    useEffect(() => {
+      AOS.init({
+        offset: 200,
+        duration: 500,
+        easing: "ease-in-sine",
+        once: false,
+      });
+    }, []);
   return (
     <>
       <div className="Hr_Hero_container">
         <img src={HrBanner} alt="HrBanner"></img>
-        <p>{imgTitle}</p>
+        <p data-aos="fade-right">{imgTitle}</p>
       </div>
       <div className="Section2_Main_container">
-        <p className="Section2_Heading_text">
+        <p className="Section2_Heading_text" data-aos="fade-right">
           What you learn in {questionTitle}?
         </p>
         <div className="Background_Image_Container_1">
@@ -35,6 +46,7 @@ export const HrLearning = ({ HRLearning, imgTitle, questionTitle }) => {
                 }`}
                 key={id}
                 onClick={() => Handledatachnage(item)}
+                data-aos="zoom-in-right"
               >
                 <p
                   className={`Single_Cards_head ${
@@ -52,8 +64,8 @@ export const HrLearning = ({ HRLearning, imgTitle, questionTitle }) => {
               </div>
             ))}
           </div>
-          <div className="Right_Side_Container_Section2">
-            <div className="Right_Side_Container_Section2_top_div">
+          <div className="Right_Side_Container_Section2" >
+            <div className="Right_Side_Container_Section2_top_div" data-aos="zoom-in">
               <p className="Right_Side_Container_Header">{selectedData.head}</p>
               <div className="Single_Cards_Sub_heads_text_right">
                 <p>{selectedData.subhead1}</p>
@@ -76,7 +88,7 @@ export const HrLearning = ({ HRLearning, imgTitle, questionTitle }) => {
               </ul>
               <p className="Apply_now_button_content_Hr_Learn">Apply Now</p>
             </div>
-            <div className="Privours_Data_Container_last">
+            <div className="Privours_Data_Container_last" data-aos="zoom-in-up">
               <p className="Privours_Data_Container_Head_text">
                 Previous Internships
               </p>

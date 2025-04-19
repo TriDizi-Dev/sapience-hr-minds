@@ -1,13 +1,51 @@
+import { useState } from "react";
 import "./careerCreation.css";
 
 const CareerCreation = () => {
+  const [formData, setFormData] = useState({
+    location: "",
+    type: "",
+    qualification: "",
+    postedDate: "",
+    title: "",
+    description: "",
+    jobDescription: "",
+    requirements: "",
+  });
+
+  const formHandlerOnChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+  };
+
+  const cancelHandler = () => {
+    setFormData({
+      location: "",
+      type: "",
+      qualification: "",
+      postedDate: "",
+      title: "",
+      description: "",
+      jobDescription: "",
+      requirements: "",
+    });
+  };
+
   return (
     <div className="career_creation_container">
       <div className="career_details_sub">
         <div>
           <h1>Career Creation</h1>
         </div>
-        <form className="career_creation_form">
+        <form className="career_creation_form" onSubmit={handleSubmit}>
           <div className="career_creation_form_container">
             <div className="input_container">
               <label htmlFor="location" className="career_labels">
@@ -18,16 +56,25 @@ const CareerCreation = () => {
                 id="location"
                 name="location"
                 className="career_input"
+                onChange={formHandlerOnChange}
+                value={formData.location}
               />
             </div>
             <div className="input_container">
               <label htmlFor="type" className="career_labels">
                 Type
               </label>
-              <select name="type" id="type" className="career_input">
-                <option value="">Full Time</option>
-                <option value="">Part Time</option>
-                <option value="">Internship</option>
+              <select
+                name="type"
+                id="type"
+                onChange={formHandlerOnChange}
+                value={formData.type}
+                className="career_input"
+              >
+                className="career_input">
+                <option value="Full Time">Full Time</option>
+                <option value="Part Time">Part Time</option>
+                <option value="Internship">Internship</option>
               </select>
             </div>
           </div>
@@ -41,6 +88,8 @@ const CareerCreation = () => {
                 id="qualification"
                 name="qualification"
                 className="career_input"
+                onChange={formHandlerOnChange}
+                value={formData.qualification}
               />
             </div>
             <div className="input_container">
@@ -52,6 +101,8 @@ const CareerCreation = () => {
                 id="postedDate"
                 name="postedDate"
                 className="career_input"
+                onChange={formHandlerOnChange}
+                value={formData.postedDate}
               />
             </div>
           </div>
@@ -65,6 +116,8 @@ const CareerCreation = () => {
                 id="title"
                 name="title"
                 className="career_input"
+                onChange={formHandlerOnChange}
+                value={formData.title}
               />
             </div>
             <div className="input_container">
@@ -75,6 +128,8 @@ const CareerCreation = () => {
                 id="description"
                 className="career_textarea"
                 name="description"
+                onChange={formHandlerOnChange}
+                value={formData.description}
               ></textarea>
             </div>
           </div>
@@ -87,6 +142,8 @@ const CareerCreation = () => {
                 id="jobDescription"
                 className="career_textarea"
                 name="jobDescription"
+                onChange={formHandlerOnChange}
+                value={formData.jobDescription}
               ></textarea>
             </div>
             <div className="input_container">
@@ -97,15 +154,24 @@ const CareerCreation = () => {
                 id="requirements"
                 className="career_textarea"
                 name="requirements"
+                onChange={formHandlerOnChange}
+                value={formData.requirements}
               ></textarea>
             </div>
           </div>
+          <div className="career_creation_button_container">
+            <button className="create_career_button" type="submit">
+              Create
+            </button>
+            <button
+              className="cancel_career_button"
+              type="button"
+              onClick={cancelHandler}
+            >
+              Clear
+            </button>
+          </div>
         </form>
-
-        <div className="career_creation_button_container">
-          <button className="create_career_button">Create</button>
-          <button className="cancel_career_button">Cancel</button>
-        </div>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ import Smallicon4 from "../../assets/AboutPage/Smallicon4.svg";
 import man from "../../assets/HomePage/man.svg";
 import { PreFooter } from "../../Components/PreFooter/PreFooter";
 import AOS from "aos";
-import "aos/dist/aos.css";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 
 import man_1 from "../../assets/HomePage/Testimony_1.png";
 import man_2 from "../../assets/HomePage/man_2.png";
@@ -220,7 +220,7 @@ export const AlliancePartner = () => {
           <p className="Person_Cont_img">
             <img src={PersonImage} alt="PersonImage" data-aos="zoom-in"></img>
           </p>
-          <div className="alliance_right_said content">
+          <div className="alliance_right_said content" data-aos="zoom-in">
             <h3>Krishnan Ravishankar</h3>
             <p>Principal Architect</p>
             <p>Behavior & Performance Optimisation</p>

@@ -394,16 +394,13 @@ export const HomePage = () => {
     <div className="home_main">
       <div className="home_page_outer">
         <div className="home_page_left">
-          <p className="home_samll_text">Recruit - Onboard - Manage</p>
+          <p className="home_samll_text">Virtula HR - Recruit - Manage</p>
           <div className="homepage_headig_text">
             <h1 className="home_page_heading">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+            Your Trusted Fractional CHRO Partner for Scalable HR Growth
             </h1>
             <p className="home_page_para">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui
-              voluptates tenetur facilis ex, corrupti officiis ipsa! Dignissimos
-              minima dolore nesciunt.
+            At Sapience Minds, we offer expert HR solutions as a Fractional CHRO, helping startups build strong foundations, align people with purpose, and scale confidently with compliant and agile HR strategies.
             </p>
           </div>
           <div className="homepage_button_outer">
@@ -539,8 +536,7 @@ export const HomePage = () => {
       <div className="homepage_layer2_outer">
         <div className="layer2_outer">
           <p className="layer2_top_text">
-            Trusted company over 1,000 business rely on humanet
-          </p>
+          Trusted Companies to scale their Business through HR domain          </p>
           <div className="layer2_logos_outer">
             <div className="layer2_logos_inner">
               <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
@@ -559,16 +555,13 @@ export const HomePage = () => {
         <div className="homepage_layer3_outer">
           <div className="homepage_layer3_part1">
             <h6 className="layer3_part1_heading" data-aos="fade-left">
-              About Us
+            About Me
             </h6>
             <h1 className="layer3_part1_heading2" data-aos="zoom-in">
-              Lorem Ipsum is simply dummy text
+            Meet Babitha – Your Fractional CHRO and Growth Enabler
             </h1>
             <p className="layer3_part1_para" data-aos="fade-right">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book
+            With 23+ years of HR leadership, I specialize in helping startups and SMBs design people-first, performance-driven cultures. As a Fractional CHRO, I bring executive-level HR expertise without the full-time cost — offering structure, compliance, and strategy tailored for fast-growing teams.
             </p>
           </div>
           <div className="homepage_layer3_part2">
@@ -591,14 +584,10 @@ export const HomePage = () => {
           <div className="homepage_layer4_left" data-aos="fade-right">
             <p className="homepage_layer4_heading">Our Core Values</p>
             <h1 className="homepage_layer4_heading2">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+            Guided by Purpose, Driven by People
             </h1>
             <p className="homepage_layer4_para">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book
+            At Sapience Minds, our values are the foundation of every partnership. We believe in integrity, collaboration, and a relentless commitment to empowering startups with people-first HR strategies that deliver real impact. Our approach is empathetic, strategic, and always aligned with your business goals.
             </p>
 
             <div className="homepage_layer4_cards_outer">
@@ -612,11 +601,10 @@ export const HomePage = () => {
                 </div>
                 <h3 className="layer4_card_heading">
                   {/* Powerful Dashboard */}
-                  Vision
+                  Our Vision
                 </h3>
                 <p className="layer4_card_para">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
+                To be the most trusted HR partner for startups and emerging businesses, enabling sustainable growth through strategic people practices.
                 </p>
               </div>
               <div className="homepage_layer4_card">
@@ -627,10 +615,9 @@ export const HomePage = () => {
                     className="layer4_logo"
                   />
                 </div>
-                <h3 className="layer4_card_heading">Mission</h3>
+                <h3 className="layer4_card_heading">Our Mission </h3>
                 <p className="layer4_card_para">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
+                To deliver flexible, executive-level HR solutions that empower founders, nurture culture, and scale teams, one smart decision at a time.  
                 </p>
               </div>
             </div>
