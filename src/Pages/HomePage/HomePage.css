@@ -118,6 +118,32 @@
   align-items: center;
   animation: slideTopBottom2 2.5s ease-in-out infinite alternate;
 }
+.home_page_modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed; /* Changed from absolute */
+    top: 0;
+    left: 0;
+    z-index: 999; /* Increased for better layering */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: add backdrop */
+}
+
+.read_more_modal {
+    width: 30vw;
+    min-height: 100px;
+    background-color: #fff; /* Add background for clarity */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 1vw;
+    border: 1px solid #7c5cfc;
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 
+    layer4_logo4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow for popup effect */
+}
 
 @keyframes slideTopBottom2 {
   0% {
@@ -735,7 +761,7 @@
 .layer6_card_bottom {
   display: flex;
   gap: 1vw;
-  margin-top: 0vw;
+  /* margin-top: 0vw; */
   justify-content: start;
   align-items: center;
 }
@@ -907,18 +933,7 @@
     background-color:transparent; 
 }
 
-.read_more_modal {
-    width: 40vw;
-    min-height: 100px;
-    background-color: #fff;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 2vw;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 0.5vw; 
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); 
-}
+
 
 @media screen and (min-width: 320px) and (max-width: 720px) {
   .home_page_outer {
@@ -1289,7 +1304,7 @@
   }
 
   .layer6_card_bottom {
-    margin-top: 2vw;
+    /* margin-top: 8vw; */
     gap: 2.5vw;
   }
 
@@ -1350,4 +1365,34 @@
   .modal-overlay-homepage {
     top: 0;
   }
+  .layer4_logo {
+    width: 5vw;
+    height: 5vw;
+  }
+  .read_more_btn {
+    font-size: 3.5vw;
+  }
+
+
+.read_more_modal {
+    width: 90vw;
+    min-height: 1px;
+    /* max-height: 60vh; */
+    overflow: auto;
+    /*  padding: 1vw; */
+}
+.read_more_modal::-webkit-scrollbar {
+  display: none;
+}
+.read_more_close_btn{
+  font-size: 3.2vw;
+  padding: 1vw 2vw;
+  background-color: #651fff;
+  color: #fff;
+  border: none;
+  border-radius: 2vw;
+  margin: 1vw 0 0 0;
+  cursor: pointer;
+
+}
 }

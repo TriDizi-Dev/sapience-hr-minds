@@ -4,7 +4,7 @@ import HrBanner from "../../assets/HrLearning/HrLearnHero.svg";
 import BackgroundLayer from "../../assets/HrLearning/BackgroundLayer.svg";
 import { PreFooter } from "../PreFooter/PreFooter";
 
-export const HrLearning = ({ HRLearning, imgTitle,questionTitle}) => {
+export const HrLearning = ({ HRLearning, imgTitle, questionTitle }) => {
   const [selectedData, setSelectedData] = useState({});
 
   useEffect(() => {
@@ -20,7 +20,9 @@ export const HrLearning = ({ HRLearning, imgTitle,questionTitle}) => {
         <p>{imgTitle}</p>
       </div>
       <div className="Section2_Main_container">
-        <p className="Section2_Heading_text">What you learn in {questionTitle}?</p>
+        <p className="Section2_Heading_text">
+          What you learn in {questionTitle}?
+        </p>
         <div className="Background_Image_Container_1">
           <img src={BackgroundLayer} alt="BackgroundLayer"></img>
         </div>
@@ -105,6 +107,7 @@ export const HrLearning = ({ HRLearning, imgTitle,questionTitle}) => {
       </div>
       <div className="Pre_Footer_Hr_learning_Container">
         <PreFooter
+          sourcepages={imgTitle}
           Head="Lorem Ipsum is simply dummy text of the"
           Content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
         />

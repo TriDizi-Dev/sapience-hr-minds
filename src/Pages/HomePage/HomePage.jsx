@@ -12,7 +12,6 @@ import layer4 from "../../assets/HomePage/layer4.svg";
 import Smallicon1 from "../../assets/AboutPage/Smallicon1.svg";
 import Smallicon2 from "../../assets/AboutPage/Smallicon2.svg";
 
-
 import Smallicon3 from "../../assets/AboutPage/Smallicon3.svg";
 import Smallicon4 from "../../assets/AboutPage/Smallicon4.svg";
 
@@ -37,10 +36,10 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { SwiperSlide, Swiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link, useNavigate } from "react-router-dom";
+import { ImCross } from "react-icons/im";
 
 export const HomePage = () => {
   const navigate = useNavigate();
@@ -59,6 +58,7 @@ export const HomePage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   const modalRef = useRef(null);
 
   const cardscontent = [
@@ -302,12 +302,6 @@ export const HomePage = () => {
   };
 
   const [showForm, setShowForm] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-    phone: "",
-  });
 
   const handleOpenForm = () => {
     setShowForm(true);
@@ -316,24 +310,59 @@ export const HomePage = () => {
   const handleCloseForm = () => {
     setShowForm(false);
   };
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    message: "",
+    sourcepage: "Home",
+  });
 
   const handleChange = (e) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
     }));
   };
-
-  const handleSubmit = (e) => {
+  
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data:", formData);
-    setShowForm(false);
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-      phone: "",
-    });
+
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbxXgFjRfloUaeWB49YcK1iBraoxMuObtJrnu6EHALeQAxyuEaMFf70OMwbLWHQpV4Ru/exec";
+
+    try {
+      const formPayload = new FormData();
+      for (let key in formData) {
+        formPayload.append(key, formData[key]);
+      }
+
+      console.log(formPayload, "formPayloadformPayload");
+
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        body: formPayload, // No 'Content-Type' header for FormData
+      });
+      console.log(response, "resssssss");
+
+      if (response.ok) {
+        alert("Form submitted successfully!");
+        console.log("submited succes", response);
+        setFormData({
+          name: "",
+          email: "",
+          phoneNumber: "",
+          message: "",
+        });
+        handleCloseForm()
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Error submitting the form. Please check your connection.");
+    }
   };
   const handleClickOutside = (e) => {
     if (modalRef.current && !modalRef.current.contains(e.target)) {
@@ -397,7 +426,15 @@ export const HomePage = () => {
           {showForm && (
             <div className="modal-overlay-homepage">
               <div className="modal-box" ref={modalRef}>
-                <h2>Contact Form</h2>
+                <div className="Cancel_and_form_head">
+                  <h2>Contact Form</h2>
+                  <p>
+                    <ImCross
+                      className="Icons_X"
+                      onClick={() => handleCloseForm()}
+                    />
+                  </p>
+                </div>
                 <form onSubmit={handleSubmit} className="form">
                   <label className="Label">
                     Name:
@@ -426,8 +463,8 @@ export const HomePage = () => {
                     Phone Number:
                     <input
                       type="tel"
-                      name="phone"
-                      value={formData.phone}
+                      name="phoneNumber"
+                      value={formData.phoneNumber}
                       onChange={handleChange}
                       required
                       className="Input"
@@ -787,11 +824,16 @@ export const HomePage = () => {
           </div>
         </div>
         {readMore === true && (
-          <div className="home_page_modal" data-aos="zoom-in" onClick={() => {setReadMore(false)
-            if (swiperRef.current) {
-              swiperRef.current.autoplay?.start();
-            }
-          }}>
+          <div
+            className="home_page_modal"
+            data-aos="zoom-in"
+            onClick={() => {
+              setReadMore(false);
+              if (swiperRef.current) {
+                swiperRef.current.autoplay?.start();
+              }
+            }}
+          >
             {readMore === true && (
               <div className="read_more_modal">
                 <div className="read_more_content">
@@ -815,7 +857,8 @@ export const HomePage = () => {
                   <p>{singleTestimonial.para}</p>
                   <button
                     className="read_more_close_btn"
-                    onClick={() => {setReadMore(false)
+                    onClick={() => {
+                      setReadMore(false);
                       if (swiperRef.current) {
                         swiperRef.current.autoplay?.start();
                       }
@@ -832,6 +875,7 @@ export const HomePage = () => {
 
       <div className="home_page_prefooter" data-aos="zoom-in">
         <PreFooter
+          sourcepages="HomePage"
           Head="Lorem Ipsum is simply dummy text of the"
           Content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
         />

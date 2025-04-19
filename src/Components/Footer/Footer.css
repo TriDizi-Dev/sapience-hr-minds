@@ -2,6 +2,7 @@
   padding: 1vw;
   /* margin-top: 2vw; */
 }
+
 .footer_outer {
   display: flex;
   justify-content: space-evenly;
@@ -12,6 +13,7 @@
   font-weight: 700;
   cursor: pointer;
 }
+
 .footer_left_para {
   width: 30vw;
   text-align: justify;
@@ -29,6 +31,7 @@
   padding-top: 1.5vw;
   /* margin-top: 1vw; */
 }
+
 .footer_right_outer_main_1 {
   display: flex;
   width: 65vw;
@@ -40,6 +43,7 @@
   /* border: 1px solid; */
   /* margin-top: 1vw; */
 }
+
 .footer_right_outer {
   display: flex;
   justify-content: start;
@@ -48,6 +52,7 @@
   gap: 3.8vw;
   margin-top: 2.5vw;
 }
+
 .footer_center_outer {
   display: flex;
   justify-content: flex-end;
@@ -57,12 +62,14 @@
   gap: 2vw;
   margin-top: 4vw;
 }
+
 .footer_right_bottom_icons {
   display: flex;
   justify-content: center;
   /* width: 70vw; */
   gap: 2vw;
 }
+
 .footer_icons_outer {
   width: 2.5vw;
   height: 2.5vw;
@@ -73,6 +80,7 @@
   align-items: center;
   cursor: pointer;
 }
+
 .footer_icons {
   font-size: 1.5vw;
   color: white;
@@ -84,6 +92,7 @@
   /* justify-content: center; */
   align-items: center;
 }
+
 .services_outer {
   display: flex;
   flex-direction: column;
@@ -91,22 +100,26 @@
   width: 14vw;
   /* border: 1px solid; */
 }
+
 .services_headeing {
   font-size: 1.2vw;
   font-weight: 600;
   margin-bottom: 0.5vw;
 }
+
 .footer_company {
   display: flex;
   flex-direction: column;
   gap: 0vw;
 }
+
 .footer_company_heading {
   font-size: 1.2vw;
   font-weight: 600;
   margin-bottom: 0.5vw;
-  
+
 }
+
 .footer_services_items {
   list-style: none;
   font-size: 1vw;
@@ -118,12 +131,13 @@
   width: fit-content;
 
 }
+
 .footer_services_items:hover {
-border-bottom: 1px solid;
-color: #7C5CFC;
+  border-bottom: 1px solid;
+  color: #7C5CFC;
 }
-.footer_services_items
-.company_list_items {
+
+.footer_services_items .company_list_items {
   list-style: none;
   font-size: 0.9vw;
   font-weight: 400;
@@ -132,6 +146,7 @@ color: #7C5CFC;
 
   /* height: 3vw; */
 }
+
 .footer_bottom_line {
   margin-top: 0vw;
   border-top: 0.1vw solid;
@@ -144,6 +159,7 @@ color: #7C5CFC;
   font-weight: 400;
   margin-top: 2vw;
 }
+
 .footer_teems_policy_container {
   margin: 1vw 0;
   display: flex;
@@ -151,6 +167,7 @@ color: #7C5CFC;
   gap: 24vw;
   margin-left: 30%;
 }
+
 .footer_teems_policy_container_sub {
   display: flex;
   /* padding-left: 7vw; */
@@ -158,26 +175,31 @@ color: #7C5CFC;
   justify-items: center;
   align-items: center;
 }
+
 .terms {
   font-size: 0.9vw;
   font-weight: normal;
   border-bottom: 1px solid transparent;
 }
+
 .terms:hover {
   border-bottom: 1px solid;
   color: #7C5CFC;
 
 }
-.Contact_heading{
+
+.Contact_heading {
   font-size: 1.2vw;
   font-weight: 600;
   margin-top: 1vw;
 }
-.Contact_sub_headings{
+
+.Contact_sub_headings {
   font-size: 1.1vw;
   /* font-weight: 500; */
 }
-.footer_logo_outer{
+
+.footer_logo_outer {
   width: 20vw;
   /* border: 1px solid; */
 }
@@ -191,12 +213,19 @@ color: #7C5CFC;
   .footer_outer {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 4vw;
   }
 
   .footer_logo {
     font-size: 6vw;
     text-align: center;
+  }
+
+  .footer_logo_outer {
+    width: 100vw;
+    text-align: center;
+    /* border: 1px solid; */
   }
 
   .footer_left_para {
@@ -218,11 +247,11 @@ color: #7C5CFC;
   }
 
   .footer_center_outer {
-    width: 90vw;
+    width: 100vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 10vw;
+    margin-left: 0vw;
     /* row-gap: 10vw; */
   }
 
@@ -251,19 +280,28 @@ color: #7C5CFC;
   .footer_company_heading {
     font-size: 5vw;
     text-align: center;
+    /* width: 100vw; */
   }
 
   .footer_services_items,
-  .company_list_items {
+  .company_list_items,
+  .Contact_heading {
     font-size: 4vw;
     text-align: center;
-    height:fit-content;
+    height: fit-content;
 
+  }
+
+  .Contact_sub_headings {
+    font-size: 4vw;
   }
 
   .footer_right_outer_main_1 {
     margin-top: 3vw;
+    width: 90vw;
+
   }
+
   .footer_bottom_line {
     width: 90vw;
     margin-top: 4vw;
@@ -275,33 +313,42 @@ color: #7C5CFC;
     margin-top: 4vw;
     text-align: center;
   }
+
   .services_outer {
-    width: 60%;
+    width: 90vw;
     row-gap: 2vw;
+    align-items: center;
+    justify-content: center;
   }
 
   .footer_teems_policy_container {
-    margin: 1vw 0;
+    margin: 0vw 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-left: 0%;
+    gap: 2vw;
+
   }
+
   .footer_teems_policy_container_sub {
     display: flex;
     padding-left: 0vw;
-    row-gap: 2vw;
-    flex-direction: column;
-    justify-content: center;
+    gap: 0vw;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     width: 90%;
     margin-top: 10vw;
   }
+
   .terms {
     width: 100%;
     font-size: 4vw;
     font-weight: normal;
     text-align: center;
   }
+
   .policy {
     /* text-align: end; */
   }
