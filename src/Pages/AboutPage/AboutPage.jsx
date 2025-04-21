@@ -199,67 +199,67 @@ export const AboutPage = () => {
       id: 1,
       Logo: Smallicon1,
       Head: "Learn More",
-      subHead: "Powerful Dashboard",
-      para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      subHead: "People-Centric Approach",
+      para: "We believe that employees are an organization’s greatest asset. Every strategy we craft puts people at the center, driving culture, engagement, and long-term success.",
     },
     {
       id: 2,
       Logo: Smallicon2,
       Head: "Learn More",
-      subHead: "Powerful Dashboard",
-      para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      subHead: "Integrity in Every Interaction",
+      para: "From policy design to leadership consulting, we uphold transparency and ethical standards — building trust with both clients and their teams.",
     },
     {
       id: 3,
       Logo: Smallicon3,
       Head: "Learn More",
-      subHead: "Powerful Dashboard",
-      para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      subHead: "Strategic Simplicity",
+      para: "HR doesn’t have to be complex. We turn intricate processes into clear, actionable strategies that align with your business goals and stage.",
     },
     {
       id: 4,
       Logo: Smallicon4,
       Head: "Learn More",
-      subHead: "Powerful Dashboard",
-      para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      subHead: "Commitment to Continuous Growth",
+      para: "We empower organizations to evolve by staying ahead of HR trends and helping teams grow through structured development and smart succession planning.",
     },
   ];
   const questions = [
     {
       id: 1,
-      question: "How can I stay informed about new job openings?",
+      question: "What is a Fractional CHRO?",
       answer:
-        "check the careers page of companies I'm interested in and subscribe to their job alert newsletters.",
+        "A senior HR expert who works part-time to guide your HR strategy without full-time costs.",
     },
     {
       id: 2,
-      question: "How can I stay informed about new job openings?",
+      question: "Do you help with hiring too?",
       answer:
-        "check the careers page of companies I'm interested in and subscribe to their job alert newsletters.",
+        "Yes, we assist in leadership, mid-level, and strategic hiring processes.",
     },
     {
       id: 3,
-      question: "How can I stay informed about new job openings?",
+      question: "Can you handle HR compliance and audits?",
       answer:
-        "check the careers page of companies I'm interested in and subscribe to their job alert newsletters.",
+        "Absolutely. We set up policies and systems that keep you fully compliant.",
     },
     {
       id: 4,
-      question: "How can I stay informed about new job openings?",
+      question: "What makes Sapience Minds different?",
       answer:
-        "check the careers page of companies I'm interested in and subscribe to their job alert newsletters. bvghvvhjvjjbj",
+        "You get deep HR expertise + startup understanding, all with a personal touch.",
     },
     {
       id: 5,
-      question: "How can I stay informed about new job openings?",
+      question: "When should I consider professional HR services?",
       answer:
-        "check the careers page of companies I'm interested in and subscribe to their job alert newsletters.",
+        "When you're hiring, scaling, or facing people/process challenges.",
     },
     {
       id: 6,
-      question: "How can I stay informed about new job openings?",
+      question: "What kind of companies do you work with?",
       answer:
-        "check the careers page of companies I'm interested in and subscribe to their job alert newsletters.",
+        "We work with startups, small businesses, and scaling teams across industries.",
     },
   ];
   return (
@@ -273,20 +273,10 @@ export const AboutPage = () => {
           </div>
           <div className="Text_Container" data-aos="fade-right">
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen bookLorem Ipsum is
-              simply dummy text of the printing and typesetting industry.{" "}
+            Sapience Minds was founded with a clear mission to help startups and growing businesses establish strong HR foundations without the cost of a full-time CHRO. By offering Fractional CHRO services, we empower companies to access senior HR leadership on-demand, driving strategic decisions in talent acquisition, culture building, compliance, and performance. Our services are agile, scalable, and deeply aligned with each client’s business goals, ensuring people and performance work hand in hand.
             </p>
-            <p>
-              Lorem Ipsum has been the industry's standard dummy text ever since
-              the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen bookLorem Ipsum is simply
-              dummy text of the printing and typesetting industry. Lorem Ipsum
-              has been the industry's standard dummy text ever since the 1500s,
-              when an unknown printer took a galley of type and scrambled it to
-              make a type specimen book
+            <p> 
+            Backed by over two decades of leadership experience, Sapience Minds delivers end-to-end HR services with precision and purpose. We go beyond traditional consulting by becoming embedded strategic partners offering frameworks, policies, and people solutions that are not only compliant and structured but also future-ready. Whether you're hiring your first employee or scaling a 100-member team, we bring the expertise and vision to help your organization thrive.
             </p>
           </div>
         </div>
@@ -306,21 +296,10 @@ export const AboutPage = () => {
             <h1 className="Head_Section2">About Us</h1>
             <div className="Text_container_layer2">
               <p data-aos="fade-right">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen bookLorem
-                Ipsum is simply dummy text of the printing and typesetting
-                industry.{" "}
+              With over 23 years of HR leadership experience in the technology sector, Babitha Remith brings deep expertise in building people-first organizations. Having held senior roles in global firms like IBM, Micro Focus, and ESI Group, she has led high-impact initiatives in talent management, performance improvement, and employee engagement.
               </p>
               <p data-aos="fade-right">
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen bookLorem Ipsum is
-                simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book
+              A certified Talent Management Professional and Organizational Development expert, Babitha combines strategic thinking with a people-centered mindset. Her passion lies in helping businesses scale smartly with the right HR frameworks. Now, through Sapience Minds, she offers Fractional CHRO leadership to startups and SMBs—ensuring HR isn’t just a function, but a strategic driver of business success.
               </p>
             </div>
           </div>
@@ -369,16 +348,13 @@ export const AboutPage = () => {
 
       <div className="Section3_Main_Container">
         <p className="Section3_Heading1" data-aos="fade-right">
-          Our Core Functions
+          Our Core Values
         </p>
         <p className="Section3_Heading2" data-aos="zoom-in">
-          Lorem Ipsum is simply dummy text
+        Rooted in Values, Driven by People
         </p>
         <p className="Section3_Heading_para" data-aos="fade-right">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book
+        At Sapience Minds, our work is guided by principles that reflect the very heart of Human Resources trust, empathy, impact, and growth. These values shape every solution we provide, ensuring that our clients receive not only expert guidance but also a people-first approach that scales with their vision.
         </p>
         <div className="Section3_Container_Icons_Container">
           {Content.map((item, i) => (
@@ -410,7 +386,7 @@ export const AboutPage = () => {
           </div>
           <div className="Sub_Missions">
             <h1>{AwardsCount}+</h1>
-            <p>Industry Awards</p>
+            <p>HR’s Trained</p>
           </div>
           <div className="Sub_Missions">
             <h1>{ClientCount}%</h1>
@@ -473,8 +449,8 @@ export const AboutPage = () => {
       <div className="Pre_Footer_Container">
         <PreFooter
           sourcepages="AboutUs"
-          Head="Unlock The Power Of Cloud HR Solutions"
-          Content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+          Head="Let’s Build Your People Strategy – Together"
+          Content="Your startup deserves more than just reactive HR. Whether you need structure, compliance, or a culture strategy, let’s have a conversation that moves your business forward. Book a discovery call or fill out the form and let’s shape a smarter, people-powered future for your company."
         />
       </div>
     </>
