@@ -7,4 +7,7 @@ export default defineConfig({
   optimizeDeps: {
     include: ['@supabase/supabase-js'], // Ensure it's included for optimization
   },
+  define: {
+    global: {}, // Define the global variable to avoid ReferenceError
+  },
 });
