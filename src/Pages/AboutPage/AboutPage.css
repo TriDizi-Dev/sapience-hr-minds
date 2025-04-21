@@ -214,7 +214,7 @@
 .Section3_Container_Icons_Container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     margin-top: 2vw;
     gap: 7vw;
 }
@@ -263,6 +263,7 @@
     font-size: 1.1vw;
     color: #000000;
     margin-top: 1vw;
+    height: 3.5vw;
 }
 
 .Cards_Name {
@@ -376,7 +377,7 @@
 .Content_Questions {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 6vw;
 }
 
@@ -615,6 +616,7 @@
 
     .Cards_Sub_head {
         font-size: 5vw;
+        height: fit-content;
     }
 
     .Cards_Name {

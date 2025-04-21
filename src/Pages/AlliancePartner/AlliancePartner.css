@@ -158,9 +158,9 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: start;
     margin-top: 4vw;
-    gap: 7vw;
+    gap: 1vw 7vw;
     position: relative;
 }
 
@@ -196,7 +196,7 @@
 
 .Horizontal_Alliance_row {
     border: .1vw solid #000000B2;
-    margin-top: 2.5vw;
+    margin-top: 0.5vw;
 }
 
 .Cards_Alliance_Sub_head {
