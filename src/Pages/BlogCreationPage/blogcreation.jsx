@@ -9,8 +9,7 @@ export const CreateBlog = () => {
   const [image, setImage] = useState(null);
   const [tags, setTags] = useState(""); // You can re-enable this if needed
   const [preview, setPreview] = useState(null);
-  const [blogs, setBlogs] = useState([]);
-  console.log(blogs,"blogs");
+  // const [blogs, setBlogs] = useState([]);
   
 
   const handleImageChange = (e) => {
@@ -70,22 +69,22 @@ export const CreateBlog = () => {
     }
   };
   
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      const { data, error } = await supabase
-        .from('blogs')
-        .select('*')
-        .order('created_at', { ascending: false });
+  // useEffect(() => {
+  //   const fetchBlogs = async () => {
+  //     const { data, error } = await supabase
+  //       .from('blogs')
+  //       .select('*')
+  //       .order('created_at', { ascending: false });
 
-      if (error) {
-        console.error('Error fetching blogs:', error);
-      } else {
-        setBlogs(data);
-      }
-    };
+  //     if (error) {
+  //       console.error('Error fetching blogs:', error);
+  //     } else {
+  //       setBlogs(data);
+  //     }
+  //   };
 
-    fetchBlogs();
-  }, []);
+  //   fetchBlogs();
+  // }, []);
   return (
     <>
       <div className="blog_creation_page">
@@ -139,7 +138,7 @@ export const CreateBlog = () => {
           </form>
         </div>
       </div>
-      <div className="blogs-container">
+      {/* <div className="blogs-container">
       {blogs.map((blog) => (
         <div key={blog.id} className="blog-card">
           <h2>{blog.title}</h2>
@@ -147,7 +146,7 @@ export const CreateBlog = () => {
           <p>{blog.content}</p>
         </div>
       ))}
-    </div>
+    </div> */}
     </>
   );
 };
