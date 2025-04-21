@@ -346,7 +346,7 @@
   box-shadow: 0px 10px 36px 0px #00000026;
   width: fit-content;
   margin: 0 auto;
-  margin-top: 5vw;
+  margin-top: 10vw;
   height: 33vw;
 }
 
@@ -539,15 +539,15 @@
   }
 
   .Middle_service {
-    top: 5vw;
+    top: 1vw;
   }
 
   .second_marginChanges {
-    top: 10vw;
+    top: 1vw;
   }
 
   .third_marginChanges {
-    margin-top: 9vw;
+    margin-top: 1vw;
   }
 
   .Service_last_secound_layer {

@@ -478,5 +478,5 @@ export const AboutPage = () => {
         />
       </div>
     </>
-  );
-};
+  )
+}
