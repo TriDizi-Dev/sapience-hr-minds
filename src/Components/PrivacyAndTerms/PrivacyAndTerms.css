@@ -138,4 +138,9 @@
         top: 50vw;
     }
 
+    .privacy_terms_content_para_inner p{
+        font-size: 3vw;
+
+    }
+
 }
