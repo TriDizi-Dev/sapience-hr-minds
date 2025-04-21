@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./careerCreation.css";
+import { supabase } from "../../supabase";
 
 const CareerCreation = () => {
   const [formData, setFormData] = useState({
@@ -21,10 +22,39 @@ const CareerCreation = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-  };
+  const handleSubmit = async (e) => {
+     e.preventDefault();
+   
+     if (!image) {
+       alert("Please select an image.");
+       return;
+     }
+   
+     const fileExt = image.name.split('.').pop();
+     const fileName = `${Date.now()}.${fileExt}`;
+   
+     try {
+   
+       const { error: insertError } = await supabase
+         .from('blogs')
+         .insert([{ title, content, image_url: imageUrl }]); // removed tags
+   
+       if (insertError) {
+         console.error('Blog insert error:', insertError);
+         alert("Error posting blog.");
+       } else {
+         alert('Blog posted successfully!');
+         setTitle('');
+         setContent('');
+         setImage(null);
+         setTags('');
+         setPreview(null);
+       }
+     } catch (err) {
+       console.error('Error during submission:', err);
+       alert('An error occurred. Please try again.');
+     }
+   };
 
   const cancelHandler = () => {
     setFormData({
@@ -71,7 +101,7 @@ const CareerCreation = () => {
                 value={formData.type}
                 className="career_input"
               >
-                className="career_input">
+                className="career_input"
                 <option value="Full Time">Full Time</option>
                 <option value="Part Time">Part Time</option>
                 <option value="Internship">Internship</option>
