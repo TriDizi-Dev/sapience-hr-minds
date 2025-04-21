@@ -88,7 +88,8 @@
 
 /* Liquid Fill Effect */
 .liquid {
-  background: linear-gradient(#7c5cfc 0 0) no-repeat calc(200% - var(--p, 0%)) 100% / 200% var(--p, 0.2em);
+  background: linear-gradient(#7c5cfc 0 0) no-repeat calc(200% - var(--p, 0%))
+    100% / 200% var(--p, 0.2em);
   transition: 0.3s var(--t, 0s),
     background-position 0.3s calc(0.3s - var(--t, 0s));
 }
@@ -628,10 +629,10 @@
 
 .layer5_card {
   width: 18vw;
-  height: 22vw;
+  /* height: 22vw; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 1vw;
   margin-top: 0vw;
@@ -660,16 +661,16 @@
 }
 
 .layer5_card_heading {
-  font-size: 1.1vw;
   font-weight: 600;
   text-align: center;
-  height: 4vw;
+  height: 3vw;
   /* margin-top: 1vw; */
   width: 18vw;
+  font-size: 1vw;
 }
 
 .layer5_card_text {
-  font-size: 1.2vw;
+  font-size: 1vw;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.7);
   width: 18vw;
@@ -687,11 +688,10 @@
   color: #fff;
   cursor: pointer;
 }
-.layer5_card_lernmore:hover{
+.layer5_card_lernmore:hover {
   box-shadow: 0 6px 10px rgba(124, 92, 252, 0.477);
   /* transform: scale(1.1); */
-  transition:0.3s linear;
-
+  transition: 0.3s linear;
 }
 
 .card_bottom_line {
@@ -699,20 +699,21 @@
   border-top: 0.1vw solid rgba(0, 0, 0, 0.7);
 }
 
-.layer5_card_heading {
-  font-size: 1.2vw;
-  font-weight: 600;
-}
-
 .layer5_card_text {
-  font-size: 1.2vw;
+  font-size: 0.9vw;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.7);
   width: 18vw;
+  height: 5vw;
   text-align: center;
 }
 
-
+.layer5_card:nth-child(5) .layer5_card_heading,
+.layer5_card:nth-child(6) .layer5_card_heading,
+.layer5_card:nth-child(7) .layer5_card_heading,
+.layer5_card:nth-child(8) .layer5_card_heading {
+  height: 3vw;
+}
 
 .layer6_part1 {
   text-align: center;
@@ -761,11 +762,10 @@
   border-radius: 1vw;
   margin-bottom: 4vw;
 }
-.layer6_card:hover{
-transform: scale(1.03);
-transition: .5s linear;
-box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-
+.layer6_card:hover {
+  transform: scale(1.03);
+  transition: 0.5s linear;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
 .layer6_card_logo {
@@ -822,7 +822,6 @@ box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
   border-radius: 2vw;
   margin: 1vw 0 0 0;
   cursor: pointer;
-
 }
 
 .card_bottom_logo,
@@ -889,12 +888,11 @@ box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.4);
   background-color: white;
 }
-.layer7_card:hover{
+.layer7_card:hover {
   transform: scale(1.03);
-  transition: .5s linear;
+  transition: 0.5s linear;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-  
-  }
+}
 
 .layer7_card_name {
   font-size: 1.2vw;
@@ -967,8 +965,6 @@ box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
   z-index: 999;
   background-color: transparent;
 }
-
-
 
 @media screen and (min-width: 320px) and (max-width: 720px) {
   .home_page_outer {
@@ -1299,7 +1295,8 @@ box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 
   .layer5_card_text {
     width: 60vw;
-    margin-top: 5xvw;
+    margin-top: 0vw;
+    height: fit-content;
   }
 
   .layer5_card_lernmore {
@@ -1308,8 +1305,9 @@ box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 
   .layer5_card {
     width: 90vw;
-    height: auto;
+    height: fit-content;
     margin-top: 7vw;
+    gap: 3vw;
   }
 
   .layer6_cards_outer,
@@ -1417,7 +1415,6 @@ box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
     font-size: 3.5vw;
   }
 
-
   .read_more_modal {
     width: 90vw;
     min-height: 1px;
@@ -1439,6 +1436,5 @@ box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
     border-radius: 2vw;
     margin: 1vw 0 0 0;
     cursor: pointer;
-
   }
 }

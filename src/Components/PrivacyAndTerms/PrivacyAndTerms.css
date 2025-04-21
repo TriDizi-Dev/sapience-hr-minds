@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 8vw;
+    margin-top: 6vw;
     position: relative;
 
 }
@@ -136,6 +136,11 @@
         width: 98vw;
         height: 150vw;
         top: 50vw;
+    }
+
+    .privacy_terms_content_para_inner p{
+        font-size: 3vw;
+
     }
 
 }

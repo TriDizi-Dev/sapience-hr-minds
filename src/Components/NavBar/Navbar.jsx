@@ -557,7 +557,7 @@ export const Navbar = () => {
                 </li>
               </Link> */}
 
-              <Link to="/hrlearning" className="nav_link">
+              {/* <Link to="/hrlearning" className="nav_link">
                 <li
                   className="mobile_nav_items"
                   onClick={() => handleNavList("hrlearning")}
@@ -571,7 +571,7 @@ export const Navbar = () => {
                     ></div>
                   </div>
                 </li>
-              </Link>
+              </Link> */}
 
               <Link to="/blogs" className="nav_link">
                 <li

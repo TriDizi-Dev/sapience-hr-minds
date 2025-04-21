@@ -8,7 +8,7 @@ import { PreFooter } from "../PreFooter/PreFooter";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-function PrivacyAndTerms({
+function TermsAndConditions({
   BannerHeading,
   BannerText,
   subheading1,
@@ -18,6 +18,7 @@ function PrivacyAndTerms({
   subheading5,
   subheading6,
   subheading7,
+  subheading8,
   text1,
   text2,
   text3,
@@ -25,19 +26,7 @@ function PrivacyAndTerms({
   text5,
   text6,
   text7,
-
-  list1,
-  list2,
-  list3,
-  list4,
-  list5,
-  list6,
-  list7,
-  list8,
-  list9,
-  list10,
-  list11,
-  list12,
+  text8,
 }) {
   useEffect(() => {
     AOS.init({
@@ -86,43 +75,12 @@ function PrivacyAndTerms({
             {text2}
           </p>
 
-          <div className="content_list_items_outer">
-            <li className="content_list_items" data-aos="fade-right">
-              {list1}
-            </li>
-            <li className="content_list_items" data-aos="fade-right">
-              {list2}
-            </li>
-            <li className="content_list_items" data-aos="fade-right">
-              {list3}
-            </li>
-            <li className="content_list_items" data-aos="fade-right">
-              {list4}
-            </li>
-          </div>
           <h2 className="privacy_terms_content_heading" data-aos="zoom-in">
             {subheading3}
           </h2>
           <p className="privacy_terms_content_para" data-aos="fade-right">
             {text3}
           </p>
-          <div className="content_list_items_outer">
-            <li className="content_list_items" data-aos="fade-right">
-              {list5}
-            </li>
-            <li className="content_list_items" data-aos="fade-right">
-              {list6}
-            </li>
-            <li className="content_list_items" data-aos="fade-right">
-              {list7}
-            </li>
-            <li className="content_list_items" data-aos="fade-right">
-              {list8}
-            </li>
-            <li className="content_list_items" data-aos="fade-right">
-              {list9}
-            </li>
-          </div>
 
           <h2 className="privacy_terms_content_heading" data-aos="zoom-in">
             {subheading4}
@@ -130,7 +88,6 @@ function PrivacyAndTerms({
           <p className="privacy_terms_content_para" data-aos="fade-right">
             {text4}
           </p>
-            
 
           <h2 className="privacy_terms_content_heading" data-aos="zoom-in">
             {subheading5}
@@ -145,18 +102,6 @@ function PrivacyAndTerms({
           <p className="privacy_terms_content_para" data-aos="fade-right">
             {text6}
           </p>
-          <div className="content_list_items_outer">
-            <li className="content_list_items" data-aos="fade-right">
-              {list10}
-            </li>
-            <li className="content_list_items" data-aos="fade-right">
-              {list11}
-            </li>
-            <li className="content_list_items" data-aos="fade-right">
-              {list12}
-            </li>
-          
-          </div>
 
           <h2 className="privacy_terms_content_heading" data-aos="zoom-in">
             {subheading7}
@@ -164,18 +109,24 @@ function PrivacyAndTerms({
           <p className="privacy_terms_content_para" data-aos="fade-right">
             {text7}
           </p>
-            
-          <div className="privacy_terms_content_para" >
-          <h4 className="privacy_terms_content_heading" data-aos="zoom-in">Contact</h4>
-          <div data-aos="fade-right" className="privacy_terms_content_para_inner">
+          <h2 className="privacy_terms_content_heading" data-aos="zoom-in">
+            {subheading8}
+          </h2>
+          <p className="privacy_terms_content_para" data-aos="fade-right">
+            {text8}
+          </p>
 
-          <p>For any privacy-related queries, reach out to us at:</p>
-          <p>Email: reachus@sapienceminds.com</p>
-          <p>Phone: +91 90360 62378</p>
+          <div className="privacy_terms_content_para" >
+            <h4 className="privacy_terms_content_heading" data-aos="zoom-in">
+              Contact
+            </h4>
+            <div data-aos="fade-right" className="privacy_terms_content_para_inner">
+              <p>For any privacy-related queries, reach out to us at:</p>
+              <p>Email: reachus@sapienceminds.com</p>
+              <p>Phone: +91 90360 62378</p>
+            </div>
           </div>
         </div>
-        </div>
-       
       </div>
 
       <div className="privacy_terms_prefooter">
@@ -189,4 +140,4 @@ function PrivacyAndTerms({
   );
 }
 
-export default PrivacyAndTerms;
+export default TermsAndConditions;

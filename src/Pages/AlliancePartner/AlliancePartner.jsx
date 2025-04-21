@@ -12,7 +12,7 @@ import Smallicon4 from "../../assets/AboutPage/Smallicon4.svg";
 import man from "../../assets/HomePage/man.svg";
 import { PreFooter } from "../../Components/PreFooter/PreFooter";
 import AOS from "aos";
-import "aos/dist/aos.css";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 
 import man_1 from "../../assets/HomePage/Testimony_1.png";
 import man_2 from "../../assets/HomePage/man_2.png";
@@ -62,56 +62,56 @@ export const AlliancePartner = () => {
       Logo: Smallicon1,
       Head: "Learn More",
       subHead: "Powerful Dashboard",
-      para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      para: "Stay compliant and confident. We design clear, startup-ready HR policies that protect your business and people alike.",
     },
     {
       id: 2,
       Logo: Smallicon2,
       Head: "Learn More",
       subHead: "Powerful Dashboard",
-      para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      para: "Whether you're scaling fast or setting up HR from scratch, our strategic insights align people decisions with business goals.",
     },
     {
       id: 3,
       Logo: Smallicon3,
       Head: "Learn More",
       subHead: "Powerful Dashboard",
-      para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      para: "Get executive-level HR expertise without the full-time cost. We lead your HR function remotely with efficiency and care.",
     },
     {
       id: 4,
       Logo: Smallicon4,
       Head: "Learn More",
       subHead: "Powerful Dashboard",
-      para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      para: "Hiring shouldn’t be a hassle. From job role design to final offer, we craft a seamless talent journey for your team.",
     },
     {
       id: 5,
       Logo: Smallicon1,
       Head: "Learn More",
       subHead: "Powerful Dashboard",
-      para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      para: "Fuel performance and growth with development plans, reviews, and leadership pipelines built to scale with your startup.",
     },
     {
       id: 6,
       Logo: Smallicon2,
       Head: "Learn More",
       subHead: "Powerful Dashboard",
-      para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      para: "Create a culture employees love. We craft engagement strategies that foster loyalty, purpose, and long-term retention.",
     },
     {
       id: 7,
       Logo: Smallicon3,
       Head: "Learn More",
       subHead: "Powerful Dashboard",
-      para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      para: "Finding the right leaders is critical. We connect you with proven professionals who match your mission and mindset.",
     },
     {
       id: 8,
       Logo: Smallicon4,
       Head: "Learn More",
       subHead: "Powerful Dashboard",
-      para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      para: "Boost employee satisfaction with thoughtfully designed insurance and perks that support health, security, and morale.",
     },
   ];
 
@@ -183,33 +183,20 @@ export const AlliancePartner = () => {
           <img src={HeroImage} alt="HeroImage"></img>
         </p>
         <div className="Image_Upper_Text_Container" data-aos="zoom-in">
-          <p className="Header_Text">Lorem ipsum dolor</p>
+          <p className="Header_Text">Expert Who Elevate Our Mission</p>
           <p className="Header_Sub_Text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+          At Sapience Minds, we collaborate with handpicked industry leaders who bring specialized knowledge and proven excellence to the table. These trusted partners expand our capabilities and ensure that every solution we offer is backed by expertise, innovation, and impact—giving your business access to the very best in HR, leadership, compliance, and beyond.
           </p>
         </div>
       </div>
       <div className="Section2_Layer_AlliancePartner">
         <div className="Left_Container_AlliancePartner" data-aos="fade-right">
-          <p className="Heading_text_AlliancePartner">Lorem ipsum dolor </p>
+          <p className="Heading_text_AlliancePartner">Alliance Partner</p>
           <p className="para1_text_AlliancePartner">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book Lorem Ipsum is simply
-            dummy text of the printing and typesetting industry. Lorem Ipsum is
-            simply dummy text of the printing and typesetting industry
+          At Sapience Minds, we proudly collaborate with Krishnan Ravishankar, our Alliance Partner and Principal Architect – Behavior & Performance Optimization (Solutions Partner – Harrison Assessments, India). 
           </p>
           <p className="para2_text_AlliancePartner">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book Lorem Ipsum is simply
-            dummy text of the printing and typesetting industry. Lorem Ipsum is
-            simply dummy text of the printing and typesetting industry.
+          With over 40 years of global expertise across core HR services, organizational development, training, and industrial relations, Krishnan has empowered clients across India, the USA, Africa, Singapore, Malaysia, and the Middle East. His experience with top corporate and multinational environments brings exceptional depth to our Fractional CHRO offerings helping startups and growing businesses enhance their people performance and unlock measurable growth.
           </p>
         </div>
         <div className="Right_Container_AlliancePartner">
@@ -220,26 +207,23 @@ export const AlliancePartner = () => {
           <p className="Person_Cont_img">
             <img src={PersonImage} alt="PersonImage" data-aos="zoom-in"></img>
           </p>
-          <div className="alliance_right_said content">
+          <div className="alliance_right_said content" data-aos="zoom-in">
             <h3>Krishnan Ravishankar</h3>
-            <p>Principal Architect</p>
-            <p>Behavior & Performance Optimisation</p>
-            <p>(Solutions Partner- Harrison Assessments)</p>
+            <p>Principal Architect| Behavior</p>
+            <p> & Performance Optimisation</p>
+            {/* <p>(Solutions Partner- Harrison Assessments)</p> */}
           </div>
         </div>
       </div>
       <div className="Section3_Alliance_Main_Container">
         <p className="Section3_Alliance_Heading1" data-aos="fade-right">
-          Our Core Functions
+        Our Core Services
         </p>
         <p className="Section3_Alliance_Heading2" data-aos="zoom-in">
-          Lorem Ipsum is simply dummy text
+        Fractional CHRO Services Tailored for Startup Success
         </p>
         <p className="Section3_Alliance_Heading_para" data-aos="fade-right">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book
+        At Sapience Minds, we offer a full suite of HR services on a flexible, fractional basis, giving you access to strategic leadership without the full-time cost. From HR policy setup to talent acquisition, compliance, performance management, and culture building. We align your people strategy with your business goals, every step of the way.
         </p>
         <div className="Section3_Alliance_Container_Icons_Container">
           {Content.map((item, i) => (
@@ -468,8 +452,8 @@ export const AlliancePartner = () => {
         <div className="Alliance_Pre_Footer_Container">
           <PreFooter
           sourcepages="AlliancePartner"
-            Head="Unlock The Power Of Cloud HR Solutions"
-            Content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+            Head="Let’s Build Your People Strategy – Together"
+            Content="Your startup deserves more than just reactive HR. Whether you need structure, compliance, or a culture strategy, let’s have a conversation that moves your business forward. Book a discovery call or fill out the form and let’s shape a smarter, people-powered future for your company."
           />
         </div>
       </div>

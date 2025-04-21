@@ -36,7 +36,7 @@ import blog2 from "../../assets/Blogs/image2.png";
 import blog3 from "../../assets/Blogs/image3.png";
 
 function Carrier() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   useEffect(() => {
     AOS.init({
       offset: 200,
@@ -106,7 +106,6 @@ function Carrier() {
   };
 
   const handleSignleBlog = (ev, id) => {
-
     navigate(`/blog/${id}`, { state: ev });
   };
 
@@ -279,8 +278,7 @@ function Carrier() {
               Be a Part of Our Journey
             </h1>
             <p className="carrier_banner_para">
-              Integrate once and never worry about scaling again. Never deal
-              with fragmented Layer 2 systems.
+            Join a purpose-driven HR consulting firm where innovation, growth, and people-first values shape every career. At Sapience Minds, your expertise finds meaningful impact.
             </p>
           </div>
           <div className="carriers_banner_buttons">
@@ -316,10 +314,9 @@ function Carrier() {
                   <img src={logo1} alt="logo1" className="layer2_card_logo" />
                 </div>
                 <div className="layer2_card_text">
-                  <h6 className="layer2_card_heding">Working Remotely</h6>
+                  <h6 className="layer2_card_heding">Expert Training</h6>
                   <div className="layer2_card_para">
-                    Ut sed eros finibus,placerat orci id,dapibus mauris.
-                    Vestibulum consequant hendrerit lacus.
+                  Sharpen your HR expertise with hands-on learning from industry leaders and real-world projects.
                   </div>
                 </div>
               </div>
@@ -328,10 +325,9 @@ function Carrier() {
                   <img src={logo2} alt="logo2" className="layer2_card_logo" />
                 </div>
                 <div className="layer2_card_text">
-                  <h6 className="layer2_card_heding">Working Remotely</h6>
+                  <h6 className="layer2_card_heding">Performance Bonus</h6>
                   <div className="layer2_card_para">
-                    Ut sed eros finibus,placerat orci id,dapibus mauris.
-                    Vestibulum consequant hendrerit lacus.
+                  Get rewarded for results with performance-based incentives that recognize your contributions.
                   </div>
                 </div>
               </div>
@@ -340,10 +336,9 @@ function Carrier() {
                   <img src={logo3} alt="logo3" className="layer2_card_logo" />
                 </div>
                 <div className="layer2_card_text">
-                  <h6 className="layer2_card_heding">Working Remotely</h6>
+                  <h6 className="layer2_card_heding">Health & Insurance</h6>
                   <div className="layer2_card_para">
-                    Ut sed eros finibus,placerat orci id,dapibus mauris.
-                    Vestibulum consequant hendrerit lacus.
+                  We care for your well-being comprehensive health and insurance coverage is part of our promise.
                   </div>
                 </div>
               </div>
@@ -352,10 +347,9 @@ function Carrier() {
                   <img src={logo4} alt="logo4" className="layer2_card_logo" />
                 </div>
                 <div className="layer2_card_text">
-                  <h6 className="layer2_card_heding">Working Remotely</h6>
+                  <h6 className="layer2_card_heding">Continues Learning</h6>
                   <div className="layer2_card_para">
-                    Ut sed eros finibus,placerat orci id,dapibus mauris.
-                    Vestibulum consequant hendrerit lacus.
+                  Access resources, tools, and mentorship that encourage constant growth and career development.
                   </div>
                 </div>
               </div>
@@ -364,10 +358,9 @@ function Carrier() {
                   <img src={logo5} alt="logo5" className="layer2_card_logo" />
                 </div>
                 <div className="layer2_card_text">
-                  <h6 className="layer2_card_heding">Working Remotely</h6>
+                  <h6 className="layer2_card_heding">Parental Leave</h6>
                   <div className="layer2_card_para">
-                    Ut sed eros finibus,placerat orci id,dapibus mauris.
-                    Vestibulum consequant hendrerit lacus.
+                  Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat hendrerit lacus. 
                   </div>
                 </div>
               </div>
@@ -376,10 +369,9 @@ function Carrier() {
                   <img src={logo6} alt="logo6" className="layer2_card_logo" />
                 </div>
                 <div className="layer2_card_text">
-                  <h6 className="layer2_card_heding">Working Remotely</h6>
+                  <h6 className="layer2_card_heding">Free Lunch</h6>
                   <div className="layer2_card_para">
-                    Ut sed eros finibus,placerat orci id,dapibus mauris.
-                    Vestibulum consequant hendrerit lacus.
+                  Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat hendrerit lacus. 
                   </div>
                 </div>
               </div>
@@ -392,8 +384,7 @@ function Carrier() {
         <div className="carrier_layer3_outer" data-aos="zoom-in-up">
           <div className="carrier_layer3_banner">
             <p className="layer3_banner_para">
-              Suspendisse eleifend nunc non varius rhoncus. Nam posuere accumsan
-              porta.
+            At Sapience Minds, Driven by purpose, powered by people where HR innovation meets meaningful careers.
             </p>
             <div className="layer3_banner_button_outer">
               <button>More About Us</button>

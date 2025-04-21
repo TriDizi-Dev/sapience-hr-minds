@@ -67,7 +67,7 @@ export const HomePage = () => {
       Logo: Smallicon1,
       Head: "Learn More",
       subHead: "HR Compliance and Policy Development",
-      para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      para: "Stay compliant and confident. We design clear, startup-ready HR policies that protect your business and people alike.",
       path: "/hr-compliance",
     },
     {
@@ -75,7 +75,7 @@ export const HomePage = () => {
       Logo: Smallicon2,
       Head: "Learn More",
       subHead: "Customized HR Consulting and Advisory Services",
-      para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      para: "Whether you're scaling fast or setting up HR from scratch, our strategic insights align people decisions with business goals.",
       path: "/hr-consulting",
     },
     {
@@ -83,7 +83,7 @@ export const HomePage = () => {
       Logo: Smallicon3,
       Head: "Learn More",
       subHead: "Virtual CHRO and Outsourcing of HR Operations",
-      para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      para: "Get executive-level HR expertise without the full-time cost. We lead your HR function remotely with efficiency and care.",
       path: "/virtual-chro-and-outsourcing",
     },
     {
@@ -91,7 +91,7 @@ export const HomePage = () => {
       Logo: Smallicon4,
       Head: "Learn More",
       subHead: "Talent Acquisition Solutions",
-      para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      para: "Hiring shouldn’t be a hassle. From job role design to final offer, we craft a seamless talent journey for your team.",
       path: "/talent-acquisition-solutions",
     },
     {
@@ -99,7 +99,7 @@ export const HomePage = () => {
       Logo: Smallicon1,
       Head: "Learn More",
       subHead: "Talent Management",
-      para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      para: "Fuel performance and growth with development plans, reviews, and leadership pipelines built to scale with your startup.",
       path: "/talent-management",
     },
     {
@@ -107,7 +107,7 @@ export const HomePage = () => {
       Logo: Smallicon2,
       Head: "Learn More",
       subHead: "Talent Engagement & Retention",
-      para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      para: "Create a culture employees love. We craft engagement strategies that foster loyalty, purpose, and long-term retention.",
       path: "/talent-engagement",
     },
     {
@@ -115,7 +115,7 @@ export const HomePage = () => {
       Logo: Smallicon3,
       Head: "Learn More",
       subHead: "Recruitment of Leadership & Mid-Level Team",
-      para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      para: "Finding the right leaders is critical. We connect you with proven professionals who match your mission and mindset.",
       path: "/recruitment-of-leadership",
     },
     {
@@ -123,7 +123,7 @@ export const HomePage = () => {
       Logo: Smallicon4,
       Head: "Learn More",
       subHead: "Employee Insurance & Benefits",
-      para: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      para: "Boost employee satisfaction with thoughtfully designed insurance and perks that support health, security, and morale.",
       path: "/employee-insurance-and-benefits",
     },
   ];
@@ -394,16 +394,13 @@ export const HomePage = () => {
     <div className="home_main">
       <div className="home_page_outer">
         <div className="home_page_left">
-          <p className="home_samll_text">Recruit - Onboard - Manage</p>
+          <p className="home_samll_text">Virtula HR - Recruit - Manage</p>
           <div className="homepage_headig_text">
             <h1 className="home_page_heading">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+            Your Trusted Fractional CHRO Partner for Scalable HR Growth
             </h1>
             <p className="home_page_para">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui
-              voluptates tenetur facilis ex, corrupti officiis ipsa! Dignissimos
-              minima dolore nesciunt.
+            At Sapience Minds, we offer expert HR solutions as a Fractional CHRO, helping startups build strong foundations, align people with purpose, and scale confidently with compliant and agile HR strategies.
             </p>
           </div>
           <div className="homepage_button_outer">
@@ -539,8 +536,7 @@ export const HomePage = () => {
       <div className="homepage_layer2_outer">
         <div className="layer2_outer">
           <p className="layer2_top_text">
-            Trusted company over 1,000 business rely on humanet
-          </p>
+          Trusted Companies to scale their Business through HR domain          </p>
           <div className="layer2_logos_outer">
             <div className="layer2_logos_inner">
               <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
@@ -559,16 +555,13 @@ export const HomePage = () => {
         <div className="homepage_layer3_outer">
           <div className="homepage_layer3_part1">
             <h6 className="layer3_part1_heading" data-aos="fade-left">
-              About Us
+            About Me
             </h6>
             <h1 className="layer3_part1_heading2" data-aos="zoom-in">
-              Lorem Ipsum is simply dummy text
+            Meet Babitha – Your Fractional CHRO and Growth Enabler
             </h1>
             <p className="layer3_part1_para" data-aos="fade-right">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book
+            With 23+ years of HR leadership, I specialize in helping startups and SMBs design people-first, performance-driven cultures. As a Fractional CHRO, I bring executive-level HR expertise without the full-time cost — offering structure, compliance, and strategy tailored for fast-growing teams.
             </p>
           </div>
           <div className="homepage_layer3_part2">
@@ -591,14 +584,10 @@ export const HomePage = () => {
           <div className="homepage_layer4_left" data-aos="fade-right">
             <p className="homepage_layer4_heading">Our Core Values</p>
             <h1 className="homepage_layer4_heading2">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+            Guided by Purpose, Driven by People
             </h1>
             <p className="homepage_layer4_para">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book
+            At Sapience Minds, our values are the foundation of every partnership. We believe in integrity, collaboration, and a relentless commitment to empowering startups with people-first HR strategies that deliver real impact. Our approach is empathetic, strategic, and always aligned with your business goals.
             </p>
 
             <div className="homepage_layer4_cards_outer">
@@ -612,11 +601,10 @@ export const HomePage = () => {
                 </div>
                 <h3 className="layer4_card_heading">
                   {/* Powerful Dashboard */}
-                  Vision
+                  Our Vision
                 </h3>
                 <p className="layer4_card_para">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
+                To be the most trusted HR partner for startups and emerging businesses, enabling sustainable growth through strategic people practices.
                 </p>
               </div>
               <div className="homepage_layer4_card">
@@ -627,10 +615,9 @@ export const HomePage = () => {
                     className="layer4_logo"
                   />
                 </div>
-                <h3 className="layer4_card_heading">Mission</h3>
+                <h3 className="layer4_card_heading">Our Mission </h3>
                 <p className="layer4_card_para">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
+                To deliver flexible, executive-level HR solutions that empower founders, nurture culture, and scale teams, one smart decision at a time.  
                 </p>
               </div>
             </div>
@@ -645,16 +632,13 @@ export const HomePage = () => {
         <div className="homepage_layer5_outer">
           <div className="layer5_part1">
             <p className="layer5_part1_heading" data-aos="fade-right">
-              Our Core Values
+            Our Core Services
             </p>
             <h1 className="layer5_part1_heading2" data-aos="zoom-in">
-              Lorem Ipsum is simply dummy text
+            Fractional CHRO Services Tailored for Startup Success
             </h1>
             <p className="layer5_part1_para" data-aos="fade-right">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book
+            At Sapience Minds, we offer a full suite of HR services on a flexible, fractional basis, giving you access to strategic leadership without the full-time cost. From HR policy setup to talent acquisition, compliance, performance management, and culture building. We align your people strategy with your business goals, every step of the way.
             </p>
           </div>
           <div className="layer5_cards_outer">
@@ -876,8 +860,8 @@ export const HomePage = () => {
       <div className="home_page_prefooter" data-aos="zoom-in">
         <PreFooter
           sourcepages="HomePage"
-          Head="Lorem Ipsum is simply dummy text of the"
-          Content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+          Head="Let’s Build Your People Strategy – Together"
+          Content="Your startup deserves more than just reactive HR. Whether you need structure, compliance, or a culture strategy, let’s have a conversation that moves your business forward. Book a discovery call or fill out the form and let’s shape a smarter, people-powered future for your company."
         />
       </div>
     </div>
