@@ -3,7 +3,16 @@ import "./blogcreation.css";
 import { Editor } from "react-draft-wysiwyg";
 import { EditorState, convertToRaw } from "draft-js";
 import draftToHtml from "draftjs-to-html";
-import { storage, ref, push, set, storageRef, uploadBytes, getDownloadURL, database } from "../../Firebase/firebase"; // Import your Firebase functions
+import {
+  storage,
+  ref,
+  push,
+  set,
+  storageRef,
+  uploadBytes,
+  getDownloadURL,
+  database,
+} from "../../Firebase/firebase"; // Import your Firebase functions
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
 export const CreateBlog = () => {
@@ -12,7 +21,7 @@ export const CreateBlog = () => {
   const [image, setImage] = useState(null);
   const [preview, setPreview] = useState(null);
   const [authorName, setAuthorName] = useState("");
-  const [DepartmentOfblog,setDepartmentOfblog] = useState("")
+  const [DepartmentOfblog, setDepartmentOfblog] = useState("");
   const [blogContent, setBlogContent] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
@@ -38,23 +47,20 @@ export const CreateBlog = () => {
     e.preventDefault();
     if (isSubmitting) return;
     setIsSubmitting(true);
-  
+
     if (!image) {
       alert("Please select an image.");
       setIsSubmitting(false);
       return;
     }
-  
+
     try {
       const imageRef = storageRef(storage, `blogs/${Date.now()}-${image.name}`);
-  console.log(imageRef,"lkjhgfddfgh");
-  
+
       const uploadTask = await uploadBytes(imageRef, image);
-      console.log('Image upload result:', uploadTask);
-  
+
       const imageUrl = await getDownloadURL(uploadTask.ref);
-      console.log(imageUrl, "imageUrlimageUrl");
-  
+
       const newBlogRef = push(ref(database, "blogs/hr-minds"));
       await set(newBlogRef, {
         title,
@@ -64,7 +70,7 @@ export const CreateBlog = () => {
         author_name: authorName,
         created_at: new Date().toISOString(),
       });
-  
+
       alert("Blog posted successfully!");
       setTitle("");
       setContent("");
@@ -79,7 +85,6 @@ export const CreateBlog = () => {
       setIsSubmitting(false);
     }
   };
-  
 
   return (
     <div className="blog_creation_page">
@@ -88,45 +93,58 @@ export const CreateBlog = () => {
           <form className="blog-form" onSubmit={handleSubmit}>
             <h2>Create a New Blog</h2>
 
-            <label htmlFor="title">Title</label>
-            <input
-              id="title"
-              type="text"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              required
-            />
+            <div className="blog-form-group">
+              <div className="blog-form-group-input">
+                <label htmlFor="title">Title</label>
+                <input
+                  id="title"
+                  type="text"
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="blog-form-group-input">
+                <label htmlFor="authorName">Author Name</label>
+                <input
+                  id="authorName"
+                  type="text"
+                  value={authorName}
+                  onChange={(e) => setAuthorName(e.target.value)}
+                />
+              </div>
+            </div>
 
-            <label htmlFor="authorName">Author Name</label>
-            <input
-              id="authorName"
-              type="text"
-              value={authorName}
-              onChange={(e) => setAuthorName(e.target.value)}
-            />
-            <label htmlFor="DepartName">Department Name</label>
-            <input
-              id="DepartName"
-              type="text"
-              value={DepartmentOfblog}
-              onChange={(e) => setDepartmentOfblog(e.target.value)}
-            />
+            <div className="blog-form-group">
+              <div className="blog-form-group-input">
+                <label htmlFor="DepartName">Department Name</label>
+                <input
+                  id="DepartName"
+                  type="text"
+                  value={DepartmentOfblog}
+                  onChange={(e) => setDepartmentOfblog(e.target.value)}
+                />
+              </div>
 
-            <label htmlFor="content">Description</label>
-            <textarea
-              id="content"
-              value={content}
-              onChange={(e) => setContent(e.target.value)}
-              rows="4"
-              required
-            />
+              <div className="blog-form-group-input">
+                <label htmlFor="content">Description</label>
+                <textarea
+                  id="content"
+                  value={content}
+                  onChange={(e) => setContent(e.target.value)}
+                  rows="3"
+                  required
+                />
+              </div>
+            </div>
 
-            <label htmlFor="blogContent">Blog Content</label>
+           <div>
+           <label htmlFor="blogContent">Blog Content</label>
             <Editor
               editorState={editorState}
               onEditorStateChange={onEditorStateChange}
-              wrapperClassName="wrapper-class"
-              editorClassName="editor-class"
+              wrapperClassName="wrapper-class-1"
+              editorClassName="editor-clas-1"
               toolbarClassName="toolbar-class"
               toolbar={{
                 options: ["inline", "list", "link"],
@@ -134,6 +152,7 @@ export const CreateBlog = () => {
                 list: { options: ["unordered", "ordered"] },
               }}
             />
+           </div>
 
             <label htmlFor="image">Upload Image</label>
             <input
@@ -142,7 +161,9 @@ export const CreateBlog = () => {
               accept="image/*"
               onChange={handleImageChange}
             />
-            {preview && <img src={preview} alt="Preview" className="preview-img" />}
+            {preview && (
+              <img src={preview} alt="Preview" className="preview-img" />
+            )}
 
             <button type="submit" disabled={isSubmitting}>
               {isSubmitting ? "Publishing..." : "Publish Blog"}
