@@ -103,6 +103,7 @@
     width:72vw;
     margin-top:1.3vw;
     color: rgba(12, 12, 13, 1);
+    margin-left: 1vw;
 }
 .single_layer3_blogs_outer{
     display: flex;
