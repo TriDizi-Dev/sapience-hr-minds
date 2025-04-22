@@ -51,7 +51,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link, useNavigate } from "react-router-dom";
 import { ImCross } from "react-icons/im";
-
+import { database, ref, get } from "../../Firebase/firebase";
 import { Helmet } from "react-helmet-async";
 
 export const HomePage = () => {
@@ -59,6 +59,9 @@ export const HomePage = () => {
   const [readMore, setReadMore] = useState(false);
   const [singleTestimonial, setSingleTestimonial] = useState(null);
   const swiperRef = useRef(null);
+  const [Blogs, setBlogs] = useState([]);
+  console.log(Blogs, "BlogsBlogs");
+
   useEffect(() => {
     AOS.init({
       offset: 200,
@@ -200,111 +203,111 @@ export const HomePage = () => {
     },
   ];
 
-  const Blogs = [
-    {
-      id: 1,
-      bannerheading:
-        "The Importance of Workforce Upskilling and Reskilling in Today’s Economy",
-      subname: "Human Resources",
-      bannertext: `In today’s rapidly evolving economy, workforce upskilling and reskilling have become crucial for organizations aiming to stay competitive.`,
-      explore: "Explore More",
-      path: "/blog",
-      img: blog1,
-      toptext: "By Babitha on April 24, 2025 - 5 min read",
+  // const Blogs = [
+  //   {
+  //     id: 1,
+  //     bannerheading:
+  //       "The Importance of Workforce Upskilling and Reskilling in Today’s Economy",
+  //     subname: "Human Resources",
+  //     bannertext: `In today’s rapidly evolving economy, workforce upskilling and reskilling have become crucial for organizations aiming to stay competitive.`,
+  //     explore: "Explore More",
+  //     path: "/blog",
+  //     img: blog1,
+  //     toptext: "By Babitha on April 24, 2025 - 5 min read",
 
-      firstheading: "Introduction to Workforce Upskilling and Reskilling",
-      secondheading: "The Benefits of Upskilling",
-      thirdheading: "The Need for Reskilling",
-      fourthheading:
-        "Implementing Effective Upskilling and Reskilling Programs",
+  //     firstheading: "Introduction to Workforce Upskilling and Reskilling",
+  //     secondheading: "The Benefits of Upskilling",
+  //     thirdheading: "The Need for Reskilling",
+  //     fourthheading:
+  //       "Implementing Effective Upskilling and Reskilling Programs",
 
-      firstpara:
-        "In today’s rapidly evolving economy, workforce upskilling and reskilling have become crucial for organizations aiming to stay competitive. As technology advances and market demands shift, employees need to acquire new skills or enhance existing ones to meet these changes effectively.",
-      secondpara:
-        "Upskilling refers to providing current employees with additional training to learn new skills relevant to their current job roles. This practice not only helps employees stay updated with the latest industry trends but also boosts their confidence and productivity. For organizations, upskilling can lead to increased innovation, higher employee retention rates, and a more agile workforce.",
-      thirdpara:
-        "Reskilling, on the other hand, involves training employees to take on entirely new roles within the organization. This is particularly important when certain job functions become obsolete due to technological advancements or shifts in market needs. Reskilling ensures that valuable employees can transition to new positions, thereby retaining institutional knowledge and reducing turnover costs.",
-      fourthpara:
-        "To implement effective upskilling and reskilling programs, organizations should first conduct a skills gap analysis to identify areas where training is needed. Collaborating with educational institutions and leveraging online learning platforms can provide employees with access to high-quality training resources. Additionally, fostering a culture of continuous learning within the organization can encourage employees to take charge of their professional development.",
+  //     firstpara:
+  //       "In today’s rapidly evolving economy, workforce upskilling and reskilling have become crucial for organizations aiming to stay competitive. As technology advances and market demands shift, employees need to acquire new skills or enhance existing ones to meet these changes effectively.",
+  //     secondpara:
+  //       "Upskilling refers to providing current employees with additional training to learn new skills relevant to their current job roles. This practice not only helps employees stay updated with the latest industry trends but also boosts their confidence and productivity. For organizations, upskilling can lead to increased innovation, higher employee retention rates, and a more agile workforce.",
+  //     thirdpara:
+  //       "Reskilling, on the other hand, involves training employees to take on entirely new roles within the organization. This is particularly important when certain job functions become obsolete due to technological advancements or shifts in market needs. Reskilling ensures that valuable employees can transition to new positions, thereby retaining institutional knowledge and reducing turnover costs.",
+  //     fourthpara:
+  //       "To implement effective upskilling and reskilling programs, organizations should first conduct a skills gap analysis to identify areas where training is needed. Collaborating with educational institutions and leveraging online learning platforms can provide employees with access to high-quality training resources. Additionally, fostering a culture of continuous learning within the organization can encourage employees to take charge of their professional development.",
 
-      listitems1: "Non magni quisquam",
-      listitems2: "Eum aperiam facilis",
-      listitems3: "Id quibusdam corporis et voluptate minus",
-      listitems4: "Qui internos impedit vel unde",
-    },
-    {
-      id: 2,
-      bannerheading: "The Role of HR Analytics in Data-Driven Decision Making",
-      subname: "Human Resources",
-      bannertext: `Human Resources (HR) analytics, also known as people analytics, involves gathering, analyzing, and interpreting data related to human resources. `,
-      explore: "Explore More",
-      path: "/blog",
-      img: blog2,
-      toptext: "By Babitha on April 25, 2025 - 4 min read",
+  //     listitems1: "Non magni quisquam",
+  //     listitems2: "Eum aperiam facilis",
+  //     listitems3: "Id quibusdam corporis et voluptate minus",
+  //     listitems4: "Qui internos impedit vel unde",
+  //   },
+  //   {
+  //     id: 2,
+  //     bannerheading: "The Role of HR Analytics in Data-Driven Decision Making",
+  //     subname: "Human Resources",
+  //     bannertext: `Human Resources (HR) analytics, also known as people analytics, involves gathering, analyzing, and interpreting data related to human resources. `,
+  //     explore: "Explore More",
+  //     path: "/blog",
+  //     img: blog2,
+  //     toptext: "By Babitha on April 25, 2025 - 4 min read",
 
-      firstheading: "Introduction to HR Analytics",
-      secondheading: "Benefits of Data-Driven Decision Making",
-      thirdheading: "Implementing HR Analytics",
-      fourthheading: "Challenges and Considerations",
+  //     firstheading: "Introduction to HR Analytics",
+  //     secondheading: "Benefits of Data-Driven Decision Making",
+  //     thirdheading: "Implementing HR Analytics",
+  //     fourthheading: "Challenges and Considerations",
 
-      firstpara:
-        "Human Resources (HR) analytics, also known as people analytics, involves gathering, analyzing, and interpreting data related to human resources. It helps organizations make informed decisions based on data rather than intuition or experience alone. In today’s competitive business environment, leveraging HR analytics has become crucial for effective workforce planning and management.",
-      secondpara:
-        "Data-driven decision making in HR offers numerous benefits. It enhances the ability to predict future trends, improve employee performance, and increase overall organizational efficiency. By analyzing data, HR professionals can identify patterns and trends that may not be visible at first glance. This leads to more strategic decisions that align with long-term business goals.",
-      thirdpara:
-        "Implementing HR analytics involves collecting data from various sources such as employee performance reviews, attendance records, and engagement surveys. Advanced analytical tools and software can then process this data to provide actionable insights. It is essential to ensure data accuracy and integrity for reliable analysis. Organizations should also invest in training HR professionals to effectively interpret and utilize the data.",
-      fourthpara:
-        "While HR analytics offers substantial benefits, it also comes with challenges. Data privacy and security are critical concerns, as handling sensitive employee information requires strict compliance with regulations. Additionally, integrating data from disparate sources can be complex and time-consuming. Organizations must address these challenges to fully realize the potential of HR analytics in data-driven decision making.",
+  //     firstpara:
+  //       "Human Resources (HR) analytics, also known as people analytics, involves gathering, analyzing, and interpreting data related to human resources. It helps organizations make informed decisions based on data rather than intuition or experience alone. In today’s competitive business environment, leveraging HR analytics has become crucial for effective workforce planning and management.",
+  //     secondpara:
+  //       "Data-driven decision making in HR offers numerous benefits. It enhances the ability to predict future trends, improve employee performance, and increase overall organizational efficiency. By analyzing data, HR professionals can identify patterns and trends that may not be visible at first glance. This leads to more strategic decisions that align with long-term business goals.",
+  //     thirdpara:
+  //       "Implementing HR analytics involves collecting data from various sources such as employee performance reviews, attendance records, and engagement surveys. Advanced analytical tools and software can then process this data to provide actionable insights. It is essential to ensure data accuracy and integrity for reliable analysis. Organizations should also invest in training HR professionals to effectively interpret and utilize the data.",
+  //     fourthpara:
+  //       "While HR analytics offers substantial benefits, it also comes with challenges. Data privacy and security are critical concerns, as handling sensitive employee information requires strict compliance with regulations. Additionally, integrating data from disparate sources can be complex and time-consuming. Organizations must address these challenges to fully realize the potential of HR analytics in data-driven decision making.",
 
-      listitems1: "Non magni quisquam",
-      listitems2: "Eum aperiam facilis",
-      listitems3: "Id quibusdam corporis et voluptate minus",
-      listitems4: "Qui internos impedit vel unde",
-    },
-    {
-      id: 3,
-      bannerheading:
-        "The Vital Role of Leadership Development and Succession Planning",
-      subname: "Business Management",
-      bannertext: `In today’s fast-paced business environment, leadership development is more crucial than ever. Companies need to invest in nurturing their future leaders .`,
-      explore: "Explore More",
-      path: "/blog",
-      img: blog3,
-      toptext: "By Babitha on April 26, 2025 - 6 min read",
+  //     listitems1: "Non magni quisquam",
+  //     listitems2: "Eum aperiam facilis",
+  //     listitems3: "Id quibusdam corporis et voluptate minus",
+  //     listitems4: "Qui internos impedit vel unde",
+  //   },
+  //   {
+  //     id: 3,
+  //     bannerheading:
+  //       "The Vital Role of Leadership Development and Succession Planning",
+  //     subname: "Business Management",
+  //     bannertext: `In today’s fast-paced business environment, leadership development is more crucial than ever. Companies need to invest in nurturing their future leaders .`,
+  //     explore: "Explore More",
+  //     path: "/blog",
+  //     img: blog3,
+  //     toptext: "By Babitha on April 26, 2025 - 6 min read",
 
-      firstheading: "Understanding Leadership Development",
-      secondheading: "The Importance of Succession Planning",
-      thirdheading:
-        "Integrating Leadership Development with Succession Planning",
-      fourthheading: "",
+  //     firstheading: "Understanding Leadership Development",
+  //     secondheading: "The Importance of Succession Planning",
+  //     thirdheading:
+  //       "Integrating Leadership Development with Succession Planning",
+  //     fourthheading: "",
 
-      firstpara:
-        "In today’s fast-paced business environment, leadership development is more crucial than ever. Companies need to invest in nurturing their future leaders to ensure they are prepared to tackle challenges and drive the organization forward. Leadership development encompasses a range of activities such as mentoring, training programs, and hands-on experience that help individuals enhance their leadership skills and competencies.",
-      secondpara:
-        "Succession planning is a strategic approach to ensure that businesses have the right leaders ready to step into key roles when needed. It involves identifying and developing potential leaders within the organization who can fill critical positions as they become available. This proactive approach minimizes disruptions and ensures continuity in leadership, which is vital for maintaining organizational stability and achieving long-term goals.",
-      thirdpara:
-        "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      fourthpara:
-        "Combining leadership development with succession planning creates a robust framework for building a strong leadership pipeline. Organizations should identify high-potential employees early on and provide them with targeted development opportunities. By aligning leadership development initiatives with succession planning, companies can ensure that their future leaders are well-equipped to take on greater responsibilities and lead the organization to success.In conclusion, leadership development and succession planning are interconnected processes that play a vital role in the sustained success of any organization. By focusing on these areas, companies can build a resilient leadership team capable of navigating future challenges and driving growth.",
+  //     firstpara:
+  //       "In today’s fast-paced business environment, leadership development is more crucial than ever. Companies need to invest in nurturing their future leaders to ensure they are prepared to tackle challenges and drive the organization forward. Leadership development encompasses a range of activities such as mentoring, training programs, and hands-on experience that help individuals enhance their leadership skills and competencies.",
+  //     secondpara:
+  //       "Succession planning is a strategic approach to ensure that businesses have the right leaders ready to step into key roles when needed. It involves identifying and developing potential leaders within the organization who can fill critical positions as they become available. This proactive approach minimizes disruptions and ensures continuity in leadership, which is vital for maintaining organizational stability and achieving long-term goals.",
+  //     thirdpara:
+  //       "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+  //     fourthpara:
+  //       "Combining leadership development with succession planning creates a robust framework for building a strong leadership pipeline. Organizations should identify high-potential employees early on and provide them with targeted development opportunities. By aligning leadership development initiatives with succession planning, companies can ensure that their future leaders are well-equipped to take on greater responsibilities and lead the organization to success.In conclusion, leadership development and succession planning are interconnected processes that play a vital role in the sustained success of any organization. By focusing on these areas, companies can build a resilient leadership team capable of navigating future challenges and driving growth.",
 
-      listitems1: "Non magni quisquam",
-      listitems2: "Eum aperiam facilis",
-      listitems3: "Id quibusdam corporis et voluptate minus",
-      listitems4: "Qui internos impedit vel unde",
-    },
-    // {
-    //   id: 4,
-    //   Name: "Transforming Ambition Into Achievement",
-    //   subname: "Lorem Ipsum",
-    //   para: `   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    //             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,`,
-    //   explore: "Explore More",
-    //   path: "/blog",
-    // },
-  ];
+  //     listitems1: "Non magni quisquam",
+  //     listitems2: "Eum aperiam facilis",
+  //     listitems3: "Id quibusdam corporis et voluptate minus",
+  //     listitems4: "Qui internos impedit vel unde",
+  //   },
+  //   // {
+  //   //   id: 4,
+  //   //   Name: "Transforming Ambition Into Achievement",
+  //   //   subname: "Lorem Ipsum",
+  //   //   para: `   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  //   //             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,`,
+  //   //   explore: "Explore More",
+  //   //   path: "/blog",
+  //   // },
+  // ];
 
   const handleSignleBlog = (ev, id) => {
-    const cleanPath = id.replaceAll(' ', '-');
+    const cleanPath = id.replaceAll(" ", "-");
     navigate(`/blog/${cleanPath}`, { state: ev });
   };
 
@@ -403,6 +406,35 @@ export const HomePage = () => {
       swiperRef.current.autoplay?.stop();
     }
   };
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      const blogRef = ref(database, "blogs/hr-minds");
+
+      try {
+        const snapshot = await get(blogRef);
+        if (snapshot.exists()) {
+          const data = snapshot.val();
+          console.log("Data fetched from Firebase:", data);
+
+          const blogList = Object.keys(data).map((key) => ({
+            id: key,
+            ...data[key],
+            imageUrl: data[key].image_url || "", // Don't use ref() here!
+          }));
+
+          console.log("Parsed blog list:", blogList);
+          setBlogs(blogList);
+        } else {
+          console.log("No blog data found.");
+        }
+      } catch (error) {
+        console.error("Error fetching blog data:", error);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
 
   return (
     <div className="home_main">
@@ -660,11 +692,7 @@ export const HomePage = () => {
             <div className="homepage_layer4_cards_outer">
               <div className="homepage_layer4_card">
                 <div className="layer4_card_logo">
-                  <img
-                    src={icon_1}
-                    alt="Smallicon1"
-                    className="layer4_logo"
-                  />
+                  <img src={icon_1} alt="Smallicon1" className="layer4_logo" />
                 </div>
                 <p className="layer4_card_heading">
                   {/* Powerful Dashboard */}
@@ -678,11 +706,7 @@ export const HomePage = () => {
               </div>
               <div className="homepage_layer4_card">
                 <div className="layer4_card_logo">
-                  <img
-                    src={icon_2}
-                    alt="Smallicon1"
-                    className="layer4_logo"
-                  />
+                  <img src={icon_2} alt="Smallicon1" className="layer4_logo" />
                 </div>
                 <p className="layer4_card_heading">Our Mission </p>
                 <p className="layer4_card_para">
@@ -862,18 +886,18 @@ export const HomePage = () => {
               {Blogs?.map((data, index) => (
                 <SwiperSlide key={index}>
                   <div className="layer7_card">
-                    <p className="layer7_card_name">{data?.bannerheading}</p>
-                    <p className="layer7_card_sub_name">{data?.subname}</p>
+                    <p className="layer7_card_name">{data?.title}</p>
+                    <p className="layer7_card_sub_name">Human Resource</p>
                     <div className="layer7_card_line"></div>
                     <div className="layer7_card_para_outer">
-                      <p className="layer7_card_para">{data?.bannertext}</p>
+                      <p className="layer7_card_para">{data?.content}</p>
                     </div>
 
                     <h6
                       className="layer7_card_explore"
-                      onClick={() => handleSignleBlog(data, data.bannerheading)}
+                      onClick={() => handleSignleBlog(data, data.title)}
                     >
-                      {data.explore}
+                      Explore More
                     </h6>
                   </div>
                 </SwiperSlide>
