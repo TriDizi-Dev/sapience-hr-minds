@@ -34,9 +34,36 @@ import { Link, useNavigate } from "react-router-dom";
 import blog1 from "../../assets/Blogs/image1.png";
 import blog2 from "../../assets/Blogs/image2.png";
 import blog3 from "../../assets/Blogs/image3.png";
+import { database, ref, get } from "../../Firebase/firebase";
 
 function Carrier() {
   const navigate = useNavigate();
+  const [careers, setCareers] = useState([]);
+  console.log(careers,"careerscareers");
+  
+
+  useEffect(() => {
+    const fetchCareers = async () => {
+      const careersRef = ref(database, "careers"); // Reference to the "careers" node in the database
+      try {
+        const snapshot = await get(careersRef); // Fetch data from Firebase
+        if (snapshot.exists()) {
+          const data = snapshot.val();
+          const careerList = Object.keys(data).map(key => ({
+            id: key,
+            ...data[key],
+          }));
+          setCareers(careerList); // Set the state with fetched data
+        } else {
+          console.log("No data available");
+        }
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      }
+    };
+
+    fetchCareers();
+  }, []);
   useEffect(() => {
     AOS.init({
       offset: 200,

@@ -104,6 +104,18 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+.wrapper-class {
+  border: 1px solid #ccc;
+  padding: 5px;
+  height: 100px;
+}
+
+.editor-class {
+  height: 60px;
+  padding: 10px;
+  background-color: #fff;
+}
+
 
 @media screen and (min-width:320px) and (max-width:720px) {
     .career_creation_container {
