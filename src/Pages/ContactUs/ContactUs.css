@@ -151,7 +151,6 @@
   font-weight: 300;
   font-size: 1vw;
   letter-spacing: 0.08vw;
-  text-transform: capitalize;
 
 }
 
@@ -172,7 +171,6 @@
 @media screen and (min-width: 320px) and (max-width: 720px) {
 
   .reach-box{
-    /* height: fit-content; */
     height: 74%;
   }
   .reach-container{

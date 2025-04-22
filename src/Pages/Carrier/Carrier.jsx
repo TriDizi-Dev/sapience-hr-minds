@@ -35,12 +35,12 @@ import blog1 from "../../assets/Blogs/image1.png";
 import blog2 from "../../assets/Blogs/image2.png";
 import blog3 from "../../assets/Blogs/image3.png";
 import { database, ref, get } from "../../Firebase/firebase";
+import parse, { domToReact } from "html-react-parser";
 
 function Carrier() {
   const navigate = useNavigate();
   const [careers, setCareers] = useState([]);
-  console.log(careers,"careerscareers");
-  
+  console.log(careers, "careerscareers");
 
   useEffect(() => {
     const fetchCareers = async () => {
@@ -49,7 +49,7 @@ function Carrier() {
         const snapshot = await get(careersRef); // Fetch data from Firebase
         if (snapshot.exists()) {
           const data = snapshot.val();
-          const careerList = Object.keys(data).map(key => ({
+          const careerList = Object.keys(data).map((key) => ({
             id: key,
             ...data[key],
           }));
@@ -64,6 +64,62 @@ function Carrier() {
 
     fetchCareers();
   }, []);
+  const ClientsJobs = careers.filter((job)=>job.Category==="Clients")
+  const OurJobs = careers.filter((job)=>job.Category==="Our")
+
+  let currentSection = ""; // default section
+
+  let sectionSwitchTriggered = false; // Flag to simulate "Requirements" section start if no heading
+  
+  const options = {
+    replace: (domNode) => {
+      if (domNode.name === "h1" || domNode.name === "strong") {
+        const text = domToReact(domNode.children)
+          .toString()
+          .trim()
+          .toLowerCase();
+      }
+  
+      // Optional logic to auto-switch section if no heading but pattern matches (e.g., after first <ul>)
+      if (domNode.name === "ul" && !sectionSwitchTriggered) {
+        sectionSwitchTriggered = true;
+        currentSection = "requirements";
+      }
+  
+      if (domNode.name === "li") {
+        const className =
+          currentSection === "requirements"
+            ? "accordian_layer3_list_items"
+            : "accordian_layer2_list_items";
+  
+        return <li className={className}>{domToReact(domNode.children)}</li>;
+      }
+  
+      if (domNode.name === "p" || domNode.name === "span") {
+        const className =
+          currentSection === "requirements"
+            ? "accordian_layer3_paragraph"
+            : "accordian_layer2_paragraph";
+  
+        return React.createElement(domNode.name, { className }, domToReact(domNode.children));
+      }
+  
+      if (domNode.name === "strong" && !currentSection) {
+        // fallback to default styles
+        return <strong className="accordian_fallback_bold">{domToReact(domNode.children)}</strong>;
+      }
+  
+      return;
+    },
+  };
+  
+
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    const options = { day: "2-digit", month: "short", year: "numeric" };
+    return date.toLocaleDateString("en-GB", options);
+  };
+
   useEffect(() => {
     AOS.init({
       offset: 200,
@@ -305,7 +361,9 @@ function Carrier() {
               Be a Part of Our Journey
             </h1>
             <p className="carrier_banner_para">
-            Join a purpose-driven HR consulting firm where innovation, growth, and people-first values shape every career. At Sapience Minds, your expertise finds meaningful impact.
+              Join a purpose-driven HR consulting firm where innovation, growth,
+              and people-first values shape every career. At Sapience Minds,
+              your expertise finds meaningful impact.
             </p>
           </div>
           <div className="carriers_banner_buttons">
@@ -343,7 +401,8 @@ function Carrier() {
                 <div className="layer2_card_text">
                   <h6 className="layer2_card_heding">Expert Training</h6>
                   <div className="layer2_card_para">
-                  Sharpen your HR expertise with hands-on learning from industry leaders and real-world projects.
+                    Sharpen your HR expertise with hands-on learning from
+                    industry leaders and real-world projects.
                   </div>
                 </div>
               </div>
@@ -354,7 +413,8 @@ function Carrier() {
                 <div className="layer2_card_text">
                   <h6 className="layer2_card_heding">Performance Bonus</h6>
                   <div className="layer2_card_para">
-                  Get rewarded for results with performance-based incentives that recognize your contributions.
+                    Get rewarded for results with performance-based incentives
+                    that recognize your contributions.
                   </div>
                 </div>
               </div>
@@ -365,7 +425,8 @@ function Carrier() {
                 <div className="layer2_card_text">
                   <h6 className="layer2_card_heding">Health & Insurance</h6>
                   <div className="layer2_card_para">
-                  We care for your well-being comprehensive health and insurance coverage is part of our promise.
+                    We care for your well-being comprehensive health and
+                    insurance coverage is part of our promise.
                   </div>
                 </div>
               </div>
@@ -376,7 +437,8 @@ function Carrier() {
                 <div className="layer2_card_text">
                   <h6 className="layer2_card_heding">Continues Learning</h6>
                   <div className="layer2_card_para">
-                  Access resources, tools, and mentorship that encourage constant growth and career development.
+                    Access resources, tools, and mentorship that encourage
+                    constant growth and career development.
                   </div>
                 </div>
               </div>
@@ -387,7 +449,8 @@ function Carrier() {
                 <div className="layer2_card_text">
                   <h6 className="layer2_card_heding">Parental Leave</h6>
                   <div className="layer2_card_para">
-                  Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat hendrerit lacus. 
+                    Ut sed eros finibus, placerat orci id, dapibus mauris.
+                    Vestibulum consequat hendrerit lacus.
                   </div>
                 </div>
               </div>
@@ -398,7 +461,8 @@ function Carrier() {
                 <div className="layer2_card_text">
                   <h6 className="layer2_card_heding">Free Lunch</h6>
                   <div className="layer2_card_para">
-                  Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat hendrerit lacus. 
+                    Ut sed eros finibus, placerat orci id, dapibus mauris.
+                    Vestibulum consequat hendrerit lacus.
                   </div>
                 </div>
               </div>
@@ -411,7 +475,8 @@ function Carrier() {
         <div className="carrier_layer3_outer" data-aos="zoom-in-up">
           <div className="carrier_layer3_banner">
             <p className="layer3_banner_para">
-            At Sapience Minds, Driven by purpose, powered by people where HR innovation meets meaningful careers.
+              At Sapience Minds, Driven by purpose, powered by people where HR
+              innovation meets meaningful careers.
             </p>
             <div className="layer3_banner_button_outer">
               <button>More About Us</button>
@@ -454,1050 +519,90 @@ function Carrier() {
             <div className="layer3_part3_outer">
               {activeNav === "All" && (
                 <>
-                  <Accordion
-                    // data-aos="zoom-out"
-                    expanded={expanded === "panel1"}
-                    onChange={handleChange("panel1")}
-                    disableGutters
-                    elevation={0}
-                    square
-                    sx={{
-                      width: "100%",
-                      // height: expanded ? 'auto' : '6vw',
-                      transition: "all 0.3s ease",
-                      marginTop: "3vw",
-                      backgroundColor: "none",
-                    }}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        <ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />
-                      }
-                      aria-controls="panel-content"
-                      id="panel-header"
+                  {careers.map((item, id) => (
+                    <Accordion
+                      // data-aos="zoom-out"
+                      expanded={expanded === `panel${id}`}
+                      onChange={handleChange(`panel${id}`)}
+                      disableGutters
+                      elevation={0}
+                      square
                       sx={{
-                        backgroundColor: "white",
-                        flexDirection: "row-reverse",
-                        height: "6vw",
-                        borderRadius: "2.8vw",
-                        boxShadow: "0px 6px 25px rgba(0, 0, 0, 0.15)",
-                        "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded":
-                          {
-                            transform: "rotate(90deg)",
-                          },
-                        "& .MuiAccordionSummary-content": {
-                          marginLeft: 1,
-                        },
-                      }}
-                    >
-                      <Typography
-                        sx={{
-                          display: "flex",
-                          flexDirection: "column",
-                          justifyContent: "flex-start", // or 'center', 'space-between' etc.
-                          width: "100%",
-                          paddingLeft: "1vw",
-                          gap: "1vw",
-                        }}
-                        className="carrier_accordian"
-                      >
-                        <p className="accordian_top_text" style={{ margin: 0 }}>
-                          Marketing
-                        </p>
-                        <p className="accordia_header">Head of Product</p>
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails
-                      sx={{
-                        padding: 2,
-                        // backgroundColor: 'red'
-                      }}
-                    >
-                      <Typography>
-                        <div className="accoridian_content_outer">
-                          <div className="accordain_left">
-                            <p className="accordian_left_para">
-                              Type Pellentesque ullamcorper alique ultrices.
-                              Aenean facilias vitea purus facilitias
-                              semper.Supendisse eleifind nunc non virus
-                              rhoncus.Nam posuere accumsan porta.
-                            </p>
-                            <div className="accordian_left_layer2">
-                              <h1 className="accordian_layer2_heading">
-                                Job Description
-                              </h1>
-                              <div className="accordian_list_items_outer">
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
-                            </div>
-                            <div className="accordian_left_layer3">
-                              <h1 className="accordian_layer3_heading">
-                                Requirements
-                              </h1>
-                              <div className="accordian_layer3_list_items_oueter">
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="accordian_right">
-                            {/* <div className="right_top_icons_outer">
-                                                            <p className="share">
-                                                                Share
-                                                            </p>
-                                                            <div className="icons_outer">
-                                                                <HiLink className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <BsLinkedin className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <FaTwitter className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <IoIosMail className='accordian_icons' />
-
-                                                            </div>
-                                                        </div> */}
-
-                            <div className="accordian_right_icons_button">
-                              <button>Apply Now</button>
-                            </div>
-                            <div className="accordian_right_details_outer">
-                              <div className="detalis_items">
-                                <p className="lef_item">Location</p>
-                                <p className="right_item">Bandung</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Type</p>
-                                <p className="right_item">Full Time</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Qualification</p>
-                                <p className="right_item">Fresh Graduation</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Posted</p>
-                                <p className="right_item">22 jan 2023</p>
-                              </div>
-                            </div>
-
-                            <div className="right_buttons">
-                              <div className="right_help_button_outer">
-                                <button
-                                  onClick={() =>
-                                    handleOpenForm("Career-All-Head of Product")
-                                  }
-                                >
-                                  Ask for more help
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
-                              </div>
-                              <div className="right_about_company_button_outer">
-                                <Link to="/about" className="nav_link">
-                                  <button>
-                                    About Company
-                                    <FaArrowRightLong className="help_button_icon" />
-                                  </button>
-                                </Link>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-
-                  <Accordion
-                    // data-aos="zoom-out"
-                    expanded={expanded === "panel2"}
-                    onChange={handleChange("panel2")}
-                    disableGutters
-                    elevation={0}
-                    square
-                    sx={{
-                      width: "100%",
-                      // height: expanded ? 'auto' : '6vw',
-                      transition: "all 0.3s ease",
-                      marginTop: "3vw",
-                      backgroundColor: "white",
-                      //   border:"none"
-                      border: "2px solid white",
-                    }}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        <ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />
-                      }
-                      aria-controls="panel-content"
-                      id="panel-header"
-                      sx={{
-                        backgroundColor: "white",
-                        flexDirection: "row-reverse",
-                        height: "6vw",
-                        borderRadius: "2.8vw",
-                        boxShadow: "0px 6px 25px rgba(0, 0, 0, 0.15)",
-                        "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded":
-                          {
-                            transform: "rotate(90deg)",
-                          },
-                        "& .MuiAccordionSummary-content": {
-                          marginLeft: 1,
-                        },
-                      }}
-                    >
-                      <Typography
-                        sx={{
-                          display: "flex",
-                          flexDirection: "column",
-                          justifyContent: "flex-start", // or 'center', 'space-between' etc.
-                          width: "100%",
-                          paddingLeft: "1vw",
-                          gap: "1vw",
-                        }}
-                      >
-                        <p className="accordian_top_text" style={{ margin: 0 }}>
-                          Design
-                        </p>
-                        <p className="accordia_header">
-                          Staff Product Designer
-                        </p>
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails
-                      sx={{
-                        padding: 2,
-                        // backgroundColor: 'red'
-                      }}
-                    >
-                      <Typography>
-                        <div className="accoridian_content_outer">
-                          <div className="accordain_left">
-                            <p className="accordian_left_para">
-                              Type Pellentesque ullamcorper alique ultrices.
-                              Aenean facilias vitea purus facilitias
-                              semper.Supendisse eleifind nunc non virus
-                              rhoncus.Nam posuere accumsan porta.
-                            </p>
-                            <div className="accordian_left_layer2">
-                              <h1 className="accordian_layer2_heading">
-                                Job Description
-                              </h1>
-                              <div className="accordian_list_items_outer">
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
-                            </div>
-                            <div className="accordian_left_layer3">
-                              <h1 className="accordian_layer3_heading">
-                                Requirements
-                              </h1>
-                              <div className="accordian_layer3_list_items_oueter">
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="accordian_right">
-                            {/* <div className="right_top_icons_outer">
-                                                            <p className="share">
-                                                                Share
-                                                            </p>
-                                                            <div className="icons_outer">
-                                                                <HiLink className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <BsLinkedin className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <FaTwitter className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <IoIosMail className='accordian_icons' />
-
-                                                            </div>
-                                                        </div> */}
-
-                            <div className="accordian_right_icons_button">
-                              <button>Apply Now</button>
-                            </div>
-                            <div className="accordian_right_details_outer">
-                              <div className="detalis_items">
-                                <p className="lef_item">Location</p>
-                                <p className="right_item">Bandung</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Type</p>
-                                <p className="right_item">Full Time</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Quealification</p>
-                                <p className="right_item">Fresh Graduation</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Posted</p>
-                                <p className="right_item">22 jan 2023</p>
-                              </div>
-                            </div>
-
-                            <div className="right_buttons">
-                              <div className="right_help_button_outer">
-                                <button
-                                  onClick={() =>
-                                    handleOpenForm(
-                                      "Career-All- Staff Product Designer"
-                                    )
-                                  }
-                                >
-                                  Ask for more help
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
-                              </div>
-                              <div className="right_about_company_button_outer">
-                                <Link to="/about" className="nav_link">
-                                  <button>
-                                    About Company
-                                    <FaArrowRightLong className="help_button_icon" />
-                                  </button>
-                                </Link>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-
-                  <Accordion
-                    // data-aos="zoom-out"
-                    expanded={expanded === "panel3"}
-                    onChange={handleChange("panel3")}
-                    disableGutters
-                    elevation={0}
-                    square
-                    sx={{
-                      width: "100%",
-                      // height: expanded ? 'auto' : '6vw',
-                      transition: "all 0.3s ease",
-                      marginTop: "3vw",
-                    }}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        <ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />
-                      }
-                      aria-controls="panel-content"
-                      id="panel-header"
-                      sx={{
-                        backgroundColor: "white",
-                        flexDirection: "row-reverse",
-                        height: "6vw",
-                        borderRadius: "2.8vw",
-                        boxShadow: "0px 6px 25px rgba(0, 0, 0, 0.15)",
-                        "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded":
-                          {
-                            transform: "rotate(90deg)",
-                          },
-                        "& .MuiAccordionSummary-content": {
-                          marginLeft: 1,
-                        },
-                      }}
-                    >
-                      <Typography
-                        sx={{
-                          display: "flex",
-                          flexDirection: "column",
-                          justifyContent: "flex-start", // or 'center', 'space-between' etc.
-                          width: "100%",
-                          paddingLeft: "1vw",
-                          gap: "1vw",
-                        }}
-                      >
-                        <p className="accordian_top_text" style={{ margin: 0 }}>
-                          Product
-                        </p>
-                        <p className="accordia_header">
-                          Senior Product Manager, Asset
-                        </p>
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails
-                      sx={{
-                        padding: 2,
-                        // backgroundColor: 'red'
-                      }}
-                    >
-                      <Typography>
-                        <div className="accoridian_content_outer">
-                          <div className="accordain_left">
-                            <p className="accordian_left_para">
-                              Type Pellentesque ullamcorper alique ultrices.
-                              Aenean facilias vitea purus facilitias
-                              semper.Supendisse eleifind nunc non virus
-                              rhoncus.Nam posuere accumsan porta.
-                            </p>
-                            <div className="accordian_left_layer2">
-                              <h1 className="accordian_layer2_heading">
-                                Job Description
-                              </h1>
-                              <div className="accordian_list_items_outer">
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
-                            </div>
-                            <div className="accordian_left_layer3">
-                              <h1 className="accordian_layer3_heading">
-                                Requirements
-                              </h1>
-                              <div className="accordian_layer3_list_items_oueter">
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="accordian_right">
-                            {/* <div className="right_top_icons_outer">
-                                                            <p className="share">
-                                                                Share
-                                                            </p>
-                                                            <div className="icons_outer">
-                                                                <HiLink className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <BsLinkedin className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <FaTwitter className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <IoIosMail className='accordian_icons' />
-
-                                                            </div>
-                                                        </div> */}
-
-                            <div className="accordian_right_icons_button">
-                              <button>Apply Now</button>
-                            </div>
-                            <div className="accordian_right_details_outer">
-                              <div className="detalis_items">
-                                <p className="lef_item">Location</p>
-                                <p className="right_item">Bandung</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Type</p>
-                                <p className="right_item">Full Time</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Quealification</p>
-                                <p className="right_item">Fresh Graduation</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Posted</p>
-                                <p className="right_item">22 jan 2023</p>
-                              </div>
-                            </div>
-
-                            <div className="right_buttons">
-                              <div className="right_help_button_outer">
-                                <button
-                                  onClick={() =>
-                                    handleOpenForm(
-                                      "Career-All-Senior Product Manager, Asset"
-                                    )
-                                  }
-                                >
-                                  Ask for more help
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
-                              </div>
-                              <div className="right_about_company_button_outer">
-                                <Link to="/about" className="nav_link">
-                                  <button>
-                                    About Company
-                                    <FaArrowRightLong className="help_button_icon" />
-                                  </button>
-                                </Link>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-
-                  <Accordion
-                    // data-aos="zoom-out"
-                    expanded={expanded === "panel4"}
-                    onChange={handleChange("panel4")}
-                    disableGutters
-                    elevation={0}
-                    square
-                    sx={{
-                      width: "100%",
-                      // height: expanded ? 'auto' : '6vw',
-                      transition: "all 0.3s ease",
-                      marginTop: "3vw",
-                    }}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        <ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />
-                      }
-                      aria-controls="panel-content"
-                      id="panel-header"
-                      sx={{
-                        backgroundColor: "white",
-                        flexDirection: "row-reverse",
-                        height: "6vw",
-                        borderRadius: "2.8vw",
-                        boxShadow: "0px 6px 25px rgba(0, 0, 0, 0.15)",
-                        "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded":
-                          {
-                            transform: "rotate(90deg)",
-                          },
-                        "& .MuiAccordionSummary-content": {
-                          marginLeft: 1,
-                        },
-                      }}
-                    >
-                      <Typography
-                        sx={{
-                          display: "flex",
-                          flexDirection: "column",
-                          justifyContent: "flex-start", // or 'center', 'space-between' etc.
-                          width: "100%",
-                          paddingLeft: "1vw",
-                          gap: "1vw",
-                        }}
-                      >
-                        <p className="accordian_top_text" style={{ margin: 0 }}>
-                          Engineering
-                        </p>
-                        <p className="accordia_header">Backend Engineer</p>
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails
-                      sx={{
-                        padding: 2,
-                        // backgroundColor: 'red'
-                      }}
-                    >
-                      <Typography>
-                        <div className="accoridian_content_outer">
-                          <div className="accordain_left">
-                            <p className="accordian_left_para">
-                              Type Pellentesque ullamcorper alique ultrices.
-                              Aenean facilias vitea purus facilitias
-                              semper.Supendisse eleifind nunc non virus
-                              rhoncus.Nam posuere accumsan porta.
-                            </p>
-                            <div className="accordian_left_layer2">
-                              <h1 className="accordian_layer2_heading">
-                                Job Description
-                              </h1>
-                              <div className="accordian_list_items_outer">
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
-                            </div>
-                            <div className="accordian_left_layer3">
-                              <h1 className="accordian_layer3_heading">
-                                Requirements
-                              </h1>
-                              <div className="accordian_layer3_list_items_oueter">
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="accordian_right">
-                            {/* <div className="right_top_icons_outer">
-                                                            <p className="share">
-                                                                Share
-                                                            </p>
-                                                            <div className="icons_outer">
-                                                                <HiLink className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <BsLinkedin className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <FaTwitter className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <IoIosMail className='accordian_icons' />
-
-                                                            </div>
-                                                        </div> */}
-
-                            <div className="accordian_right_icons_button">
-                              <button>Apply Now</button>
-                            </div>
-                            <div className="accordian_right_details_outer">
-                              <div className="detalis_items">
-                                <p className="lef_item">Location</p>
-                                <p className="right_item">Bandung</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Type</p>
-                                <p className="right_item">Full Time</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Quealification</p>
-                                <p className="right_item">Fresh Graduation</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Posted</p>
-                                <p className="right_item">22 jan 2023</p>
-                              </div>
-                            </div>
-
-                            <div className="right_buttons">
-                              <div className="right_help_button_outer">
-                                <button
-                                  onClick={() =>
-                                    handleOpenForm(
-                                      "Career-All-Backend Engineer"
-                                    )
-                                  }
-                                >
-                                  Ask for more help
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
-                              </div>
-                              <div className="right_about_company_button_outer">
-                                <Link to="/about" className="nav_link">
-                                  <button>
-                                    About Company
-                                    <FaArrowRightLong className="help_button_icon" />
-                                  </button>
-                                </Link>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-
-                  <Accordion
-                    // data-aos="zoom-out"
-                    expanded={expanded === "panel5"}
-                    onChange={handleChange("panel5")}
-                    disableGutters
-                    elevation={0}
-                    square
-                    sx={{
-                      width: "100%",
-                      // height: expanded ? 'auto' : '6vw',
-                      transition: "all 0.3s ease",
-                      marginTop: "3vw",
-                    }}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        <ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />
-                      }
-                      aria-controls="panel-content"
-                      id="panel-header"
-                      sx={{
-                        backgroundColor: "white",
-                        flexDirection: "row-reverse",
-                        height: "6vw",
-                        borderRadius: "2.8vw",
-                        boxShadow: "0px 6px 25px rgba(0, 0, 0, 0.15)",
-                        "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded":
-                          {
-                            transform: "rotate(90deg)",
-                          },
-                        "& .MuiAccordionSummary-content": {
-                          marginLeft: 1,
-                        },
-                      }}
-                    >
-                      <Typography
-                        sx={{
-                          display: "flex",
-                          flexDirection: "column",
-                          justifyContent: "flex-start", // or 'center', 'space-between' etc.
-                          width: "100%",
-                          paddingLeft: "1vw",
-                          gap: "1vw",
-                        }}
-                      >
-                        <p className="accordian_top_text" style={{ margin: 0 }}>
-                          Engineering
-                        </p>
-                        <p className="accordia_header">
-                          Senior Backend Engineer
-                        </p>
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails
-                      sx={{
-                        padding: 2,
-                        // backgroundColor: 'red'
-                      }}
-                    >
-                      <Typography>
-                        <div className="accoridian_content_outer">
-                          <div className="accordain_left">
-                            <p className="accordian_left_para">
-                              Type Pellentesque ullamcorper alique ultrices.
-                              Aenean facilias vitea purus facilitias
-                              semper.Supendisse eleifind nunc non virus
-                              rhoncus.Nam posuere accumsan porta.
-                            </p>
-                            <div className="accordian_left_layer2">
-                              <h1 className="accordian_layer2_heading">
-                                Job Description
-                              </h1>
-                              <div className="accordian_list_items_outer">
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
-                            </div>
-                            <div className="accordian_left_layer3">
-                              <h1 className="accordian_layer3_heading">
-                                Requirements
-                              </h1>
-                              <div className="accordian_layer3_list_items_oueter">
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="accordian_right">
-                            {/* <div className="right_top_icons_outer">
-                                                            <p className="share">
-                                                                Share
-                                                            </p>
-                                                            <div className="icons_outer">
-                                                                <HiLink className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <BsLinkedin className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <FaTwitter className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <IoIosMail className='accordian_icons' />
-
-                                                            </div>
-                                                        </div> */}
-
-                            <div className="accordian_right_icons_button">
-                              <button>Apply Now</button>
-                            </div>
-                            <div className="accordian_right_details_outer">
-                              <div className="detalis_items">
-                                <p className="lef_item">Location</p>
-                                <p className="right_item">Bandung</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Type</p>
-                                <p className="right_item">Full Time</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Quealification</p>
-                                <p className="right_item">Fresh Graduation</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Posted</p>
-                                <p className="right_item">22 jan 2023</p>
-                              </div>
-                            </div>
-
-                            <div className="right_buttons">
-                              <div className="right_help_button_outer">
-                                <button
-                                  onClick={() =>
-                                    handleOpenForm(
-                                      "Career-All-Senior Backend Engineer"
-                                    )
-                                  }
-                                >
-                                  Ask for more help
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
-                              </div>
-                              <div className="right_about_company_button_outer">
-                                <Link to="/about" className="nav_link">
-                                  <button>
-                                    About Company
-                                    <FaArrowRightLong className="help_button_icon" />
-                                  </button>
-                                </Link>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-
-                  <Accordion
-                    // data-aos="zoom-out"
-                    expanded={expanded === "panel6"}
-                    onChange={handleChange("panel6")}
-                    disableGutters
-                    elevation={0}
-                    square
-                    sx={{
-                      width: "100%",
-                      // height: expanded ? 'auto' : '6vw',
-                      transition: "all 0.3s ease",
-                      marginTop: "3vw",
-                    }}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        <ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />
-                      }
-                      aria-controls="panel-content"
-                      id="panel-header"
-                      sx={{
-                        backgroundColor: "white",
-                        flexDirection: "row-reverse",
-                        height: "6vw",
-                        borderRadius: "2.8vw",
-                        boxShadow: "0px 6px 25px rgba(0, 0, 0, 0.15)",
-                        "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded":
-                          {
-                            transform: "rotate(90deg)",
-                          },
-                        "& .MuiAccordionSummary-content": {
-                          marginLeft: 1,
-                        },
-                      }}
-                    >
-                      <Typography
-                        sx={{
-                          display: "flex",
-                          flexDirection: "column",
-                          justifyContent: "flex-start", // or 'center', 'space-between' etc.
-                          width: "100%",
-                          paddingLeft: "1vw",
-                          gap: "1vw",
-                        }}
-                      >
-                        <p className="accordian_top_text" style={{ margin: 0 }}>
-                          Engineering
-                        </p>
-                        <p className="accordia_header">
-                          Senior Frontend Engineer
-                        </p>
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails
-                      sx={{
-                        padding: 2,
+                        width: "100%",
+                        // height: expanded ? 'auto' : '6vw',
+                        transition: "all 0.3s ease",
+                        marginTop: "3vw",
                         backgroundColor: "none",
                       }}
                     >
-                      <Typography>
-                        <div className="accoridian_content_outer">
-                          <div className="accordain_left">
-                            <p className="accordian_left_para">
-                              Type Pellentesque ullamcorper alique ultrices.
-                              Aenean facilias vitea purus facilitias
-                              semper.Supendisse eleifind nunc non virus
-                              rhoncus.Nam posuere accumsan porta.
-                            </p>
-                            <div className="accordian_left_layer2">
-                              <h1 className="accordian_layer2_heading">
-                                Job Description
-                              </h1>
-                              <div className="accordian_list_items_outer">
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
+                      <AccordionSummary
+                        expandIcon={
+                          <ArrowForwardIosSharpIcon
+                            sx={{ fontSize: "0.9rem" }}
+                          />
+                        }
+                        aria-controls="panel-content"
+                        id="panel-header"
+                        sx={{
+                          backgroundColor: "white",
+                          flexDirection: "row-reverse",
+                          height: "6vw",
+                          borderRadius: "2.8vw",
+                          boxShadow: "0px 6px 25px rgba(0, 0, 0, 0.15)",
+                          "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded":
+                            {
+                              transform: "rotate(90deg)",
+                            },
+                          "& .MuiAccordionSummary-content": {
+                            marginLeft: 1,
+                          },
+                        }}
+                      >
+                        <Typography
+                          sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "flex-start", // or 'center', 'space-between' etc.
+                            width: "100%",
+                            paddingLeft: "1vw",
+                            gap: "1vw",
+                          }}
+                          className="carrier_accordian"
+                        >
+                          <p
+                            className="accordian_top_text"
+                            style={{ margin: 0 }}
+                          >
+                            {item.FieldOfJob}
+                          </p>
+                          <p className="accordia_header">{item.JobTitle}</p>
+                        </Typography>
+                      </AccordionSummary>
+                      <AccordionDetails
+                        sx={{
+                          padding: 2,
+                          // backgroundColor: 'red'
+                        }}
+                      >
+                        <Typography>
+                          <div className="accoridian_content_outer">
+                            <div className="accordain_left">
+                              <p className="accordian_left_para">
+                                Type Pellentesque ullamcorper alique ultrices.
+                                Aenean facilias vitea purus facilitias
+                                semper.Supendisse eleifind nunc non virus
+                                rhoncus.Nam posuere accumsan porta.
+                              </p>
+                              <div>
+                                <h1 className="accordian_layer2_heading">Job Discription</h1>
+                                {parse(item.JobDiscription, options)}
+                                </div>
+                              <div>
+                              <h1 className="accordian_layer2_heading">Requirements</h1>
+                                {parse(item.Requirements, options)}</div>
                             </div>
-                            <div className="accordian_left_layer3">
-                              <h1 className="accordian_layer3_heading">
-                                Requirements
-                              </h1>
-                              <div className="accordian_layer3_list_items_oueter">
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="accordian_right">
-                            {/* <div className="right_top_icons_outer">
+                            <div className="accordian_right">
+                              {/* <div className="right_top_icons_outer">
                                                             <p className="share">
                                                                 Share
                                                             </p>
@@ -1519,64 +624,229 @@ function Carrier() {
                                                             </div>
                                                         </div> */}
 
-                            <div className="accordian_right_icons_button">
-                              <button>Apply Now</button>
-                            </div>
-                            <div className="accordian_right_details_outer">
-                              <div className="detalis_items">
-                                <p className="lef_item">Location</p>
-                                <p className="right_item">Bandung</p>
+                              <div className="accordian_right_icons_button">
+                                <button>Apply Now</button>
                               </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Type</p>
-                                <p className="right_item">Full Time</p>
+                              <div className="accordian_right_details_outer">
+                                <div className="detalis_items">
+                                  <p className="lef_item">Location</p>
+                                  <p className="right_item">{item.Location}</p>
+                                </div>
+                                <div className="detalis_items">
+                                  <p className="lef_item">Type</p>
+                                  <p className="right_item">{item.Type}</p>
+                                </div>
+                                <div className="detalis_items">
+                                  <p className="lef_item">Qualification</p>
+                                  <p className="right_item">
+                                    {item.Qualification}
+                                  </p>
+                                </div>
+                                <div className="detalis_items">
+                                  <p className="lef_item">Posted</p>
+                                  <p className="right_item">
+                                    {formatDate(item.PostDate)}
+                                  </p>
+                                </div>
                               </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Quealification</p>
-                                <p className="right_item">Fresh Graduation</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Posted</p>
-                                <p className="right_item">22 jan 2023</p>
-                              </div>
-                            </div>
 
-                            <div className="right_buttons">
-                              <div className="right_help_button_outer">
-                                <button
-                                  onClick={() =>
-                                    handleOpenForm(
-                                      "Career-All-Senior Frontend Engineer"
-                                    )
-                                  }
-                                >
-                                  Ask for more help
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
-                              </div>
-                              <div className="right_about_company_button_outer">
-                                <Link to="/about" className="nav_link">
-                                  <button>
-                                    About Company
+                              <div className="right_buttons">
+                                <div className="right_help_button_outer">
+                                  <button
+                                    onClick={() =>
+                                      handleOpenForm(
+                                        "Career-All-Head of Product"
+                                      )
+                                    }
+                                  >
+                                    Ask for more help
                                     <FaArrowRightLong className="help_button_icon" />
                                   </button>
-                                </Link>
+                                </div>
+                                <div className="right_about_company_button_outer">
+                                  <Link to="/about" className="nav_link">
+                                    <button>
+                                      About Company
+                                      <FaArrowRightLong className="help_button_icon" />
+                                    </button>
+                                  </Link>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
+                        </Typography>
+                      </AccordionDetails>
+                    </Accordion>
+                  ))}
                 </>
               )}
 
               {activeNav === "Our" && (
+                 <>
+                 {OurJobs.map((item, id) => (
+                   <Accordion
+                     // data-aos="zoom-out"
+                     expanded={expanded === `panel${id}`}
+                     onChange={handleChange(`panel${id}`)}
+                     disableGutters
+                     elevation={0}
+                     square
+                     sx={{
+                       width: "100%",
+                       // height: expanded ? 'auto' : '6vw',
+                       transition: "all 0.3s ease",
+                       marginTop: "3vw",
+                       backgroundColor: "none",
+                     }}
+                   >
+                     <AccordionSummary
+                       expandIcon={
+                         <ArrowForwardIosSharpIcon
+                           sx={{ fontSize: "0.9rem" }}
+                         />
+                       }
+                       aria-controls="panel-content"
+                       id="panel-header"
+                       sx={{
+                         backgroundColor: "white",
+                         flexDirection: "row-reverse",
+                         height: "6vw",
+                         borderRadius: "2.8vw",
+                         boxShadow: "0px 6px 25px rgba(0, 0, 0, 0.15)",
+                         "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded":
+                           {
+                             transform: "rotate(90deg)",
+                           },
+                         "& .MuiAccordionSummary-content": {
+                           marginLeft: 1,
+                         },
+                       }}
+                     >
+                       <Typography
+                         sx={{
+                           display: "flex",
+                           flexDirection: "column",
+                           justifyContent: "flex-start", // or 'center', 'space-between' etc.
+                           width: "100%",
+                           paddingLeft: "1vw",
+                           gap: "1vw",
+                         }}
+                         className="carrier_accordian"
+                       >
+                         <p
+                           className="accordian_top_text"
+                           style={{ margin: 0 }}
+                         >
+                           {item.FieldOfJob}
+                         </p>
+                         <p className="accordia_header">{item.JobTitle}</p>
+                       </Typography>
+                     </AccordionSummary>
+                     <AccordionDetails
+                       sx={{
+                         padding: 2,
+                         // backgroundColor: 'red'
+                       }}
+                     >
+                       <Typography>
+                         <div className="accoridian_content_outer">
+                           <div className="accordain_left">
+                             <p className="accordian_left_para">
+                               Type Pellentesque ullamcorper alique ultrices.
+                               Aenean facilias vitea purus facilitias
+                               semper.Supendisse eleifind nunc non virus
+                               rhoncus.Nam posuere accumsan porta.
+                             </p>
+                             <div>{parse(item.JobDiscription, options)}</div>
+                             <div>{parse(item.Requirements, options)}</div>
+                           </div>
+                           <div className="accordian_right">
+                             {/* <div className="right_top_icons_outer">
+                                                           <p className="share">
+                                                               Share
+                                                           </p>
+                                                           <div className="icons_outer">
+                                                               <HiLink className='accordian_icons' />
+
+                                                           </div>
+                                                           <div className="icons_outer">
+                                                               <BsLinkedin className='accordian_icons' />
+
+                                                           </div>
+                                                           <div className="icons_outer">
+                                                               <FaTwitter className='accordian_icons' />
+
+                                                           </div>
+                                                           <div className="icons_outer">
+                                                               <IoIosMail className='accordian_icons' />
+
+                                                           </div>
+                                                       </div> */}
+
+                             <div className="accordian_right_icons_button">
+                               <button>Apply Now</button>
+                             </div>
+                             <div className="accordian_right_details_outer">
+                               <div className="detalis_items">
+                                 <p className="lef_item">Location</p>
+                                 <p className="right_item">{item.Location}</p>
+                               </div>
+                               <div className="detalis_items">
+                                 <p className="lef_item">Type</p>
+                                 <p className="right_item">{item.Type}</p>
+                               </div>
+                               <div className="detalis_items">
+                                 <p className="lef_item">Qualification</p>
+                                 <p className="right_item">
+                                   {item.Qualification}
+                                 </p>
+                               </div>
+                               <div className="detalis_items">
+                                 <p className="lef_item">Posted</p>
+                                 <p className="right_item">
+                                   {formatDate(item.PostDate)}
+                                 </p>
+                               </div>
+                             </div>
+
+                             <div className="right_buttons">
+                               <div className="right_help_button_outer">
+                                 <button
+                                   onClick={() =>
+                                     handleOpenForm(
+                                       "Career-All-Head of Product"
+                                     )
+                                   }
+                                 >
+                                   Ask for more help
+                                   <FaArrowRightLong className="help_button_icon" />
+                                 </button>
+                               </div>
+                               <div className="right_about_company_button_outer">
+                                 <Link to="/about" className="nav_link">
+                                   <button>
+                                     About Company
+                                     <FaArrowRightLong className="help_button_icon" />
+                                   </button>
+                                 </Link>
+                               </div>
+                             </div>
+                           </div>
+                         </div>
+                       </Typography>
+                     </AccordionDetails>
+                   </Accordion>
+                 ))}
+               </>
+              )}
+
+              {activeNav === "Clients" && (
                 <>
+                {ClientsJobs.map((item, id) => (
                   <Accordion
-                    data-aos="zoom-out"
-                    expanded={expanded === "panel1"}
-                    onChange={handleChange("panel1")}
+                    // data-aos="zoom-out"
+                    expanded={expanded === `panel${id}`}
+                    onChange={handleChange(`panel${id}`)}
                     disableGutters
                     elevation={0}
                     square
@@ -1590,7 +860,9 @@ function Carrier() {
                   >
                     <AccordionSummary
                       expandIcon={
-                        <ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />
+                        <ArrowForwardIosSharpIcon
+                          sx={{ fontSize: "0.9rem" }}
+                        />
                       }
                       aria-controls="panel-content"
                       id="panel-header"
@@ -1620,10 +892,13 @@ function Carrier() {
                         }}
                         className="carrier_accordian"
                       >
-                        <p className="accordian_top_text" style={{ margin: 0 }}>
-                          Marketing
+                        <p
+                          className="accordian_top_text"
+                          style={{ margin: 0 }}
+                        >
+                          {item.FieldOfJob}
                         </p>
-                        <p className="accordia_header">Head of Product</p>
+                        <p className="accordia_header">{item.JobTitle}</p>
                       </Typography>
                     </AccordionSummary>
                     <AccordionDetails
@@ -1641,73 +916,31 @@ function Carrier() {
                               semper.Supendisse eleifind nunc non virus
                               rhoncus.Nam posuere accumsan porta.
                             </p>
-                            <div className="accordian_left_layer2">
-                              <h1 className="accordian_layer2_heading">
-                                Job Description
-                              </h1>
-                              <div className="accordian_list_items_outer">
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
-                            </div>
-                            <div className="accordian_left_layer3">
-                              <h1 className="accordian_layer3_heading">
-                                Requirements
-                              </h1>
-                              <div className="accordian_layer3_list_items_oueter">
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
-                            </div>
+                            <div>{parse(item.JobDiscription, options)}</div>
+                            <div>{parse(item.Requirements, options)}</div>
                           </div>
                           <div className="accordian_right">
                             {/* <div className="right_top_icons_outer">
-                                                            <p className="share">
-                                                                Share
-                                                            </p>
-                                                            <div className="icons_outer">
-                                                                <HiLink className='accordian_icons' />
+                                                          <p className="share">
+                                                              Share
+                                                          </p>
+                                                          <div className="icons_outer">
+                                                              <HiLink className='accordian_icons' />
 
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <BsLinkedin className='accordian_icons' />
+                                                          </div>
+                                                          <div className="icons_outer">
+                                                              <BsLinkedin className='accordian_icons' />
 
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <FaTwitter className='accordian_icons' />
+                                                          </div>
+                                                          <div className="icons_outer">
+                                                              <FaTwitter className='accordian_icons' />
 
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <IoIosMail className='accordian_icons' />
+                                                          </div>
+                                                          <div className="icons_outer">
+                                                              <IoIosMail className='accordian_icons' />
 
-                                                            </div>
-                                                        </div> */}
+                                                          </div>
+                                                      </div> */}
 
                             <div className="accordian_right_icons_button">
                               <button>Apply Now</button>
@@ -1715,206 +948,23 @@ function Carrier() {
                             <div className="accordian_right_details_outer">
                               <div className="detalis_items">
                                 <p className="lef_item">Location</p>
-                                <p className="right_item">Bandung</p>
+                                <p className="right_item">{item.Location}</p>
                               </div>
                               <div className="detalis_items">
                                 <p className="lef_item">Type</p>
-                                <p className="right_item">Full Time</p>
+                                <p className="right_item">{item.Type}</p>
                               </div>
                               <div className="detalis_items">
-                                <p className="lef_item">Quealification</p>
-                                <p className="right_item">Fresh Graduation</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Posted</p>
-                                <p className="right_item">22 jan 2023</p>
-                              </div>
-                            </div>
-
-                            <div className="right_buttons">
-                              <div className="right_help_button_outer">
-                                <button
-                                  onClick={() =>
-                                    handleOpenForm("Career-Our-Head of Product")
-                                  }
-                                >
-                                  Ask for more help
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
-                              </div>
-                              <div className="right_about_company_button_outer">
-                                <Link to="/about" className="nav_link">
-                                  <button>
-                                    About Company
-                                    <FaArrowRightLong className="help_button_icon" />
-                                  </button>
-                                </Link>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-
-                  <Accordion
-                    data-aos="zoom-out"
-                    expanded={expanded === "panel2"}
-                    onChange={handleChange("panel2")}
-                    disableGutters
-                    elevation={0}
-                    square
-                    sx={{
-                      width: "100%",
-                      // height: expanded ? 'auto' : '6vw',
-                      transition: "all 0.3s ease",
-                      marginTop: "3vw",
-                      backgroundColor: "white",
-                      //   border:"none"
-                      border: "2px solid white",
-                    }}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        <ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />
-                      }
-                      aria-controls="panel-content"
-                      id="panel-header"
-                      sx={{
-                        backgroundColor: "white",
-                        flexDirection: "row-reverse",
-                        height: "6vw",
-                        borderRadius: "2.8vw",
-                        boxShadow: "0px 6px 25px rgba(0, 0, 0, 0.15)",
-                        "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded":
-                          {
-                            transform: "rotate(90deg)",
-                          },
-                        "& .MuiAccordionSummary-content": {
-                          marginLeft: 1,
-                        },
-                      }}
-                    >
-                      <Typography
-                        sx={{
-                          display: "flex",
-                          flexDirection: "column",
-                          justifyContent: "flex-start", // or 'center', 'space-between' etc.
-                          width: "100%",
-                          paddingLeft: "1vw",
-                          gap: "1vw",
-                        }}
-                      >
-                        <p className="accordian_top_text" style={{ margin: 0 }}>
-                          Design
-                        </p>
-                        <p className="accordia_header">
-                          Staff Product Designer
-                        </p>
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails
-                      sx={{
-                        padding: 2,
-                        // backgroundColor: 'red'
-                      }}
-                    >
-                      <Typography>
-                        <div className="accoridian_content_outer">
-                          <div className="accordain_left">
-                            <p className="accordian_left_para">
-                              Type Pellentesque ullamcorper alique ultrices.
-                              Aenean facilias vitea purus facilitias
-                              semper.Supendisse eleifind nunc non virus
-                              rhoncus.Nam posuere accumsan porta.
-                            </p>
-                            <div className="accordian_left_layer2">
-                              <h1 className="accordian_layer2_heading">
-                                Job Description
-                              </h1>
-                              <div className="accordian_list_items_outer">
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
-                            </div>
-                            <div className="accordian_left_layer3">
-                              <h1 className="accordian_layer3_heading">
-                                Requirements
-                              </h1>
-                              <div className="accordian_layer3_list_items_oueter">
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="accordian_right">
-                            {/* <div className="right_top_icons_outer">
-                                                            <p className="share">
-                                                                Share
-                                                            </p>
-                                                            <div className="icons_outer">
-                                                                <HiLink className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <BsLinkedin className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <FaTwitter className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <IoIosMail className='accordian_icons' />
-
-                                                            </div>
-                                                        </div> */}
-
-                            <div className="accordian_right_icons_button">
-                              <button>Apply Now</button>
-                            </div>
-                            <div className="accordian_right_details_outer">
-                              <div className="detalis_items">
-                                <p className="lef_item">Location</p>
-                                <p className="right_item">Bandung</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Type</p>
-                                <p className="right_item">Full Time</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Quealification</p>
-                                <p className="right_item">Fresh Graduation</p>
+                                <p className="lef_item">Qualification</p>
+                                <p className="right_item">
+                                  {item.Qualification}
+                                </p>
                               </div>
                               <div className="detalis_items">
                                 <p className="lef_item">Posted</p>
-                                <p className="right_item">22 jan 2023</p>
+                                <p className="right_item">
+                                  {formatDate(item.PostDate)}
+                                </p>
                               </div>
                             </div>
 
@@ -1923,7 +973,7 @@ function Carrier() {
                                 <button
                                   onClick={() =>
                                     handleOpenForm(
-                                      "Career-Our-Staff Product Designer"
+                                      "Career-All-Head of Product"
                                     )
                                   }
                                 >
@@ -1945,753 +995,8 @@ function Carrier() {
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
-
-                  <Accordion
-                    data-aos="zoom-out"
-                    expanded={expanded === "panel3"}
-                    onChange={handleChange("panel3")}
-                    disableGutters
-                    elevation={0}
-                    square
-                    sx={{
-                      width: "100%",
-                      // height: expanded ? 'auto' : '6vw',
-                      transition: "all 0.3s ease",
-                      marginTop: "3vw",
-                    }}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        <ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />
-                      }
-                      aria-controls="panel-content"
-                      id="panel-header"
-                      sx={{
-                        backgroundColor: "white",
-                        flexDirection: "row-reverse",
-                        height: "6vw",
-                        borderRadius: "2.8vw",
-                        boxShadow: "0px 6px 25px rgba(0, 0, 0, 0.15)",
-                        "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded":
-                          {
-                            transform: "rotate(90deg)",
-                          },
-                        "& .MuiAccordionSummary-content": {
-                          marginLeft: 1,
-                        },
-                      }}
-                    >
-                      <Typography
-                        sx={{
-                          display: "flex",
-                          flexDirection: "column",
-                          justifyContent: "flex-start", // or 'center', 'space-between' etc.
-                          width: "100%",
-                          paddingLeft: "1vw",
-                          gap: "1vw",
-                        }}
-                      >
-                        <p className="accordian_top_text" style={{ margin: 0 }}>
-                          Product
-                        </p>
-                        <p className="accordia_header">
-                          Senior Product Manager, Asset
-                        </p>
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails
-                      sx={{
-                        padding: 2,
-                        // backgroundColor: 'red'
-                      }}
-                    >
-                      <Typography>
-                        <div className="accoridian_content_outer">
-                          <div className="accordain_left">
-                            <p className="accordian_left_para">
-                              Type Pellentesque ullamcorper alique ultrices.
-                              Aenean facilias vitea purus facilitias
-                              semper.Supendisse eleifind nunc non virus
-                              rhoncus.Nam posuere accumsan porta.
-                            </p>
-                            <div className="accordian_left_layer2">
-                              <h1 className="accordian_layer2_heading">
-                                Job Description
-                              </h1>
-                              <div className="accordian_list_items_outer">
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
-                            </div>
-                            <div className="accordian_left_layer3">
-                              <h1 className="accordian_layer3_heading">
-                                Requirements
-                              </h1>
-                              <div className="accordian_layer3_list_items_oueter">
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="accordian_right">
-                            {/* <div className="right_top_icons_outer">
-                                                            <p className="share">
-                                                                Share
-                                                            </p>
-                                                            <div className="icons_outer">
-                                                                <HiLink className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <BsLinkedin className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <FaTwitter className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <IoIosMail className='accordian_icons' />
-
-                                                            </div>
-                                                        </div> */}
-
-                            <div className="accordian_right_icons_button">
-                              <button>Apply Now</button>
-                            </div>
-                            <div className="accordian_right_details_outer">
-                              <div className="detalis_items">
-                                <p className="lef_item">Location</p>
-                                <p className="right_item">Bandung</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Type</p>
-                                <p className="right_item">Full Time</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Quealification</p>
-                                <p className="right_item">Fresh Graduation</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Posted</p>
-                                <p className="right_item">22 jan 2023</p>
-                              </div>
-                            </div>
-
-                            <div className="right_buttons">
-                              <div className="right_help_button_outer">
-                                <button
-                                  onClick={() =>
-                                    handleOpenForm(
-                                      "Career-Our-Senior Product Manager, Asset"
-                                    )
-                                  }
-                                >
-                                  Ask for more help
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
-                              </div>
-                              <div className="right_about_company_button_outer">
-                                <Link to="/about" className="nav_link">
-                                  <button>
-                                    About Company
-                                    <FaArrowRightLong className="help_button_icon" />
-                                  </button>
-                                </Link>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                </>
-              )}
-
-              {activeNav === "Clients" && (
-                <>
-                  <Accordion
-                    // data-aos="zoom-out"
-                    expanded={expanded === "panel4"}
-                    onChange={handleChange("panel4")}
-                    disableGutters
-                    elevation={0}
-                    square
-                    sx={{
-                      width: "100%",
-                      // height: expanded ? 'auto' : '6vw',
-                      transition: "all 0.3s ease",
-                      marginTop: "3vw",
-                    }}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        <ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />
-                      }
-                      aria-controls="panel-content"
-                      id="panel-header"
-                      sx={{
-                        backgroundColor: "white",
-                        flexDirection: "row-reverse",
-                        height: "6vw",
-                        borderRadius: "2.8vw",
-                        boxShadow: "0px 6px 25px rgba(0, 0, 0, 0.15)",
-                        "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded":
-                          {
-                            transform: "rotate(90deg)",
-                          },
-                        "& .MuiAccordionSummary-content": {
-                          marginLeft: 1,
-                        },
-                      }}
-                    >
-                      <Typography
-                        sx={{
-                          display: "flex",
-                          flexDirection: "column",
-                          justifyContent: "flex-start", // or 'center', 'space-between' etc.
-                          width: "100%",
-                          paddingLeft: "1vw",
-                          gap: "1vw",
-                        }}
-                      >
-                        <p className="accordian_top_text" style={{ margin: 0 }}>
-                          Engineering
-                        </p>
-                        <p className="accordia_header">Backend Engineer</p>
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails
-                      sx={{
-                        padding: 2,
-                        // backgroundColor: 'red'
-                      }}
-                    >
-                      <Typography>
-                        <div className="accoridian_content_outer">
-                          <div className="accordain_left">
-                            <p className="accordian_left_para">
-                              Type Pellentesque ullamcorper alique ultrices.
-                              Aenean facilias vitea purus facilitias
-                              semper.Supendisse eleifind nunc non virus
-                              rhoncus.Nam posuere accumsan porta.
-                            </p>
-                            <div className="accordian_left_layer2">
-                              <h1 className="accordian_layer2_heading">
-                                Job Description
-                              </h1>
-                              <div className="accordian_list_items_outer">
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
-                            </div>
-                            <div className="accordian_left_layer3">
-                              <h1 className="accordian_layer3_heading">
-                                Requirements
-                              </h1>
-                              <div className="accordian_layer3_list_items_oueter">
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="accordian_right">
-                            {/* <div className="right_top_icons_outer">
-                                                            <p className="share">
-                                                                Share
-                                                            </p>
-                                                            <div className="icons_outer">
-                                                                <HiLink className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <BsLinkedin className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <FaTwitter className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <IoIosMail className='accordian_icons' />
-
-                                                            </div>
-                                                        </div> */}
-
-                            <div className="accordian_right_icons_button">
-                              <button>Apply Now</button>
-                            </div>
-                            <div className="accordian_right_details_outer">
-                              <div className="detalis_items">
-                                <p className="lef_item">Location</p>
-                                <p className="right_item">Bandung</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Type</p>
-                                <p className="right_item">Full Time</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Quealification</p>
-                                <p className="right_item">Fresh Graduation</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Posted</p>
-                                <p className="right_item">22 jan 2023</p>
-                              </div>
-                            </div>
-
-                            <div className="right_buttons">
-                              <div className="right_help_button_outer">
-                                <button
-                                  onClick={() =>
-                                    handleOpenForm(
-                                      " Career-Clients Backend Engineer"
-                                    )
-                                  }
-                                >
-                                  Ask for more help
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
-                              </div>
-                              <div className="right_about_company_button_outer">
-                                <Link to="/about" className="nav_link">
-                                  <button>
-                                    About Company
-                                    <FaArrowRightLong className="help_button_icon" />
-                                  </button>
-                                </Link>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-
-                  <Accordion
-                    data-aos="zoom-out"
-                    expanded={expanded === "panel5"}
-                    onChange={handleChange("panel5")}
-                    disableGutters
-                    elevation={0}
-                    square
-                    sx={{
-                      width: "100%",
-                      // height: expanded ? 'auto' : '6vw',
-                      transition: "all 0.3s ease",
-                      marginTop: "3vw",
-                    }}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        <ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />
-                      }
-                      aria-controls="panel-content"
-                      id="panel-header"
-                      sx={{
-                        backgroundColor: "white",
-                        flexDirection: "row-reverse",
-                        height: "6vw",
-                        borderRadius: "2.8vw",
-                        boxShadow: "0px 6px 25px rgba(0, 0, 0, 0.15)",
-                        "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded":
-                          {
-                            transform: "rotate(90deg)",
-                          },
-                        "& .MuiAccordionSummary-content": {
-                          marginLeft: 1,
-                        },
-                      }}
-                    >
-                      <Typography
-                        sx={{
-                          display: "flex",
-                          flexDirection: "column",
-                          justifyContent: "flex-start", // or 'center', 'space-between' etc.
-                          width: "100%",
-                          paddingLeft: "1vw",
-                          gap: "1vw",
-                        }}
-                      >
-                        <p className="accordian_top_text" style={{ margin: 0 }}>
-                          Engineering
-                        </p>
-                        <p className="accordia_header">
-                          Senior Backend Engineer
-                        </p>
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails
-                      sx={{
-                        padding: 2,
-                        // backgroundColor: 'red'
-                      }}
-                    >
-                      <Typography>
-                        <div className="accoridian_content_outer">
-                          <div className="accordain_left">
-                            <p className="accordian_left_para">
-                              Type Pellentesque ullamcorper alique ultrices.
-                              Aenean facilias vitea purus facilitias
-                              semper.Supendisse eleifind nunc non virus
-                              rhoncus.Nam posuere accumsan porta.
-                            </p>
-                            <div className="accordian_left_layer2">
-                              <h1 className="accordian_layer2_heading">
-                                Job Description
-                              </h1>
-                              <div className="accordian_list_items_outer">
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
-                            </div>
-                            <div className="accordian_left_layer3">
-                              <h1 className="accordian_layer3_heading">
-                                Requirements
-                              </h1>
-                              <div className="accordian_layer3_list_items_oueter">
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="accordian_right">
-                            {/* <div className="right_top_icons_outer">
-                                                            <p className="share">
-                                                                Share
-                                                            </p>
-                                                            <div className="icons_outer">
-                                                                <HiLink className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <BsLinkedin className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <FaTwitter className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <IoIosMail className='accordian_icons' />
-
-                                                            </div>
-                                                        </div> */}
-
-                            <div className="accordian_right_icons_button">
-                              <button>Apply Now</button>
-                            </div>
-                            <div className="accordian_right_details_outer">
-                              <div className="detalis_items">
-                                <p className="lef_item">Location</p>
-                                <p className="right_item">Bandung</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Type</p>
-                                <p className="right_item">Full Time</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Quealification</p>
-                                <p className="right_item">Fresh Graduation</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Posted</p>
-                                <p className="right_item">22 jan 2023</p>
-                              </div>
-                            </div>
-
-                            <div className="right_buttons">
-                              <div className="right_help_button_outer">
-                                <button
-                                  onClick={() =>
-                                    handleOpenForm(
-                                      " Career-Clients Senior Backend Engineer"
-                                    )
-                                  }
-                                >
-                                  Ask for more help
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
-                              </div>
-                              <div className="right_about_company_button_outer">
-                                <Link to="/about" className="nav_link">
-                                  <button>
-                                    About Company
-                                    <FaArrowRightLong className="help_button_icon" />
-                                  </button>
-                                </Link>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-
-                  <Accordion
-                    data-aos="zoom-out"
-                    expanded={expanded === "panel6"}
-                    onChange={handleChange("panel6")}
-                    disableGutters
-                    elevation={0}
-                    square
-                    sx={{
-                      width: "100%",
-                      // height: expanded ? 'auto' : '6vw',
-                      transition: "all 0.3s ease",
-                      marginTop: "3vw",
-                    }}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        <ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />
-                      }
-                      aria-controls="panel-content"
-                      id="panel-header"
-                      sx={{
-                        backgroundColor: "white",
-                        flexDirection: "row-reverse",
-                        height: "6vw",
-                        borderRadius: "2.8vw",
-                        boxShadow: "0px 6px 25px rgba(0, 0, 0, 0.15)",
-                        "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded":
-                          {
-                            transform: "rotate(90deg)",
-                          },
-                        "& .MuiAccordionSummary-content": {
-                          marginLeft: 1,
-                        },
-                      }}
-                    >
-                      <Typography
-                        sx={{
-                          display: "flex",
-                          flexDirection: "column",
-                          justifyContent: "flex-start", // or 'center', 'space-between' etc.
-                          width: "100%",
-                          paddingLeft: "1vw",
-                          gap: "1vw",
-                        }}
-                      >
-                        <p className="accordian_top_text" style={{ margin: 0 }}>
-                          Engineering
-                        </p>
-                        <p className="accordia_header">
-                          Senior Frontend Engineer
-                        </p>
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails
-                      sx={{
-                        padding: 2,
-                        backgroundColor: "none",
-                      }}
-                    >
-                      <Typography>
-                        <div className="accoridian_content_outer">
-                          <div className="accordain_left">
-                            <p className="accordian_left_para">
-                              Type Pellentesque ullamcorper alique ultrices.
-                              Aenean facilias vitea purus facilitias
-                              semper.Supendisse eleifind nunc non virus
-                              rhoncus.Nam posuere accumsan porta.
-                            </p>
-                            <div className="accordian_left_layer2">
-                              <h1 className="accordian_layer2_heading">
-                                Job Description
-                              </h1>
-                              <div className="accordian_list_items_outer">
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer2_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
-                            </div>
-                            <div className="accordian_left_layer3">
-                              <h1 className="accordian_layer3_heading">
-                                Requirements
-                              </h1>
-                              <div className="accordian_layer3_list_items_oueter">
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                                <li className="accordian_layer3_list_items">
-                                  Type Pellentesque ullamscoper aliquet
-                                  ultrices.Aenean facilisis vitae purus
-                                  facilisis semper.
-                                </li>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="accordian_right">
-                            {/* <div className="right_top_icons_outer">
-                                                            <p className="share">
-                                                                Share
-                                                            </p>
-                                                            <div className="icons_outer">
-                                                                <HiLink className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <BsLinkedin className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <FaTwitter className='accordian_icons' />
-
-                                                            </div>
-                                                            <div className="icons_outer">
-                                                                <IoIosMail className='accordian_icons' />
-
-                                                            </div>
-                                                        </div> */}
-
-                            <div className="accordian_right_icons_button">
-                              <button>Apply Now</button>
-                            </div>
-                            <div className="accordian_right_details_outer">
-                              <div className="detalis_items">
-                                <p className="lef_item">Location</p>
-                                <p className="right_item">Bandung</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Type</p>
-                                <p className="right_item">Full Time</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Quealification</p>
-                                <p className="right_item">Fresh Graduation</p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Posted</p>
-                                <p className="right_item">22 jan 2023</p>
-                              </div>
-                            </div>
-
-                            <div className="right_buttons">
-                              <div className="right_help_button_outer">
-                                <button
-                                  onClick={() =>
-                                    handleOpenForm(
-                                      " Career-Clients-Senior Frontend Engineer"
-                                    )
-                                  }
-                                >
-                                  Ask for more help
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
-                              </div>
-                              <div className="right_about_company_button_outer">
-                                <Link to="/about" className="nav_link">
-                                  <button>
-                                    About Company
-                                    <FaArrowRightLong className="help_button_icon" />
-                                  </button>
-                                </Link>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                </>
+                ))}
+              </>
               )}
             </div>
           </div>

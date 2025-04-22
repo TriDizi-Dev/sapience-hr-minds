@@ -285,7 +285,7 @@
  
 .accordian_top_text {
     background-color: #651fff;
-    width: 6vw;
+    width: fit-content;
     border-radius: 1vw;
     font-size: 0.8vw;
     font-weight: 400;
@@ -293,7 +293,7 @@
     justify-content: center;
     align-items: center;
     color: white;
-    padding: 0.1vw;
+    padding: 0.1vw .5vw;
 }
 
 .accordia_header {
@@ -322,7 +322,8 @@
 
 .accordian_layer2_heading {
     font-size: 1.3vw;
-    font-weight: 600;
+    font-weight: 700;
+    margin-top: 2vw;
 }
 
 .accordian_layer2_list_items {
@@ -373,7 +374,7 @@
     /* Custom bullet */
     position: absolute;
     left: 0;
-    top: -1vw;
+    top: -1.3vw;
     font-size: 2.8vw;
     /* Control bullet size */
     color: black;

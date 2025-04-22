@@ -3,10 +3,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 9vw 2vw 2vw 2vw;
+  padding: 7vw 2vw 2vw 2vw;
   margin-top: 0vw;
-  height: 100vh;
-  overflow: hidden;
+  height: 100%;
+  /* overflow: hidden; */
   background-color: black;
   /* color: white; */
 }
@@ -49,7 +49,7 @@
 }
 
 .career_labels {
-  font-size: 1.1vw;
+  font-size: 1vw;
   width: 100%;
 
 }
@@ -105,17 +105,26 @@
     transition: background-color 0.3s ease;
 }
 .wrapper-class {
-  border: 1px solid #ccc;
   padding: 5px;
   height: 100px;
+  width: 100%;
 }
 
 .editor-class {
   height: 60px;
-  padding: 10px;
+  padding: 0;
   background-color: #fff;
+  max-width: 21vw;
+  overflow: scroll;
+  font-size: 1vw;
 }
 
+.editor-class::-webkit-scrollbar {
+  display: none;
+}
+.editor-class, .public-DraftStyleDefault-ltr{
+  margin: 0 0 !important;
+}
 
 @media screen and (min-width:320px) and (max-width:720px) {
     .career_creation_container {
@@ -150,5 +159,18 @@
     .create_career_button, .cancel_career_button{
         font-size: 3.5vw;
         padding: 1.5vw 4vw; 
+    }
+    .wrapper-class{
+      height: 200px;
+      font-size: 10vw;
+    }
+
+    .editor-class {
+      height: 100px;
+      padding: 0;
+      background-color: #fff;
+      max-width: 100vw;
+      overflow: scroll;
+      font-size: 3vw;
     }
 }
