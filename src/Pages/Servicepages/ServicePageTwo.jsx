@@ -6,10 +6,7 @@ export const ServicePageTwo = () => {
     <div>
           <Service
                 ServiceHeadName="Customized HR Consulting and Advisory Services"
-                ServiceHeadContent=" Lorem Ipsum is simply dummy text of the printing and typesetting
-                  industry. Lorem Ipsum has been the industry's standard dummy text ever
-                  since the 1500s, when an unknown printer took a galley of type and
-                  scrambled it to make a type specimen book"
+                ServiceHeadContent="Tailored HR guidance that aligns with your unique business needs whether you're building from the ground up or optimizing existing practices."
                 Para1Head="Lorem ipsum dolor"
                 Para1Content1="Lorem Ipsum is simply dummy text of the printing and typesetting
                     industry. Lorem Ipsum has been the industry's standard dummy text

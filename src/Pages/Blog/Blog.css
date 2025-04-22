@@ -73,6 +73,7 @@
 .blog_content_right_text {
   font-size: 0.9vw;
   font-weight: 500;
+  border-bottom: 0.2vw solid rgba(124, 92, 252, 0.42);
 }
 .blog_page_layer1 {
   position: relative;
