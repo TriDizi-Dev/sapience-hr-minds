@@ -160,12 +160,12 @@
     flex-wrap: wrap;
     align-items: start;
     margin-top: 4vw;
-    gap: 1vw 7vw;
+    gap: 7vw 4vw;
     position: relative;
 }
 
 .Single_Alliance_container_Icon {
-    width: 15vw;
+    width: 18vw;
     /* height: 265px; */
     text-align: center;
 }

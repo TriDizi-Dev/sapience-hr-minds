@@ -28,15 +28,18 @@ export const Service = ({
   ServiceHeadContent,
   ImageLeft,
   ImageRight,
-  Para1Head,
+  // Para1Head,
   Para1Content1,
   Para1Content2,
+  Para1Content3,
   Para2Head,
   Para2Content2,
   List1,
   List2,
   List3,
   List4,
+  List5,
+  List6,
   Para3Head,
   Para3Content1,
 }) => {
@@ -270,22 +273,25 @@ export const Service = ({
           <img src={Image1} alt="Image1"></img>
         </div>
         <div className="Middle_Content_Container">
-          <p className="Middle_Secound_Head" data-aos="fade-right">
+          {/* <p className="Middle_Secound_Head" data-aos="fade-right">
             {Para1Head}
-          </p>
+          </p> */}
           <p className="Niddle_sub_content" data-aos="fade-right">
             {Para1Content1}{" "}
           </p>
           <p className="Niddle_sub_content" data-aos="fade-right">
             {Para1Content2}{" "}
           </p>
+          <p className="Niddle_sub_content" data-aos="fade-right">
+            {Para1Content3}{" "}
+          </p>
 
           <p className="Middle_Secound_Head" data-aos="zoom-in">
             {Para2Head}
           </p>
-          <p className="Niddle_sub_content" data-aos="zoom-in">
+          {/* <p className="Niddle_sub_content" data-aos="zoom-in">
             {Para2Content2}{" "}
-          </p>
+          </p> */}
 
           <ul className="List_Items_Middle">
             <li data-aos="fade-right">{List1}</li>
@@ -293,9 +299,9 @@ export const Service = ({
             <li data-aos="fade-right">{List3}</li>
             <li data-aos="fade-right">{List4}</li>
           </ul>
-          <p className="Middle_Secound_Head" data-aos="zoom-in">
+          {/* <p className="Middle_Secound_Head" data-aos="zoom-in">
             {Para3Head}
-          </p>
+          </p> */}
           <p className="Niddle_sub_content" data-aos="zoom-in">
             {Para3Content1}{" "}
           </p>

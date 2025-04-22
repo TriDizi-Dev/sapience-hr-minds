@@ -86,6 +86,14 @@ export const HrLearning = ({ HRLearning, imgTitle, questionTitle }) => {
                   <li key={i}>{item}</li>
                 ))}
               </ul>
+              <p className="Single_Cards_Sub_heads_text_right_Sub_headings">
+                {selectedData.jobspecificationsHeading1}
+              </p>
+              <ul className="Single_Cards_Sub_heads_text_right_Sub_List_text">
+                {selectedData?.Specifications?.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
               <p className="Apply_now_button_content_Hr_Learn">Apply Now</p>
             </div>
             <div className="Privours_Data_Container_last" data-aos="zoom-in-up">

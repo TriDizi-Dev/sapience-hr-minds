@@ -41,7 +41,7 @@ function SingleBlogPage() {
       cardheading:
         "The Importance of Workforce Upskilling and Reskilling in Today’s Economy",
       date: " 06/1/2024",
-      knowmore: "konw More",
+      knowmore: "know More",
 
       toptext: "By Babitha on April 24, 2025 - 5 min read",
       bannerheading:
@@ -76,7 +76,7 @@ function SingleBlogPage() {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       cardheading: "The Role of HR Analytics in Data-Driven Decision Making",
       date: " 06/1/2024",
-      knowmore: "konw More",
+      knowmore: "know More",
 
       toptext: "By mani on April 24, 2025 - 5 min read",
       bannerheading: "The Role of HR Analytics in Data-Driven Decision Making",
@@ -110,7 +110,7 @@ function SingleBlogPage() {
       cardheading:
         "The Vital Role of Leadership Development and Succession Planning",
       date: " 06/1/2024",
-      knowmore: "konw More",
+      knowmore: "know More",
 
       toptext: "By raju on April 24, 2025 - 5 min read",
       bannerheading:
