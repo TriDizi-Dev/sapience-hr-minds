@@ -1,10 +1,11 @@
 import { HrLearning } from "../../Components/HrLearning/HrLearning";
+import img from "../../Assets/HrLearning/HrBanner.svg";
 
 const InternshipHRLearning = () => {
   const Cards = [
     {
       id: 1,
-      head: "HR Operations",
+      head: "HR Operations Intern",
       subhead1: "Exposure",
       subhead2: "Compliance",
       subhead3: "Documentation",
@@ -28,11 +29,12 @@ const InternshipHRLearning = () => {
         "Eligibility: Graduates or students pursuing an MBA in HR",
         "Required Skills: Attention to detail, MS Excel, communication",
       ],
+      path: "internship-hr-learning",
     },
 
     {
       id: 2,
-      head: "Payroll Management",
+      head: "Payroll Management Intern",
       subhead1: "Process",
       subhead2: "Deductions",
       subhead3: "Benefits",
@@ -56,10 +58,11 @@ const InternshipHRLearning = () => {
         "Tools : Excel, payroll systems (Zoho, GreytHR, etc.)",
         "Eligibility : Final-year HR/Finance students or fresh graduates",
       ],
+      path: "internship-hr-learning",
     },
     {
       id: 3,
-      head: "Recruitment",
+      head: "Recruitment Intern",
       subhead1: "Screening",
       subhead2: "Interviewing",
       subhead3: "Onboarding",
@@ -83,10 +86,11 @@ const InternshipHRLearning = () => {
         "Tools: Excel, LinkedIn, Naukri, ATS platforms",
         "Eligibility: MBA HR / final-year graduates in HR or Psychology",
       ],
+      path: "internship-hr-learning",
     },
     {
       id: 4,
-      head: "Employee Relations",
+      head: "Employee Relations Intern",
       subhead1: "Conflict",
       subhead2: "Engagement",
       subhead3: "Communication",
@@ -109,10 +113,11 @@ const InternshipHRLearning = () => {
         "Tools: MS Office, survey tools, HRMS",
         "Eligibility: HR management students, psychology or sociology majors",
       ],
+      path: "internship-hr-learning",
     },
     {
       id: 5,
-      head: "Talent Management",
+      head: "Talent Management Intern",
       subhead1: "Performance",
       subhead2: "Growth",
       subhead3: "Development",
@@ -135,6 +140,7 @@ const InternshipHRLearning = () => {
         "Tools: MS Excel, LMS platforms, survey tools",
         "Eligibility: MBA HR / Organizational Psychology students",
       ],
+      path: "internship-hr-learning",
     },
   ];
   return (
@@ -142,7 +148,10 @@ const InternshipHRLearning = () => {
       <HrLearning
         HRLearning={Cards}
         imgTitle="Internships"
-        questionTitle="Internship"
+        questionTitle="Internship"  
+        img={img}
+        metaTitle="Internships"
+        metaDescription="Your startup deserves more than just reactive HR. Whether you need structure, compliance, or a culture strategy, let’s have a conversation that moves your business forward. Book a discovery call or fill out the form and let’s shape a smarter, people-powered future for your company."
       />
     </>
   );

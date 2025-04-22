@@ -1,6 +1,7 @@
 import React from 'react'
  
 import PrivacyAndTerms from '../../Components/PrivacyAndTerms/PrivacyAndTerms'
+import privacy_img from '../../assets/PrivacyandTerms/privacy_img.svg'
 
 function PricacyPolicy() {
   return (
@@ -47,7 +48,7 @@ function PricacyPolicy() {
     list12='Withdraw consent or request deletion (subject to applicable regulations)'
   
     text7="We use cookies and analytics tools to understand how visitors interact with our site and to enhance functionality. You can control cookie preferences via your browser."
-    
+    img={privacy_img}
     />
    </div>
   )
