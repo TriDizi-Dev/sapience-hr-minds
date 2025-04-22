@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState} from "react";
 import "./Blog.css";
 import blogimg1 from "../../assets/Blogs/image1.png";
 import blogimg2 from "../../assets/Blogs/image2.png";
@@ -15,6 +15,8 @@ import { useNavigate } from "react-router-dom";
 
 import Smallicon1 from "../../assets/AboutPage/Smallicon1.svg";
 import Smallicon2 from "../../assets/AboutPage/Smallicon2.svg";
+import { database } from "../../Firebase/firebase";
+import { ref } from "firebase/storage";
 
 function Blog() {
   useEffect(() => {
@@ -137,6 +139,38 @@ function Blog() {
     },
    
   ];
+  const [Blogs,setBlogs] = useState([])
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      const BlogRef = ref(database, "blogs/hr-minds"); // Match your creation path
+  
+      try {
+        const snapshot = await get(BlogRef);
+        if (snapshot.exists()) {
+          const data = snapshot.val();
+  
+          const blogList = Object.keys(data).map((key) => ({
+            id: key,
+            ...data[key],
+            imageUrl: data[key].image_url || "", // image_url already contains the full URL
+          }));
+  
+          setBlogs(blogList);
+        } else {
+          console.log("No data available");
+        }
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      }
+    };
+  
+    fetchBlogs();
+  }, []);
+  
+  
+    console.log(Blogs,"BlogsBlogs");
+    
 
   const handleSignleBlog = (ev, id) => {
     navigate(`/blog/${id}`, { state: ev });

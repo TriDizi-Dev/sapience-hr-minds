@@ -1,25 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./blogcreation.css";
-import { supabase } from "../../supabase";
-
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
-
-if (typeof setImmediate === "undefined") {
-  window.setImmediate = function (callback) {
-    return setTimeout(callback, 0);
-  };
-}
+import { Editor } from "react-draft-wysiwyg";
+import { EditorState, convertToRaw } from "draft-js";
+import draftToHtml from "draftjs-to-html";
+import { storage, ref, push, set, storageRef, uploadBytes, getDownloadURL, database } from "../../Firebase/firebase"; // Import your Firebase functions
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
 export const CreateBlog = () => {
   const [title, setTitle] = useState("");
-  const [content, setContent] = useState(""); // Textarea description
+  const [content, setContent] = useState("");
   const [image, setImage] = useState(null);
-  const [blogContent, setBlogContent] = useState(""); // Editor content
   const [preview, setPreview] = useState(null);
   const [authorName, setAuthorName] = useState("");
+  const [DepartmentOfblog,setDepartmentOfblog] = useState("")
+  const [blogContent, setBlogContent] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  let quillRef = null; 
+  const [editorState, setEditorState] = useState(EditorState.createEmpty());
+
+  const onEditorStateChange = (newEditorState) => {
+    setEditorState(newEditorState);
+    const rawContent = convertToRaw(newEditorState.getCurrentContent());
+    const htmlContent = draftToHtml(rawContent);
+    setBlogContent(htmlContent);
+  };
+
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     setImage(file);
@@ -30,75 +34,44 @@ export const CreateBlog = () => {
     }
   };
 
-  console.log(blogContent, "blogContent");
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (isSubmitting) return;
     setIsSubmitting(true);
-
+  
     if (!image) {
       alert("Please select an image.");
       setIsSubmitting(false);
       return;
     }
-
-    if (
-      !blogContent ||
-      !blogContent.blocks.some((block) => block.text.trim())
-    ) {
-      alert("Please enter blog content.");
-      setIsSubmitting(false);
-      return;
-    }
-
-    const fileExt = image.name.split(".").pop();
-    const fileName = `${Date.now()}.${fileExt}`;
-
+  
     try {
-      const { data: uploadData, error: uploadError } = await supabase.storage
-        .from("sapienceminds")
-        .upload(fileName, image);
-
-      if (uploadError) {
-        console.error("Image upload error:", uploadError.message);
-        alert("Error uploading image.");
-        setIsSubmitting(false);
-        return;
-      }
-
-      const imageUrl = supabase.storage
-        .from("sapienceminds")
-        .getPublicUrl(fileName).data.publicUrl;
-      console.log("Image URL:", imageUrl);
-
-      const { error: insertError } = await supabase.from("blogs").insert([
-        {
-          title,
-          content, // Textarea description
-          image_url: imageUrl,
-          blog_content: JSON.stringify(blogContent), // Editor content
-          author_name: authorName,
-        },
-      ]);
-
-      if (insertError) {
-        console.error(
-          "Blog insert error:",
-          insertError.message,
-          insertError.details
-        );
-        alert("Error posting blog: " + insertError.message);
-        setIsSubmitting(false);
-      } else {
-        alert("Blog posted successfully!");
-        setTitle("");
-        setContent("");
-        setImage(null);
-        setPreview(null);
-        setAuthorName("");
-        setEditorState(EditorState.createEmpty());
-      }
+      const imageRef = storageRef(storage, `blogs/${Date.now()}-${image.name}`);
+  console.log(imageRef,"lkjhgfddfgh");
+  
+      const uploadTask = await uploadBytes(imageRef, image);
+      console.log('Image upload result:', uploadTask);
+  
+      const imageUrl = await getDownloadURL(uploadTask.ref);
+      console.log(imageUrl, "imageUrlimageUrl");
+  
+      const newBlogRef = push(ref(database, "blogs/hr-minds"));
+      await set(newBlogRef, {
+        title,
+        content,
+        image_url: imageUrl,
+        blog_content: blogContent,
+        author_name: authorName,
+        created_at: new Date().toISOString(),
+      });
+  
+      alert("Blog posted successfully!");
+      setTitle("");
+      setContent("");
+      setImage(null);
+      setPreview(null);
+      setAuthorName("");
+      setEditorState(EditorState.createEmpty());
     } catch (err) {
       console.error("Error during submission:", err);
       alert("An error occurred. Please try again.");
@@ -106,23 +79,10 @@ export const CreateBlog = () => {
       setIsSubmitting(false);
     }
   };
-
-
-  const modules = {
-    toolbar: [
-      [{ header: '1' }, { header: '2' }, { font: [] }],
-      [{ list: 'ordered' }, { list: 'bullet' }],
-      ['bold', 'italic', 'underline'],
-      ['link'],
-      [{ align: [] }],
-      ['image'], // Enable image button in the toolbar
-    ],
-  };
-
+  
 
   return (
-    <>
-      <div className="blog_creation_page">{/* <Navbar /> */}</div>
+    <div className="blog_creation_page">
       <div className="blog_page_main_container">
         <div className="blog-container">
           <form className="blog-form" onSubmit={handleSubmit}>
@@ -134,16 +94,22 @@ export const CreateBlog = () => {
               type="text"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              placeholder="Enter blog title"
               required
             />
+
             <label htmlFor="authorName">Author Name</label>
             <input
               id="authorName"
               type="text"
               value={authorName}
               onChange={(e) => setAuthorName(e.target.value)}
-              placeholder="Enter author name"
+            />
+            <label htmlFor="DepartName">Department Name</label>
+            <input
+              id="DepartName"
+              type="text"
+              value={DepartmentOfblog}
+              onChange={(e) => setDepartmentOfblog(e.target.value)}
             />
 
             <label htmlFor="content">Description</label>
@@ -151,26 +117,23 @@ export const CreateBlog = () => {
               id="content"
               value={content}
               onChange={(e) => setContent(e.target.value)}
-              placeholder="Write your blog description..."
               rows="4"
               required
             />
 
-            <div>
-              <label htmlFor="blogContent">Blog Content</label>
-             
-
-              <ReactQuill
-                ref={(el) => {
-                  quillRef = el;
-                }}
-                value={blogContent}
-                onChange={(value) => setBlogContent(value)}
-                modules={modules}
-                className="rich-text"
-                placeholder="Description"
-              />
-            </div>
+            <label htmlFor="blogContent">Blog Content</label>
+            <Editor
+              editorState={editorState}
+              onEditorStateChange={onEditorStateChange}
+              wrapperClassName="wrapper-class"
+              editorClassName="editor-class"
+              toolbarClassName="toolbar-class"
+              toolbar={{
+                options: ["inline", "list", "link"],
+                inline: { options: ["bold", "italic", "underline"] },
+                list: { options: ["unordered", "ordered"] },
+              }}
+            />
 
             <label htmlFor="image">Upload Image</label>
             <input
@@ -179,9 +142,7 @@ export const CreateBlog = () => {
               accept="image/*"
               onChange={handleImageChange}
             />
-            {preview && (
-              <img src={preview} alt="Preview" className="preview-img" />
-            )}
+            {preview && <img src={preview} alt="Preview" className="preview-img" />}
 
             <button type="submit" disabled={isSubmitting}>
               {isSubmitting ? "Publishing..." : "Publish Blog"}
@@ -189,6 +150,6 @@ export const CreateBlog = () => {
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 };
