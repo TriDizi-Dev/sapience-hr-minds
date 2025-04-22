@@ -10,7 +10,7 @@ const CareerCreation = () => {
   const [formData, setFormData] = useState({
     ShortDiscription: "",
     JobDiscription: null,
-    Requirements: "",
+    Requirements: null,
     Location: "",
     Type: "",
     Qualification: "",
@@ -18,11 +18,11 @@ const CareerCreation = () => {
     JobTitle: "",
     Category: "",
     FieldOfJob: "",
+    maxWidth: "21vw",
   });
 
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
-  console.log(formData.JobDiscription,"lkjhgfghj");
-  
+  const [Requirements, setRequirements] = useState(EditorState.createEmpty());
 
   const onEditorStateChange = (newEditorState) => {
     setEditorState(newEditorState);
@@ -31,6 +31,15 @@ const CareerCreation = () => {
     setFormData((prev) => ({
       ...prev,
       JobDiscription: htmlContent,
+    }));
+  };
+  const onEditorRequirementStateChange = (newEditorState) => {
+    setRequirements(newEditorState);
+    const rawContent = convertToRaw(newEditorState.getCurrentContent());
+    const htmlContent = draftToHtml(rawContent);
+    setFormData((prev) => ({
+      ...prev,
+      Requirements: htmlContent,
     }));
   };
 
@@ -74,6 +83,7 @@ const CareerCreation = () => {
       FieldOfJob: "",
     });
     setEditorState(EditorState.createEmpty());
+    setRequirements(EditorState.createEmpty());
   };
 
   return (
@@ -83,7 +93,9 @@ const CareerCreation = () => {
         <form className="career_creation_form" onSubmit={handleSubmit}>
           <div className="career_creation_form_container">
             <div className="input_container">
-              <label htmlFor="Location" className="career_labels">Location</label>
+              <label htmlFor="Location" className="career_labels">
+                Location
+              </label>
               <input
                 type="text"
                 id="Location"
@@ -92,20 +104,26 @@ const CareerCreation = () => {
                 onChange={formHandlerOnChange}
                 value={formData.Location}
               />
-            </div>
-            <div className="input_container">
-              <label htmlFor="Category" className="career_labels">Category</label>
-              <input
-                type="text"
-                id="Category"
+
+              <label htmlFor="Category" className="career_labels">
+                Category
+              </label>
+              <select
                 name="Category"
-                className="career_input"
+                id="Category"
                 onChange={formHandlerOnChange}
                 value={formData.Category}
-              />
+                className="career_input"
+              >
+                <option value="">Select job type</option>
+                <option value="Our">Our</option>
+                <option value="Clients">Clients</option>
+              </select>
             </div>
             <div className="input_container">
-              <label htmlFor="FieldOfJob" className="career_labels">FieldOfJob</label>
+              <label htmlFor="FieldOfJob" className="career_labels">
+                FieldOfJob
+              </label>
               <input
                 type="text"
                 id="FieldOfJob"
@@ -114,9 +132,10 @@ const CareerCreation = () => {
                 onChange={formHandlerOnChange}
                 value={formData.FieldOfJob}
               />
-            </div>
-            <div className="input_container">
-              <label htmlFor="Type" className="career_labels">Type</label>
+
+              <label htmlFor="Type" className="career_labels">
+                Type
+              </label>
               <select
                 name="Type"
                 id="Type"
@@ -124,6 +143,7 @@ const CareerCreation = () => {
                 value={formData.Type}
                 className="career_input"
               >
+                <option value="">Select job type</option>
                 <option value="Full Time">Full Time</option>
                 <option value="Part Time">Part Time</option>
                 <option value="Internship">Internship</option>
@@ -133,7 +153,9 @@ const CareerCreation = () => {
 
           <div className="career_creation_form_container">
             <div className="input_container">
-              <label htmlFor="Qualification" className="career_labels">Qualification</label>
+              <label htmlFor="Qualification" className="career_labels">
+                Qualification
+              </label>
               <input
                 type="text"
                 id="Qualification"
@@ -144,7 +166,9 @@ const CareerCreation = () => {
               />
             </div>
             <div className="input_container">
-              <label htmlFor="PostDate" className="career_labels">Posted Date</label>
+              <label htmlFor="PostDate" className="career_labels">
+                Posted Date
+              </label>
               <input
                 type="date"
                 id="PostDate"
@@ -158,7 +182,9 @@ const CareerCreation = () => {
 
           <div className="career_creation_form_container">
             <div className="input_container">
-              <label htmlFor="JobTitle" className="career_labels">Title</label>
+              <label htmlFor="JobTitle" className="career_labels">
+                Title
+              </label>
               <input
                 type="text"
                 id="JobTitle"
@@ -169,20 +195,25 @@ const CareerCreation = () => {
               />
             </div>
             <div className="input_container">
-              <label htmlFor="ShortDiscription" className="career_labels">Title Description</label>
-              <textarea
+              <label htmlFor="ShortDiscription" className="career_labels">
+                Title Description
+              </label>
+              <input
                 id="ShortDiscription"
-                className="career_textarea"
+                className="career_input"
                 name="ShortDiscription"
                 onChange={formHandlerOnChange}
                 value={formData.ShortDiscription}
-              ></textarea>
+                type="text"
+              />
             </div>
           </div>
 
           <div className="career_creation_form_container">
             <div className="input_container">
-              <label htmlFor="JobDiscription" className="career_labels">Job Description</label>
+              <label htmlFor="JobDiscription" className="career_labels">
+                Job Description
+              </label>
               <Editor
                 editorState={editorState}
                 onEditorStateChange={onEditorStateChange}
@@ -190,7 +221,7 @@ const CareerCreation = () => {
                 editorClassName="editor-class"
                 toolbarClassName="toolbar-class"
                 toolbar={{
-                  options: ["inline", "list", "link"],
+                  options: ["inline", "list"],
                   inline: { options: ["bold", "italic", "underline"] },
                   list: { options: ["unordered", "ordered"] },
                 }}
@@ -198,20 +229,42 @@ const CareerCreation = () => {
             </div>
 
             <div className="input_container">
-              <label htmlFor="Requirements" className="career_labels">Requirements</label>
-              <textarea
+              <label htmlFor="Requirements" className="career_labels">
+                Requirements
+              </label>
+              <Editor
+                Requirements={Requirements}
+                onEditorStateChange={onEditorRequirementStateChange}
+                wrapperClassName="wrapper-class"
+                editorClassName="editor-class"
+                toolbarClassName="toolbar-class"
+                toolbar={{
+                  options: ["inline", "list"],
+                  inline: { options: ["bold", "italic", "underline"] },
+                  list: { options: ["unordered", "ordered"] },
+                }}
+              />
+              {/* <textarea
                 id="Requirements"
                 className="career_textarea"
                 name="Requirements"
                 onChange={formHandlerOnChange}
                 value={formData.Requirements}
-              ></textarea>
+              ></textarea> */}
             </div>
           </div>
 
           <div className="career_creation_button_container">
-            <button className="create_career_button" type="submit">Create</button>
-            <button className="cancel_career_button" type="button" onClick={cancelHandler}>Clear</button>
+            <button className="create_career_button" type="submit">
+              Create
+            </button>
+            <button
+              className="cancel_career_button"
+              type="button"
+              onClick={cancelHandler}
+            >
+              Clear
+            </button>
           </div>
         </form>
       </div>
