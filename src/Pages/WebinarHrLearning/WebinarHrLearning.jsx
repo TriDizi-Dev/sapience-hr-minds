@@ -26,6 +26,7 @@ const WebinarHRLearning = () => {
         "Includes: Digital certificate, replay access",
         "Audience: Startup founders, HR leads, ops manager",
       ],
+      path:"webinar-hr-learning"
     },
 
     {
@@ -52,6 +53,7 @@ const WebinarHRLearning = () => {
         "Add-ons: E-book on Payroll Essentials, e-Certificate",
         "Target Audience: Startup HRs, Ops Heads, CHROs, Admin Managers",
       ],
+        path:"webinar-hr-learning"
     },
     {
       id: 3,
@@ -77,6 +79,7 @@ const WebinarHRLearning = () => {
         "Includes: Participation certificate, digital recruitment playbook",
         "Audience: HR managers, talent acquisition leads, startup HRs",
       ],
+        path:"webinar-hr-learning"
     },
     {
       id: 4,
@@ -102,6 +105,7 @@ const WebinarHRLearning = () => {
         "Includes: Participation e-certificate, sample policies",
         "Target: Founders, HR generalists, early-stage CHROs",
       ],
+        path:"webinar-hr-learning"
     },
     {
       id: 5,
@@ -127,6 +131,7 @@ const WebinarHRLearning = () => {
         "Includes: Participation certificate, framework downloads",
         "Target Audience: CHROs, business owners, HR strategists",
       ],
+        path:"webinar-hr-learning"
     },
   ];
 
@@ -137,6 +142,8 @@ const WebinarHRLearning = () => {
         imgTitle="Webinar"
         questionTitle="Webinar"
         img={img}
+        metaTitle="Webinars"
+        metaDescription="Your startup deserves more than just reactive HR. Whether you need structure, compliance, or a culture strategy, let’s have a conversation that moves your business forward. Book a discovery call or fill out the form and let’s shape a smarter, people-powered future for your company."
       />
     </>
   );

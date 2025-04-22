@@ -11,6 +11,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet-async";
 
 function SingleBlogPage() {
   const location = useLocation();
@@ -141,6 +142,50 @@ function SingleBlogPage() {
   ];
   return (
     <div className="single_blog_outer_main">
+        <Helmet>
+      <title>
+     {data?.bannerheading} 
+        </title>
+        <meta
+          name="description"
+          content={data?.bannertext}
+        />
+
+           {/* Open Graph Meta Tags (for WhatsApp, Facebook, LinkedIn) */}
+           <meta
+          property="og:title"
+          content={data?.bannerheading} 
+        />
+        <meta
+          property="og:description"
+          content={data?.bannertext}
+        />
+        <meta
+          property="og:image"
+          content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
+        />
+        <meta
+          property="og:url"
+          content="https://tridizi.com/"
+        />
+        <meta property="og:type" content="website" />
+
+      {/* Twitter Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content={data?.bannerheading}
+        />
+        <meta
+          name="twitter:description"
+          content={data?.bannertext}
+        />
+        <meta
+          name="twitter:image"
+          content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
+        />
+
+      </Helmet>
       <div className="sinle_blog_banner">
         {/* <img src={bannerimg} alt="bannerimg" className="single_blog_banner_img" /> */}
         <div
@@ -164,16 +209,16 @@ function SingleBlogPage() {
             alt="triangle"
             className="single_blog_triangle_icon"
           />
-          <h1 className="single_blog_content_heading" data-aos="zoom-in">
+          <p className="single_blog_content_heading" data-aos="zoom-in">
             {data?.firstheading}
-          </h1>
+          </p>
           <p className="single_blog_content_para" data-aos="fade-right">
             {data?.firstpara}
           </p>
 
-          <h1 className="single_blog_content_heading" data-aos="zoom-in">
+          <p className="single_blog_content_heading" data-aos="zoom-in">
             {data?.secondheading}
-          </h1>
+          </p>
           <p className="single_blog_content_para" data-aos="fade-right">
             {data?.secondpara}
           </p>
@@ -192,9 +237,9 @@ function SingleBlogPage() {
             </li>
           </div>
 
-          <h1 className="single_blog_content_heading" data-aos="zoom-in">
+          <p className="single_blog_content_heading" data-aos="zoom-in">
             {data?.thirdheading}
-          </h1>
+          </p>
           <p className="single_blog_content_para" data-aos="fade-right">
             {data?.thirdpara}
           </p>
@@ -205,9 +250,9 @@ function SingleBlogPage() {
         <img src={background} alt="background" className="single_blog_bg_img" />
         <div className="single_blog_layer3_main">
           {data?.fourthheading && data?.fourthheading.length > 0 && (
-            <h1 className="single_blog_content_heading" data-aos="zoom-in">
+            <p className="single_blog_content_heading" data-aos="zoom-in">
               {data?.fourthheading}
-            </h1>
+            </p>
           )}
           <p className="single_blog_content_para" data-aos="fade-right">
             {data?.fourthpara}

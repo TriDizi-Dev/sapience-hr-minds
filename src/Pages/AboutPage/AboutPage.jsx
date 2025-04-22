@@ -16,6 +16,8 @@ import Smallicon4 from "../../assets/AboutPage/Smallicon4.svg";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { PreFooter } from "../../Components/PreFooter/PreFooter";
 
+import { Helmet } from "react-helmet-async";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -264,6 +266,46 @@ export const AboutPage = () => {
   ];
   return (
     <>
+         <Helmet>
+        <title>
+        About Our Company
+        </title>
+        <meta
+          name="description"
+          content="Sapience Minds was founded with a clear mission to help startups and growing businesses establish strong HR foundations without the cost of a full-time CHRO. By offering Fractional CHRO services, we empower companies to access senior HR leadership on-demand, driving strategic decisions in talent acquisition, culture building, compliance, and performance. Our services are agile, scalable, and deeply aligned with each client’s business goals, ensuring people and performance work hand in hand."
+        />
+
+        {/* Open Graph Meta Tags (for WhatsApp, Facebook, LinkedIn) */}
+        <meta
+          property="og:title"
+          content="About Our Company"
+        />
+        <meta
+          property="og:description"
+          content="Sapience Minds was founded with a clear mission to help startups and growing businesses establish strong HR foundations without the cost of a full-time CHRO. By offering Fractional CHRO services, we empower companies to access senior HR leadership on-demand, driving strategic decisions in talent acquisition, culture building, compliance, and performance. Our services are agile, scalable, and deeply aligned with each client’s business goals, ensuring people and performance work hand in hand."
+        />
+        <meta
+          property="og:image"
+          content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
+        />
+        <meta property="og:url" content="https://tridizi.com/" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="About Our Company"
+        />
+        <meta
+          name="twitter:description"
+          content="Sapience Minds was founded with a clear mission to help startups and growing businesses establish strong HR foundations without the cost of a full-time CHRO. By offering Fractional CHRO services, we empower companies to access senior HR leadership on-demand, driving strategic decisions in talent acquisition, culture building, compliance, and performance. Our services are agile, scalable, and deeply aligned with each client’s business goals, ensuring people and performance work hand in hand."
+        />
+        <meta
+          name="twitter:image"
+          content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
+        />
+      </Helmet>
       <div className="About_Main_Container">
         {/* <p className="About_Heading">About Us</p> */}
         <p className="About_Sub_Heading">About Our Company</p>
@@ -304,7 +346,7 @@ export const AboutPage = () => {
             </div>
           </div>
           <div className="Right_side_Images_container">
-            <h1 className="Head_Section3">About Us</h1>
+            <p className="Head_Section3">About Us</p>
             <img
               src={Person}
               alt="PersonImage"
@@ -381,19 +423,19 @@ export const AboutPage = () => {
         </p>
         <div className="Missions_container" ref={ref}>
           <div className="Sub_Missions">
-            <h1>{count}+</h1>
+            <p id="sub_count">{count}+</p>
             <p>Years of Experience</p>
           </div>
           <div className="Sub_Missions">
-            <h1>{AwardsCount}+</h1>
+            <p id="sub_count">{AwardsCount}+</p>
             <p>HR’s Trained</p>
           </div>
           <div className="Sub_Missions">
-            <h1>{ClientCount}%</h1>
+            <p id="sub_count">{ClientCount}%</p>
             <p>Client Satisfaction</p>
           </div>
           <div className="Sub_Missions">
-            <h1>{ClientRatingCount}</h1>
+            <p id="sub_count">{ClientRatingCount}</p>
             <p>Client Rating</p>
           </div>
         </div>

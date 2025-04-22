@@ -4,11 +4,16 @@ import HeroImage from "../../assets/AlliancePartner/hero_1.svg";
 import BlueLayer from "../../assets/AboutPage/blushade.svg";
 import orangeLayer from "../../assets/AboutPage/orangeshade.svg";
 import SquareIcons from "../../assets/AlliancePartner/LayerContainer.svg";
-import PersonImage from "../../assets/AlliancePartner/image.png";
+import PersonImage from "../../assets/AlliancePartner/man_img.svg";
 import Smallicon1 from "../../assets/AboutPage/Smallicon1.svg";
-import Smallicon2 from "../../assets/AboutPage/Smallicon2.svg";
-import Smallicon3 from "../../assets/AboutPage/Smallicon3.svg";
-import Smallicon4 from "../../assets/AboutPage/Smallicon4.svg";
+import Smallicon2 from "../../assets/AboutPage/icon_3.svg";
+
+import Smallicon3 from "../../assets/AboutPage/icon_4.svg";
+import Smallicon4 from "../../assets/AboutPage/icon_5.svg";
+import Smallicon5 from "../../assets/AboutPage/icon_6.svg";
+import Smallicon6 from "../../assets/AboutPage/icon_7.svg";
+import Smallicon7 from "../../assets/AboutPage/icon_8.svg";
+import Smallicon8 from "../../assets/AboutPage/icon_9.svg";
 import man from "../../assets/HomePage/man.svg";
 import { PreFooter } from "../../Components/PreFooter/PreFooter";
 import AOS from "aos";
@@ -29,6 +34,7 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Helmet } from "react-helmet-async";
 
 export const AlliancePartner = () => {
   const swiperRef = useRef(null);
@@ -87,28 +93,28 @@ export const AlliancePartner = () => {
     },
     {
       id: 5,
-      Logo: Smallicon1,
+      Logo: Smallicon5,
       Head: "Learn More",
       subHead: "Talent Management",
       para: "Fuel performance and growth with development plans, reviews, and leadership pipelines built to scale with your startup.",
     },
     {
       id: 6,
-      Logo: Smallicon2,
+      Logo: Smallicon6,
       Head: "Learn More",
       subHead: "Talent Engagement & Retention",
       para: "Create a culture employees love. We craft engagement strategies that foster loyalty, purpose, and long-term retention.",
     },
     {
       id: 7,
-      Logo: Smallicon3,
+      Logo: Smallicon7,
       Head: "Learn More",
       subHead: "Recruitment of Leadership & Mid-Level Team",
       para: "Finding the right leaders is critical. We connect you with proven professionals who match your mission and mindset.",
     },
     {
       id: 8,
-      Logo: Smallicon4,
+      Logo: Smallicon8,
       Head: "Learn More",
       subHead: "Employee Insurance & Benefits",
       para: "Boost employee satisfaction with thoughtfully designed insurance and perks that support health, security, and morale.",
@@ -175,6 +181,50 @@ export const AlliancePartner = () => {
   ];
   return (
     <>
+      <Helmet>
+      <title>
+      Expert Who Elevate Our Mission
+        </title>
+        <meta
+          name="description"
+          content="At Sapience Minds, we collaborate with handpicked industry leaders who bring specialized knowledge and proven excellence to the table. These trusted partners expand our capabilities and ensure that every solution we offer is backed by expertise, innovation, and impact—giving your business access to the very best in HR, leadership, compliance, and beyond."
+        />
+
+           {/* Open Graph Meta Tags (for WhatsApp, Facebook, LinkedIn) */}
+           <meta
+          property="og:title"
+          content="Expert Who Elevate Our Mission"
+        />
+        <meta
+          property="og:description"
+          content="At Sapience Minds, we collaborate with handpicked industry leaders who bring specialized knowledge and proven excellence to the table. These trusted partners expand our capabilities and ensure that every solution we offer is backed by expertise, innovation, and impact—giving your business access to the very best in HR, leadership, compliance, and beyond."
+        />
+        <meta
+          property="og:image"
+          content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
+        />
+        <meta
+          property="og:url"
+          content="https://tridizi.com/"
+        />
+        <meta property="og:type" content="website" />
+
+      {/* Twitter Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Expert Who Elevate Our Mission"
+        />
+        <meta
+          name="twitter:description"
+          content="At Sapience Minds, we collaborate with handpicked industry leaders who bring specialized knowledge and proven excellence to the table. These trusted partners expand our capabilities and ensure that every solution we offer is backed by expertise, innovation, and impact—giving your business access to the very best in HR, leadership, compliance, and beyond."
+        />
+        <meta
+          name="twitter:image"
+          content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
+        />
+
+      </Helmet>
       <div className="AlliancePartner_Main_Container">
         <p className="BlueLayer_HeroBanner">
           <img src={BlueLayer} alt="BlueLayer"></img>
@@ -249,7 +299,7 @@ export const AlliancePartner = () => {
       <div className="Alliance_layer4_outer_main">
         <div className="Alliance_layer4_outer">
           <div className="Alliance_layer4_part1" data-aos="fade-down">
-            <h6 className="Alliance_layer4_part1_heading">Testimonials</h6>
+            <p className="Alliance_layer4_part1_heading">Testimonials</p>
             <h1 className="Alliance_layer4_part1_heading2">
               See Why Our Clients Love Us
             </h1>
@@ -302,9 +352,9 @@ export const AlliancePartner = () => {
                         />
                       </div>
                       <div className="card_bottom_right_text">
-                        <h6 className="card_bottom_heading">
+                        <p className="card_bottom_heading">
                           {data.bottomname}
-                        </h6>
+                        </p>
                         <p className="card_bottom_para">{data.bottomtext}</p>
                       </div>
                     </div>
@@ -345,9 +395,9 @@ export const AlliancePartner = () => {
                         />
                       </div>
                       <div className="card_bottom_right_text">
-                        <h6 className="card_bottom_heading">
+                        <p className="card_bottom_heading">
                           {singleTestimonial.bottomname}
-                        </h6>
+                        </p>
                         <p className="singleTestimonial_bottom_para">
                           {singleTestimonial.bottomtext}
                         </p>

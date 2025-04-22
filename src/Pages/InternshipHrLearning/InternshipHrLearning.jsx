@@ -29,6 +29,7 @@ const InternshipHRLearning = () => {
         "Eligibility: Graduates or students pursuing an MBA in HR",
         "Required Skills: Attention to detail, MS Excel, communication",
       ],
+      path: "internship-hr-learning",
     },
 
     {
@@ -57,6 +58,7 @@ const InternshipHRLearning = () => {
         "Tools : Excel, payroll systems (Zoho, GreytHR, etc.)",
         "Eligibility : Final-year HR/Finance students or fresh graduates",
       ],
+      path: "internship-hr-learning",
     },
     {
       id: 3,
@@ -84,6 +86,7 @@ const InternshipHRLearning = () => {
         "Tools: Excel, LinkedIn, Naukri, ATS platforms",
         "Eligibility: MBA HR / final-year graduates in HR or Psychology",
       ],
+      path: "internship-hr-learning",
     },
     {
       id: 4,
@@ -110,6 +113,7 @@ const InternshipHRLearning = () => {
         "Tools: MS Office, survey tools, HRMS",
         "Eligibility: HR management students, psychology or sociology majors",
       ],
+      path: "internship-hr-learning",
     },
     {
       id: 5,
@@ -136,6 +140,7 @@ const InternshipHRLearning = () => {
         "Tools: MS Excel, LMS platforms, survey tools",
         "Eligibility: MBA HR / Organizational Psychology students",
       ],
+      path: "internship-hr-learning",
     },
   ];
   return (
@@ -143,8 +148,10 @@ const InternshipHRLearning = () => {
       <HrLearning
         HRLearning={Cards}
         imgTitle="Internships"
-        questionTitle="Internship"
+        questionTitle="Internship"  
         img={img}
+        metaTitle="Internships"
+        metaDescription="Your startup deserves more than just reactive HR. Whether you need structure, compliance, or a culture strategy, let’s have a conversation that moves your business forward. Book a discovery call or fill out the form and let’s shape a smarter, people-powered future for your company."
       />
     </>
   );

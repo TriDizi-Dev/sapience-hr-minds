@@ -14,10 +14,17 @@ import dummylogo_5 from "../../assets/HomePage/logo_1.png";
 import layer4 from "../../assets/HomePage/home_img.svg";
 
 import Smallicon1 from "../../assets/AboutPage/Smallicon1.svg";
-import Smallicon2 from "../../assets/AboutPage/Smallicon2.svg";
+import Smallicon2 from "../../assets/AboutPage/icon_3.svg";
 
-import Smallicon3 from "../../assets/AboutPage/Smallicon3.svg";
-import Smallicon4 from "../../assets/AboutPage/Smallicon4.svg";
+import Smallicon3 from "../../assets/AboutPage/icon_4.svg";
+import Smallicon4 from "../../assets/AboutPage/icon_5.svg";
+import Smallicon5 from "../../assets/AboutPage/icon_6.svg";
+import Smallicon6 from "../../assets/AboutPage/icon_7.svg";
+import Smallicon7 from "../../assets/AboutPage/icon_8.svg";
+import Smallicon8 from "../../assets/AboutPage/icon_9.svg";
+
+import icon_1 from "../../assets/AboutPage/icon_1.svg";
+import icon_2 from "../../assets/AboutPage/icon_2.svg";
 
 import bg1 from "../../assets/HomePage/bg1.svg";
 import bg2 from "../../assets/HomePage/bg2.svg";
@@ -101,32 +108,32 @@ export const HomePage = () => {
       path: "/talent-acquisition-solutions",
     },
     {
-      id: 1,
-      Logo: Smallicon1,
+      id: 4,
+      Logo: Smallicon5,
       Head: "Learn More",
       subHead: "Talent Management",
       para: "Fuel performance and growth with development plans, reviews, and leadership pipelines built to scale with your startup.",
       path: "/talent-management",
     },
     {
-      id: 2,
-      Logo: Smallicon2,
+      id: 6,
+      Logo: Smallicon6,
       Head: "Learn More",
       subHead: "Talent Engagement & Retention",
       para: "Create a culture employees love. We craft engagement strategies that foster loyalty, purpose, and long-term retention.",
       path: "/talent-engagement",
     },
     {
-      id: 3,
-      Logo: Smallicon3,
+      id: 7,
+      Logo: Smallicon7,
       Head: "Learn More",
       subHead: "Recruitment of Leadership & Mid-Level Team",
       para: "Finding the right leaders is critical. We connect you with proven professionals who match your mission and mindset.",
       path: "/recruitment-of-leadership",
     },
     {
-      id: 4,
-      Logo: Smallicon4,
+      id: 8,
+      Logo: Smallicon8,
       Head: "Learn More",
       subHead: "Employee Insurance & Benefits",
       para: "Boost employee satisfaction with thoughtfully designed insurance and perks that support health, security, and morale.",
@@ -297,7 +304,8 @@ export const HomePage = () => {
   ];
 
   const handleSignleBlog = (ev, id) => {
-    navigate(`/blog/${id}`, { state: ev });
+    const cleanPath = id.replaceAll(' ', '-');
+    navigate(`/blog/${cleanPath}`, { state: ev });
   };
 
   const hadleNavigate = () => {
@@ -653,7 +661,7 @@ export const HomePage = () => {
               <div className="homepage_layer4_card">
                 <div className="layer4_card_logo">
                   <img
-                    src={Smallicon2}
+                    src={icon_1}
                     alt="Smallicon1"
                     className="layer4_logo"
                   />
@@ -671,7 +679,7 @@ export const HomePage = () => {
               <div className="homepage_layer4_card">
                 <div className="layer4_card_logo">
                   <img
-                    src={Smallicon1}
+                    src={icon_2}
                     alt="Smallicon1"
                     className="layer4_logo"
                   />

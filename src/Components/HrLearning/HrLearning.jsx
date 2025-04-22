@@ -5,9 +5,13 @@ import BackgroundLayer from "../../assets/HrLearning/BackgroundLayer.svg";
 import { PreFooter } from "../PreFooter/PreFooter";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
 
-export const HrLearning = ({ HRLearning, imgTitle, questionTitle,img }) => {
+
+export const HrLearning = ({ HRLearning, imgTitle, questionTitle,img, metaTitle,metaDescription }) => {
   const [selectedData, setSelectedData] = useState({});
+  const navigate= useNavigate();
 
   useEffect(() => {
     setSelectedData(HRLearning[0]);
@@ -24,8 +28,59 @@ export const HrLearning = ({ HRLearning, imgTitle, questionTitle,img }) => {
         once: false,
       });
     }, []);
+    useEffect(()=>{
+      const params = new URLSearchParams();
+      if (selectedData?.head) params.set("title", selectedData.head || "");
+      const queryString = params.toString();
+      navigate(queryString ? `/${selectedData?.path}?${queryString}` : `/${selectedData?.path}`);
+
+    },[selectedData])
   return (
     <>
+      <Helmet>
+      <title>
+     {metaTitle}
+        </title>
+        <meta
+          name="description"
+          content={metaDescription}
+        />
+
+           {/* Open Graph Meta Tags (for WhatsApp, Facebook, LinkedIn) */}
+           <meta
+          property="og:title"
+          content={metaTitle}
+        />
+        <meta
+          property="og:description"
+          content={metaDescription}
+        />
+        <meta
+          property="og:image"
+          content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
+        />
+        <meta
+          property="og:url"
+          content="https://tridizi.com/"
+        />
+        <meta property="og:type" content="website" />
+
+      {/* Twitter Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content={metaTitle}
+        />
+        <meta
+          name="twitter:description"
+          content={metaDescription}
+        />
+        <meta
+          name="twitter:image"
+          content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
+        />
+
+      </Helmet>
       <div className="Hr_Hero_container">
         <img src={img} alt="HrBanner"></img>
         <p data-aos="fade-right">{imgTitle}</p>
@@ -42,7 +97,7 @@ export const HrLearning = ({ HRLearning, imgTitle, questionTitle,img }) => {
             {HRLearning.map((item, id) => (
               <div
                 className={`Left_Single_Side_Cards_Container ${
-                  item.id === selectedData.id ? "card_boarder" : ""
+                  item.id === selectedData.id ? "card_boarder" : "card_boxshadow"
                 }`}
                 key={id}
                 onClick={() => Handledatachnage(item)}

@@ -301,14 +301,7 @@
     margin: 0 auto;
 }
 
-.Sub_Missions h1 {
-    font-weight: 700;
-    font-size: 3.1vw;
-    line-height: 100%;
-    /* letter-spacing: 0%; */
-    text-align: center;
 
-}
 
 .Sub_Missions p {
     font-family: Poppins;
@@ -318,6 +311,16 @@
     /* letter-spacing: 0.01vw; */
     color: #000000B2;
     margin-top: 1.5vw;
+}
+
+#sub_count {
+    font-weight: 700 ;
+    font-size: 3.1vw ;
+    line-height: 100%;
+    color: black ;
+    /* letter-spacing: 0%; */
+    text-align: center;
+
 }
 
 .Section5_Main_Container {
@@ -643,9 +646,7 @@
         gap: 6vw;
     }
 
-    .Sub_Missions h1 {
-        font-size: 6vw;
-    }
+  
 
     .Sub_Missions {
         display: flex;
@@ -772,5 +773,8 @@
     }
     .Single_container_Icon:nth-child(3){
         width: 100%;
+    }
+    #sub_count {
+        font-size: 8vw;
     }
 }

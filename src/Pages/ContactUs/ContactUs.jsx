@@ -137,8 +137,8 @@ const ContactForm = () => {
           <div className="corner-box"></div>
           <h3>Info</h3>
           <div>
-            <p>reachus@sapience minds.com</p>
-            <p>+91 90360 62378</p>
+            <p>reachus@sapienceminds.com</p>
+            <p>+91 9036062378</p>
             <p>Bengaluru, Karnataka, India</p>
           </div>
         </div>
