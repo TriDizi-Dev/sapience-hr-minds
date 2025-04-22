@@ -1,10 +1,11 @@
 import { HrLearning } from "../../Components/HrLearning/HrLearning";
+import img from "../../Assets/HrLearning/HrBanner.svg";
 
 const InternshipHRLearning = () => {
   const Cards = [
     {
       id: 1,
-      head: "HR Operations",
+      head: "HR Operations Intern",
       subhead1: "Exposure",
       subhead2: "Compliance",
       subhead3: "Documentation",
@@ -32,7 +33,7 @@ const InternshipHRLearning = () => {
 
     {
       id: 2,
-      head: "Payroll Management",
+      head: "Payroll Management Intern",
       subhead1: "Process",
       subhead2: "Deductions",
       subhead3: "Benefits",
@@ -59,7 +60,7 @@ const InternshipHRLearning = () => {
     },
     {
       id: 3,
-      head: "Recruitment",
+      head: "Recruitment Intern",
       subhead1: "Screening",
       subhead2: "Interviewing",
       subhead3: "Onboarding",
@@ -86,7 +87,7 @@ const InternshipHRLearning = () => {
     },
     {
       id: 4,
-      head: "Employee Relations",
+      head: "Employee Relations Intern",
       subhead1: "Conflict",
       subhead2: "Engagement",
       subhead3: "Communication",
@@ -112,7 +113,7 @@ const InternshipHRLearning = () => {
     },
     {
       id: 5,
-      head: "Talent Management",
+      head: "Talent Management Intern",
       subhead1: "Performance",
       subhead2: "Growth",
       subhead3: "Development",
@@ -143,6 +144,7 @@ const InternshipHRLearning = () => {
         HRLearning={Cards}
         imgTitle="Internships"
         questionTitle="Internship"
+        img={img}
       />
     </>
   );

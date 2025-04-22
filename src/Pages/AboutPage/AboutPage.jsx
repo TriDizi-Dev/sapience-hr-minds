@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./AboutPage.css";
-import AboutMain1 from "../../assets/AboutPage/AboutMain1.svg";
+import AboutMain1 from "../../assets/AboutPage/above_top_img.svg";
 import Orangelayer from "../../assets/AboutPage/orangeshade.svg";
 import Bluelayer from "../../assets/AboutPage/blushade.svg";
 import Person from "../../assets/AboutPage/personImage.svg";

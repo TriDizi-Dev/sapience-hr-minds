@@ -6,7 +6,7 @@ import { PreFooter } from "../PreFooter/PreFooter";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 
-export const HrLearning = ({ HRLearning, imgTitle, questionTitle }) => {
+export const HrLearning = ({ HRLearning, imgTitle, questionTitle,img }) => {
   const [selectedData, setSelectedData] = useState({});
 
   useEffect(() => {
@@ -27,7 +27,7 @@ export const HrLearning = ({ HRLearning, imgTitle, questionTitle }) => {
   return (
     <>
       <div className="Hr_Hero_container">
-        <img src={HrBanner} alt="HrBanner"></img>
+        <img src={img} alt="HrBanner"></img>
         <p data-aos="fade-right">{imgTitle}</p>
       </div>
       <div className="Section2_Main_container">
@@ -128,8 +128,8 @@ export const HrLearning = ({ HRLearning, imgTitle, questionTitle }) => {
       <div className="Pre_Footer_Hr_learning_Container">
         <PreFooter
           sourcepages={imgTitle}
-          Head="Lorem Ipsum is simply dummy text of the"
-          Content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+          Head="Let’s Build Your People Strategy – Together"
+          Content="Your startup deserves more than just reactive HR. Whether you need structure, compliance, or a culture strategy, let’s have a conversation that moves your business forward. Book a discovery call or fill out the form and let’s shape a smarter, people-powered future for your company."
         />
       </div>
     </>

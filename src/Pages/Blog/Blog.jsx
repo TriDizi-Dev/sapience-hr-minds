@@ -231,7 +231,7 @@ function Blog() {
       <div className="blog_prefooter">
         <PreFooter
           sourcepages="Blogs"
-          Head="Unlock The Power Of Cloud HR Solutions"
+          Head="Let’s Build Your People Strategy – Together"
           Content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
         />
       </div>

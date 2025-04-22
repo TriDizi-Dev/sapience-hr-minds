@@ -28,6 +28,7 @@ import WorkshopsHrLearning from "./Pages/WorkshopsHrInternship/workshopHrLearnin
 import WebinarHRLearning from "./Pages/WebinarHrLearning/WebinarHrLearning";
 import { CreateBlog } from "./Pages/BlogCreationPage/blogcreation";
 import CareerCreation from "./Pages/careerCreation/careerCreation";
+import { HelmetProvider } from 'react-helmet-async';
 
 function Layout() {
   const location = useLocation();
@@ -35,6 +36,7 @@ function Layout() {
 
   return (
     <>
+    <HelmetProvider>
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -68,7 +70,7 @@ function Layout() {
         <Route path="/career-creation" element={<CareerCreation />}></Route>
       </Routes>
       {!hideFooter && <Footer />}
-      
+      </HelmetProvider>
     </>
   );
 }

@@ -6,8 +6,12 @@ import dots from "../../assets/HomePage/homedots.svg";
 import leftvector from "../../assets/HomePage/leftvector.svg";
 import rightvector from "../../assets/HomePage/rightvector.svg";
 import { FaPeopleGroup } from "react-icons/fa6";
-import dummylogo from "../../assets/HomePage/dummylogo.svg";
-import layer4 from "../../assets/HomePage/layer4.svg";
+import dummylogo from "../../assets/HomePage/logo_1.png";
+import dummylogo_2 from "../../assets/HomePage/logo_2.png";
+import dummylogo_3 from "../../assets/HomePage/logo_3.png";
+import dummylogo_4 from "../../assets/HomePage/logo_4.png";
+import dummylogo_5 from "../../assets/HomePage/logo_1.png";
+import layer4 from "../../assets/HomePage/home_img.svg";
 
 import Smallicon1 from "../../assets/AboutPage/Smallicon1.svg";
 import Smallicon2 from "../../assets/AboutPage/Smallicon2.svg";
@@ -40,6 +44,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link, useNavigate } from "react-router-dom";
 import { ImCross } from "react-icons/im";
+
+import { Helmet } from "react-helmet-async";
 
 export const HomePage = () => {
   const navigate = useNavigate();
@@ -178,7 +184,7 @@ export const HomePage = () => {
       bottomtext: "Managing Director- India & South Asia, Martin Engineering",
     },
     {
-      id: 6,
+      id: 7,
       logo: "Logo",
       para: `We recently had the pleasure of working with Sapience Minds on our critical hiring needs. From the initial consultation to the final placement, their team exhibited professionalism, dedication, and a genuine commitment to finding the perfect fit for both the candidate and the employer. Sapience Minds took the time to understand our company's unique needs and culture, ensuring they matched us with candidates who not only had the required skills but also aligned with our values. Their meticulous screening process saved us countless hours and resulted in a shortlist of highly qualified individuals. One of the standout aspects of Sapience is their exceptional communication. They kept us informed at every stage of the recruitment process, providing regular updates and valuable insights. Their responsiveness and attention to detail made the entire experience seamless and stress-free. Thanks to Sapience Minds, we have successfully hired talented individuals. Their expertise and personalized approach have made a significant impact on our hiring process, and we look forward to continuing our partnership with them in the future. Are you stuck with critical hiring??? - You have Sapience Minds that goes above and beyond to deliver outstanding results!!`,
       img: woman_1,
@@ -325,7 +331,7 @@ export const HomePage = () => {
       [name]: value,
     }));
   };
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -355,7 +361,7 @@ export const HomePage = () => {
           phoneNumber: "",
           message: "",
         });
-        handleCloseForm()
+        handleCloseForm();
       } else {
         alert("Something went wrong. Please try again.");
       }
@@ -392,15 +398,59 @@ export const HomePage = () => {
 
   return (
     <div className="home_main">
+      <Helmet>
+        <title>
+          Your Trusted Fractional CHRO Partner for Scalable HR Growth
+        </title>
+        <meta
+          name="description"
+          content="At Sapience Minds, we offer expert HR solutions as a Fractional CHRO, helping startups build strong foundations, align people with purpose, and scale confidently with compliant and agile HR strategies."
+        />
+
+        {/* Open Graph Meta Tags (for WhatsApp, Facebook, LinkedIn) */}
+        <meta
+          property="og:title"
+          content="Your Trusted Fractional CHRO Partner for Scalable HR Growth"
+        />
+        <meta
+          property="og:description"
+          content="At Sapience Minds, we offer expert HR solutions as a Fractional CHRO, helping startups build strong foundations, align people with purpose, and scale confidently with compliant and agile HR strategies."
+        />
+        <meta
+          property="og:image"
+          content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
+        />
+        <meta property="og:url" content="https://tridizi.com/" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content=" Your Trusted Fractional CHRO Partner for Scalable HR Growth"
+        />
+        <meta
+          name="twitter:description"
+          content="   At Sapience Minds, we offer expert HR solutions as a Fractional CHRO, helping startups build strong foundations, align people with purpose, and scale confidently with compliant and agile HR strategies."
+        />
+        <meta
+          name="twitter:image"
+          content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
+        />
+      </Helmet>
+
       <div className="home_page_outer">
         <div className="home_page_left">
           <p className="home_samll_text">Virtula HR - Recruit - Manage</p>
           <div className="homepage_headig_text">
             <h1 className="home_page_heading">
-            Your Trusted Fractional CHRO Partner for Scalable HR Growth
+              Your Trusted Fractional CHRO Partner for Scalable HR Growth
             </h1>
             <p className="home_page_para">
-            At Sapience Minds, we offer expert HR solutions as a Fractional CHRO, helping startups build strong foundations, align people with purpose, and scale confidently with compliant and agile HR strategies.
+              At Sapience Minds, we offer expert HR solutions as a Fractional
+              CHRO, helping startups build strong foundations, align people with
+              purpose, and scale confidently with compliant and agile HR
+              strategies.
             </p>
           </div>
           <div className="homepage_button_outer">
@@ -536,15 +586,16 @@ export const HomePage = () => {
       <div className="homepage_layer2_outer">
         <div className="layer2_outer">
           <p className="layer2_top_text">
-          Trusted Companies to scale their Business through HR domain          </p>
+            Trusted Companies to scale their Business through HR domain{" "}
+          </p>
           <div className="layer2_logos_outer">
             <div className="layer2_logos_inner">
               <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
+              <img src={dummylogo_2} alt="dummylogo" className="layer2_logos" />
               <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
+              <img src={dummylogo_3} alt="dummylogo" className="layer2_logos" />
               <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
-              <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
-              <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
-              <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
+              <img src={dummylogo_4} alt="dummylogo" className="layer2_logos" />
               <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
             </div>
           </div>
@@ -555,13 +606,17 @@ export const HomePage = () => {
         <div className="homepage_layer3_outer">
           <div className="homepage_layer3_part1">
             <h6 className="layer3_part1_heading" data-aos="fade-left">
-            About Me
+              About Me
             </h6>
-            <h1 className="layer3_part1_heading2" data-aos="zoom-in">
-            Meet Babitha – Your Fractional CHRO and Growth Enabler
-            </h1>
+            <p className="layer3_part1_heading2" data-aos="zoom-in">
+              Meet Babitha – Your Fractional CHRO and Growth Enabler
+            </p>
             <p className="layer3_part1_para" data-aos="fade-right">
-            With 23+ years of HR leadership, I specialize in helping startups and SMBs design people-first, performance-driven cultures. As a Fractional CHRO, I bring executive-level HR expertise without the full-time cost — offering structure, compliance, and strategy tailored for fast-growing teams.
+              With 23+ years of HR leadership, I specialize in helping startups
+              and SMBs design people-first, performance-driven cultures. As a
+              Fractional CHRO, I bring executive-level HR expertise without the
+              full-time cost — offering structure, compliance, and strategy
+              tailored for fast-growing teams.
             </p>
           </div>
           <div className="homepage_layer3_part2">
@@ -583,11 +638,15 @@ export const HomePage = () => {
 
           <div className="homepage_layer4_left" data-aos="fade-right">
             <p className="homepage_layer4_heading">Our Core Values</p>
-            <h1 className="homepage_layer4_heading2">
-            Guided by Purpose, Driven by People
-            </h1>
+            <p className="homepage_layer4_heading2">
+              Guided by Purpose, Driven by People
+            </p>
             <p className="homepage_layer4_para">
-            At Sapience Minds, our values are the foundation of every partnership. We believe in integrity, collaboration, and a relentless commitment to empowering startups with people-first HR strategies that deliver real impact. Our approach is empathetic, strategic, and always aligned with your business goals.
+              At Sapience Minds, our values are the foundation of every
+              partnership. We believe in integrity, collaboration, and a
+              relentless commitment to empowering startups with people-first HR
+              strategies that deliver real impact. Our approach is empathetic,
+              strategic, and always aligned with your business goals.
             </p>
 
             <div className="homepage_layer4_cards_outer">
@@ -599,12 +658,14 @@ export const HomePage = () => {
                     className="layer4_logo"
                   />
                 </div>
-                <h3 className="layer4_card_heading">
+                <p className="layer4_card_heading">
                   {/* Powerful Dashboard */}
                   Our Vision
-                </h3>
+                </p>
                 <p className="layer4_card_para">
-                To be the most trusted HR partner for startups and emerging businesses, enabling sustainable growth through strategic people practices.
+                  To be the most trusted HR partner for startups and emerging
+                  businesses, enabling sustainable growth through strategic
+                  people practices.
                 </p>
               </div>
               <div className="homepage_layer4_card">
@@ -615,9 +676,11 @@ export const HomePage = () => {
                     className="layer4_logo"
                   />
                 </div>
-                <h3 className="layer4_card_heading">Our Mission </h3>
+                <p className="layer4_card_heading">Our Mission </p>
                 <p className="layer4_card_para">
-                To deliver flexible, executive-level HR solutions that empower founders, nurture culture, and scale teams, one smart decision at a time.  
+                  To deliver flexible, executive-level HR solutions that empower
+                  founders, nurture culture, and scale teams, one smart decision
+                  at a time.
                 </p>
               </div>
             </div>
@@ -632,13 +695,18 @@ export const HomePage = () => {
         <div className="homepage_layer5_outer">
           <div className="layer5_part1">
             <p className="layer5_part1_heading" data-aos="fade-right">
-            Our Core Services
+              Our Core Services
             </p>
-            <h1 className="layer5_part1_heading2" data-aos="zoom-in">
-            Fractional CHRO Services Tailored for Startup Success
-            </h1>
+            <p className="layer5_part1_heading2" data-aos="zoom-in">
+              Fractional CHRO Services Tailored for Startup Success
+            </p>
             <p className="layer5_part1_para" data-aos="fade-right">
-            At Sapience Minds, we offer a full suite of HR services on a flexible, fractional basis, giving you access to strategic leadership without the full-time cost. From HR policy setup to talent acquisition, compliance, performance management, and culture building. We align your people strategy with your business goals, every step of the way.
+              At Sapience Minds, we offer a full suite of HR services on a
+              flexible, fractional basis, giving you access to strategic
+              leadership without the full-time cost. From HR policy setup to
+              talent acquisition, compliance, performance management, and
+              culture building. We align your people strategy with your business
+              goals, every step of the way.
             </p>
           </div>
           <div className="layer5_cards_outer">
@@ -672,9 +740,7 @@ export const HomePage = () => {
         <div className="layer6_outer">
           <div className="layer6_part1">
             <h6 className="layer6_part1_heading">Testimonials</h6>
-            <h1 className="layer6_part1_heading2">
-              See Why Our Clients Love Us
-            </h1>
+            <p className="layer6_part1_heading2">See Why Our Clients Love Us</p>
           </div>
 
           <div className="layer6_cards_outer">
@@ -751,9 +817,9 @@ export const HomePage = () => {
         <div className="layer7_outer">
           <div className="layer7_part1">
             <p className="layer7_part_heading">Blogs</p>
-            <h1 className="layer7_part_heading2">
+            <p className="layer7_part_heading2">
               Discover How We Make HR Better
-            </h1>
+            </p>
           </div>
           <div className="layer7_cards_outer">
             <Swiper

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./AlliancePartner.css";
-import HeroImage from "../../assets/AlliancePartner/HeroImage.svg";
+import HeroImage from "../../assets/AlliancePartner/hero_1.svg";
 import BlueLayer from "../../assets/AboutPage/blushade.svg";
 import orangeLayer from "../../assets/AboutPage/orangeshade.svg";
 import SquareIcons from "../../assets/AlliancePartner/LayerContainer.svg";
@@ -61,56 +61,56 @@ export const AlliancePartner = () => {
       id: 1,
       Logo: Smallicon1,
       Head: "Learn More",
-      subHead: "Powerful Dashboard",
+      subHead: "HR Compliance and Policy Development",
       para: "Stay compliant and confident. We design clear, startup-ready HR policies that protect your business and people alike.",
     },
     {
       id: 2,
       Logo: Smallicon2,
       Head: "Learn More",
-      subHead: "Powerful Dashboard",
+      subHead: "Customized HR Consulting and Advisory Services",
       para: "Whether you're scaling fast or setting up HR from scratch, our strategic insights align people decisions with business goals.",
     },
     {
       id: 3,
       Logo: Smallicon3,
       Head: "Learn More",
-      subHead: "Powerful Dashboard",
+      subHead: "Virtual CHRO and Outsourcing of HR Operations",
       para: "Get executive-level HR expertise without the full-time cost. We lead your HR function remotely with efficiency and care.",
     },
     {
       id: 4,
       Logo: Smallicon4,
       Head: "Learn More",
-      subHead: "Powerful Dashboard",
+      subHead: "Talent Acquisition Solutions",
       para: "Hiring shouldn’t be a hassle. From job role design to final offer, we craft a seamless talent journey for your team.",
     },
     {
       id: 5,
       Logo: Smallicon1,
       Head: "Learn More",
-      subHead: "Powerful Dashboard",
+      subHead: "Talent Management",
       para: "Fuel performance and growth with development plans, reviews, and leadership pipelines built to scale with your startup.",
     },
     {
       id: 6,
       Logo: Smallicon2,
       Head: "Learn More",
-      subHead: "Powerful Dashboard",
+      subHead: "Talent Engagement & Retention",
       para: "Create a culture employees love. We craft engagement strategies that foster loyalty, purpose, and long-term retention.",
     },
     {
       id: 7,
       Logo: Smallicon3,
       Head: "Learn More",
-      subHead: "Powerful Dashboard",
+      subHead: "Recruitment of Leadership & Mid-Level Team",
       para: "Finding the right leaders is critical. We connect you with proven professionals who match your mission and mindset.",
     },
     {
       id: 8,
       Logo: Smallicon4,
       Head: "Learn More",
-      subHead: "Powerful Dashboard",
+      subHead: "Employee Insurance & Benefits",
       para: "Boost employee satisfaction with thoughtfully designed insurance and perks that support health, security, and morale.",
     },
   ];

@@ -27,6 +27,7 @@ function TermsAndConditions({
   text6,
   text7,
   text8,
+    img,
 }) {
   useEffect(() => {
     AOS.init({
@@ -47,7 +48,7 @@ function TermsAndConditions({
         <img src={bgeffect} alt="bgeffect" className="bg_effect" />
         <h1 className="privacy_terms_heading">{BannerHeading}</h1>
         <p className="privacy_terms_para">{BannerText}</p>
-        <img src={banner} alt="banner" className="privacy_terms_img" />
+        <img src={img} alt="banner" className="privacy_terms_img" />
       </div>
 
       <div className="privacy_terms_content_outer">
