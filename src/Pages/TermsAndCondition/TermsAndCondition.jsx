@@ -1,6 +1,6 @@
 import React from 'react'
 import TermsAndConditions from '../../Components/PrivacyAndTerms/termsandConditions'
-
+import terms_img from '../../assets/PrivacyandTerms/tearms.svg'
 function TermsAndCondition() {
   return (
     <div className="tems_condition_outer">
@@ -36,7 +36,7 @@ function TermsAndCondition() {
          text7="We may update these Terms at any time. Continued use of the website or services implies acceptance of any changes."
 
          text8="These Terms are governed by and construed in accordance with the laws of India"
-         
+         img={terms_img}
         
         />
     </div>

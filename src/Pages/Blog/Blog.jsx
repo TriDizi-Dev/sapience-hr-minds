@@ -15,6 +15,7 @@ import { useNavigate } from "react-router-dom";
 
 import Smallicon1 from "../../assets/AboutPage/Smallicon1.svg";
 import Smallicon2 from "../../assets/AboutPage/Smallicon2.svg";
+import { Helmet } from "react-helmet-async";
 
 function Blog() {
   useEffect(() => {
@@ -139,11 +140,57 @@ function Blog() {
   ];
 
   const handleSignleBlog = (ev, id) => {
-    navigate(`/blog/${id}`, { state: ev });
+    const cleanPath = id.replaceAll(' ', '-');
+    navigate(`/blog/${cleanPath}`, { state: ev });
   };
+  
 
   return (
     <div className="blog_page_main_outer">
+        <Helmet>
+      <title>
+      The Importance of Workforce Upskilling and Reskilling in Today’s Economy
+        </title>
+        <meta
+          name="description"
+          content="In today’s rapidly evolving economy, workforce upskilling and reskilling have become crucial for organizations aiming to stay competitive."
+        />
+
+           {/* Open Graph Meta Tags (for WhatsApp, Facebook, LinkedIn) */}
+           <meta
+          property="og:title"
+          content="The Importance of Workforce Upskilling and Reskilling in Today’s Economy"
+        />
+        <meta
+          property="og:description"
+          content="In today’s rapidly evolving economy, workforce upskilling and reskilling have become crucial for organizations aiming to stay competitive."
+        />
+        <meta
+          property="og:image"
+          content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
+        />
+        <meta
+          property="og:url"
+          content="https://tridizi.com/"
+        />
+        <meta property="og:type" content="website" />
+
+      {/* Twitter Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="The Importance of Workforce Upskilling and Reskilling in Today’s Economy"
+        />
+        <meta
+          name="twitter:description"
+          content="In today’s rapidly evolving economy, workforce upskilling and reskilling have become crucial for organizations aiming to stay competitive."
+        />
+        <meta
+          name="twitter:image"
+          content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
+        />
+
+      </Helmet>
       <div className="blog_page_layer1">
         <div className="blog_card_outer">
           {blogs.map((data) => (
@@ -158,11 +205,11 @@ function Blog() {
               <img src={data.img} alt="" className="blog_img" />
               <div className="blog_content">
                 <div className="blog_left_content">
-                  <h6 className="blog_content_heading">{data?.cardheading}</h6>
+                  <p className="blog_content_heading">{data?.cardheading}</p>
                   <p className="blog_content_date">{data?.date}</p>
                 </div>
                 <div className="blog_content_right">
-                  <h6 className="blog_content_right_text">{data?.knowmore}</h6>
+                  <p className="blog_content_right_text">{data?.knowmore}</p>
                 </div>
               </div>
             </div>
@@ -199,7 +246,7 @@ function Blog() {
                       className="layer4_logo"
                     />
                   </div>
-                  <h3 className="layer4_card_heading">Powerful Dashboard</h3>
+                  <p className="layer4_card_heading">Powerful Dashboard</p>
                   <p className="layer4_card_para">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry.
@@ -213,7 +260,7 @@ function Blog() {
                       className="layer4_logo"
                     />
                   </div>
-                  <h3 className="layer4_card_heading">Powerful Dashboard</h3>
+                  <p className="layer4_card_heading">Powerful Dashboard</p>
                   <p className="layer4_card_para">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry.
@@ -231,7 +278,7 @@ function Blog() {
       <div className="blog_prefooter">
         <PreFooter
           sourcepages="Blogs"
-          Head="Unlock The Power Of Cloud HR Solutions"
+          Head="Let’s Build Your People Strategy – Together"
           Content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
         />
       </div>

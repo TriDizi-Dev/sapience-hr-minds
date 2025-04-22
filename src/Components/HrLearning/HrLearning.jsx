@@ -5,9 +5,13 @@ import BackgroundLayer from "../../assets/HrLearning/BackgroundLayer.svg";
 import { PreFooter } from "../PreFooter/PreFooter";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
 
-export const HrLearning = ({ HRLearning, imgTitle, questionTitle }) => {
+
+export const HrLearning = ({ HRLearning, imgTitle, questionTitle,img, metaTitle,metaDescription }) => {
   const [selectedData, setSelectedData] = useState({});
+  const navigate= useNavigate();
 
   useEffect(() => {
     setSelectedData(HRLearning[0]);
@@ -24,10 +28,61 @@ export const HrLearning = ({ HRLearning, imgTitle, questionTitle }) => {
         once: false,
       });
     }, []);
+    useEffect(()=>{
+      const params = new URLSearchParams();
+      if (selectedData?.head) params.set("title", selectedData.head || "");
+      const queryString = params.toString();
+      navigate(queryString ? `/${selectedData?.path}?${queryString}` : `/${selectedData?.path}`);
+
+    },[selectedData])
   return (
     <>
+      <Helmet>
+      <title>
+     {metaTitle}
+        </title>
+        <meta
+          name="description"
+          content={metaDescription}
+        />
+
+           {/* Open Graph Meta Tags (for WhatsApp, Facebook, LinkedIn) */}
+           <meta
+          property="og:title"
+          content={metaTitle}
+        />
+        <meta
+          property="og:description"
+          content={metaDescription}
+        />
+        <meta
+          property="og:image"
+          content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
+        />
+        <meta
+          property="og:url"
+          content="https://tridizi.com/"
+        />
+        <meta property="og:type" content="website" />
+
+      {/* Twitter Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content={metaTitle}
+        />
+        <meta
+          name="twitter:description"
+          content={metaDescription}
+        />
+        <meta
+          name="twitter:image"
+          content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
+        />
+
+      </Helmet>
       <div className="Hr_Hero_container">
-        <img src={HrBanner} alt="HrBanner"></img>
+        <img src={img} alt="HrBanner"></img>
         <p data-aos="fade-right">{imgTitle}</p>
       </div>
       <div className="Section2_Main_container">
@@ -42,7 +97,7 @@ export const HrLearning = ({ HRLearning, imgTitle, questionTitle }) => {
             {HRLearning.map((item, id) => (
               <div
                 className={`Left_Single_Side_Cards_Container ${
-                  item.id === selectedData.id ? "card_boarder" : ""
+                  item.id === selectedData.id ? "card_boarder" : "card_boxshadow"
                 }`}
                 key={id}
                 onClick={() => Handledatachnage(item)}
@@ -128,8 +183,8 @@ export const HrLearning = ({ HRLearning, imgTitle, questionTitle }) => {
       <div className="Pre_Footer_Hr_learning_Container">
         <PreFooter
           sourcepages={imgTitle}
-          Head="Lorem Ipsum is simply dummy text of the"
-          Content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+          Head="Let’s Build Your People Strategy – Together"
+          Content="Your startup deserves more than just reactive HR. Whether you need structure, compliance, or a culture strategy, let’s have a conversation that moves your business forward. Book a discovery call or fill out the form and let’s shape a smarter, people-powered future for your company."
         />
       </div>
     </>

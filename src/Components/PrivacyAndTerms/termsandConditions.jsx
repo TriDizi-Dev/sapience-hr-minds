@@ -7,6 +7,7 @@ import { PreFooter } from "../PreFooter/PreFooter";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet-async";
 
 function TermsAndConditions({
   BannerHeading,
@@ -27,6 +28,7 @@ function TermsAndConditions({
   text6,
   text7,
   text8,
+    img,
 }) {
   useEffect(() => {
     AOS.init({
@@ -43,11 +45,55 @@ function TermsAndConditions({
 
   return (
     <div className="privacy_terms_outer_main">
+          <Helmet>
+      <title>
+      Privacy Policy
+        </title>
+        <meta
+          name="description"
+          content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+        />
+
+           {/* Open Graph Meta Tags (for WhatsApp, Facebook, LinkedIn) */}
+           <meta
+          property="og:title"
+          content="Privacy Policy"
+        />
+        <meta
+          property="og:description"
+          content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+        />
+        <meta
+          property="og:image"
+          content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
+        />
+        <meta
+          property="og:url"
+          content="https://tridizi.com/"
+        />
+        <meta property="og:type" content="website" />
+
+      {/* Twitter Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Privacy Policy"
+        />
+        <meta
+          name="twitter:description"
+          content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+        />
+        <meta
+          name="twitter:image"
+          content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
+        />
+
+      </Helmet>
       <div className="privacy_terms_banner_outer">
         <img src={bgeffect} alt="bgeffect" className="bg_effect" />
         <h1 className="privacy_terms_heading">{BannerHeading}</h1>
         <p className="privacy_terms_para">{BannerText}</p>
-        <img src={banner} alt="banner" className="privacy_terms_img" />
+        <img src={img} alt="banner" className="privacy_terms_img" />
       </div>
 
       <div className="privacy_terms_content_outer">
