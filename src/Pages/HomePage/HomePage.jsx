@@ -414,7 +414,7 @@ export const HomePage = () => {
               className="homepage_right_button liquid"
               onClick={() => hadleNavigate()}
             >
-              <AiOutlinePlayCircle className="button_icon" />
+              {/* <AiOutlinePlayCircle className="button_icon" /> */}
               Book A Meeting
             </button>
           </div>

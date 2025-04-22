@@ -1,24 +1,25 @@
 import React, { useEffect, useState } from "react";
 import "./blogcreation.css";
 import { supabase } from "../../supabase";
-// import { Navbar } from "../../Components/NavBar/Navbar";
-import { Editor } from "react-draft-wysiwyg";
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import { EditorState, convertToRaw } from "draft-js";
+
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+
+if (typeof setImmediate === "undefined") {
+  window.setImmediate = function (callback) {
+    return setTimeout(callback, 0);
+  };
+}
 
 export const CreateBlog = () => {
   const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
+  const [content, setContent] = useState(""); // Textarea description
   const [image, setImage] = useState(null);
-  const [blogContent, setBlogContent] = useState("");
-  const [tags, setTags] = useState(""); // You can re-enable this if needed
+  const [blogContent, setBlogContent] = useState(""); // Editor content
   const [preview, setPreview] = useState(null);
-  // const [blogs, setBlogs] = useState([]);
-  const [editorState, setEditorState] = useState(EditorState.createEmpty());
-
-  console.log(blogContent,'blogContent');
-  
-
+  const [authorName, setAuthorName] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  let quillRef = null; 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     setImage(file);
@@ -29,11 +30,25 @@ export const CreateBlog = () => {
     }
   };
 
+  console.log(blogContent, "blogContent");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (isSubmitting) return;
+    setIsSubmitting(true);
 
     if (!image) {
       alert("Please select an image.");
+      setIsSubmitting(false);
+      return;
+    }
+
+    if (
+      !blogContent ||
+      !blogContent.blocks.some((block) => block.text.trim())
+    ) {
+      alert("Please enter blog content.");
+      setIsSubmitting(false);
       return;
     }
 
@@ -46,60 +61,65 @@ export const CreateBlog = () => {
         .upload(fileName, image);
 
       if (uploadError) {
-        console.error("Image upload error:", uploadError);
+        console.error("Image upload error:", uploadError.message);
         alert("Error uploading image.");
+        setIsSubmitting(false);
         return;
       }
 
       const imageUrl = supabase.storage
         .from("sapienceminds")
         .getPublicUrl(fileName).data.publicUrl;
+      console.log("Image URL:", imageUrl);
 
-      const { error: insertError } = await supabase
-        .from("blogs")
-        .insert([{ title, content, image_url: imageUrl }]); // removed tags
+      const { error: insertError } = await supabase.from("blogs").insert([
+        {
+          title,
+          content, // Textarea description
+          image_url: imageUrl,
+          blog_content: JSON.stringify(blogContent), // Editor content
+          author_name: authorName,
+        },
+      ]);
 
       if (insertError) {
-        console.error("Blog insert error:", insertError);
-        alert("Error posting blog.");
+        console.error(
+          "Blog insert error:",
+          insertError.message,
+          insertError.details
+        );
+        alert("Error posting blog: " + insertError.message);
+        setIsSubmitting(false);
       } else {
         alert("Blog posted successfully!");
         setTitle("");
         setContent("");
         setImage(null);
-        setTags("");
         setPreview(null);
+        setAuthorName("");
+        setEditorState(EditorState.createEmpty());
       }
     } catch (err) {
       console.error("Error during submission:", err);
       alert("An error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
-  const onEditorStateChange = (newEditorState) => {
-    setEditorState(newEditorState);
-    // Convert editor content to raw JSON or plain text
-    const contentRaw = convertToRaw(newEditorState.getCurrentContent());
-    const plainText = contentRaw.blocks.map(block => block.text).join("\n");
-    setBlogContent(plainText); 
+
+  const modules = {
+    toolbar: [
+      [{ header: '1' }, { header: '2' }, { font: [] }],
+      [{ list: 'ordered' }, { list: 'bullet' }],
+      ['bold', 'italic', 'underline'],
+      ['link'],
+      [{ align: [] }],
+      ['image'], // Enable image button in the toolbar
+    ],
   };
 
-  // useEffect(() => {
-  //   const fetchBlogs = async () => {
-  //     const { data, error } = await supabase
-  //       .from('blogs')
-  //       .select('*')
-  //       .order('created_at', { ascending: false });
 
-  //     if (error) {
-  //       console.error('Error fetching blogs:', error);
-  //     } else {
-  //       setBlogs(data);
-  //     }
-  //   };
-
-  //   fetchBlogs();
-  // }, []);
   return (
     <>
       <div className="blog_creation_page">{/* <Navbar /> */}</div>
@@ -117,39 +137,38 @@ export const CreateBlog = () => {
               placeholder="Enter blog title"
               required
             />
+            <label htmlFor="authorName">Author Name</label>
+            <input
+              id="authorName"
+              type="text"
+              value={authorName}
+              onChange={(e) => setAuthorName(e.target.value)}
+              placeholder="Enter author name"
+            />
 
-            <label htmlFor="content">Content</label>
+            <label htmlFor="content">Description</label>
             <textarea
               id="content"
               value={content}
               onChange={(e) => setContent(e.target.value)}
-              placeholder="Write your blog content..."
+              placeholder="Write your blog description..."
               rows="4"
               required
             />
 
             <div>
-              <Editor
-                editorState={editorState}
-                onEditorStateChange={onEditorStateChange}
-                wrapperClassName="wrapper-class"
-                editorClassName="editor-class"
-                toolbarClassName="toolbar-class"
-                toolbar={{
-                  options: ["inline", "list", "link"], // Make sure "link" is here
-                  inline: {
-                    options: ["bold", "italic", "underline"],
-                  },
-                  list: {
-                    options: ["unordered", "ordered"],
-                  },
-                  link: {
-                    inDropdown: false,
-                    defaultTargetOption: "_blank",
-                    options: ["link", "unlink"],
-                    showOpenOptionOnHover: true,
-                  },
+              <label htmlFor="blogContent">Blog Content</label>
+             
+
+              <ReactQuill
+                ref={(el) => {
+                  quillRef = el;
                 }}
+                value={blogContent}
+                onChange={(value) => setBlogContent(value)}
+                modules={modules}
+                className="rich-text"
+                placeholder="Description"
               />
             </div>
 
@@ -164,19 +183,12 @@ export const CreateBlog = () => {
               <img src={preview} alt="Preview" className="preview-img" />
             )}
 
-            <button type="submit">Publish Blog</button>
+            <button type="submit" disabled={isSubmitting}>
+              {isSubmitting ? "Publishing..." : "Publish Blog"}
+            </button>
           </form>
         </div>
       </div>
-      {/* <div className="blogs-container">
-      {blogs.map((blog) => (
-        <div key={blog.id} className="blog-card">
-          <h2>{blog.title}</h2>
-          <img src={blog.image_url} alt={blog.title} />
-          <p>{blog.content}</p>
-        </div>
-      ))}
-    </div> */}
     </>
   );
 };

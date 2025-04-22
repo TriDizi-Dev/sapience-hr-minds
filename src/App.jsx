@@ -44,9 +44,9 @@ function Layout() {
         <Route path="/careers" element={<Carrier />}></Route>
         <Route path="/service" element={<Service />}></Route>
         {/* <Route path="/hrlearning" element={<HrLearning />}></Route> */}
-        <Route path="internship-hr-learning" element={<InternshipHRLearning/>}/>
-        <Route path="workshop-hr-learning" element={<WorkshopsHrLearning/>}/>
-        <Route path="webinar-hr-learning" element={<WebinarHRLearning/>}/>
+        <Route path="/internship-hr-learning" element={<InternshipHRLearning/>}/>
+        <Route path="/workshop-hr-learning" element={<WorkshopsHrLearning/>}/>
+        <Route path="/webinar-hr-learning" element={<WebinarHRLearning/>}/>
         <Route path="/privacy" element={<PrivacyAndTerms />}></Route>
         <Route path="/privacypolicy" element={<PricacyPolicy />}></Route>
         <Route
