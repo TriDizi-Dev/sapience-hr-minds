@@ -151,6 +151,13 @@ const WorkshopsHrLearning = () => {
         img={img}
         metaTitle="Workshops"
         metaDescription="Your startup deserves more than just reactive HR. Whether you need structure, compliance, or a culture strategy, let’s have a conversation that moves your business forward. Book a discovery call or fill out the form and let’s shape a smarter, people-powered future for your company."
+        PreviousHeading="Previous Workshops"
+        Internship1="Smart Hiring Strategies for HR Professionals"
+        Internship1Description="A tactical workshop aimed at teaching practical recruitment techniques"
+        Internship2="Building Positive Employee Relations"
+        Internship2Description="This workshop focuses on real-world techniques to strengthen workplace harmony, promote open communication"
+        Internship3="Designing Strategic Talent Management Systems"
+        Internship3Description="This practical workshop focuses on aligning talent with organizational goals through strategic planning"
       />
     </>
   );

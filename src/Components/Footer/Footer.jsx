@@ -25,10 +25,13 @@ export const Footer = () => {
           <p className="Contact_sub_headings">Bengaluru, Karnataka, India</p>
 
           <p className="Contact_heading">Call Us</p>
-          <p className="Contact_sub_headings">Phone :+91 90360 62378</p>
+          {/* <p className="Contact_sub_headings">Phone :+91 90360 62378</p> */}
+          <p className="Contact_sub_headings"><a href="tel:+919036062378">+91 9036062378</a></p>
 
           <p className="Contact_heading">Email us</p>
-          <p className="Contact_sub_headings">reachus@sapienceminds.com</p>
+          {/* <p className="Contact_sub_headings">reachus@sapienceminds.com</p> */}
+          <p className="Contact_sub_headings"><a href="mailto:reachus@sapienceminds.com">reachus@sapienceminds.com</a></p>
+
         </div>
         {/* </div> */}
         <div className="footer_right_outer_main_1">

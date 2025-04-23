@@ -32,7 +32,7 @@ import { HelmetProvider } from 'react-helmet-async';
 
 function Layout() {
   const location = useLocation();
-  const hideFooter = location.pathname === "/contactus" || location.pathname === "/blog-creation" || location.pathname === "/career-creation" ;
+  const hideFooter = location.pathname === "/blog-creation" || location.pathname === "/career-creation" ;
 
   return (
     <>

@@ -6,10 +6,10 @@ import dots from "../../assets/HomePage/homedots.svg";
 import leftvector from "../../assets/HomePage/leftvector.svg";
 import rightvector from "../../assets/HomePage/rightvector.svg";
 import { FaPeopleGroup } from "react-icons/fa6";
-import dummylogo from "../../assets/HomePage/logo_1.png";
-import dummylogo_2 from "../../assets/HomePage/logo_2.png";
-import dummylogo_3 from "../../assets/HomePage/logo_3.png";
-import dummylogo_4 from "../../assets/HomePage/logo_4.png";
+import dummylogo from "../../assets/HomePage/logo_1_1.svg";
+import dummylogo_2 from "../../assets/HomePage/logo_2_2.png";
+import dummylogo_3 from "../../assets/HomePage/logo_3_3.png";
+import dummylogo_4 from "../../assets/HomePage/logo_4_4.png";
 import dummylogo_5 from "../../assets/HomePage/logo_1.png";
 import layer4 from "../../assets/HomePage/home_img.svg";
 
@@ -632,11 +632,16 @@ export const HomePage = () => {
             <div className="layer2_logos_inner">
               <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
               <img src={dummylogo_2} alt="dummylogo" className="layer2_logos" />
-              <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
               <img src={dummylogo_3} alt="dummylogo" className="layer2_logos" />
-              <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
               <img src={dummylogo_4} alt="dummylogo" className="layer2_logos" />
               <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
+              <img src={dummylogo_2} alt="dummylogo" className="layer2_logos" />
+              <img src={dummylogo_3} alt="dummylogo" className="layer2_logos" />
+              <img src={dummylogo_4} alt="dummylogo" className="layer2_logos" />
+              <img src={dummylogo} alt="dummylogo" className="layer2_logos" />
+              <img src={dummylogo_2} alt="dummylogo" className="layer2_logos" />
+              <img src={dummylogo_3} alt="dummylogo" className="layer2_logos" />
+              <img src={dummylogo_4} alt="dummylogo" className="layer2_logos" />
             </div>
           </div>
         </div>

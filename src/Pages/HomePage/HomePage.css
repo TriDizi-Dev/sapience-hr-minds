@@ -401,11 +401,11 @@
 
 .layer2_logos_inner {
   display: inline-flex;
-  animation: scrollLogos 18s linear infinite;
+  animation: scrollLogos 20s linear infinite;
 }
 
 .layer2_logos {
-  width: 21vw;
+  width: 15vw;
   height: 7vw;
   margin: 0 1vw;
   border-radius: 0.5vw;
