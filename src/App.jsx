@@ -33,8 +33,11 @@ import { Manageblogs } from "./Pages/ManageBlogs/Manageblogs";
 import { UpdateBlog } from "./Pages/BlogUpdation/BlogUpdation";
 import CareerUpdate from "./Pages/careerCreation/updationCareerpage";
 import SmallCard from "./Components/managingCareers/managingCareers";
+import { useEffect, useState } from "react";
+import Loader from "./Components/Loader/Loader";
 
 function Layout() {
+
   const location = useLocation();
   const hideFooter = location.pathname === "/blog-creation" || location.pathname === "/career-creation"||location.pathname==="/career-update" ;
 
@@ -84,10 +87,26 @@ function Layout() {
 }
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    // Simulate loading time (e.g., API call, resource loading)
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // show loader for 2 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
-    <BrowserRouter>
-      <Layout />
-    </BrowserRouter>
+    
+    <>
+    {loading ? (
+      <Loader />
+    ) : (
+      <BrowserRouter>
+        <Layout />
+      </BrowserRouter>
+    )}
+  </>
   );
 }
 

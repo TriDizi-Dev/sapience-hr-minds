@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./HrLearning.css";
 import HrBanner from "../../assets/HrLearning/HrLearnHero.svg";
 import BackgroundLayer from "../../assets/HrLearning/BackgroundLayer.svg";
@@ -7,13 +7,13 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
+import { ImCross } from "react-icons/im";
 
-
-export const HrLearning = ({ 
-  HRLearning, 
-  imgTitle, 
+export const HrLearning = ({
+  HRLearning,
+  imgTitle,
   questionTitle,
-  img, 
+  img,
   metaTitle,
   metaDescription,
   PreviousHeading,
@@ -23,9 +23,71 @@ export const HrLearning = ({
   Internship2Description,
   Internship3,
   Internship3Description,
- }) => {
+}) => {
   const [selectedData, setSelectedData] = useState({});
-  const navigate= useNavigate();
+  const navigate = useNavigate();
+  const [showForm, setShowForm] = useState(false);
+  const modalRef = useRef(null);
+
+  const handleCloseForm = () => {
+    setShowForm(false);
+  };
+  const handleOpenForm = () => {
+    setShowForm(true);
+  };
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    category: questionTitle,
+    joborClass: selectedData.head
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbxXgFjRfloUaeWB49YcK1iBraoxMuObtJrnu6EHALeQAxyuEaMFf70OMwbLWHQpV4Ru/exec";
+
+    try {
+      const formPayload = new FormData();
+      formPayload.append("sheet", "Sheet2");
+      for (let key in formData) {
+        formPayload.append(key, formData[key]);
+      }
+
+      console.log(formPayload, "formPayloadformPayload");
+
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        body: formPayload, // No 'Content-Type' header for FormData
+      });
+      console.log(response, "resssssss");
+
+      if (response.ok) {
+        alert("Form submitted successfully!");
+        console.log("submited succes", response);
+        setFormData({
+          name: "",
+          email: "",
+          phoneNumber: "",
+        });
+        handleCloseForm();
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Error submitting the form. Please check your connection.");
+    }
+  };
 
   useEffect(() => {
     setSelectedData(HRLearning[0]);
@@ -34,66 +96,48 @@ export const HrLearning = ({
     setSelectedData(data);
   };
 
-    useEffect(() => {
-      AOS.init({
-        offset: 200,
-        duration: 500,
-        easing: "ease-in-sine",
-        once: false,
-      });
-    }, []);
-    useEffect(()=>{
-      const params = new URLSearchParams();
-      if (selectedData?.head) params.set("title", selectedData.head || "");
-      const queryString = params.toString();
-      navigate(queryString ? `/${selectedData?.path}?${queryString}` : `/${selectedData?.path}`);
-
-    },[selectedData])
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 500,
+      easing: "ease-in-sine",
+      once: false,
+    });
+  }, []);
+  useEffect(() => {
+    const params = new URLSearchParams();
+    if (selectedData?.head) params.set("title", selectedData.head || "");
+    const queryString = params.toString();
+    navigate(
+      queryString
+        ? `/${selectedData?.path}?${queryString}`
+        : `/${selectedData?.path}`
+    );
+  }, [selectedData]);
   return (
     <>
       <Helmet>
-      <title>
-     {metaTitle}
-        </title>
-        <meta
-          name="description"
-          content={metaDescription}
-        />
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
 
-           {/* Open Graph Meta Tags (for WhatsApp, Facebook, LinkedIn) */}
-           <meta
-          property="og:title"
-          content={metaTitle}
-        />
-        <meta
-          property="og:description"
-          content={metaDescription}
-        />
+        {/* Open Graph Meta Tags (for WhatsApp, Facebook, LinkedIn) */}
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
         <meta
           property="og:image"
           content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
         />
-        <meta
-          property="og:url"
-          content="https://tridizi.com/"
-        />
+        <meta property="og:url" content="https://tridizi.com/" />
         <meta property="og:type" content="website" />
 
-      {/* Twitter Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content={metaTitle}
-        />
-        <meta
-          name="twitter:description"
-          content={metaDescription}
-        />
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
         <meta
           name="twitter:image"
           content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
         />
-
       </Helmet>
       <div className="Hr_Hero_container">
         <img src={img} alt="HrBanner"></img>
@@ -111,11 +155,12 @@ export const HrLearning = ({
             {HRLearning.map((item, id) => (
               <div
                 className={`Left_Single_Side_Cards_Container ${
-                  item.id === selectedData.id ? "card_boarder" : "card_boxshadow"
+                  item.id === selectedData.id
+                    ? "card_boarder"
+                    : "card_boxshadow"
                 }`}
                 key={id}
                 onClick={() => Handledatachnage(item)}
-                data-aos="zoom-in-right"
               >
                 <p
                   className={`Single_Cards_head ${
@@ -133,8 +178,11 @@ export const HrLearning = ({
               </div>
             ))}
           </div>
-          <div className="Right_Side_Container_Section2" >
-            <div className="Right_Side_Container_Section2_top_div" data-aos="zoom-in">
+          <div className="Right_Side_Container_Section2">
+            <div
+              className="Right_Side_Container_Section2_top_div"
+              data-aos="zoom-in"
+            >
               <p className="Right_Side_Container_Header">{selectedData.head}</p>
               <div className="Single_Cards_Sub_heads_text_right">
                 <p>{selectedData.subhead1}</p>
@@ -163,7 +211,12 @@ export const HrLearning = ({
                   <li key={i}>{item}</li>
                 ))}
               </ul>
-              <p className="Apply_now_button_content_Hr_Learn">Apply Now</p>
+              <p
+                className="Apply_now_button_content_Hr_Learn"
+                onClick={() => handleOpenForm()}
+              >
+                Apply Now
+              </p>
             </div>
             <div className="Privours_Data_Container_last" data-aos="zoom-in-up">
               <p className="Privours_Data_Container_Head_text">
@@ -174,17 +227,86 @@ export const HrLearning = ({
                 <p>{Internship1Description}</p>
               </div>
               <div className="Single_Privious_Data_Cont">
-              <p>{Internship2} </p>
-              <p>{Internship2Description}</p>
+                <p>{Internship2} </p>
+                <p>{Internship2Description}</p>
               </div>
               <div className="Single_Privious_Data_Cont">
-              <p>{Internship3} </p>
-              <p>{Internship3Description}</p>
+                <p>{Internship3} </p>
+                <p>{Internship3Description}</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {showForm && (
+        <div className="modal-overlay">
+          <div className="modal-box" ref={modalRef}>
+            <div className="Cancel_and_form_head">
+              <h2>Applay Here</h2>
+              <p>
+                <ImCross
+                  className="Icons_X"
+                  onClick={() => handleCloseForm()}
+                />
+              </p>
+            </div>
+            <form onSubmit={handleSubmit} className="form">
+              <label className="Label">
+                Name:
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="Input"
+                />
+              </label>
+
+              <label className="Label">
+                Email:
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="Input"
+                />
+              </label>
+              <label className="Label">
+                Phone Number:
+                <input
+                  type="tel"
+                  name="phoneNumber"
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
+                  required
+                  className="Input"
+                />
+              </label>
+              {/* <label className="Label">
+                Message:
+                <textarea
+                  type="text"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  className="Input"
+                />
+              </label> */}
+
+              <div className="form-buttons">
+                <button type="submit">Submit</button>
+                <button type="button" onClick={handleCloseForm}>
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
       <div className="Pre_Footer_Hr_learning_Container">
         <PreFooter
           sourcepages={imgTitle}
