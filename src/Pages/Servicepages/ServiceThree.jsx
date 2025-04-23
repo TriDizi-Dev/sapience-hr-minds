@@ -1,7 +1,6 @@
 import React from "react";
 import { Service } from "../../Components/Services/Service";
 
-
 import Image1 from "../../assets/Service/services3left.svg";
 import Image2 from "../../assets/Service/services3right.svg";
 import Rocket from "../../assets/Service/first_img.svg";
@@ -15,6 +14,8 @@ export const ServiceThree = () => {
     <div>
       {" "}
       <Service
+        metaTitle="Virtual CHRO and Outsourcing of HR Operations"
+        metaDescription="Your strategic HR leadership—without the full-time cost. Drive transformation with expert-led HR operations and virtual CHRO support."
         ServiceHeadName="Virtual CHRO and Outsourcing of HR Operations"
         ServiceHeadContent=" Your strategic HR leadership—without the full-time cost. Drive transformation with expert-led HR operations and virtual CHRO support."
         Para1Head="Lorem ipsum dolor"

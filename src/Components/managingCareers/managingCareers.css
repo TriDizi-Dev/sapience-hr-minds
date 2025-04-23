@@ -1,0 +1,70 @@
+.card-container {
+    border: 0.07vw solid #e0e0e0;
+    border-radius: 0.83vw;
+    padding: 1.11vw;
+    background-color: #fff;
+    position: relative;
+    box-shadow: 0 0.14vw 0.56vw rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 20.83vw; /* 300px */
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .card-title {
+    font-size: 1.25vw;
+    font-weight: 600;
+    margin: 0 0 0.28vw 0;
+  }
+  
+  .card-description {
+    font-size: 0.97vw;
+    color: #555;
+    margin: 0 0 0.56vw 0;
+  }
+  
+  .card-date {
+    font-size: 0.83vw;
+    color: #888;
+  }
+  
+  .card-menu-wrapper {
+    position: relative;
+  }
+  
+  .card-menu-icon {
+    font-size: 1.39vw;
+    cursor: pointer;
+  }
+  
+  .card-dropdown-menu {
+    position: absolute;
+    top: 1.67vw;
+    right: 0;
+    background-color: white;
+    border: 0.07vw solid #ccc;
+    border-radius: 0.42vw;
+    box-shadow: 0 0.28vw 0.83vw rgba(0,0,0,0.1);
+    z-index: 10;
+    width: 6.94vw; /* 100px */
+  }
+  
+  .dropdown-item {
+    display: block;
+    padding: 0.56vw 0.83vw;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.97vw;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f0f0f0;
+  }
+  
