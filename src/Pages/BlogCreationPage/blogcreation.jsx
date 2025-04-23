@@ -65,6 +65,7 @@ export const CreateBlog = () => {
       await set(newBlogRef, {
         title,
         content,
+        DepartmentOfblog,
         image_url: imageUrl,
         blog_content: blogContent,
         author_name: authorName,
@@ -77,6 +78,7 @@ export const CreateBlog = () => {
       setImage(null);
       setPreview(null);
       setAuthorName("");
+      setDepartmentOfblog("")
       setEditorState(EditorState.createEmpty());
     } catch (err) {
       console.error("Error during submission:", err);
