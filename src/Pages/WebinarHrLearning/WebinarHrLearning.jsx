@@ -144,6 +144,14 @@ const WebinarHRLearning = () => {
         img={img}
         metaTitle="Webinars"
         metaDescription="Your startup deserves more than just reactive HR. Whether you need structure, compliance, or a culture strategy, let’s have a conversation that moves your business forward. Book a discovery call or fill out the form and let’s shape a smarter, people-powered future for your company."
+        PreviousHeading="Previous Webinars"
+        Internship1="Recruitment Trends & Tools for the Future of Hiring"
+        Internship1Description="A forward-looking webinar covering modern hiring strategies, AI-driven sourcing, Gen Z hiring trends"
+        Internship2="Mastering Modern Employee Relations in Startups"
+        Internship2Description="This webinar demystifies how startups and growing companies can manage employee expectations"
+        Internship3="Future-Ready Talent Management for Business Growth"
+        Internship3Description="This insightful webinar explores how modern businesses can design agile talent management strategies."
+      
       />
     </>
   );
