@@ -197,24 +197,28 @@
 .Contact_sub_headings {
   font-size: 1.1vw;
   border-bottom: 1px solid transparent;
+  width: fit-content;
+  margin: 0 auto;
 
 }
 .Contact_sub_headings:hover{
   color: #7C5CFC;
   text-decoration: none;
   border-bottom: 1px solid #7C5CFC;
-  width: fit-content;
 }
 
 .Contact_sub_headings a{
   color: black;
   text-decoration: none;
+  width: fit-content;
+  margin: 0 auto;
+
 }
 
 .Contact_sub_headings a:hover{
   color: #7C5CFC;
   text-decoration: none;
-  width: fit-content;
+
 }
 
 .footer_logo_outer {

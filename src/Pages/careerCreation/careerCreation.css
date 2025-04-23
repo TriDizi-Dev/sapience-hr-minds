@@ -123,12 +123,13 @@
 }
 
 .editor-class {
-  height: 60px;
+  height: 140px;
   padding: 0;
   background-color: #fff;
   max-width: 21vw;
   overflow: scroll;
   font-size: 1vw;
+
 }
 
 .editor-class::-webkit-scrollbar {
