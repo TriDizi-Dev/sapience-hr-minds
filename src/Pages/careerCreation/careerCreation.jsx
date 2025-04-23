@@ -5,8 +5,12 @@ import { Editor } from "react-draft-wysiwyg";
 import { EditorState, convertToRaw } from "draft-js";
 import draftToHtml from "draftjs-to-html";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const CareerCreation = () => {
+  const navigate=useNavigate()
   const [formData, setFormData] = useState({
     ShortDiscription: "",
     JobDiscription: null,
@@ -67,11 +71,30 @@ const CareerCreation = () => {
         createdAt: new Date().toISOString(),
       });
 
-      alert("Career post created successfully!");
+      toast.success("Career post created successfully!", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+
+      setTimeout(() => {
+        
+        navigate("/managing-career")
+      }, 2000);
       cancelHandler();
     } catch (error) {
       console.error("Error saving career:", error);
-      alert("An error occurred while saving the career.");
+      toast.error("An error occurred while saving the career.", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
     }
   };
 
@@ -283,6 +306,7 @@ const CareerCreation = () => {
           </div>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 };

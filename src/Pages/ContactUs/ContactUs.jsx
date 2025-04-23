@@ -3,6 +3,8 @@ import "./ContactUs.css"; // link to your custom CSS
 import { FaInstagram, FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const ContactForm = () => {
   const handleOpenTab = (link) => {
     window.open(link, "_blank", "noopener,noreferrer");
@@ -31,6 +33,7 @@ const ContactForm = () => {
 
     try {
       const formPayload = new FormData();
+      formPayload.append("sheet", "Sheet1");
       for (let key in formData) {
         formPayload.append(key, formData[key]);
       }
@@ -44,7 +47,15 @@ const ContactForm = () => {
       console.log(response, "resssssss");
 
       if (response.ok) {
-        alert("Form submitted successfully!");
+        // alert("Form submitted successfully!");
+        toast.success("Form submitted successfully!", {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
         console.log("submited succes", response);
         setFormData({
           name: "",
@@ -53,11 +64,27 @@ const ContactForm = () => {
           message: "",
         });
       } else {
-        alert("Something went wrong. Please try again.");
+        // alert("Something went wrong. Please try again.");
+        toast.warning("Something went wrong. Please try again.", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("Error submitting the form. Please check your connection.");
+      // alert("Error submitting the form. Please check your connection.");
+      toast.error("Error submitting the form. Please check your connection.", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
     }
   };
 
@@ -152,6 +179,7 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

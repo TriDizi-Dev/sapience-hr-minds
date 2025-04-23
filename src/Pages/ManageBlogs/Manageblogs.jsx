@@ -3,6 +3,8 @@ import "./ManageBlogs.css";
 import { database, ref, get, remove } from "../../Firebase/firebase";
 import { useNavigate } from "react-router-dom";
 import { HiDotsVertical } from "react-icons/hi";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const Manageblogs = () => {
   const [Blogs, setBlogs] = useState([]);
@@ -53,10 +55,26 @@ export const Manageblogs = () => {
     try {
       await remove(ref(database, `blogs/hr-minds/${id}`));
       setBlogs((prev) => prev.filter((blog) => blog.id !== id));
-      alert("Blog deleted successfully.");
+      // alert("Blog deleted successfully.");
+      toast.success("Blog deleted successfully!.", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
     } catch (error) {
       console.error("Error deleting blog:", error);
-      alert("Failed to delete blog.");
+      // alert("Failed to delete blog.");
+      toast.error("Failed to delete blog", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
     }
   };
 
@@ -101,6 +119,7 @@ export const Manageblogs = () => {
           </div>
         ))}
       </div>
+      <ToastContainer />
     </div>
   );
 };
