@@ -4,12 +4,7 @@ import Image1 from "../../assets/Service/Image1.svg";
 import Image2 from "../../assets/Service/service12.svg";
 import BlueLayer from "../../assets/Service/BlueBackground.svg";
 import OrangeLayer from "../../assets/Service/OrangeBackground.svg";
-import Rocket from "../../assets/Service/service1group1.svg";
 
-import Goal from "../../assets/Service/fourth_img.svg";
-import Cup from "../../assets/Service/second_img.svg";
-import Medal from "../../assets/Service/fiveth_img.svg";
-import Setting from "../../assets/Service/thrird_img.svg";
 import CircleGroup from "../../assets/AboutPage/CircleGroup.png";
 import TradeMark from "../../assets/AboutPage/trademark.svg";
 import TringleGroup from "../../assets/AboutPage/TriangleImages.svg";
@@ -67,6 +62,13 @@ export const Service = ({
   service6name,
   service7name,
   service8name,
+  img_1,
+  img_2,
+  img_3,
+  img_4,
+  img_5,
+  img_6,
+  img_7,
 }) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -81,7 +83,7 @@ export const Service = ({
 
   const [ClientCount, setClientCount] = useState(0);
   const [ClientIsVisible, setClientIsVisible] = useState(false);
-  const targetClient = 90 ;
+  const targetClient = 43;
   const durationClient = 2000;
 
   const [ClientRatingCount, setClientRatingCount] = useState(0);
@@ -295,7 +297,7 @@ export const Service = ({
       <div className="Service_Page_Section2_Hero">
         <div className="Image_Container_service_Left" data-aos="fade-right">
           <p>01</p>
-          <img src={Image1} alt="Image1"></img>
+          <img src={img_1} alt="Image1"></img>
         </div>
         <div className="Middle_Content_Container">
           {/* <p className="Middle_Secound_Head" data-aos="fade-right">
@@ -337,7 +339,7 @@ export const Service = ({
 
         <div className="Image_Container_service_right" data-aos="fade-left">
           <p>02</p>
-          <img src={Image2} alt="Image1" />
+          <img src={img_2} alt="Image1" />
         </div>
       </div>
       <img
@@ -366,7 +368,7 @@ export const Service = ({
 
           <div className="Image_Container_Section3_Main_Images">
             <div className="Image_Container_Section3_imge_Cont1" ref={ref}>
-              <img src={Rocket} alt="Rocket"></img>
+              <img src={img_3} alt="Rocket"></img>
               <span className="Rocket_count">{count}+</span>
               <div>
                 <h3>{serviceIcons1}</h3>
@@ -375,7 +377,7 @@ export const Service = ({
             </div>
 
             <div className="Image_Container_Section3_imge_Cont2">
-              <img src={Cup} alt="Cup"></img>
+              <img src={img_4} alt="Cup"></img>
               <span className="Cup_count">{AwardsCount}+</span>
               <div>
                 <h3>{serviceIcons2}</h3>
@@ -386,7 +388,7 @@ export const Service = ({
               </div>
             </div>
             <div className="Image_Container_Section3_imge_Cont3">
-              <img src={Medal} alt="Medal"></img>
+              <img src={img_5} alt="Medal"></img>
               <span className="Cup_count">{ClientCount}%</span>
               <div>
                 <h3>{serviceIcons4}</h3>
@@ -394,7 +396,7 @@ export const Service = ({
               </div>
             </div>
             <div className="Image_Container_Section3_imge_Cont4">
-              <img src={Goal} alt="Goal"></img>
+              <img src={img_7} alt="Goal"></img>
               <span className="Goal_count">{GoalCount}+</span>
               <div className="goal_icon_text">
                 <h3>{serviceIcons5}</h3>
@@ -403,7 +405,7 @@ export const Service = ({
               {/* <p>Align people operations with your business goals to boost growth and agility.</p> */}
             </div>
             <div className="Image_Container_Section3_imge_Cont5">
-              <img src={Setting} alt="Setting"></img>
+              <img src={img_6} alt="Setting"></img>
               <span className="Setting_count">{ClientRatingCount}+</span>
 
               <div>
