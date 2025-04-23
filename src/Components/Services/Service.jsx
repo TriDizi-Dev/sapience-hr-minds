@@ -20,7 +20,7 @@ import { PreFooter } from "../PreFooter/PreFooter";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import parse from "html-react-parser";
-
+import { Helmet } from "react-helmet-async";
 export const Service = ({
   ServiceHeadName,
   ServiceHeadContent,
@@ -69,6 +69,8 @@ export const Service = ({
   img_5,
   img_6,
   img_7,
+  metaDescription,
+  metaTitle
 }) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -278,6 +280,50 @@ export const Service = ({
 
   return (
     <div className="Service_MAin_Container">
+        <Helmet>
+      <title>
+     {metaTitle}
+        </title>
+        <meta
+          name="description"
+          content={metaDescription}
+        />
+
+           {/* Open Graph Meta Tags (for WhatsApp, Facebook, LinkedIn) */}
+           <meta
+          property="og:title"
+          content={metaTitle}
+        />
+        <meta
+          property="og:description"
+          content={metaDescription}
+        />
+        <meta
+          property="og:image"
+          content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
+        />
+        <meta
+          property="og:url"
+          content="https://tridizi.com/"
+        />
+        <meta property="og:type" content="website" />
+
+      {/* Twitter Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content={metaTitle}
+        />
+        <meta
+          name="twitter:description"
+          content={metaDescription}
+        />
+        <meta
+          name="twitter:image"
+          content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
+        />
+
+      </Helmet>
       <div className="Service_head_Container">
         <p
           className="Service_head_name"

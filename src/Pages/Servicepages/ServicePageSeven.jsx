@@ -14,6 +14,8 @@ export const ServicePageSeven = () => {
     <div>
       {" "}
       <Service
+         metaTitle="Recruitment of Leadership & Mid-Level Team"
+        metaDescription="Find the right leaders who can scale your vision without compromising your culture or pace."
         ServiceHeadName="Recruitment of Leadership & Mid-Level Team"
         ServiceHeadContent="Find the right leaders who can scale your vision without compromising your culture or pace."
         Para1Head="Lorem ipsum dolor"

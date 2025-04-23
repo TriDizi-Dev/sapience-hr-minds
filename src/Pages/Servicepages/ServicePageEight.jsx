@@ -14,6 +14,8 @@ export const ServicePageEight = () => {
     <div>
       {" "}
       <Service
+        metaTitle="Employee Insurance & Benefits"
+        metaDescription="Design compelling benefits that protect, support, and empower your workforce—without breaking your budget."
         ServiceHeadName="Employee Insurance & Benefits"
         ServiceHeadContent="Design compelling benefits that protect, support, and empower your workforce—without breaking your budget."
         Para1Head="Lorem ipsum dolor"

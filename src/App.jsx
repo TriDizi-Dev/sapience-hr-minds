@@ -31,10 +31,12 @@ import CareerCreation from "./Pages/careerCreation/careerCreation";
 import { HelmetProvider } from 'react-helmet-async';
 import { Manageblogs } from "./Pages/ManageBlogs/Manageblogs";
 import { UpdateBlog } from "./Pages/BlogUpdation/BlogUpdation";
+import CareerUpdate from "./Pages/careerCreation/updationCareerpage";
+import SmallCard from "./Components/managingCareers/managingCareers";
 
 function Layout() {
   const location = useLocation();
-  const hideFooter = location.pathname === "/blog-creation" || location.pathname === "/career-creation" ;
+  const hideFooter = location.pathname === "/blog-creation" || location.pathname === "/career-creation"||location.pathname==="/career-update" ;
 
   return (
     <>
@@ -72,6 +74,8 @@ function Layout() {
         <Route path="/career-creation" element={<CareerCreation />}></Route>
         <Route path="/manageblogs" element={<Manageblogs />}></Route>
         <Route path="/blog-updation" element={<UpdateBlog />}></Route>
+        <Route path="/career-update" element={<CareerUpdate/> }/>
+        <Route path="/managing-career" element={<SmallCard/>}/>
       </Routes>
       {!hideFooter && <Footer />}
       </HelmetProvider>

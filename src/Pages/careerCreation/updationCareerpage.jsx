@@ -6,7 +6,7 @@ import { EditorState, convertToRaw } from "draft-js";
 import draftToHtml from "draftjs-to-html";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
-const CareerCreation = () => {
+const CareerUpdate  = () => {
   const [formData, setFormData] = useState({
     ShortDiscription: "",
     JobDiscription: null,
@@ -287,4 +287,4 @@ const CareerCreation = () => {
   );
 };
 
-export default CareerCreation;
+export default CareerUpdate ;
