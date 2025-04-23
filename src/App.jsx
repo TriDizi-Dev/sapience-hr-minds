@@ -30,6 +30,7 @@ import { CreateBlog } from "./Pages/BlogCreationPage/blogcreation";
 import CareerCreation from "./Pages/careerCreation/careerCreation";
 import { HelmetProvider } from 'react-helmet-async';
 import { Manageblogs } from "./Pages/ManageBlogs/Manageblogs";
+import { UpdateBlog } from "./Pages/BlogUpdation/BlogUpdation";
 
 function Layout() {
   const location = useLocation();
@@ -70,6 +71,7 @@ function Layout() {
         <Route path="/blog-creation" element={<CreateBlog />}></Route>   
         <Route path="/career-creation" element={<CareerCreation />}></Route>
         <Route path="/manageblogs" element={<Manageblogs />}></Route>
+        <Route path="/blog-updation" element={<UpdateBlog />}></Route>
       </Routes>
       {!hideFooter && <Footer />}
       </HelmetProvider>

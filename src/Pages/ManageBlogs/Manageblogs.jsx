@@ -46,7 +46,7 @@ export const Manageblogs = () => {
   };
 
   const handleEdit = (data) => {
-    navigate("/edit-blog", { state: data }); // pass data to edit page
+    navigate("/blog-updation", { state: data }); // pass data to edit page
   };
 
   const handleDelete = async (id) => {
@@ -62,13 +62,15 @@ export const Manageblogs = () => {
 
   return (
     <div className="blog_page_layer1">
-        <p>CreateBlog</p>
+      <p className="CreateBlogPage" onClick={()=>navigate("/blog-creation")}>Create Blog</p>
       <div className="blog_card_outer">
         {Blogs.map((data) => (
           <div className="blog_card" key={data.id}>
             <div
               className="ThreeDots_Icon"
-              onClick={() => setOpenPopupId(openPopupId === data.id ? null : data.id)}
+              onClick={() =>
+                setOpenPopupId(openPopupId === data.id ? null : data.id)
+              }
             >
               <HiDotsVertical />
               {openPopupId === data.id && (
@@ -85,7 +87,9 @@ export const Manageblogs = () => {
             <div className="blog_content">
               <div className="blog_left_content">
                 <p className="blog_content_heading">{data?.title}</p>
-                <p className="blog_content_date">{formatDate(data?.created_at)}</p>
+                <p className="blog_content_date">
+                  {formatDate(data?.created_at)}
+                </p>
               </div>
               <div
                 className="blog_content_right"

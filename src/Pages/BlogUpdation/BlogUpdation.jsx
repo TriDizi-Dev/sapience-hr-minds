@@ -1,13 +1,12 @@
-import React, { useState } from "react";
-import "./blogcreation.css";
+import React, { useEffect, useState } from "react";
 import { Editor } from "react-draft-wysiwyg";
-import { EditorState, convertToRaw } from "draft-js";
+import { EditorState, convertToRaw, ContentState } from "draft-js";
 import draftToHtml from "draftjs-to-html";
+import htmlToDraft from "html-to-draftjs";
 import {
   storage,
   ref,
-  push,
-  set,
+  update,
   storageRef,
   uploadBytes,
   getDownloadURL,
@@ -15,32 +14,50 @@ import {
 } from "../../Firebase/firebase";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { AiOutlineCloudUpload } from "react-icons/ai";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
-export const CreateBlog = () => {
+export const UpdateBlog = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [image, setImage] = useState(null);
   const [preview, setPreview] = useState(null);
   const [authorName, setAuthorName] = useState("");
   const [DepartmentOfblog, setDepartmentOfblog] = useState("");
-  const [blogContent, setBlogContent] = useState(null);
+  const [blogContent, setBlogContent] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
+
+  const location = useLocation();
+  const blogData = location.state || {};
+  const blogId = blogData.id;
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (blogData) {
+      setTitle(blogData.title || "");
+      setContent(blogData.content || "");
+      setAuthorName(blogData.author_name || "");
+      setDepartmentOfblog(blogData.DepartmentOfblog || "");
+      setBlogContent(blogData.blog_content || "");
+      setPreview(blogData.image_url || "");
+
+      if (blogData.blog_content) {
+        const contentBlock = htmlToDraft(blogData.blog_content);
+        if (contentBlock) {
+          const contentState = ContentState.createFromBlockArray(
+            contentBlock.contentBlocks
+          );
+          setEditorState(EditorState.createWithContent(contentState));
+        }
+      }
+    }
+  }, [blogData]);
 
   const onEditorStateChange = (newEditorState) => {
     setEditorState(newEditorState);
     const rawContent = convertToRaw(newEditorState.getCurrentContent());
-
-    const htmlContent = draftToHtml(
-      rawContent,
-      null,
-      null,
-      () => null, // strip entities
-      () => null // strip inline styles
-    );
-
-    const cleanedHtml = htmlContent.replace(/style="[^"]*"/g, ""); // clean up leftover style=""
+    const htmlContent = draftToHtml(rawContent);
+    const cleanedHtml = htmlContent.replace(/style="[^"]*"/g, "");
     setBlogContent(cleanedHtml);
   };
 
@@ -56,57 +73,50 @@ export const CreateBlog = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (isSubmitting) return;
+    if (isSubmitting || !blogId) return;
     setIsSubmitting(true);
 
-    if (!image) {
-      alert("Please select an image.");
-      setIsSubmitting(false);
-      return;
-    }
-
     try {
-      const imageRef = storageRef(storage, `blogs/${Date.now()}-${image.name}`);
-      const uploadTask = await uploadBytes(imageRef, image);
-      const imageUrl = await getDownloadURL(uploadTask.ref);
+      let imageUrl = preview;
 
-      const newBlogRef = push(ref(database, "blogs/hr-minds"));
-      await set(newBlogRef, {
+      if (image) {
+        const imageRef = storageRef(
+          storage,
+          `blogs/${Date.now()}-${image.name}`
+        );
+        const uploadTask = await uploadBytes(imageRef, image);
+        imageUrl = await getDownloadURL(uploadTask.ref);
+      }
+
+      const updatedBlogData = {
         title,
         content,
         DepartmentOfblog,
         image_url: imageUrl,
         blog_content: blogContent,
         author_name: authorName,
-        created_at: new Date().toISOString(),
-      });
+        updated_at: new Date().toISOString(),
+      };
 
-      alert("Blog posted successfully!");
-      setTitle("");
-      setContent("");
-      setImage(null);
-      setPreview(null);
-      setAuthorName("");
-      setDepartmentOfblog("");
-      setEditorState(EditorState.createEmpty());
+      await update(ref(database, `blogs/hr-minds/${blogId}`), updatedBlogData);
+      alert("Blog updated successfully!");
       setTimeout(() => {
         navigate("/manageblogs");
       }, 1000);
     } catch (err) {
-      console.error("Error during submission:", err);
-      alert("An error occurred. Please try again.");
+      console.error("Error updating blog:", err);
+      alert("An error occurred while updating the blog.");
     } finally {
       setIsSubmitting(false);
     }
   };
-  const navigate = useNavigate();
 
   return (
     <div className="blog_creation_page">
       <div className="blog_page_main_container">
         <div className="blog-container">
           <form className="blog-form" onSubmit={handleSubmit}>
-            <h2>Create a New Blog</h2>
+            <h2>Update Blog</h2>
 
             <div className="blog-form-group">
               <div className="blog-form-group-input">
@@ -117,7 +127,6 @@ export const CreateBlog = () => {
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
                   required
-                  placeholder="Enter Blog Title"
                 />
               </div>
               <div className="blog-form-group-input">
@@ -127,7 +136,6 @@ export const CreateBlog = () => {
                   type="text"
                   value={authorName}
                   onChange={(e) => setAuthorName(e.target.value)}
-                  placeholder="Enter Author Name"
                 />
               </div>
             </div>
@@ -140,7 +148,6 @@ export const CreateBlog = () => {
                   type="text"
                   value={DepartmentOfblog}
                   onChange={(e) => setDepartmentOfblog(e.target.value)}
-                  placeholder="Enter Blog Category"
                 />
               </div>
 
@@ -152,7 +159,6 @@ export const CreateBlog = () => {
                   onChange={(e) => setContent(e.target.value)}
                   rows="3"
                   required
-                  placeholder="Enter Blog Description up to 50 words"
                 />
               </div>
             </div>
@@ -165,7 +171,6 @@ export const CreateBlog = () => {
                 wrapperClassName="wrapper-class-1"
                 editorClassName="editor-clas-1"
                 toolbarClassName="toolbar-class"
-                placeholder="Enter Blog Content"
                 toolbar={{
                   options: ["inline", "list", "link"],
                   inline: { options: ["bold", "italic", "underline"] },
@@ -183,18 +188,16 @@ export const CreateBlog = () => {
               type="file"
               accept="image/*"
               onChange={handleImageChange}
-              style={{
-                display: "none",
-              }}
+              style={{ display: "none" }}
             />
-            <span className="red_alter">Only images upto 5MB are allowed.</span>
+            <span className="red_alter">Only images up to 200MB are allowed.</span>
 
             {preview && (
               <img src={preview} alt="Preview" className="preview-img" />
             )}
 
             <button type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Publishing..." : "Publish Blog"}
+              {isSubmitting ? "Updating..." : "Update Blog"}
             </button>
           </form>
         </div>
