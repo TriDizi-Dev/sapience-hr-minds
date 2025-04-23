@@ -869,13 +869,15 @@ export const HomePage = () => {
                 prevEl: ".custom-prev-button",
                 nextEl: ".custom-next-button",
               }}
-              pagination={{ clickable: true }}
+              // pagination={{ clickable: true }}
+              pagination={Blogs.length > 3 ? { clickable: true } : false}
               autoplay={{
                 delay: 2000,
                 disableOnInteraction: false,
               }}
               speed={1000}
-              loop={true}
+              // loop={true}
+              loop={Blogs.length > 3}
               className="home_gallery_cardswiper2"
               breakpoints={{
                 320: {

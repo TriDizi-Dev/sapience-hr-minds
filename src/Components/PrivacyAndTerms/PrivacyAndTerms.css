@@ -52,6 +52,7 @@
     position: relative;
     z-index: 1;
     top: -10vw;
+    padding-bottom: 3vw;
     box-shadow: 0 1.5vw 2vw rgba(0, 0, 0, 0.5);
 }
 
@@ -89,7 +90,17 @@
 .privacy_terms_prefooter {
     margin-top: -2vw;
 }
+.privacy_terms_content_para_inner a {
+    border-bottom: 1px solid transparent;
+    text-decoration: none;
+    color: black;
+}
 
+.privacy_terms_content_para_inner a:hover {
+    color: #7C5CFC;
+    border-bottom: 1px solid #7C5CFC;
+    width: fit-content;
+}
 
 @media screen and (min-width:320px) and (max-width:720px) {
 
@@ -115,7 +126,6 @@
         /* border: 2px solid green; */
         width: 85vw;
         height: auto;
-
     }
 
     .privacy_terms_content_heading {
@@ -140,7 +150,6 @@
 
     .privacy_terms_content_para_inner p{
         font-size: 3vw;
-
     }
 
 }
