@@ -1,11 +1,13 @@
 .blog_card_outer {
   display: flex;
-  /* flex-wrap: wrap; */
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4vw;
   margin-top: 9vw;
   width: 100%;
   /* border: 1px solid red; */
 }
+
 .blog_card {
   width: 25vw;
   height: fit-content;
@@ -22,6 +24,7 @@
 
 
 }
+
 .blog_card_img_content {
   background-color: rgba(124, 92, 252, 0.42);
   width: 20vw;
@@ -37,10 +40,12 @@
   word-spacing: 0vw;
   color: white;
 }
+
 .blog_card_img_text {
   width: 17vw;
   font-size: 0.95vw;
 }
+
 .blog_img {
   width: 24vw;
   height: 15vw;
@@ -59,25 +64,30 @@
   margin-top: 1.5vw;
   width: 95%;
 }
+
 .blog_content_heading {
   font-size: 0.7vw;
   font-weight: 700;
   /* width: 10vw; */
 }
+
 .blog_content_date {
   font-size: 0.8vw;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.6);
   margin-top: 0.5vw;
 }
+
 .blog_content_right_text {
   font-size: 0.9vw;
   font-weight: 500;
   border-bottom: 0.2vw solid rgba(124, 92, 252, 0.42);
 }
+
 .blog_page_layer1 {
   position: relative;
 }
+
 .backgroud_glow {
   position: absolute;
   width: 90vw;
@@ -86,6 +96,7 @@
   left: 0;
   z-index: -1;
 }
+
 .blog_prefooter {
   margin-top: 5vw;
   margin-bottom: 3vw;
@@ -93,60 +104,69 @@
 
 
 .blogpage_layer4_outer_main {
-    margin-top: 6vw;
-    padding: 2vw;
-    position: relative;
-  }
-  .blog_left_content{
-    width: 70%;
-  }
+  margin-top: 6vw;
+  padding: 2vw;
+  position: relative;
+}
+
+.blog_left_content {
+  width: 70%;
+}
 
 @media screen and (min-width: 320px) and (max-width: 720px) {
   .blog_page_layer1 {
     /* border: 2px solid red; */
     margin-top: 8vw;
   }
+
   .blog_card_outer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
   .blog_card {
     width: 85vw;
     height: 90vw;
     margin-top: 7vw;
   }
+
   .blog_img {
     width: 85vw;
     height: 65vw;
     border-radius: 2vw;
   }
+
   .blog_content_heading {
     font-size: 3vw;
     width: 54vw;
     margin-top: 2vw;
   }
+
   .blog_content_date {
     font-size: 3vw;
   }
 
-  .blog_left_content{
+  .blog_left_content {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
   }
+
   .blog_content_right_text {
     font-size: 2.5vw;
     margin-top: 2vw;
   }
+
   .blog_content {
     padding: 1vw 2vw 1vw 2vw;
     display: flex;
     justify-content: space-between;
     align-items: end;
   }
+
   .blog_card_img_content {
     width: 75vw;
     height: 30vw;
@@ -156,8 +176,9 @@
     align-items: center;
     left: 4vw;
     top: 15vw;
-    
+
   }
+
   .blog_card_img_text {
     font-size: 3vw;
     width: 90%;
