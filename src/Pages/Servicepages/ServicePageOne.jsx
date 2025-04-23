@@ -1,5 +1,14 @@
 import React from "react";
 import { Service } from "../../Components/Services/Service";
+import Image1 from "../../assets/Service/Image1.svg";
+import Image2 from "../../assets/Service/service12.svg";
+// import Goal from "../../assets/Service/fourth_img.svg";
+import img4 from "../../assets/Service/img_4.svg";
+import img5 from "../../assets/Service/2mans.svg";
+import Setting from "../../assets/Service/thrird_img.svg";
+import img6 from "../../assets/Service/lock.svg";
+
+import Rocket from "../../assets/Service/service1group1.svg";
 
 export const ServicePageOne = () => {
   return (
@@ -49,6 +58,14 @@ export const ServicePageOne = () => {
         service6name="Talent Engagement & Retention"
         service7name="Recruitment of Leadership & Mid-Level Team"
         service8name="Employee Insurance & Benefits"
+        img_1={Image1}
+        img_2={Image2}
+        img_3={Rocket}
+        img_4={img4}
+        img_5={img5}
+        img_6={Setting}
+        img_7={img6}
+       
       />
     </div>
   );

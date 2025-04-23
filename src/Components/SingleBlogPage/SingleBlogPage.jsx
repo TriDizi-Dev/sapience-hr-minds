@@ -15,7 +15,6 @@ import { Helmet } from "react-helmet-async";
 import parse, { domToReact } from "html-react-parser";
 import { database, ref, get } from "../../Firebase/firebase";
 
-
 function SingleBlogPage() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -157,9 +156,19 @@ function SingleBlogPage() {
         if (domNode.type === "tag") {
           const { name, children, attribs } = domNode;
 
+          // Remove inline styles by excluding them from attribs
+          const filteredAttribs = { ...attribs };
+          console.log(filteredAttribs, "filteredAttribsfilteredAttribs");
+
+          delete filteredAttribs.style;
+
           if (name === "p") {
             return (
-              <p className="single_blog_content_para" data-aos="fade-right">
+              <p
+                {...filteredAttribs}
+                className="single_blog_content_para"
+                data-aos="fade-right"
+              >
                 {domToReact(children)}
               </p>
             );
@@ -167,18 +176,23 @@ function SingleBlogPage() {
 
           if (name === "strong") {
             return (
-              <strong
+              <span
+                {...filteredAttribs}
                 className="single_blog_content_heading"
                 data-aos="zoom-in"
               >
                 {domToReact(children)}
-              </strong>
+              </span>
             );
           }
 
           if (name === "li") {
             return (
-              <li className="sigle_blog_list" data-aos="zoom-in">
+              <li
+                {...filteredAttribs}
+                className="single_blog_list"
+                data-aos="zoom-in"
+              >
                 {domToReact(children)}
               </li>
             );
@@ -187,6 +201,7 @@ function SingleBlogPage() {
       },
     });
   };
+
   const [BlogsData, setBlogsData] = useState([]);
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -217,13 +232,13 @@ function SingleBlogPage() {
     fetchBlogs();
   }, []);
 
-  console.log(BlogsData,data,"BlogsDataBlogsData");
+  console.log(BlogsData, data, "BlogsDataBlogsData");
   const DateFormate = (isoDateString) => {
     if (!isoDateString) return "";
     const date = new Date(isoDateString);
     return date.toLocaleDateString("en-GB"); // Formats to dd/mm/yyyy
   };
-  
+
   return (
     <div className="single_blog_outer_main">
       <Helmet>
@@ -263,8 +278,7 @@ function SingleBlogPage() {
 
           <div className="banner_img_content">
             <h1 className="banner_img_content_heading">{data.title}</h1>
-            <p className="banner_img_content_para">{data.content
-            }</p>
+            <p className="banner_img_content_para">{data.content}</p>
           </div>
         </div>
       </div>
@@ -339,8 +353,7 @@ function SingleBlogPage() {
                 (data) => (
                   <div className="blog_card" data-aos="zoom-out-down">
                     <div className="blog_card_img_content_1">
-                      <p className="blog_card_img_text">{data?.content
-                      }</p>
+                      <p className="blog_card_img_text">{data?.content}</p>
                     </div>
                     <img
                       src={data?.image_url}
@@ -353,7 +366,9 @@ function SingleBlogPage() {
                     <div className="blog_content">
                       <div className="blog_left_content">
                         <h6 className="blog_content_heading">{data?.title}</h6>
-                        <p className="blog_content_date">{DateFormate(data?.created_at)}</p>
+                        <p className="blog_content_date">
+                          {DateFormate(data?.created_at)}
+                        </p>
                       </div>
                       <div className="blog_content_right">
                         <h6
