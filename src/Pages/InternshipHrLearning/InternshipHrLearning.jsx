@@ -1,5 +1,5 @@
 import { HrLearning } from "../../Components/HrLearning/HrLearning";
-import img from "../../Assets/HrLearning/HrBanner.svg";
+import img from "../../assets/HrLearning/HrBanner.svg";
 
 const InternshipHRLearning = () => {
   const Cards = [
