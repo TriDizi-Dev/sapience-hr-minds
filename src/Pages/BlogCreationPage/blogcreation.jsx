@@ -3,6 +3,8 @@ import "./blogcreation.css";
 import { Editor } from "react-draft-wysiwyg";
 import { EditorState, convertToRaw } from "draft-js";
 import draftToHtml from "draftjs-to-html";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   storage,
   ref,
@@ -81,7 +83,14 @@ export const CreateBlog = () => {
         created_at: new Date().toISOString(),
       });
 
-      alert("Blog posted successfully!");
+      toast.success("Blog created successfully!", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
       setTitle("");
       setContent("");
       setImage(null);
@@ -91,10 +100,17 @@ export const CreateBlog = () => {
       setEditorState(EditorState.createEmpty());
       setTimeout(() => {
         navigate("/manageblogs");
-      }, 1000);
+      }, 2000);
     } catch (err) {
       console.error("Error during submission:", err);
-      alert("An error occurred. Please try again.");
+      toast.error("An error occurred while saving the Blog.", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -199,6 +215,7 @@ export const CreateBlog = () => {
           </form>
         </div>
       </div>
+         <ToastContainer />
     </div>
   );
 };

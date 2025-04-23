@@ -1,16 +1,20 @@
-import { useState } from "react";
-import "./careerCreation.css";
-import { database, ref, push, set } from "../../Firebase/firebase";
+import React, { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { database, ref, update } from "../../Firebase/firebase";
 import { Editor } from "react-draft-wysiwyg";
-import { EditorState, convertToRaw } from "draft-js";
+import { EditorState, convertToRaw, ContentState } from "draft-js";
 import draftToHtml from "draftjs-to-html";
+import htmlToDraft from "html-to-draftjs";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import "./careerCreation.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-const CareerUpdate  = () => {
+const CareerUpdate = () => {
   const [formData, setFormData] = useState({
     ShortDiscription: "",
-    JobDiscription: null,
-    Requirements: null,
+    JobDiscription: "",
+    Requirements: "",
     Location: "",
     Type: "",
     Qualification: "",
@@ -21,9 +25,48 @@ const CareerUpdate  = () => {
   });
 
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
-  const [requirementsEditor, setRequirementsEditor] = useState(
-    EditorState.createEmpty()
-  );
+  const [requirementsEditor, setRequirementsEditor] = useState(EditorState.createEmpty());
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const location = useLocation();
+  const careerData = location.state || {};
+  const careerId = careerData.id;
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (careerData) {
+      setFormData({
+        ShortDiscription: careerData.ShortDiscription || "",
+        JobDiscription: careerData.JobDiscription || "",
+        Requirements: careerData.Requirements || "",
+        Location: careerData.Location || "",
+        Type: careerData.Type || "",
+        Qualification: careerData.Qualification || "",
+        PostDate: careerData.PostDate || "",
+        JobTitle: careerData.JobTitle || "",
+        Category: careerData.Category || "",
+        FieldOfJob: careerData.FieldOfJob || "",
+      });
+
+      // Initialize Job Description editor
+      if (careerData.JobDiscription) {
+        const contentBlock = htmlToDraft(careerData.JobDiscription);
+        if (contentBlock) {
+          const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
+          setEditorState(EditorState.createWithContent(contentState));
+        }
+      }
+
+      // Initialize Requirements editor
+      if (careerData.Requirements) {
+        const contentBlock = htmlToDraft(careerData.Requirements);
+        if (contentBlock) {
+          const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
+          setRequirementsEditor(EditorState.createWithContent(contentState));
+        }
+      }
+    }
+  }, [careerData]);
 
   const removeStyleFromHtml = (html) => {
     return html.replace(/ style="[^"]*"/g, "");
@@ -59,19 +102,31 @@ const CareerUpdate  = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const careerRef = ref(database, "careers");
-      const newCareerRef = push(careerRef);
-      await set(newCareerRef, {
-        ...formData,
-        createdAt: new Date().toISOString(),
-      });
+    if (isSubmitting || !careerId) return;
+    setIsSubmitting(true);
 
-      alert("Career post created successfully!");
-      cancelHandler();
-    } catch (error) {
-      console.error("Error saving career:", error);
-      alert("An error occurred while saving the career.");
+    try {
+      const updatedCareerData = {
+        ...formData,
+        updated_at: new Date().toISOString(),
+      };
+
+      await update(ref(database, `careers/${careerId}`), updatedCareerData);
+      toast.success("Career updated successfully!", {
+        position: "top-right",
+        autoClose: 2000,
+      });
+      setTimeout(() => {
+        navigate("/managing-career");
+      }, 2000);
+    } catch (err) {
+      console.error("Error updating career:", err);
+      toast.error("An error occurred while updating the career.", {
+        position: "top-right",
+        autoClose: 3000,
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -94,25 +149,25 @@ const CareerUpdate  = () => {
 
   return (
     <div className="career_creation_container">
+     
       <div className="career_details_sub">
-        <h1>Career Creation</h1>
+        <h1>Update Career</h1>
         <form className="career_creation_form" onSubmit={handleSubmit}>
           <div className="career_creation_form_container">
             <div className="input_container">
-              {/* <div className="input_container"> */}
-                <label htmlFor="JobTitle" className="career_labels">
-                  Title
-                </label>
-                <input
-                  type="text"
-                  id="JobTitle"
-                  name="JobTitle"
-                  className="career_input"
-                  onChange={formHandlerOnChange}
-                  value={formData.JobTitle}
-                  placeholder="Enter Job Title"
-                />
-              {/* </div> */}
+              <label htmlFor="JobTitle" className="career_labels">
+                Title
+              </label>
+              <input
+                type="text"
+                id="JobTitle"
+                name="JobTitle"
+                className="career_input"
+                onChange={formHandlerOnChange}
+                value={formData.JobTitle}
+                placeholder="Enter Job Title"
+                required
+              />
 
               <label htmlFor="Type" className="career_labels">
                 Job Type
@@ -123,8 +178,9 @@ const CareerUpdate  = () => {
                 onChange={formHandlerOnChange}
                 value={formData.Type}
                 className="career_input"
+                required
               >
-                <option value="" className="placeholders" disabled hidden>
+                <option value="" disabled hidden>
                   Select Job Type
                 </option>
                 <option value="Full Time">Full Time</option>
@@ -135,7 +191,7 @@ const CareerUpdate  = () => {
 
             <div className="input_container">
               <label htmlFor="FieldOfJob" className="career_labels">
-                Deportment
+                Department
               </label>
               <input
                 type="text"
@@ -144,7 +200,7 @@ const CareerUpdate  = () => {
                 className="career_input"
                 onChange={formHandlerOnChange}
                 value={formData.FieldOfJob}
-                placeholder="Enter Deportment"
+                placeholder="Enter Department"
               />
 
               <label htmlFor="Category" className="career_labels">
@@ -225,6 +281,7 @@ const CareerUpdate  = () => {
                 onChange={formHandlerOnChange}
                 value={formData.ShortDiscription}
                 placeholder="Enter Job Title Description"
+                required
               />
             </div>
           </div>
@@ -270,8 +327,8 @@ const CareerUpdate  = () => {
           </div>
 
           <div className="career_creation_button_container">
-            <button className="create_career_button" type="submit">
-              Create
+            <button className="create_career_button" type="submit" disabled={isSubmitting}>
+              {isSubmitting ? "Updating..." : "Update Career"}
             </button>
             <button
               className="cancel_career_button"
@@ -283,8 +340,9 @@ const CareerUpdate  = () => {
           </div>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 };
 
-export default CareerUpdate ;
+export default CareerUpdate;

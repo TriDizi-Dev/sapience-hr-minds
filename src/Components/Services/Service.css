@@ -557,6 +557,7 @@ margin-left: 1vw;
     width: 65vw;
     max-height: 10vw;
     margin: 0.5vw auto;
+    text-align: center;
     
   }
   .Image_Container_Section3_imge_Cont1 h3,
@@ -567,6 +568,7 @@ margin-left: 1vw;
     width: 100%;
     margin: 0.5vw 0;
     font-size: 3.5vw;
+    text-align: center;
   }
 
   .Service_age_section4 {
@@ -594,7 +596,8 @@ margin-left: 1vw;
   }
 
   .Service_Img img {
-    width: 10vw;
+    width: 13vw;
+    height: 13vw;
   }
 
   .SerViceImage_text_head {
