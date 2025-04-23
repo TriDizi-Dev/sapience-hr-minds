@@ -219,6 +219,7 @@
   }
   .blog_page_main_container {
     height: 100vh;
+    margin-top: 10vw;
   }
   .blog-container {
     margin: 4vh 4vw 1vh 4vw;

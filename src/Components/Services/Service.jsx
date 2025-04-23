@@ -8,13 +8,17 @@ import OrangeLayer from "../../assets/Service/OrangeBackground.svg";
 import CircleGroup from "../../assets/AboutPage/CircleGroup.png";
 import TradeMark from "../../assets/AboutPage/trademark.svg";
 import TringleGroup from "../../assets/AboutPage/TriangleImages.svg";
-import Instagram from "../../assets/Service/service18.svg";
-import Message from "../../assets/Service/service19.svg";
-import Target from "../../assets/Service/service110.svg";
-import Speaker from "../../assets/Service/service111.svg";
-import Cursur from "../../assets/Service/service112.svg";
-import Play from "../../assets/Service/service113.svg";
-import Monitor from "../../assets/Service/service114.svg";
+// import Instagram from "../../assets/Service/service18.svg";
+import Instagram from "../../assets/Service/service1imageee.svg"
+
+// import Message from "../../assets/Service/service19.svg";
+import Message from "../../assets/Service/service2imageee.svg"
+import Target from "../../assets/Service/service3imageee.svg";
+import Speaker from "../../assets/Service/service4imagee.svg";
+import Cursur from "../../assets/Service/service5imagee.svg";
+import Play from "../../assets/Service/service6imageee.svg";
+import Monitor from "../../assets/Service/service7imageee.svg";
+import image8 from "../../assets/Service/service8imageee.svg";
 import LastImge from "../../assets/Service/service115.svg";
 import { PreFooter } from "../PreFooter/PreFooter";
 import AOS from "aos";
@@ -97,6 +101,24 @@ export const Service = ({
   const [GoalIsVisible, setGoalIsVisible] = useState(false);
   const targetGoal = 49;
   const durationGoal = 2000;
+
+
+
+  const services = [
+    { name: service1name, icon: Instagram },
+    { name: service2name, icon: Message },
+    { name: service3name, icon: Target },
+    { name: service4name, icon: Speaker },
+    { name: service5name, icon: Cursur },
+    { name: service6name, icon: Play },
+    { name: service7name, icon: Monitor },
+    { name: service8name, icon: image8 },
+  ];
+  
+  const filteredServices = services.filter(
+    (service) => service.name !== ServiceHeadName
+  );
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -470,7 +492,7 @@ export const Service = ({
 
       <div className="Service_age_section4">
         <p className="Our_service_Head_title">Our Services</p>
-        <div className="Service_Cards">
+        {/* <div className="Service_Cards">
           <div
             className="Service_Icon_Container"
             data-aos="flip-left"
@@ -481,10 +503,7 @@ export const Service = ({
               <img src={Instagram} alt="Instagram" />
             </p>
             <p className="SerViceImage_text_head">{service1name}</p>
-            {/* <p className="SerViceImage_text">
-              is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the
-            </p> */}
+            
           </div>
           <div
             className="Service_Icon_Container"
@@ -496,10 +515,7 @@ export const Service = ({
               <img src={Message} alt="Instagram" />
             </p>
             <p className="SerViceImage_text_head">{service2name}</p>
-            {/* <p className="SerViceImage_text">
-              is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the
-            </p> */}
+            
           </div>
           <div
             className="Service_Icon_Container marginChnage"
@@ -511,10 +527,7 @@ export const Service = ({
               <img src={Target} alt="Instagram" />
             </p>
             <p className="SerViceImage_text_head">{service3name}</p>
-            {/* <p className="SerViceImage_text">
-              is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the
-            </p> */}
+           
           </div>
           <div
             className="Service_Icon_Container Middle_service"
@@ -526,10 +539,7 @@ export const Service = ({
               <img src={Speaker} alt="Instagram" />
             </p>
             <p className="SerViceImage_text_head">{service4name}</p>
-            {/* <p className="SerViceImage_text first_services">
-              is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the
-            </p> */}
+           
           </div>
           <div
             className="Service_Icon_Container marginChnage second_marginChanges"
@@ -541,10 +551,7 @@ export const Service = ({
               <img src={Cursur} alt="Instagram" />
             </p>
             <p className="SerViceImage_text_head">{service5name}</p>
-            {/* <p className="SerViceImage_text">
-              is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the
-            </p> */}
+           
           </div>
           <div
             className="Service_Icon_Container third_marginChanges"
@@ -556,10 +563,7 @@ export const Service = ({
               <img src={Play} alt="Instagram" />
             </p>
             <p className="SerViceImage_text_head">{service6name}</p>
-            {/* <p className="SerViceImage_text">
-              is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the
-            </p> */}
+            
           </div>
           <div
             className="Service_Icon_Container"
@@ -571,23 +575,42 @@ export const Service = ({
               <img src={Monitor} alt="Instagram" />
             </p>
             <p className="SerViceImage_text_head">{service7name}</p>
-            {/* <p className="SerViceImage_text">
-              is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the
-            </p> */}
+           
           </div>
-          {/* <div
+          <div
             className="Service_Icon_Container"
             data-aos="flip-left"
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000"
           >
             <p className="Service_Img">
-              <img src={Monitor} alt="Instagram" />
+              <img src={image8} alt="Instagram" />
             </p>
             <p className="SerViceImage_text_head">{service8name}</p>
-          </div> */}
-        </div>
+          </div>
+        </div> */}
+
+        <div className="Service_Cards">
+  {filteredServices.map((service, index) => (
+    <div
+      className={`Service_Icon_Container ${
+        index === 2 ? "marginChnage" : ""
+      } ${index === 3 ? "Middle_service" : ""} ${
+        index === 4 ? "marginChnage second_marginChanges" : ""
+      } ${index === 5 ? "third_marginChanges" : ""}`}
+      data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000"
+      key={index}
+    >
+      <p className="Service_Img">
+        <img src={service.icon} alt={service.name} />
+      </p>
+      <p className="SerViceImage_text_head">{service.name}</p>
+    </div>
+  ))}
+</div>
+
       </div>
 
       <div className="Service_last_secound_layer">

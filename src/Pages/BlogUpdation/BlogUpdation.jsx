@@ -175,7 +175,7 @@ export const UpdateBlog = () => {
                   id="content"
                   value={content}
                   onChange={(e) => setContent(e.target.value)}
-                  rows="3"
+                  rows="6"
                   required
                 />
               </div>

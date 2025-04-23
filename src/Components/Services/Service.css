@@ -1,7 +1,6 @@
 .Service_MAin_Container {
   position: relative;
   margin-top: 8vw;
-
 }
 
 .Service_head_Container {
@@ -44,13 +43,12 @@
 }
 
 .Image_Container_service_Left {
-  left: .9vw;
+  left: 0.9vw;
 }
 
 .Image_Container_service_right {
   right: 0.9vw;
 }
-
 
 .Image_Container_service_right p {
   border: 1px solid;
@@ -74,7 +72,6 @@
   font-family: Montserrat;
   font-weight: 700;
   font-size: 1.4vw;
-
 }
 
 .Image_Container_service_Left img,
@@ -107,7 +104,7 @@
   text-align: justify;
   color: #0c0c0d;
 }
-.Niddle_sub_content_p4{
+.Niddle_sub_content_p4 {
   margin-top: 3vw !important;
 }
 
@@ -170,8 +167,8 @@
   top: 0vw;
   left: 18vw;
 }
-.Image_Container_Section3_imge_Cont1 h3{
-  width:22vw
+.Image_Container_Section3_imge_Cont1 h3 {
+  width: 22vw;
 }
 
 .Image_Container_Section3_imge_Cont2 {
@@ -205,7 +202,7 @@
   right: 38.5vw;
 }
 
-.goal_icon_text{
+.goal_icon_text {
   margin-top: 0.5vw;
 }
 
@@ -239,9 +236,9 @@
   width: 10vw;
 }
 
-.Image_Container_Section3_imge_Cont4 img{
+.Image_Container_Section3_imge_Cont4 img {
   width: 10vw;
-margin-left: 1vw; 
+  margin-left: 1vw;
 }
 
 .Rocket_count {
@@ -250,7 +247,6 @@ margin-left: 1vw;
   right: 1vw;
   font-size: 1.5vw;
   font-weight: 600;
-
 }
 
 .Setting_count {
@@ -259,7 +255,6 @@ margin-left: 1vw;
   right: 6vw;
   font-size: 1.5vw;
   font-weight: 600;
-
 }
 
 .Cup_count {
@@ -316,6 +311,7 @@ margin-left: 1vw;
   justify-content: center;
   align-items: center;
   width: 14vw;
+  /* height: 12vw; */
   /* border: 1px solid; */
   padding: 0.5vw 1vw;
   border-radius: 1vw;
@@ -323,7 +319,7 @@ margin-left: 1vw;
 }
 
 .Service_Img img {
-  width: 4vw;
+  /* width: 7vw; */
 }
 
 .SerViceImage_text_head {
@@ -394,44 +390,38 @@ margin-left: 1vw;
   margin-top: 8vw;
   margin-bottom: 8vw;
 }
-.Image_Container_Section3_imge_Cont1 h3{
+.Image_Container_Section3_imge_Cont1 h3 {
   font-size: 1.1vw;
-
 }
-.Image_Container_Section3_imge_Cont2 h3{
+.Image_Container_Section3_imge_Cont2 h3 {
   font-size: 1.1vw;
- 
 }
-.Image_Container_Section3_imge_Cont3 h3{
-  width: 22vw; 
+.Image_Container_Section3_imge_Cont3 h3 {
+  width: 22vw;
   /* border: 1px solid; */
   font-size: 1.1vw;
 }
-.Image_Container_Section3_imge_Cont4 h3{
+.Image_Container_Section3_imge_Cont4 h3 {
   font-size: 1.1vw;
-  
 }
-.Image_Container_Section3_imge_Cont5 h3{
+.Image_Container_Section3_imge_Cont5 h3 {
   font-size: 1.1vw;
-  width: 22vw; 
-
+  width: 22vw;
 }
-.Image_Container_Section3_imge_Cont1 p{
-  font-size: 0.9vw;
-
-}
-.Image_Container_Section3_imge_Cont2 p{
-  font-size: 0.9vw;
- 
-}
-.Image_Container_Section3_imge_Cont3 p{
+.Image_Container_Section3_imge_Cont1 p {
   font-size: 0.9vw;
 }
-.Image_Container_Section3_imge_Cont4 p{
+.Image_Container_Section3_imge_Cont2 p {
+  font-size: 0.9vw;
+}
+.Image_Container_Section3_imge_Cont3 p {
+  font-size: 0.9vw;
+}
+.Image_Container_Section3_imge_Cont4 p {
   width: 23vw;
   font-size: 0.9vw;
 }
-.Image_Container_Section3_imge_Cont5 p{
+.Image_Container_Section3_imge_Cont5 p {
   font-size: 0.9vw;
 }
 
@@ -557,14 +547,12 @@ margin-left: 1vw;
     width: 65vw;
     max-height: 10vw;
     margin: 0.5vw auto;
-    text-align: center;
-    
   }
   .Image_Container_Section3_imge_Cont1 h3,
   .Image_Container_Section3_imge_Cont2 h3,
   .Image_Container_Section3_imge_Cont3 h3,
   .Image_Container_Section3_imge_Cont4 h3,
-  .Image_Container_Section3_imge_Cont5 h3{
+  .Image_Container_Section3_imge_Cont5 h3 {
     width: 100%;
     margin: 0.5vw 0;
     font-size: 3.5vw;
@@ -593,11 +581,11 @@ margin-left: 1vw;
   .Service_Icon_Container {
     width: 100%;
     padding: 3vw 2vw;
+/* margin-left: 5vw; */
   }
 
   .Service_Img img {
-    width: 13vw;
-    height: 13vw;
+    width: 18vw;
   }
 
   .SerViceImage_text_head {
@@ -676,14 +664,12 @@ margin-left: 1vw;
     width: 15vw;
   }
 
-
   .Rocket_count {
     position: absolute;
     top: 11vw;
     right: 44%;
     font-size: 2vw;
     font-weight: 600;
-
   }
 
   .Setting_count {
@@ -692,7 +678,6 @@ margin-left: 1vw;
     right: 52%;
     font-size: 2vw;
     font-weight: 600;
-
   }
 
   .Cup_count {
@@ -710,6 +695,4 @@ margin-left: 1vw;
     font-size: 2vw;
     font-weight: 600;
   }
-
-
 }
