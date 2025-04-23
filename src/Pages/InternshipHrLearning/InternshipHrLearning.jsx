@@ -152,6 +152,13 @@ const InternshipHRLearning = () => {
         img={img}
         metaTitle="Internships"
         metaDescription="Your startup deserves more than just reactive HR. Whether you need structure, compliance, or a culture strategy, let’s have a conversation that moves your business forward. Book a discovery call or fill out the form and let’s shape a smarter, people-powered future for your company."
+        PreviousHeading="Previous Internships"
+        Internship1="Recruitment Intern"
+        Internship1Description="As a Recruitment Intern at Sapience Minds, you will support the end-to-end hiring process"
+        Internship2="Employee Relations Intern"
+        Internship2Description="As an Employee Relations Intern at Sapience Minds, you'll support initiatives aimed at improving employee"
+        Internship3="Talent Management Intern"
+        Internship3Description="As a Talent Management Intern at Sapience Minds, you’ll assist in designing"
       />
     </>
   );

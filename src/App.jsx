@@ -33,7 +33,7 @@ import { Manageblogs } from "./Pages/ManageBlogs/Manageblogs";
 
 function Layout() {
   const location = useLocation();
-  const hideFooter = location.pathname === "/contactus" || location.pathname === "/blog-creation" || location.pathname === "/career-creation" ;
+  const hideFooter = location.pathname === "/blog-creation" || location.pathname === "/career-creation" ;
 
   return (
     <>

@@ -14,6 +14,7 @@ import {
   database,
 } from "../../Firebase/firebase";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import { AiOutlineCloudUpload } from "react-icons/ai";
 
 export const CreateBlog = () => {
   const [title, setTitle] = useState("");
@@ -34,8 +35,8 @@ export const CreateBlog = () => {
       rawContent,
       null,
       null,
-      () => null,  // strip entities
-      () => null   // strip inline styles
+      () => null, // strip entities
+      () => null // strip inline styles
     );
 
     const cleanedHtml = htmlContent.replace(/style="[^"]*"/g, ""); // clean up leftover style=""
@@ -111,6 +112,7 @@ export const CreateBlog = () => {
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
                   required
+                  placeholder="Enter Blog Title"
                 />
               </div>
               <div className="blog-form-group-input">
@@ -120,18 +122,20 @@ export const CreateBlog = () => {
                   type="text"
                   value={authorName}
                   onChange={(e) => setAuthorName(e.target.value)}
+                  placeholder="Enter Author Name"
                 />
               </div>
             </div>
 
             <div className="blog-form-group">
               <div className="blog-form-group-input">
-                <label htmlFor="DepartName">Department Name</label>
+                <label htmlFor="DepartName">Category Name</label>
                 <input
                   id="DepartName"
                   type="text"
                   value={DepartmentOfblog}
                   onChange={(e) => setDepartmentOfblog(e.target.value)}
+                  placeholder="Enter Blog Category"
                 />
               </div>
 
@@ -143,6 +147,7 @@ export const CreateBlog = () => {
                   onChange={(e) => setContent(e.target.value)}
                   rows="3"
                   required
+                  placeholder="Enter Blog Description up to 50 words"
                 />
               </div>
             </div>
@@ -155,6 +160,7 @@ export const CreateBlog = () => {
                 wrapperClassName="wrapper-class-1"
                 editorClassName="editor-clas-1"
                 toolbarClassName="toolbar-class"
+                placeholder="Enter Blog Content"
                 toolbar={{
                   options: ["inline", "list", "link"],
                   inline: { options: ["bold", "italic", "underline"] },
@@ -163,13 +169,23 @@ export const CreateBlog = () => {
               />
             </div>
 
-            <label htmlFor="image">Upload Image</label>
+            <label htmlFor="image" className="upload_container">
+              <AiOutlineCloudUpload className="Upload_img_icon" />
+              Upload Image
+            </label>
             <input
               id="image"
               type="file"
               accept="image/*"
               onChange={handleImageChange}
+              style={{
+                display: "none",
+              }}
             />
+            <span className="red_alter">
+              Only images up to 200MB are allowed.
+            </span>
+
             {preview && (
               <img src={preview} alt="Preview" className="preview-img" />
             )}

@@ -198,6 +198,15 @@
   font-size: 1.1vw;
   /* font-weight: 500; */
 }
+.Contact_sub_headings a{
+  color: black;
+  text-decoration: none;
+}
+
+.Contact_sub_headings a:hover{
+  color: #7C5CFC;
+  text-decoration: none;
+}
 
 .footer_logo_outer {
   width: 20vw;
