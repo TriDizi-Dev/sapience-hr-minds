@@ -242,12 +242,12 @@ function SingleBlogPage() {
   return (
     <div className="single_blog_outer_main">
       <Helmet>
-        <title>{data?.bannerheading}</title>
-        <meta name="description" content={data?.bannertext} />
+        <title>{data?.title}</title>
+        <meta name="description" content={data?.content} />
 
         {/* Open Graph Meta Tags (for WhatsApp, Facebook, LinkedIn) */}
-        <meta property="og:title" content={data?.bannerheading} />
-        <meta property="og:description" content={data?.bannertext} />
+        <meta property="og:title" content={data?.title} />
+        <meta property="og:description" content={data?.content} />
         <meta
           property="og:image"
           content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
@@ -257,8 +257,8 @@ function SingleBlogPage() {
 
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={data?.bannerheading} />
-        <meta name="twitter:description" content={data?.bannertext} />
+        <meta name="twitter:title" content={data?.title} />
+        <meta name="twitter:description" content={data?.content} />
         <meta
           name="twitter:image"
           content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"

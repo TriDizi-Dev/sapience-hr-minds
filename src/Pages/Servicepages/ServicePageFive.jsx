@@ -14,6 +14,8 @@ export const ServicePageFive = () => {
     <div>
       {" "}
       <Service
+        metaTitle="Talent Management"
+        metaDescription="Nurture, grow, and retain your best talent with structured performance, growth, and succession strategies—designed for impact, not just process."
         ServiceHeadName="Talent Management"
         ServiceHeadContent="Nurture, grow, and retain your best talent with structured performance, growth, and succession strategies—designed for impact, not just process."
         // Para1Head="Lorem ipsum dolor"
