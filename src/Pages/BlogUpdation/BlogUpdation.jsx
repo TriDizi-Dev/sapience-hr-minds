@@ -190,7 +190,7 @@ export const UpdateBlog = () => {
               onChange={handleImageChange}
               style={{ display: "none" }}
             />
-            <span className="red_alter">Only images up to 200MB are allowed.</span>
+            <span className="red_alter">Only images upto 5MB are allowed.</span>
 
             {preview && (
               <img src={preview} alt="Preview" className="preview-img" />
