@@ -9,8 +9,7 @@ function PricacyPolicy() {
     <PrivacyAndTerms
     
     BannerHeading='Privacy Policy'
-    BannerText=" Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+    BannerText=" Learn how Sapience Minds collects, uses, and protects your data in alignment with our HR services. Your privacy and trust are important to us."
     subheading1="Privacy Policy"
     subheading2="Information We Collect"
     subheading3="Purpose of Data Collection"

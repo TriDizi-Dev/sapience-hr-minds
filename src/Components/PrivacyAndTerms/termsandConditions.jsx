@@ -28,7 +28,7 @@ function TermsAndConditions({
   text6,
   text7,
   text8,
-    img,
+  img,
 }) {
   useEffect(() => {
     AOS.init({
@@ -45,20 +45,15 @@ function TermsAndConditions({
 
   return (
     <div className="privacy_terms_outer_main">
-          <Helmet>
-      <title>
-      Privacy Policy
-        </title>
+      <Helmet>
+        <title>Privacy Policy</title>
         <meta
           name="description"
           content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
         />
 
-           {/* Open Graph Meta Tags (for WhatsApp, Facebook, LinkedIn) */}
-           <meta
-          property="og:title"
-          content="Privacy Policy"
-        />
+        {/* Open Graph Meta Tags (for WhatsApp, Facebook, LinkedIn) */}
+        <meta property="og:title" content="Privacy Policy" />
         <meta
           property="og:description"
           content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
@@ -67,18 +62,12 @@ function TermsAndConditions({
           property="og:image"
           content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
         />
-        <meta
-          property="og:url"
-          content="https://tridizi.com/"
-        />
+        <meta property="og:url" content="https://tridizi.com/" />
         <meta property="og:type" content="website" />
 
-      {/* Twitter Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Privacy Policy"
-        />
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Privacy Policy" />
         <meta
           name="twitter:description"
           content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
@@ -87,7 +76,6 @@ function TermsAndConditions({
           name="twitter:image"
           content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
         />
-
       </Helmet>
       <div className="privacy_terms_banner_outer">
         <img src={bgeffect} alt="bgeffect" className="bg_effect" />
@@ -162,14 +150,25 @@ function TermsAndConditions({
             {text8}
           </p>
 
-          <div className="privacy_terms_content_para" >
+          <div className="privacy_terms_content_para">
             <h4 className="privacy_terms_content_heading" data-aos="zoom-in">
               Contact
             </h4>
-            <div data-aos="fade-right" className="privacy_terms_content_para_inner">
+            <div
+              data-aos="fade-right"
+              className="privacy_terms_content_para_inner"
+            >
               <p>For any privacy-related queries, reach out to us at:</p>
-              <p>Email: reachus@sapienceminds.com</p>
-              <p>Phone: +91 90360 62378</p>
+              {/* <p>Email: reachus@sapienceminds.com</p>
+              <p>Phone: +91 90360 62378</p> */}
+              <p>
+                <a href="mailto:reachus@sapienceminds.com">
+                  reachus@sapienceminds.com
+                </a>
+              </p>
+              <p>
+                <a href="tel:+919036062378">+91 90360 62378</a>
+              </p>
             </div>
           </div>
         </div>
