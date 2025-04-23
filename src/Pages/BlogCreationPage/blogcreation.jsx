@@ -138,7 +138,7 @@ export const CreateBlog = () => {
               </div>
             </div>
 
-           <div>
+           <div className="blog-form-group">
            <label htmlFor="blogContent">Blog Content</label>
             <Editor
               editorState={editorState}
