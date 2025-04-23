@@ -78,7 +78,7 @@ export const CreateBlog = () => {
       setImage(null);
       setPreview(null);
       setAuthorName("");
-      setDepartmentOfblog("")
+      setDepartmentOfblog()
       setEditorState(EditorState.createEmpty());
     } catch (err) {
       console.error("Error during submission:", err);
