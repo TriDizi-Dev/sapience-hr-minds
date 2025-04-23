@@ -1,0 +1,34 @@
+.ThreeDots_Icon {
+    position: absolute;
+    right: .5vw;
+    top: .5vw;
+    cursor: pointer;
+    font-size: 1.5vw;
+    color: rgb(95, 95, 95);
+}
+
+/* the Remaining Css From Blogs Page */
+
+.popup_menu {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    padding: 5px 10px;
+    border-radius: 4px;
+    z-index: 100;
+    right: 20px;
+    top: 0;
+  }
+  
+  .popup_menu p {
+  font-size: 1.2vw;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+  }
+  
+  .popup_menu p:hover {
+    color: #007bff;
+    border-bottom: 1px solid #007bff;
+  }
+  

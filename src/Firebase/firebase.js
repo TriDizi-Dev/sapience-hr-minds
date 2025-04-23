@@ -35,7 +35,7 @@
 // };
 
 import { initializeApp } from "firebase/app";
-import { getDatabase, ref, set, push, get } from "firebase/database";
+import { getDatabase, ref, set, push, get, remove, update  } from "firebase/database";
 import {
   getStorage,
   ref as storageRef,
@@ -66,6 +66,8 @@ export {
   set,
   push,
   get,
+  remove,
+  update,
   storageRef,
   uploadBytes,
   getDownloadURL,
