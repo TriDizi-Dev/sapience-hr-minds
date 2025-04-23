@@ -3,6 +3,8 @@ import "./PreFooter.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { ImCross } from "react-icons/im";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 // {head,Content,Btn1,Btn2}
 export const PreFooter = ({
   Head,
@@ -91,6 +93,7 @@ export const PreFooter = ({
 
     try {
       const formPayload = new FormData();
+      formPayload.append("sheet", "Sheet1");
       for (let key in formData) {
         formPayload.append(key, formData[key]);
       }
@@ -104,8 +107,14 @@ export const PreFooter = ({
       console.log(response, "resssssss");
 
       if (response.ok) {
-        alert("Form submitted successfully!");
-        console.log("submited succes", response);
+        toast.success("Form submitted successfully!", {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
         setFormData({
           name: "",
           email: "",
@@ -114,11 +123,25 @@ export const PreFooter = ({
         });
         handleCloseForm()
       } else {
-        alert("Something went wrong. Please try again.");
+        toast.warning("Something went wrong. Please try again.", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("Error submitting the form. Please check your connection.");
+      toast.error("Error submitting the form. Please check your connection.", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
     }
   };
 
@@ -126,6 +149,7 @@ export const PreFooter = ({
 
   return (
     <>
+      <ToastContainer />
       <div className="PreFooter_Main" data-aos="zoom-in" ref={preFooterRef}>
         <p className="Heading_PreFooter">{Head}</p>
         <p className="Para_PreFooter">{Content}</p>
@@ -207,6 +231,7 @@ export const PreFooter = ({
           </div>
         </div>
       )}
+      
     </>
   );
 };

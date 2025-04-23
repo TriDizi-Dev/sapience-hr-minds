@@ -15,6 +15,8 @@ import {
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { AiOutlineCloudUpload } from "react-icons/ai";
 import { useLocation, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const UpdateBlog = () => {
   const [title, setTitle] = useState("");
@@ -99,13 +101,29 @@ export const UpdateBlog = () => {
       };
 
       await update(ref(database, `blogs/hr-minds/${blogId}`), updatedBlogData);
-      alert("Blog updated successfully!");
+    
+      toast.success("Blog updated successfully!", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
       setTimeout(() => {
         navigate("/manageblogs");
-      }, 1000);
+      }, 2000);
     } catch (err) {
       console.error("Error updating blog:", err);
-      alert("An error occurred while updating the blog.");
+      // alert("An error occurred while updating the blog.");
+      toast.error("An error occurred while updating the blog.", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -157,7 +175,7 @@ export const UpdateBlog = () => {
                   id="content"
                   value={content}
                   onChange={(e) => setContent(e.target.value)}
-                  rows="3"
+                  rows="6"
                   required
                 />
               </div>
@@ -202,6 +220,7 @@ export const UpdateBlog = () => {
           </form>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

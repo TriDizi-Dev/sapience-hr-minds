@@ -1,29 +1,127 @@
-import React, { useState } from 'react';
-import { HiDotsVertical } from 'react-icons/hi';
-import"./managingCareers.css"
+import React, { useEffect, useState } from "react";
+import { HiDotsVertical } from "react-icons/hi";
+import "./managingCareers.css";
+import { database, ref, get, remove } from "../../Firebase/firebase";
+import parse from "html-react-parser";
+import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-const SmallCard = ({ title, description, createdAt }) => {
-  const [menuOpen, setMenuOpen] = useState(false);
+const SmallCard = () => {
+  const [menuOpenId, setMenuOpenId] = useState(null);
+  const [careers, setCareers] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchCareers = async () => {
+      const careersRef = ref(database, "careers");
+      try {
+        const snapshot = await get(careersRef);
+        if (snapshot.exists()) {
+          const data = snapshot.val();
+          const careerList = Object.keys(data).map((key) => ({
+            id: key,
+            ...data[key],
+          }));
+          setCareers(careerList);
+        } else {
+          console.log("No data available");
+        }
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      }
+    };
+
+    fetchCareers();
+  }, []);
+
+  const handleEdit = (data) => {
+    navigate("/career-update", { state: data });
+  };
+
+  const handleDelete = async (id) => {
+    try {
+      // Attempt to delete the career from Firebase
+      await remove(ref(database, `careers/${id}`));
+
+      // Update the state to remove the deleted career
+      setCareers((prev) => prev.filter((career) => career.id !== id));
+
+      // Show success toast
+      toast.success("Career deleted successfully!", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    } catch (error) {
+      // Log the error for debugging
+      console.error("Error deleting career:", error);
+
+      // Show error toast
+      toast.error("Failed to delete career. Please try again.", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    }
+  };
 
   return (
-    <div className="card-container">
-      <div className="card-header">
-        <div>
-          <h3 className="card-title">{title||""} Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae quaerat repellendus amet maxime doloribus ratione rem temporibus, neque quod ut!</h3>
-          <p className="card-description">{description} Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis dolor itaque similique, aut eius ut tempore nam natus nostrum perferendis aliquid autem quos veritatis doloribus molestias consequuntur facere molestiae fuga.</p>
-          <span className="card-date">{createdAt}12/51/4115
+    <div  className="small-main-container">
+      <div className="sub-container-small">
+        <button onClick={()=>{
+            navigate("/career-creation")
+        }}>Create</button>
+      </div>
 
-          </span>
-        </div>
-        <div className="card-menu-wrapper">
-          <HiDotsVertical className="card-menu-icon" onClick={() => setMenuOpen(!menuOpen)} />
-          {menuOpen && (
-            <div className="card-dropdown-menu">
-              <button className="dropdown-item">Edit</button>
-              <button className="dropdown-item">Delete</button>
+      <div className="small-card_container">
+        {/* Add ToastContainer to render toasts */}
+        <ToastContainer />
+
+        {careers.map((career) => (
+          <div className="card-container" key={career.id}>
+            <div className="card-header">
+              <div className="card-header-text">
+                <h3 className="card-title">{career?.JobTitle}</h3>
+                <p className="card-subtitle">Business Management</p>
+              </div>
+              <div className="card-menu-wrapper">
+                <HiDotsVertical
+                  className="card-menu-icon"
+                  onClick={() =>
+                    setMenuOpenId(menuOpenId === career.id ? null : career.id)
+                  }
+                />
+                {menuOpenId === career.id && (
+                  <div className="card-dropdown-menu">
+                    <button
+                      className="dropdown-item"
+                      onClick={() => handleEdit(career)}
+                    >
+                      Edit
+                    </button>
+                    <button
+                      className="dropdown-item"
+                      onClick={() => handleDelete(career.id)}
+                    >
+                      Delete
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
-          )}
-        </div>
+
+            <div className="card-content-box">
+              {parse(career?.ShortDiscription || "")}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
