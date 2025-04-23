@@ -53,6 +53,11 @@
     border: .15vw solid transparent;
 
 }
+.Left_Single_Side_Cards_Container:hover{
+    border: .15vw solid #1797c539;
+    transform: scale(1.01);
+    transition-duration: .5s;
+}
 .card_boarder{
     border: .15vw solid #1797C5;
     transition-duration: .1s;
