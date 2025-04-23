@@ -92,9 +92,10 @@
 
 .single_blog_card_outer {
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     justify-content: space-evenly;
     margin-top: 2vw;
+    gap: 2.5vw;
     width: 100%;
     /* border: 1px solid red; */
   }
