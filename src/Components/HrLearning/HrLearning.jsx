@@ -8,6 +8,8 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import { ImCross } from "react-icons/im";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export const HrLearning = ({
   HRLearning,
@@ -40,7 +42,7 @@ export const HrLearning = ({
     email: "",
     phoneNumber: "",
     category: questionTitle,
-    joborClass: selectedData.head
+    joborClass: selectedData.head,
   });
 
   const handleChange = (e) => {
@@ -72,8 +74,14 @@ export const HrLearning = ({
       console.log(response, "resssssss");
 
       if (response.ok) {
-        alert("Form submitted successfully!");
-        console.log("submited succes", response);
+        toast.success("Form submitted successfully!", {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
         setFormData({
           name: "",
           email: "",
@@ -81,11 +89,25 @@ export const HrLearning = ({
         });
         handleCloseForm();
       } else {
-        alert("Something went wrong. Please try again.");
+        toast.warning("Something went wrong. Please try again.", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("Error submitting the form. Please check your connection.");
+      toast.error("Error submitting the form. Please check your connection.", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
     }
   };
 
@@ -116,6 +138,8 @@ export const HrLearning = ({
   }, [selectedData]);
   return (
     <>
+      <ToastContainer />
+
       <Helmet>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
