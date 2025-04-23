@@ -29,6 +29,8 @@ import WebinarHRLearning from "./Pages/WebinarHrLearning/WebinarHrLearning";
 import { CreateBlog } from "./Pages/BlogCreationPage/blogcreation";
 import CareerCreation from "./Pages/careerCreation/careerCreation";
 import { HelmetProvider } from 'react-helmet-async';
+import { Manageblogs } from "./Pages/ManageBlogs/Manageblogs";
+import { UpdateBlog } from "./Pages/BlogUpdation/BlogUpdation";
 import CareerUpdate from "./Pages/careerCreation/updationCareerpage";
 import SmallCard from "./Components/managingCareers/managingCareers";
 
@@ -70,6 +72,8 @@ function Layout() {
         <Route path="/blog/:id" element={<SingleBlogPage />}></Route>
         <Route path="/blog-creation" element={<CreateBlog />}></Route>   
         <Route path="/career-creation" element={<CareerCreation />}></Route>
+        <Route path="/manageblogs" element={<Manageblogs />}></Route>
+        <Route path="/blog-updation" element={<UpdateBlog />}></Route>
         <Route path="/career-update" element={<CareerUpdate/> }/>
         <Route path="/managing-career" element={<SmallCard/>}/>
       </Routes>
