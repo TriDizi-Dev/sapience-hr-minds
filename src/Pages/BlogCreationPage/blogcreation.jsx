@@ -12,7 +12,7 @@ import {
   uploadBytes,
   getDownloadURL,
   database,
-} from "../../Firebase/firebase"; // Import your Firebase functions
+} from "../../Firebase/firebase";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
 export const CreateBlog = () => {
@@ -29,8 +29,17 @@ export const CreateBlog = () => {
   const onEditorStateChange = (newEditorState) => {
     setEditorState(newEditorState);
     const rawContent = convertToRaw(newEditorState.getCurrentContent());
-    const htmlContent = draftToHtml(rawContent);
-    setBlogContent(htmlContent);
+
+    const htmlContent = draftToHtml(
+      rawContent,
+      null,
+      null,
+      () => null,  // strip entities
+      () => null   // strip inline styles
+    );
+
+    const cleanedHtml = htmlContent.replace(/style="[^"]*"/g, ""); // clean up leftover style=""
+    setBlogContent(cleanedHtml);
   };
 
   const handleImageChange = (e) => {
@@ -56,9 +65,7 @@ export const CreateBlog = () => {
 
     try {
       const imageRef = storageRef(storage, `blogs/${Date.now()}-${image.name}`);
-
       const uploadTask = await uploadBytes(imageRef, image);
-
       const imageUrl = await getDownloadURL(uploadTask.ref);
 
       const newBlogRef = push(ref(database, "blogs/hr-minds"));
@@ -78,7 +85,7 @@ export const CreateBlog = () => {
       setImage(null);
       setPreview(null);
       setAuthorName("");
-      setDepartmentOfblog()
+      setDepartmentOfblog("");
       setEditorState(EditorState.createEmpty());
     } catch (err) {
       console.error("Error during submission:", err);
@@ -140,21 +147,21 @@ export const CreateBlog = () => {
               </div>
             </div>
 
-           <div className="blog-form-group_1">
-           <label htmlFor="blogContent">Blog Content</label>
-            <Editor
-              editorState={editorState}
-              onEditorStateChange={onEditorStateChange}
-              wrapperClassName="wrapper-class-1"
-              editorClassName="editor-clas-1"
-              toolbarClassName="toolbar-class"
-              toolbar={{
-                options: ["inline", "list", "link"],
-                inline: { options: ["bold", "italic", "underline"] },
-                list: { options: ["unordered", "ordered"] },
-              }}
-            />
-           </div>
+            <div>
+              <label htmlFor="blogContent">Blog Content</label>
+              <Editor
+                editorState={editorState}
+                onEditorStateChange={onEditorStateChange}
+                wrapperClassName="wrapper-class-1"
+                editorClassName="editor-clas-1"
+                toolbarClassName="toolbar-class"
+                toolbar={{
+                  options: ["inline", "list", "link"],
+                  inline: { options: ["bold", "italic", "underline"] },
+                  list: { options: ["unordered", "ordered"] },
+                }}
+              />
+            </div>
 
             <label htmlFor="image">Upload Image</label>
             <input

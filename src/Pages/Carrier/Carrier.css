@@ -48,7 +48,6 @@
     font-weight: 400;
     width: 80vw;
     text-align: center;
-    margin-top: 0;
     color: rgba(0, 0, 0, 0.87);
     margin-top: 2vw;
 }
@@ -614,6 +613,7 @@ flex-wrap: 800;
     .carrier_banner_para {
         font-size: 4vw;
         width: 90vw;
+        margin-top: -.5vw;
     }
 
     .carriers_banner_buttons {
@@ -631,6 +631,7 @@ flex-wrap: 800;
         border-radius: 4vw;
     }
     .banner_left_button{
+        /* margin-top: 3vw; */
         width: 40vw;
         height: 10vw;
         font-size: 3vw;
@@ -787,7 +788,7 @@ flex-wrap: 800;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        /* align-items: center; */
         /* border: 2px solid; */
     }
     .accordian_layer2_heading {
