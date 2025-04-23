@@ -22,7 +22,7 @@ const ContactForm = () => {
       [name]: value,
     }));
   };
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -137,8 +137,17 @@ const ContactForm = () => {
           <div className="corner-box"></div>
           <h3>Info</h3>
           <div>
-            <p>reachus@sapienceminds.com</p>
-            <p>+91 9036062378</p>
+            {/* <p>reachus@sapienceminds.com</p>
+            <p>+91 9036062378</p> */}
+            <p>
+              <a href="mailto:reachus@sapienceminds.com">
+              reachus@sapienceminds.com
+              </a>
+            </p>
+            <p>
+              <a href="tel:+919036062378">+91 9036062378</a>
+            </p>
+
             <p>Bengaluru, Karnataka, India</p>
           </div>
         </div>

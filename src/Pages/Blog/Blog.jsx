@@ -12,6 +12,9 @@ import glow from "../../assets/Blogs/bg1.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
+import icon_1 from "../../assets/AboutPage/icon_1.svg";
+import icon_2 from "../../assets/AboutPage/icon_2.svg";
+
 
 import Smallicon1 from "../../assets/AboutPage/Smallicon1.svg";
 import Smallicon2 from "../../assets/AboutPage/Smallicon2.svg";
@@ -264,45 +267,39 @@ function Blog() {
         <div className="blogpage_layer4_outer_main">
           <div className="homepage_layer4_outer" data-aos="fade-right">
             <div className="homepage_layer4_left">
-              <p className="homepage_layer4_heading">Our Core Functions</p>
+              <p className="homepage_layer4_heading">Our Core Values</p>
               <h1 className="homepage_layer4_heading2">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+              Guided by Purpose, Driven by People
               </h1>
               <p className="homepage_layer4_para">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book
+              At Sapience Minds, our values are the foundation of every partnership. We believe in integrity, collaboration, and a relentless commitment to empowering startups with people-first HR strategies that deliver real impact. Our approach is empathetic, strategic, and always aligned with your business goals.
               </p>
 
               <div className="homepage_layer4_cards_outer">
                 <div className="homepage_layer4_card">
                   <div className="layer4_card_logo">
                     <img
-                      src={Smallicon1}
+                      src={icon_1}
                       alt="Smallicon1"
                       className="layer4_logo"
                     />
                   </div>
-                  <p className="layer4_card_heading">Powerful Dashboard</p>
+                  <p className="layer4_card_heading">Our Vision</p>
                   <p className="layer4_card_para">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                  To be the most trusted HR partner for startups and emerging businesses, enabling sustainable growth through strategic people practices.
                   </p>
                 </div>
                 <div className="homepage_layer4_card">
                   <div className="layer4_card_logo">
                     <img
-                      src={Smallicon2}
+                      src={icon_2}
                       alt="Smallicon2"
                       className="layer4_logo"
                     />
                   </div>
-                  <p className="layer4_card_heading">Powerful Dashboard</p>
+                  <p className="layer4_card_heading">Our Mission</p>
                   <p className="layer4_card_para">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                  To deliver flexible, executive-level HR solutions that empower founders, nurture culture, and scale teams, one smart decision at a time.
                   </p>
                 </div>
               </div>
@@ -318,7 +315,7 @@ function Blog() {
         <PreFooter
           sourcepages="Blogs"
           Head="Let’s Build Your People Strategy – Together"
-          Content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+          Content="Your startup deserves more than just reactive HR. Whether you need structure, compliance, or a culture strategy, let’s have a conversation that moves your business forward. Book a discovery call or fill out the form and let’s shape a smarter, people-powered future for your company."
         />
       </div>
     </div>

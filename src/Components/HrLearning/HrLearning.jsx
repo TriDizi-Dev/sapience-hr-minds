@@ -9,7 +9,21 @@ import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 
 
-export const HrLearning = ({ HRLearning, imgTitle, questionTitle,img, metaTitle,metaDescription }) => {
+export const HrLearning = ({ 
+  HRLearning, 
+  imgTitle, 
+  questionTitle,
+  img, 
+  metaTitle,
+  metaDescription,
+  PreviousHeading,
+  Internship1,
+  Internship1Description,
+  Internship2,
+  Internship2Description,
+  Internship3,
+  Internship3Description,
+ }) => {
   const [selectedData, setSelectedData] = useState({});
   const navigate= useNavigate();
 
@@ -153,28 +167,19 @@ export const HrLearning = ({ HRLearning, imgTitle, questionTitle,img, metaTitle,
             </div>
             <div className="Privours_Data_Container_last" data-aos="zoom-in-up">
               <p className="Privours_Data_Container_Head_text">
-                Previous Internships
+                {PreviousHeading}
               </p>
               <div className="Single_Privious_Data_Cont">
-                <p>Lorem Ipsum is</p>
-                <p>
-                  text of the printing and typesetting industry. Lorem Ipsum has
-                  been the
-                </p>
+                <p>{Internship1} </p>
+                <p>{Internship1Description}</p>
               </div>
               <div className="Single_Privious_Data_Cont">
-                <p>Lorem Ipsum is</p>
-                <p>
-                  text of the printing and typesetting industry. Lorem Ipsum has
-                  been the
-                </p>
+              <p>{Internship2} </p>
+              <p>{Internship2Description}</p>
               </div>
               <div className="Single_Privious_Data_Cont">
-                <p>Lorem Ipsum is</p>
-                <p>
-                  text of the printing and typesetting industry. Lorem Ipsum has
-                  been the
-                </p>
+              <p>{Internship3} </p>
+              <p>{Internship3Description}</p>
               </div>
             </div>
           </div>
