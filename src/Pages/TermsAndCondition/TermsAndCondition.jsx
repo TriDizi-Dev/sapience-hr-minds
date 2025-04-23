@@ -5,10 +5,9 @@ function TermsAndCondition() {
   return (
     <div className="tems_condition_outer">
         <TermsAndConditions
-         BannerHeading='Privacy Policy'
-         BannerText=" Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-             standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
-         subheading1="Privacy Policy"
+         BannerHeading='Terms And Conditions'
+         BannerText=" Understand the rules for using our website and services. These terms outline your rights, responsibilities, and how we deliver professional HR solutions."
+         subheading1="Terms and Conditions"
          subheading2="Use of Website"
          subheading3="HR Service Engagements"
          subheading4="Intellectual Property"
