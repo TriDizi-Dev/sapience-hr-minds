@@ -887,7 +887,9 @@ export const HomePage = () => {
                 <SwiperSlide key={index}>
                   <div className="layer7_card">
                     <p className="layer7_card_name">{data?.title}</p>
-                    <p className="layer7_card_sub_name">Human Resource</p>
+                    <p className="layer7_card_sub_name">
+                      {data?.DepartmentOfblog}
+                    </p>
                     <div className="layer7_card_line"></div>
                     <div className="layer7_card_para_outer">
                       <p className="layer7_card_para">{data?.content}</p>
