@@ -41,36 +41,36 @@ function Carrier() {
   const navigate = useNavigate();
   const [careers, setCareers] = useState([]);
   console.log(careers, "careerscareers");
-    const [Blogs, setBlogs] = useState([]);
-  
-    useEffect(() => {
-      const fetchBlogs = async () => {
-        const blogRef = ref(database, "blogs/hr-minds");
-  
-        try {
-          const snapshot = await get(blogRef);
-          if (snapshot.exists()) {
-            const data = snapshot.val();
-            console.log("Data fetched from Firebase:", data);
-  
-            const blogList = Object.keys(data).map((key) => ({
-              id: key,
-              ...data[key],
-              imageUrl: data[key].image_url || "", // Don't use ref() here!
-            }));
-  
-            console.log("Parsed blog list:", blogList);
-            setBlogs(blogList);
-          } else {
-            console.log("No blog data found.");
-          }
-        } catch (error) {
-          console.error("Error fetching blog data:", error);
+  const [Blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      const blogRef = ref(database, "blogs/hr-minds");
+
+      try {
+        const snapshot = await get(blogRef);
+        if (snapshot.exists()) {
+          const data = snapshot.val();
+          console.log("Data fetched from Firebase:", data);
+
+          const blogList = Object.keys(data).map((key) => ({
+            id: key,
+            ...data[key],
+            imageUrl: data[key].image_url || "", // Don't use ref() here!
+          }));
+
+          console.log("Parsed blog list:", blogList);
+          setBlogs(blogList);
+        } else {
+          console.log("No blog data found.");
         }
-      };
-  
-      fetchBlogs();
-    }, []);
+      } catch (error) {
+        console.error("Error fetching blog data:", error);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
 
   useEffect(() => {
     const fetchCareers = async () => {
@@ -94,13 +94,13 @@ function Carrier() {
 
     fetchCareers();
   }, []);
-  const ClientsJobs = careers.filter((job)=>job.Category==="Clients")
-  const OurJobs = careers.filter((job)=>job.Category==="Our")
+  const ClientsJobs = careers.filter((job) => job.Category === "Clients");
+  const OurJobs = careers.filter((job) => job.Category === "Our");
 
   let currentSection = ""; // default section
 
   let sectionSwitchTriggered = false; // Flag to simulate "Requirements" section start if no heading
-  
+
   const options = {
     replace: (domNode) => {
       if (domNode.name === "h1" || domNode.name === "strong") {
@@ -109,40 +109,47 @@ function Carrier() {
           .trim()
           .toLowerCase();
       }
-  
+
       // Optional logic to auto-switch section if no heading but pattern matches (e.g., after first <ul>)
       if (domNode.name === "ul" && !sectionSwitchTriggered) {
         sectionSwitchTriggered = true;
         currentSection = "requirements";
       }
-  
+
       if (domNode.name === "li") {
         const className =
           currentSection === "requirements"
             ? "accordian_layer3_list_items"
             : "accordian_layer2_list_items";
-  
+
         return <li className={className}>{domToReact(domNode.children)}</li>;
       }
-  
+
       if (domNode.name === "p" || domNode.name === "span") {
         const className =
           currentSection === "requirements"
             ? "accordian_layer3_paragraph"
             : "accordian_layer2_paragraph";
-  
-        return React.createElement(domNode.name, { className }, domToReact(domNode.children));
+
+        return React.createElement(
+          domNode.name,
+          { className },
+          domToReact(domNode.children)
+        );
       }
-  
+
       if (domNode.name === "strong" && !currentSection) {
         // fallback to default styles
-        return <strong className="accordian_fallback_bold">{domToReact(domNode.children)}</strong>;
+        return (
+          <strong className="accordian_fallback_bold">
+            {domToReact(domNode.children)}
+          </strong>
+        );
       }
-  
+
       return;
     },
   };
-  
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -618,18 +625,20 @@ function Carrier() {
                           <div className="accoridian_content_outer">
                             <div className="accordain_left">
                               <p className="accordian_left_para">
-                                Type Pellentesque ullamcorper alique ultrices.
-                                Aenean facilias vitea purus facilitias
-                                semper.Supendisse eleifind nunc non virus
-                                rhoncus.Nam posuere accumsan porta.
+                                {parse(item.ShortDiscription, options)}
                               </p>
                               <div>
-                                <h1 className="accordian_layer2_heading">Job Discription</h1>
+                                <h1 className="accordian_layer2_heading">
+                                  Job Discription
+                                </h1>
                                 {parse(item.JobDiscription, options)}
-                                </div>
+                              </div>
                               <div>
-                              <h1 className="accordian_layer2_heading">Requirements</h1>
-                                {parse(item.Requirements, options)}</div>
+                                <h1 className="accordian_layer2_heading">
+                                  Requirements
+                                </h1>
+                                {parse(item.Requirements, options)}
+                              </div>
                             </div>
                             <div className="accordian_right">
                               {/* <div className="right_top_icons_outer">
@@ -712,86 +721,83 @@ function Carrier() {
               )}
 
               {activeNav === "Our" && (
-                 <>
-                 {OurJobs.map((item, id) => (
-                   <Accordion
-                     // data-aos="zoom-out"
-                     expanded={expanded === `panel${id}`}
-                     onChange={handleChange(`panel${id}`)}
-                     disableGutters
-                     elevation={0}
-                     square
-                     sx={{
-                       width: "100%",
-                       // height: expanded ? 'auto' : '6vw',
-                       transition: "all 0.3s ease",
-                       marginTop: "3vw",
-                       backgroundColor: "none",
-                     }}
-                   >
-                     <AccordionSummary
-                       expandIcon={
-                         <ArrowForwardIosSharpIcon
-                           sx={{ fontSize: "0.9rem" }}
-                         />
-                       }
-                       aria-controls="panel-content"
-                       id="panel-header"
-                       sx={{
-                         backgroundColor: "white",
-                         flexDirection: "row-reverse",
-                         height: "6vw",
-                         borderRadius: "2.8vw",
-                         boxShadow: "0px 6px 25px rgba(0, 0, 0, 0.15)",
-                         "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded":
-                           {
-                             transform: "rotate(90deg)",
-                           },
-                         "& .MuiAccordionSummary-content": {
-                           marginLeft: 1,
-                         },
-                       }}
-                     >
-                       <Typography
-                         sx={{
-                           display: "flex",
-                           flexDirection: "column",
-                           justifyContent: "flex-start", // or 'center', 'space-between' etc.
-                           width: "100%",
-                           paddingLeft: "1vw",
-                           gap: "1vw",
-                         }}
-                         className="carrier_accordian"
-                       >
-                         <p
-                           className="accordian_top_text"
-                           style={{ margin: 0 }}
-                         >
-                           {item.FieldOfJob}
-                         </p>
-                         <p className="accordia_header">{item.JobTitle}</p>
-                       </Typography>
-                     </AccordionSummary>
-                     <AccordionDetails
-                       sx={{
-                         padding: 2,
-                         // backgroundColor: 'red'
-                       }}
-                     >
-                       <Typography>
-                         <div className="accoridian_content_outer">
-                           <div className="accordain_left">
-                             <p className="accordian_left_para">
-                               Type Pellentesque ullamcorper alique ultrices.
-                               Aenean facilias vitea purus facilitias
-                               semper.Supendisse eleifind nunc non virus
-                               rhoncus.Nam posuere accumsan porta.
-                             </p>
-                             <div>{parse(item.JobDiscription, options)}</div>
-                             <div>{parse(item.Requirements, options)}</div>
-                           </div>
-                           <div className="accordian_right">
-                             {/* <div className="right_top_icons_outer">
+                <>
+                  {OurJobs.map((item, id) => (
+                    <Accordion
+                      // data-aos="zoom-out"
+                      expanded={expanded === `panel${id}`}
+                      onChange={handleChange(`panel${id}`)}
+                      disableGutters
+                      elevation={0}
+                      square
+                      sx={{
+                        width: "100%",
+                        // height: expanded ? 'auto' : '6vw',
+                        transition: "all 0.3s ease",
+                        marginTop: "3vw",
+                        backgroundColor: "none",
+                      }}
+                    >
+                      <AccordionSummary
+                        expandIcon={
+                          <ArrowForwardIosSharpIcon
+                            sx={{ fontSize: "0.9rem" }}
+                          />
+                        }
+                        aria-controls="panel-content"
+                        id="panel-header"
+                        sx={{
+                          backgroundColor: "white",
+                          flexDirection: "row-reverse",
+                          height: "6vw",
+                          borderRadius: "2.8vw",
+                          boxShadow: "0px 6px 25px rgba(0, 0, 0, 0.15)",
+                          "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded":
+                            {
+                              transform: "rotate(90deg)",
+                            },
+                          "& .MuiAccordionSummary-content": {
+                            marginLeft: 1,
+                          },
+                        }}
+                      >
+                        <Typography
+                          sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "flex-start", // or 'center', 'space-between' etc.
+                            width: "100%",
+                            paddingLeft: "1vw",
+                            gap: "1vw",
+                          }}
+                          className="carrier_accordian"
+                        >
+                          <p
+                            className="accordian_top_text"
+                            style={{ margin: 0 }}
+                          >
+                            {item.FieldOfJob}
+                          </p>
+                          <p className="accordia_header">{item.JobTitle}</p>
+                        </Typography>
+                      </AccordionSummary>
+                      <AccordionDetails
+                        sx={{
+                          padding: 2,
+                          // backgroundColor: 'red'
+                        }}
+                      >
+                        <Typography>
+                          <div className="accoridian_content_outer">
+                            <div className="accordain_left">
+                              <p className="accordian_left_para">
+                                {parse(item.ShortDiscription, options)}
+                              </p>
+                              <div>{parse(item.JobDiscription, options)}</div>
+                              <div>{parse(item.Requirements, options)}</div>
+                            </div>
+                            <div className="accordian_right">
+                              {/* <div className="right_top_icons_outer">
                                                            <p className="share">
                                                                Share
                                                            </p>
@@ -813,144 +819,141 @@ function Carrier() {
                                                            </div>
                                                        </div> */}
 
-                             <div className="accordian_right_icons_button">
-                               <button>Apply Now</button>
-                             </div>
-                             <div className="accordian_right_details_outer">
-                               <div className="detalis_items">
-                                 <p className="lef_item">Location</p>
-                                 <p className="right_item">{item.Location}</p>
-                               </div>
-                               <div className="detalis_items">
-                                 <p className="lef_item">Type</p>
-                                 <p className="right_item">{item.Type}</p>
-                               </div>
-                               <div className="detalis_items">
-                                 <p className="lef_item">Qualification</p>
-                                 <p className="right_item">
-                                   {item.Qualification}
-                                 </p>
-                               </div>
-                               <div className="detalis_items">
-                                 <p className="lef_item">Posted</p>
-                                 <p className="right_item">
-                                   {formatDate(item.PostDate)}
-                                 </p>
-                               </div>
-                             </div>
+                              <div className="accordian_right_icons_button">
+                                <button>Apply Now</button>
+                              </div>
+                              <div className="accordian_right_details_outer">
+                                <div className="detalis_items">
+                                  <p className="lef_item">Location</p>
+                                  <p className="right_item">{item.Location}</p>
+                                </div>
+                                <div className="detalis_items">
+                                  <p className="lef_item">Type</p>
+                                  <p className="right_item">{item.Type}</p>
+                                </div>
+                                <div className="detalis_items">
+                                  <p className="lef_item">Qualification</p>
+                                  <p className="right_item">
+                                    {item.Qualification}
+                                  </p>
+                                </div>
+                                <div className="detalis_items">
+                                  <p className="lef_item">Posted</p>
+                                  <p className="right_item">
+                                    {formatDate(item.PostDate)}
+                                  </p>
+                                </div>
+                              </div>
 
-                             <div className="right_buttons">
-                               <div className="right_help_button_outer">
-                                 <button
-                                   onClick={() =>
-                                     handleOpenForm(
-                                       "Career-All-Head of Product"
-                                     )
-                                   }
-                                 >
-                                   Ask for more help
-                                   <FaArrowRightLong className="help_button_icon" />
-                                 </button>
-                               </div>
-                               <div className="right_about_company_button_outer">
-                                 <Link to="/about" className="nav_link">
-                                   <button>
-                                     About Company
-                                     <FaArrowRightLong className="help_button_icon" />
-                                   </button>
-                                 </Link>
-                               </div>
-                             </div>
-                           </div>
-                         </div>
-                       </Typography>
-                     </AccordionDetails>
-                   </Accordion>
-                 ))}
-               </>
+                              <div className="right_buttons">
+                                <div className="right_help_button_outer">
+                                  <button
+                                    onClick={() =>
+                                      handleOpenForm(
+                                        "Career-All-Head of Product"
+                                      )
+                                    }
+                                  >
+                                    Ask for more help
+                                    <FaArrowRightLong className="help_button_icon" />
+                                  </button>
+                                </div>
+                                <div className="right_about_company_button_outer">
+                                  <Link to="/about" className="nav_link">
+                                    <button>
+                                      About Company
+                                      <FaArrowRightLong className="help_button_icon" />
+                                    </button>
+                                  </Link>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </Typography>
+                      </AccordionDetails>
+                    </Accordion>
+                  ))}
+                </>
               )}
 
               {activeNav === "Clients" && (
                 <>
-                {ClientsJobs.map((item, id) => (
-                  <Accordion
-                    // data-aos="zoom-out"
-                    expanded={expanded === `panel${id}`}
-                    onChange={handleChange(`panel${id}`)}
-                    disableGutters
-                    elevation={0}
-                    square
-                    sx={{
-                      width: "100%",
-                      // height: expanded ? 'auto' : '6vw',
-                      transition: "all 0.3s ease",
-                      marginTop: "3vw",
-                      backgroundColor: "none",
-                    }}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        <ArrowForwardIosSharpIcon
-                          sx={{ fontSize: "0.9rem" }}
-                        />
-                      }
-                      aria-controls="panel-content"
-                      id="panel-header"
+                  {ClientsJobs.map((item, id) => (
+                    <Accordion
+                      // data-aos="zoom-out"
+                      expanded={expanded === `panel${id}`}
+                      onChange={handleChange(`panel${id}`)}
+                      disableGutters
+                      elevation={0}
+                      square
                       sx={{
-                        backgroundColor: "white",
-                        flexDirection: "row-reverse",
-                        height: "6vw",
-                        borderRadius: "2.8vw",
-                        boxShadow: "0px 6px 25px rgba(0, 0, 0, 0.15)",
-                        "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded":
-                          {
-                            transform: "rotate(90deg)",
-                          },
-                        "& .MuiAccordionSummary-content": {
-                          marginLeft: 1,
-                        },
+                        width: "100%",
+                        // height: expanded ? 'auto' : '6vw',
+                        transition: "all 0.3s ease",
+                        marginTop: "3vw",
+                        backgroundColor: "none",
                       }}
                     >
-                      <Typography
+                      <AccordionSummary
+                        expandIcon={
+                          <ArrowForwardIosSharpIcon
+                            sx={{ fontSize: "0.9rem" }}
+                          />
+                        }
+                        aria-controls="panel-content"
+                        id="panel-header"
                         sx={{
-                          display: "flex",
-                          flexDirection: "column",
-                          justifyContent: "flex-start", // or 'center', 'space-between' etc.
-                          width: "100%",
-                          paddingLeft: "1vw",
-                          gap: "1vw",
+                          backgroundColor: "white",
+                          flexDirection: "row-reverse",
+                          height: "6vw",
+                          borderRadius: "2.8vw",
+                          boxShadow: "0px 6px 25px rgba(0, 0, 0, 0.15)",
+                          "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded":
+                            {
+                              transform: "rotate(90deg)",
+                            },
+                          "& .MuiAccordionSummary-content": {
+                            marginLeft: 1,
+                          },
                         }}
-                        className="carrier_accordian"
                       >
-                        <p
-                          className="accordian_top_text"
-                          style={{ margin: 0 }}
+                        <Typography
+                          sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "flex-start", // or 'center', 'space-between' etc.
+                            width: "100%",
+                            paddingLeft: "1vw",
+                            gap: "1vw",
+                          }}
+                          className="carrier_accordian"
                         >
-                          {item.FieldOfJob}
-                        </p>
-                        <p className="accordia_header">{item.JobTitle}</p>
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails
-                      sx={{
-                        padding: 2,
-                        // backgroundColor: 'red'
-                      }}
-                    >
-                      <Typography>
-                        <div className="accoridian_content_outer">
-                          <div className="accordain_left">
-                            <p className="accordian_left_para">
-                              Type Pellentesque ullamcorper alique ultrices.
-                              Aenean facilias vitea purus facilitias
-                              semper.Supendisse eleifind nunc non virus
-                              rhoncus.Nam posuere accumsan porta.
-                            </p>
-                            <div>{parse(item.JobDiscription, options)}</div>
-                            <div>{parse(item.Requirements, options)}</div>
-                          </div>
-                          <div className="accordian_right">
-                            {/* <div className="right_top_icons_outer">
+                          <p
+                            className="accordian_top_text"
+                            style={{ margin: 0 }}
+                          >
+                            {item.FieldOfJob}
+                          </p>
+                          <p className="accordia_header">{item.JobTitle}</p>
+                        </Typography>
+                      </AccordionSummary>
+                      <AccordionDetails
+                        sx={{
+                          padding: 2,
+                          // backgroundColor: 'red'
+                        }}
+                      >
+                        <Typography>
+                          <div className="accoridian_content_outer">
+                            <div className="accordain_left">
+                              <p className="accordian_left_para">
+                                {item.ShortDiscription}
+                              </p>
+                              <div>{parse(item.JobDiscription, options)}</div>
+                              <div>{parse(item.Requirements, options)}</div>
+                            </div>
+                            <div className="accordian_right">
+                              {/* <div className="right_top_icons_outer">
                                                           <p className="share">
                                                               Share
                                                           </p>
@@ -972,61 +975,61 @@ function Carrier() {
                                                           </div>
                                                       </div> */}
 
-                            <div className="accordian_right_icons_button">
-                              <button>Apply Now</button>
-                            </div>
-                            <div className="accordian_right_details_outer">
-                              <div className="detalis_items">
-                                <p className="lef_item">Location</p>
-                                <p className="right_item">{item.Location}</p>
+                              <div className="accordian_right_icons_button">
+                                <button>Apply Now</button>
                               </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Type</p>
-                                <p className="right_item">{item.Type}</p>
+                              <div className="accordian_right_details_outer">
+                                <div className="detalis_items">
+                                  <p className="lef_item">Location</p>
+                                  <p className="right_item">{item.Location}</p>
+                                </div>
+                                <div className="detalis_items">
+                                  <p className="lef_item">Type</p>
+                                  <p className="right_item">{item.Type}</p>
+                                </div>
+                                <div className="detalis_items">
+                                  <p className="lef_item">Qualification</p>
+                                  <p className="right_item">
+                                    {item.Qualification}
+                                  </p>
+                                </div>
+                                <div className="detalis_items">
+                                  <p className="lef_item">Posted</p>
+                                  <p className="right_item">
+                                    {formatDate(item.PostDate)}
+                                  </p>
+                                </div>
                               </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Qualification</p>
-                                <p className="right_item">
-                                  {item.Qualification}
-                                </p>
-                              </div>
-                              <div className="detalis_items">
-                                <p className="lef_item">Posted</p>
-                                <p className="right_item">
-                                  {formatDate(item.PostDate)}
-                                </p>
-                              </div>
-                            </div>
 
-                            <div className="right_buttons">
-                              <div className="right_help_button_outer">
-                                <button
-                                  onClick={() =>
-                                    handleOpenForm(
-                                      "Career-All-Head of Product"
-                                    )
-                                  }
-                                >
-                                  Ask for more help
-                                  <FaArrowRightLong className="help_button_icon" />
-                                </button>
-                              </div>
-                              <div className="right_about_company_button_outer">
-                                <Link to="/about" className="nav_link">
-                                  <button>
-                                    About Company
+                              <div className="right_buttons">
+                                <div className="right_help_button_outer">
+                                  <button
+                                    onClick={() =>
+                                      handleOpenForm(
+                                        "Career-All-Head of Product"
+                                      )
+                                    }
+                                  >
+                                    Ask for more help
                                     <FaArrowRightLong className="help_button_icon" />
                                   </button>
-                                </Link>
+                                </div>
+                                <div className="right_about_company_button_outer">
+                                  <Link to="/about" className="nav_link">
+                                    <button>
+                                      About Company
+                                      <FaArrowRightLong className="help_button_icon" />
+                                    </button>
+                                  </Link>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                ))}
-              </>
+                        </Typography>
+                      </AccordionDetails>
+                    </Accordion>
+                  ))}
+                </>
               )}
             </div>
           </div>
@@ -1079,21 +1082,19 @@ function Carrier() {
               <div className="carrier_card">
                 <div className="carrier_img_outer">
                   <img
-                    src={data.imageUrl
-                    }
+                    src={data.imageUrl}
                     alt="card1"
                     className="carrier_card_img"
                   />
                 </div>
                 <div className="card_text_heading">
                   <h6 className="card_hading_one">{data?.title}</h6>
-                  <p className="card_para">{data?.content
-                  }</p>
+                  <p className="card_para">{data?.content}</p>
                   <p
                     className="card_readmore"
                     onClick={() => handleSignleBlog(data, data.title)}
                   >
-                   Explore More
+                    Explore More
                   </p>
                 </div>
               </div>
