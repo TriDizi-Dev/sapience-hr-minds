@@ -155,7 +155,7 @@
 
 .footer_bottom_text {
   width: 86vw;
-  font-size: 1.2vw;
+  font-size: 1vw;
   font-weight: 400;
   margin-top: 2vw;
 }
@@ -196,8 +196,16 @@
 
 .Contact_sub_headings {
   font-size: 1.1vw;
-  /* font-weight: 500; */
+  border-bottom: 1px solid transparent;
+
 }
+.Contact_sub_headings:hover{
+  color: #7C5CFC;
+  text-decoration: none;
+  border-bottom: 1px solid #7C5CFC;
+  width: fit-content;
+}
+
 .Contact_sub_headings a{
   color: black;
   text-decoration: none;
@@ -206,6 +214,7 @@
 .Contact_sub_headings a:hover{
   color: #7C5CFC;
   text-decoration: none;
+  width: fit-content;
 }
 
 .footer_logo_outer {

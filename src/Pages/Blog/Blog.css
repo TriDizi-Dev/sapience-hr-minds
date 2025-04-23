@@ -43,7 +43,12 @@
 
 .blog_card_img_text {
   width: 17vw;
+  height: 7vw;
+  overflow-y: scroll;
   font-size: 0.95vw;
+}
+.blog_card_img_text::-webkit-scrollbar{
+  display: none;
 }
 
 .blog_img {
@@ -182,5 +187,6 @@
   .blog_card_img_text {
     font-size: 3vw;
     width: 90%;
+    height: 20vw;
   }
 }
