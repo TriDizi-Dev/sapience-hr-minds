@@ -1436,6 +1436,7 @@
     width: 90vw;
     min-height: 1px;
     /* max-height: 60vh; */
+    padding: 4vw;
     overflow: auto;
     /*  padding: 1vw; */
   }

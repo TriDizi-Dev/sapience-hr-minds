@@ -94,6 +94,13 @@
   color: #0c0c0d;
   margin-top: 1.6vw;
 }
+.Middle_second_head2{
+  font-weight: 700;
+  font-size: 1.5vw;
+  text-align: justify;
+  color: #0c0c0d;
+  margin-top: 1.6vw;
+}
 
 .Niddle_sub_content {
   margin-top: 1.6vw;
@@ -244,7 +251,7 @@
 .Rocket_count {
   position: absolute;
   bottom: 1vw;
-  right: 1vw;
+  right: 0.5vw;
   font-size: 1.5vw;
   font-weight: 600;
 }
@@ -268,7 +275,7 @@
 .Goal_count {
   position: absolute;
   bottom: 6vw;
-  right: 7vw;
+  right: 6.5vw;
   font-size: 1.5vw;
   font-weight: 600;
 }
@@ -449,7 +456,8 @@
   }
 
   .Middle_Secound_Head {
-    font-size: 4.5vw;
+    font-size: 3.5vw;
+    text-align: start;
   }
 
   .Niddle_sub_content {
@@ -481,6 +489,17 @@
 
   .List_Items_Middle li {
     font-size: 3vw;
+    text-align: start;
+  }
+
+  .Middle_second_head2{
+    font-size: 3.5vw;
+    text-align: start;
+
+  }
+
+  .Niddle_sub_content_p4{
+    font-size: 2.5vw;
   }
 
   .Middle_Content_Container {
@@ -491,7 +510,7 @@
   .Image_Container_Section3_imge_Cont1 {
     flex-direction: row;
     left: -48vw;
-    top: -2vw;
+    top: 2vw;
     row-gap: 1vw;
     width: 95vw;
     flex-direction: column;
@@ -508,7 +527,7 @@
   .Image_Container_Section3_imge_Cont3 {
     flex-direction: row;
     left: -48vw;
-    top: 145vw;
+    top: 139.5vw;
     row-gap: 1vw;
     width: 95vw;
     flex-direction: column;
@@ -517,7 +536,7 @@
   .Image_Container_Section3_imge_Cont4 {
     flex-direction: row;
     left: -48vw;
-    top: 110vw;
+    top: 107vw;
     row-gap: 1vw;
     width: 95vw;
     flex-direction: column;
@@ -526,7 +545,7 @@
   .Image_Container_Section3_imge_Cont5 {
     flex-direction: row;
     left: -48vw;
-    top: 77vw;
+    top: 74vw;
     row-gap: 1vw;
     width: 95vw;
     flex-direction: column;
@@ -667,7 +686,7 @@
   .Rocket_count {
     position: absolute;
     top: 11vw;
-    right: 44%;
+    right: 43%;
     font-size: 2vw;
     font-weight: 600;
   }
@@ -683,7 +702,7 @@
   .Cup_count {
     position: absolute;
     top: 11vw;
-    left: 52%;
+    left: 52.2%;
     font-size: 2vw;
     font-weight: 600;
   }
@@ -691,7 +710,7 @@
   .Goal_count {
     position: absolute;
     top: 11vw;
-    right: 44%;
+    right: 43%;
     font-size: 2vw;
     font-weight: 600;
   }

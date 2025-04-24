@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./ContactUs.css"; // link to your custom CSS
 import { FaInstagram, FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
@@ -16,6 +16,9 @@ const ContactForm = () => {
     message: "",
     sourcepage: "Contact Us",
   });
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
