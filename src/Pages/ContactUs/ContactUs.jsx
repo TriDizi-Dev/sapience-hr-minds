@@ -33,7 +33,6 @@ const ContactForm = () => {
 
     try {
       const formPayload = new FormData();
-      formPayload.append("sheet", "Sheet1");
       for (let key in formData) {
         formPayload.append(key, formData[key]);
       }
