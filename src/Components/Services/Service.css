@@ -565,12 +565,12 @@
     margin-left: 2vw;
     margin-right: 2vw;
     text-align: center; */
-
     font-size: 3vw;
     width: 65vw;
-    max-height: 10vw;
+    height: 9.5vw;
+    overflow-y: scroll;
     margin: 0.5vw auto;
-    text-align: center;
+    text-align: start;
   }
   .Image_Container_Section3_imge_Cont1 h3,
   .Image_Container_Section3_imge_Cont2 h3,
@@ -665,7 +665,7 @@
 
   .Service_last_secound_layer_text {
     font-size: 4vw;
-    text-align: center;
+    text-align:justify;
   }
 
   .first_services {
