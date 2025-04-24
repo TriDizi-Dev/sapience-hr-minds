@@ -82,7 +82,7 @@ const CareerCreation = () => {
 
       setTimeout(() => {
         
-        navigate("/managing-career")
+        navigate("/managecareers")
       }, 2000);
       cancelHandler();
     } catch (error) {

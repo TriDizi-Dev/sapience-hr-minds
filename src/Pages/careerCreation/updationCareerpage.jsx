@@ -117,7 +117,7 @@ const CareerUpdate = () => {
         autoClose: 2000,
       });
       setTimeout(() => {
-        navigate("/managing-career");
+        navigate("/managecareers");
       }, 2000);
     } catch (err) {
       console.error("Error updating career:", err);

@@ -54,6 +54,16 @@ const firebaseConfig = {
   measurementId: "G-HBY8R3ZF7Y",
 };
 
+// const firebaseConfig = {
+//   apiKey: "AIzaSyAar6ayUtgJ3VuM3ygNim5JKeDopoEC240",
+//   authDomain: "sapience-minds.firebaseapp.com",
+//   projectId: "sapience-minds",
+//   storageBucket: "sapience-minds.firebasestorage.app",
+//   messagingSenderId: "187885069095",
+//   appId: "1:187885069095:web:0b44f9fb86622713ccff02",
+//   measurementId: "G-PF4ZD2637F"
+// };
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);

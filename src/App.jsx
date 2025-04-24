@@ -78,7 +78,7 @@ function Layout() {
         <Route path="/manageblogs" element={<Manageblogs />}></Route>
         <Route path="/blog-updation" element={<UpdateBlog />}></Route>
         <Route path="/career-update" element={<CareerUpdate/> }/>
-        <Route path="/managing-career" element={<SmallCard/>}/>
+        <Route path="/managecareers" element={<SmallCard/>}/>
       </Routes>
       {!hideFooter && <Footer />}
       </HelmetProvider>
