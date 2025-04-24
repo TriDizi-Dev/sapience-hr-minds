@@ -68,6 +68,7 @@ export const ServicePageOne = () => {
         
         metaTitle="HR Compliance and Policy Development"
         metaDescription="Stay legally compliant and culturally aligned with HR policies tailored for growing businesses. Build trust, reduce risks, and foster a structured workplace from day one."
+        path="hr-consulting"
        
       />
     </div>
