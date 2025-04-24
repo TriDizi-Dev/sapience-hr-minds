@@ -1,3 +1,4 @@
+import { ToastContainer } from "react-toastify";
 import { HrLearning } from "../../Components/HrLearning/HrLearning";
 import img from "../../assets/HrLearning/HrBanner.svg";
 
@@ -145,6 +146,7 @@ const InternshipHRLearning = () => {
   ];
   return (
     <>
+      <ToastContainer />
       <HrLearning
         HRLearning={Cards}
         imgTitle="Internships"
