@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./HomePage.css";
-import { AiOutlinePlayCircle } from "react-icons/ai";
 import homeimg from "../../assets/HomePage/homeimg.svg";
 import dots from "../../assets/HomePage/homedots.svg";
 import leftvector from "../../assets/HomePage/leftvector.svg";
@@ -10,29 +9,19 @@ import dummylogo from "../../assets/HomePage/logo_1_1.svg";
 import dummylogo_2 from "../../assets/HomePage/logo_2_2.png";
 import dummylogo_3 from "../../assets/HomePage/logo_3_3.png";
 import dummylogo_4 from "../../assets/HomePage/logo_4_4.png";
-import dummylogo_5 from "../../assets/HomePage/logo_1.png";
 import layer4 from "../../assets/HomePage/home_img.svg";
-
 import Smallicon1 from "../../assets/AboutPage/Smallicon1.svg";
 import Smallicon2 from "../../assets/AboutPage/icon_3.svg";
-
 import Smallicon3 from "../../assets/AboutPage/icon_4.svg";
 import Smallicon4 from "../../assets/AboutPage/icon_5.svg";
 import Smallicon5 from "../../assets/AboutPage/icon_6.svg";
 import Smallicon6 from "../../assets/AboutPage/icon_7.svg";
 import Smallicon7 from "../../assets/AboutPage/icon_8.svg";
 import Smallicon8 from "../../assets/AboutPage/icon_9.svg";
-
 import icon_1 from "../../assets/AboutPage/icon_1.svg";
 import icon_2 from "../../assets/AboutPage/icon_2.svg";
-
 import bg1 from "../../assets/HomePage/bg1.svg";
 import bg2 from "../../assets/HomePage/bg2.svg";
-
-import blog1 from "../../assets/Blogs/image1.png";
-import blog2 from "../../assets/Blogs/image2.png";
-import blog3 from "../../assets/Blogs/image3.png";
-
 import homevideo from "../../assets/HomePage/hmv.mp4";
 import man from "../../assets/HomePage/Testimony_1.png";
 import man_2 from "../../assets/HomePage/man_2.png";
@@ -42,7 +31,6 @@ import man_5 from "../../assets/HomePage/man_5.png";
 import man_6 from "../../assets/HomePage/man_6.png";
 import woman_1 from "../../assets/HomePage/woman_1.png";
 import { PreFooter } from "../../Components/PreFooter/PreFooter";
-
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { SwiperSlide, Swiper } from "swiper/react";
 import "swiper/css";

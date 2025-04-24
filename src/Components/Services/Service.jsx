@@ -386,7 +386,7 @@ export const Service = ({
           <p className="Middle_Secound_Head" data-aos="zoom-in">
             {Para2Head}
           </p>
-          <p data-aos="zoom-in">{Para2Head2}</p>
+          <p className="Middle_second_head2" data-aos="zoom-in">{Para2Head2}</p>
 
           <ul className="List_Items_Middle">
             <li data-aos="fade-right">{List1}</li>

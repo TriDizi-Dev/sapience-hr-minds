@@ -60,14 +60,14 @@ function PrivacyAndTerms({
         <title>Privacy Policy</title>
         <meta
           name="description"
-          content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+          content="Learn how Sapience Minds collects, uses, and protects your data in alignment with our HR services. Your privacy and trust are important to us."
         />
 
         {/* Open Graph Meta Tags (for WhatsApp, Facebook, LinkedIn) */}
         <meta property="og:title" content="Privacy Policy" />
         <meta
           property="og:description"
-          content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+          content="Learn how Sapience Minds collects, uses, and protects your data in alignment with our HR services. Your privacy and trust are important to us."
         />
         <meta
           property="og:image"
@@ -81,7 +81,7 @@ function PrivacyAndTerms({
         <meta name="twitter:title" content="Privacy Policy" />
         <meta
           name="twitter:description"
-          content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+          content="Learn how Sapience Minds collects, uses, and protects your data in alignment with our HR services. Your privacy and trust are important to us."
         />
         <meta
           name="twitter:image"

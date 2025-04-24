@@ -46,17 +46,18 @@ function TermsAndConditions({
   return (
     <div className="privacy_terms_outer_main">
       <Helmet>
-        <title>Privacy Policy</title>
+        <title>Terms And Conditions
+        </title>
         <meta
           name="description"
-          content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+          content="Understand the rules for using our website and services. These terms outline your rights, responsibilities, and how we deliver professional HR solutions."
         />
 
         {/* Open Graph Meta Tags (for WhatsApp, Facebook, LinkedIn) */}
-        <meta property="og:title" content="Privacy Policy" />
+        <meta property="og:title" content="Terms And Conditions" />
         <meta
           property="og:description"
-          content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+          content="Understand the rules for using our website and services. These terms outline your rights, responsibilities, and how we deliver professional HR solutions."
         />
         <meta
           property="og:image"
@@ -67,10 +68,10 @@ function TermsAndConditions({
 
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Privacy Policy" />
+        <meta name="twitter:title" content="Terms And Conditions" />
         <meta
           name="twitter:description"
-          content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+          content="Understand the rules for using our website and services. These terms outline your rights, responsibilities, and how we deliver professional HR solutions."
         />
         <meta
           name="twitter:image"
