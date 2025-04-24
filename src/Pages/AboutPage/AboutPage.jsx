@@ -454,7 +454,7 @@ export const AboutPage = () => {
           // data-aos-easing="linear"
           // data-aos-duration="1500"
         >
-         Your startup deserves more than just reactive HR. Whether you need structure, compliance, or a culture strategy, let’s have a conversation that moves your business forward. Book a discovery call or fill out the form and let’s shape a smarter, people-powered future for your company.
+         Explore answers to common queries about our HR services, Fractional CHRO solutions, and how Sapience Minds can support your business growth. Whether you're curious about compliance, talent strategies, or customized HR plans we’re here to simplify the complex.
         </p>
         <div className="Faq_Container">
           {questions.map((ques, id) => (

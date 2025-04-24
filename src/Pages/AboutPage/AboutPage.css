@@ -516,7 +516,7 @@
     .Text_container_layer2 p {
         font-size: 4vw;
         line-height: 5.5vw;
-        text-align: justify;
+        text-align:justify;
     }
 
     .Right_side_Images_container {

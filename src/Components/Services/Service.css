@@ -665,7 +665,7 @@
 
   .Service_last_secound_layer_text {
     font-size: 4vw;
-    text-align: center;
+    text-align:justify;
   }
 
   .first_services {
