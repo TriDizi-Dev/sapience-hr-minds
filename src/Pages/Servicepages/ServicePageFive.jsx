@@ -63,6 +63,7 @@ export const ServicePageFive = () => {
         img_5={Medal}
         img_6={Setting}
         img_7={Goal}
+        path="talent-management"
       />
     </div>
   );

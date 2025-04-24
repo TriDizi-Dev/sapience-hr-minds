@@ -363,20 +363,30 @@ export const Service = ({
           <p className="Middle_Secound_Head" data-aos="zoom-in">
             {Para2Head}
           </p>
-          <p className="Middle_second_head2" data-aos="zoom-in">{Para2Head2}</p>
+          <p className="Middle_second_head2" data-aos="zoom-in">
+            {Para2Head2}
+          </p>
 
           <ul className="List_Items_Middle">
             <li data-aos="fade-right">{List1}</li>
-            <li data-aos="fade-right"> {List2}</li>
+            <li data-aos="fade-right">{List2}</li>
             <li data-aos="fade-right">{List3}</li>
             <li data-aos="fade-right">{List4}</li>
-            {path == "hr-consulting" && (
-              <>
-                <li data-aos="fade-right">{List5}</li>
-                <li data-aos="fade-right">{List6}</li>
-              </>
+
+            {(path === "hr-consulting" ||
+              path === "talent-management" ||
+              path === "recruitment-of-leadership" ||
+              path === "employee-insurance-and-benefits" ||
+              path === "hr-compliance" ||
+              path === "virtual-chro-and-outsourcing" ||
+              path == "talent-acquisition-solutions" ||
+              path === "talent-engagement") && (
+              <li data-aos="fade-right">{List5}</li>
             )}
+
+            {path === "hr-compliance" && <li data-aos="fade-right">{List6}</li>}
           </ul>
+
           {/* <p className="Middle_Secound_Head" data-aos="zoom-in">
             {Para3Head}
           </p> */}

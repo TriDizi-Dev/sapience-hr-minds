@@ -32,7 +32,7 @@ export const ServicePageSeven = () => {
         List2="Behavioral and role-based assessments"
         List3="Leadership competency mapping"
         List4="Structured interviewing and cultural alignment screening"
-        Line5="Offer negotiation and onboarding support"
+        List5="Offer negotiation and onboarding support"
         // Para3Head="Lorem ipsum dolor"
         Para3Content1={`With <strong>Babitha Remith</strong> leading the strategic framework, we offer not just candidates—but leaders who create lasting impact.`}
         // Para4Content1="We don’t just advise—we become your strategic HR ally, driving sustainable value."
@@ -65,6 +65,7 @@ export const ServicePageSeven = () => {
         img_5={Medal}
         img_6={Setting}
         img_7={Goal}
+        path="recruitment-of-leadership"
       />
     </div>
   );
