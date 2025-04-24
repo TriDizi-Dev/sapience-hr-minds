@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./HrLearning.css";
-import HrBanner from "../../assets/HrLearning/HrLearnHero.svg";
 import BackgroundLayer from "../../assets/HrLearning/BackgroundLayer.svg";
 import { PreFooter } from "../PreFooter/PreFooter";
 import AOS from "aos";
@@ -30,6 +29,13 @@ export const HrLearning = ({
   const navigate = useNavigate();
   const [showForm, setShowForm] = useState(false);
   const modalRef = useRef(null);
+  useEffect(() => {
+    setSelectedData(HRLearning[0]);
+  }, []);
+  const Handledatachnage = (data) => {
+    setSelectedData(data);
+  };
+console.log(selectedData?.head,"selectedData?.head");
 
   const handleCloseForm = () => {
     setShowForm(false);
@@ -41,8 +47,8 @@ export const HrLearning = ({
     name: "",
     email: "",
     phoneNumber: "",
+    sourcepage:"Education and Learning",
     category: questionTitle,
-    joborClass: selectedData.head,
   });
 
   const handleChange = (e) => {
@@ -60,7 +66,7 @@ export const HrLearning = ({
 
     try {
       const formPayload = new FormData();
-      formPayload.append("sheet", "Sheet2");
+      formPayload.append("learning", selectedData.head);
       for (let key in formData) {
         formPayload.append(key, formData[key]);
       }
@@ -111,12 +117,6 @@ export const HrLearning = ({
     }
   };
 
-  useEffect(() => {
-    setSelectedData(HRLearning[0]);
-  }, []);
-  const Handledatachnage = (data) => {
-    setSelectedData(data);
-  };
 
   useEffect(() => {
     AOS.init({
@@ -266,7 +266,7 @@ export const HrLearning = ({
         <div className="modal-overlay">
           <div className="modal-box" ref={modalRef}>
             <div className="Cancel_and_form_head">
-              <h2>Applay Here</h2>
+              <h2>Apply Here</h2>
               <p>
                 <ImCross
                   className="Icons_X"
