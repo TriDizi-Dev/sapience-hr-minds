@@ -566,10 +566,11 @@
     margin-right: 2vw;
     text-align: center; */
 
-    font-size: 2.8vw;
+    font-size: 3vw;
     width: 65vw;
     max-height: 10vw;
     margin: 0.5vw auto;
+    text-align: center;
   }
   .Image_Container_Section3_imge_Cont1 h3,
   .Image_Container_Section3_imge_Cont2 h3,
