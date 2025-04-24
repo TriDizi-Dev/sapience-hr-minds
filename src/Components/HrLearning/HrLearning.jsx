@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./HrLearning.css";
+import HrBanner from "../../assets/HrLearning/HrLearnHero.svg";
 import BackgroundLayer from "../../assets/HrLearning/BackgroundLayer.svg";
 import { PreFooter } from "../PreFooter/PreFooter";
 import AOS from "aos";
@@ -29,13 +30,6 @@ export const HrLearning = ({
   const navigate = useNavigate();
   const [showForm, setShowForm] = useState(false);
   const modalRef = useRef(null);
-  useEffect(() => {
-    setSelectedData(HRLearning[0]);
-  }, []);
-  const Handledatachnage = (data) => {
-    setSelectedData(data);
-  };
-console.log(selectedData?.head,"selectedData?.head");
 
   const handleCloseForm = () => {
     setShowForm(false);
@@ -47,8 +41,8 @@ console.log(selectedData?.head,"selectedData?.head");
     name: "",
     email: "",
     phoneNumber: "",
-    sourcepage:"Education and Learning",
     category: questionTitle,
+    joborClass: selectedData.head,
   });
 
   const handleChange = (e) => {
@@ -66,7 +60,7 @@ console.log(selectedData?.head,"selectedData?.head");
 
     try {
       const formPayload = new FormData();
-      formPayload.append("learning", selectedData.head);
+      formPayload.append("sheet", "Sheet2");
       for (let key in formData) {
         formPayload.append(key, formData[key]);
       }
@@ -97,7 +91,7 @@ console.log(selectedData?.head,"selectedData?.head");
       } else {
         toast.warning("Something went wrong. Please try again.", {
           position: "top-right",
-          autoClose: 3000,
+          autoClose: 2000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
@@ -108,7 +102,7 @@ console.log(selectedData?.head,"selectedData?.head");
       console.error("Error:", error);
       toast.error("Error submitting the form. Please check your connection.", {
         position: "top-right",
-        autoClose: 3000,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -117,6 +111,12 @@ console.log(selectedData?.head,"selectedData?.head");
     }
   };
 
+  useEffect(() => {
+    setSelectedData(HRLearning[0]);
+  }, []);
+  const Handledatachnage = (data) => {
+    setSelectedData(data);
+  };
 
   useEffect(() => {
     AOS.init({
@@ -138,7 +138,7 @@ console.log(selectedData?.head,"selectedData?.head");
   }, [selectedData]);
   return (
     <>
-      <ToastContainer />
+    
 
       <Helmet>
         <title>{metaTitle}</title>
