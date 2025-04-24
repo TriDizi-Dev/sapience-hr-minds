@@ -456,10 +456,7 @@ export const AboutPage = () => {
           // data-aos-easing="linear"
           // data-aos-duration="1500"
         >
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book
+         Your startup deserves more than just reactive HR. Whether you need structure, compliance, or a culture strategy, let’s have a conversation that moves your business forward. Book a discovery call or fill out the form and let’s shape a smarter, people-powered future for your company.
         </p>
         <div className="Faq_Container">
           {questions.map((ques, id) => (

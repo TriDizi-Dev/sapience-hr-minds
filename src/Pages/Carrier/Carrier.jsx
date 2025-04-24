@@ -189,7 +189,6 @@ function Carrier() {
     sourcepage: "",
   });
 
-
   const [applyJob, setApplyJob] = useState(false);
   const modalRef_1 = useRef(null);
 
@@ -199,9 +198,9 @@ function Carrier() {
     phoneNumber: "",
     category: "",
     job: "",
-    sourcepage:"Careers"
+    sourcepage: "Careers",
   });
- 
+
   const modalRef = useRef(null);
   const preFooterRef = useRef(null); // add this line
   const handleOpenForm = (value) => {
@@ -261,7 +260,7 @@ function Carrier() {
 
       const response = await fetch(scriptURL, {
         method: "POST",
-        body: formPayload, 
+        body: formPayload,
       });
       console.log(response, "resssssss");
 
@@ -284,7 +283,6 @@ function Carrier() {
     }
   };
 
-
   const openApplyJobForm = (TargetCategory, JobTitle) => {
     setApplyJobData((prev) => ({
       ...prev,
@@ -293,7 +291,6 @@ function Carrier() {
     }));
     setApplyJob(true);
   };
-  
 
   const closeApplyJobForm = () => {
     setApplyJob(false);
@@ -510,7 +507,13 @@ function Carrier() {
               innovation meets meaningful careers.
             </p>
             <div className="layer3_banner_button_outer">
-              <button>More About Us</button>
+              <button
+                onClick={() => {
+                  navigate("/about");
+                }}
+              >
+                More About Us
+              </button>
             </div>
           </div>
         </div>
@@ -636,7 +639,16 @@ function Carrier() {
                             </div>
                             <div className="accordian_right">
                               <div className="accordian_right_icons_button">
-                                <button onClick={()=>openApplyJobForm(item?.Category,item?.JobTitle)}>Apply Now</button>
+                                <button
+                                  onClick={() =>
+                                    openApplyJobForm(
+                                      item?.Category,
+                                      item?.JobTitle
+                                    )
+                                  }
+                                >
+                                  Apply Now
+                                </button>
                               </div>
                               <div className="accordian_right_details_outer">
                                 <div className="detalis_items">
@@ -769,30 +781,18 @@ function Carrier() {
                               <div>{parse(item.Requirements, options)}</div>
                             </div>
                             <div className="accordian_right">
-                              {/* <div className="right_top_icons_outer">
-                                                           <p className="share">
-                                                               Share
-                                                           </p>
-                                                           <div className="icons_outer">
-                                                               <HiLink className='accordian_icons' />
-
-                                                           </div>
-                                                           <div className="icons_outer">
-                                                               <BsLinkedin className='accordian_icons' />
-
-                                                           </div>
-                                                           <div className="icons_outer">
-                                                               <FaTwitter className='accordian_icons' />
-
-                                                           </div>
-                                                           <div className="icons_outer">
-                                                               <IoIosMail className='accordian_icons' />
-
-                                                           </div>
-                                                       </div> */}
-
+                             
                               <div className="accordian_right_icons_button">
-                                <button onClick={()=>openApplyJobForm(item?.Category,item?.JobTitle)}>Apply Now</button>
+                                <button
+                                  onClick={() =>
+                                    openApplyJobForm(
+                                      item?.Category,
+                                      item?.JobTitle
+                                    )
+                                  }
+                                >
+                                  Apply Now
+                                </button>
                               </div>
                               <div className="accordian_right_details_outer">
                                 <div className="detalis_items">
@@ -926,7 +926,16 @@ function Carrier() {
                             </div>
                             <div className="accordian_right">
                               <div className="accordian_right_icons_button">
-                                <button onClick={()=>openApplyJobForm(item?.Category,item?.JobTitle)}>Apply Now</button>
+                                <button
+                                  onClick={() =>
+                                    openApplyJobForm(
+                                      item?.Category,
+                                      item?.JobTitle
+                                    )
+                                  }
+                                >
+                                  Apply Now
+                                </button>
                               </div>
                               <div className="accordian_right_details_outer">
                                 <div className="detalis_items">
@@ -1123,7 +1132,7 @@ function Carrier() {
         </div>
       )}
 
-{applyJob && (
+      {applyJob && (
         <div className="modal-overlay">
           <div className="modal-box" ref={modalRef_1}>
             <div className="Cancel_and_form_head">
@@ -1180,7 +1189,7 @@ function Carrier() {
         </div>
       )}
 
-         <ToastContainer />
+      <ToastContainer />
     </div>
   );
 }
