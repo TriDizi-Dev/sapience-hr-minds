@@ -12,8 +12,7 @@
     
 }
 .sub-container-small button{
-    width: 20vw;
-    height: 3.3vw;
+    padding: 0.5vw 1vw;
     font-size: 1.1vw;
     font-weight: 600;
     border: none;
@@ -169,10 +168,9 @@
     padding: 3vw 4vw;
   }
   .sub-container-small button{
-    width: 30vw;
-    height: 8vw;
+    padding:2vw 2vw;
     font-size: 3vw;
-    border-radius: 2vw;
+    border-radius: 1vw;
   }
   .card-header-text::before{
     width: 82vw;
