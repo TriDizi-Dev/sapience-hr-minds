@@ -765,15 +765,14 @@ flex-wrap: 800;
         width: auto;
         padding: 0.5vw 2vw;
         border-radius: 2vw;
+        font-size:2vw;
+width: fit-content;
     }
 
     .accordia_header {
         font-size: 4vw;
     }
-    .accordian_top_text{
-         width:15vw;
-        font-size:2vw;
-    }
+
     .accordia_header{
         font-size: 3.5vw;
     }
