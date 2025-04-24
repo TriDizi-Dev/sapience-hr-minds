@@ -382,6 +382,7 @@ export const AboutPage = () => {
               data-aos="zoom-in"
               data-aos-duration="1000"
             ></img>
+            
           </div>
         </div>
       </div>
