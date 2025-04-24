@@ -266,7 +266,7 @@ export const HrLearning = ({
         <div className="modal-overlay">
           <div className="modal-box" ref={modalRef}>
             <div className="Cancel_and_form_head">
-              <h2>Applay Here</h2>
+              <h2>Apply Here</h2>
               <p>
                 <ImCross
                   className="Icons_X"
