@@ -59,6 +59,7 @@ export const ServicePageFour = () => {
         img_5={Medal}
         img_6={Setting}
         img_7={Goal}
+        path="talent-acquisition-solutions"
       />
     </div>
   );

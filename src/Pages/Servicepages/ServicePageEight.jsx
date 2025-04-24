@@ -32,7 +32,7 @@ export const ServicePageEight = () => {
         List2="Benefits cost modeling and budgeting"
         List3="Legal and statutory compliance support"
         List4="Employee education and communication"
-        Line5="Wellness and work-life integration programs"
+        List5="Wellness and work-life integration programs"
         Para3Head="Lorem ipsum dolor"
         Para3Content1="We partner with trusted providers and customize plans that scale as your business grows."
         // Para4Content1="We don’t just advise—we become your strategic HR ally, driving sustainable value."
@@ -66,6 +66,7 @@ Satisfaction Scores"
         img_5={Medal}
         img_6={Setting}
         img_7={Goal}
+        path="employee-insurance-and-benefits"
       />
     </div>
   );

@@ -31,7 +31,7 @@ export const ServicePageSix = () => {
         List2="Career mapping and internal mobility planning"
         List3="Rewards, recognition, and feedback systems"
         List4="Managerial coaching and team-building programs"
-        Line5="Retention risk analysis and intervention strategies"
+        List5="Retention risk analysis and intervention strategies"
         Para3Head="Lorem ipsum dolor"
         Para3Content1=""
         // Para4Content1="We don’t just advise—we become your strategic HR ally, driving sustainable value."
@@ -64,6 +64,7 @@ export const ServicePageSix = () => {
         img_5={Medal}
         img_6={Setting}
         img_7={Goal}
+        path="talent-engagement"
       />
     </div>
   );
