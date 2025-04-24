@@ -1,6 +1,6 @@
 .reach-container {
   position: relative;
-  height: 95vh;
+  height: 100dvb;
   background: white;
   display: flex;
   justify-content: center;
@@ -103,7 +103,11 @@
   height: 1.8vw;
   resize: none;
 }
-
+.from-sub-container{
+  display: flex;
+  flex-direction: column;
+  align-items:start;
+}
 .reach-form button {
   width: 100%;
   margin-top: 1.2vw;
@@ -120,10 +124,10 @@
 .reach-info {
   background: #232020;
   color: white;
-  padding: 30px;
+  padding: 3vw;
   position: absolute;
   width: 31vw;
-  height: 46%;
+  height: 22vw;
   top: 10vw;
   right: 0;
 }
@@ -227,7 +231,7 @@
     justify-content: center;
     align-items: center;
     width: 35vw;
-    /* height: 50vw; */
+    height: 50vw;
 
   }
   .reach-form button{

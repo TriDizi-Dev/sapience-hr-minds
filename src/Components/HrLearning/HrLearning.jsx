@@ -43,6 +43,7 @@ export const HrLearning = ({
     phoneNumber: "",
     category: questionTitle,
     joborClass: selectedData.head,
+    sourcepage:"Education and Learning"
   });
 
   const handleChange = (e) => {
