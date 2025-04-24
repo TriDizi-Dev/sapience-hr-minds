@@ -12,7 +12,7 @@
     
 }
 .sub-container-small button{
-    width: 7vw;
+    width: 20vw;
     height: 3.3vw;
     font-size: 1.1vw;
     font-weight: 600;
@@ -169,7 +169,7 @@
     padding: 3vw 4vw;
   }
   .sub-container-small button{
-    width: 18vw;
+    width: 30vw;
     height: 8vw;
     font-size: 3vw;
     border-radius: 2vw;

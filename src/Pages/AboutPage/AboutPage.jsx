@@ -15,9 +15,7 @@ import Smallicon3 from "../../assets/AboutPage/Smallicon3.svg";
 import Smallicon4 from "../../assets/AboutPage/Smallicon4.svg";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { PreFooter } from "../../Components/PreFooter/PreFooter";
-
 import { Helmet } from "react-helmet-async";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 

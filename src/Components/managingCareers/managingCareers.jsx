@@ -77,7 +77,7 @@ const SmallCard = () => {
       <div className="sub-container-small">
         <button onClick={()=>{
             navigate("/career-creation")
-        }}>Create</button>
+        }}>Create Career</button>
       </div>
 
       <div className="small-card_container">

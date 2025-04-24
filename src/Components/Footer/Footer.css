@@ -199,7 +199,7 @@
   border-bottom: 1px solid transparent;
   width: fit-content;
   /* margin: 0 auto; */
-  text-align: start;
+  /* text-align: start; */
 
 }
 .Contact_sub_headings:hover{
@@ -317,6 +317,8 @@
 
   .Contact_sub_headings {
     font-size: 4vw;
+    text-align: center !important;
+    width: 100%;
   }
 
   .footer_right_outer_main_1 {
@@ -352,6 +354,9 @@
     margin-left: 0%;
     gap: 2vw;
 
+  }
+  .Contact_sub_headings a{
+    text-align: center !important;
   }
 
   .footer_teems_policy_container_sub {
