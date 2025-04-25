@@ -27,12 +27,18 @@ export const ServiceThree = () => {
         //     and scrambled it to make a type specimen book Lorem Ipsum is simply
         //     dummy text of the printing and typesetting industry."
         Para1Content3="Perfect for startups, growing SMEs, and bootstrapped businesses, our virtual CHRO model is designed to be agile, flexible, and results-driven."
-        Para2Head2="Key areas we cover:"
-        List1="End-to-end HR operations"
-        List2="Strategic workforce planning"
-        List3="Compliance and policy enforcement"
-        List4="Onboarding, training, and employee development"
-        List5="HR audits, analytics, and reporting"
+        Para2Head2="Key Offerings:"
+        keyofferinglist={["End-to-end HR operations",
+          "Strategic workforce planning",
+          "Compliance and policy enforcement",
+          "Onboarding, training, and employee development",
+          "HR audits, analytics, and reporting"
+        ]}
+        // List1="End-to-end HR operations"
+        // List2="Strategic workforce planning"
+        // List3="Compliance and policy enforcement"
+        // List4="Onboarding, training, and employee development"
+        // List5="HR audits, analytics, and reporting"
         Para3Head="Lorem ipsum dolor"
         Para3Content1="You’ll gain not just a service provider, but a trusted HR partner committed to your business goals, culture, and long-term vision."
         serviceIcons2="Years of CHRO Experience on Demand"
@@ -52,7 +58,7 @@ export const ServiceThree = () => {
         service2name="Customized HR Consulting and Advisory Services"
         service3name="Virtual CHRO and Outsourcing of HR Operations"
         service4name="Talent Acquisition Solutions"
-        service5name="Talent Management"
+        service5name="Talent Management Solutions"
         service6name="Talent Engagement & Retention"
         service7name="Recruitment of Leadership & Mid-Level Team"
         service8name="Employee Insurance & Benefits"

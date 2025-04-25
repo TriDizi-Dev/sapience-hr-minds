@@ -104,7 +104,7 @@ export const HomePage = () => {
       id: 4,
       Logo: Smallicon5,
       Head: "Learn More",
-      subHead: "Talent Management",
+      subHead: "Talent Management Solutions",
       para: "Fuel performance and growth with development plans, reviews, and leadership pipelines built to scale with your startup.",
       path: "/talent-management",
     },

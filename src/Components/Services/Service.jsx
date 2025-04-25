@@ -38,14 +38,10 @@ export const Service = ({
   Para1Content3,
   Para2Head,
   Para2Head2,
-  List1,
-  List2,
-  List3,
-  List4,
-  List5,
-  List6,
+keyofferinglist=[],
   Para3Head,
   Para3Content1,
+  paracontent3,
   Para4Content1,
   serviceIcons1,
   serviceIcons1_text,
@@ -450,11 +446,18 @@ export const Service = ({
           </p>
 
           <ul className="List_Items_Middle">
-            <li data-aos="fade-right">{List1}</li>
+            {
+              keyofferinglist.map((item)=>(
+                <li data-aos="fade-right">{item}</li>
+
+              ))
+            }
+
+            {/* <li data-aos="fade-right">{List1}</li>
             <li data-aos="fade-right">{List2}</li>
             <li data-aos="fade-right">{List3}</li>
-            <li data-aos="fade-right">{List4}</li>
-
+            <li data-aos="fade-right">{List4}</li> */}
+{/* 
             {(path === "hr-consulting" ||
               path === "talent-management" ||
               path === "recruitment-of-leadership" ||
@@ -466,7 +469,7 @@ export const Service = ({
               <li data-aos="fade-right">{List5}</li>
             )}
 
-            {path === "hr-compliance" && <li data-aos="fade-right">{List6}</li>}
+            {path === "hr-compliance" && <li data-aos="fade-right">{List6}</li>} */}
           </ul>
 
           {/* <p className="Middle_Secound_Head" data-aos="zoom-in">
@@ -474,6 +477,7 @@ export const Service = ({
           </p> */}
           <p className="Niddle_sub_content" data-aos="zoom-in">
             {parse(Para3Content1)}{" "}
+            <span>{paracontent3}</span>
           </p>
           <p className="Niddle_sub_content_p4" data-aos="zoom-in">
             {Para4Content1}
