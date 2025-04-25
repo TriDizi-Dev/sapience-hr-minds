@@ -41,7 +41,7 @@ export const HrLearning = ({
     Name: "",
     Email: "",
     PhoneNumber: "",
-    Sourcepage:"Education and Learning"
+
   });
 
   const handleChange = (e) => {
@@ -61,6 +61,7 @@ export const HrLearning = ({
       const formPayload = new FormData();
       formPayload.append("Learning", selectedData.head);
       formPayload.append("Category", questionTitle);
+      formPayload.append("Sourcepage", "Education and Learning");
       for (let key in formData) {
         formPayload.append(key, formData[key]);
       }

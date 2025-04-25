@@ -182,11 +182,11 @@ function Carrier() {
 
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phoneNumber: "",
-    message: "",
-    sourcepage: "",
+    Name: "",
+    Email: "",
+    PhoneNumber: "",
+    Message: "",
+    Sourcepage: "",
   });
 
   const [applyJob, setApplyJob] = useState(false);
@@ -212,7 +212,7 @@ function Carrier() {
     }
     setFormData((prevData) => ({
       ...prevData,
-      sourcepage: value,
+      Sourcepage: value,
     }));
 
     setTimeout(() => {
@@ -268,10 +268,10 @@ function Carrier() {
         alert("Form submitted successfully!");
         console.log("submited succes", response);
         setFormData({
-          name: "",
-          email: "",
-          phoneNumber: "",
-          message: "",
+          Name: "",
+          Email: "",
+          PhoneNumber: "",
+          Message: "",
         });
         handleCloseForm();
       } else {
@@ -311,7 +311,7 @@ function Carrier() {
 
     try {
       const formPayload = new FormData();
-      formPayload.append("sheet", "Sheet2");
+      // formPayload.append("sheet", "Sheet2");
       for (let key in applyJobData) {
         formPayload.append(key, applyJobData[key]);
       }
@@ -1080,8 +1080,8 @@ function Carrier() {
                 Name:
                 <input
                   type="text"
-                  name="name"
-                  value={formData.name}
+                  name="Name"
+                  value={formData.Name}
                   onChange={inputHandleChange}
                   required
                   className="Input"
@@ -1092,8 +1092,8 @@ function Carrier() {
                 Email:
                 <input
                   type="email"
-                  name="email"
-                  value={formData.email}
+                  name="Email"
+                  value={formData.Email}
                   onChange={inputHandleChange}
                   required
                   className="Input"
@@ -1103,8 +1103,8 @@ function Carrier() {
                 Phone Number:
                 <input
                   type="tel"
-                  name="phoneNumber"
-                  value={formData.phoneNumber}
+                  name="PhoneNumber"
+                  value={formData.PhoneNumber}
                   onChange={inputHandleChange}
                   required
                   className="Input"
@@ -1114,8 +1114,8 @@ function Carrier() {
                 Message:
                 <textarea
                   type="text"
-                  name="message"
-                  value={formData.message}
+                  name="Message"
+                  value={formData.Message}
                   onChange={inputHandleChange}
                   required
                   className="Input"
