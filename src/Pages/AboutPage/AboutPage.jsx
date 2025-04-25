@@ -333,7 +333,7 @@ export const AboutPage = () => {
         </div>
         <div className="About_page_section2">
           <div className="Left_side_container">
-            <h1 className="Head_Section2">About Us</h1>
+            <h1 className="Head_Section2">About Me</h1>
             <div className="Text_container_layer2">
               <p data-aos="fade-right">
               With over 23 years of HR leadership experience in the technology sector, Babitha Remith brings deep expertise in building people-first organizations. Having held senior roles in global firms like IBM, Micro Focus, and ESI Group, she has led high-impact initiatives in talent management, performance improvement, and employee engagement.
