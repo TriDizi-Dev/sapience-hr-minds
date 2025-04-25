@@ -192,12 +192,28 @@
     bottom: 15vw;
     right: 7vw;
     width: 2.2vw;
+}
 
-
+.babitha_name{
+    float:right; 
+    margin-top:-12.5vw; 
+    margin-right:15vw; 
+    font-size:3vw; 
+    font-weight:600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3)
+}
+.babitha_designation{
+    float:right; 
+    margin-top:-9vw; 
+    margin-right:11vw; 
+    width:29vw; 
+    font-size:1.7vw; 
+    font-weight:600; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3)
 }
 
 .Section3_Main_Container {
-    margin-top: -4vw;
+    margin-top: -2.5vw;
 }
 
 .Section3_Heading_para {
@@ -273,7 +289,7 @@
 .Cards_Sub_head {
     font-family: Poppins;
     font-weight: 600;
-    font-size: 1.1vw;
+    font-size: 1vw;
     color: #000000;
     margin-top: 1vw;
     height: 3.5vw;
@@ -519,7 +535,7 @@
     .Text_container_layer2 {
         width: 100%;
         gap: 4vw;
-        margin-top: 7vw;
+        margin-top: 24.5vw;
     }
 
     .Text_container_layer2 p {
@@ -573,6 +589,27 @@
         width: 13vw;
         left: 0;
         bottom: 7vw;
+    }
+
+
+    .babitha_name{
+        /* float:right;  */
+        margin-top:-142.5vw; 
+        margin-right:28vw; 
+        font-size:5.5vw; 
+        font-weight:600;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3)
+    }
+    .babitha_designation{
+        /* float:right;  */
+        text-align: center;
+        margin-top:-134.5vw; 
+        margin-right:25vw; 
+        width:50vw; 
+        font-size:3vw; 
+        font-weight:600; 
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3)
     }
 
     .Section3_Main_Container {

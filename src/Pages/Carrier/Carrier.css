@@ -180,7 +180,7 @@
     border-top-right-radius: 8vw;
     border-top-left-radius: 8vw;
     background-color: white;
-    margin-top: -7vw;
+    margin-top: -25vw;
 }
 
 .carrier_layer3_outer {
@@ -537,10 +537,14 @@ flex-wrap: 800;
     align-items: center;
     flex-direction: column;
     background-color: #e7e3e37a;
-    margin-top: 3vw;
-      
-    
-     
+    margin-top: 3vw; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+}
+.carrier_card:hover{
+       transform: scale(1.05); /* scale(2) is too big */
+       cursor: pointer;
+       box-shadow: 0 1.5vw 2vw rgba(0, 0, 0, 0.1);
+   
 }
 .carrier_img_outer{
      /* width:14.5vw; */
@@ -554,7 +558,6 @@ flex-wrap: 800;
     width:18.5vw;
     height:12vw;
     border-radius: 0.5vw;
- 
 
 }
 .card_text_heading{
@@ -569,6 +572,7 @@ flex-wrap: 800;
     padding: 0.6vw;
     background-color:white;
  }
+
 .card_hading_one{
     font-size: 0.9vw;
     font-weight: 600;
@@ -582,7 +586,11 @@ flex-wrap: 800;
 }
 .card_readmore{
     font-size: 1.1vw;
-    color: #651fff;
+    background-color: #651fff;
+    color: white;
+    width: 8.5vw;
+    padding-left: 0.75vw;
+    border-radius: 1vw;
     font-weight: 600;
     cursor: pointer;
 }
@@ -624,7 +632,7 @@ flex-wrap: 800;
     }
 
     .carrier_layer3_main{
-        margin-top: -6vw;
+        margin-top: -85vw;
         border-top-right-radius: 8vw;
         border-top-left-radius: 8vw;
         background-color: white;
@@ -666,6 +674,7 @@ flex-wrap: 800;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: -90vw;
 }
     .layer2_heading {
         font-size: 6vw;
@@ -721,7 +730,7 @@ flex-wrap: 800;
         width: 80vw;
         height:25vw; /* set a fixed height if you want to see the image contained */
         padding: 5vw;
-        top: -9vw;
+        top: -11vw;
         left: 10vw;
     }
     
@@ -939,6 +948,8 @@ width: fit-content;
    }
    .card_readmore{
        font-size:4vw;
+       width:30vw;
+       padding-left: 2vw;
         font-weight: 600;
    }
    .carrier_cards_outer{

@@ -46,7 +46,7 @@ function TermsAndConditions({
   return (
     <div className="privacy_terms_outer_main">
       <Helmet>
-        <title>Terms And Conditions
+        <title>Sapience Minds-Terms And Conditions
         </title>
         <meta
           name="description"

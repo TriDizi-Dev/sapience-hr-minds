@@ -10,7 +10,7 @@ import TradeMark from "../../assets/AboutPage/trademark.svg";
 import TringleGroup from "../../assets/AboutPage/TriangleImages.svg";
 // import Instagram from "../../assets/Service/service18.svg";
 import Instagram from "../../assets/Service/service1imageee.svg";
-import contactImg from "../../assets/Service/contact_img.png"
+import contactImg from "../../assets/Service/service3Imageback.svg"
 // import Message from "../../assets/Service/service19.svg";
 import Message from "../../assets/Service/service2imageee.svg";
 import Target from "../../assets/Service/service3imageee.svg";
@@ -27,6 +27,8 @@ import parse from "html-react-parser";
 import { Helmet } from "react-helmet-async";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
+
 export const Service = ({
   ServiceHeadName,
   ServiceHeadContent,
@@ -101,15 +103,26 @@ keyofferinglist=[],
   const targetGoal = 49;
   const durationGoal = 2000;
 
+  // const services = [
+  //   { name: service1name, icon: Instagram },
+  //   { name: service2name, icon: Message },
+  //   { name: service3name, icon: Target },
+  //   { name: service4name, icon: Speaker },
+  //   { name: service5name, icon: Cursur },
+  //   { name: service6name, icon: Play },
+  //   { name: service7name, icon: Monitor },
+  //   { name: service8name, icon: image8 },
+  // ];
+
   const services = [
-    { name: service1name, icon: Instagram },
-    { name: service2name, icon: Message },
-    { name: service3name, icon: Target },
-    { name: service4name, icon: Speaker },
-    { name: service5name, icon: Cursur },
-    { name: service6name, icon: Play },
-    { name: service7name, icon: Monitor },
-    { name: service8name, icon: image8 },
+    { name: service1name, icon: Instagram, path: "/hr-compliance" },
+    { name: service2name, icon: Message, path: "/hr-consulting" },
+    { name: service3name, icon: Target, path: "/virtual-chro-and-outsourcing" },
+    { name: service4name, icon: Speaker, path: "/talent-acquisition-solutions" },
+    { name: service5name, icon: Cursur, path: "/talent-management" },
+    { name: service6name, icon: Play, path: "/talent-engagement" },
+    { name: service7name, icon: Monitor, path: "/recruitment-of-leadership" },
+    { name: service8name, icon: image8, path: "/employee-insurance-and-benefits" },
   ];
 
   const filteredServices = services.filter(
@@ -119,13 +132,15 @@ keyofferinglist=[],
   
 
   const [formData, setFormData] = useState({
-    email: '',
-    companyName: '',
-    industry: '',
-    location: '',
-    employees: '',
-    contact: '',
-    sourcepage:'Virtual CHRO And Outsourcing'
+    Name:'',
+    Phone_number:'',
+    Email: '',
+    CompanyName: '',
+    Industry: '',
+    Location: '',
+    Employees: '',
+    Contact: '',
+    Sourcepage:'Virtual CHRO And Outsourcing'
   });
 
   const handleChange = (e) => {
@@ -162,12 +177,14 @@ keyofferinglist=[],
           draggable: true,
         });
         setFormData({
-          email: '',
-          companyName: '',
-          industry: '',
-          location: '',
-          employees: '',
-          contact: ''
+          Name:'',
+          Phone_number:'',
+          Email: '',
+          CompanyName: '',
+          Industry: '',
+          Location: '',
+          Employees: '',
+          Contact: '',
         });
       
       } else {
@@ -376,6 +393,8 @@ keyofferinglist=[],
     window.scrollTo(0, 0);
   }, []);
 
+  const navigate=useNavigate();
+
   return (
     <div className="Service_MAin_Container">
       <Helmet>
@@ -501,84 +520,114 @@ keyofferinglist=[],
           </div>
 
           <form className="virtual-chro-custom-form" onSubmit={handleSubmit} data-aos="fade-down">
-            <p className="virtual-contact-title">Apply Form </p>
+            <p className="virtual-contact-title">Fill The Form </p>
+
+            
         <div className="virtual-chro-form-row">
           <div className="virtual-chro-form-group">
-            <label htmlFor="email">Email*</label>
+            <label htmlFor="name">Name</label>
             <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
+              type="text"
+              id="Name"
+              name="Name"
+              value={formData.Name}
               onChange={handleChange}
               required
-              placeholder="Your Email Address"
+              placeholder="Enter your Name"
             />
           </div>
           <div className="virtual-chro-form-group">
-            <label htmlFor="companyName">Company Name*</label>
+            <label htmlFor="companyName">Phone Number</label>
             <input
               type="text"
-              id="companyName"
-              name="companyName"
-              value={formData.companyName}
+              id="Phone_number"
+              name="Phone_number"
+              value={formData.Phone_number}
               onChange={handleChange}
               required
-              placeholder="Your Answer"
+              placeholder="Enter Your Contact Number"
             />
           </div>
         </div>
 
         <div className="virtual-chro-form-row">
           <div className="virtual-chro-form-group">
-            <label htmlFor="industry">Industry*</label>
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="Email"
+              name="Email"
+              value={formData.Email}
+              onChange={handleChange}
+              required
+              placeholder="Enter Your Email Address"
+            />
+          </div>
+          <div className="virtual-chro-form-group">
+            <label htmlFor="companyName">Company Name</label>
+            <input
+              type="text"
+              id="CompanyName"
+              name="CompanyName"
+              value={formData.CompanyName}
+              onChange={handleChange}
+              required
+              placeholder="Enter Your Name"
+            />
+          </div>
+        </div>
+
+
+        <div className="virtual-chro-form-row">
+          <div className="virtual-chro-form-group">
+            <label htmlFor="industry">Industry</label>
             <input
               type="text"
               id="industry"
-              name="industry"
-              value={formData.industry}
+              name="Industry"
+              value={formData.Industry}
               onChange={handleChange}
               required
-              placeholder="Your Answer"
+              placeholder="Enter Your Industry"
             />
           </div>
           <div className="virtual-chro-form-group">
-            <label htmlFor="location">Location*</label>
+            <label htmlFor="location">Location</label>
             <input
               type="text"
-              id="location"
-              name="location"
-              value={formData.location}
+              id="Location"
+              name="Location"
+              value={formData.Location}
               onChange={handleChange}
               required
-              placeholder="Your Answer"
+              placeholder="Enter Your Location"
             />
           </div>
         </div>
 
         <div className="virtual-chro-form-row">
           <div className="virtual-chro-form-group">
-            <label htmlFor="employees">No. of Employees*</label>
+            <label htmlFor="employees">No. of Employees</label>
             <input
               type="number"
-              id="employees"
-              name="employees"
-              value={formData.employees}
+              id="Employees"
+              name="Employees"
+              value={formData.Employees}
               onChange={handleChange}
               required
-              placeholder="Your Answer"
+              placeholder="Enter Employees Count"
             />
           </div>
           <div className="virtual-chro-form-group">
-            <label htmlFor="contact">Contact Person / Designation*</label>
+            <label htmlFor="contact">Contact Person / Designation</label>
             <input
               type="text"
-              id="contact"
-              name="contact"
-              value={formData.contact}
+              id="Contact"
+              name="Contact"
+              value={formData.Contact}
               onChange={handleChange}
               required
-              placeholder="Your Answer"
+              placeholder="Enter Your Designation"
             />
           </div>
         </div>
@@ -666,15 +715,22 @@ keyofferinglist=[],
         <div className="Service_Cards">
           {filteredServices.map((service, index) => (
             <div
-              className={`Service_Icon_Container ${
-                index === 2 ? "marginChnage" : ""
-              } ${index === 3 ? "Middle_service" : ""} ${
-                index === 4 ? "marginChnage second_marginChanges" : ""
-              } ${index === 5 ? "third_marginChanges" : ""}`}
+              className=
+              // {`
+                "Service_Icon_Container" 
+              //   ${
+              //   index === 2 ? "marginChnage" : ""
+              // } ${index === 3 ? "Middle_service" : ""} ${
+              //   index === 4 ? "marginChnage second_marginChanges" : ""
+              // } ${index === 5 ? "third_marginChanges" : ""}
+
+              // `}
+
               data-aos="flip-left"
               data-aos-easing="ease-out-cubic"
               data-aos-duration="2000"
               key={index}
+              onClick={() => navigate(service.path)}
             >
               <p className="Service_Img">
                 <img src={service.icon} alt={service.name} />

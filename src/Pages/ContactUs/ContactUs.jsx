@@ -10,11 +10,11 @@ const ContactForm = () => {
     window.open(link, "_blank", "noopener,noreferrer");
   };
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phoneNumber: "",
-    message: "",
-    sourcepage: "Contact Us",
+    Name: "",
+    Email: "",
+    PhoneNumber: "",
+    Message: "",
+    Sourcepage: "Contact Us",
   });
     useEffect(() => {
       window.scrollTo(0, 0);
@@ -60,10 +60,10 @@ const ContactForm = () => {
         });
         console.log("submited succes", response);
         setFormData({
-          name: "",
-          email: "",
-          phoneNumber: "",
-          message: "",
+          Name: "",
+          Email: "",
+          PhoneNumber: "",
+          Message: "",
         });
       } else {
         // alert("Something went wrong. Please try again.");
@@ -127,8 +127,8 @@ const ContactForm = () => {
               type="text"
               required
               id="name"
-              name="name"
-              value={formData.name}
+              name="Name"
+              value={formData.Name}
               onChange={handleChange}
             />
            </div>
@@ -138,8 +138,8 @@ const ContactForm = () => {
               type="email"
               required
               id="mail"
-              name="email"
-              value={formData.email}
+              name="Email"
+              value={formData.Email}
               onChange={handleChange}
             />
            </div>
@@ -149,8 +149,8 @@ const ContactForm = () => {
               type="tel"
               required
               id="mobile"
-              name="phoneNumber"
-              value={formData.phoneNumber}
+              name="PhoneNumber"
+              value={formData.PhoneNumber}
               onChange={handleChange}
             />
            </div>
@@ -160,8 +160,8 @@ const ContactForm = () => {
               rows="3"
               required
               id="message"
-              name="message"
-              value={formData.message}
+              name="Message"
+              value={formData.Message}
               onChange={handleChange}
             />
            </div>

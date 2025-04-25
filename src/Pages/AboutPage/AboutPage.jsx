@@ -1,6 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./AboutPage.css";
-import AboutMain1 from "../../assets/AboutPage/above_top_img.svg";
+// import AboutMain1 from "../../assets/AboutPage/above_top_img.svg";
+// import AboutMain1 from "../../assets/AboutPage/above_top_img.svg";
+import AboutMain1 from "../../assets/AboutPage/aboutUsHrImage.jpg";
+
 import Orangelayer from "../../assets/AboutPage/orangeshade.svg";
 import Bluelayer from "../../assets/AboutPage/blushade.svg";
 import Person from "../../assets/AboutPage/personImage.svg";
@@ -267,7 +270,7 @@ export const AboutPage = () => {
     <>
          <Helmet>
         <title>
-        About Our Company
+        Sapience Minds-About Our Company
         </title>
         <meta
           name="description"
@@ -386,6 +389,8 @@ export const AboutPage = () => {
             
           </div>
         </div>
+        <p className="babitha_name">Babitha Remith</p>
+        <p className="babitha_designation">Founder & Director | Fractional CHRO | HR Transformation Expert</p>
       </div>
 
       <div className="Section3_Main_Container">

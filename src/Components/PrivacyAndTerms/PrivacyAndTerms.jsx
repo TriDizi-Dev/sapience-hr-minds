@@ -57,7 +57,7 @@ function PrivacyAndTerms({
   return (
     <div className="privacy_terms_outer_main">
       <Helmet>
-        <title>Privacy Policy</title>
+        <title>Sapience Minds-Privacy Policy</title>
         <meta
           name="description"
           content="Learn how Sapience Minds collects, uses, and protects your data in alignment with our HR services. Your privacy and trust are important to us."

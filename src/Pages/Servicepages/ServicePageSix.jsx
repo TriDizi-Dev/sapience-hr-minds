@@ -13,7 +13,7 @@ export const ServicePageSix = () => {
     <div>
       {" "}
       <Service
-        metaTitle="Talent Engagement & Retention"
+        metaTitle="Sapience Minds-Talent Engagement & Retention"
         metaDescription="Keep your top talent inspired, involved, and invested in your company’s mission long after onboarding ends."
         ServiceHeadName="Talent Engagement & Retention"
         ServiceHeadContent="Keep your top talent inspired, involved, and invested in your company’s mission long after onboarding ends."

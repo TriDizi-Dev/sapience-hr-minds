@@ -14,7 +14,7 @@ export const ServiceThree = () => {
     <div>
       {" "}
       <Service
-        metaTitle="Virtual CHRO and Outsourcing of HR Operations"
+        metaTitle="Sapience Minds-Virtual CHRO and Outsourcing of HR Operations"
         metaDescription="Your strategic HR leadership—without the full-time cost. Drive transformation with expert-led HR operations and virtual CHRO support."
         ServiceHeadName="Virtual CHRO and Outsourcing of HR Operations"
         ServiceHeadContent=" Your strategic HR leadership—without the full-time cost. Drive transformation with expert-led HR operations and virtual CHRO support."

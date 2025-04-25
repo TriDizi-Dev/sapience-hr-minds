@@ -216,11 +216,11 @@ export const HomePage = () => {
     setShowForm(false);
   };
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phoneNumber: "",
-    message: "",
-    sourcepage: "Home",
+    Name: "",
+    Email: "",
+    PhoneNumber: "",
+    Message: "",
+    Sourcepage: "Home",
   });
 
   const handleChange = (e) => {
@@ -262,10 +262,10 @@ export const HomePage = () => {
           draggable: true,
         });
         setFormData({
-          name: "",
-          email: "",
-          phoneNumber: "",
-          message: "",
+          Name: "",
+          Email: "",
+          PhoneNumber: "",
+          Message: "",
         });
         handleCloseForm();
       } else {
@@ -349,7 +349,7 @@ export const HomePage = () => {
     <div className="home_main">
       <Helmet>
         <title>
-          Your Trusted Fractional CHRO Partner for Scalable HR Growth
+        Sapience Minds-Sapience Minds-Your Trusted Fractional CHRO Partner for Scalable HR Growth
         </title>
         <meta
           name="description"
@@ -436,8 +436,8 @@ export const HomePage = () => {
                     Name:
                     <input
                       type="text"
-                      name="name"
-                      value={formData.name}
+                      name="Name"
+                      value={formData.Name}
                       onChange={handleChange}
                       required
                       className="Input"
@@ -448,8 +448,8 @@ export const HomePage = () => {
                     Email:
                     <input
                       type="email"
-                      name="email"
-                      value={formData.email}
+                      name="Email"
+                      value={formData.Email}
                       onChange={handleChange}
                       required
                       className="Input"
@@ -459,8 +459,8 @@ export const HomePage = () => {
                     Phone Number:
                     <input
                       type="tel"
-                      name="phoneNumber"
-                      value={formData.phoneNumber}
+                      name="PhoneNumber"
+                      value={formData.PhoneNumber}
                       onChange={handleChange}
                       required
                       className="Input"
@@ -470,8 +470,8 @@ export const HomePage = () => {
                     Message:
                     <textarea
                       type="text"
-                      name="message"
-                      value={formData.message}
+                      name="Message"
+                      value={formData.Message}
                       onChange={handleChange}
                       required
                       className="Input"

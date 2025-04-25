@@ -71,11 +71,11 @@ export const PreFooter = ({
   }, [showForm]);
 
  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phoneNumber: "",
-    message: "",
-    sourcepage: sourcepages,
+    Name: "",
+    Email: "",
+    PhoneNumber: "",
+    Message: "",
+    Sourcepage: sourcepages,
   });
 
   const handleChange = (e) => {
@@ -115,10 +115,10 @@ export const PreFooter = ({
           draggable: true,
         });
         setFormData({
-          name: "",
-          email: "",
-          phoneNumber: "",
-          message: "",
+          Name: "",
+          Email: "",
+          PhoneNumber: "",
+          Message: "",
         });
         handleCloseForm()
       } else {
@@ -178,8 +178,8 @@ export const PreFooter = ({
                 Name:
                 <input
                   type="text"
-                  name="name"
-                  value={formData.name}
+                  name="Name"
+                  value={formData.Name}
                   onChange={handleChange}
                   required
                   className="Input"
@@ -190,8 +190,8 @@ export const PreFooter = ({
                 Email:
                 <input
                   type="email"
-                  name="email"
-                  value={formData.email}
+                  name="Email"
+                  value={formData.Email}
                   onChange={handleChange}
                   required
                   className="Input"
@@ -201,8 +201,8 @@ export const PreFooter = ({
                 Phone Number:
                 <input
                   type="tel"
-                  name="phoneNumber"
-                  value={formData.phoneNumber}
+                  name="PhoneNumber"
+                  value={formData.PhoneNumber}
                   onChange={handleChange}
                   required
                   className="Input"
@@ -212,8 +212,8 @@ export const PreFooter = ({
                 Message:
                 <textarea
                   type="text"
-                  name="message"
-                  value={formData.message}
+                  name="Message"
+                  value={formData.Message}
                   onChange={handleChange}
                   required
                   className="Input"
