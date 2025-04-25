@@ -22,19 +22,24 @@ export const ServicePageSeven = () => {
         Para1Content1={`Hiring leaders isn't just about filling a position—it’s about defining the future of your organization. At Sapience Minds, we help startups and SMBs identify, assess, and recruit Leadership and Mid-Level Talent who can inspire teams and drive innovation from day one.`}
         Para1Content2={`Our approach blends deep industry insight with behavioral science and culture mapping, ensuring the candidates we place are both qualified and aligned with your mission. Through targeted sourcing, strategic interviews, and leadership profiling, we help you hire with confidence and clarity.`}
         // Para2Head="Lorem ipsum dolor"
-        Para2Head2="We specialize in:"
+        Para2Head2="Key Offerings:"
         // Para2Content2="Lorem Ipsum is simply dummy text of the printing and typesetting
         //     industry. Lorem Ipsum has been the industry's standard dummy text
         //     ever since the 1500s, when an unknown printer took a galley of type
         //     and scrambled it to make a type specimen book Lorem Ipsum is simply
         //     dummy text of the printing and typesetting industry."
-        List1="Executive and mid-management hiring strategy"
-        List2="Behavioral and role-based assessments"
-        List3="Leadership competency mapping"
-        List4="Structured interviewing and cultural alignment screening"
-        List5="Offer negotiation and onboarding support"
+        // List1="Employee engagement surveys and HR Connect meetings"
+        // List2="Retention strategies, such as early-exit tracking and new hire connects"
+        // List3="Employee recognition programs,"
+        // List4="End-to-end engagement programs with surveys, 30/60/90-day check-ins, and ongoing HRBP support to ensure positive employee experience."
+        keyofferinglist={[
+"Employee engagement surveys and HR Connect meetings",
+"Employee recognition programs",
+"End-to-end engagement programs with surveys, 30/60/90-day check-ins, and ongoing HRBP support to ensure positive employee experience."
+        ]}
         // Para3Head="Lorem ipsum dolor"
-        Para3Content1={`With <strong>Babitha Remith</strong> leading the strategic framework, we offer not just candidates—but leaders who create lasting impact.`}
+     Para3Content1={`<strong>Client Benefit:</strong>`} 
+        paracontent3="Improved employee morale, reduced turnover rates, and a stronger, more cohesive company culture."
         // Para4Content1="We don’t just advise—we become your strategic HR ally, driving sustainable value."
 
         serviceIcons2="Interview-to-Offer Conversion Support"
@@ -54,7 +59,7 @@ export const ServicePageSeven = () => {
         service2name="Customized HR Consulting and Advisory Services"
         service3name="Virtual CHRO and Outsourcing of HR Operations"
         service4name="Talent Acquisition Solutions"
-        service5name="Talent Management"
+        service5name="Talent Management Solutions"
         service6name="Talent Engagement & Retention"
         service7name="Recruitment of Leadership & Mid-Level Team"
         service8name="Employee Insurance & Benefits"

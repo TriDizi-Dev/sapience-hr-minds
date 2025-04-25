@@ -64,7 +64,7 @@ export const Footer = () => {
                 </li>
               </Link>
               <Link to="/talent-management" className="nav_link">
-                <li className="footer_services_items">Talent Management</li>
+                <li className="footer_services_items">Talent Management Solutions</li>
               </Link>
               <Link to="/talent-engagement" className="nav_link">
                 <li className="footer_services_items">
