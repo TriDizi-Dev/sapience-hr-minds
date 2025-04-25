@@ -14,27 +14,26 @@ export const ServicePageFive = () => {
     <div>
       {" "}
       <Service
-        metaTitle="Talent Management"
+        metaTitle="Talent Management Solutions"
         metaDescription="Nurture, grow, and retain your best talent with structured performance, growth, and succession strategies—designed for impact, not just process."
-        ServiceHeadName="Talent Management"
+        ServiceHeadName="Talent Management Solutions"
         ServiceHeadContent="Nurture, grow, and retain your best talent with structured performance, growth, and succession strategies—designed for impact, not just process."
         // Para1Head="Lorem ipsum dolor"
         Para1Content1={`Great organizations aren’t built just by hiring the right people—but by managing, developing, and retaining them effectively. At <strong>Sapience Minds,</strong> our <strong>Talent Management Services</strong> are built around the core belief that your people are your biggest asset—and strategic talent management is key to long-term success.`}
         Para1Content2={`We help startups and SMEs develop frameworks that empower employees, improve performance, and drive business outcomes. Whether you're starting from scratch or evolving an existing system, we bring <strong>Fractional CHRO</strong> leadership to design and deploy effective programs.`}
         Para1Content3={`Our services focus on building personalized development paths, role clarity, leadership capability, and internal mobility. We create data-driven performance systems, competency models, and career frameworks that fuel engagement and accountability.`}
-        Para2Head="Our Talent Management offerings include:"
+        Para2Head="Key Offerings:"
         // Para2Content2="Lorem Ipsum is simply dummy text of the printing and typesetting
         //     industry. Lorem Ipsum has been the industry's standard dummy text
         //     ever since the 1500s, when an unknown printer took a galley of type
         //     and scrambled it to make a type specimen book Lorem Ipsum is simply
         //     dummy text of the printing and typesetting industry."
-        List1="Competency mapping and job architecture"
-        List2="Career progression frameworks"
-        List3="Performance review systems and KPIs"
-        List4="Leadership development programs"
-        List5="Succession planning and capability assessment"
+        keyofferinglist={[
+          "Job architecture and competency frameworks"
+        ]}
         Para3Head="Lorem ipsum dolor"
-        Para3Content1="We align talent goals with business strategy, enabling you to prepare your workforce for future challenges and opportunities."
+        Para3Content1={`<strong>Client Benefit:</strong>`} 
+        paracontent3="Clients gain a clear structure for advancing internal talent, ensuring business continuity, and developing high-potential employees into leadership roles."
         serviceIcons2="Review Completion Rates"
         serviceIcons2_text="Our systems are designed for full adoption and real-world success."
         serviceIcons1="Higher Employee Performance"
@@ -52,7 +51,7 @@ export const ServicePageFive = () => {
         service2name="Customized HR Consulting and Advisory Services"
         service3name="Virtual CHRO and Outsourcing of HR Operations"
         service4name="Talent Acquisition Solutions"
-        service5name="Talent Management"
+        service5name="Talent Management Solutions"
         service6name="Talent Engagement & Retention"
         service7name="Recruitment of Leadership & Mid-Level Team"
         service8name="Employee Insurance & Benefits"

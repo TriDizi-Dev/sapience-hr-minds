@@ -104,7 +104,7 @@ export const HomePage = () => {
       id: 4,
       Logo: Smallicon5,
       Head: "Learn More",
-      subHead: "Talent Management",
+      subHead: "Talent Management Solutions",
       para: "Fuel performance and growth with development plans, reviews, and leadership pipelines built to scale with your startup.",
       path: "/talent-management",
     },
@@ -873,6 +873,7 @@ export const HomePage = () => {
         )}
       </div>
 
+      <ToastContainer />
       <div className="home_page_prefooter" data-aos="zoom-in">
         <PreFooter
           sourcepages="HomePage"
@@ -880,7 +881,7 @@ export const HomePage = () => {
           Content="Your startup deserves more than just reactive HR. Whether you need structure, compliance, or a culture strategy, let’s have a conversation that moves your business forward. Book a discovery call or fill out the form and let’s shape a smarter, people-powered future for your company."
         />
       </div>
-      <ToastContainer />
+   
     </div>
   );
 };

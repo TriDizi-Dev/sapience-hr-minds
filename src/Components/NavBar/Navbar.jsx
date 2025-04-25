@@ -62,7 +62,7 @@ export const Navbar = () => {
             onMouseLeave={() => setShowDropdown(false)}
           >
             <div className="nav_link">
-              StartUps Mentoring
+              StartUp Consulting
               <div className="nav_underline_wrapper">
                 <div
                   className={` ${
@@ -167,7 +167,7 @@ export const Navbar = () => {
                         navActive === "/talent-management" ? "#ffffff" : "",
                     }}
                   >
-                    Talent Management
+                    Talent Management Solutions
                   </Link>
                 </li>
 
@@ -367,7 +367,7 @@ export const Navbar = () => {
                 onMouseLeave={() => setShowDropdown(false)}
               >
                 <div className="nav_link mobile_nav_items">
-                  StartUps Mentoring
+                  StartUp Consulting
                   <div className="nav_underline_wrapper">
                     <div
                       className={` ${
@@ -435,7 +435,7 @@ export const Navbar = () => {
                 onMouseLeave={() => setTalentManagement(false)}
               >
                 <div className="nav_link mobile_nav_items">
-                  Talent Management
+                  Talent Management 
                   <div className="nav_underline_wrapper">
                     <div
                       className={` ${
@@ -478,7 +478,7 @@ export const Navbar = () => {
                             navActive === "/talent-management" ? "#ffffff" : "",
                         }}
                       >
-                        Talent Management
+                        Talent Management Solutions
                       </Link>
                     </li>
 

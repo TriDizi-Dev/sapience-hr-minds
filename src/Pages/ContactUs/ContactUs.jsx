@@ -120,8 +120,9 @@ const ContactForm = () => {
             Feel Free To Contact Us At Anytime ,We Will Get Back As Soon As
             Possible
           </p>
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="name">Name</label>
+          <form onSubmit={handleSubmit} className="from_container-contact-page">
+           <div className="from-sub-container">
+           <label htmlFor="name">Name</label>
             <input
               type="text"
               required
@@ -130,7 +131,9 @@ const ContactForm = () => {
               value={formData.name}
               onChange={handleChange}
             />
-            <label htmlFor="mail">Email</label>
+           </div>
+           <div className="from-sub-container">
+           <label htmlFor="mail">Email</label>
             <input
               type="email"
               required
@@ -139,7 +142,9 @@ const ContactForm = () => {
               value={formData.email}
               onChange={handleChange}
             />
-            <label htmlFor="mobile">Phone Number</label>
+           </div>
+           <div className="from-sub-container">
+           <label htmlFor="mobile">Phone Number</label>
             <input
               type="tel"
               required
@@ -148,7 +153,9 @@ const ContactForm = () => {
               value={formData.phoneNumber}
               onChange={handleChange}
             />
-            <label htmlFor="message">Message</label>
+           </div>
+           <div className="from-sub-container">
+           <label htmlFor="message">Message</label>
             <textarea
               rows="3"
               required
@@ -157,6 +164,7 @@ const ContactForm = () => {
               value={formData.message}
               onChange={handleChange}
             />
+           </div>
             <button type="submit">Send</button>
           </form>
         </div>

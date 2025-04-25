@@ -103,7 +103,7 @@ export const PreFooter = ({
         method: "POST",
         body: formPayload, // No 'Content-Type' header for FormData
       });
-      console.log(response, "resssssss");
+      // console.log(response, "resssssss");
 
       if (response.ok) {
         toast.success("Form submitted successfully!", {
@@ -144,11 +144,11 @@ export const PreFooter = ({
     }
   };
 
-  console.log(sourcepages,"sourcepages")
+
 
   return (
     <>
-      <ToastContainer />
+     
       <div className="PreFooter_Main" data-aos="zoom-in" ref={preFooterRef}>
         <p className="Heading_PreFooter">{Head}</p>
         <p className="Para_PreFooter">{Content}</p>
