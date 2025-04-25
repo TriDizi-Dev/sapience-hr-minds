@@ -582,7 +582,12 @@ flex-wrap: 800;
     font-size: 0.8vw;
     font-weight: normal;
     width:100%;
-    height: fit-content;
+    height: 3.5vw ;
+    overflow-y: scroll;
+    /* height: fit-content; */
+}
+.card_para::-webkit-scrollbar{
+    display: none;
 }
 .card_readmore{
     font-size: 1.1vw;
