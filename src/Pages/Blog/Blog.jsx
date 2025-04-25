@@ -237,7 +237,7 @@ function Blog() {
           {Blogs.map((data) => (
             <div
               className="blog_card"
-              data-aos="zoom-out-down"
+              // data-aos="zoom-out-down"
               onClick={() => handleSignleBlog(data, data?.content)}
             >
               <div className="blog_card_img_content">
