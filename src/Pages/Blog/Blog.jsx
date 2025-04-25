@@ -21,6 +21,7 @@ import Smallicon2 from "../../assets/AboutPage/Smallicon2.svg";
 import { database, ref, get } from "../../Firebase/firebase";
 import { Helmet } from "react-helmet-async";
 import parse, { domToReact } from "html-react-parser";
+import { ToastContainer } from "react-toastify";
 
 function Blog() {
   useEffect(() => {
@@ -318,6 +319,7 @@ function Blog() {
           Content="Your startup deserves more than just reactive HR. Whether you need structure, compliance, or a culture strategy, let’s have a conversation that moves your business forward. Book a discovery call or fill out the form and let’s shape a smarter, people-powered future for your company."
         />
       </div>
+      <ToastContainer />
     </div>
   );
 }
