@@ -10,7 +10,7 @@ import TradeMark from "../../assets/AboutPage/trademark.svg";
 import TringleGroup from "../../assets/AboutPage/TriangleImages.svg";
 // import Instagram from "../../assets/Service/service18.svg";
 import Instagram from "../../assets/Service/service1imageee.svg";
-
+import contactImg from "../../assets/Service/contact_img.png"
 // import Message from "../../assets/Service/service19.svg";
 import Message from "../../assets/Service/service2imageee.svg";
 import Target from "../../assets/Service/service3imageee.svg";
@@ -25,6 +25,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import parse from "html-react-parser";
 import { Helmet } from "react-helmet-async";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export const Service = ({
   ServiceHeadName,
   ServiceHeadContent,
@@ -118,6 +120,86 @@ export const Service = ({
   const filteredServices = services.filter(
     (service) => service.name !== ServiceHeadName
   );
+
+  
+
+  const [formData, setFormData] = useState({
+    email: '',
+    companyName: '',
+    industry: '',
+    location: '',
+    employees: '',
+    contact: '',
+    sourcepage:'Virtual CHRO And Outsourcing'
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+ const scriptURL =
+      "https://script.google.com/macros/s/AKfycbzvzG1K-8O3LD328fyCXs5oyEkWVA12zplggBg-jMLHZjk9tFow9AYw_EhVQqvjlRNPcQ/exec";
+
+    try {
+      const formPayload = new FormData();
+      for (let key in formData) {
+        formPayload.append(key, formData[key]);
+      }
+
+
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        body: formPayload, // No 'Content-Type' header for FormData
+      });
+      console.log(response, "resssssss");
+
+      if (response.ok) {
+        // alert("Form submitted successfully!");
+        toast.success("Form submitted successfully!", {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+        setFormData({
+          email: '',
+          companyName: '',
+          industry: '',
+          location: '',
+          employees: '',
+          contact: ''
+        });
+      
+      } else {
+        toast.warning("Something went wrong. Please try again.", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      toast.error("Error submitting the form. Please check your connection.", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    }
+
+  };
+
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -410,7 +492,99 @@ export const Service = ({
         alt="Layer"
         className="Background_Image_Container"
       ></img>
+      {path === "virtual-chro-and-outsourcing" && (
+        <div className="virtual-chro-form-container">
+          <div className="virtual-left-container" data-aos="flip-left">
+          <img src={contactImg} alt="" />
+          </div>
 
+          <form className="virtual-chro-custom-form" onSubmit={handleSubmit} data-aos="fade-down">
+            <p className="virtual-contact-title">Apply Form </p>
+        <div className="virtual-chro-form-row">
+          <div className="virtual-chro-form-group">
+            <label htmlFor="email">Email*</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              placeholder="Your email address"
+            />
+          </div>
+          <div className="virtual-chro-form-group">
+            <label htmlFor="companyName">Company Name*</label>
+            <input
+              type="text"
+              id="companyName"
+              name="companyName"
+              value={formData.companyName}
+              onChange={handleChange}
+              required
+              placeholder="Your Answer"
+            />
+          </div>
+        </div>
+
+        <div className="virtual-chro-form-row">
+          <div className="virtual-chro-form-group">
+            <label htmlFor="industry">Industry*</label>
+            <input
+              type="text"
+              id="industry"
+              name="industry"
+              value={formData.industry}
+              onChange={handleChange}
+              required
+              placeholder="Your Answer"
+            />
+          </div>
+          <div className="virtual-chro-form-group">
+            <label htmlFor="location">Location*</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              value={formData.location}
+              onChange={handleChange}
+              required
+              placeholder="Your Answer"
+            />
+          </div>
+        </div>
+
+        <div className="virtual-chro-form-row">
+          <div className="virtual-chro-form-group">
+            <label htmlFor="employees">No. of Employees*</label>
+            <input
+              type="number"
+              id="employees"
+              name="employees"
+              value={formData.employees}
+              onChange={handleChange}
+              required
+              placeholder="Your Answer"
+            />
+          </div>
+          <div className="virtual-chro-form-group">
+            <label htmlFor="contact">Contact Person / Designation*</label>
+            <input
+              type="text"
+              id="contact"
+              name="contact"
+              value={formData.contact}
+              onChange={handleChange}
+              required
+              placeholder="Your Answer"
+            />
+          </div>
+        </div>
+
+        <button type="submit" className="virtual-chro-submit-button">Submit</button>
+      </form>
+        </div>
+      )}
       <div className="Service_Page_Section3">
         <div className="Images_Container_Background">
           <img
