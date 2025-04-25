@@ -430,12 +430,12 @@ export const AlliancePartner = () => {
       </div> */}
 
       <div className="Alianceparter_layer4_outer_main">
-        <div className="Aliancceparter_layer4_outer" data-aos="fade-right">
+        <div className="Aliancceparter_layer4_outer">
           <div className="">
-            <p className="aliancepartner_layer4_heading2">
+            <p className="aliancepartner_layer4_heading2" data-aos="fade-up">
               Collaboration Key Service Areas of our Alliance Partner
             </p>
-            <h1 className="aliancepartner_layer4_heading">
+            <h1 className="aliancepartner_layer4_heading" data-aos="fade-down">
               Our Alliance Partner’s commitment to trusted client support and
               personalized, data-driven solutions makes him an invaluable part
               of our team, contributing to our mission to elevate HR practices
@@ -451,7 +451,7 @@ export const AlliancePartner = () => {
               </p> */}
 
             <div className="Aliancepartenr_layer4_cards_outer">
-              <div className="Alliancepartner_layer4_card">
+              <div className="Alliancepartner_layer4_card" data-aos="fade-down">
                 <div className="Alliancepartner_layer4_card_logo">
                   <img
                     src={icon_1}
@@ -489,7 +489,7 @@ export const AlliancePartner = () => {
                   </li>
                 </ul>
               </div>
-              <div className="Alliancepartner_layer4_card">
+              <div className="Alliancepartner_layer4_card" data-aos="fade-up">
                 <div className="Alliancepartner_layer4_card_logo">
                   <img
                     src={icon_2}
