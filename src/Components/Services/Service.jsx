@@ -512,7 +512,7 @@ keyofferinglist=[],
               value={formData.email}
               onChange={handleChange}
               required
-              placeholder="Your email address"
+              placeholder="Your Email Address"
             />
           </div>
           <div className="virtual-chro-form-group">

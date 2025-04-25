@@ -873,6 +873,7 @@ export const HomePage = () => {
         )}
       </div>
 
+      <ToastContainer />
       <div className="home_page_prefooter" data-aos="zoom-in">
         <PreFooter
           sourcepages="HomePage"
