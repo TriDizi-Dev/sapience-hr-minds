@@ -88,8 +88,7 @@
 
 /* Liquid Fill Effect */
 .liquid {
-  background: linear-gradient(#7c5cfc 0 0) no-repeat calc(200% - var(--p, 0%))
-    100% / 200% var(--p, 0.2em);
+  background: linear-gradient(#7c5cfc 0 0) no-repeat calc(200% - var(--p, 0%)) 100% / 200% var(--p, 0.2em);
   transition: 0.3s var(--t, 0s),
     background-position 0.3s calc(0.3s - var(--t, 0s));
 }
@@ -515,6 +514,11 @@
 .homepage_layer4_img {
   width: 40vw;
   height: 43vw;
+transition: .5s ease-in-out;
+}
+.homepage_layer4_img:hover{
+  transform: scale(1.02);
+
 }
 
 .homepage_layer4_cards_outer {
@@ -620,7 +624,7 @@
 }
 
 .layer5_card {
-  width: 18vw;
+  /* width: 18vw; */
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -629,14 +633,13 @@
   margin-top: 0vw;
   margin-right: 0.3vw;
   padding: 1vw;
-  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+  transition: 0.5s ease-in-out;
 }
 
 .layer5_card:hover {
-  
-  transform: scale(1.03);
-  transition: 0.5s linear;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 1vw;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.201);
 }
 
 
@@ -689,6 +692,7 @@
   color: #fff;
   cursor: pointer;
 }
+
 .layer5_card_lernmore:hover {
   box-shadow: 0 6px 10px rgba(124, 92, 252, 0.477);
   /* transform: scale(1.1); */
@@ -764,6 +768,7 @@
   border-radius: 1vw;
   margin-bottom: 4vw;
 }
+
 .layer6_card:hover {
   transform: scale(1.03);
   transition: 0.5s linear;
@@ -890,6 +895,7 @@
   box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.4);
   background-color: white;
 }
+
 .layer7_card:hover {
   transform: scale(1.03);
   transition: 0.5s linear;
@@ -927,9 +933,11 @@
   overflow-y: scroll;
   color: rgba(0, 0, 0, 0.7);
 }
-.layer7_card_para::-webkit-scrollbar{
+
+.layer7_card_para::-webkit-scrollbar {
   display: none;
 }
+
 .layer7_card_explore {
   font-size: 1vw;
   font-weight: 600;
@@ -1332,7 +1340,8 @@
     margin-top: 7vw;
     gap: 3vw;
   }
-  .layer5_card:hover{
+
+  .layer5_card:hover {
     padding: 5vw 0vw;
     border-radius: 3vw;
   }
@@ -1470,6 +1479,7 @@
     margin: 1vw 0 0 0;
     cursor: pointer;
   }
+
   .layer5_card:nth-child(5) .layer5_card_heading,
   .layer5_card:nth-child(6) .layer5_card_heading,
   .layer5_card:nth-child(7) .layer5_card_heading,
