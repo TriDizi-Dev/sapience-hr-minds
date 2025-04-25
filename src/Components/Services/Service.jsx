@@ -44,6 +44,7 @@ export const Service = ({
   List6,
   Para3Head,
   Para3Content1,
+  paracontent3,
   Para4Content1,
   serviceIcons1,
   serviceIcons1_text,
@@ -392,6 +393,7 @@ export const Service = ({
           </p> */}
           <p className="Niddle_sub_content" data-aos="zoom-in">
             {parse(Para3Content1)}{" "}
+            <span>{paracontent3}</span>
           </p>
           <p className="Niddle_sub_content_p4" data-aos="zoom-in">
             {Para4Content1}

@@ -62,7 +62,7 @@ export const Navbar = () => {
             onMouseLeave={() => setShowDropdown(false)}
           >
             <div className="nav_link">
-              StartUps Mentoring
+              StartUp Consulting
               <div className="nav_underline_wrapper">
                 <div
                   className={` ${
@@ -167,7 +167,7 @@ export const Navbar = () => {
                         navActive === "/talent-management" ? "#ffffff" : "",
                     }}
                   >
-                    Talent Management
+                    Talent Management Solutions
                   </Link>
                 </li>
 

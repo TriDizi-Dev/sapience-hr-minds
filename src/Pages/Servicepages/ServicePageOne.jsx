@@ -22,21 +22,22 @@ export const ServicePageOne = () => {
         Para1Content2={`Our approach is rooted in <strong>Fractional CHRO expertise,</strong> giving you strategic HR support without the cost of a full-time executive. We analyze your current practices, identify compliance gaps, and deliver a customized framework that includes all legally required and industry-specific policies. But we don’t stop at documentation—we help you implement, communicate, and train your teams on the policies that matter.`}
         Para1Content3="Whether you're onboarding your first employee or scaling your workforce, we ensure that your HR policies are aligned with your business vision, reduce operational risk, and meet the evolving needs of a hybrid or remote workforce."
 
-        Para2Head="Our services cover:"
+        Para2Head="Key Offerings:"
 
         // Para2Content2="Lorem Ipsum is simply dummy text of the printing and typesetting
         //     industry. Lorem Ipsum has been the industry's standard dummy text
         //     ever since the 1500s, when an unknown printer took a galley of type
         //     and scrambled it to make a type specimen book Lorem Ipsum is simply
         //     dummy text of the printing and typesetting industry."
-        List1="Drafting and customizing employee handbooks"
-        List2="Developing company-wide HR policies (leave, attendance, performance, discipline)"
-        List3="Statutory compliance aligned with Indian labor laws and global standards"
-        List4="Prevention of Sexual Harassment (POSH) policy creation and compliance training"
-        List5="Workplace safety, ethics, data privacy, and whistleblower guidelines"
-        List6="Onboarding and exit documentation aligned with compliance"
+        List1="Compliance with local, state, and international HR regulations"
+        List2="Development of standardized HR policies and documentation"
+        List3="Support for cross-regional HR operations and global HRIS"
+        // List4="Prevention of Sexual Harassment (POSH) policy creation and compliance training"
+        // List5="Workplace safety, ethics, data privacy, and whistleblower guidelines"
+        // List6="Onboarding and exit documentation aligned with compliance"
         Para3Head="Lorem ipsum dolor"
-        Para3Content1="We understand that for startups and fast-scaling teams, setting up a compliant HR foundation can be overwhelming. That’s why our goal is to simplify the process, reduce legal risk, and give you more time to focus on growth."
+        Para3Content1={`<strong>Client Benefit:</strong>`} 
+        paracontent3=" Mitigates risk, assures legal compliance, and offers peace of mind for companies operating across different regions"  
         serviceIcons2="Audit Success Rate"
         serviceIcons2_text="Our clients stay consistently compliant, achieving high scores in internal and external HR audits."
         serviceIcons1="Customized Frameworks"
