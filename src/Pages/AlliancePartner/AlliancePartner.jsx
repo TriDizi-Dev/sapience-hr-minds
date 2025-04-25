@@ -37,6 +37,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Helmet } from "react-helmet-async";
+import { ToastContainer } from "react-toastify";
 
 export const AlliancePartner = () => {
   const swiperRef = useRef(null);
@@ -534,6 +535,7 @@ export const AlliancePartner = () => {
           />
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 };

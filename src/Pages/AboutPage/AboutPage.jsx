@@ -18,6 +18,7 @@ import { PreFooter } from "../../Components/PreFooter/PreFooter";
 import { Helmet } from "react-helmet-async";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { ToastContainer } from "react-toastify";
 
 export const AboutPage = () => {
   const [count, setCount] = useState(0);
@@ -491,6 +492,7 @@ export const AboutPage = () => {
           Content="Your startup deserves more than just reactive HR. Whether you need structure, compliance, or a culture strategy, let’s have a conversation that moves your business forward. Book a discovery call or fill out the form and let’s shape a smarter, people-powered future for your company."
         />
       </div>
+      <ToastContainer />
     </>
   )
 }
