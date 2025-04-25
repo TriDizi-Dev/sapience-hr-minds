@@ -3,6 +3,7 @@ import "./Footer.css";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
 import { Link, useNavigate } from "react-router-dom";
+import { FaFacebook } from "react-icons/fa6";
 
 export const Footer = () => {
   const navigate = useNavigate();
@@ -37,7 +38,7 @@ export const Footer = () => {
         <div className="footer_right_outer_main_1">
           <div className="footer_center_outer">
             <div className="services_outer">
-              <h4 className="services_headeing">StartUps Mentoring</h4>
+              <h4 className="services_headeing">StartUp Consulting</h4>
               <Link to="/hr-compliance" className="nav_link">
                 <li className="footer_services_items">
                   HR Compliance and Policy Development
@@ -127,13 +128,13 @@ export const Footer = () => {
         </div>
         <div className="footer_right_bottom_icons">
           <div className="footer_icons_outer">
-            <FaLinkedin className="footer_icons" onClick={()=>handleOpenTab("https://www.linkedin.com/company/sapience-minds/")}/>{" "}
-          </div>
-          <div className="footer_icons_outer">
-            <IoLogoYoutube className="footer_icons" />{" "}
+            <FaFacebook className="footer_icons" />{" "}
           </div>
           <div className="footer_icons_outer">
             <FaInstagram className="footer_icons" />{" "}
+          </div>
+          <div className="footer_icons_outer">
+            <FaLinkedin className="footer_icons" onClick={()=>handleOpenTab("https://www.linkedin.com/company/sapience-minds/")}/>{" "}
           </div>
         </div>
       </div>

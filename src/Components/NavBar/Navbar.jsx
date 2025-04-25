@@ -62,7 +62,7 @@ export const Navbar = () => {
             onMouseLeave={() => setShowDropdown(false)}
           >
             <div className="nav_link">
-              StartUps Mentoring
+              StartUp Consulting
               <div className="nav_underline_wrapper">
                 <div
                   className={` ${
@@ -367,7 +367,7 @@ export const Navbar = () => {
                 onMouseLeave={() => setShowDropdown(false)}
               >
                 <div className="nav_link mobile_nav_items">
-                  StartUps Mentoring
+                  StartUp Consulting
                   <div className="nav_underline_wrapper">
                     <div
                       className={` ${
