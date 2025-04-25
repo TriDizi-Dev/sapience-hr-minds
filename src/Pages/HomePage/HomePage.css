@@ -1294,6 +1294,7 @@
   .layer5_cards_outer {
     flex-direction: column;
     align-items: center;
+    margin-right: 4.5vw;
   }
 
   .layer5_card_logo_outer {
@@ -1329,6 +1330,10 @@
     height: fit-content;
     margin-top: 7vw;
     gap: 3vw;
+  }
+  .layer5_card:hover{
+    padding: 5vw 0vw;
+    border-radius: 3vw;
   }
 
   .layer6_cards_outer,
