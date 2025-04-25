@@ -144,7 +144,7 @@ export const PreFooter = ({
     }
   };
 
-  console.log(sourcepages,"sourcepages")
+
 
   return (
     <>
