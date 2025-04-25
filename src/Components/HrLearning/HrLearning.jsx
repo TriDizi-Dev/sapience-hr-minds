@@ -41,8 +41,6 @@ export const HrLearning = ({
     name: "",
     email: "",
     phoneNumber: "",
-    category: questionTitle,
-    joborClass: selectedData.head,
     sourcepage:"Education and Learning"
   });
 
@@ -61,7 +59,8 @@ export const HrLearning = ({
 
     try {
       const formPayload = new FormData();
-      formPayload.append("sheet", "Sheet2");
+      formPayload.append("learning", selectedData.head);
+      formPayload.append("category", questionTitle);
       for (let key in formData) {
         formPayload.append(key, formData[key]);
       }
