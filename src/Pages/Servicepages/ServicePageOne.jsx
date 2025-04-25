@@ -29,9 +29,10 @@ export const ServicePageOne = () => {
         //     ever since the 1500s, when an unknown printer took a galley of type
         //     and scrambled it to make a type specimen book Lorem Ipsum is simply
         //     dummy text of the printing and typesetting industry."
-        List1="Compliance with local, state, and international HR regulations"
-        List2="Development of standardized HR policies and documentation"
-        List3="Support for cross-regional HR operations and global HRIS"
+        keyofferinglist={["Compliance with local, state, and international HR regulations","Development of standardized HR policies and documentation","Support for cross-regional HR operations and global HRIS"]}
+        // List1="Compliance with local, state, and international HR regulations"
+        // List2="Development of standardized HR policies and documentation"
+        // List3="Support for cross-regional HR operations and global HRIS"
         // List4="Prevention of Sexual Harassment (POSH) policy creation and compliance training"
         // List5="Workplace safety, ethics, data privacy, and whistleblower guidelines"
         // List6="Onboarding and exit documentation aligned with compliance"
@@ -55,7 +56,7 @@ export const ServicePageOne = () => {
         service2name="Customized HR Consulting and Advisory Services"
         service3name="Virtual CHRO and Outsourcing of HR Operations"
         service4name="Talent Acquisition Solutions"
-        service5name="Talent Management"
+        service5name="Talent Management Solutions"
         service6name="Talent Engagement & Retention"
         service7name="Recruitment of Leadership & Mid-Level Team"
         service8name="Employee Insurance & Benefits"

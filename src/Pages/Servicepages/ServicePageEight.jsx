@@ -28,15 +28,19 @@ export const ServicePageEight = () => {
         //     ever since the 1500s, when an unknown printer took a galley of type
         //     and scrambled it to make a type specimen book Lorem Ipsum is simply
         //     dummy text of the printing and typesetting industry."
-        List1="Goal setting, performance reviews, and KPI alignment"
-        List2="Managing Performance Improvement Plans (PIPs) effectively"
-        List3="Continuous performance feedback loops"
+        // List1="Goal setting, performance reviews, and KPI alignment"
+        // List2="Managing Performance Improvement Plans (PIPs) effectively"
+        // List3="Continuous performance feedback loops"
         // List4="Employee education and communication"
         // List5="Wellness and work-life integration programs"
+        keyofferinglist={[
+          "Goal setting, performance reviews, and KPI alignment",
+          "Managing Performance Improvement Plans (PIPs) effectively",
+          "Continuous performance feedback loops",
+        ]}
         Para3Head="Lorem ipsum dolor"
-        Para3Content1={`<strong>Client Benefit:</strong>`} 
-        paracontent3="An efficient, data-driven performance management system that aligns individual and team goals with the organization’s strategic objectives, increasing overall productivity"        // Para4Content1="We don’t just advise—we become your strategic HR ally, driving sustainable value."
-
+        Para3Content1={`<strong>Client Benefit:</strong>`}
+        paracontent3="An efficient, data-driven performance management system that aligns individual and team goals with the organization’s strategic objectives, increasing overall productivity" // Para4Content1="We don’t just advise—we become your strategic HR ally, driving sustainable value."
         serviceIcons2="Reduction in Benefits Confusion"
         serviceIcons2_text="Clear communication drives usage and trust."
         serviceIcons1="Compliance with Local Statutory Laws"
@@ -55,7 +59,7 @@ Satisfaction Scores"
         service2name="Customized HR Consulting and Advisory Services"
         service3name="Virtual CHRO and Outsourcing of HR Operations"
         service4name="Talent Acquisition Solutions"
-        service5name="Talent Management"
+        service5name="Talent Management Solutions"
         service6name="Talent Engagement & Retention"
         service7name="Recruitment of Leadership & Mid-Level Team"
         service8name="Employee Insurance & Benefits"

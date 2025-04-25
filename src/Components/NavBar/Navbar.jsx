@@ -435,7 +435,7 @@ export const Navbar = () => {
                 onMouseLeave={() => setTalentManagement(false)}
               >
                 <div className="nav_link mobile_nav_items">
-                  Talent Management
+                  Talent Management 
                   <div className="nav_underline_wrapper">
                     <div
                       className={` ${
@@ -478,7 +478,7 @@ export const Navbar = () => {
                             navActive === "/talent-management" ? "#ffffff" : "",
                         }}
                       >
-                        Talent Management
+                        Talent Management Solutions
                       </Link>
                     </li>
 

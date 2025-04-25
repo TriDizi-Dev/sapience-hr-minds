@@ -27,11 +27,15 @@ export const ServicePageSix = () => {
         //     ever since the 1500s, when an unknown printer took a galley of type
         //     and scrambled it to make a type specimen book Lorem Ipsum is simply
         //     dummy text of the printing and typesetting industry."
-        List1="Succession planning and talent mapping"
-        List2="9-box assessments and performance reviews"
+        // List1="Succession planning and talent mapping"
+        // List2="9-box assessments and performance reviews"
         // List3="Rewards, recognition, and feedback systems"
         // List4="Managerial coaching and team-building programs"
         // List5="Retention risk analysis and intervention strategies"
+        keyofferinglist={[
+"Succession planning and talent mapping",
+"9-box assessments and performance reviews"
+        ]}
         Para3Head="Lorem ipsum dolor"
         // Para4Content1="We don’t just advise—we become your strategic HR ally, driving sustainable value."
  Para3Content1={`<strong>Client Benefit:</strong>`} 
@@ -53,7 +57,7 @@ export const ServicePageSix = () => {
         service2name="Customized HR Consulting and Advisory Services"
         service3name="Virtual CHRO and Outsourcing of HR Operations"
         service4name="Talent Acquisition Solutions"
-        service5name="Talent Management"
+        service5name="Talent Management Solutions"
         service6name="Talent Engagement & Retention"
         service7name="Recruitment of Leadership & Mid-Level Team"
         service8name="Employee Insurance & Benefits"

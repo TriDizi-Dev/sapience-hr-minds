@@ -27,9 +27,10 @@ export const ServicePageTwo = () => {
         //     ever since the 1500s, when an unknown printer took a galley of type
         //     and scrambled it to make a type specimen book Lorem Ipsum is simply
         //     dummy text of the printing and typesetting industry."
-        List1="One-on-one consulting sessions on talent acquisition and management"
-        List2="Customized HR solutions for unique business challenges"
-        List3="Advisory support on building scalable HR infrastructures"
+        keyofferinglist={["One-on-one consulting sessions on talent acquisition and management","Customized HR solutions for unique business challenges","Advisory support on building scalable HR infrastructures"]}
+        // List1="One-on-one consulting sessions on talent acquisition and management"
+        // List2="Customized HR solutions for unique business challenges"
+        // List3="Advisory support on building scalable HR infrastructures"
         // List4="Are navigating growth, restructuring, or leadership transitions"
         Para3Head="Lorem ipsum dolor"
         Para3Content1={`<strong>Client Benefit:</strong>`}
@@ -52,7 +53,7 @@ export const ServicePageTwo = () => {
         service2name="Customized HR Consulting and Advisory Services"
         service3name="Virtual CHRO and Outsourcing of HR Operations"
         service4name="Talent Acquisition Solutions"
-        service5name="Talent Management"
+        service5name="Talent Management Solutions"
         service6name="Talent Engagement & Retention"
         service7name="Recruitment of Leadership & Mid-Level Team"
         service8name="Employee Insurance & Benefits"

@@ -24,9 +24,16 @@ export const ServicePageFour = () => {
         Para1Content2={`Led by seasoned HR expert <strong>Babitha Remith,</strong> with 23+ years of experience across global enterprises, our solutions combine industry best practices with startup agility. We don’t just fill positions—we align hiring with your company’s culture, long-term goals, and growth trajectory.`}
         Para2Head2="Key Offerings:"
         Para1Content3="Our approach includes workforce planning, job profiling, multi-channel sourcing, behavioral assessments, and structured interview processes to ensure consistency and quality. We also help you build strong employer branding to attract top-tier candidates who resonate with your mission and values."
-        List1="Training Needs Analysis (TNA) and skill-gap assessments"
-        List2="Leadership development and managerial training programs"
-        List3="Comprehensive onboarding and orientation for seamless employee integration"
+        keyofferinglist={
+          [
+            "Training Needs Analysis (TNA) and skill-gap assessments",
+            "Leadership development and managerial training programs",
+            "Comprehensive onboarding and orientation for seamless employee integration"
+          ]
+        }
+        // List1="Training Needs Analysis (TNA) and skill-gap assessments"
+        // List2="Leadership development and managerial training programs"
+        // List3="Comprehensive onboarding and orientation for seamless employee integration"
         // List4="High-growth and agile teams"
         // List5="Inclusive, diverse, and values-aligned hiring"
         // Para3Head="Lorem ipsum dolor"
@@ -49,7 +56,7 @@ export const ServicePageFour = () => {
         service2name="Customized HR Consulting and Advisory Services"
         service3name="Virtual CHRO and Outsourcing of HR Operations"
         service4name="Talent Acquisition Solutions"
-        service5name="Talent Management"
+        service5name="Talent Management Solutions"
         service6name="Talent Engagement & Retention"
         service7name="Recruitment of Leadership & Mid-Level Team"
         service8name="Employee Insurance & Benefits"

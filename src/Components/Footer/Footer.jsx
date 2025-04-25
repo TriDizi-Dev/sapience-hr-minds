@@ -37,7 +37,7 @@ export const Footer = () => {
         <div className="footer_right_outer_main_1">
           <div className="footer_center_outer">
             <div className="services_outer">
-              <h4 className="services_headeing">StartUps Mentoring</h4>
+              <h4 className="services_headeing">StartUp Consulting</h4>
               <Link to="/hr-compliance" className="nav_link">
                 <li className="footer_services_items">
                   HR Compliance and Policy Development
@@ -63,7 +63,7 @@ export const Footer = () => {
                 </li>
               </Link>
               <Link to="/talent-management" className="nav_link">
-                <li className="footer_services_items">Talent Management</li>
+                <li className="footer_services_items">Talent Management Solutions</li>
               </Link>
               <Link to="/talent-engagement" className="nav_link">
                 <li className="footer_services_items">
