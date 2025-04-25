@@ -629,13 +629,14 @@
   margin-top: 0vw;
   margin-right: 0.3vw;
   padding: 1vw;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
 }
 
 .layer5_card:hover {
+  
   transform: scale(1.03);
-  box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2);
-  border-radius: 0.5vw;
+  transition: 0.5s linear;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
 

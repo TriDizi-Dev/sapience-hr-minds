@@ -1,6 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./AboutPage.css";
-import AboutMain1 from "../../assets/AboutPage/above_top_img.svg";
+// import AboutMain1 from "../../assets/AboutPage/above_top_img.svg";
+// import AboutMain1 from "../../assets/AboutPage/above_top_img.svg";
+import AboutMain1 from "../../assets/AboutPage/aboutUsHrImage.jpg";
+
 import Orangelayer from "../../assets/AboutPage/orangeshade.svg";
 import Bluelayer from "../../assets/AboutPage/blushade.svg";
 import Person from "../../assets/AboutPage/personImage.svg";
@@ -267,7 +270,7 @@ export const AboutPage = () => {
     <>
          <Helmet>
         <title>
-        About Our Company
+        Sapience Minds-About Our Company
         </title>
         <meta
           name="description"
@@ -334,7 +337,7 @@ export const AboutPage = () => {
         </div>
         <div className="About_page_section2">
           <div className="Left_side_container">
-            <h1 className="Head_Section2">About Us</h1>
+            <h1 className="Head_Section2">About Me</h1>
             <div className="Text_container_layer2">
               <p data-aos="fade-right">
               With over 23 years of HR leadership experience in the technology sector, Babitha Remith brings deep expertise in building people-first organizations. Having held senior roles in global firms like IBM, Micro Focus, and ESI Group, she has led high-impact initiatives in talent management, performance improvement, and employee engagement.
@@ -386,6 +389,8 @@ export const AboutPage = () => {
             
           </div>
         </div>
+        <p className="babitha_name">Babitha Remith</p>
+        <p className="babitha_designation">Founder & Director | Fractional CHRO | HR Transformation Expert</p>
       </div>
 
       <div className="Section3_Main_Container">

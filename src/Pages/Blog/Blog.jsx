@@ -193,7 +193,7 @@ function Blog() {
     <div className="blog_page_main_outer">
       <Helmet>
         <title>
-          The Importance of Workforce Upskilling and Reskilling in Today’s
+        Sapience Minds-The Importance of Workforce Upskilling and Reskilling in Today’s
           Economy
         </title>
         <meta
@@ -252,7 +252,7 @@ function Blog() {
                   </p>
                 </div>
                 <div className="blog_content_right">
-                  <p className="blog_content_right_text">know more</p>
+                  <p className="blog_content_right_text">Know more</p>
                 </div>
               </div>
             </div>

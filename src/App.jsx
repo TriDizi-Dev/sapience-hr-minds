@@ -80,7 +80,7 @@ function Layout() {
         <Route path="/career-update" element={<CareerUpdate/> }/>
         <Route path="/managecareers" element={<SmallCard/>}/>
       </Routes>
-      {!hideFooter && <Footer />}
+      {!hideFooter && <Footer />} 
       </HelmetProvider>
     </>
   );

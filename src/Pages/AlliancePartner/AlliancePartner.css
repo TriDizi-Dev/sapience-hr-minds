@@ -84,11 +84,13 @@
 
 .alliance_right_said h3 {
     font-size: 2.5vw;
+    margin-top: -2vw;
     /* margin-bottom: 0.5vw; */
 }
 
 .alliance_right_said p {
-    font-size: 1vw;
+    font-size: 1.5vw;
+    font-weight: 500;
 }
 
 .SquareIcons_Cont_img img,
@@ -356,7 +358,7 @@
     font-weight: 600;
     color: rgba(0, 0, 0, 0.7);
     text-align: center;
-    margin-top: 2vw;
+    margin-top: 4vw;
 
 }
 

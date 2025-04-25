@@ -185,7 +185,7 @@ export const AlliancePartner = () => {
   return (
     <>
       <Helmet>
-        <title>Expert Who Elevate Our Mission</title>
+        <title>Sapience Minds-Expert Who Elevate Our Mission</title>
         <meta
           name="description"
           content="At Sapience Minds, we collaborate with handpicked industry leaders who bring specialized knowledge and proven excellence to the table. These trusted partners expand our capabilities and ensure that every solution we offer is backed by expertise, innovation, and impact—giving your business access to the very best in HR, leadership, compliance, and beyond."
@@ -270,8 +270,8 @@ export const AlliancePartner = () => {
           </p>
           <div className="alliance_right_said content" data-aos="zoom-in">
             <h3>Krishnan Ravishankar</h3>
-            <p>Principal Architect| Behavior</p>
-            <p> & Performance Optimisation</p>
+            <p>Principal Architect| Behavior &</p>
+            <p>Performance Optimisation</p>
           </div>
         </div>
       </div>
@@ -436,12 +436,7 @@ export const AlliancePartner = () => {
             <p className="aliancepartner_layer4_heading2" data-aos="fade-up">
               Collaboration Key Service Areas of our Alliance Partner
             </p>
-            <h1 className="aliancepartner_layer4_heading" data-aos="fade-down">
-              Our Alliance Partner’s commitment to trusted client support and
-              personalized, data-driven solutions makes him an invaluable part
-              of our team, contributing to our mission to elevate HR practices
-              for lasting organizational success.
-            </h1>
+
             {/* <p className="Alianceparter_layer4_para">
                 At Sapience Minds, our values are the foundation of every
                 partnership. We believe in integrity, collaboration, and a
@@ -522,6 +517,12 @@ export const AlliancePartner = () => {
                 </ul>
               </div>
             </div>
+            <h1 className="aliancepartner_layer4_heading" data-aos="fade-right">
+              Our Alliance Partner’s commitment to trusted client support and
+              personalized, data-driven solutions makes him an invaluable part
+              of our team, contributing to our mission to elevate HR practices
+              for lasting organizational success.
+            </h1>
           </div>
         </div>
       </div>

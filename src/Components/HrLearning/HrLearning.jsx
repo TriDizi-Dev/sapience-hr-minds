@@ -38,10 +38,10 @@ export const HrLearning = ({
     setShowForm(true);
   };
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phoneNumber: "",
-    sourcepage:"Education and Learning"
+    Name: "",
+    Email: "",
+    PhoneNumber: "",
+    Sourcepage:"Education and Learning"
   });
 
   const handleChange = (e) => {
@@ -59,8 +59,8 @@ export const HrLearning = ({
 
     try {
       const formPayload = new FormData();
-      formPayload.append("learning", selectedData.head);
-      formPayload.append("category", questionTitle);
+      formPayload.append("Learning", selectedData.head);
+      formPayload.append("Category", questionTitle);
       for (let key in formData) {
         formPayload.append(key, formData[key]);
       }
@@ -83,9 +83,9 @@ export const HrLearning = ({
           draggable: true,
         });
         setFormData({
-          name: "",
-          email: "",
-          phoneNumber: "",
+          Name: "",
+          Email: "",
+          PhoneNumber: "",
         });
         handleCloseForm();
       } else {
@@ -279,8 +279,8 @@ export const HrLearning = ({
                 Name:
                 <input
                   type="text"
-                  name="name"
-                  value={formData.name}
+                  name="Name"
+                  value={formData.Name}
                   onChange={handleChange}
                   required
                   className="Input"
@@ -291,8 +291,8 @@ export const HrLearning = ({
                 Email:
                 <input
                   type="email"
-                  name="email"
-                  value={formData.email}
+                  name="Email"
+                  value={formData.Email}
                   onChange={handleChange}
                   required
                   className="Input"
@@ -302,8 +302,8 @@ export const HrLearning = ({
                 Phone Number:
                 <input
                   type="tel"
-                  name="phoneNumber"
-                  value={formData.phoneNumber}
+                  name="PhoneNumber"
+                  value={formData.PhoneNumber}
                   onChange={handleChange}
                   required
                   className="Input"

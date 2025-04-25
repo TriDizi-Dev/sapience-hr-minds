@@ -470,7 +470,7 @@ function Carrier() {
                   </div>
                 </div>
               </div>
-              <div className="carrier_layer2_right_card" data-aos="zoom-in">
+              {/* <div className="carrier_layer2_right_card" data-aos="zoom-in">
                 <div className="layer2_card_logo_outer">
                   <img src={logo5} alt="logo5" className="layer2_card_logo" />
                 </div>
@@ -481,8 +481,8 @@ function Carrier() {
                     Vestibulum consequat hendrerit lacus.
                   </div>
                 </div>
-              </div>
-              <div className="carrier_layer2_right_card" data-aos="zoom-in">
+              </div> */}
+              {/* <div className="carrier_layer2_right_card" data-aos="zoom-in">
                 <div className="layer2_card_logo_outer">
                   <img src={logo6} alt="logo6" className="layer2_card_logo" />
                 </div>
@@ -493,7 +493,7 @@ function Carrier() {
                     Vestibulum consequat hendrerit lacus.
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -572,7 +572,7 @@ function Carrier() {
                       <AccordionSummary
                         expandIcon={
                           <ArrowForwardIosSharpIcon
-                            sx={{ fontSize: "0.9rem" }}
+                            sx={{ fontSize: "1.2rem" }}
                           />
                         }
                         aria-controls="panel-content"
@@ -1017,13 +1017,14 @@ function Carrier() {
             prevEl: ".custom-prev-button",
             nextEl: ".custom-next-button",
           }}
-          pagination={{ clickable: true }}
+          pagination={Blogs.length > 3 ? { clickable: true } : false}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
           }}
           speed={1000}
-          loop={true}
+          // loop={true}
+          loop={Blogs.length > 3}
           className="carrier_last_Cards"
           breakpoints={{
             320: {
