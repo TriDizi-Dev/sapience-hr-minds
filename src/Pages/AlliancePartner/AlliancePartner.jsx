@@ -26,6 +26,8 @@ import man_4 from "../../assets/HomePage/man_4.png";
 import man_5 from "../../assets/HomePage/man_5.png";
 import man_6 from "../../assets/HomePage/man_6.png";
 import woman_1 from "../../assets/HomePage/woman_1.png";
+import icon_1 from "../../assets/AboutPage/icon_1.svg";
+import icon_2 from "../../assets/AboutPage/icon_2.svg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
@@ -182,19 +184,14 @@ export const AlliancePartner = () => {
   return (
     <>
       <Helmet>
-      <title>
-      Expert Who Elevate Our Mission
-        </title>
+        <title>Expert Who Elevate Our Mission</title>
         <meta
           name="description"
           content="At Sapience Minds, we collaborate with handpicked industry leaders who bring specialized knowledge and proven excellence to the table. These trusted partners expand our capabilities and ensure that every solution we offer is backed by expertise, innovation, and impact—giving your business access to the very best in HR, leadership, compliance, and beyond."
         />
 
-           {/* Open Graph Meta Tags (for WhatsApp, Facebook, LinkedIn) */}
-           <meta
-          property="og:title"
-          content="Expert Who Elevate Our Mission"
-        />
+        {/* Open Graph Meta Tags (for WhatsApp, Facebook, LinkedIn) */}
+        <meta property="og:title" content="Expert Who Elevate Our Mission" />
         <meta
           property="og:description"
           content="At Sapience Minds, we collaborate with handpicked industry leaders who bring specialized knowledge and proven excellence to the table. These trusted partners expand our capabilities and ensure that every solution we offer is backed by expertise, innovation, and impact—giving your business access to the very best in HR, leadership, compliance, and beyond."
@@ -203,18 +200,12 @@ export const AlliancePartner = () => {
           property="og:image"
           content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
         />
-        <meta
-          property="og:url"
-          content="https://tridizi.com/"
-        />
+        <meta property="og:url" content="https://tridizi.com/" />
         <meta property="og:type" content="website" />
 
-      {/* Twitter Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Expert Who Elevate Our Mission"
-        />
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Expert Who Elevate Our Mission" />
         <meta
           name="twitter:description"
           content="At Sapience Minds, we collaborate with handpicked industry leaders who bring specialized knowledge and proven excellence to the table. These trusted partners expand our capabilities and ensure that every solution we offer is backed by expertise, innovation, and impact—giving your business access to the very best in HR, leadership, compliance, and beyond."
@@ -223,7 +214,6 @@ export const AlliancePartner = () => {
           name="twitter:image"
           content="https://tridizi.com/assets/10782741_19197279%201-DKNLt4HA.svg"
         />
-
       </Helmet>
       <div className="AlliancePartner_Main_Container">
         <p className="BlueLayer_HeroBanner">
@@ -235,7 +225,12 @@ export const AlliancePartner = () => {
         <div className="Image_Upper_Text_Container" data-aos="zoom-in">
           <p className="Header_Text">Expert Who Elevate Our Mission</p>
           <p className="Header_Sub_Text">
-          At Sapience Minds, we collaborate with handpicked industry leaders who bring specialized knowledge and proven excellence to the table. These trusted partners expand our capabilities and ensure that every solution we offer is backed by expertise, innovation, and impact—giving your business access to the very best in HR, leadership, compliance, and beyond.
+            At Sapience Minds, we collaborate with handpicked industry leaders
+            who bring specialized knowledge and proven excellence to the table.
+            These trusted partners expand our capabilities and ensure that every
+            solution we offer is backed by expertise, innovation, and
+            impact—giving your business access to the very best in HR,
+            leadership, compliance, and beyond.
           </p>
         </div>
       </div>
@@ -243,10 +238,25 @@ export const AlliancePartner = () => {
         <div className="Left_Container_AlliancePartner" data-aos="fade-right">
           <p className="Heading_text_AlliancePartner">Alliance Partner</p>
           <p className="para1_text_AlliancePartner">
-          At Sapience Minds, we proudly collaborate with Krishnan Ravishankar, our Alliance Partner and Principal Architect – Behavior & Performance Optimization (Solutions Partner – Harrison Assessments, India). 
+            At Sapience Minds, we proudly collaborate with Krishnan Ravishankar,
+            our Alliance Partner and Principal Architect – Behavior &
+            Performance Optimization (Solutions Partner – Harrison Assessments,
+            India).
           </p>
           <p className="para2_text_AlliancePartner">
-          With over 40 years of global expertise across core HR services, organizational development, training, and industrial relations, Krishnan has empowered clients across India, the USA, Africa, Singapore, Malaysia, and the Middle East. His experience with top corporate and multinational environments brings exceptional depth to our Fractional CHRO offerings helping startups and growing businesses enhance their people performance and unlock measurable growth.
+            With over 40 years of global expertise across core HR services,
+            organizational development, training, and industrial relations,
+            Krishnan has empowered clients across India, the USA, Africa,
+            Singapore, Malaysia, and the Middle East. His experience with top
+            corporate and multinational environments brings exceptional depth to
+            our Fractional CHRO offerings helping startups and growing
+            businesses enhance their people performance and unlock measurable
+            growth.
+          </p>
+          <p className="para2_text_AlliancePartner">
+            His extensive background working with prominent corporate groups and
+            multinational companies uniquely positions him to drive impactful
+            change for our clients.
           </p>
         </div>
         <div className="Right_Container_AlliancePartner">
@@ -261,11 +271,10 @@ export const AlliancePartner = () => {
             <h3>Krishnan Ravishankar</h3>
             <p>Principal Architect| Behavior</p>
             <p> & Performance Optimisation</p>
-            {/* <p>(Solutions Partner- Harrison Assessments)</p> */}
           </div>
         </div>
       </div>
-      <div className="Section3_Alliance_Main_Container">
+      {/* <div className="Section3_Alliance_Main_Container">
         <p className="Section3_Alliance_Heading1" data-aos="fade-right">
         Our Core Services
         </p>
@@ -288,15 +297,14 @@ export const AlliancePartner = () => {
               <p className="Horizontal_Alliance_row"></p>
               <p className="Cards_Alliance_Sub_head">{item.subHead}</p>
               <p className="Cards_Alliance_Name">{item.para}</p>
-              {/* <p className="Cards_Alliance_Heading">{item.Head}</p> */}
             </div>
           ))}
           <p className="orangeLayer_Contaner">
             <img src={orangeLayer} alt="orangeLayer" />
           </p>
         </div>
-      </div>
-      <div className="Alliance_layer4_outer_main">
+      </div> */}
+      {/* <div className="Alliance_layer4_outer_main">
         <div className="Alliance_layer4_outer">
           <div className="Alliance_layer4_part1" data-aos="fade-down">
             <p className="Alliance_layer4_part1_heading">Testimonials</p>
@@ -305,7 +313,6 @@ export const AlliancePartner = () => {
             </h1>
           </div>
 
-          {/* this below cards section is for the testimonial cards css home page applied once check it  */}
           <div className="layer6_cards_outer">
             <Swiper
               modules={[Navigation, Pagination, Autoplay]}
@@ -335,13 +342,12 @@ export const AlliancePartner = () => {
                 },
               }}
               onSwiper={(swiper) => {
-                swiperRef.current = swiper; // Assign Swiper instance to swiperRef
+                swiperRef.current = swiper; 
               }}
             >
               {testmonials?.map((data, index) => (
                 <SwiperSlide key={index}>
                   <div className="layer6_card">
-                    {/* <p className="layer6_card_logo">{data.logo}</p> */}
 
                     <div className="layer6_card_bottom">
                       <div className="layer6_bottom_logo_outer">
@@ -420,88 +426,109 @@ export const AlliancePartner = () => {
               )}
             </div>
           )}
+        </div>
+      </div> */}
 
-          {/* <div className="Alliance_layer4_cards_outer">
-          
-            <div
-              className="Alliance_layer4_card"
-              data-aos="zoom-in"
-              
-            >
-              <p className="Alliance_layer4_card_logo">Logo</p>
-              <p className="Alliance_layer4_card_para">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever.
-              </p>
-              <div className="Alliance_layer4_card_bottom">
-                <div className="Alliance_layer4_bottom_logo_outer">
-                  <img src={man} alt="man" className="card_bottom_logo" />
-                </div>
-                <div className="Alliance_card_bottom_right_text">
-                  <h6 className="Alliance_card_bottom_heading">Name</h6>
-                  <p className="Alliance_card_bottom_para">Lorem Ipsum</p>
-                </div>
-              </div>
-            </div>
-            <div
-              className="Alliance_layer4_card"
-              data-aos="zoom-in"
-              
-            >
-              <p className="Alliance_layer4_card_logo">Logo</p>
-              <p className="Alliance_layer4_card_para">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever.
-              </p>
-              <div className="Alliance_layer4_card_bottom">
-                <div className="Alliance_layer4_bottom_logo_outer">
+      <div className="Alianceparter_layer4_outer_main">
+        <div className="Aliancceparter_layer4_outer" data-aos="fade-right">
+          <div className="">
+            <p className="aliancepartner_layer4_heading2">
+              Collaboration Key Service Areas of our Alliance Partner
+            </p>
+            <h1 className="aliancepartner_layer4_heading">
+              Our Alliance Partner’s commitment to trusted client support and
+              personalized, data-driven solutions makes him an invaluable part
+              of our team, contributing to our mission to elevate HR practices
+              for lasting organizational success.
+            </h1>
+            {/* <p className="Alianceparter_layer4_para">
+                At Sapience Minds, our values are the foundation of every
+                partnership. We believe in integrity, collaboration, and a
+                relentless commitment to empowering startups with people-first
+                HR strategies that deliver real impact. Our approach is
+                empathetic, strategic, and always aligned with your business
+                goals.
+              </p> */}
+
+            <div className="Aliancepartenr_layer4_cards_outer">
+              <div className="Alliancepartner_layer4_card">
+                <div className="Alliancepartner_layer4_card_logo">
                   <img
-                    src={man}
-                    alt="man"
-                    className="Alliance_card_bottom_logo"
+                    src={icon_1}
+                    alt="Smallicon1"
+                    className="Alliancepartner_layer4_logo"
                   />
                 </div>
-                <div className="Alliance_card_bottom_right_text">
-                  <h6 className="Alliance_card_bottom_heading">Name</h6>
-                  <p className="Alliance_card_bottom_para">Lorem Ipsum</p>
-                </div>
+                <p className="Alliancepartner_layer4_card_heading">
+                  Solutions for the EDU segment
+                </p>
+                <ul className="List_main_aliancepartener">
+                  <li className="Aliancepartner_card_para">
+                    Scientific Career Planning (Guiding students with
+                    scientifically-backed assessment tools to make informed
+                    career choices){" "}
+                  </li>
+                  <li className="Aliancepartner_card_para">
+                    Competency Enhancement for Teaching Staff (Developing
+                    customized programs to elevate teaching staff
+                    capabilities/competencies, ensuring alignment with
+                    institutional goals)
+                  </li>
+                  <li className="Aliancepartner_card_para">
+                    Employability skills training workshop for students taking a
+                    leap into the corporate world
+                  </li>
+                  <li className="Aliancepartner_card_para">
+                    Training the Career Counsellors workshop (Meant for Career
+                    planning & Placement staff to become world class Career
+                    Coaches)
+                  </li>
+                  <li className="Aliancepartner_card_para">
+                    Effective Campus placements (Assessment based training
+                    workshop, meant for final year students).
+                  </li>
+                </ul>
               </div>
-            </div>
-            <div
-              className="Alliance_layer4_card"
-              data-aos="zoom-in"
-              
-            >
-              <p className="Alliance_layer4_card_logo">Logo</p>
-              <p className="Alliance_layer4_card_para">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever.
-              </p>
-              <div className="Alliance_layer4_card_bottom">
-                <div className="Alliance_layer4_bottom_logo_outer">
+              <div className="Alliancepartner_layer4_card">
+                <div className="Alliancepartner_layer4_card_logo">
                   <img
-                    src={man}
-                    alt="man"
-                    className="Alliance_card_bottom_logo"
+                    src={icon_2}
+                    alt="Smallicon2"
+                    className="Alliancepartner_layer4_logo"
                   />
                 </div>
-                <div className="Alliance_card_bottom_right_text">
-                  <h6 className="Alliance_card_bottom_heading">Name</h6>
-                  <p className="Alliance_card_bottom_para">Lorem Ipsum</p>
-                </div>
+                <p className="Alliancepartner_layer4_card_heading">
+                  Talent Management and Development Solutions for corporate/SME
+                  companies
+                </p>
+                <ul className="List_main_aliancepartener">
+                  <li className="Aliancepartner_card_para">
+                    Offering specialized assessments, coaching, mentoring and
+                    training solutions designed to optimize talent across
+                    various organizational levels.
+                  </li>
+                  <li className="Aliancepartner_card_para">
+                    Leveraging AI-driven, global research-based assessment
+                    tools, our approach delivers precise insights for students,
+                    educators, and corporate working professionals alike.
+                  </li>
+                  <li className="Aliancepartner_card_para">
+                    This scientifically- grounded process supports all stages of
+                    the HR cycle and career journey, helping organizations and
+                    educational institutions foster productivity, efficiency,
+                    and profitability through well-informed talent strategies.
+                  </li>
+                </ul>
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
 
       <div>
         <div className="Alliance_Pre_Footer_Container">
           <PreFooter
-          sourcepages="AlliancePartner"
+            sourcepages="AlliancePartner"
             Head="Let’s Build Your People Strategy – Together"
             Content="Your startup deserves more than just reactive HR. Whether you need structure, compliance, or a culture strategy, let’s have a conversation that moves your business forward. Book a discovery call or fill out the form and let’s shape a smarter, people-powered future for your company."
           />
