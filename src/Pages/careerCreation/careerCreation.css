@@ -143,6 +143,7 @@
 @media screen and (min-width: 320px) and (max-width: 720px) {
   .career_creation_container {
     padding: 2vw 2vw 2vw 2vw;
+    margin-top: 13vw;
     height: fit-content;
   }
   .career_details_sub {

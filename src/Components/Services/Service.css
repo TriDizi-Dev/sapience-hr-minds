@@ -545,6 +545,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 18vw;
     width: 100%;
   }
 
@@ -862,6 +863,7 @@
   }
 
   .virtual-chro-submit-button {
+    margin: 2vw;
     padding: 1vw;
     font-size: 4vw;
     border-radius: 5vw;

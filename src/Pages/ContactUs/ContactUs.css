@@ -183,6 +183,7 @@
   }
   .reach-container{
     height:120vw;
+    margin-top: 18vw;
    align-items: start;
    margin-bottom: -5vw;
   }
@@ -236,7 +237,8 @@
   }
   .reach-form button{
     font-size: 5vw;
-    height: 10vw;
+    height: 9vw;
+    padding: 0.5vw;
     border-radius: 5vw;
   }
 
