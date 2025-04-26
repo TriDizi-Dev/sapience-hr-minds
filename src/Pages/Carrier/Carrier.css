@@ -613,31 +613,35 @@ flex-wrap: 800;
 
 
 @media (min-width: 320px) and (max-width: 720px) {
+    .carriers_outer_main{
+        margin-top: 12vw;
+    }
     .carrier_bg_heading {
-        font-size: 20vw;
-        margin-top: -4vw;
+        font-size: 17.5vw;
+        margin-top: -7vw;
+        /* margin-left: 10vw; */
     }
 
     .carrier_heading {
-        font-size: 6.5vw;
+        font-size: 6.2vw;
         text-align: center;
     }
 
     .carrier_banner_para {
         font-size: 4vw;
         width: 90vw;
-        margin-top: -.5vw;
+        margin-top: 0.5vw;
     }
 
     .carriers_banner_buttons {
         flex-direction: column;
-        top: 54vw;
+        top: 58vw;
         gap: 3vw;
         align-items: center;
     }
 
     .carrier_layer3_main{
-        margin-top: -85vw;
+        margin-top: -45vw;
         border-top-right-radius: 8vw;
         border-top-left-radius: 8vw;
         background-color: white;
@@ -670,16 +674,16 @@ flex-wrap: 800;
     .carrier_layer2_outer {
         flex-direction: column;
         align-items: center;
-        height: 360vw;
+        height: 310vw;
         padding: 10vw 4vw;
-        margin-top: 40vw;
+        margin-top: 45vw;
     }
 .carrier_layer2_left{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: -90vw;
+    margin-top: -60vw;
 }
     .layer2_heading {
         font-size: 6vw;
@@ -943,17 +947,19 @@ width: fit-content;
        padding-top: 3vw;
     }
    .card_hading_one{
-       font-size: 4vw;
+       font-size: 3.5vw;
        font-weight: 600;
     }
    .card_para{
-       font-size:4vw;
+       font-size:3.5vw;
        font-weight: normal;
+       height: 20vw;
        width:   100%;
    }
    .card_readmore{
        font-size:4vw;
        width:30vw;
+       margin-top: 1.5vw;
        padding-left: 2vw;
         font-weight: 600;
    }

@@ -172,6 +172,9 @@
   }
 
 @media screen and (min-width:320px) and (max-width:720px){
+    .single_blog_outer_main{
+        margin-top: 18vw;
+    }
     .single_blog_banner_img{
         background-image: url("../../assets//SingleBlog//blogbanner.jpg");
         background-repeat: no-repeat;

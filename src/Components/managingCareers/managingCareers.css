@@ -134,6 +134,9 @@
 
 /* Responsive */
 @media screen and (max-width: 720px) {
+  .small-main-container{
+    margin-top: 18vw;
+  }
   .card-container {
     max-width: 90vw;
     padding: 4vw;

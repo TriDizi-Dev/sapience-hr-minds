@@ -233,7 +233,7 @@ will-change: transform;
 @media screen and (min-width: 320px) and (max-width: 720px) {
     .Hr_Hero_container{
         height: 50vw;
-        margin-top: 5vw;
+        margin-top: 18vw;
     }
     .Hr_Hero_container img{
         height: 50vw;
