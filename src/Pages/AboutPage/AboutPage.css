@@ -470,6 +470,7 @@
 
     .About_Main_Container {
         display: flex;
+        margin-top: 18vw;
         flex-direction: column;
         justify-content: start;
         align-items: center;

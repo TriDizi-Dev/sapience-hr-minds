@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Navbar.css";
 import { IoReorderThree } from "react-icons/io5";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -6,15 +6,41 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 export const Navbar = () => {
   const navigate = useNavigate();
   const [openNavlist, setOpenNavlist] = useState(false);
+  const navListRef = useRef(null);
   const [navActive, setNavActive] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
   const [TalentManagement, setTalentManagement] = useState(false);
   const [Education, setEducation] = useState(false);
   const location = useLocation();
 
+  // const handleNavList = () => {
+  //   setOpenNavlist(!openNavlist);
+  // };
+
   const handleNavList = () => {
-    setOpenNavlist(!openNavlist);
+    setOpenNavlist((prev) => !prev);
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navListRef.current && !navListRef.current.contains(event.target)) {
+        setOpenNavlist(false);
+      }
+    };
+
+    const handleScroll = () => {
+      setOpenNavlist(false);
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   useEffect(() => {
     const currentPath = location.pathname;
     setNavActive(currentPath);
