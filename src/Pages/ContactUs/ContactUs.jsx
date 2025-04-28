@@ -101,8 +101,16 @@ const ContactForm = () => {
 
         <div className="right-accent">
           <div className="social-icons">
-            <FaFacebook />
-            <FaInstagram />
+            <FaFacebook onClick={() =>
+                handleOpenTab(
+                  "https://www.facebook.com/people/Sapience-Minds/61564911584088/"
+                )
+              }/>
+            <FaInstagram onClick={() =>
+                handleOpenTab(
+                  "https://www.instagram.com/sapience_minds?igsh=eHhpYm4ydnhnMGZh"
+                )
+              }/>
             <FaLinkedin
               onClick={() =>
                 handleOpenTab(
