@@ -394,7 +394,8 @@
   width: 84vw;
   overflow: hidden;
   white-space: nowrap;
-  margin-top: 1vw;
+  margin-top: 2vw;
+  margin-bottom: 1vw;
   position: relative;
 }
 
@@ -414,7 +415,7 @@
 .layer2_logos_1{
   width: 8vw;
   height: 4vw;
-  margin: 1vw 1vw;
+  margin: 1vw 0.5vw 0vw 2vw;
   border-radius: 0.5vw;
 }
 .layer2_logos_2{

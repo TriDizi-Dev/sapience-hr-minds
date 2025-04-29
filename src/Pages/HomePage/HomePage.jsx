@@ -47,26 +47,45 @@ import "react-toastify/dist/ReactToastify.css";
 import client1 from "../../assets/HomePage/image1.png"
 import client2 from "../../assets/HomePage/image2.png"
 import client3 from "../../assets/HomePage/image3.png"
-import client4 from "../../assets/HomePage/image4.png"
-import client5 from "../../assets/HomePage/image5.png"
+
+// import client4 from "../../assets/HomePage/image4.png"
+import client4 from "../../assets/HomePage/image4-removebg.png"
+
+// import client5 from "../../assets/HomePage/image5.png"
+import client5 from "../../assets/HomePage/image5-removebg.png"
+
 import client6 from "../../assets/HomePage/image6.png"
 import client7 from "../../assets/HomePage/image7.png"
-import client8 from "../../assets/HomePage/image8.png"
-import client9 from "../../assets/HomePage/image9.png"
+
+// import client8 from "../../assets/HomePage/image8.png"
+import client8 from "../../assets/HomePage/image8-removebg.png"
+
+// import client9 from "../../assets/HomePage/image9.png"
+import client9 from "../../assets/HomePage/image9-removebg.png"
+
 import client10 from "../../assets/HomePage/image10.png"
 import client11 from "../../assets/HomePage/image11.png"
 import client12 from "../../assets/HomePage/image12.png"
-import client13 from "../../assets/HomePage/image13.png"
+// import client13 from "../../assets/HomePage/image13.png"
+import client13 from "../../assets/HomePage/image13-removebg.png"
+
+
 import client14 from "../../assets/HomePage/image14.png"
 import client15 from "../../assets/HomePage/image15.png"
 import client16 from "../../assets/HomePage/image16.png"
-import client17 from "../../assets/HomePage/image17.png"
+// import client17 from "../../assets/HomePage/image17.png"
+import client17 from "../../assets/HomePage/image17-removebg.png"
+
 import client18 from "../../assets/HomePage/image18.png"
-import client19 from "../../assets/HomePage/image19.jpg"
+// import client19 from "../../assets/HomePage/image19.jpg"
+import client19 from "../../assets/HomePage/image19-removebg.png"
+
 import client20 from "../../assets/HomePage/image20.png"
 import client21 from "../../assets/HomePage/image21.png"
 import client22 from "../../assets/HomePage/image22.png"
-import client23 from "../../assets/HomePage/image23.png"
+// import client23 from "../../assets/HomePage/image23.png"
+import client23 from "../../assets/HomePage/image23-removebg.png"
+
 import client24 from "../../assets/HomePage/image24.png"
 import client25 from "../../assets/HomePage/image25.png"
 
