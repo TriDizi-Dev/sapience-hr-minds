@@ -128,10 +128,10 @@ export const Footer = () => {
         </div>
         <div className="footer_right_bottom_icons">
           <div className="footer_icons_outer">
-            <FaFacebook className="footer_icons" />{" "}
+            <FaFacebook className="footer_icons" onClick={()=>handleOpenTab("https://www.facebook.com/people/Sapience-Minds/61564911584088/")}/>{" "}
           </div>
           <div className="footer_icons_outer">
-            <FaInstagram className="footer_icons" />{" "}
+            <FaInstagram className="footer_icons" onClick={()=>handleOpenTab("https://www.instagram.com/sapience_minds?igsh=eHhpYm4ydnhnMGZh")} />{" "}
           </div>
           <div className="footer_icons_outer">
             <FaLinkedin className="footer_icons" onClick={()=>handleOpenTab("https://www.linkedin.com/company/sapience-minds/")}/>{" "}
