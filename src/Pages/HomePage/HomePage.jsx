@@ -698,7 +698,7 @@ export const HomePage = () => {
           </div>
           <div className="layer5_cards_outer">
             {cardscontent.map((data, ind) => (
-              <div className="layer5_card" key={ind} data-aos="zoom-in-up">
+              <div className="layer5_card" key={ind} >
                 <div className="layer5_card_logo_outer">
                   <img
                     src={data.Logo}
