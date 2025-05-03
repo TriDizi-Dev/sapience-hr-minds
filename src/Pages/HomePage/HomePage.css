@@ -1355,9 +1355,13 @@ transition: .5s ease-in-out;
     align-items: center;
   }
   .layer2_logos_inner {
-    display: inline-flex;
+    /* display: inline-flex;
     animation: scrollLogos 60s linear infinite;
-    gap: 10vw;
+    gap: 10vw; */
+    display: flex;
+    width: max-content;
+    animation: scrollLogos 70s linear infinite;
+    gap:10vw;
   }
 
   /* .layer2_logos {
