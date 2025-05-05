@@ -34,9 +34,6 @@ export const ServicePageEight = () => {
         // List4="Employee education and communication"
         // List5="Wellness and work-life integration programs"
         keyofferinglist={[
-          "Goal setting, performance reviews, and KPI alignment",
-          "Managing Performance Improvement Plans (PIPs) effectively",
-          "Continuous performance feedback loops",
         ]}
         Para3Head="Lorem ipsum dolor"
         Para3Content1={`<strong>Client Benefit:</strong>`}

@@ -230,6 +230,13 @@ will-change: transform;
 .card_boxshadow {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+.applynow_content_para{
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 1.4vw;
+    color: #4F5665;
+    margin-top: 1vw;
+}
 
 @media screen and (min-width: 320px) and (max-width: 720px) {
     .Hr_Hero_container{

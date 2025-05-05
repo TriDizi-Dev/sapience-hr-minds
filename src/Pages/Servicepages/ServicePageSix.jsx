@@ -33,8 +33,10 @@ export const ServicePageSix = () => {
         // List4="Managerial coaching and team-building programs"
         // List5="Retention risk analysis and intervention strategies"
         keyofferinglist={[
-"Succession planning and talent mapping",
-"9-box assessments and performance reviews"
+          "Employee engagement surveys and HR Connect meetings",
+"Employee recognition programs",
+"End-to-end engagement programs with surveys, 30/60/90-day check-ins, and ongoing HRBP support to ensure positive employee experience."
+       
         ]}
         Para3Head="Lorem ipsum dolor"
         // Para4Content1="We don’t just advise—we become your strategic HR ally, driving sustainable value."

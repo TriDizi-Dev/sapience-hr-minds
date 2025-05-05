@@ -46,7 +46,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import client1 from "../../assets/HomePage/image1.png"
 import client2 from "../../assets/HomePage/image2.png"
-import client3 from "../../assets/HomePage/image3.png"
+// import client3 from "../../assets/HomePage/image3.png"
 
 // import client4 from "../../assets/HomePage/image4.png"
 import client4 from "../../assets/HomePage/image4-removebg.png"
@@ -67,12 +67,12 @@ import client10 from "../../assets/HomePage/image10.png"
 import client11 from "../../assets/HomePage/image11.png"
 import client12 from "../../assets/HomePage/image12.png"
 // import client13 from "../../assets/HomePage/image13.png"
-import client13 from "../../assets/HomePage/image13-removebg.png"
+// import client13 from "../../assets/HomePage/image13-removebg.png"
 
 
 import client14 from "../../assets/HomePage/image14.png"
 import client15 from "../../assets/HomePage/image15.png"
-import client16 from "../../assets/HomePage/image16.png"
+// import client16 from "../../assets/HomePage/image16.png"
 // import client17 from "../../assets/HomePage/image17.png"
 import client17 from "../../assets/HomePage/image17-removebg.png"
 
@@ -584,41 +584,12 @@ export const HomePage = () => {
           <p className="layer2_top_text">
             Trusted Companies to scale their Business through HR domain{" "}
           </p>
-          {/* <div className="layer2_logos_outer">
-            <div className="layer2_logos_inner">
-              <img src={client1} alt="dummylogo" className="layer2_logos_1" />
-              <img src={client2} alt="dummylogo" className="layer2_logos_2" />
-              <img src={client3} alt="dummylogo" className="layer2_logos_3" />
-              <img src={client4} alt="dummylogo" className="layer2_logos_4" />
-              <img src={client5} alt="dummylogo" className="layer2_logos_5" />
-              <img src={client6} alt="dummylogo" className="layer2_logos_6" />
-              <img src={client8} alt="dummylogo" className="layer2_logos_8" />
-              <img src={client7} alt="dummylogo" className="layer2_logos_7" />
-              <img src={client9} alt="dummylogo" className="layer2_logos_9" />
-              <img src={client10} alt="dummylogo" className="layer2_logos_10" />
-              <img src={client11} alt="dummylogo" className="layer2_logos_11" />
-              <img src={client12} alt="dummylogo" className="layer2_logos_12" />
-              <img src={client13} alt="dummylogo" className="layer2_logos_13" />
-              <img src={client14} alt="dummylogo" className="layer2_logos_14" />
-              <img src={client15} alt="dummylogo" className="layer2_logos_15" />
-              <img src={client16} alt="dummylogo" className="layer2_logos_16" />
-              <img src={client17} alt="dummylogo" className="layer2_logos_17" />
-              <img src={client18} alt="dummylogo" className="layer2_logos_18" />
-              <img src={client19} alt="dummylogo" className="layer2_logos_19" />
-              <img src={client20} alt="dummylogo" className="layer2_logos_20" />
-              <img src={client21} alt="dummylogo" className="layer2_logos_21" />
-              <img src={client22} alt="dummylogo" className="layer2_logos_22" />
-              <img src={client23} alt="dummylogo" className="layer2_logos_23" />
-              <img src={client24} alt="dummylogo" className="layer2_logos_24" />
-              <img src={client25} alt="dummylogo" className="layer2_logos_25" />
-            </div>
-          </div> */}
           <div className="layer2_logos_outer">
   <div className="layer2_logos_inner">
     {/* Original set */}
     <img src={client1} alt="logo1" className="layer2_logos_1" />
     <img src={client2} alt="logo2" className="layer2_logos_2" />
-    <img src={client3} alt="logo3" className="layer2_logos_3" />
+    {/* <img src={client3} alt="logo3" className="layer2_logos_3" /> */}
     <img src={client4} alt="logo4" className="layer2_logos_4" />
     <img src={client5} alt="logo5" className="layer2_logos_5" />
     <img src={client6} alt="logo6" className="layer2_logos_6" />
@@ -628,10 +599,10 @@ export const HomePage = () => {
     <img src={client10} alt="logo10" className="layer2_logos_10" />
     <img src={client11} alt="logo11" className="layer2_logos_11" />
     <img src={client12} alt="logo12" className="layer2_logos_12" />
-    <img src={client13} alt="logo13" className="layer2_logos_13" />
+    {/* <img src={client13} alt="logo13" className="layer2_logos_13" /> */}
     <img src={client14} alt="logo14" className="layer2_logos_14" />
     <img src={client15} alt="logo15" className="layer2_logos_15" />
-    <img src={client16} alt="logo16" className="layer2_logos_16" />
+    {/* <img src={client16} alt="logo16" className="layer2_logos_16" /> */}
     <img src={client17} alt="logo17" className="layer2_logos_17" />
     <img src={client18} alt="logo18" className="layer2_logos_18" />
     <img src={client19} alt="logo19" className="layer2_logos_19" />
@@ -645,7 +616,7 @@ export const HomePage = () => {
     {/* Duplicate set for seamless scroll */}
     <img src={client1} alt="logo1" className="layer2_logos_1" />
     <img src={client2} alt="logo2" className="layer2_logos_2" />
-    <img src={client3} alt="logo3" className="layer2_logos_3" />
+    {/* <img src={client3} alt="logo3" className="layer2_logos_3" /> */}
     <img src={client4} alt="logo4" className="layer2_logos_4" />
     <img src={client5} alt="logo5" className="layer2_logos_5" />
     <img src={client6} alt="logo6" className="layer2_logos_6" />
@@ -655,10 +626,10 @@ export const HomePage = () => {
     <img src={client10} alt="logo10" className="layer2_logos_10" />
     <img src={client11} alt="logo11" className="layer2_logos_11" />
     <img src={client12} alt="logo12" className="layer2_logos_12" />
-    <img src={client13} alt="logo13" className="layer2_logos_13" />
+    {/* <img src={client13} alt="logo13" className="layer2_logos_13" /> */}
     <img src={client14} alt="logo14" className="layer2_logos_14" />
     <img src={client15} alt="logo15" className="layer2_logos_15" />
-    <img src={client16} alt="logo16" className="layer2_logos_16" />
+    {/* <img src={client16} alt="logo16" className="layer2_logos_16" /> */}
     <img src={client17} alt="logo17" className="layer2_logos_17" />
     <img src={client18} alt="logo18" className="layer2_logos_18" />
     <img src={client19} alt="logo19" className="layer2_logos_19" />

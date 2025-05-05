@@ -25,6 +25,7 @@ export const HrLearning = ({
   Internship2Description,
   Internship3,
   Internship3Description,
+  applyContent,
 }) => {
   const [selectedData, setSelectedData] = useState({});
   const navigate = useNavigate();
@@ -242,6 +243,7 @@ export const HrLearning = ({
               >
                 Apply Now
               </p>
+              <p className="applynow_content_para">{applyContent}</p>
             </div>
             <div className="Privours_Data_Container_last" data-aos="zoom-in-up">
               <p className="Privours_Data_Container_Head_text">
