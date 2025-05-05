@@ -64,6 +64,17 @@ export const ServicePageTwo = () => {
         img_5={Medal}
         img_6={Setting}
         img_7={Goal}
+        targetData="100"
+        targetGoalData="24"
+        targetClientData="90"
+        targetClientRatingData="3"
+        targetAwardsData="70"
+        targetSevenData="7"
+        symbol1="%"
+        symbol2="%"
+        symbol3="%"
+        symbol4="/7"
+        symbol5="x"
       />
     </div>
   );

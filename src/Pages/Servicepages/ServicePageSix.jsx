@@ -71,6 +71,17 @@ export const ServicePageSix = () => {
         img_6={Setting}
         img_7={Goal}
         path="talent-engagement"
+        targetData="35"
+        targetGoalData="40"
+        targetClientData="60"
+        targetClientRatingData="5"
+        targetAwardsData="90"
+        symbol1="%"
+        symbol2="%"
+        symbol3="%"
+        symbol4="%"
+        symbol5="x"
+                targetSevenData=""
       />
     </div>
   );

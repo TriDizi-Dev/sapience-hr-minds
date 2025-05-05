@@ -70,6 +70,17 @@ export const ServicePageFive = () => {
         img_6={Setting}
         img_7={Goal}
         path="talent-management"
+        targetData="25"
+        // targetGoalData="24"
+        // targetClientData="100"
+        targetClientRatingData="40"
+        targetAwardsData="98"
+        symbol1="%"
+        symbol2="%"
+        // symbol3="%"
+        // symbol4="/"
+        symbol5="%"
+                targetSevenData=""
       />
     </div>
   );

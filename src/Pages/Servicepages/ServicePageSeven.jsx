@@ -14,7 +14,7 @@ export const ServicePageSeven = () => {
     <div>
       {" "}
       <Service
-         metaTitle="Sapience Minds-Recruitment of Leadership & Mid-Level Team"
+        metaTitle="Sapience Minds-Recruitment of Leadership & Mid-Level Team"
         metaDescription="Find the right leaders who can scale your vision without compromising your culture or pace."
         ServiceHeadName="Recruitment of Leadership & Mid-Level Team"
         ServiceHeadContent="Find the right leaders who can scale your vision without compromising your culture or pace."
@@ -33,9 +33,14 @@ export const ServicePageSeven = () => {
         // List3="Employee recognition programs,"
         // List4="End-to-end engagement programs with surveys, 30/60/90-day check-ins, and ongoing HRBP support to ensure positive employee experience."
         keyofferinglist={[
- ]}
+          "Executive search services tailored to senior and mid-level leadership roles",
+          "Competency-based evaluations and cultural fit assessments for critical hires",
+          "Confidential hiring processes for sensitive leadership transitions",
+          "Succession planning support to future-proof leadership pipelines",
+          "Employer brand positioning to attract visionary and mission-aligned leaders",
+        ]}
         // Para3Head="Lorem ipsum dolor"
-     Para3Content1={`<strong>Client Benefit:</strong>`} 
+        Para3Content1={`<strong>Client Benefit:</strong>`}
         paracontent3="Improved employee morale, reduced turnover rates, and a stronger, more cohesive company culture."
         // Para4Content1="We don’t just advise—we become your strategic HR ally, driving sustainable value."
 
@@ -68,6 +73,17 @@ export const ServicePageSeven = () => {
         img_6={Setting}
         img_7={Goal}
         path="recruitment-of-leadership"
+        targetData="90"
+        // targetGoalData="4"
+        // targetClientData="5"
+        targetClientRatingData="80"
+        targetAwardsData="100"
+        symbol1="%"
+        symbol2="%"
+        // symbol3="y"
+        // symbol4="x"
+        symbol5="%"
+                targetSevenData=""
       />
     </div>
   );

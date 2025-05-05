@@ -70,6 +70,18 @@ export const ServiceThree = () => {
         img_6={Setting}
         img_7={Goal}
         path="virtual-chro-and-outsourcing"
+        virtueForm="Need HR Expertise Without the Overhead? Start by Filling Out the Form."
+        targetData="60"
+        targetGoalData="99"
+        targetClientData="100"
+        targetClientRatingData="360"
+        targetAwardsData="23"
+        symbol1="%"
+        symbol2="+"
+        symbol3="%"
+        symbol4="%"
+        symbol5="°"
+         targetSevenData=""
       />
     </div>
   );

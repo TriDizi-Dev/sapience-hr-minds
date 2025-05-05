@@ -26,6 +26,8 @@ export const HrLearning = ({
   Internship3,
   Internship3Description,
   applyContent,
+  questionDescription,
+  concludescript
 }) => {
   const [selectedData, setSelectedData] = useState({});
   const navigate = useNavigate();
@@ -173,6 +175,8 @@ export const HrLearning = ({
         <p className="Section2_Heading_text" data-aos="fade-right">
           What you learn in {questionTitle}?
         </p>
+        <p className="question_description" data-aos="fade-left">{questionDescription}</p>
+        <p className="question_script" data-aos="fade-right">{concludescript}</p>
         <div className="Background_Image_Container_1">
           <img src={BackgroundLayer} alt="BackgroundLayer"></img>
         </div>

@@ -68,6 +68,17 @@ Satisfaction Scores"
         img_6={Setting}
         img_7={Goal}
         path="employee-insurance-and-benefits"
+        targetData="100"
+        // targetGoalData="4"
+        // targetClientData="5"
+        targetClientRatingData="4"
+        targetAwardsData="50"
+        symbol1="%"
+        symbol2="%"
+        // symbol3="y"
+        // symbol4="x"
+        symbol5="x"
+                targetSevenData=""
       />
     </div>
   );
