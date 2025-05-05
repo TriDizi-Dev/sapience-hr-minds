@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import "./AboutPage.css";
 // import AboutMain1 from "../../assets/AboutPage/above_top_img.svg";
 // import AboutMain1 from "../../assets/AboutPage/above_top_img.svg";
-import AboutMain1 from "../../assets/AboutPage/aboutUsHrImage.jpg";
+// import AboutMain1 from "../../assets/AboutPage/aboutUsHrImage.jpg";
+import AboutMain1 from "../../assets/AboutPage/AboutOur.jpg";
 
 import Orangelayer from "../../assets/AboutPage/orangeshade.svg";
 import Bluelayer from "../../assets/AboutPage/blushade.svg";
@@ -11,6 +12,7 @@ import TringleGroup from "../../assets/AboutPage/TriangleImages.svg";
 import TradeMark from "../../assets/AboutPage/trademark.svg";
 import CircleGroup from "../../assets/AboutPage/CircleGroup.png";
 import SquareGroup from "../../assets/AboutPage/SquareGroup.png";
+// import SquareGroup from "../../assets/AboutPage/rectangleimg.svg"
 import plusIcon from "../../assets/AboutPage/PlusIcon.svg";
 import Smallicon1 from "../../assets/AboutPage/Smallicon1.svg";
 import Smallicon2 from "../../assets/AboutPage/Smallicon2.svg";
@@ -337,7 +339,9 @@ export const AboutPage = () => {
         </div>
         <div className="About_page_section2">
           <div className="Left_side_container">
-            <h1 className="Head_Section2">About Me</h1>
+            <h1 className="Head_Section2">About Babitha Remith</h1>
+            <p className="babitha_dgnatn">Founder & Director | Fractional CHRO | HR Transformation Expert</p>
+
             <div className="Text_container_layer2">
               <p data-aos="fade-right">
               With over 23 years of HR leadership experience in the technology sector, Babitha Remith brings deep expertise in building people-first organizations. Having held senior roles in global firms like IBM, Micro Focus, and ESI Group, she has led high-impact initiatives in talent management, performance improvement, and employee engagement.
@@ -348,7 +352,7 @@ export const AboutPage = () => {
             </div>
           </div>
           <div className="Right_side_Images_container">
-            <p className="Head_Section3">About Us</p>
+            <p className="Head_Section3">About Babitha Remith</p>
             <img
               src={Person}
               alt="PersonImage"
@@ -389,8 +393,8 @@ export const AboutPage = () => {
             
           </div>
         </div>
-        <p className="babitha_name">Babitha Remith</p>
-        <p className="babitha_designation">Founder & Director | Fractional CHRO | HR Transformation Expert</p>
+        {/* <p className="babitha_name">Babitha Remith</p> */}
+        {/* <p className="babitha_designation">Founder & Director | Fractional CHRO | HR Transformation Expert</p> */}
       </div>
 
       <div className="Section3_Main_Container">

@@ -33,10 +33,7 @@ export const ServicePageSeven = () => {
         // List3="Employee recognition programs,"
         // List4="End-to-end engagement programs with surveys, 30/60/90-day check-ins, and ongoing HRBP support to ensure positive employee experience."
         keyofferinglist={[
-"Employee engagement surveys and HR Connect meetings",
-"Employee recognition programs",
-"End-to-end engagement programs with surveys, 30/60/90-day check-ins, and ongoing HRBP support to ensure positive employee experience."
-        ]}
+ ]}
         // Para3Head="Lorem ipsum dolor"
      Para3Content1={`<strong>Client Benefit:</strong>`} 
         paracontent3="Improved employee morale, reduced turnover rates, and a stronger, more cohesive company culture."

@@ -438,7 +438,7 @@ keyofferinglist=[],
       </div>
       <div className="Service_Page_Section2_Hero">
         <div className="Image_Container_service_Left" data-aos="fade-right">
-          <p>01</p>
+          <p></p>
           <img src={img_1} alt="Image1"></img>
         </div>
         <div className="Middle_Content_Container">
@@ -504,7 +504,7 @@ keyofferinglist=[],
         </div>
 
         <div className="Image_Container_service_right" data-aos="fade-left">
-          <p>02</p>
+          <p></p>
           <img src={img_2} alt="Image1" />
         </div>
       </div>

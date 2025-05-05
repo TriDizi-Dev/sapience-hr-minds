@@ -161,6 +161,7 @@ const InternshipHRLearning = () => {
         Internship2Description="As an Employee Relations Intern at Sapience Minds, you'll support initiatives aimed at improving employee"
         Internship3="Talent Management Intern"
         Internship3Description="As a Talent Management Intern at Sapience Minds, you’ll assist in designing"
+        applyContent="Apply Now to Launch Your HR Career – Gain Real-World Experience and Build the Skills to Thrive!"
       />
     </>
   );

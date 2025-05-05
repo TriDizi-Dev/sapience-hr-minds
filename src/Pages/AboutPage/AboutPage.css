@@ -212,6 +212,10 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3)
 }
 
+.babitha_dgnatn{
+    font-weight: 500;
+}
+
 .Section3_Main_Container {
     margin-top: -2.5vw;
 }
@@ -536,7 +540,7 @@
     .Text_container_layer2 {
         width: 100%;
         gap: 4vw;
-        margin-top: 24.5vw;
+        margin-top: 77.5vw;
     }
 
     .Text_container_layer2 p {
@@ -557,31 +561,32 @@
     }
 
     .SquareGroup {
+        /* margin-top: 1vw; */
         width: 80%;
         left: 0;
-
+        top: 6vw;
     }
 
     .PersonImage {
-        top: 3vw;
+        top: 12vw;
         right: 11vw;
         width: 80%;
         height: 68%;
     }
 
     .Circle_image {
-        top: 10vw;
+        top: 15vw;
         width: 8vw;
     }
 
     .TradeMark_image {
         left: 5vw;
-        top: 10vw;
+        top: 15vw;
         width: 14vw;
     }
 
     .plusIcon {
-        bottom: 22vw;
+        bottom: 15vw;
         width: 4vw;
         right: 12vw;
     }
@@ -589,7 +594,7 @@
     .Tringle_Group {
         width: 13vw;
         left: 0;
-        bottom: 7vw;
+        bottom: 0vw;
     }
 
 
@@ -611,6 +616,13 @@
         font-size:3vw; 
         font-weight:600; 
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3)
+    }
+
+    .babitha_dgnatn{
+        margin-top: -75vw;
+        font-size: 4vw;
+        width: 70vw;
+        margin-left: 7vw;
     }
 
     .Section3_Main_Container {
@@ -799,6 +811,7 @@
         display: block;
         margin-top: -10vw;
         font-size: 6vw;
+        font-weight: 600;
     }
 
     .FaqAnswers p {

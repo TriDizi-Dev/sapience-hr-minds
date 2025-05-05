@@ -153,7 +153,7 @@ const WebinarHRLearning = () => {
         Internship2Description="This webinar demystifies how startups and growing companies can manage employee expectations"
         Internship3="Future-Ready Talent Management for Business Growth"
         Internship3Description="This insightful webinar explores how modern businesses can design agile talent management strategies."
-      
+        applyContent=""
       />
     </>
   );

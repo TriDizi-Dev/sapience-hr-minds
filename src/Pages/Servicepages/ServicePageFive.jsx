@@ -29,10 +29,17 @@ export const ServicePageFive = () => {
         //     and scrambled it to make a type specimen book Lorem Ipsum is simply
         //     dummy text of the printing and typesetting industry."
         keyofferinglist={[
-          "Job architecture and competency frameworks"
+          "Training Needs Analysis (TNA) and skill-gap assessments",
+          "Leadership development and managerial training programs",
+          "Job architecture and competency frameworks",
+          "Succession planning and talent mapping",
+          "9-box assessments and performance reviews",
+          "Goal setting, performance reviews, and KPI alignment",
+          "Managing Performance Improvement Plans (PIPs) effectively",
+          "Continuous performance feedback loops",
         ]}
         Para3Head="Lorem ipsum dolor"
-        Para3Content1={`<strong>Client Benefit:</strong>`} 
+        Para3Content1={`<strong>Client Benefit:</strong>`}
         paracontent3="Clients gain a clear structure for advancing internal talent, ensuring business continuity, and developing high-potential employees into leadership roles."
         serviceIcons2="Review Completion Rates"
         serviceIcons2_text="Our systems are designed for full adoption and real-world success."

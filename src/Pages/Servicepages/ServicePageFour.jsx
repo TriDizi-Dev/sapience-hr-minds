@@ -26,8 +26,6 @@ export const ServicePageFour = () => {
         Para1Content3="Our approach includes workforce planning, job profiling, multi-channel sourcing, behavioral assessments, and structured interview processes to ensure consistency and quality. We also help you build strong employer branding to attract top-tier candidates who resonate with your mission and values."
         keyofferinglist={
           [
-            "Training Needs Analysis (TNA) and skill-gap assessments",
-            "Leadership development and managerial training programs",
             "Comprehensive onboarding and orientation for seamless employee integration"
           ]
         }
