@@ -76,31 +76,44 @@ keyofferinglist=[],
   metaDescription,
   metaTitle,
   path,
+  virtueForm,
+  targetData=null,
+  targetAwardsData=null,
+  targetClientData=null,
+  targetClientRatingData=null,
+  targetGoalData=null,
+  symbol1,
+  symbol2,
+  symbol3,
+  symbol4,
+  symbol5
+
 }) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  const target = 208;
+  const target = Number(targetData);
   const duration = 2000;
   const ref = useRef(null);
 
   const [AwardsCount, setAwardsCount] = useState(0);
   const [AwardsIsVisible, setAwardsIsVisible] = useState(false);
-  const targetAwards = 76;
+  const targetAwards = Number(targetAwardsData);
   const durationAwards = 2000;
 
   const [ClientCount, setClientCount] = useState(0);
   const [ClientIsVisible, setClientIsVisible] = useState(false);
-  const targetClient = 43;
+  const targetClient = Number(targetClientData);
+  // const targetClient={clientTarget}
   const durationClient = 2000;
 
   const [ClientRatingCount, setClientRatingCount] = useState(0);
   const [ClientRatingIsVisible, setClientRatingIsVisible] = useState(false);
-  const targetClientRating = 23;
+  const targetClientRating = Number(targetClientRatingData);
   const durationClientRating = 2000;
 
   const [GoalCount, setGoalCount] = useState(0);
   const [GoalIsVisible, setGoalIsVisible] = useState(false);
-  const targetGoal = 49;
+  const targetGoal = Number(targetGoalData);
   const durationGoal = 2000;
 
   // const services = [
@@ -512,7 +525,8 @@ keyofferinglist=[],
         src={BlueLayer}
         alt="Layer"
         className="Background_Image_Container"
-      ></img>
+      ></img>      
+        <p className="virtueForm_Headline"data-aos="fade-left">{virtueForm}</p>
       {path === "virtual-chro-and-outsourcing" && (
         <div className="virtual-chro-form-container">
           <div className="virtual-left-container" data-aos="flip-left">
@@ -657,7 +671,7 @@ keyofferinglist=[],
           <div className="Image_Container_Section3_Main_Images">
             <div className="Image_Container_Section3_imge_Cont1" ref={ref}>
               <img src={img_3} alt="Rocket"></img>
-              <span className="Rocket_count">{count}+</span>
+              <span className="Rocket_count">{ count > 0 && `${count}${symbol1} `}</span>
               <div>
                 <h3>{serviceIcons1}</h3>
                 <p>{serviceIcons1_text}</p>
@@ -666,7 +680,7 @@ keyofferinglist=[],
 
             <div className="Image_Container_Section3_imge_Cont2">
               <img src={img_4} alt="Cup"></img>
-              <span className="Cup_count">{AwardsCount}+</span>
+              <span className="Cup_count">{AwardsCount> 0 && `${AwardsCount}${symbol2}`}</span>
               <div>
                 <h3>{serviceIcons2}</h3>
                 <p>
@@ -677,7 +691,7 @@ keyofferinglist=[],
             </div>
             <div className="Image_Container_Section3_imge_Cont3">
               <img src={img_5} alt="Medal"></img>
-              <span className="Cup_count">{ClientCount}%</span>
+              <span className="Cup_count">{ClientCount>0 && `${ClientCount}${symbol3}`}</span>
               <div>
                 <h3>{serviceIcons4}</h3>
                 <p>{serviceIcons4_text}</p>
@@ -685,7 +699,7 @@ keyofferinglist=[],
             </div>
             <div className="Image_Container_Section3_imge_Cont4">
               <img src={img_7} alt="Goal"></img>
-              <span className="Goal_count">{GoalCount}+</span>
+              <span className="Goal_count">{GoalCount>0 && `${GoalCount}${symbol4}`}</span>
               <div className="goal_icon_text">
                 <h3>{serviceIcons5}</h3>
                 <p>{serviceIcons5_text}</p>
@@ -693,7 +707,7 @@ keyofferinglist=[],
             </div>
             <div className="Image_Container_Section3_imge_Cont5">
               <img src={img_6} alt="Setting"></img>
-              <span className="Setting_count">{ClientRatingCount}+</span>
+              <span className="Setting_count">{ClientRatingCount>0 && `${ClientRatingCount}${symbol5}`}</span>
 
               <div>
                 <h3>{serviceIcons3}</h3>

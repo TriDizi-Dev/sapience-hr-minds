@@ -61,7 +61,10 @@ import client7 from "../../assets/HomePage/image7.png"
 import client8 from "../../assets/HomePage/image8-removebg.png"
 
 // import client9 from "../../assets/HomePage/image9.png"
-import client9 from "../../assets/HomePage/image9-removebg.png"
+// import client9 from "../../assets/HomePage/image9-removebg.png"
+import client9 from "../../assets/HomePage/groupJG-removebg.png"
+
+import client26 from "../../assets/HomePage/cfhash-removebg.png"
 
 import client10 from "../../assets/HomePage/image10.png"
 import client11 from "../../assets/HomePage/image11.png"
@@ -596,6 +599,7 @@ export const HomePage = () => {
     <img src={client7} alt="logo7" className="layer2_logos_7" />
     <img src={client8} alt="logo8" className="layer2_logos_8" />
     <img src={client9} alt="logo9" className="layer2_logos_9" />
+    <img src={client26} alt="logo 26" className="layer2_logos_26"/>
     <img src={client10} alt="logo10" className="layer2_logos_10" />
     <img src={client11} alt="logo11" className="layer2_logos_11" />
     <img src={client12} alt="logo12" className="layer2_logos_12" />
@@ -623,6 +627,7 @@ export const HomePage = () => {
     <img src={client7} alt="logo7" className="layer2_logos_7" />
     <img src={client8} alt="logo8" className="layer2_logos_8" />
     <img src={client9} alt="logo9" className="layer2_logos_9" />
+    <img src={client26} alt="logo 26" className="layer2_logos_26"/>
     <img src={client10} alt="logo10" className="layer2_logos_10" />
     <img src={client11} alt="logo11" className="layer2_logos_11" />
     <img src={client12} alt="logo12" className="layer2_logos_12" />

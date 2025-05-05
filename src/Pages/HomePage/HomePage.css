@@ -483,6 +483,11 @@
   height: 3.5vw;
   margin-top: 0.8vw;
 }
+.layer2_logos_26{
+  width: 4.5vw;
+  height: 3.5vw;
+  margin-top: 0.5vw;
+}
 .layer2_logos_10{
   width: 11vw;
   height: 2.5vw;
@@ -1414,6 +1419,11 @@ transition: .5s ease-in-out;
   .layer2_logos_9{
     width: 24vw;
     height: 11vw;
+    margin-top: 1.8vw;
+  }
+  .layer2_logos_26{
+    width: 7vw;
+    height: 6vw;
     margin-top: 1.8vw;
   }
   .layer2_logos_10{

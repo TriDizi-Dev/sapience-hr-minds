@@ -32,27 +32,27 @@ const WebinarHRLearning = () => {
 
     {
       id: 2,
-      head: "Payroll Compliance and Automation in Modern HR",
-      subhead1: "Automation",
-      subhead2: "Compliance",
-      subhead3: "Systems",
+      head: "Future-Focused Organizational Development",
+      subhead1: "Innovation ",
+      subhead2: "Culture ",
+      subhead3: "Agility",
       paragraph:
-        " This live webinar uncovers best practices for automating payroll processes, integrating with HRMS, and aligning with statutory guidelines.",
+        "Explore real-world OD applications, future-ready business models, and agile transformation practices in this interactive learning session.",
       PrimaryResponsibilityHeading: "Job Description:",
       PrimaryResponsibilityPara:
-        " This live webinar uncovers best practices for automating payroll processes, integrating with HRMS, and aligning with statutory guidelines. It is perfect for founders and HR professionals looking to optimize payroll workflows.",
+        "  Join this insightful webinar to explore the latest trends in OD and learn how businesses are rethinking leadership, culture, and employee engagement for long-term success.",
       jobspecificationsHeading: "Responsibilities:",
       jobspecifications: [
-        "Attend expert sessions on tech-enabled payroll practices.",
-        "Learn to avoid common payroll compliance mistakes.",
-        "Download free tools and guides post-webinar.",
+        "Attend expert-led sessions on OD strategies",
+        "Learn how to apply OD to business performance metrics.",
+        "Participate in Q&A sessions and use downloadable tools",
       ],
       jobspecificationsHeading1: "Specifications:",
       Specifications: [
-        "Duration: 60–90 minutes",
-        "Format: Zoom + Recorded Session Access",
-        "Add-ons: E-book on Payroll Essentials, e-Certificate",
-        "Target Audience: Startup HRs, Ops Heads, CHROs, Admin Managers",
+        "Duration:  90 Minutes",
+        "Mode:  Live with Post-Access",
+        "Includes: Participation Certificate, Framework Downloads",
+        "Target Audience: CHROs, HR Leaders, Business Owners",
       ],
         path:"webinar-hr-learning"
     },
@@ -153,7 +153,9 @@ const WebinarHRLearning = () => {
         Internship2Description="This webinar demystifies how startups and growing companies can manage employee expectations"
         Internship3="Future-Ready Talent Management for Business Growth"
         Internship3Description="This insightful webinar explores how modern businesses can design agile talent management strategies."
-        applyContent=""
+        applyContent="Expand Your HR Expertise – Join Our Webinar and Gain Insights That Propel Your Career!"
+        questionDescription="Join our live webinars to gain cutting-edge insights on HR trends, best practices, and strategies for building high-performing teams. Learn directly from HR thought leaders and stay ahead in the ever-evolving HR landscape."
+        concludescript="Register for the webinar and unlock key HR strategies now!"
       />
     </>
   );

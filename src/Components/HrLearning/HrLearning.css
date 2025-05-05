@@ -237,6 +237,19 @@ will-change: transform;
     color: #4F5665;
     margin-top: 1vw;
 }
+.question_description{
+    text-align: left;
+    margin-top: 1vw;
+    margin-left: 3vw;
+    color: #4F5665;
+
+}
+.question_script{
+    margin-top: 2vw;
+    margin-left: 3vw;
+    color: #4F5665;
+
+}
 
 @media screen and (min-width: 320px) and (max-width: 720px) {
     .Hr_Hero_container{
@@ -363,5 +376,20 @@ will-change: transform;
         display: flex;
         flex-direction: column;
         row-gap: 0.6vw;
+    }
+    .question_description{
+        font-size: 4vw;
+        margin-top: 4vw;
+        text-align: justify;
+    }
+    .question_script{
+        font-size: 4vw;
+        margin-top: 5vw;
+        margin-bottom: 2vw;
+        text-align: justify;    
+    }
+    .applynow_content_para{
+        font-size: 3.2vw;
+        line-height: 5vw;
     }
 }

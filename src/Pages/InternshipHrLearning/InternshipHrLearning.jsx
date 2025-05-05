@@ -35,29 +35,29 @@ const InternshipHRLearning = () => {
 
     {
       id: 2,
-      head: "Payroll Management Intern",
-      subhead1: "Process",
-      subhead2: "Deductions",
-      subhead3: "Benefits",
+      head: "Organizational Development Intern",
+      subhead1: "Transformation ",
+      subhead2: "Strategy ",
+      subhead3: "Execution",
       paragraph:
-        "This internship offers hands-on exposure to payroll processing systems used in startups and SMEs.",
+        "Engage in organizational change projects, support data collection for OD diagnostics, and collaborate on strategies that influence company-wide improvements.",
       PrimaryResponsibilityHeading: "Job Description:",
       PrimaryResponsibilityPara:
-        "This internship offers hands-on exposure to payroll processing systems used in startups and SMEs. Interns will assist in maintaining salary records, understanding tax computations, and ensuring timely disbursements, along with compliance documentation.",
+        "As an Organizational Development Intern, you'll gain experience in leading change initiatives and refining company-wide strategies for organizational growth. This role will provide valuable exposure to processes that shape a dynamic, high-performance culture.",
       jobspecificationsHeading: "Responsibilities:",
       jobspecifications: [
-        "Assist in payroll data collection (attendance, bonuses, deductions).",
-        "Work with payroll software to generate payslips and reports.",
-        "Help ensure adherence to statutory compliances (PF, ESI, TDS).",
-        "Support the finance/HR team in payroll audits.",
-        "Maintain confidentiality of employee compensation data.",
+        "Assist in implementing change management strategies",
+        "Support employee engagement and cultural assessments",
+        "Contribute to leadership development and organizational diagnostics",
+        // "Support the finance/HR team in payroll audits.",
+        // "Maintain confidentiality of employee compensation data.",
       ],
       jobspecificationsHeading1: "Specifications:",
       Specifications: [
         "Duration : 3 months",
-        "Mode : Remote/In-office",
-        "Tools : Excel, payroll systems (Zoho, GreytHR, etc.)",
-        "Eligibility : Final-year HR/Finance students or fresh graduates",
+        "Mode : Remote / Hybrid",
+        "Tools : Survey Tools, MS Excel, OD frameworks",
+        "Eligibility : MBA HR, Organizational Psychology students",
       ],
       path: "internship-hr-learning",
     },
@@ -150,7 +150,7 @@ const InternshipHRLearning = () => {
       <HrLearning
         HRLearning={Cards}
         imgTitle="Internships"
-        questionTitle="Internship"  
+        questionTitle="Internship"
         img={img}
         metaTitle="Sapience Minds-Internships"
         metaDescription="Your startup deserves more than just reactive HR. Whether you need structure, compliance, or a culture strategy, let’s have a conversation that moves your business forward. Book a discovery call or fill out the form and let’s shape a smarter, people-powered future for your company."
@@ -162,6 +162,8 @@ const InternshipHRLearning = () => {
         Internship3="Talent Management Intern"
         Internship3Description="As a Talent Management Intern at Sapience Minds, you’ll assist in designing"
         applyContent="Apply Now to Launch Your HR Career – Gain Real-World Experience and Build the Skills to Thrive!"
+        questionDescription="Gain real-world HR experience in key areas like talent management, employee relations, and recruitment. Work alongside industry experts and learn how HR strategies are designed and implemented in dynamic work environments. Perfect for students eager to dive into HR roles."
+        concludescript="Apply now and start your HR career journey!"
       />
     </>
   );

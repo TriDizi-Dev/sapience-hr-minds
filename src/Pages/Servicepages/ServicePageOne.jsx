@@ -71,7 +71,17 @@ export const ServicePageOne = () => {
         metaTitle="Sapience Minds-HR Compliance and Policy Development"
         metaDescription="Stay legally compliant and culturally aligned with HR policies tailored for growing businesses. Build trust, reduce risks, and foster a structured workplace from day one."
         path="hr-compliance"
-       
+        targetData="100"
+        // targetGoalData="4"
+        // targetClientData="5"
+        targetClientRatingData="4"
+        targetAwardsData="95"
+        symbol1="%"
+        symbol2="%"
+        // symbol3="y"
+        // symbol4="x"
+        symbol5="x"
+                targetSevenData=""
       />
     </div>
   );

@@ -24,19 +24,22 @@ export const ServicePageFour = () => {
         Para1Content2={`Led by seasoned HR expert <strong>Babitha Remith,</strong> with 23+ years of experience across global enterprises, our solutions combine industry best practices with startup agility. We don’t just fill positions—we align hiring with your company’s culture, long-term goals, and growth trajectory.`}
         Para2Head2="Key Offerings:"
         Para1Content3="Our approach includes workforce planning, job profiling, multi-channel sourcing, behavioral assessments, and structured interview processes to ensure consistency and quality. We also help you build strong employer branding to attract top-tier candidates who resonate with your mission and values."
-        keyofferinglist={
-          [
-            "Comprehensive onboarding and orientation for seamless employee integration"
-          ]
-        }
+        keyofferinglist={[
+          "Comprehensive onboarding and orientation for seamless employee integration",
+          "Workforce planning and role analysis to identify current and future hiring needs",
+          "Job description optimization to attract the right candidates efficiently",
+          "Structured interview processes and assessment strategies for quality hiring",
+          "Strategic sourcing using modern platforms and professional networks",
+          "Employer branding initiatives to enhance visibility among top talent",
+        ]}
         // List1="Training Needs Analysis (TNA) and skill-gap assessments"
         // List2="Leadership development and managerial training programs"
         // List3="Comprehensive onboarding and orientation for seamless employee integration"
         // List4="High-growth and agile teams"
         // List5="Inclusive, diverse, and values-aligned hiring"
         // Para3Head="Lorem ipsum dolor"
-        Para3Content1={`<strong>Client Benefit:</strong>`} 
-        paracontent3="Clients build a capable workforce that continuously adapts to industry demands and develops in alignment with business goals."        
+        Para3Content1={`<strong>Client Benefit:</strong>`}
+        paracontent3="Clients build a capable workforce that continuously adapts to industry demands and develops in alignment with business goals."
         serviceIcons2="Employer Branding Support"
         serviceIcons2_text="Stand out in the market with attractive positioning and candidate experiences."
         serviceIcons1="Faster Time-to-Hire"
@@ -66,6 +69,17 @@ export const ServicePageFour = () => {
         img_6={Setting}
         img_7={Goal}
         path="talent-acquisition-solutions"
+        targetData="80"
+        // targetGoalData="24"
+        // targetClientData="100"
+        targetClientRatingData="90"
+        targetAwardsData="100"
+        symbol1="%"
+        symbol2="%"
+        // symbol3="%"
+        // symbol4="/"
+        symbol5="%"
+                targetSevenData=""
       />
     </div>
   );

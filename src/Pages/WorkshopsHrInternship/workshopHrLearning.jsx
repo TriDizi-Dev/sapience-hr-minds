@@ -35,28 +35,28 @@ const WorkshopsHrLearning = () => {
 
     {
       id: 2,
-      head: "Payroll Simplified for HR Professionals",
-      subhead1: "Audit",
-      subhead2: "Cycles",
-      subhead3: "Reports",
+      head: "Designing Organizational Development Frameworks",
+      subhead1: "Growth ",
+      subhead2: "Change ",
+      subhead3: "Leadership",
       paragraph:
-        " A hands-on session will give professionals practical exposure to salary structure design, tax-friendly components, legal compliance, and monthly payroll execution in real-world HR environments.",
+        " A practical session focused on OD frameworks, leadership alignment, and change management techniques to reshape business performance.",
       PrimaryResponsibilityHeading: "Job Description:",
       PrimaryResponsibilityPara:
-        " A hands-on session will give professionals practical exposure to salary structure design, tax-friendly components, legal compliance, and monthly payroll execution in real-world HR environments.",
+        " This interactive workshop offers insights into OD frameworks and leadership alignment, enabling HR professionals to foster an adaptable workforce and a high-performance culture.",
       jobspecificationsHeading: "Responsibilities:",
       jobspecifications: [
-        "Participate in salary breakup exercises and simulations.",
-        "Analyze payroll reports and deduction components.",
-        "Work on compliance calendars and audit checklists.",
-        "Engage in Q&A with payroll experts.",
+        "Learn to create organizational diagnostics.",
+        "Design strategies for enhancing employee engagement",
+        "Develop leadership alignment tools for transformation.",
+        // "Engage in Q&A with payroll experts.",
       ],
       jobspecificationsHeading1: "Specifications:",
       Specifications: [
-        "Duration: 1 Day / 4-5 Hours",
-        "Mode: Online/Offline",
-        "Materials Provided: Sample templates, tax calculators, certificate",
-        "Ideal For: Junior HR execs, entrepreneurs, and HR generalists",
+        "Duration: 5–6 Hours",
+        "Mode: On-site / Online",
+        "Resources: Templates, Frameworks, Leadership Tools",
+        "Best For: HR Managers, Business Partners, L&D Heads",
       ],
       path: "workshop-hr-learning",
     },
@@ -160,6 +160,9 @@ const WorkshopsHrLearning = () => {
         Internship2Description="This workshop focuses on real-world techniques to strengthen workplace harmony, promote open communication"
         Internship3="Designing Strategic Talent Management Systems"
         Internship3Description="This practical workshop focuses on aligning talent with organizational goals through strategic planning"
+        applyContent="Unlock Your HR Potential – Apply for Our Workshop and Accelerate Your Career Development!"
+        questionDescription="Our hands-on workshops provide practical skills in HR management, from performance optimization to effective talent development. Engage in real-world case studies and learn strategic HR frameworks that you can immediately apply in your career."
+        concludescript="Join the workshop and enhance your HR expertise today!"
       />
     </>
   );
