@@ -588,7 +588,12 @@ margin-top: 5vw;
     width: 90%;
     height: fit-content;
   }
-
+  .Image_Container_service_Left{
+    left: 0.1vw;
+  }
+  .Image_Container_service_right{
+    right: 0.1vw;
+  }
   .Image_Container_service_Left p,
   .Image_Container_service_right p {
     font-size: 4vw;

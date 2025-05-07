@@ -245,7 +245,7 @@ function SingleBlogPage() {
             <div className="single_blog_card_outer">
               {BlogsData?.filter((blog) => blog?.id !== data?.id)?.map(
                 (data) => (
-                  <div className="blog_card" data-aos="zoom-out-down">
+                  <div className="blog_card">
                     <div className="blog_card_img_content_1">
                       <p className="blog_card_img_text">{data?.content}</p>
                     </div>
