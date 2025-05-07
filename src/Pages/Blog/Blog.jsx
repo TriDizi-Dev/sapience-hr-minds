@@ -3,7 +3,6 @@ import "./Blog.css";
 import blogimg1 from "../../assets/Blogs/image1.png";
 import blogimg2 from "../../assets/Blogs/image2.png";
 import blogimg3 from "../../assets/Blogs/image3.png";
-
 import layer4 from "../../assets/HomePage/layer4.svg";
 
 import { PreFooter } from "../../Components/PreFooter/PreFooter";
