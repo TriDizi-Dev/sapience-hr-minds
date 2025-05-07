@@ -480,7 +480,7 @@ keyofferinglist=[],
           <ul className="List_Items_Middle">
             {
               keyofferinglist.map((item)=>(
-                <li data-aos="fade-right">{item}</li>
+                <li data-aos="fade-up">{item}</li>
 
               ))
             }

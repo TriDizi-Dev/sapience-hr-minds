@@ -61,7 +61,7 @@ function SingleBlogPage() {
               <p
                 {...filteredAttribs}
                 className="single_blog_content_para"
-                data-aos="fade-right"
+                data-aos="fade-up"
               >
                 {domToReact(children)}
               </p>
@@ -167,12 +167,12 @@ function SingleBlogPage() {
           }}
         >
           <p className="single_blog_top_text">{`By ${
-            data.author_name
-          } on ${formatDate(data.created_at)} - 5 min read`}</p>
+            data?.author_name
+          } on ${formatDate(data?.created_at)} - 5 min read`}</p>
 
           <div className="banner_img_content">
-            <h1 className="banner_img_content_heading">{data.title}</h1>
-            <p className="banner_img_content_para">{data.content}</p>
+            <h1 className="banner_img_content_heading">{data?.title}</h1>
+            <p className="banner_img_content_para">{data?.content}</p>
           </div>
         </div>
       </div>
