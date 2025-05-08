@@ -526,10 +526,10 @@ keyofferinglist=[],
         alt="Layer"
         className="Background_Image_Container"
       ></img>      
-        <p className="virtueForm_Headline"data-aos="fade-left">{virtueForm}</p>
+        <p className="virtueForm_Headline"data-aos="fade-top">{virtueForm}</p>
       {path === "virtual-chro-and-outsourcing" && (
         <div className="virtual-chro-form-container">
-          <div className="virtual-left-container" data-aos="flip-left">
+          <div className="virtual-left-container" data-aos="flip-top">
           <img src={contactImg} alt="" />
           </div>
 
