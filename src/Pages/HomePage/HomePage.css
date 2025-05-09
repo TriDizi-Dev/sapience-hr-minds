@@ -21,7 +21,8 @@
 }
 
 .home_samll_text {
-  color: #7c5cfc;
+  /* color: #7c5cfc; */
+  color: #3A5079;
   font-size: 1.7vw;
   font-weight: 600;
 }
@@ -52,7 +53,8 @@
 .homepage_left_button {
   width: 11.8vw;
   height: 3.5vw;
-  background-color: #7c5cfc;
+  /* background-color: #7c5cfc; */
+  background-color: #FFA59A;
   color: #fff;
   font-size: 1.2vw;
   font-weight: 600;
@@ -63,7 +65,8 @@
 }
 
 .homepage_left_button:hover {
-  box-shadow: 0 0.7vw 1.5vw rgba(124, 92, 252, 0.6);
+  /* box-shadow: 0 0.7vw 1.5vw rgba(124, 92, 252, 0.6); */
+  box-shadow: 0 0.7vw 1.5vw #FFA59A;
 }
 
 .homepage_right_button {
@@ -71,8 +74,10 @@
   width: 15vw;
   height: 3.5vw;
   background: none;
-  color: #7c5cfc;
-  border: 0.1vw solid #7c5cfc;
+  /* color: #7c5cfc; */
+  color: #FFA59A;
+  /* border: 0.1vw solid #7c5cfc; */
+  border: 0.1vw solid #FFA59A;
   font-size: 1.2vw;
   font-weight: 600;
   border-radius: 1.9vw;
@@ -88,7 +93,8 @@
 
 /* Liquid Fill Effect */
 .liquid {
-  background: linear-gradient(#7c5cfc 0 0) no-repeat calc(200% - var(--p, 0%)) 100% / 200% var(--p, 0.2em);
+  /* background: linear-gradient(#7c5cfc 0 0) no-repeat calc(200% - var(--p, 0%)) 100% / 200% var(--p, 0.2em); */
+  background: linear-gradient(#FFA59A 0 0) no-repeat calc(200% - var(--p, 0%)) 100% / 200% var(--p, 0.2em);
   transition: 0.3s var(--t, 0s),
     background-position 0.3s calc(0.3s - var(--t, 0s));
 }
@@ -659,9 +665,9 @@
   height: 40vw;
   border-top-right-radius: 1vw;
   border-top-left-radius: 1vw;
-  background: linear-gradient(0deg, rgba(217, 217, 217, 0.9), rgba(217, 217, 217, 0.9)),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-  display: flex;
+   background: linear-gradient(0deg, rgba(217, 217, 217, 0.9), rgba(217, 217, 217, 0.9)),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)); 
+  display: flex; 
   justify-content: center;
   align-items: center;
   z-index: 2;
@@ -672,7 +678,8 @@
   width: 7vw;
   border-radius: 50%;
   font-size: 6vw;
-  background-color: #7c5cfcdf;
+  /* background-color: #7c5cfcdf; */
+  background-color: #FFA59A;
   color: white;
   display: flex;
   justify-content: center;
@@ -905,7 +912,8 @@
   font-weight: 600;
   margin-top: 0vw;
   padding: 0.2vw 1vw;
-  background-color: #7c5cfc;
+  /* background-color: #7c5cfc; */
+  background-color: #FFA59A;
   border-radius: 4vw;
   color: #fff;
   cursor: pointer;
@@ -960,7 +968,8 @@
   justify-content: center;
   align-items: center;
   margin-top: 5vw;
-  background-color: rgba(235, 235, 255, 1);
+  /* background-color: rgba(235, 235, 255, 1); */
+  background-color: #6081bdac;
 }
 
 .layer6_outer {
@@ -1032,7 +1041,8 @@
 .read_more_btn {
   font-size: 1vw;
   background-color: transparent;
-  color: #651fff;
+  /* color: #651fff; */
+  color: #3A5079;
   border: none;
   padding: 0.5vw 0;
   cursor: pointer;
@@ -1137,7 +1147,8 @@
 }
 
 .layer7_card_para_outer {
-  background-color: rgba(124, 92, 252, 0.42);
+  /* background-color: rgba(124, 92, 252, 0.42); */
+  background-color: #6081bdac;
   width: 25vw;
   height: 8vw;
   padding: 0.5vw 0 0.5vw 0.9vw;
@@ -1162,7 +1173,8 @@
   width: 8.5vw;
   margin-top: 1vw;
   padding: 0.3vw 1vw;
-  background-color: #7c5cfc;
+  /* background-color: #7c5cfc; */
+  background-color: #FFA59A;
   border-radius: 4vw;
   color: #fff;
   cursor: pointer;

@@ -2,7 +2,8 @@
     width: 88vw;
     height: 25vw;
     margin: 0 auto;
-    background-color: #020133;
+    /* background-color: #020133; */
+    background-color: #3A5079;
     /* padding: 2vw 4vw;     */
     border-radius: 1.5vw;
     display: flex;
@@ -56,7 +57,8 @@
  }
 
 .Button22 {
-    background-color: #7C5CFC;
+    /* background-color: #7C5CFC; */
+    background-color: #FFA59A;
     color: #FFFFFF;
 }
 

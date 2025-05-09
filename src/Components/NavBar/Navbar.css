@@ -112,15 +112,16 @@
     border: none;
     outline: none;
     border-radius: 0.6vw;
-    background-color: #7C5CFC;
-    /* background-color: #FFA59A; */
+    /* background-color: #7C5CFC; */
+    background-color: #FFA59A;
     color: #ffff;
     cursor: pointer;
 
 }
 
 .nav_button_outer button:hover {
-    box-shadow: 0 0.7vw 1.5vw rgba(124, 92, 252, 0.6);
+    /* box-shadow: 0 0.7vw 1.5vw rgba(124, 92, 252, 0.6); */
+    box-shadow: 0 0.7vw 1.5vw #FFA59A;
 }
 
 .nav_mobile_res_main {
