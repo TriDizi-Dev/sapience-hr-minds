@@ -99,7 +99,7 @@ function SingleBlogPage() {
   const [BlogsData, setBlogsData] = useState([]);
   useEffect(() => {
     const fetchBlogs = async () => {
-      const blogRef = ref(database, "blogs/hr-minds");
+      const blogRef = ref(database, "blogs");
 
       try {
         const snapshot = await get(blogRef);
