@@ -116,6 +116,15 @@
   text-align: justify;
   color: #0c0c0d;
 }
+.Niddle_sub_content1 {
+  margin-top: 1.6vw;
+  /* font-family: Roboto; */
+  font-weight: 600;
+  font-size: 1.1vw;
+  letter-spacing: 0%;
+  /* text-align: justify; */
+  color: #0c0c0d;
+}
 .Niddle_sub_content_p4 {
   margin-top: 3vw !important;
 }
@@ -582,6 +591,9 @@ margin-top: 5vw;
 
   .Niddle_sub_content {
     font-size: 2.8vw;
+  }
+  .Niddle_sub_content1 {
+    font-size: 3vw;
   }
 
   .Service_Page_Section2_Hero {
