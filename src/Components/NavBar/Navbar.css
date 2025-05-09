@@ -21,10 +21,12 @@
 }
 
 .nav_logo {
-    font-size: 3.6vw;
-    font-weight: 700;
     cursor: pointer;
+}
 
+.nav_logo img {
+    width: 7.5vw;
+    margin-top: .4vw;
 }
 
 .nav_items_outer {
@@ -111,6 +113,7 @@
     outline: none;
     border-radius: 0.6vw;
     background-color: #7C5CFC;
+    /* background-color: #FFA59A; */
     color: #ffff;
     cursor: pointer;
 
@@ -232,8 +235,12 @@
     }
 
     .nav_mobile_logo {
-        font-size: 8vw;
         cursor: pointer;
+        /* margin-top: 1vw; */
+    }
+
+    .nav_mobile_logo img {
+        width: 10vw;
     }
 
     .nav_mobile_left_click {

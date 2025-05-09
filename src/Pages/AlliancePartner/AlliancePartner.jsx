@@ -188,14 +188,14 @@ export const AlliancePartner = () => {
         <title>Sapience Minds-Expert Who Elevate Our Mission</title>
         <meta
           name="description"
-          content="At Sapience Minds, we collaborate with handpicked industry leaders who bring specialized knowledge and proven excellence to the table. These trusted partners expand our capabilities and ensure that every solution we offer is backed by expertise, innovation, and impact—giving your business access to the very best in HR, leadership, compliance, and beyond."
+          content="At Sapience Minds, we collaborate with handpicked industry leaders who bring specialized knowledge and proven excellence to the table. These trusted partners expand our capabilities and ensure that every solution we offer is backed by expertise, innovation, and impact-giving your business access to the very best in HR, leadership, compliance, and beyond."
         />
 
         {/* Open Graph Meta Tags (for WhatsApp, Facebook, LinkedIn) */}
         <meta property="og:title" content="Expert Who Elevate Our Mission" />
         <meta
           property="og:description"
-          content="At Sapience Minds, we collaborate with handpicked industry leaders who bring specialized knowledge and proven excellence to the table. These trusted partners expand our capabilities and ensure that every solution we offer is backed by expertise, innovation, and impact—giving your business access to the very best in HR, leadership, compliance, and beyond."
+          content="At Sapience Minds, we collaborate with handpicked industry leaders who bring specialized knowledge and proven excellence to the table. These trusted partners expand our capabilities and ensure that every solution we offer is backed by expertise, innovation, and impact-giving your business access to the very best in HR, leadership, compliance, and beyond."
         />
         <meta
           property="og:image"
@@ -209,7 +209,7 @@ export const AlliancePartner = () => {
         <meta name="twitter:title" content="Expert Who Elevate Our Mission" />
         <meta
           name="twitter:description"
-          content="At Sapience Minds, we collaborate with handpicked industry leaders who bring specialized knowledge and proven excellence to the table. These trusted partners expand our capabilities and ensure that every solution we offer is backed by expertise, innovation, and impact—giving your business access to the very best in HR, leadership, compliance, and beyond."
+          content="At Sapience Minds, we collaborate with handpicked industry leaders who bring specialized knowledge and proven excellence to the table. These trusted partners expand our capabilities and ensure that every solution we offer is backed by expertise, innovation, and impact-giving your business access to the very best in HR, leadership, compliance, and beyond."
         />
         <meta
           name="twitter:image"
@@ -230,7 +230,7 @@ export const AlliancePartner = () => {
             who bring specialized knowledge and proven excellence to the table.
             These trusted partners expand our capabilities and ensure that every
             solution we offer is backed by expertise, innovation, and
-            impact—giving your business access to the very best in HR,
+            impact-giving your business access to the very best in HR,
             leadership, compliance, and beyond.
           </p>
         </div>

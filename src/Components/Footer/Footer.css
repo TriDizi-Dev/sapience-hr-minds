@@ -205,27 +205,32 @@
   /* text-align: start; */
 
 }
-.Contact_sub_headings:hover{
+
+.Contact_sub_headings:hover {
   color: #7C5CFC;
   text-decoration: none;
   border-bottom: 1px solid #7C5CFC;
 }
 
-.Contact_sub_headings a{
+.Contact_sub_headings a {
   color: black;
   text-decoration: none;
   width: fit-content;
   margin: 0 auto;
 }
 
-.Contact_sub_headings a:hover{
+.Contact_sub_headings a:hover {
   color: #7C5CFC;
   text-decoration: none;
 }
 
 .footer_logo_outer {
-  width: 20vw;
+  /* width: 20vw; */
   /* border: 1px solid; */
+}
+
+.footer_logo img {
+  width: 8vw;
 }
 
 @media (min-width: 320px) and (max-width: 720px) {
@@ -242,8 +247,12 @@
   }
 
   .footer_logo {
-    font-size: 6vw;
-    text-align: center;
+    /* font-size: 6vw;
+    text-align: center; */
+  }
+
+  .footer_logo img {
+    width: 30vw;
   }
 
   .footer_logo_outer {

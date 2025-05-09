@@ -213,7 +213,7 @@ export const AboutPage = () => {
       Logo: Smallicon2,
       Head: "Learn More",
       subHead: "Integrity in Every Interaction",
-      para: "From policy design to leadership consulting, we uphold transparency and ethical standards — building trust with both clients and their teams.",
+      para: "From policy design to leadership consulting, we uphold transparency and ethical standards - building trust with both clients and their teams.",
     },
     {
       id: 3,
@@ -347,7 +347,7 @@ export const AboutPage = () => {
               With over 23 years of HR leadership experience in the technology sector, Babitha Remith brings deep expertise in building people-first organizations. Having held senior roles in global firms like IBM, Micro Focus, and ESI Group, she has led high-impact initiatives in talent management, performance improvement, and employee engagement.
               </p>
               <p data-aos="fade-right">
-              A certified Talent Management Professional and Organizational Development expert, Babitha combines strategic thinking with a people-centered mindset. Her passion lies in helping businesses scale smartly with the right HR frameworks. Now, through Sapience Minds, she offers Fractional CHRO leadership to startups and SMBs—ensuring HR isn’t just a function, but a strategic driver of business success.
+              A certified Talent Management Professional and Organizational Development expert, Babitha combines strategic thinking with a people-centered mindset. Her passion lies in helping businesses scale smartly with the right HR frameworks. Now, through Sapience Minds, she offers Fractional CHRO leadership to startups and SMBs-ensuring HR isn’t just a function, but a strategic driver of business success.
               </p>
             </div>
           </div>

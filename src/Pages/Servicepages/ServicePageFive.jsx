@@ -15,11 +15,11 @@ export const ServicePageFive = () => {
       {" "}
       <Service
         metaTitle="Sapience Minds-Sapience Minds-Talent Management Solutions"
-        metaDescription="Nurture, grow, and retain your best talent with structured performance, growth, and succession strategies—designed for impact, not just process."
+        metaDescription="Nurture, grow, and retain your best talent with structured performance, growth, and succession strategies-designed for impact, not just process."
         ServiceHeadName="Talent Management Solutions"
-        ServiceHeadContent="Nurture, grow, and retain your best talent with structured performance, growth, and succession strategies—designed for impact, not just process."
+        ServiceHeadContent="Nurture, grow, and retain your best talent with structured performance, growth, and succession strategies-designed for impact, not just process."
         // Para1Head="Lorem ipsum dolor"
-        Para1Content1={`Great organizations aren’t built just by hiring the right people—but by managing, developing, and retaining them effectively. At <strong>Sapience Minds,</strong> our <strong>Talent Management Services</strong> are built around the core belief that your people are your biggest asset—and strategic talent management is key to long-term success.`}
+        Para1Content1={`Great organizations aren’t built just by hiring the right people-but by managing, developing, and retaining them effectively. At <strong>Sapience Minds,</strong> our <strong>Talent Management Services</strong> are built around the core belief that your people are your biggest asset-and strategic talent management is key to long-term success.`}
         Para1Content2={`We help startups and SMEs develop frameworks that empower employees, improve performance, and drive business outcomes. Whether you're starting from scratch or evolving an existing system, we bring <strong>Fractional CHRO</strong> leadership to design and deploy effective programs.`}
         Para1Content3={`Our services focus on building personalized development paths, role clarity, leadership capability, and internal mobility. We create data-driven performance systems, competency models, and career frameworks that fuel engagement and accountability.`}
         Para2Head="Key Offerings:"
@@ -53,7 +53,7 @@ export const ServicePageFive = () => {
         serviceIcons5_text="Custom development tracks prepare high-potential employees for future roles."
         policyProtect="Drive growth through purposeful people management"
         policyProtextp1={`At <strong>Sapience Minds</strong>, we go beyond traditional talent frameworks. Our approach to <strong>Talent Management</strong> is personal, scalable, and measurable. We understand the challenges of growing businesses and offer tailored solutions that blend strategic thinking with human connection.`}
-        policyProtextp2={`With <strong>Babitha Remith’s</strong> extensive experience across global and emerging teams, you gain a partner who can turn your people into your strongest competitive advantage. Let Sapience Minds help you design a future where talent isn’t just managed—it’s empowered to lead.`}
+        policyProtextp2={`With <strong>Babitha Remith’s</strong> extensive experience across global and emerging teams, you gain a partner who can turn your people into your strongest competitive advantage. Let Sapience Minds help you design a future where talent isn’t just managed-it’s empowered to lead.`}
         service1name="HR Compliance and Policy Development"
         service2name="Customized HR Consulting and Advisory Services"
         service3name="Virtual CHRO and Outsourcing of HR Operations"
@@ -61,7 +61,7 @@ export const ServicePageFive = () => {
         service5name="Talent Management Solutions"
         service6name="Talent Engagement & Retention"
         service7name="Recruitment of Leadership & Mid-Level Team"
-        service8name="Employee Insurance & Benefits"
+        service8name="Employee Benfits & Insurance consulting"
         img_1={Image1}
         img_2={Image2}
         img_3={Rocket}

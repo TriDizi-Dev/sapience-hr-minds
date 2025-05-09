@@ -18,7 +18,7 @@ export const ServicePageSix = () => {
         ServiceHeadName="Talent Engagement & Retention"
         ServiceHeadContent="Keep your top talent inspired, involved, and invested in your company’s mission long after onboarding ends."
         Para1Head="Lorem ipsum dolor"
-        Para1Content1={`In today’s competitive landscape, retaining high-performing employees is more challenging—and more essential—than ever. At <strong>Sapience Minds,</strong> we specialize in building a culture where people choose to stay and grow. Our <strong>Talent Engagement & Retention services</strong> go beyond HR metrics to focus on human-centered strategies that spark motivation, foster loyalty, and align career goals with organizational outcomes.`}
+        Para1Content1={`In today’s competitive landscape, retaining high-performing employees is more challenging-and more essential-than ever. At <strong>Sapience Minds,</strong> we specialize in building a culture where people choose to stay and grow. Our <strong>Talent Engagement & Retention services</strong> go beyond HR metrics to focus on human-centered strategies that spark motivation, foster loyalty, and align career goals with organizational outcomes.`}
         Para1Content2={`Led by <strong>Babitha Remith,</strong> with over two decades of experience in global talent strategy, we use data-backed tools and emotional intelligence frameworks to design experiences that improve engagement and reduce attrition. From engagement surveys and recognition systems to feedback loops and career development plans, we craft comprehensive retention programs that reflect your company’s culture.`}
         // Para2Head="Lorem ipsum dolor"
         Para2Head2="Key Offerings:"
@@ -39,7 +39,7 @@ export const ServicePageSix = () => {
        
         ]}
         Para3Head="Lorem ipsum dolor"
-        // Para4Content1="We don’t just advise—we become your strategic HR ally, driving sustainable value."
+        // Para4Content1="We don’t just advise-we become your strategic HR ally, driving sustainable value."
  Para3Content1={`<strong>Client Benefit:</strong>`} 
         paracontent3="Clients gain a clear structure for advancing internal talent, ensuring business continuity, and developing high-potential employees into leadership roles."
         serviceIcons2="Participation in Engagement Programs"
@@ -53,7 +53,7 @@ export const ServicePageSix = () => {
         serviceIcons5="Reduction in Burnout-Related Exits"
         serviceIcons5_text="Proactive well-being strategies lead to healthier teams."
         policyProtect="Keep your best talent inspired and retained"
-        policyProtextp1={`At <strong>Sapience Minds</strong>, our retention solutions are crafted for impact. We believe engagement isn't about perks—it's about purpose, leadership, and growth. With deep experience in developing scalable retention frameworks for startups and enterprises, Babitha Remith brings emotional intelligence and business alignment into every strategy.`}
+        policyProtextp1={`At <strong>Sapience Minds</strong>, our retention solutions are crafted for impact. We believe engagement isn't about perks-it's about purpose, leadership, and growth. With deep experience in developing scalable retention frameworks for startups and enterprises, Babitha Remith brings emotional intelligence and business alignment into every strategy.`}
         policyProtextp2={`If you're looking to reduce turnover, improve morale, and build a people-first company culture, we’re ready to be your strategic partner in retention. Let’s make your team the reason people stay.`}
         service1name="HR Compliance and Policy Development"
         service2name="Customized HR Consulting and Advisory Services"
@@ -62,7 +62,7 @@ export const ServicePageSix = () => {
         service5name="Talent Management Solutions"
         service6name="Talent Engagement & Retention"
         service7name="Recruitment of Leadership & Mid-Level Team"
-        service8name="Employee Insurance & Benefits"
+        service8name="Employee Benfits & Insurance consulting"
         img_1={Image1}
         img_2={Image2}
         img_3={Rocket}

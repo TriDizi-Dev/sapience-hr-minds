@@ -17,9 +17,9 @@ export const ServicePageOne = () => {
         ServiceHeadName="HR Compliance and Policy Development"
         ServiceHeadContent="Stay legally compliant and culturally aligned with HR policies tailored for growing businesses. Build trust, reduce risks, and foster a structured workplace from day one."
         // Para1Head="Lorem ipsum dolor"
-        Para1Content1={`In today’s dynamic business environment, <strong>HR compliance </strong>is not just about following the law—it’s about creating a workplace where people feel protected, respected, and valued. <strong>At Sapience Minds,</strong> we bring over two decades of experience in HR leadership to support startups and SMBs with end-to-end compliance and policy development.`}
+        Para1Content1={`In today’s dynamic business environment, <strong>HR compliance </strong>is not just about following the law-it’s about creating a workplace where people feel protected, respected, and valued. <strong>At Sapience Minds,</strong> we bring over two decades of experience in HR leadership to support startups and SMBs with end-to-end compliance and policy development.`}
 
-        Para1Content2={`Our approach is rooted in <strong>Fractional CHRO expertise,</strong> giving you strategic HR support without the cost of a full-time executive. We analyze your current practices, identify compliance gaps, and deliver a customized framework that includes all legally required and industry-specific policies. But we don’t stop at documentation—we help you implement, communicate, and train your teams on the policies that matter.`}
+        Para1Content2={`Our approach is rooted in <strong>Fractional CHRO expertise,</strong> giving you strategic HR support without the cost of a full-time executive. We analyze your current practices, identify compliance gaps, and deliver a customized framework that includes all legally required and industry-specific policies. But we don’t stop at documentation-we help you implement, communicate, and train your teams on the policies that matter.`}
         Para1Content3="Whether you're onboarding your first employee or scaling your workforce, we ensure that your HR policies are aligned with your business vision, reduce operational risk, and meet the evolving needs of a hybrid or remote workforce."
 
         Para2Head="Key Offerings:"
@@ -42,7 +42,7 @@ export const ServicePageOne = () => {
         serviceIcons2="Audit Success Rate"
         serviceIcons2_text="Our clients stay consistently compliant, achieving high scores in internal and external HR audits."
         serviceIcons1="Customized Frameworks"
-        serviceIcons1_text="Every policy we deliver reflects your business model, team structure, and work culture—no one-size-fits-all templates."
+        serviceIcons1_text="Every policy we deliver reflects your business model, team structure, and work culture-no one-size-fits-all templates."
         serviceIcons3="Faster Hiring & Onboarding"
         serviceIcons3_text="Structured, documented HR policies lead to quicker integration of new team members."
         serviceIcons4="Strategic Fractional CHRO Support"
@@ -59,7 +59,7 @@ export const ServicePageOne = () => {
         service5name="Talent Management Solutions"
         service6name="Talent Engagement & Retention"
         service7name="Recruitment of Leadership & Mid-Level Team"
-        service8name="Employee Insurance & Benefits"
+        service8name="Employee Benfits & Insurance consulting"
         img_1={Image1}
         img_2={Image2}
         img_3={Rocket}

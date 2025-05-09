@@ -67,10 +67,10 @@ const WorkshopsHrLearning = () => {
       subhead2: "Lifecycle",
       subhead3: "Lifecycle",
       paragraph:
-        "A tactical workshop aimed at teaching practical recruitment techniques—from job descriptions to behavioral interviewing, candidate assessments, and hiring metrics, including how to handle high-volume or niche hiring.",
+        "A tactical workshop aimed at teaching practical recruitment techniques-from job descriptions to behavioral interviewing, candidate assessments, and hiring metrics, including how to handle high-volume or niche hiring.",
       PrimaryResponsibilityHeading: "Job Description:",
       PrimaryResponsibilityPara:
-        "A tactical workshop aimed at teaching practical recruitment techniques—from job descriptions to behavioral interviewing, candidate assessments, and hiring metrics, including how to handle high-volume or niche hiring.",
+        "A tactical workshop aimed at teaching practical recruitment techniques-from job descriptions to behavioral interviewing, candidate assessments, and hiring metrics, including how to handle high-volume or niche hiring.",
       jobspecificationsHeading: "Responsibilities:",
       jobspecifications: [
         "Participate in hands-on resume shortlisting exercises.",
