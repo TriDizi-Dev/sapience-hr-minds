@@ -72,7 +72,7 @@ export const CreateBlog = () => {
       const uploadTask = await uploadBytes(imageRef, image);
       const imageUrl = await getDownloadURL(uploadTask.ref);
 
-      const newBlogRef = push(ref(database, "blogs/hr-minds"));
+      const newBlogRef = push(ref(database, "blogs"));
       await set(newBlogRef, {
         title,
         content,

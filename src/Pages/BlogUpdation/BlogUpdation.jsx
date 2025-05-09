@@ -100,7 +100,7 @@ export const UpdateBlog = () => {
         updated_at: new Date().toISOString(),
       };
 
-      await update(ref(database, `blogs/hr-minds/${blogId}`), updatedBlogData);
+      await update(ref(database, `blogs/${blogId}`), updatedBlogData);
     
       toast.success("Blog updated successfully!", {
         position: "top-right",
