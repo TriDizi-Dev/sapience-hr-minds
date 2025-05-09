@@ -35,7 +35,7 @@ export const ServicePageTwo = () => {
         Para3Head="Lorem ipsum dolor"
         Para3Content1={`<strong>Client Benefit:</strong>`}
         paracontent3="A trusted partnership for tailored HR support, enabling companies to grow with solid HR foundations."
-        // Para4Content1="We don’t just advise—we become your strategic HR ally, driving sustainable value."
+        // Para4Content1="We don’t just advise-we become your strategic HR ally, driving sustainable value."
         serviceIcons2="Faster Implementation of New Policies"
         serviceIcons2_text="Hands-on support ensures swift execution of HR initiatives."
         serviceIcons1="Tailored HR Solutions"
@@ -48,7 +48,7 @@ export const ServicePageTwo = () => {
         serviceIcons5_text="Ongoing support from senior HR leadership without the overhead."
         policyProtect="Smart HR strategies. Tailored for your growth"
         policyProtextp1={`At <strong>Sapience Minds</strong>, we don't believe in off-the-shelf consulting. Our advisory services reflect your unique business DNA and aspirations. Whether you're scaling your startup, managing organizational change, or simply need trusted HR direction, our strategic guidance bridges the gap between people and performance.`}
-        policyProtextp2={`With decades of corporate experience and a heart for startup success, <strong>Babitha Remith</strong> brings a Fractional CHRO approach that balances practicality with innovation. Let’s build your people-first business strategy—together.`}
+        policyProtextp2={`With decades of corporate experience and a heart for startup success, <strong>Babitha Remith</strong> brings a Fractional CHRO approach that balances practicality with innovation. Let’s build your people-first business strategy-together.`}
         service1name="HR Compliance and Policy Development"
         service2name="Customized HR Consulting and Advisory Services"
         service3name="Virtual CHRO and Outsourcing of HR Operations"
@@ -56,7 +56,7 @@ export const ServicePageTwo = () => {
         service5name="Talent Management Solutions"
         service6name="Talent Engagement & Retention"
         service7name="Recruitment of Leadership & Mid-Level Team"
-        service8name="Employee Insurance & Benefits"
+        service8name="Employee Benfits & Insurance consulting"
         img_1={Image1}
         img_2={Image2}
         img_3={Rocket}

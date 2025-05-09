@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Navbar.css";
 import { IoReorderThree } from "react-icons/io5";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import Logo from "../../assets/Logo.jpg";
 
 export const Navbar = () => {
   const navigate = useNavigate();
@@ -54,9 +55,9 @@ export const Navbar = () => {
     <div className="nav_main_container">
       <div className="navbar_outer">
         <div className="nav_logo_outer">
-          <h1 className="nav_logo" onClick={handleHome}>
-            Logo
-          </h1>
+          <div className="nav_logo" onClick={handleHome}>
+            <img src={Logo} alt="Logo"></img>
+          </div>
         </div>
         <div className="nav_items_outer">
           <Link to="/" className="nav_link">
@@ -160,7 +161,7 @@ export const Navbar = () => {
                     navActive === "/talent-management" ||
                     navActive === "/talent-engagement" ||
                     navActive === "/recruitment-of-leadership" ||
-                    navActive === "/employee-insurance-and-benefits"
+                    navActive === "/employee-benfits-and-insurance-consulting"
                       ? "nav_underline"
                       : ""
                   }`}
@@ -225,16 +226,17 @@ export const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to="/employee-insurance-and-benefits"
+                    to="/employee-benfits-and-insurance-consulting"
                     onClick={() => setTalentManagement(false)}
                     style={{
                       backgroundColor:
-                        navActive === "/employee-insurance-and-benefits"
+                        navActive ===
+                        "/employee-benfits-and-insurance-consulting"
                           ? "#ffffff"
                           : "",
                     }}
                   >
-                    Employee Insurance & Benefits
+                    Employee Benfits & Insurance consulting
                   </Link>
                 </li>
               </ul>
@@ -343,7 +345,9 @@ export const Navbar = () => {
       <div className="nav_mobile_res_main">
         <div className="nav_mobile_outer">
           <div className="nav_mobile_logo_outer">
-            <h1 className="nav_mobile_logo">Logo</h1>
+            <div className="nav_mobile_logo">
+              <img src={Logo} alt="Logo" />
+            </div>
           </div>
           <div className="nav_mobile_left_click">
             <IoReorderThree className="three_lines" onClick={handleNavList} />
@@ -446,7 +450,9 @@ export const Navbar = () => {
                         )}
                         style={{
                           backgroundColor:
-                            navActive === "/virtual-chro-and-outsourcing" ? "#ffffff" : "",
+                            navActive === "/virtual-chro-and-outsourcing"
+                              ? "#ffffff"
+                              : "",
                         }}
                       >
                         Virtual CHRO and Outsourcing of HR Operations
@@ -461,7 +467,7 @@ export const Navbar = () => {
                 onMouseLeave={() => setTalentManagement(false)}
               >
                 <div className="nav_link mobile_nav_items">
-                  Talent Management 
+                  Talent Management
                   <div className="nav_underline_wrapper">
                     <div
                       className={` ${
@@ -469,7 +475,8 @@ export const Navbar = () => {
                         navActive === "/talent-management" ||
                         navActive === "/talent-engagement" ||
                         navActive === "/recruitment-of-leadership" ||
-                        navActive === "/employee-insurance-and-benefits"
+                        navActive ===
+                          "/employee-benfits-and-insurance-consulting"
                           ? "nav_underline"
                           : ""
                       }`}
@@ -487,7 +494,9 @@ export const Navbar = () => {
                         )}
                         style={{
                           backgroundColor:
-                            navActive === "/talent-acquisition-solutions" ? "#ffffff" : "",
+                            navActive === "/talent-acquisition-solutions"
+                              ? "#ffffff"
+                              : "",
                         }}
                       >
                         Talent Acquisition Solutions
@@ -530,7 +539,9 @@ export const Navbar = () => {
                         )}
                         style={{
                           backgroundColor:
-                            navActive === "/recruitment-of-leadership" ? "#ffffff" : "",
+                            navActive === "/recruitment-of-leadership"
+                              ? "#ffffff"
+                              : "",
                         }}
                       >
                         Recruitment of Leadership & Mid-Level Team
@@ -538,16 +549,19 @@ export const Navbar = () => {
                     </li>
                     <li>
                       <Link
-                        to="/employee-insurance-and-benefits"
+                        to="/employee-benfits-and-insurance-consulting"
                         onClick={() => (
                           setTalentManagement(false), handleNavList()
                         )}
                         style={{
                           backgroundColor:
-                            navActive === "/employee-insurance-and-benefits" ? "#ffffff" : "",
+                            navActive ===
+                            "/employee-benfits-and-insurance-consulting"
+                              ? "#ffffff"
+                              : "",
                         }}
                       >
-                        Employee Insurance & Benefits
+                        Employee Benfits & Insurance consulting
                       </Link>
                     </li>
                   </ul>
@@ -594,7 +608,9 @@ export const Navbar = () => {
                         onClick={() => (setEducation(false), handleNavList())}
                         style={{
                           backgroundColor:
-                            navActive === "/internship-hr-learning" ? "#ffffff" : "",
+                            navActive === "/internship-hr-learning"
+                              ? "#ffffff"
+                              : "",
                         }}
                       >
                         Internships
@@ -607,7 +623,9 @@ export const Navbar = () => {
                         onClick={() => (setEducation(false), handleNavList())}
                         style={{
                           backgroundColor:
-                            navActive === "/workshop-hr-learning" ? "#ffffff" : "",
+                            navActive === "/workshop-hr-learning"
+                              ? "#ffffff"
+                              : "",
                         }}
                       >
                         Workshops
@@ -619,7 +637,9 @@ export const Navbar = () => {
                         onClick={() => (setEducation(false), handleNavList())}
                         style={{
                           backgroundColor:
-                            navActive === "/webinar-hr-learning" ? "#ffffff" : "",
+                            navActive === "/webinar-hr-learning"
+                              ? "#ffffff"
+                              : "",
                         }}
                       >
                         Webinars

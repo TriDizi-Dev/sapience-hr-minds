@@ -89,10 +89,10 @@ const WebinarHRLearning = () => {
       subhead2: "Support",
       subhead3: "Workplace",
       paragraph:
-        "This webinar demystifies how startups and growing companies can manage employee expectations, tackle grievances, and create positive work cultures—without massive HR teams.",
+        "This webinar demystifies how startups and growing companies can manage employee expectations, tackle grievances, and create positive work cultures-without massive HR teams.",
       PrimaryResponsibilityHeading: "Job Description:",
       PrimaryResponsibilityPara:
-        "This webinar demystifies how startups and growing companies can manage employee expectations, tackle grievances, and create positive work cultures—without massive HR teams.",
+        "This webinar demystifies how startups and growing companies can manage employee expectations, tackle grievances, and create positive work cultures-without massive HR teams.",
       jobspecificationsHeading: "Responsibilities:",
       jobspecifications: [
         "Participate in expert talks and ER frameworks",

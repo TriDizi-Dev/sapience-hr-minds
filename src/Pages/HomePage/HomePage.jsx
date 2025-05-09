@@ -22,7 +22,8 @@ import icon_1 from "../../assets/AboutPage/icon_1.svg";
 import icon_2 from "../../assets/AboutPage/icon_2.svg";
 import bg1 from "../../assets/HomePage/bg1.svg";
 import bg2 from "../../assets/HomePage/bg2.svg";
-import homevideo from "../../assets/HomePage/hmv.mp4";
+// import homevideo from "../../assets/HomePage/hmv.mp4";
+import homevideo from "../../assets/HomePage/Video.mp4";
 import man from "../../assets/HomePage/Testimony_1.png";
 import man_2 from "../../assets/HomePage/man_2.png";
 import man_3 from "../../assets/HomePage/man_3.png";
@@ -91,7 +92,7 @@ import client23 from "../../assets/HomePage/image23-removebg.png"
 
 import client24 from "../../assets/HomePage/image24.png"
 import client25 from "../../assets/HomePage/image25.png"
-
+import { MdOutlinePlayCircleFilled } from "react-icons/md";
 
 
 export const HomePage = () => {
@@ -180,7 +181,7 @@ export const HomePage = () => {
       Head: "Learn More",
       subHead: "Employee Insurance & Benefits",
       para: "Boost employee satisfaction with thoughtfully designed insurance and perks that support health, security, and morale.",
-      path: "/employee-insurance-and-benefits",
+      path: "/employee-benfits-and-insurance-consulting",
     },
   ];
 
@@ -394,6 +395,13 @@ export const HomePage = () => {
 
     fetchBlogs();
   }, []);
+    const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlay = () => {
+    setIsPlaying(true);
+    videoRef.current.play();
+  };
 
   return (
     <div className="home_main">
@@ -663,17 +671,27 @@ export const HomePage = () => {
               With 23+ years of HR leadership, I specialize in helping startups
               and SMBs design people-first, performance-driven cultures. As a
               Fractional CHRO, I bring executive-level HR expertise without the
-              full-time cost — offering structure, compliance, and strategy
+              full-time cost - offering structure, compliance, and strategy
               tailored for fast-growing teams.
             </p>
           </div>
           <div className="homepage_layer3_part2">
+             {!isPlaying && (
+        <div className="video_overlay">
+          <button className="play_button" onClick={handlePlay}>
+            {/* ▶ Play Video */}
+            <MdOutlinePlayCircleFilled />
+          </button>
+        </div>
+      )}
             <video
+            ref={videoRef}
               src={homevideo}
-              autoPlay
-              muted
+              // autoPlay
+              // muted
               loop
               playsInline
+              controls={isPlaying}
               className="about_video"
             />
           </div>

@@ -71,7 +71,7 @@ function Layout() {
         <Route path="/talent-management" element={<ServicePageFive />}></Route>
         <Route path="/talent-engagement" element={<ServicePageSix />}></Route>
         <Route path="/recruitment-of-leadership" element={<ServicePageSeven />}></Route>
-        <Route path="/employee-insurance-and-benefits" element={<ServicePageEight />}></Route>
+        <Route path="/employee-benfits-and-insurance-consulting" element={<ServicePageEight />}></Route>
         <Route path="/blog/:id" element={<SingleBlogPage />}></Route>
         <Route path="/blog-creation" element={<CreateBlog />}></Route>   
         <Route path="/career-creation" element={<CareerCreation />}></Route>

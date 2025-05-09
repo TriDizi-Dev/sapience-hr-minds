@@ -20,8 +20,8 @@ export const ServicePageFour = () => {
         ServiceHeadName="Talent Acquisition Solutions"
         ServiceHeadContent="Find the right people faster with structured, strategic hiring processes tailored for growing businesses. Build your dream team with expert-led recruitment strategies."
         // Para1Head="Lorem ipsum dolor"
-        Para1Content1={`Hiring the right talent is one of the most crucial aspects of business success—especially for startups and scaling organizations. At <strong>Sapience Minds,</strong> we offer end-to-end <strong>Talent Acquisition Solutions</strong> designed to help you attract, assess, and onboard the best-fit candidates for your organization.`}
-        Para1Content2={`Led by seasoned HR expert <strong>Babitha Remith,</strong> with 23+ years of experience across global enterprises, our solutions combine industry best practices with startup agility. We don’t just fill positions—we align hiring with your company’s culture, long-term goals, and growth trajectory.`}
+        Para1Content1={`Hiring the right talent is one of the most crucial aspects of business success-especially for startups and scaling organizations. At <strong>Sapience Minds,</strong> we offer end-to-end <strong>Talent Acquisition Solutions</strong> designed to help you attract, assess, and onboard the best-fit candidates for your organization.`}
+        Para1Content2={`Led by seasoned HR expert <strong>Babitha Remith,</strong> with 23+ years of experience across global enterprises, our solutions combine industry best practices with startup agility. We don’t just fill positions-we align hiring with your company’s culture, long-term goals, and growth trajectory.`}
         Para2Head2="Key Offerings:"
         Para1Content3="Our approach includes workforce planning, job profiling, multi-channel sourcing, behavioral assessments, and structured interview processes to ensure consistency and quality. We also help you build strong employer branding to attract top-tier candidates who resonate with your mission and values."
         keyofferinglist={[
@@ -51,7 +51,7 @@ export const ServicePageFour = () => {
         serviceIcons5="3x More Qualified Applicants"
         serviceIcons5_text="We use smart sourcing methods and data-backed targeting to deliver better-fit talent pools."
         policyProtect="Right talent. Right time. Every time"
-        policyProtextp1={`At <strong>Sapience Minds</strong>, we know recruitment is more than a checklist—it’s the foundation of culture, performance, and growth. We use strategic insight, structured processes, and an understanding of evolving workforce needs to find talent that doesn’t just work—but thrives.`}
+        policyProtextp1={`At <strong>Sapience Minds</strong>, we know recruitment is more than a checklist-it’s the foundation of culture, performance, and growth. We use strategic insight, structured processes, and an understanding of evolving workforce needs to find talent that doesn’t just work-but thrives.`}
         policyProtextp2={`As a <strong>Fractional CHRO service provider,</strong> our recruitment strategies are tailored to each client’s scale, sector, and goals. Partner with Sapience Minds to build your future-ready team with confidence and precision.`}
         service1name="HR Compliance and Policy Development"
         service2name="Customized HR Consulting and Advisory Services"
@@ -60,7 +60,7 @@ export const ServicePageFour = () => {
         service5name="Talent Management Solutions"
         service6name="Talent Engagement & Retention"
         service7name="Recruitment of Leadership & Mid-Level Team"
-        service8name="Employee Insurance & Benefits"
+        service8name="Employee Benfits & Insurance consulting"
         img_1={Image1}
         img_2={Image2}
         img_3={Rocket}

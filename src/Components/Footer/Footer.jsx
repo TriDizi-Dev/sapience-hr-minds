@@ -4,6 +4,7 @@ import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
 import { Link, useNavigate } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa6";
+import Logo from "../../assets/Logo.jpg"
 
 export const Footer = () => {
   const navigate = useNavigate();
@@ -19,9 +20,9 @@ export const Footer = () => {
       <div className="footer_outer">
         {/* <div className="footer_left"> */}
         <div className="footer_logo_outer">
-          <h1 className="footer_logo" onClick={hadleHome}>
-            Logo
-          </h1>
+          <div className="footer_logo" onClick={hadleHome}>
+            <img src={Logo} alt="Logo"/>
+          </div>
           <p className="Contact_heading">Head Office</p>
           <p className="Contact_sub_headings">Bengaluru, Karnataka, India</p>
 
@@ -76,9 +77,9 @@ export const Footer = () => {
                   Recruitment of Leadership & Mid-Level Team
                 </li>
               </Link>
-              <Link to="/employee-insurance-and-benefits" className="nav_link">
+              <Link to="/employee-benfits-and-insurance-consulting" className="nav_link">
                 <li className="footer_services_items">
-                  Employee Insurance & Benefits
+                 Employee Benfits & Insurance consulting
                 </li>
               </Link>
             </div>

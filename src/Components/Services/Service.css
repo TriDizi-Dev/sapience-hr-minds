@@ -581,7 +581,7 @@ margin-top: 5vw;
   }
 
   .Niddle_sub_content {
-    font-size: 2.5vw;
+    font-size: 2.8vw;
   }
 
   .Service_Page_Section2_Hero {
@@ -611,7 +611,9 @@ margin-top: 5vw;
   .Image_Container_service_right img {
     height: fit-content;
   }
-
+.List_Items_Middle {
+  margin-left: 4vw;
+}
   .List_Items_Middle li {
     font-size: 3vw;
     text-align: start;

@@ -10,7 +10,7 @@ import TradeMark from "../../assets/AboutPage/trademark.svg";
 import TringleGroup from "../../assets/AboutPage/TriangleImages.svg";
 // import Instagram from "../../assets/Service/service18.svg";
 import Instagram from "../../assets/Service/service1imageee.svg";
-import contactImg from "../../assets/Service/service3Imageback.svg"
+import contactImg from "../../assets/Service/service3Imageback.svg";
 // import Message from "../../assets/Service/service19.svg";
 import Message from "../../assets/Service/service2imageee.svg";
 import Target from "../../assets/Service/service3imageee.svg";
@@ -40,7 +40,15 @@ export const Service = ({
   Para1Content3,
   Para2Head,
   Para2Head2,
-keyofferinglist=[],
+  Para2Head21,
+  Para2Head211,
+  keyofferinglist = [],
+  Para2Head22,
+  Para2Head222,
+  keyofferinglist2 = [],
+  Para2Head23,
+  Para2Head233,
+  keyofferinglist3 = [],
   Para3Head,
   Para3Content1,
   paracontent3,
@@ -77,17 +85,16 @@ keyofferinglist=[],
   metaTitle,
   path,
   virtueForm,
-  targetData=null,
-  targetAwardsData=null,
-  targetClientData=null,
-  targetClientRatingData=null,
-  targetGoalData=null,
+  targetData = null,
+  targetAwardsData = null,
+  targetClientData = null,
+  targetClientRatingData = null,
+  targetGoalData = null,
   symbol1,
   symbol2,
   symbol3,
   symbol4,
-  symbol5
-
+  symbol5,
 }) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -131,29 +138,35 @@ keyofferinglist=[],
     { name: service1name, icon: Instagram, path: "/hr-compliance" },
     { name: service2name, icon: Message, path: "/hr-consulting" },
     { name: service3name, icon: Target, path: "/virtual-chro-and-outsourcing" },
-    { name: service4name, icon: Speaker, path: "/talent-acquisition-solutions" },
+    {
+      name: service4name,
+      icon: Speaker,
+      path: "/talent-acquisition-solutions",
+    },
     { name: service5name, icon: Cursur, path: "/talent-management" },
     { name: service6name, icon: Play, path: "/talent-engagement" },
     { name: service7name, icon: Monitor, path: "/recruitment-of-leadership" },
-    { name: service8name, icon: image8, path: "/employee-insurance-and-benefits" },
+    {
+      name: service8name,
+      icon: image8,
+      path: "/employee-benfits-and-insurance-consulting",
+    },
   ];
 
   const filteredServices = services.filter(
     (service) => service.name !== ServiceHeadName
   );
 
-  
-
   const [formData, setFormData] = useState({
-    Name:'',
-    Phone_number:'',
-    Email: '',
-    CompanyName: '',
-    Industry: '',
-    Location: '',
-    Employees: '',
-    Contact: '',
-    Sourcepage:'Virtual CHRO And Outsourcing'
+    Name: "",
+    Phone_number: "",
+    Email: "",
+    CompanyName: "",
+    Industry: "",
+    Location: "",
+    Employees: "",
+    Contact: "",
+    Sourcepage: "Virtual CHRO And Outsourcing",
   });
 
   const handleChange = (e) => {
@@ -161,9 +174,9 @@ keyofferinglist=[],
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
- const scriptURL =
+    const scriptURL =
       "https://script.google.com/macros/s/AKfycbzvzG1K-8O3LD328fyCXs5oyEkWVA12zplggBg-jMLHZjk9tFow9AYw_EhVQqvjlRNPcQ/exec";
 
     try {
@@ -171,7 +184,6 @@ keyofferinglist=[],
       for (let key in formData) {
         formPayload.append(key, formData[key]);
       }
-
 
       const response = await fetch(scriptURL, {
         method: "POST",
@@ -190,16 +202,15 @@ keyofferinglist=[],
           draggable: true,
         });
         setFormData({
-          Name:'',
-          Phone_number:'',
-          Email: '',
-          CompanyName: '',
-          Industry: '',
-          Location: '',
-          Employees: '',
-          Contact: '',
+          Name: "",
+          Phone_number: "",
+          Email: "",
+          CompanyName: "",
+          Industry: "",
+          Location: "",
+          Employees: "",
+          Contact: "",
         });
-      
       } else {
         toast.warning("Something went wrong. Please try again.", {
           position: "top-right",
@@ -221,10 +232,7 @@ keyofferinglist=[],
         draggable: true,
       });
     }
-
   };
-
-
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -406,7 +414,7 @@ keyofferinglist=[],
     window.scrollTo(0, 0);
   }, []);
 
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
   return (
     <div className="Service_MAin_Container">
@@ -476,40 +484,45 @@ keyofferinglist=[],
           <p className="Middle_second_head2" data-aos="zoom-in">
             {Para2Head2}
           </p>
-
+          <p className="Niddle_sub_content" data-aos="zoom-in">
+            {Para2Head21}
+          </p>
+          <p className="Niddle_sub_content" data-aos="zoom-in">
+            {Para2Head211}
+          </p>
           <ul className="List_Items_Middle">
-            {
-              keyofferinglist.map((item)=>(
-                <li data-aos="fade-up">{item}</li>
-
-              ))
-            }
-
-            {/* <li data-aos="fade-right">{List1}</li>
-            <li data-aos="fade-right">{List2}</li>
-            <li data-aos="fade-right">{List3}</li>
-            <li data-aos="fade-right">{List4}</li> */}
-{/* 
-            {(path === "hr-consulting" ||
-              path === "talent-management" ||
-              path === "recruitment-of-leadership" ||
-              path === "employee-insurance-and-benefits" ||
-              path === "hr-compliance" ||
-              path === "virtual-chro-and-outsourcing" ||
-              path == "talent-acquisition-solutions" ||
-              path === "talent-engagement") && (
-              <li data-aos="fade-right">{List5}</li>
-            )}
-
-            {path === "hr-compliance" && <li data-aos="fade-right">{List6}</li>} */}
+            {keyofferinglist.map((item) => (
+              <li data-aos="fade-up">{item}</li>
+            ))}
+          </ul>
+          <p className="Niddle_sub_content" data-aos="zoom-in">
+            {Para2Head22}
+          </p>
+          <p className="Niddle_sub_content" data-aos="zoom-in">
+            {Para2Head222}
+          </p>
+          <ul className="List_Items_Middle">
+            {keyofferinglist2.map((item) => (
+              <li data-aos="fade-up">{item}</li>
+            ))}
+          </ul>
+          <p className="Niddle_sub_content" data-aos="zoom-in">
+            {Para2Head23}
+          </p>
+          <p className="Niddle_sub_content" data-aos="zoom-in">
+            {Para2Head233}
+          </p>
+          <ul className="List_Items_Middle">
+            {keyofferinglist3?.map((item) => (
+              <li data-aos="fade-up">{item}</li>
+            ))}
           </ul>
 
           {/* <p className="Middle_Secound_Head" data-aos="zoom-in">
             {Para3Head}
           </p> */}
           <p className="Niddle_sub_content" data-aos="zoom-in">
-            {parse(Para3Content1)}{" "}
-            <span>{paracontent3}</span>
+            {parse(Para3Content1)} <span>{paracontent3}</span>
           </p>
           <p className="Niddle_sub_content_p4" data-aos="zoom-in">
             {Para4Content1}
@@ -525,129 +538,135 @@ keyofferinglist=[],
         src={BlueLayer}
         alt="Layer"
         className="Background_Image_Container"
-      ></img>      
-        <p className="virtueForm_Headline"data-aos="fade-top">{virtueForm}</p>
+      ></img>
+      <p className="virtueForm_Headline" data-aos="fade-top">
+        {virtueForm}
+      </p>
       {path === "virtual-chro-and-outsourcing" && (
         <div className="virtual-chro-form-container">
           <div className="virtual-left-container" data-aos="flip-top">
-          <img src={contactImg} alt="" />
+            <img src={contactImg} alt="" />
           </div>
 
-          <form className="virtual-chro-custom-form" onSubmit={handleSubmit} data-aos="fade-down">
+          <form
+            className="virtual-chro-custom-form"
+            onSubmit={handleSubmit}
+            data-aos="fade-down"
+          >
             <p className="virtual-contact-title">Fill The Form </p>
 
-            
-        <div className="virtual-chro-form-row">
-          <div className="virtual-chro-form-group">
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              id="Name"
-              name="Name"
-              value={formData.Name}
-              onChange={handleChange}
-              required
-              placeholder="Enter your Name"
-            />
-          </div>
-          <div className="virtual-chro-form-group">
-            <label htmlFor="companyName">Phone Number</label>
-            <input
-              type="text"
-              id="Phone_number"
-              name="Phone_number"
-              value={formData.Phone_number}
-              onChange={handleChange}
-              required
-              placeholder="Enter Your Contact Number"
-            />
-          </div>
-        </div>
+            <div className="virtual-chro-form-row">
+              <div className="virtual-chro-form-group">
+                <label htmlFor="name">Name</label>
+                <input
+                  type="text"
+                  id="Name"
+                  name="Name"
+                  value={formData.Name}
+                  onChange={handleChange}
+                  required
+                  placeholder="Enter your Name"
+                />
+              </div>
+              <div className="virtual-chro-form-group">
+                <label htmlFor="companyName">Phone Number</label>
+                <input
+                  type="text"
+                  id="Phone_number"
+                  name="Phone_number"
+                  value={formData.Phone_number}
+                  onChange={handleChange}
+                  required
+                  placeholder="Enter Your Contact Number"
+                />
+              </div>
+            </div>
 
-        <div className="virtual-chro-form-row">
-          <div className="virtual-chro-form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="Email"
-              name="Email"
-              value={formData.Email}
-              onChange={handleChange}
-              required
-              placeholder="Enter Your Email Address"
-            />
-          </div>
-          <div className="virtual-chro-form-group">
-            <label htmlFor="companyName">Company Name</label>
-            <input
-              type="text"
-              id="CompanyName"
-              name="CompanyName"
-              value={formData.CompanyName}
-              onChange={handleChange}
-              required
-              placeholder="Enter Your Name"
-            />
-          </div>
-        </div>
+            <div className="virtual-chro-form-row">
+              <div className="virtual-chro-form-group">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  id="Email"
+                  name="Email"
+                  value={formData.Email}
+                  onChange={handleChange}
+                  required
+                  placeholder="Enter Your Email Address"
+                />
+              </div>
+              <div className="virtual-chro-form-group">
+                <label htmlFor="companyName">Company Name</label>
+                <input
+                  type="text"
+                  id="CompanyName"
+                  name="CompanyName"
+                  value={formData.CompanyName}
+                  onChange={handleChange}
+                  required
+                  placeholder="Enter Your Name"
+                />
+              </div>
+            </div>
 
+            <div className="virtual-chro-form-row">
+              <div className="virtual-chro-form-group">
+                <label htmlFor="industry">Industry</label>
+                <input
+                  type="text"
+                  id="industry"
+                  name="Industry"
+                  value={formData.Industry}
+                  onChange={handleChange}
+                  required
+                  placeholder="Enter Your Industry"
+                />
+              </div>
+              <div className="virtual-chro-form-group">
+                <label htmlFor="location">Location</label>
+                <input
+                  type="text"
+                  id="Location"
+                  name="Location"
+                  value={formData.Location}
+                  onChange={handleChange}
+                  required
+                  placeholder="Enter Your Location"
+                />
+              </div>
+            </div>
 
-        <div className="virtual-chro-form-row">
-          <div className="virtual-chro-form-group">
-            <label htmlFor="industry">Industry</label>
-            <input
-              type="text"
-              id="industry"
-              name="Industry"
-              value={formData.Industry}
-              onChange={handleChange}
-              required
-              placeholder="Enter Your Industry"
-            />
-          </div>
-          <div className="virtual-chro-form-group">
-            <label htmlFor="location">Location</label>
-            <input
-              type="text"
-              id="Location"
-              name="Location"
-              value={formData.Location}
-              onChange={handleChange}
-              required
-              placeholder="Enter Your Location"
-            />
-          </div>
-        </div>
+            <div className="virtual-chro-form-row">
+              <div className="virtual-chro-form-group">
+                <label htmlFor="employees">No. of Employees</label>
+                <input
+                  type="number"
+                  id="Employees"
+                  name="Employees"
+                  value={formData.Employees}
+                  onChange={handleChange}
+                  required
+                  placeholder="Enter Employees Count"
+                />
+              </div>
+              <div className="virtual-chro-form-group">
+                <label htmlFor="contact">Contact Person / Designation</label>
+                <input
+                  type="text"
+                  id="Contact"
+                  name="Contact"
+                  value={formData.Contact}
+                  onChange={handleChange}
+                  required
+                  placeholder="Enter Your Designation"
+                />
+              </div>
+            </div>
 
-        <div className="virtual-chro-form-row">
-          <div className="virtual-chro-form-group">
-            <label htmlFor="employees">No. of Employees</label>
-            <input
-              type="number"
-              id="Employees"
-              name="Employees"
-              value={formData.Employees}
-              onChange={handleChange}
-              required
-              placeholder="Enter Employees Count"
-            />
-          </div>
-          <div className="virtual-chro-form-group">
-            <label htmlFor="contact">Contact Person / Designation</label>
-            <input
-              type="text"
-              id="Contact"
-              name="Contact"
-              value={formData.Contact}
-              onChange={handleChange}
-              required
-              placeholder="Enter Your Designation"
-            />
-          </div>
-        </div>
-
-        <button type="submit" className="virtual-chro-submit-button">Submit</button>
-      </form>
+            <button type="submit" className="virtual-chro-submit-button">
+              Submit
+            </button>
+          </form>
         </div>
       )}
       <div className="Service_Page_Section3">
@@ -671,7 +690,9 @@ keyofferinglist=[],
           <div className="Image_Container_Section3_Main_Images">
             <div className="Image_Container_Section3_imge_Cont1" ref={ref}>
               <img src={img_3} alt="Rocket"></img>
-              <span className="Rocket_count">{ count > 0 && `${count}${symbol1} `}</span>
+              <span className="Rocket_count">
+                {count > 0 && `${count}${symbol1} `}
+              </span>
               <div>
                 <h3>{serviceIcons1}</h3>
                 <p>{serviceIcons1_text}</p>
@@ -680,7 +701,9 @@ keyofferinglist=[],
 
             <div className="Image_Container_Section3_imge_Cont2">
               <img src={img_4} alt="Cup"></img>
-              <span className="Cup_count">{AwardsCount> 0 && `${AwardsCount}${symbol2}`}</span>
+              <span className="Cup_count">
+                {AwardsCount > 0 && `${AwardsCount}${symbol2}`}
+              </span>
               <div>
                 <h3>{serviceIcons2}</h3>
                 <p>
@@ -691,7 +714,9 @@ keyofferinglist=[],
             </div>
             <div className="Image_Container_Section3_imge_Cont3">
               <img src={img_5} alt="Medal"></img>
-              <span className="Cup_count">{ClientCount>0 && `${ClientCount}${symbol3}`}</span>
+              <span className="Cup_count">
+                {ClientCount > 0 && `${ClientCount}${symbol3}`}
+              </span>
               <div>
                 <h3>{serviceIcons4}</h3>
                 <p>{serviceIcons4_text}</p>
@@ -699,7 +724,9 @@ keyofferinglist=[],
             </div>
             <div className="Image_Container_Section3_imge_Cont4">
               <img src={img_7} alt="Goal"></img>
-              <span className="Goal_count">{GoalCount>0 && `${GoalCount}${symbol4}`}</span>
+              <span className="Goal_count">
+                {GoalCount > 0 && `${GoalCount}${symbol4}`}
+              </span>
               <div className="goal_icon_text">
                 <h3>{serviceIcons5}</h3>
                 <p>{serviceIcons5_text}</p>
@@ -707,7 +734,9 @@ keyofferinglist=[],
             </div>
             <div className="Image_Container_Section3_imge_Cont5">
               <img src={img_6} alt="Setting"></img>
-              <span className="Setting_count">{ClientRatingCount>0 && `${ClientRatingCount}${symbol5}`}</span>
+              <span className="Setting_count">
+                {ClientRatingCount > 0 && `${ClientRatingCount}${symbol5}`}
+              </span>
 
               <div>
                 <h3>{serviceIcons3}</h3>
@@ -729,9 +758,8 @@ keyofferinglist=[],
         <div className="Service_Cards">
           {filteredServices.map((service, index) => (
             <div
-              className=
-              // {`
-                "Service_Icon_Container" 
+              className=// {`
+              "Service_Icon_Container"
               //   ${
               //   index === 2 ? "marginChnage" : ""
               // } ${index === 3 ? "Middle_service" : ""} ${
