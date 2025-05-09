@@ -23,6 +23,7 @@ import icon_2 from "../../assets/AboutPage/icon_2.svg";
 import bg1 from "../../assets/HomePage/bg1.svg";
 import bg2 from "../../assets/HomePage/bg2.svg";
 // import homevideo from "../../assets/HomePage/hmv.mp4";
+
 import homevideo from "../../assets/HomePage/Video.mp4";
 import man from "../../assets/HomePage/Testimony_1.png";
 import man_2 from "../../assets/HomePage/man_2.png";
