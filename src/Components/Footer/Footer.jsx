@@ -4,7 +4,7 @@ import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
 import { Link, useNavigate } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa6";
-import Logo from "../../assets/Logo.jpg"
+import Logo from "../../assets/Logo.svg"
 
 export const Footer = () => {
   const navigate = useNavigate();
