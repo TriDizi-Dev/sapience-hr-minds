@@ -19,7 +19,7 @@ export const Manageblogs = () => {
 
   useEffect(() => {
     const fetchBlogs = async () => {
-      const blogRef = ref(database, "blogs/hr-minds");
+      const blogRef = ref(database, "blogs");
 
       try {
         const snapshot = await get(blogRef);
@@ -53,7 +53,7 @@ export const Manageblogs = () => {
 
   const handleDelete = async (id) => {
     try {
-      await remove(ref(database, `blogs/hr-minds/${id}`));
+      await remove(ref(database, `blogs/${id}`));
       setBlogs((prev) => prev.filter((blog) => blog.id !== id));
       // alert("Blog deleted successfully.");
       toast.success("Blog deleted successfully!.", {

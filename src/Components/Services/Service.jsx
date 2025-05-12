@@ -484,7 +484,7 @@ export const Service = ({
           <p className="Middle_second_head2" data-aos="zoom-in">
             {Para2Head2}
           </p>
-          <p className="Niddle_sub_content" data-aos="zoom-in">
+          <p className="Niddle_sub_content1" data-aos="zoom-in">
             {Para2Head21}
           </p>
           <p className="Niddle_sub_content" data-aos="zoom-in">
@@ -495,7 +495,7 @@ export const Service = ({
               <li data-aos="fade-up">{item}</li>
             ))}
           </ul>
-          <p className="Niddle_sub_content" data-aos="zoom-in">
+          <p className="Niddle_sub_content1" data-aos="zoom-in">
             {Para2Head22}
           </p>
           <p className="Niddle_sub_content" data-aos="zoom-in">
@@ -506,7 +506,7 @@ export const Service = ({
               <li data-aos="fade-up">{item}</li>
             ))}
           </ul>
-          <p className="Niddle_sub_content" data-aos="zoom-in">
+          <p className="Niddle_sub_content1" data-aos="zoom-in">
             {Para2Head23}
           </p>
           <p className="Niddle_sub_content" data-aos="zoom-in">

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Navbar.css";
 import { IoReorderThree } from "react-icons/io5";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Logo from "../../assets/Logo.jpg";
+import Logo from "../../assets/Logo.svg";
 
 export const Navbar = () => {
   const navigate = useNavigate();
