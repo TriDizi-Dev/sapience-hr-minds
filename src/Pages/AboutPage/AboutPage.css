@@ -32,7 +32,8 @@
     line-height: 100%;
     letter-spacing: .1vw;
     text-align: center;
-    color: #000000;
+    /* color: #000000; */
+      color: #3E4E6B;
     margin-top: 2.2vw;
 }
 
@@ -114,12 +115,14 @@
     font-size: 3.3vw;
     line-height: 100%;
     /* letter-spacing: .1vw; */
-    color: #000000;
+    /* color: #000000; */
+      color: #3E4E6B;
     margin-top: 2.2vw;
 }
 
 .Left_side_container {
     margin-top: -15vw;
+  color:rgb(58, 80, 121);
 }
 
 .Text_container_layer2 {
@@ -294,7 +297,9 @@
     font-family: Poppins;
     font-weight: 600;
     font-size: 1vw;
-    color: #000000;
+    /* color: #000000; */
+    
+  color:rgb(58, 80, 121);
     margin-top: 1vw;
     height: 3.5vw;
 }
@@ -329,6 +334,7 @@
     text-align: center;
     width: 54vw;
     margin: 0 auto;
+          color: #3E4E6B;
 }
 
 
@@ -347,7 +353,9 @@
     font-weight: 700 ;
     font-size: 3.1vw ;
     line-height: 100%;
-    color: black ;
+    /* color: black ; */
+          color: #3E4E6B;
+
     /* letter-spacing: 0%; */
     text-align: center;
 
@@ -366,6 +374,7 @@
     line-height: 100%;
     /* letter-spacing: 0%; */
     text-align: center;
+      color: #3E4E6B;
 
 }
 

@@ -4,7 +4,9 @@ import HeroImage from "../../assets/AlliancePartner/hero_1.svg";
 import BlueLayer from "../../assets/AboutPage/blushade.svg";
 import orangeLayer from "../../assets/AboutPage/orangeshade.svg";
 import SquareIcons from "../../assets/AlliancePartner/LayerContainer.svg";
-import PersonImage from "../../assets/AlliancePartner/man_img.svg";
+// import PersonImage from "../../assets/AlliancePartner/man_img.svg";
+// import PersonImage from "../../assets/AlliancePartner/aliance_sqr.svg"
+import PersonImage from "../../assets/AlliancePartner/aliance_sqr3.svg"
 import Smallicon1 from "../../assets/AboutPage/Smallicon1.svg";
 import Smallicon2 from "../../assets/AboutPage/icon_3.svg";
 

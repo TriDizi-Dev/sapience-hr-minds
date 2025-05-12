@@ -58,7 +58,8 @@
 .single_blog_content_para{
     font-size:1.2vw;
     font-weight: 400;
-    color: #000000b3;
+    /* color: #000000b3; */
+              color: #3E4E6B;
     width: 80vw;
     margin-top: 1vw;
     text-align:justify;
@@ -148,7 +149,9 @@
 }
 
 .blog_card_img_content_1 {
-    background-color: rgba(124, 92, 252, 0.42);
+    /* background-color: rgba(124, 92, 252, 0.42); */
+      background-color: #758CBA;
+
     width: 20vw;
     height: 8vw;
     border-radius: 1vw;

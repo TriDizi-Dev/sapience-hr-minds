@@ -36,6 +36,8 @@
     /* line-height: 45px; */
     text-align: center;
     margin-top: -1vw;
+          color: #3E4E6B;
+
 }
 
 .Header_Sub_Text {
@@ -85,12 +87,17 @@
 .alliance_right_said h3 {
     font-size: 2.5vw;
     margin-top: -2vw;
-    /* margin-bottom: 0.5vw; */
+          color: #3E4E6B;
+
+    /* margin-bot  color:rgb(58, 80, 121);
+tom: 0.5vw; */
 }
 
 .alliance_right_said p {
     font-size: 1.5vw;
     font-weight: 500;
+      color:rgb(58, 80, 121);
+
 }
 
 .SquareIcons_Cont_img img,
@@ -117,6 +124,8 @@
     font-weight: 700;
     font-size: 2.6vw;
     text-align: justify;
+          color: #3E4E6B;
+
 }
 
 .para1_text_AlliancePartner,
@@ -368,6 +377,8 @@
     margin-top: 1vw;
     line-height: 4.4vw;
     text-align: center;
+          color: #3E4E6B;
+
 }
 
 .Alianceparter_layer4_para {
@@ -412,6 +423,8 @@
     font-size: 1.2vw;
     font-weight: 600;
     height: 9vh;
+          color: #3E4E6B;
+
 }
 
 .Aliancepartner_card_para {

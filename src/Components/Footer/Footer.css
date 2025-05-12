@@ -106,6 +106,8 @@
   font-size: 1.2vw;
   font-weight: 600;
   margin-bottom: 0.5vw;
+        color: #3E4E6B;
+
 }
 
 .footer_company {
@@ -135,7 +137,7 @@
 
 .footer_services_items:hover {
   border-bottom: 1px solid;
-  color: #7C5CFC;
+  color: rgb(58, 80, 121);
 }
 
 .footer_services_items .company_list_items {
@@ -185,7 +187,7 @@
 
 .terms:hover {
   border-bottom: 1px solid;
-  color: #7C5CFC;
+  color: rgb(58, 80, 121);
 
 }
 
@@ -193,6 +195,7 @@
   font-size: 1.2vw;
   font-weight: 600;
   margin-top: 1vw;
+      color: #3E4E6B;
 }
 
 .Contact_sub_headings {
@@ -207,20 +210,23 @@
 }
 
 .Contact_sub_headings:hover {
-  color: #7C5CFC;
+  color: rgb(58, 80, 121);
   text-decoration: none;
-  border-bottom: 1px solid #7C5CFC;
+  border-bottom: 1px solid rgb(58, 80, 121);
+
 }
 
 .Contact_sub_headings a {
-  color: black;
+   color: black;
   text-decoration: none;
   width: fit-content;
   margin: 0 auto;
+        /* color: #3E4E6B; */
+
 }
 
 .Contact_sub_headings a:hover {
-  color: #7C5CFC;
+  color: rgb(58, 80, 121);
   text-decoration: none;
 }
 
