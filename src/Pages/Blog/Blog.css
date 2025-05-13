@@ -70,10 +70,12 @@
 }
 
 .blog_card_img_text {
-  width: 17vw;
+  width: 19.5vw;
   height: 7vw;
   overflow-y: scroll;
+  padding-left: 0.5vw;
   font-size: 0.95vw;
+  text-align: left;
 }
 .blog_card_img_text::-webkit-scrollbar{
   display: none;
