@@ -23,7 +23,8 @@
 }
 .banner_img_content{
     position: absolute;
-    background-color: rgba(124, 92, 252, 0.6);
+    /* background-color: rgba(124, 92, 252, 0.6); */
+ background-color: rgba(255, 165, 154, 0.6);
     width: 72vw;
     height: 35vw;
     display: flex;

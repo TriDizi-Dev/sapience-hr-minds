@@ -156,6 +156,8 @@
   border-radius: 8px;
   /* Optional: rounded corners */
   box-shadow: 0 layer4_logo4px 8px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 0.7vw 1.5vw #ffa59a; */
+
   /* Optional: shadow for popup effect */
 }
 
@@ -692,7 +694,9 @@
 }
 
 .play_button:hover {
-  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.632);
+  /* box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.632); */
+    box-shadow: 0 0.5vw 1vw #ffa59a;
+
 }
 
 .homepage_layer4_outer_main {
@@ -924,7 +928,9 @@
 }
 
 .layer5_card_lernmore:hover {
-  box-shadow: 0 6px 10px rgba(124, 92, 252, 0.477);
+  /* box-shadow: 0 6px 10px rgba(124, 92, 252, 0.477); */
+    box-shadow: 0 6px 10px #ffa59a;
+
   /* transform: scale(1.1); */
   transition: 0.3s linear;
 }
@@ -1188,7 +1194,9 @@
 }
 
 .layer7_card_explore:hover {
-  box-shadow: 0 6px 10px rgba(124, 92, 252, 0.477);
+  /* box-shadow: 0 6px 10px rgba(124, 92, 252, 0.477); */
+    box-shadow: 0 6px 10px #ffa59a;
+
   /* transform: scale(1.1); */
   transition: 0.3s linear;
 }

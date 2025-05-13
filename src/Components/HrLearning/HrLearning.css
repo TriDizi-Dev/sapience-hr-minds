@@ -20,7 +20,8 @@
     font-weight: 800;
     font-size: 3.8vw;
     /* color: black; */
-          color: #3E4E6B;
+    color: #3E4E6B;
+text-shadow: 2px 2px 5px rgba(20, 20, 20, 0.6);
 
 }
 
@@ -130,6 +131,7 @@
     /* border: 1px solid; */
     padding: 2.2vw 2.2vw 6vw 2.2vw;
     background-color: #7C5CFC2E;
+        /* background-color: #758cba; */
     border-radius: 1vw;
 }
 

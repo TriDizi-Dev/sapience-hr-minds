@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Carrier.css";
-import lefticon from "../../assets/Carrier/lefticon.svg";
-import righticon from "../../assets/Carrier/righticon.svg";
+// import lefticon from "../../assets/Carrier/lefticon.svg";
+import lefticon from "../../assets/Carrier/career_string.svg";
+// import righticon from "../../assets/Carrier/righticon.svg";
+import righticon from "../../assets/Carrier/career_circle.svg";
+
 import logo1 from "../../assets/Carrier/logo1.svg";
 import logo2 from "../../assets/Carrier/logo2.svg";
 import logo3 from "../../assets/Carrier/logo3.svg";
@@ -1137,7 +1140,7 @@ function Carrier() {
         <div className="modal-overlay">
           <div className="modal-box" ref={modalRef_1}>
             <div className="Cancel_and_form_head">
-              <h2>Apply Here</h2>
+              <h2>  </h2>
               <p>
                 <ImCross className="Icons_X" onClick={closeApplyJobForm} />
               </p>
