@@ -577,7 +577,7 @@ flex-wrap: 800;
     background-color: #e7e3e37a;
 }
 .carrier_card_img{
-    width:18.5vw;
+    width:20vw;
     height:12vw;
     border-radius: 0.5vw;
 
@@ -585,9 +585,10 @@ flex-wrap: 800;
 .card_text_heading{
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    /* justify-content: start; */
+    text-align: justify;
     gap:0.3vw;
-    width:20vw;
+    width:21vw;
         height:10.4vw;
     border-bottom-left-radius:1.5vw;
     border-bottom-right-radius:1.5vw;
