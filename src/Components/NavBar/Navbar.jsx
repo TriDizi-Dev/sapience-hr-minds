@@ -18,7 +18,6 @@ export const Navbar = () => {
   //   setOpenNavlist(!openNavlist);
   // };
 
-  
   const handleNavList = () => {
     setOpenNavlist((prev) => !prev);
   };
