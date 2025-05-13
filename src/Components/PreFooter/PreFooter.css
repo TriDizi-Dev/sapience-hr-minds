@@ -127,13 +127,13 @@
     padding: .5vw 1vw;
     border: none;
     border-radius: .6vw;
-    background-color: #7C5CFC;
+    background-color: #FFA59A;
     color: white;
     cursor: pointer;
 }
 
 .form-buttons button[type="button"] {
-    background-color: #6c757d;
+    background-color: #758cba;
 }
 
 .form textarea {
