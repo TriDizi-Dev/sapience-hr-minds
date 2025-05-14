@@ -286,7 +286,7 @@ export const AlliancePartner = () => {
           </p>
           <div className="alliance_right_said content" data-aos="zoom-in">
             <h3>Krishnan Ravishankar</h3>
-            <p>Principal Architect| Behavior &</p>
+            <p>Principal Architect | Behavior &</p>
             <p>Performance Optimisation</p>
           </div>
         </div>
