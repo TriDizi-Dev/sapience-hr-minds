@@ -19,7 +19,8 @@
 .privacy_terms_heading {
     font-size: 3.5vw;
     font-weight: 700;
-    color: rgba(0, 0, 0, 1);
+    /* color: rgba(0, 0, 0, 1); */
+    color: #3E4E6B;
     margin-top: 2vw;
 }
 
@@ -67,6 +68,9 @@
 .privacy_terms_content_heading {
     font-size: 1.8vw;
     margin-top: 2vw;
+      color:rgb(58, 80, 121);
+
+
 }
 
 .privacy_terms_content_para {
@@ -97,7 +101,9 @@
 }
 
 .privacy_terms_content_para_inner a:hover {
-    color: #7C5CFC;
+    /* color: #7C5CFC; */
+      color:rgb(58, 80, 121);
+
     border-bottom: 1px solid #7C5CFC;
     width: fit-content;
 }

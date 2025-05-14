@@ -56,7 +56,7 @@
  }
 
 .Button22 {
-    background-color: #7C5CFC;
+    background-color: #FFA59A;
     color: #FFFFFF;
 }
 
@@ -109,6 +109,8 @@
     flex-direction: column;
     font-weight: bold;
     font-size: 1vw;
+    color: rgb(58, 80, 121);
+;
 }
 
 .Input {
@@ -127,13 +129,13 @@
     padding: .5vw 1vw;
     border: none;
     border-radius: .6vw;
-    background-color: #7C5CFC;
+    background-color: #FFA59A;
     color: white;
     cursor: pointer;
 }
 
 .form-buttons button[type="button"] {
-    background-color: #6c757d;
+    background-color: #758cba;
 }
 
 .form textarea {
@@ -144,6 +146,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: #3E4E6B;
 
 }
 .Icons_X{

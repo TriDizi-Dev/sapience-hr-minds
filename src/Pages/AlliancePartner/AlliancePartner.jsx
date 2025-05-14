@@ -4,7 +4,9 @@ import HeroImage from "../../assets/AlliancePartner/hero_1.svg";
 import BlueLayer from "../../assets/AboutPage/blushade.svg";
 import orangeLayer from "../../assets/AboutPage/orangeshade.svg";
 import SquareIcons from "../../assets/AlliancePartner/LayerContainer.svg";
-import PersonImage from "../../assets/AlliancePartner/man_img.svg";
+// import PersonImage from "../../assets/AlliancePartner/man_img.svg";
+// import PersonImage from "../../assets/AlliancePartner/aliance_sqr.svg"
+import PersonImage from "../../assets/AlliancePartner/aliance_sqr3.svg"
 import Smallicon1 from "../../assets/AboutPage/Smallicon1.svg";
 import Smallicon2 from "../../assets/AboutPage/icon_3.svg";
 
@@ -60,6 +62,13 @@ export const AlliancePartner = () => {
     if (swiperRef.current) {
       swiperRef.current.autoplay?.stop();
     }
+  };
+
+    const hadleNavigate = () => {
+    window.open(
+      "https://calendly.com/babitha-sapienceminds-pfmn/45min",
+      "_blank"
+    );
   };
 
   const [readMore, setReadMore] = useState(false);
@@ -259,6 +268,13 @@ export const AlliancePartner = () => {
             multinational companies uniquely positions him to drive impactful
             change for our clients.
           </p>
+              <button
+              className="alliance_right_button liquid"
+              onClick={() => hadleNavigate()}
+            >
+              {/* <AiOutlinePlayCircle className="button_icon" /> */}
+              Book A Meeting
+            </button>
         </div>
         <div className="Right_Container_AlliancePartner">
           <p className="right_Header_Text">Alliance Partner</p>

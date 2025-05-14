@@ -19,7 +19,11 @@
     /* font-family: Lato; */
     font-weight: 800;
     font-size: 3.8vw;
-    color: black;
+    /* color: black; */
+    /* color: #3E4E6B; */
+    color: #ED7272;
+text-shadow: 2px 2px 5px rgba(5, 5, 5, 0.6);
+
 }
 
 .Section2_Main_container {
@@ -34,6 +38,8 @@
     font-size: 1.5vw;
     margin-left: 3vw;
     margin-top: 2vw;
+      color:rgb(58, 80, 121);
+
 }
 
 .Background_Image_Container_1 {
@@ -68,7 +74,9 @@
     /* font-family: Lato; */
     font-weight: 700;
     font-size: 1.4vw;
-    color: #040F24;
+    /* color: #040F24; */
+      color:rgb(58, 80, 121);
+
 }
 .Head_colour{
     color: #1797C5;
@@ -124,6 +132,7 @@
     /* border: 1px solid; */
     padding: 2.2vw 2.2vw 6vw 2.2vw;
     background-color: #7C5CFC2E;
+        /* background-color: #758cba; */
     border-radius: 1vw;
 }
 
@@ -131,7 +140,9 @@
     /* font-family: Lato; */
     font-weight: 700;
     font-size: 1.4vw;
-    color: #040F24;
+    /* color: #040F24; */
+          color: #3E4E6B;
+
 }
 
 .Single_Cards_Sub_heads_text_right_Sub_headings {
@@ -170,7 +181,7 @@
     font-weight: 400;
     font-size: 1vw;
     color: #FFFFFF;
-    background-color: #7C5CFC;
+    background-color: #FFA59A;
     width: fit-content;
     padding: .7vw 2vw;
     margin-top: 2vw;
@@ -190,7 +201,9 @@
     /* font-family: Inter; */
     font-weight: 700;
     font-size: 1.8vw;
-    color: #000000;
+    /* color: #000000; */
+          color: #3E4E6B;
+
 }
 .Single_Privious_Data_Cont{
 box-shadow: 0 2px 6px rgba(82, 82, 82, 0.101);
@@ -210,7 +223,9 @@ will-change: transform;
     /* font-family: Roboto; */
     font-weight: 500;
     font-size: 1.3vw;
-    color: #0C0C0D;
+    /* color: #0C0C0D; */
+      color:rgb(58, 80, 121);
+
     margin-top: .5vw;
 }
 

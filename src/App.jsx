@@ -40,6 +40,7 @@ function Layout() {
 
   const location = useLocation();
   const hideFooter = location.pathname === "/blog-creation" || location.pathname === "/career-creation"||location.pathname==="/career-update" ;
+  
 
   return (
     <>
@@ -88,14 +89,50 @@ function Layout() {
 
 function App() {
   const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    // Simulate loading time (e.g., API call, resource loading)
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000); // show loader for 2 seconds
 
-    return () => clearTimeout(timer);
+
+
+  // useEffect(() => {
+  //   // Simulate loading time (e.g., API call, resource loading)
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 2000); // show loader for 2 seconds
+
+  //   return () => clearTimeout(timer);
+  // }, []);
+
+
+useEffect(() => {
+    // Wait for all images on the page to load
+    const handleImageLoad = () => {
+      const images = Array.from(document.images);
+      if (images.every((img) => img.complete)) {
+        setLoading(false);
+      } else {
+        let loadedCount = 0;
+        images.forEach((img) => {
+          img.addEventListener("load", () => {
+            loadedCount++;
+            if (loadedCount === images.length) {
+              setLoading(false);
+            }
+          });
+          img.addEventListener("error", () => {
+            loadedCount++;
+            if (loadedCount === images.length) {
+              setLoading(false); // still remove loader if some images fail
+            }
+          });
+        });
+      }
+    };
+
+    // Short delay to allow DOM to render first
+    setTimeout(handleImageLoad, 100);
   }, []);
+
+
+
   return (
     
     <>

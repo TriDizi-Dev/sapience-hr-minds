@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Carrier.css";
-import lefticon from "../../assets/Carrier/lefticon.svg";
-import righticon from "../../assets/Carrier/righticon.svg";
+// import lefticon from "../../assets/Carrier/lefticon.svg";
+import lefticon from "../../assets/Carrier/career_string.svg";
+// import righticon from "../../assets/Carrier/righticon.svg";
+import righticon from "../../assets/Carrier/career_circle.svg";
+
 import logo1 from "../../assets/Carrier/logo1.svg";
 import logo2 from "../../assets/Carrier/logo2.svg";
 import logo3 from "../../assets/Carrier/logo3.svg";
@@ -781,7 +784,6 @@ function Carrier() {
                               <div>{parse(item.Requirements, options)}</div>
                             </div>
                             <div className="accordian_right">
-                             
                               <div className="accordian_right_icons_button">
                                 <button
                                   onClick={() =>
@@ -1045,11 +1047,22 @@ function Carrier() {
                     src={data.imageUrl}
                     alt="card1"
                     className="carrier_card_img"
+                    onClick={() => handleSignleBlog(data, data.title)}
                   />
                 </div>
                 <div className="card_text_heading">
-                  <h6 className="card_hading_one">{data?.title}</h6>
-                  <p className="card_para">{data?.content}</p>
+                  <h6
+                    className="card_hading_one"
+                    onClick={() => handleSignleBlog(data, data.title)}
+                  >
+                    {data?.title}
+                  </h6>
+                  <p
+                    className="card_para"
+                    onClick={() => handleSignleBlog(data, data.title)}
+                  >
+                    {data?.content}
+                  </p>
                   <p
                     className="card_readmore"
                     onClick={() => handleSignleBlog(data, data.title)}
@@ -1137,7 +1150,7 @@ function Carrier() {
         <div className="modal-overlay">
           <div className="modal-box" ref={modalRef_1}>
             <div className="Cancel_and_form_head">
-              <h2>Apply Here</h2>
+              <h2> </h2>
               <p>
                 <ImCross className="Icons_X" onClick={closeApplyJobForm} />
               </p>

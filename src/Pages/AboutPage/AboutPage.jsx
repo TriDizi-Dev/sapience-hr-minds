@@ -8,12 +8,15 @@ import AboutMain1 from "../../assets/AboutPage/AboutOur.jpg";
 import Orangelayer from "../../assets/AboutPage/orangeshade.svg";
 import Bluelayer from "../../assets/AboutPage/blushade.svg";
 import Person from "../../assets/AboutPage/personImage.svg";
-import TringleGroup from "../../assets/AboutPage/TriangleImages.svg";
+// import TringleGroup from "../../assets/AboutPage/TriangleImages.svg";
+import TringleGroup from "../../assets/AboutPage/grp_triangle.svg";
 import TradeMark from "../../assets/AboutPage/trademark.svg";
-import CircleGroup from "../../assets/AboutPage/CircleGroup.png";
-import SquareGroup from "../../assets/AboutPage/SquareGroup.png";
+// import CircleGroup from "../../assets/AboutPage/CircleGroup.png";
+import CircleGroup from "../../assets/AboutPage/grp_circle.svg";
+// import SquareGroup from "../../assets/AboutPage/SquareGroup.png";
+import SquareGroup from "../../assets/AboutPage/babith_square.svg"
 // import SquareGroup from "../../assets/AboutPage/rectangleimg.svg"
-import plusIcon from "../../assets/AboutPage/PlusIcon.svg";
+import plusIcon from "../../assets/AboutPage/Icon.svg";
 import Smallicon1 from "../../assets/AboutPage/Smallicon1.svg";
 import Smallicon2 from "../../assets/AboutPage/Smallicon2.svg";
 import Smallicon3 from "../../assets/AboutPage/Smallicon3.svg";

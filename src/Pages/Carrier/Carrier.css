@@ -15,7 +15,9 @@
 .carrier_bg_heading {
     font-size: 15.6vw;
     font-weight: 800;
-    background: linear-gradient(152.01deg, #B2EBF2 9.05%, #D1C4E9 63.77%, #F8BBD0 92.79%);
+    /* background: linear-gradient(152.01deg, #B2EBF2 9.05%, #D1C4E9 63.77%, #F8BBD0 92.79%); */
+        background: linear-gradient(152.01deg, #9eb7e9 9.05%, #e7dcd5 63.77%, #FFA59A 92.79%);
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
@@ -33,6 +35,7 @@
     align-items: center;
     z-index: 10;
     top:15vw;
+    color: #3E4E6B;
 }
 
 .carrier_heading {
@@ -63,7 +66,7 @@
 .banner_left_button {
     width:16vw;
     height:4vw;
-    background-color: #7C5CFC;
+    background-color: #FFA59A;
     color: white;
     font-weight: 600;
     font-size: 1.2vw;
@@ -72,6 +75,9 @@
     border: none;
     cursor: pointer;
 }
+.banner_left_button:hover{
+      box-shadow: 0 0.7vw 1.5vw #ffa59a;
+}
 
 .carrier_right_button {
     width:16vw;
@@ -79,10 +85,15 @@
     font-weight: 600;
     font-size: 1.2vw;
     border-radius: 2vw;
+    color: #3E4E6B;
     background-color: white;
     outline: none;
     cursor: pointer;
     border: 0.1vw solid;
+}
+.carrier_right_button:hover{
+      box-shadow: 0 0.7vw 1.5vw #e0e0e0;
+
 }
 
 .banner_left_icon {
@@ -110,7 +121,9 @@
 
     border-top-right-radius: 8vw;
     border-top-left-radius: 8vw;
-    background-color: rgba(101, 31, 255, 1);
+    background-color: #ED7272;
+        /* background-color: #3E4E6B; */
+
     display: flex;
     justify-content: center;
     padding-top: 9vw;
@@ -218,7 +231,7 @@
     font-size:1.8vw;
     border: none;
     outline: none;
-    background-color: rgba(124, 92, 252, 1);
+    background-color: #FFA59A;
     color: white;
     cursor: pointer;
 }
@@ -230,6 +243,7 @@
     font-weight: 800;
     text-align: center;
     margin: 0;
+    color: #3E4E6B;
 }
 
 .carrier_layer3_part2_outer {
@@ -248,7 +262,9 @@
     align-items: center;
     border-radius: 2vw;
     padding: 0.1vw;
-    background: linear-gradient(169.02deg, #B2EBF2 -58.33%, #D1C4E9 60.57%);
+    /* background: linear-gradient(169.02deg, #B2EBF2 -58.33%, #D1C4E9 60.57%); */  
+    background: linear-gradient(169.02deg, #FFA59A -58.33%, #c3c9d3 60.57%);
+
     margin-top: 3vw;
 }
 
@@ -283,7 +299,7 @@
  
  
 .accordian_top_text {
-    background-color: #651fff;
+    background-color: #FFA59A;
     width: fit-content;
     border-radius: 1vw;
     font-size: 0.8vw;
@@ -299,6 +315,7 @@
     font-size: 1.3vw;
     margin: 0;
     font-weight: 500;
+    color: #3E4E6B;
 }
 
 .accoridian_content_outer {
@@ -323,6 +340,7 @@
     font-size: 1.3vw;
     font-weight: 700;
     margin-top: 2vw;
+    color: #3E4E6B;
 }
 
 .accordian_layer2_list_items {
@@ -424,7 +442,7 @@
     font-size:1.1vw;
     border: none;
     outline: none;
-    background-color: rgba(124, 92, 252, 1);
+    background-color: #FFA59A;
     color: white;
     font-weight: 600;
     cursor: pointer;
@@ -474,7 +492,8 @@
     gap: 6.5vw;
     align-items: center;
     font-weight: 600;  
-    background: linear-gradient(152.01deg, #B2EBF2 9.05%, #D1C4E9 63.77%, #F8BBD0 92.79%);
+    /* background: linear-gradient(152.01deg, #B2EBF2 9.05%, #D1C4E9 63.77%, #F8BBD0 92.79%); */
+        background: linear-gradient(152.01deg, #b4cbf1 9.05%, #e7dcd5 63.77%, #ffc5bd 92.79%);
     border: none;
     outline: none;
     border-radius: 0.6vw;
@@ -490,7 +509,9 @@
     align-items: center;
     margin-top: 2vw;
     font-weight: 600;
-    background: linear-gradient(152.01deg, #B2EBF2 9.05%, #D1C4E9 63.77%, #F8BBD0 92.79%);
+    /* background: linear-gradient(152.01deg, #B2EBF2 9.05%, #D1C4E9 63.77%, #F8BBD0 92.79%); */
+        background: linear-gradient(152.01deg, #b4cbf1 9.05%, #e7dcd5 63.77%, #ffc5bd 92.79%);
+
     border: none;
     outline: none;
     border-radius: 0.6vw;
@@ -513,6 +534,7 @@
 .part4_heading{
     font-size:3.5vw;
     text-align: center;
+    color: #3E4E6B;
 }
 /* .bottom_line_outer{
 font-size: 64px;
@@ -555,7 +577,7 @@ flex-wrap: 800;
     background-color: #e7e3e37a;
 }
 .carrier_card_img{
-    width:18.5vw;
+    width:20vw;
     height:12vw;
     border-radius: 0.5vw;
 
@@ -563,9 +585,10 @@ flex-wrap: 800;
 .card_text_heading{
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    /* justify-content: start; */
+    text-align: justify;
     gap:0.3vw;
-    width:20vw;
+    width:21vw;
         height:10.4vw;
     border-bottom-left-radius:1.5vw;
     border-bottom-right-radius:1.5vw;
@@ -591,7 +614,7 @@ flex-wrap: 800;
 }
 .card_readmore{
     font-size: 1.1vw;
-    background-color: #651fff;
+    background-color: #FFA59A;
     color: white;
     width: 8.5vw;
     padding-left: 0.75vw;

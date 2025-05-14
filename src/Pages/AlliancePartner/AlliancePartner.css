@@ -36,6 +36,8 @@
     /* line-height: 45px; */
     text-align: center;
     margin-top: -1vw;
+          color: #3E4E6B;
+
 }
 
 .Header_Sub_Text {
@@ -85,12 +87,17 @@
 .alliance_right_said h3 {
     font-size: 2.5vw;
     margin-top: -2vw;
-    /* margin-bottom: 0.5vw; */
+          color: #3E4E6B;
+
+    /* margin-bot  color:rgb(58, 80, 121);
+tom: 0.5vw; */
 }
 
 .alliance_right_said p {
     font-size: 1.5vw;
     font-weight: 500;
+      color:rgb(58, 80, 121);
+
 }
 
 .SquareIcons_Cont_img img,
@@ -117,6 +124,8 @@
     font-weight: 700;
     font-size: 2.6vw;
     text-align: justify;
+          color: #3E4E6B;
+
 }
 
 .para1_text_AlliancePartner,
@@ -368,6 +377,8 @@
     margin-top: 1vw;
     line-height: 4.4vw;
     text-align: center;
+          color: #3E4E6B;
+
 }
 
 .Alianceparter_layer4_para {
@@ -412,6 +423,8 @@
     font-size: 1.2vw;
     font-weight: 600;
     height: 9vh;
+          color: #3E4E6B;
+
 }
 
 .Aliancepartner_card_para {
@@ -422,6 +435,38 @@
 }
 .List_main_aliancepartener{
 margin-left: 2vw;
+}
+
+.alliance_right_button {
+  position: relative;
+  width: 15vw;
+  height: 3.5vw;
+  margin-top: 4vw;
+  background: none;
+  /* color: #7c5cfc; */
+  color: #ffa59a;
+  /* border: 0.1vw solid #7c5cfc; */
+  border: 0.1vw solid #ffa59a;
+  font-size: 1.2vw;
+  font-weight: 600;
+  border-radius: 1.9vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5vw;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+/* Liquid Fill Effect */
+.liquid {
+  /* background: linear-gradient(#7c5cfc 0 0) no-repeat calc(200% - var(--p, 0%)) 100% / 200% var(--p, 0.2em); */
+  background: linear-gradient(#ffa59a 0 0) no-repeat calc(200% - var(--p, 0%))
+    100% / 200% var(--p, 0.2em);
+  transition: 0.3s var(--t, 0s),
+    background-position 0.3s calc(0.3s - var(--t, 0s));
 }
 
 @media screen and (min-width: 320px) and (max-width: 720px) {
@@ -734,4 +779,14 @@ margin-left: 2vw;
     .alliance_right_said p {
         font-size: 3vw;
     }
+      .alliance_right_button {
+    width: 40vw;
+    height: 10vw;
+    font-size: 3.5vw;
+    border-radius: 2vw;
+    display: flex;
+    gap: 1.5vw;
+    justify-content: center;
+    align-items: center;
+  }
 }
