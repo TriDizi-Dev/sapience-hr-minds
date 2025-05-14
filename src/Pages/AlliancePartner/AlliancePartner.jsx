@@ -64,6 +64,13 @@ export const AlliancePartner = () => {
     }
   };
 
+    const hadleNavigate = () => {
+    window.open(
+      "https://calendly.com/babitha-sapienceminds-pfmn/45min",
+      "_blank"
+    );
+  };
+
   const [readMore, setReadMore] = useState(false);
   const [singleTestimonial, setSingleTestimonial] = useState(null);
 
@@ -261,6 +268,13 @@ export const AlliancePartner = () => {
             multinational companies uniquely positions him to drive impactful
             change for our clients.
           </p>
+              <button
+              className="alliance_right_button liquid"
+              onClick={() => hadleNavigate()}
+            >
+              {/* <AiOutlinePlayCircle className="button_icon" /> */}
+              Book A Meeting
+            </button>
         </div>
         <div className="Right_Container_AlliancePartner">
           <p className="right_Header_Text">Alliance Partner</p>
