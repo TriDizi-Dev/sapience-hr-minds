@@ -117,7 +117,7 @@ useEffect(() => {
           loadedCount++;
           if (loadedCount === images.length) {
             requestAnimationFrame(() => {
-              setTimeout(() => setLoading(false), 100);
+              setTimeout(() => setLoading(false), 1000);
             });
           }
         };
@@ -127,7 +127,7 @@ useEffect(() => {
     }
   };
 
-  setTimeout(handleImageLoad, 100);
+  setTimeout(handleImageLoad, 1000);
 }, []);
 
   return (
