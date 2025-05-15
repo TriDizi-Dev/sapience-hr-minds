@@ -103,35 +103,32 @@ function App() {
 
 
 useEffect(() => {
-    // Wait for all images on the page to load
-    const handleImageLoad = () => {
-      const images = Array.from(document.images);
-      if (images.every((img) => img.complete)) {
-        setLoading(false);
-      } else {
-        let loadedCount = 0;
-        images.forEach((img) => {
-          img.addEventListener("load", () => {
-            loadedCount++;
-            if (loadedCount === images.length) {
-              setLoading(false);
-            }
-          });
-          img.addEventListener("error", () => {
-            loadedCount++;
-            if (loadedCount === images.length) {
-              setLoading(false); // still remove loader if some images fail
-            }
-          });
-        });
-      }
-    };
+  const handleImageLoad = () => {
+    const images = Array.from(document.images);    
+    if (images.every((img) => img.complete)) {
+      // Slight delay to allow paint
+      requestAnimationFrame(() => {
+        setTimeout(() => setLoading(false), 100);
+      });
+    } else {
+      let loadedCount = 0;
+      images.forEach((img) => {
+        const done = () => {
+          loadedCount++;
+          if (loadedCount === images.length) {
+            requestAnimationFrame(() => {
+              setTimeout(() => setLoading(false), 100);
+            });
+          }
+        };
+        img.addEventListener("load", done, { once: true });
+        img.addEventListener("error", done, { once: true });
+      });
+    }
+  };
 
-    // Short delay to allow DOM to render first
-    setTimeout(handleImageLoad, 100);
-  }, []);
-
-
+  setTimeout(handleImageLoad, 100);
+}, []);
 
   return (
     
