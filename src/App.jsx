@@ -108,7 +108,7 @@ useEffect(() => {
     if (images.every((img) => img.complete)) {
       // Slight delay to allow paint
       requestAnimationFrame(() => {
-        setTimeout(() => setLoading(false), 100);
+        setTimeout(() => setLoading(false), 1000);
       });
     } else {
       let loadedCount = 0;
