@@ -266,23 +266,44 @@ function Carrier() {
         body: formPayload,
       });
       console.log(response, "resssssss");
-
       if (response.ok) {
-        alert("Form submitted successfully!");
+        toast.success("Form submitted successfully!", {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
         console.log("submited succes", response);
         setFormData({
           Name: "",
           Email: "",
           PhoneNumber: "",
           Message: "",
+          Sourcepage: "",
         });
         handleCloseForm();
       } else {
-        alert("Something went wrong. Please try again.");
+        toast.error("Something went wrong. Please try again.", {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("Error submitting the form. Please check your connection.");
+      toast.error("Error submitting the form. Please check your connection.", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
     }
   };
 
@@ -339,6 +360,7 @@ function Carrier() {
           PhoneNumber: "",
           Category: "",
           Job: "",
+          Sourcepage: "Careers",
         });
         closeApplyJobForm();
       } else {
@@ -655,7 +677,8 @@ function Carrier() {
                                   <button
                                     onClick={() =>
                                       handleOpenForm(
-                                        "Career-All-Head of Product"
+                                        // "Career-All-Head of Product"
+                                        `Career-All-${item.JobTitle}`
                                       )
                                     }
                                   >
@@ -798,7 +821,8 @@ function Carrier() {
                                   <button
                                     onClick={() =>
                                       handleOpenForm(
-                                        "Career-All-Head of Product"
+                                        // "Career-All-Head of Product"
+                                        `Career-Our-${item.JobTitle}`
                                       )
                                     }
                                   >
@@ -941,7 +965,8 @@ function Carrier() {
                                   <button
                                     onClick={() =>
                                       handleOpenForm(
-                                        "Career-All-Head of Product"
+                                        // "Career-All-Head of Product"
+                                        `Career-Clients-${item.JobTitle}`
                                       )
                                     }
                                   >
