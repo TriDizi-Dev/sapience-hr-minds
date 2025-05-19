@@ -196,12 +196,12 @@ function Carrier() {
   const modalRef_1 = useRef(null);
 
   const [applyJobData, setApplyJobData] = useState({
-    name: "",
-    email: "",
-    phoneNumber: "",
-    category: "",
-    job: "",
-    sourcepage: "Careers",
+    Name: "",
+    Email: "",
+    PhoneNumber: "",
+    Category: "",
+    Job: "",
+    Sourcepage: "Careers",
   });
 
   const modalRef = useRef(null);
@@ -289,8 +289,8 @@ function Carrier() {
   const openApplyJobForm = (TargetCategory, JobTitle) => {
     setApplyJobData((prev) => ({
       ...prev,
-      category: TargetCategory,
-      job: JobTitle,
+      Category: TargetCategory,
+      Job: JobTitle,
     }));
     setApplyJob(true);
   };
@@ -334,11 +334,11 @@ function Carrier() {
           draggable: true,
         });
         setApplyJobData({
-          name: "",
-          email: "",
-          phoneNumber: "",
-          category: "",
-          job: "",
+          Name: "",
+          Email: "",
+          PhoneNumber: "",
+          Category: "",
+          Job: "",
         });
         closeApplyJobForm();
       } else {
@@ -473,30 +473,6 @@ function Carrier() {
                   </div>
                 </div>
               </div>
-              {/* <div className="carrier_layer2_right_card" data-aos="zoom-in">
-                <div className="layer2_card_logo_outer">
-                  <img src={logo5} alt="logo5" className="layer2_card_logo" />
-                </div>
-                <div className="layer2_card_text">
-                  <h6 className="layer2_card_heding">Parental Leave</h6>
-                  <div className="layer2_card_para">
-                    Ut sed eros finibus, placerat orci id, dapibus mauris.
-                    Vestibulum consequat hendrerit lacus.
-                  </div>
-                </div>
-              </div> */}
-              {/* <div className="carrier_layer2_right_card" data-aos="zoom-in">
-                <div className="layer2_card_logo_outer">
-                  <img src={logo6} alt="logo6" className="layer2_card_logo" />
-                </div>
-                <div className="layer2_card_text">
-                  <h6 className="layer2_card_heding">Free Lunch</h6>
-                  <div className="layer2_card_para">
-                    Ut sed eros finibus, placerat orci id, dapibus mauris.
-                    Vestibulum consequat hendrerit lacus.
-                  </div>
-                </div>
-              </div> */}
             </div>
           </div>
         </div>
@@ -558,7 +534,6 @@ function Carrier() {
                 <>
                   {careers.map((item, id) => (
                     <Accordion
-                      // data-aos="zoom-out"
                       expanded={expanded === `panel${id}`}
                       onChange={handleChange(`panel${id}`)}
                       disableGutters
@@ -566,7 +541,6 @@ function Carrier() {
                       square
                       sx={{
                         width: "100%",
-                        // height: expanded ? 'auto' : '6vw',
                         transition: "all 0.3s ease",
                         marginTop: "3vw",
                         backgroundColor: "none",
@@ -1160,8 +1134,8 @@ function Carrier() {
                 Name:
                 <input
                   type="text"
-                  name="name"
-                  value={applyJobData.name}
+                  name="Name"
+                  value={applyJobData.Name}
                   onChange={handleApplyJobChange}
                   required
                   className="Input"
@@ -1172,8 +1146,8 @@ function Carrier() {
                 Email:
                 <input
                   type="email"
-                  name="email"
-                  value={applyJobData.email}
+                  name="Email"
+                  value={applyJobData.Email}
                   onChange={handleApplyJobChange}
                   required
                   className="Input"
@@ -1184,8 +1158,8 @@ function Carrier() {
                 Phone Number:
                 <input
                   type="tel"
-                  name="phoneNumber"
-                  value={applyJobData.phoneNumber}
+                  name="PhoneNumber"
+                  value={applyJobData.PhoneNumber}
                   onChange={handleApplyJobChange}
                   required
                   className="Input"

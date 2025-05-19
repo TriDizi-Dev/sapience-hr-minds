@@ -159,7 +159,7 @@ export const Service = ({
 
   const [formData, setFormData] = useState({
     Name: "",
-    Phone_number: "",
+    PhoneNumber: "",
     Email: "",
     CompanyName: "",
     Industry: "",
@@ -572,9 +572,9 @@ export const Service = ({
                 <label htmlFor="companyName">Phone Number</label>
                 <input
                   type="text"
-                  id="Phone_number"
-                  name="Phone_number"
-                  value={formData.Phone_number}
+                  id="PhoneNumber"
+                  name="PhoneNumber"
+                  value={formData.PhoneNumber}
                   onChange={handleChange}
                   required
                   placeholder="Enter Your Contact Number"
