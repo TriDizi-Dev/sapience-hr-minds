@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./HomePage.css";
-import homeimg from "../../assets/HomePage/homeimg.svg";
+// import homeimg from "../../assets/HomePage/homeimg.svg";
+import homeimg from "../../assets/HomePage/Babitha_png.png";
 import dots from "../../assets/HomePage/homedots.svg";
 import leftvector from "../../assets/HomePage/leftvector.svg";
 import rightvector from "../../assets/HomePage/rightvector.svg";
@@ -568,7 +569,7 @@ export const HomePage = () => {
 
           <div className="home_top_left_notice">
             <p className="notice_heading">+ 200</p>
-            <p className="notice_text">Company Trusted</p>
+            <p className="notice_text">Companies Trusted</p>
           </div>
 
           <div className="bottom_notice">
@@ -576,9 +577,10 @@ export const HomePage = () => {
               <FaPeopleGroup className="bottom_notice_icon" />
             </div>
             <div className="notice_right">
-              <p className="bottom_notice_heading">+ 300</p>
+              <p className="bottom_notice_heading">+ 1500</p>
               <p className="bottom_notice_text">
-                People have manage with organize
+                {/* People have manage with organize */}
+                Effectively managed and led HR initiatives for about 1500+ employees globally
               </p>
             </div>
           </div>

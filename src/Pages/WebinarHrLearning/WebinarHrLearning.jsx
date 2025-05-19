@@ -1,6 +1,8 @@
 import { ToastContainer } from "react-toastify";
 import { HrLearning } from "../../Components/HrLearning/HrLearning";
-import img from "../../assets/HrLearning/webinar.svg";
+// import img from "../../assets/HrLearning/webinar.svg";
+import img from "../../assets/HrLearning/image_webinar.png";
+
 const WebinarHRLearning = () => {
   const Cards = [
     {

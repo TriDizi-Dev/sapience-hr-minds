@@ -7,7 +7,9 @@ import AboutMain1 from "../../assets/AboutPage/AboutOur.jpg";
 
 import Orangelayer from "../../assets/AboutPage/orangeshade.svg";
 import Bluelayer from "../../assets/AboutPage/blushade.svg";
-import Person from "../../assets/AboutPage/personImage.svg";
+// import Person from "../../assets/AboutPage/personImage.svg";
+import Person from "../../assets/AboutPage/Babitha_png2.png";
+
 // import TringleGroup from "../../assets/AboutPage/TriangleImages.svg";
 import TringleGroup from "../../assets/AboutPage/grp_triangle.svg";
 import TradeMark from "../../assets/AboutPage/trademark.svg";

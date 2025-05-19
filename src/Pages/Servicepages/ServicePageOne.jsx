@@ -1,6 +1,8 @@
 import React from "react";
 import { Service } from "../../Components/Services/Service";
 import Image1 from "../../assets/Service/Image1.svg";
+// import Image1 from "../../assets/Service/Image1.png";
+
 import Image2 from "../../assets/Service/service12.svg";
 // import Goal from "../../assets/Service/fourth_img.svg";
 import img4 from "../../assets/Service/img_4.svg";

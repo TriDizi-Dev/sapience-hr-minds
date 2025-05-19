@@ -1,6 +1,7 @@
 import { ToastContainer } from "react-toastify";
 import { HrLearning } from "../../Components/HrLearning/HrLearning";
-import img from "../../assets/HrLearning/HrBanner.svg";
+// import img from "../../assets/HrLearning/HrBanner.svg";
+import img from "../../assets/HrLearning/image_internship.png";
 
 const InternshipHRLearning = () => {
   const Cards = [
