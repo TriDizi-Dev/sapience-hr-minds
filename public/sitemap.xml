@@ -16,7 +16,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Add more URLs below if you have other pages -->
   <url>
     <loc>https://sapienceminds.com/alliance-partner</loc>
     <changefreq>monthly</changefreq>
