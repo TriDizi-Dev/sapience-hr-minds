@@ -21,24 +21,15 @@ export const ServiceThree = () => {
         Para1Head="Lorem ipsum dolor"
         Para1Content1={`Not every business needs a full-time Chief Human Resources Officer-but every business needs smart, strategic HR leadership. That’s where <strong>Sapience Minds</strong> comes in. Our <strong>Virtual CHRO & HR Operations Outsourcing Services</strong> give you direct access to senior-level HR guidance and seamless HR function execution-scaled to your needs and budget.`}
         Para1Content2={`With <strong>Babitha Remith</strong> as your dedicated Fractional CHRO, we act as an extension of your leadership team, offering strategic advice and managing daily HR functions. From talent lifecycle management to compliance, employee relations, policy development, and workforce analytics-we cover it all.`}
-        // Para2Content2="Lorem Ipsum is simply dummy text of the printing and typesetting
-        //     industry. Lorem Ipsum has been the industry's standard dummy text
-        //     ever since the 1500s, when an unknown printer took a galley of type
-        //     and scrambled it to make a type specimen book Lorem Ipsum is simply
-        //     dummy text of the printing and typesetting industry."
         Para1Content3="Perfect for startups, growing SMEs, and bootstrapped businesses, our virtual CHRO model is designed to be agile, flexible, and results-driven."
         Para2Head2="Key Offerings:"
-        keyofferinglist={["End-to-end HR operations",
+        keyofferinglist={[
+          "End-to-end HR operations",
           "Strategic workforce planning",
           "Compliance and policy enforcement",
           "Onboarding, training, and employee development",
-          "HR audits, analytics, and reporting"
+          "HR audits, analytics, and reporting",
         ]}
-        // List1="End-to-end HR operations"
-        // List2="Strategic workforce planning"
-        // List3="Compliance and policy enforcement"
-        // List4="Onboarding, training, and employee development"
-        // List5="HR audits, analytics, and reporting"
         Para3Head="Lorem ipsum dolor"
         Para3Content1="You’ll gain not just a service provider, but a trusted HR partner committed to your business goals, culture, and long-term vision."
         serviceIcons2="Years of CHRO Experience on Demand"
@@ -81,7 +72,7 @@ export const ServiceThree = () => {
         symbol3="%"
         symbol4="%"
         symbol5="°"
-         targetSevenData=""
+        targetSevenData=""
       />
     </div>
   );

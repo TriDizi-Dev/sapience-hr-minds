@@ -20,27 +20,17 @@ export const ServicePageOne = () => {
         ServiceHeadContent="Stay legally compliant and culturally aligned with HR policies tailored for growing businesses. Build trust, reduce risks, and foster a structured workplace from day one."
         // Para1Head="Lorem ipsum dolor"
         Para1Content1={`In today’s dynamic business environment, <strong>HR compliance </strong>is not just about following the law-it’s about creating a workplace where people feel protected, respected, and valued. <strong>At Sapience Minds,</strong> we bring over two decades of experience in HR leadership to support startups and SMBs with end-to-end compliance and policy development.`}
-
         Para1Content2={`Our approach is rooted in <strong>Fractional CHRO expertise,</strong> giving you strategic HR support without the cost of a full-time executive. We analyze your current practices, identify compliance gaps, and deliver a customized framework that includes all legally required and industry-specific policies. But we don’t stop at documentation-we help you implement, communicate, and train your teams on the policies that matter.`}
         Para1Content3="Whether you're onboarding your first employee or scaling your workforce, we ensure that your HR policies are aligned with your business vision, reduce operational risk, and meet the evolving needs of a hybrid or remote workforce."
-
         Para2Head="Key Offerings:"
-
-        // Para2Content2="Lorem Ipsum is simply dummy text of the printing and typesetting
-        //     industry. Lorem Ipsum has been the industry's standard dummy text
-        //     ever since the 1500s, when an unknown printer took a galley of type
-        //     and scrambled it to make a type specimen book Lorem Ipsum is simply
-        //     dummy text of the printing and typesetting industry."
-        keyofferinglist={["Compliance with local, state, and international HR regulations","Development of standardized HR policies and documentation","Support for cross-regional HR operations and global HRIS"]}
-        // List1="Compliance with local, state, and international HR regulations"
-        // List2="Development of standardized HR policies and documentation"
-        // List3="Support for cross-regional HR operations and global HRIS"
-        // List4="Prevention of Sexual Harassment (POSH) policy creation and compliance training"
-        // List5="Workplace safety, ethics, data privacy, and whistleblower guidelines"
-        // List6="Onboarding and exit documentation aligned with compliance"
+        keyofferinglist={[
+          "Compliance with local, state, and international HR regulations",
+          "Development of standardized HR policies and documentation",
+          "Support for cross-regional HR operations and global HRIS",
+        ]}
         Para3Head="Lorem ipsum dolor"
-        Para3Content1={`<strong>Client Benefit:</strong>`} 
-        paracontent3=" Mitigates risk, assures legal compliance, and offers peace of mind for companies operating across different regions"  
+        Para3Content1={`<strong>Client Benefit:</strong>`}
+        paracontent3=" Mitigates risk, assures legal compliance, and offers peace of mind for companies operating across different regions"
         serviceIcons2="Audit Success Rate"
         serviceIcons2_text="Our clients stay consistently compliant, achieving high scores in internal and external HR audits."
         serviceIcons1="Customized Frameworks"
@@ -69,21 +59,16 @@ export const ServicePageOne = () => {
         img_5={img5}
         img_6={Setting}
         img_7={img6}
-        
         metaTitle="Sapience Minds-HR Compliance and Policy Development"
         metaDescription="Stay legally compliant and culturally aligned with HR policies tailored for growing businesses. Build trust, reduce risks, and foster a structured workplace from day one."
         path="hr-compliance"
         targetData="100"
-        // targetGoalData="4"
-        // targetClientData="5"
         targetClientRatingData="4"
         targetAwardsData="95"
         symbol1="%"
         symbol2="%"
-        // symbol3="y"
-        // symbol4="x"
         symbol5="x"
-                targetSevenData=""
+        targetSevenData=""
       />
     </div>
   );

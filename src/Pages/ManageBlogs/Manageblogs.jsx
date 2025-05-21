@@ -80,7 +80,9 @@ export const Manageblogs = () => {
 
   return (
     <div className="blog_page_layer1">
-      <p className="CreateBlogPage" onClick={()=>navigate("/blog-creation")}>Create Blog</p>
+      <p className="CreateBlogPage" onClick={() => navigate("/blog-creation")}>
+        Create Blog
+      </p>
       <div className="blog_card_outer">
         {Blogs.map((data) => (
           <div className="blog_card" key={data.id}>

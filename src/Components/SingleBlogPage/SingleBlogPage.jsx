@@ -35,7 +35,6 @@ function SingleBlogPage() {
 
   console.log(data, "data");
 
-
   const formatDate = (isoString) => {
     const date = new Date(isoString);
     return date.toLocaleDateString("en-US", {
@@ -176,49 +175,6 @@ function SingleBlogPage() {
           </div>
         </div>
       </div>
-      {/* <div className="single_blog_layer2_outer">
-        <div className="single_blog_content">
-          <img
-            src={triangle}
-            alt="triangle"
-            className="single_blog_triangle_icon"
-          />
-          <p className="single_blog_content_heading" data-aos="zoom-in">
-            {data?.firstheading}
-          </p>
-          <p className="single_blog_content_para" data-aos="fade-right">
-            {data?.firstpara}
-          </p>
-
-          <p className="single_blog_content_heading" data-aos="zoom-in">
-            {data?.secondheading}
-          </p>
-          <p className="single_blog_content_para" data-aos="fade-right">
-            {data?.secondpara}
-          </p>
-          <div className="single_blog_list_items_outer">
-            <li className="sigle_blog_list" data-aos="zoom-in">
-              {data?.listitems1}
-            </li>
-            <li className="sigle_blog_list" data-aos="zoom-in">
-              {data?.listitems2}
-            </li>
-            <li className="sigle_blog_list" data-aos="zoom-in">
-              {data?.listitems3}
-            </li>
-            <li className="sigle_blog_list" data-aos="zoom-in">
-              {data?.listitems4}
-            </li>
-          </div>
-
-          <p className="single_blog_content_heading" data-aos="zoom-in">
-            {data?.thirdheading}
-          </p>
-          <p className="single_blog_content_para" data-aos="fade-right">
-            {data?.thirdpara}
-          </p>
-        </div>
-      </div> */}
       <div className="single_blog_layer2_outer">
         <div className="single_blog_content">
           <img
@@ -233,14 +189,6 @@ function SingleBlogPage() {
       <div className="single_blog_layer3_outer">
         <img src={background} alt="background" className="single_blog_bg_img" />
         <div className="single_blog_layer3_main">
-          {/* {data?.fourthheading && data?.fourthheading.length > 0 && (
-            <p className="single_blog_content_heading" data-aos="zoom-in">
-              {data?.fourthheading}
-            </p>
-          )}
-          <p className="single_blog_content_para" data-aos="fade-right">
-            {data?.fourthpara}
-          </p> */}
           <div className="single_layer3_blogs_outer">
             <div className="single_blog_card_outer">
               {BlogsData?.filter((blog) => blog?.id !== data?.id)?.map(

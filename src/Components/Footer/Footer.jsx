@@ -1,10 +1,9 @@
 import React from "react";
 import "./Footer.css";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
-import { IoLogoYoutube } from "react-icons/io";
 import { Link, useNavigate } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa6";
-import Logo from "../../assets/Logo.svg"
+import Logo from "../../assets/Logo.svg";
 
 export const Footer = () => {
   const navigate = useNavigate();
@@ -18,24 +17,25 @@ export const Footer = () => {
   return (
     <div className="footer_main">
       <div className="footer_outer">
-        {/* <div className="footer_left"> */}
         <div className="footer_logo_outer">
           <div className="footer_logo" onClick={hadleHome}>
-            <img src={Logo} alt="Logo"/>
+            <img src={Logo} alt="Logo" />
           </div>
           <p className="Contact_heading">Head Office</p>
           <p className="Contact_sub_headings">Bengaluru, Karnataka, India</p>
 
           <p className="Contact_heading">Call Us</p>
-          {/* <p className="Contact_sub_headings">Phone :+91 90360 62378</p> */}
-          <p className="Contact_sub_headings"><a href="tel:+919036062378">+91 9036062378</a></p>
+          <p className="Contact_sub_headings">
+            <a href="tel:+919036062378">+91 9036062378</a>
+          </p>
 
           <p className="Contact_heading">Email us</p>
-          {/* <p className="Contact_sub_headings">reachus@sapienceminds.com</p> */}
-          <p className="Contact_sub_headings"><a href="mailto:reachus@sapienceminds.com">reachus@sapienceminds.com</a></p>
-
+          <p className="Contact_sub_headings">
+            <a href="mailto:reachus@sapienceminds.com">
+              reachus@sapienceminds.com
+            </a>
+          </p>
         </div>
-        {/* </div> */}
         <div className="footer_right_outer_main_1">
           <div className="footer_center_outer">
             <div className="services_outer">
@@ -65,7 +65,9 @@ export const Footer = () => {
                 </li>
               </Link>
               <Link to="/talent-management" className="nav_link">
-                <li className="footer_services_items">Talent Management Solutions</li>
+                <li className="footer_services_items">
+                  Talent Management Solutions
+                </li>
               </Link>
               <Link to="/talent-engagement" className="nav_link">
                 <li className="footer_services_items">
@@ -77,9 +79,12 @@ export const Footer = () => {
                   Recruitment of Leadership & Mid-Level Team
                 </li>
               </Link>
-              <Link to="/employee-benfits-and-insurance-consulting" className="nav_link">
+              <Link
+                to="/employee-benfits-and-insurance-consulting"
+                className="nav_link"
+              >
                 <li className="footer_services_items">
-                 Employee Benfits & Insurance consulting
+                  Employee Benfits & Insurance consulting
                 </li>
               </Link>
             </div>
@@ -129,13 +134,34 @@ export const Footer = () => {
         </div>
         <div className="footer_right_bottom_icons">
           <div className="footer_icons_outer">
-            <FaFacebook className="footer_icons" onClick={()=>handleOpenTab("https://www.facebook.com/people/Sapience-Minds/61564911584088/")}/>{" "}
+            <FaFacebook
+              className="footer_icons"
+              onClick={() =>
+                handleOpenTab(
+                  "https://www.facebook.com/people/Sapience-Minds/61564911584088/"
+                )
+              }
+            />{" "}
           </div>
           <div className="footer_icons_outer">
-            <FaInstagram className="footer_icons" onClick={()=>handleOpenTab("https://www.instagram.com/sapience_minds?igsh=eHhpYm4ydnhnMGZh")} />{" "}
+            <FaInstagram
+              className="footer_icons"
+              onClick={() =>
+                handleOpenTab(
+                  "https://www.instagram.com/sapience_minds?igsh=eHhpYm4ydnhnMGZh"
+                )
+              }
+            />{" "}
           </div>
           <div className="footer_icons_outer">
-            <FaLinkedin className="footer_icons" onClick={()=>handleOpenTab("https://www.linkedin.com/company/sapience-minds/")}/>{" "}
+            <FaLinkedin
+              className="footer_icons"
+              onClick={() =>
+                handleOpenTab(
+                  "https://www.linkedin.com/company/sapience-minds/"
+                )
+              }
+            />{" "}
           </div>
         </div>
       </div>

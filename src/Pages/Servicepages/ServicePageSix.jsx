@@ -20,27 +20,14 @@ export const ServicePageSix = () => {
         Para1Head="Lorem ipsum dolor"
         Para1Content1={`In today’s competitive landscape, retaining high-performing employees is more challenging-and more essential-than ever. At <strong>Sapience Minds,</strong> we specialize in building a culture where people choose to stay and grow. Our <strong>Talent Engagement & Retention services</strong> go beyond HR metrics to focus on human-centered strategies that spark motivation, foster loyalty, and align career goals with organizational outcomes.`}
         Para1Content2={`Led by <strong>Babitha Remith,</strong> with over two decades of experience in global talent strategy, we use data-backed tools and emotional intelligence frameworks to design experiences that improve engagement and reduce attrition. From engagement surveys and recognition systems to feedback loops and career development plans, we craft comprehensive retention programs that reflect your company’s culture.`}
-        // Para2Head="Lorem ipsum dolor"
         Para2Head2="Key Offerings:"
-        // Para2Content2="Lorem Ipsum is simply dummy text of the printing and typesetting
-        //     industry. Lorem Ipsum has been the industry's standard dummy text
-        //     ever since the 1500s, when an unknown printer took a galley of type
-        //     and scrambled it to make a type specimen book Lorem Ipsum is simply
-        //     dummy text of the printing and typesetting industry."
-        // List1="Succession planning and talent mapping"
-        // List2="9-box assessments and performance reviews"
-        // List3="Rewards, recognition, and feedback systems"
-        // List4="Managerial coaching and team-building programs"
-        // List5="Retention risk analysis and intervention strategies"
         keyofferinglist={[
           "Employee engagement surveys and HR Connect meetings",
-"Employee recognition programs",
-"End-to-end engagement programs with surveys, 30/60/90-day check-ins, and ongoing HRBP support to ensure positive employee experience."
-       
+          "Employee recognition programs",
+          "End-to-end engagement programs with surveys, 30/60/90-day check-ins, and ongoing HRBP support to ensure positive employee experience.",
         ]}
         Para3Head="Lorem ipsum dolor"
-        // Para4Content1="We don’t just advise-we become your strategic HR ally, driving sustainable value."
- Para3Content1={`<strong>Client Benefit:</strong>`} 
+        Para3Content1={`<strong>Client Benefit:</strong>`}
         paracontent3="Clients gain a clear structure for advancing internal talent, ensuring business continuity, and developing high-potential employees into leadership roles."
         serviceIcons2="Participation in Engagement Programs"
         serviceIcons2_text="Our frameworks promote inclusivity and enthusiasm."
@@ -81,7 +68,7 @@ export const ServicePageSix = () => {
         symbol3="%"
         symbol4="%"
         symbol5="x"
-                targetSevenData=""
+        targetSevenData=""
       />
     </div>
   );

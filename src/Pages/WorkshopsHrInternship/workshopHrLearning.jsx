@@ -3,7 +3,6 @@ import { HrLearning } from "../../Components/HrLearning/HrLearning";
 // import img from "../../assets/HrLearning/workshop.svg";
 import img from "../../assets/HrLearning/image_workshop.png";
 
-
 const WorkshopsHrLearning = () => {
   const Cards = [
     {

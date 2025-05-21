@@ -25,7 +25,9 @@ const CareerUpdate = () => {
   });
 
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
-  const [requirementsEditor, setRequirementsEditor] = useState(EditorState.createEmpty());
+  const [requirementsEditor, setRequirementsEditor] = useState(
+    EditorState.createEmpty()
+  );
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const location = useLocation();
@@ -52,7 +54,9 @@ const CareerUpdate = () => {
       if (careerData.JobDiscription) {
         const contentBlock = htmlToDraft(careerData.JobDiscription);
         if (contentBlock) {
-          const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
+          const contentState = ContentState.createFromBlockArray(
+            contentBlock.contentBlocks
+          );
           setEditorState(EditorState.createWithContent(contentState));
         }
       }
@@ -61,7 +65,9 @@ const CareerUpdate = () => {
       if (careerData.Requirements) {
         const contentBlock = htmlToDraft(careerData.Requirements);
         if (contentBlock) {
-          const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
+          const contentState = ContentState.createFromBlockArray(
+            contentBlock.contentBlocks
+          );
           setRequirementsEditor(EditorState.createWithContent(contentState));
         }
       }
@@ -149,7 +155,6 @@ const CareerUpdate = () => {
 
   return (
     <div className="career_creation_container">
-     
       <div className="career_details_sub">
         <h1>Update Career</h1>
         <form className="career_creation_form" onSubmit={handleSubmit}>
@@ -327,7 +332,11 @@ const CareerUpdate = () => {
           </div>
 
           <div className="career_creation_button_container">
-            <button className="create_career_button" type="submit" disabled={isSubmitting}>
+            <button
+              className="create_career_button"
+              type="submit"
+              disabled={isSubmitting}
+            >
               {isSubmitting ? "Updating..." : "Update Career"}
             </button>
             <button

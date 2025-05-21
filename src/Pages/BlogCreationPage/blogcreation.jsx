@@ -215,7 +215,7 @@ export const CreateBlog = () => {
           </form>
         </div>
       </div>
-         <ToastContainer />
+      <ToastContainer />
     </div>
   );
 };

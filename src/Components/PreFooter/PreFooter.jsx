@@ -11,7 +11,7 @@ export const PreFooter = ({
   Content,
   Btn1 = "Get Started",
   Btn2 = "Book A Meeting",
-  sourcepages
+  sourcepages,
 }) => {
   useEffect(() => {
     AOS.init({
@@ -70,7 +70,7 @@ export const PreFooter = ({
     };
   }, [showForm]);
 
- const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
     Name: "",
     Email: "",
     PhoneNumber: "",
@@ -85,7 +85,7 @@ export const PreFooter = ({
       [name]: value,
     }));
   };
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const scriptURL =
@@ -120,7 +120,7 @@ export const PreFooter = ({
           PhoneNumber: "",
           Message: "",
         });
-        handleCloseForm()
+        handleCloseForm();
       } else {
         toast.warning("Something went wrong. Please try again.", {
           position: "top-right",
@@ -144,11 +144,8 @@ export const PreFooter = ({
     }
   };
 
-
-
   return (
     <>
-     
       <div className="PreFooter_Main" data-aos="zoom-in" ref={preFooterRef}>
         <p className="Heading_PreFooter">{Head}</p>
         <p className="Para_PreFooter">{Content}</p>
@@ -230,7 +227,6 @@ export const PreFooter = ({
           </div>
         </div>
       )}
-      
     </>
   );
 };

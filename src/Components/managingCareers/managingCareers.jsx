@@ -73,11 +73,15 @@ const SmallCard = () => {
   };
 
   return (
-    <div  className="small-main-container">
+    <div className="small-main-container">
       <div className="sub-container-small">
-        <button onClick={()=>{
-            navigate("/career-creation")
-        }}>Create Career</button>
+        <button
+          onClick={() => {
+            navigate("/career-creation");
+          }}
+        >
+          Create Career
+        </button>
       </div>
 
       <div className="small-card_container">

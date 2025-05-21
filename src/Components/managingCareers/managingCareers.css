@@ -1,27 +1,29 @@
-.small-main-container{
-    display: flex;
-    flex-direction: column;
-    margin-top: 8vw;
- 
+.small-main-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8vw;
+
 }
 
-.sub-container-small{
-    display: flex;
-    justify-content: end;
-    padding: 0 2vw 1vw 0;
-    
+.sub-container-small {
+  display: flex;
+  justify-content: end;
+  padding: 0 2vw 1vw 0;
+
 }
-.sub-container-small button{
-    padding: 0.5vw 1vw;
-    font-size: 1.1vw;
-    font-weight: 600;
-    border: none;
-    outline: none;
-    border-radius: 0.6vw;
-    background-color: #7C5CFC;
-    color: #ffff;
-    cursor: pointer;
+
+.sub-container-small button {
+  padding: 0.5vw 1vw;
+  font-size: 1.1vw;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  border-radius: 0.6vw;
+  background-color: #7C5CFC;
+  color: #ffff;
+  cursor: pointer;
 }
+
 .small-card_container {
   display: flex;
   justify-content: center;
@@ -38,13 +40,13 @@
   box-shadow: 0 0.14vw 0.56vw rgba(0, 0, 0, 0.05);
   width: 100%;
   max-width: 20.83vw;
-  /* margin-top:8vw; */
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 1vw;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
 .card-container:hover {
   transform: scale(1.02);
   box-shadow: 0 2vw 3vw rgba(0, 0, 0, 0.2);
@@ -77,15 +79,18 @@
 .card-content-box {
   background-color: #d7c9fc;
   color: #3f3f3f;
-  padding: 0.5vw 1vw 1vw 1vw; /* top padding increased */
+  padding: 0.5vw 1vw 1vw 1vw;
+  /* top padding increased */
   border-radius: 1vw;
   font-size: 0.97vw;
   height: 9.5vw;
   overflow-y: scroll;
 }
-.card-content-box::-webkit-scrollbar{
-    display: none;
+
+.card-content-box::-webkit-scrollbar {
+  display: none;
 }
+
 .card-header-text::before {
   content: "";
   position: absolute;
@@ -134,9 +139,10 @@
 
 /* Responsive */
 @media screen and (max-width: 720px) {
-  .small-main-container{
+  .small-main-container {
     margin-top: 18vw;
   }
+
   .card-container {
     max-width: 90vw;
     padding: 4vw;
@@ -175,12 +181,14 @@
     font-size: 3.5vw;
     padding: 3vw 4vw;
   }
-  .sub-container-small button{
-    padding:2vw 2vw;
+
+  .sub-container-small button {
+    padding: 2vw 2vw;
     font-size: 3vw;
     border-radius: 1vw;
   }
-  .card-header-text::before{
+
+  .card-header-text::before {
     width: 82vw;
     /* bottom: -1vw; */
   }

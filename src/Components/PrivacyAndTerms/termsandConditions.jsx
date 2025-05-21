@@ -46,8 +46,7 @@ function TermsAndConditions({
   return (
     <div className="privacy_terms_outer_main">
       <Helmet>
-        <title>Sapience Minds-Terms And Conditions
-        </title>
+        <title>Sapience Minds-Terms And Conditions</title>
         <meta
           name="description"
           content="Understand the rules for using our website and services. These terms outline your rights, responsibilities, and how we deliver professional HR solutions."

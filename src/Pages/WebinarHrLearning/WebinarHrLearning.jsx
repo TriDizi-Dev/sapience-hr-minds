@@ -29,7 +29,7 @@ const WebinarHRLearning = () => {
         "Includes: Digital certificate, replay access",
         "Audience: Startup founders, HR leads, ops manager",
       ],
-      path:"webinar-hr-learning"
+      path: "webinar-hr-learning",
     },
 
     {
@@ -56,7 +56,7 @@ const WebinarHRLearning = () => {
         "Includes: Participation Certificate, Framework Downloads",
         "Target Audience: CHROs, HR Leaders, Business Owners",
       ],
-        path:"webinar-hr-learning"
+      path: "webinar-hr-learning",
     },
     {
       id: 3,
@@ -82,7 +82,7 @@ const WebinarHRLearning = () => {
         "Includes: Participation certificate, digital recruitment playbook",
         "Audience: HR managers, talent acquisition leads, startup HRs",
       ],
-        path:"webinar-hr-learning"
+      path: "webinar-hr-learning",
     },
     {
       id: 4,
@@ -108,7 +108,7 @@ const WebinarHRLearning = () => {
         "Includes: Participation e-certificate, sample policies",
         "Target: Founders, HR generalists, early-stage CHROs",
       ],
-        path:"webinar-hr-learning"
+      path: "webinar-hr-learning",
     },
     {
       id: 5,
@@ -134,7 +134,7 @@ const WebinarHRLearning = () => {
         "Includes: Participation certificate, framework downloads",
         "Target Audience: CHROs, business owners, HR strategists",
       ],
-        path:"webinar-hr-learning"
+      path: "webinar-hr-learning",
     },
   ];
 

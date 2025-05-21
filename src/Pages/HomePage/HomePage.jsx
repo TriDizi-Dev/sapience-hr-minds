@@ -47,55 +47,53 @@ import { Helmet } from "react-helmet-async";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import client1 from "../../assets/HomePage/image1.png"
-import client2 from "../../assets/HomePage/image2.png"
+import client1 from "../../assets/HomePage/image1.png";
+import client2 from "../../assets/HomePage/image2.png";
 // import client3 from "../../assets/HomePage/image3.png"
 
 // import client4 from "../../assets/HomePage/image4.png"
-import client4 from "../../assets/HomePage/image4-removebg.png"
+import client4 from "../../assets/HomePage/image4-removebg.png";
 
 // import client5 from "../../assets/HomePage/image5.png"
-import client5 from "../../assets/HomePage/image5-removebg.png"
+import client5 from "../../assets/HomePage/image5-removebg.png";
 
-import client6 from "../../assets/HomePage/image6.png"
-import client7 from "../../assets/HomePage/image7.png"
+import client6 from "../../assets/HomePage/image6.png";
+import client7 from "../../assets/HomePage/image7.png";
 
 // import client8 from "../../assets/HomePage/image8.png"
-import client8 from "../../assets/HomePage/image8-removebg.png"
+import client8 from "../../assets/HomePage/image8-removebg.png";
 
 // import client9 from "../../assets/HomePage/image9.png"
 // import client9 from "../../assets/HomePage/image9-removebg.png"
-import client9 from "../../assets/HomePage/groupJG-removebg.png"
+import client9 from "../../assets/HomePage/groupJG-removebg.png";
 
-import client26 from "../../assets/HomePage/cfhash-removebg.png"
+import client26 from "../../assets/HomePage/cfhash-removebg.png";
 
-import client10 from "../../assets/HomePage/image10.png"
-import client11 from "../../assets/HomePage/image11.png"
-import client12 from "../../assets/HomePage/image12.png"
+import client10 from "../../assets/HomePage/image10.png";
+import client11 from "../../assets/HomePage/image11.png";
+import client12 from "../../assets/HomePage/image12.png";
 // import client13 from "../../assets/HomePage/image13.png"
 // import client13 from "../../assets/HomePage/image13-removebg.png"
 
-
-import client14 from "../../assets/HomePage/image14.png"
-import client15 from "../../assets/HomePage/image15.png"
+import client14 from "../../assets/HomePage/image14.png";
+import client15 from "../../assets/HomePage/image15.png";
 // import client16 from "../../assets/HomePage/image16.png"
 // import client17 from "../../assets/HomePage/image17.png"
-import client17 from "../../assets/HomePage/image17-removebg.png"
+import client17 from "../../assets/HomePage/image17-removebg.png";
 
-import client18 from "../../assets/HomePage/image18.png"
+import client18 from "../../assets/HomePage/image18.png";
 // import client19 from "../../assets/HomePage/image19.jpg"
-import client19 from "../../assets/HomePage/image19-removebg.png"
+import client19 from "../../assets/HomePage/image19-removebg.png";
 
-import client20 from "../../assets/HomePage/image20.png"
-import client21 from "../../assets/HomePage/image21.png"
-import client22 from "../../assets/HomePage/image22.png"
+import client20 from "../../assets/HomePage/image20.png";
+import client21 from "../../assets/HomePage/image21.png";
+import client22 from "../../assets/HomePage/image22.png";
 // import client23 from "../../assets/HomePage/image23.png"
-import client23 from "../../assets/HomePage/image23-removebg.png"
+import client23 from "../../assets/HomePage/image23-removebg.png";
 
-import client24 from "../../assets/HomePage/image24.png"
-import client25 from "../../assets/HomePage/image25.png"
+import client24 from "../../assets/HomePage/image24.png";
+import client25 from "../../assets/HomePage/image25.png";
 import { MdOutlinePlayCircleFilled } from "react-icons/md";
-
 
 export const HomePage = () => {
   const navigate = useNavigate();
@@ -245,7 +243,6 @@ export const HomePage = () => {
       bottomtext: " Sr. VP - HR & Finance,  Wolken Software Pvt Ltd",
     },
   ];
-
 
   const handleSignleBlog = (ev, id) => {
     const cleanPath = id.replaceAll(" ", "-");
@@ -397,7 +394,7 @@ export const HomePage = () => {
 
     fetchBlogs();
   }, []);
-    const videoRef = useRef(null);
+  const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlay = () => {
@@ -409,7 +406,8 @@ export const HomePage = () => {
     <div className="home_main">
       <Helmet>
         <title>
-        Sapience Minds-Sapience Minds-Your Trusted Fractional CHRO Partner for Scalable HR Growth
+          Sapience Minds-Sapience Minds-Your Trusted Fractional CHRO Partner for
+          Scalable HR Growth
         </title>
         <meta
           name="description"
@@ -580,7 +578,8 @@ export const HomePage = () => {
               <p className="bottom_notice_heading">+ 1500</p>
               <p className="bottom_notice_text">
                 {/* People have manage with organize */}
-                Effectively managed and led HR initiatives for about 1500+ employees globally
+                Effectively managed and led HR initiatives for about 1500+
+                employees globally
               </p>
             </div>
           </div>
@@ -599,68 +598,67 @@ export const HomePage = () => {
             Trusted Companies to scale their Business through HR domain{" "}
           </p>
           <div className="layer2_logos_outer">
-  <div className="layer2_logos_inner">
-    {/* Original set */}
-    <img src={client1} alt="logo1" className="layer2_logos_1" />
-    <img src={client2} alt="logo2" className="layer2_logos_2" />
-    {/* <img src={client3} alt="logo3" className="layer2_logos_3" /> */}
-    <img src={client4} alt="logo4" className="layer2_logos_4" />
-    <img src={client5} alt="logo5" className="layer2_logos_5" />
-    <img src={client6} alt="logo6" className="layer2_logos_6" />
-    <img src={client7} alt="logo7" className="layer2_logos_7" />
-    <img src={client8} alt="logo8" className="layer2_logos_8" />
-    <img src={client9} alt="logo9" className="layer2_logos_9" />
-    <img src={client26} alt="logo 26" className="layer2_logos_26"/>
-    <img src={client10} alt="logo10" className="layer2_logos_10" />
-    <img src={client11} alt="logo11" className="layer2_logos_11" />
-    <img src={client12} alt="logo12" className="layer2_logos_12" />
-    {/* <img src={client13} alt="logo13" className="layer2_logos_13" /> */}
-    <img src={client14} alt="logo14" className="layer2_logos_14" />
-    <img src={client15} alt="logo15" className="layer2_logos_15" />
-    {/* <img src={client16} alt="logo16" className="layer2_logos_16" /> */}
-    <img src={client17} alt="logo17" className="layer2_logos_17" />
-    <img src={client18} alt="logo18" className="layer2_logos_18" />
-    <img src={client19} alt="logo19" className="layer2_logos_19" />
-    <img src={client20} alt="logo20" className="layer2_logos_20" />
-    <img src={client21} alt="logo21" className="layer2_logos_21" />
-    <img src={client22} alt="logo22" className="layer2_logos_22" />
-    <img src={client23} alt="logo23" className="layer2_logos_23" />
-    <img src={client24} alt="logo24" className="layer2_logos_24" />
-    <img src={client25} alt="logo25" className="layer2_logos_25" />
-    
-    {/* Duplicate set for seamless scroll */}
-    <img src={client1} alt="logo1" className="layer2_logos_1" />
-    <img src={client2} alt="logo2" className="layer2_logos_2" />
-    {/* <img src={client3} alt="logo3" className="layer2_logos_3" /> */}
-    <img src={client4} alt="logo4" className="layer2_logos_4" />
-    <img src={client5} alt="logo5" className="layer2_logos_5" />
-    <img src={client6} alt="logo6" className="layer2_logos_6" />
-    <img src={client7} alt="logo7" className="layer2_logos_7" />
-    <img src={client8} alt="logo8" className="layer2_logos_8" />
-    <img src={client9} alt="logo9" className="layer2_logos_9" />
-    <img src={client26} alt="logo 26" className="layer2_logos_26"/>
-    <img src={client10} alt="logo10" className="layer2_logos_10" />
-    <img src={client11} alt="logo11" className="layer2_logos_11" />
-    <img src={client12} alt="logo12" className="layer2_logos_12" />
-    {/* <img src={client13} alt="logo13" className="layer2_logos_13" /> */}
-    <img src={client14} alt="logo14" className="layer2_logos_14" />
-    <img src={client15} alt="logo15" className="layer2_logos_15" />
-    {/* <img src={client16} alt="logo16" className="layer2_logos_16" /> */}
-    <img src={client17} alt="logo17" className="layer2_logos_17" />
-    <img src={client18} alt="logo18" className="layer2_logos_18" />
-    <img src={client19} alt="logo19" className="layer2_logos_19" />
-    <img src={client20} alt="logo20" className="layer2_logos_20" />
-    <img src={client21} alt="logo21" className="layer2_logos_21" />
-    <img src={client22} alt="logo22" className="layer2_logos_22" />
-    <img src={client23} alt="logo23" className="layer2_logos_23" />
-    <img src={client24} alt="logo24" className="layer2_logos_24" />
-    <img src={client25} alt="logo25" className="layer2_logos_25" />
-  </div>
-</div>
+            <div className="layer2_logos_inner">
+              {/* Original set */}
+              <img src={client1} alt="logo1" className="layer2_logos_1" />
+              <img src={client2} alt="logo2" className="layer2_logos_2" />
+              {/* <img src={client3} alt="logo3" className="layer2_logos_3" /> */}
+              <img src={client4} alt="logo4" className="layer2_logos_4" />
+              <img src={client5} alt="logo5" className="layer2_logos_5" />
+              <img src={client6} alt="logo6" className="layer2_logos_6" />
+              <img src={client7} alt="logo7" className="layer2_logos_7" />
+              <img src={client8} alt="logo8" className="layer2_logos_8" />
+              <img src={client9} alt="logo9" className="layer2_logos_9" />
+              <img src={client26} alt="logo 26" className="layer2_logos_26" />
+              <img src={client10} alt="logo10" className="layer2_logos_10" />
+              <img src={client11} alt="logo11" className="layer2_logos_11" />
+              <img src={client12} alt="logo12" className="layer2_logos_12" />
+              {/* <img src={client13} alt="logo13" className="layer2_logos_13" /> */}
+              <img src={client14} alt="logo14" className="layer2_logos_14" />
+              <img src={client15} alt="logo15" className="layer2_logos_15" />
+              {/* <img src={client16} alt="logo16" className="layer2_logos_16" /> */}
+              <img src={client17} alt="logo17" className="layer2_logos_17" />
+              <img src={client18} alt="logo18" className="layer2_logos_18" />
+              <img src={client19} alt="logo19" className="layer2_logos_19" />
+              <img src={client20} alt="logo20" className="layer2_logos_20" />
+              <img src={client21} alt="logo21" className="layer2_logos_21" />
+              <img src={client22} alt="logo22" className="layer2_logos_22" />
+              <img src={client23} alt="logo23" className="layer2_logos_23" />
+              <img src={client24} alt="logo24" className="layer2_logos_24" />
+              <img src={client25} alt="logo25" className="layer2_logos_25" />
 
+              {/* Duplicate set for seamless scroll */}
+              <img src={client1} alt="logo1" className="layer2_logos_1" />
+              <img src={client2} alt="logo2" className="layer2_logos_2" />
+              {/* <img src={client3} alt="logo3" className="layer2_logos_3" /> */}
+              <img src={client4} alt="logo4" className="layer2_logos_4" />
+              <img src={client5} alt="logo5" className="layer2_logos_5" />
+              <img src={client6} alt="logo6" className="layer2_logos_6" />
+              <img src={client7} alt="logo7" className="layer2_logos_7" />
+              <img src={client8} alt="logo8" className="layer2_logos_8" />
+              <img src={client9} alt="logo9" className="layer2_logos_9" />
+              <img src={client26} alt="logo 26" className="layer2_logos_26" />
+              <img src={client10} alt="logo10" className="layer2_logos_10" />
+              <img src={client11} alt="logo11" className="layer2_logos_11" />
+              <img src={client12} alt="logo12" className="layer2_logos_12" />
+              {/* <img src={client13} alt="logo13" className="layer2_logos_13" /> */}
+              <img src={client14} alt="logo14" className="layer2_logos_14" />
+              <img src={client15} alt="logo15" className="layer2_logos_15" />
+              {/* <img src={client16} alt="logo16" className="layer2_logos_16" /> */}
+              <img src={client17} alt="logo17" className="layer2_logos_17" />
+              <img src={client18} alt="logo18" className="layer2_logos_18" />
+              <img src={client19} alt="logo19" className="layer2_logos_19" />
+              <img src={client20} alt="logo20" className="layer2_logos_20" />
+              <img src={client21} alt="logo21" className="layer2_logos_21" />
+              <img src={client22} alt="logo22" className="layer2_logos_22" />
+              <img src={client23} alt="logo23" className="layer2_logos_23" />
+              <img src={client24} alt="logo24" className="layer2_logos_24" />
+              <img src={client25} alt="logo25" className="layer2_logos_25" />
+            </div>
+          </div>
         </div>
       </div>
-          
+
       <div className="homepage_layer3_outer_main">
         <div className="homepage_layer3_outer">
           <div className="homepage_layer3_part1">
@@ -679,16 +677,16 @@ export const HomePage = () => {
             </p>
           </div>
           <div className="homepage_layer3_part2">
-             {!isPlaying && (
-        <div className="video_overlay">
-          <button className="play_button" onClick={handlePlay}>
-            {/* ▶ Play Video */}
-            <MdOutlinePlayCircleFilled />
-          </button>
-        </div>
-      )}
+            {!isPlaying && (
+              <div className="video_overlay">
+                <button className="play_button" onClick={handlePlay}>
+                  {/* ▶ Play Video */}
+                  <MdOutlinePlayCircleFilled />
+                </button>
+              </div>
+            )}
             <video
-            ref={videoRef}
+              ref={videoRef}
               src={homevideo}
               // autoPlay
               // muted
@@ -772,7 +770,7 @@ export const HomePage = () => {
           </div>
           <div className="layer5_cards_outer">
             {cardscontent.map((data, ind) => (
-              <div className="layer5_card" key={ind} >
+              <div className="layer5_card" key={ind}>
                 <div className="layer5_card_logo_outer">
                   <img
                     src={data.Logo}
@@ -996,7 +994,6 @@ export const HomePage = () => {
           Content="Your startup deserves more than just reactive HR. Whether you need structure, compliance, or a culture strategy, let’s have a conversation that moves your business forward. Book a discovery call or fill out the form and let’s shape a smarter, people-powered future for your company."
         />
       </div>
-   
     </div>
   );
 };

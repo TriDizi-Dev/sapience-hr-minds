@@ -28,7 +28,7 @@ import WorkshopsHrLearning from "./Pages/WorkshopsHrInternship/workshopHrLearnin
 import WebinarHRLearning from "./Pages/WebinarHrLearning/WebinarHrLearning";
 import { CreateBlog } from "./Pages/BlogCreationPage/blogcreation";
 import CareerCreation from "./Pages/careerCreation/careerCreation";
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider } from "react-helmet-async";
 import { Manageblogs } from "./Pages/ManageBlogs/Manageblogs";
 import { UpdateBlog } from "./Pages/BlogUpdation/BlogUpdation";
 import CareerUpdate from "./Pages/careerCreation/updationCareerpage";
@@ -37,51 +37,73 @@ import { useEffect, useState } from "react";
 import Loader from "./Components/Loader/Loader";
 
 function Layout() {
-
   const location = useLocation();
-  const hideFooter = location.pathname === "/blog-creation" || location.pathname === "/career-creation"||location.pathname==="/career-update" ;
-  
+  const hideFooter =
+    location.pathname === "/blog-creation" ||
+    location.pathname === "/career-creation" ||
+    location.pathname === "/career-update";
 
   return (
     <>
-    <HelmetProvider>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/alliance-partner" element={<AlliancePartner />} />
-        <Route path="/contactus" element={<ContactForm />} />
-        <Route path="/careers" element={<Carrier />}></Route>
-        <Route path="/service" element={<Service />}></Route>
-        {/* <Route path="/hrlearning" element={<HrLearning />}></Route> */}
-        <Route path="/internship-hr-learning" element={<InternshipHRLearning/>}/>
-        <Route path="/workshop-hr-learning" element={<WorkshopsHrLearning/>}/>
-        <Route path="/webinar-hr-learning" element={<WebinarHRLearning/>}/>
-        <Route path="/privacy" element={<PrivacyAndTerms />}></Route>
-        <Route path="/privacypolicy" element={<PricacyPolicy />}></Route>
-        <Route
-          path="/termsandconditions"
-          element={<TermsAndCondition />}
-        ></Route>
-        <Route path="/blogs" element={<Blog />}></Route>
-        {/* <Route path="/singleBlog" element={<SingleBlogPage />}></Route> */}
-        <Route path="/hr-compliance" element={<ServicePageOne />}></Route>
-        <Route path="/hr-consulting" element={<ServicePageTwo />}></Route>
-        <Route path="/virtual-chro-and-outsourcing" element={<ServiceThree />}></Route>
-        <Route path="/talent-acquisition-solutions" element={<ServicePageFour />}></Route>
-        <Route path="/talent-management" element={<ServicePageFive />}></Route>
-        <Route path="/talent-engagement" element={<ServicePageSix />}></Route>
-        <Route path="/recruitment-of-leadership" element={<ServicePageSeven />}></Route>
-        <Route path="/employee-benfits-and-insurance-consulting" element={<ServicePageEight />}></Route>
-        <Route path="/blog/:id" element={<SingleBlogPage />}></Route>
-        <Route path="/blog-creation" element={<CreateBlog />}></Route>   
-        <Route path="/career-creation" element={<CareerCreation />}></Route>
-        <Route path="/manageblogs" element={<Manageblogs />}></Route>
-        <Route path="/blog-updation" element={<UpdateBlog />}></Route>
-        <Route path="/career-update" element={<CareerUpdate/> }/>
-        <Route path="/managecareers" element={<SmallCard/>}/>
-      </Routes>
-      {!hideFooter && <Footer />} 
+      <HelmetProvider>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/alliance-partner" element={<AlliancePartner />} />
+          <Route path="/contactus" element={<ContactForm />} />
+          <Route path="/careers" element={<Carrier />}></Route>
+          <Route path="/service" element={<Service />}></Route>
+          {/* <Route path="/hrlearning" element={<HrLearning />}></Route> */}
+          <Route
+            path="/internship-hr-learning"
+            element={<InternshipHRLearning />}
+          />
+          <Route
+            path="/workshop-hr-learning"
+            element={<WorkshopsHrLearning />}
+          />
+          <Route path="/webinar-hr-learning" element={<WebinarHRLearning />} />
+          <Route path="/privacy" element={<PrivacyAndTerms />}></Route>
+          <Route path="/privacypolicy" element={<PricacyPolicy />}></Route>
+          <Route
+            path="/termsandconditions"
+            element={<TermsAndCondition />}
+          ></Route>
+          <Route path="/blogs" element={<Blog />}></Route>
+          {/* <Route path="/singleBlog" element={<SingleBlogPage />}></Route> */}
+          <Route path="/hr-compliance" element={<ServicePageOne />}></Route>
+          <Route path="/hr-consulting" element={<ServicePageTwo />}></Route>
+          <Route
+            path="/virtual-chro-and-outsourcing"
+            element={<ServiceThree />}
+          ></Route>
+          <Route
+            path="/talent-acquisition-solutions"
+            element={<ServicePageFour />}
+          ></Route>
+          <Route
+            path="/talent-management"
+            element={<ServicePageFive />}
+          ></Route>
+          <Route path="/talent-engagement" element={<ServicePageSix />}></Route>
+          <Route
+            path="/recruitment-of-leadership"
+            element={<ServicePageSeven />}
+          ></Route>
+          <Route
+            path="/employee-benfits-and-insurance-consulting"
+            element={<ServicePageEight />}
+          ></Route>
+          <Route path="/blog/:id" element={<SingleBlogPage />}></Route>
+          <Route path="/blog-creation" element={<CreateBlog />}></Route>
+          <Route path="/career-creation" element={<CareerCreation />}></Route>
+          <Route path="/manageblogs" element={<Manageblogs />}></Route>
+          <Route path="/blog-updation" element={<UpdateBlog />}></Route>
+          <Route path="/career-update" element={<CareerUpdate />} />
+          <Route path="/managecareers" element={<SmallCard />} />
+        </Routes>
+        {!hideFooter && <Footer />}
       </HelmetProvider>
     </>
   );
@@ -89,8 +111,6 @@ function Layout() {
 
 function App() {
   const [loading, setLoading] = useState(true);
-
-
 
   // useEffect(() => {
   //   // Simulate loading time (e.g., API call, resource loading)
@@ -101,46 +121,44 @@ function App() {
   //   return () => clearTimeout(timer);
   // }, []);
 
+  useEffect(() => {
+    const handleImageLoad = () => {
+      const images = Array.from(document.images);
+      if (images.every((img) => img.complete)) {
+        // Slight delay to allow paint
+        requestAnimationFrame(() => {
+          setTimeout(() => setLoading(false), 1000);
+        });
+      } else {
+        let loadedCount = 0;
+        images.forEach((img) => {
+          const done = () => {
+            loadedCount++;
+            if (loadedCount === images.length) {
+              requestAnimationFrame(() => {
+                setTimeout(() => setLoading(false), 1000);
+              });
+            }
+          };
+          img.addEventListener("load", done, { once: true });
+          img.addEventListener("error", done, { once: true });
+        });
+      }
+    };
 
-useEffect(() => {
-  const handleImageLoad = () => {
-    const images = Array.from(document.images);    
-    if (images.every((img) => img.complete)) {
-      // Slight delay to allow paint
-      requestAnimationFrame(() => {
-        setTimeout(() => setLoading(false), 1000);
-      });
-    } else {
-      let loadedCount = 0;
-      images.forEach((img) => {
-        const done = () => {
-          loadedCount++;
-          if (loadedCount === images.length) {
-            requestAnimationFrame(() => {
-              setTimeout(() => setLoading(false), 1000);
-            });
-          }
-        };
-        img.addEventListener("load", done, { once: true });
-        img.addEventListener("error", done, { once: true });
-      });
-    }
-  };
-
-  setTimeout(handleImageLoad, 1000);
-}, []);
+    setTimeout(handleImageLoad, 1000);
+  }, []);
 
   return (
-    
     <>
-    {loading ? (
-      <Loader />
-    ) : (
-      <BrowserRouter>
-        <Layout />
-      </BrowserRouter>
-    )}
-  </>
+      {loading ? (
+        <Loader />
+      ) : (
+        <BrowserRouter>
+          <Layout />
+        </BrowserRouter>
+      )}
+    </>
   );
 }
 

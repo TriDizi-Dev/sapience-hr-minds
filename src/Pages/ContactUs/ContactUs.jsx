@@ -16,9 +16,9 @@ const ContactForm = () => {
     Message: "",
     Sourcepage: "Contact Us",
   });
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -101,16 +101,20 @@ const ContactForm = () => {
 
         <div className="right-accent">
           <div className="social-icons">
-            <FaFacebook onClick={() =>
+            <FaFacebook
+              onClick={() =>
                 handleOpenTab(
                   "https://www.facebook.com/people/Sapience-Minds/61564911584088/"
                 )
-              }/>
-            <FaInstagram onClick={() =>
+              }
+            />
+            <FaInstagram
+              onClick={() =>
                 handleOpenTab(
                   "https://www.instagram.com/sapience_minds?igsh=eHhpYm4ydnhnMGZh"
                 )
-              }/>
+              }
+            />
             <FaLinkedin
               onClick={() =>
                 handleOpenTab(
@@ -129,50 +133,50 @@ const ContactForm = () => {
             Possible
           </p>
           <form onSubmit={handleSubmit} className="from_container-contact-page">
-           <div className="from-sub-container">
-           <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              required
-              id="name"
-              name="Name"
-              value={formData.Name}
-              onChange={handleChange}
-            />
-           </div>
-           <div className="from-sub-container">
-           <label htmlFor="mail">Email</label>
-            <input
-              type="email"
-              required
-              id="mail"
-              name="Email"
-              value={formData.Email}
-              onChange={handleChange}
-            />
-           </div>
-           <div className="from-sub-container">
-           <label htmlFor="mobile">Phone Number</label>
-            <input
-              type="tel"
-              required
-              id="mobile"
-              name="PhoneNumber"
-              value={formData.PhoneNumber}
-              onChange={handleChange}
-            />
-           </div>
-           <div className="from-sub-container">
-           <label htmlFor="message">Message</label>
-            <textarea
-              rows="3"
-              required
-              id="message"
-              name="Message"
-              value={formData.Message}
-              onChange={handleChange}
-            />
-           </div>
+            <div className="from-sub-container">
+              <label htmlFor="name">Name</label>
+              <input
+                type="text"
+                required
+                id="name"
+                name="Name"
+                value={formData.Name}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="from-sub-container">
+              <label htmlFor="mail">Email</label>
+              <input
+                type="email"
+                required
+                id="mail"
+                name="Email"
+                value={formData.Email}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="from-sub-container">
+              <label htmlFor="mobile">Phone Number</label>
+              <input
+                type="tel"
+                required
+                id="mobile"
+                name="PhoneNumber"
+                value={formData.PhoneNumber}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="from-sub-container">
+              <label htmlFor="message">Message</label>
+              <textarea
+                rows="3"
+                required
+                id="message"
+                name="Message"
+                value={formData.Message}
+                onChange={handleChange}
+              />
+            </div>
             <button type="submit">Send</button>
           </form>
         </div>
@@ -186,7 +190,7 @@ const ContactForm = () => {
             <p>+91 9036062378</p> */}
             <p>
               <a href="mailto:reachus@sapienceminds.com">
-              reachus@sapienceminds.com
+                reachus@sapienceminds.com
               </a>
             </p>
             <p>

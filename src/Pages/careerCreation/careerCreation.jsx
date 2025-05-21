@@ -10,7 +10,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const CareerCreation = () => {
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     ShortDiscription: "",
     JobDiscription: null,
@@ -81,8 +81,7 @@ const CareerCreation = () => {
       });
 
       setTimeout(() => {
-        
-        navigate("/managecareers")
+        navigate("/managecareers");
       }, 2000);
       cancelHandler();
     } catch (error) {
@@ -123,18 +122,18 @@ const CareerCreation = () => {
           <div className="career_creation_form_container">
             <div className="input_container">
               {/* <div className="input_container"> */}
-                <label htmlFor="JobTitle" className="career_labels">
-                  Title
-                </label>
-                <input
-                  type="text"
-                  id="JobTitle"
-                  name="JobTitle"
-                  className="career_input"
-                  onChange={formHandlerOnChange}
-                  value={formData.JobTitle}
-                  placeholder="Enter Job Title"
-                />
+              <label htmlFor="JobTitle" className="career_labels">
+                Title
+              </label>
+              <input
+                type="text"
+                id="JobTitle"
+                name="JobTitle"
+                className="career_input"
+                onChange={formHandlerOnChange}
+                value={formData.JobTitle}
+                placeholder="Enter Job Title"
+              />
               {/* </div> */}
 
               <label htmlFor="Type" className="career_labels">

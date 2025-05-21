@@ -52,6 +52,7 @@
   width: 100%;
   font-weight: bold;
 }
+
 .career_input {
   padding: 0.7vw 1vw;
   box-shadow: 0 0.2vw 0.8vw rgba(0, 0, 0, 0.1);
@@ -66,6 +67,7 @@
   outline: none;
   width: 100%;
 }
+
 #Type,
 #Category {
   appearance: none;
@@ -74,10 +76,12 @@
   background-position: right 1vw center;
   background-size: 2vw;
 }
+
 .career_input::placeholder,
 .career_textarea::placeholder {
   font-size: 1vw;
 }
+
 .career_textarea,
 .wrapper-class {
   padding: 0.5vw 1vw;
@@ -116,6 +120,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
 .wrapper-class {
   padding: 5px;
   height: 180px;
@@ -135,6 +140,7 @@
 .editor-class::-webkit-scrollbar {
   display: none;
 }
+
 .editor-class,
 .public-DraftStyleDefault-ltr {
   margin: 0 0 !important;
@@ -146,34 +152,42 @@
     margin-top: 13vw;
     height: fit-content;
   }
+
   .career_details_sub {
     width: 90vw;
   }
+
   .career_creation_form {
     justify-content: center;
   }
+
   .input_container {
     width: 100%;
   }
+
   .career_creation_form_container {
     flex-direction: column;
     row-gap: 1vw;
     width: 90%;
     /* border: 1px solid #ccc; */
   }
+
   .career_labels {
     font-size: 3.5vw;
   }
+
   .career_input,
   .career_textarea {
     font-size: 3.5vw;
     padding: 2vw 3vw;
   }
+
   .create_career_button,
   .cancel_career_button {
     font-size: 3.5vw;
     padding: 1.5vw 4vw;
   }
+
   .wrapper-class {
     height: 200px;
     font-size: 10vw;
@@ -187,6 +201,7 @@
     overflow: scroll;
     font-size: 3vw;
   }
+
   .career_input::placeholder,
   .career_textarea::placeholder {
     font-size: 3vw;

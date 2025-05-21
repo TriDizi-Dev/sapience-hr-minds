@@ -109,10 +109,6 @@ function PrivacyAndTerms({
           <p className="privacy_terms_content_para" data-aos="fade-right">
             {text1}
           </p>
-          {/* <p className="privacy_terms_content_para" data-aos="fade-right">
-            {text2}
-          </p> */}
-
           <h2 className="privacy_terms_content_heading" data-aos="zoom-in">
             {subheading2}
           </h2>
@@ -206,8 +202,6 @@ function PrivacyAndTerms({
               className="privacy_terms_content_para_inner"
             >
               <p>For any privacy-related queries, reach out to us at:</p>
-              {/* <p>Email: reachus@sapienceminds.com</p>
-          <p>Phone: +91 90360 62378</p> */}
               <p>
                 <a href="mailto:reachus@sapienceminds.com">
                   reachus@sapienceminds.com

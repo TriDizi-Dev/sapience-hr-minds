@@ -9,8 +9,7 @@ import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import { ImCross } from "react-icons/im";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
-
+import "react-toastify/dist/ReactToastify.css";
 
 export const HrLearning = ({
   HRLearning,
@@ -28,7 +27,7 @@ export const HrLearning = ({
   Internship3Description,
   applyContent,
   questionDescription,
-  concludescript
+  concludescript,
 }) => {
   const [selectedData, setSelectedData] = useState({});
   const navigate = useNavigate();
@@ -45,7 +44,6 @@ export const HrLearning = ({
     Name: "",
     Email: "",
     PhoneNumber: "",
-
   });
 
   const handleChange = (e) => {
@@ -143,8 +141,6 @@ export const HrLearning = ({
   }, [selectedData]);
   return (
     <>
-    
-
       <Helmet>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
@@ -176,8 +172,12 @@ export const HrLearning = ({
         <p className="Section2_Heading_text" data-aos="fade-right">
           What you learn in {questionTitle}?
         </p>
-        <p className="question_description" data-aos="fade-left">{questionDescription}</p>
-        <p className="question_script" data-aos="fade-right">{concludescript}</p>
+        <p className="question_description" data-aos="fade-left">
+          {questionDescription}
+        </p>
+        <p className="question_script" data-aos="fade-right">
+          {concludescript}
+        </p>
         <div className="Background_Image_Container_1">
           <img src={BackgroundLayer} alt="BackgroundLayer"></img>
         </div>
@@ -317,18 +317,6 @@ export const HrLearning = ({
                   className="Input"
                 />
               </label>
-              {/* <label className="Label">
-                Message:
-                <textarea
-                  type="text"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  className="Input"
-                />
-              </label> */}
-
               <div className="form-buttons">
                 <button type="submit">Submit</button>
                 <button type="button" onClick={handleCloseForm}>

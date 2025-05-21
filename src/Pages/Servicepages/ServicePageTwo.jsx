@@ -20,22 +20,15 @@ export const ServicePageTwo = () => {
         Para1Head="Lorem ipsum dolor"
         Para1Content1={`Every organization is different your goals, people, and challenges deserve more than one-size-fits-all HR solutions. That’s why <strong>Sapience Minds</strong> offers <strong>Customized HR Consulting & Advisory Services</strong> tailored specifically for startups and growing businesses.`}
         Para1Content2={`Led by <strong>Babitha Remith,</strong> a Fractional CHRO with over 23 years in HR leadership across global enterprises, we bring strategic insight and hands-on support to design policies, people strategies, and cultural frameworks that fit your business, not the other way around`}
-        // Para2Head="Lorem ipsum dolor"
         Para2Head2="Key Offerings:"
-        // Para2Content2="Lorem Ipsum is simply dummy text of the printing and typesetting
-        //     industry. Lorem Ipsum has been the industry's standard dummy text
-        //     ever since the 1500s, when an unknown printer took a galley of type
-        //     and scrambled it to make a type specimen book Lorem Ipsum is simply
-        //     dummy text of the printing and typesetting industry."
-        keyofferinglist={["One-on-one consulting sessions on talent acquisition and management","Customized HR solutions for unique business challenges","Advisory support on building scalable HR infrastructures"]}
-        // List1="One-on-one consulting sessions on talent acquisition and management"
-        // List2="Customized HR solutions for unique business challenges"
-        // List3="Advisory support on building scalable HR infrastructures"
-        // List4="Are navigating growth, restructuring, or leadership transitions"
+        keyofferinglist={[
+          "One-on-one consulting sessions on talent acquisition and management",
+          "Customized HR solutions for unique business challenges",
+          "Advisory support on building scalable HR infrastructures",
+        ]}
         Para3Head="Lorem ipsum dolor"
         Para3Content1={`<strong>Client Benefit:</strong>`}
         paracontent3="A trusted partnership for tailored HR support, enabling companies to grow with solid HR foundations."
-        // Para4Content1="We don’t just advise-we become your strategic HR ally, driving sustainable value."
         serviceIcons2="Faster Implementation of New Policies"
         serviceIcons2_text="Hands-on support ensures swift execution of HR initiatives."
         serviceIcons1="Tailored HR Solutions"

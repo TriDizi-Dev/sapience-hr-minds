@@ -123,17 +123,6 @@ export const Service = ({
   const targetGoal = Number(targetGoalData);
   const durationGoal = 2000;
 
-  // const services = [
-  //   { name: service1name, icon: Instagram },
-  //   { name: service2name, icon: Message },
-  //   { name: service3name, icon: Target },
-  //   { name: service4name, icon: Speaker },
-  //   { name: service5name, icon: Cursur },
-  //   { name: service6name, icon: Play },
-  //   { name: service7name, icon: Monitor },
-  //   { name: service8name, icon: image8 },
-  // ];
-
   const services = [
     { name: service1name, icon: Instagram, path: "/hr-compliance" },
     { name: service2name, icon: Message, path: "/hr-consulting" },
@@ -758,16 +747,7 @@ export const Service = ({
         <div className="Service_Cards">
           {filteredServices.map((service, index) => (
             <div
-              className=// {`
-              "Service_Icon_Container"
-              //   ${
-              //   index === 2 ? "marginChnage" : ""
-              // } ${index === 3 ? "Middle_service" : ""} ${
-              //   index === 4 ? "marginChnage second_marginChanges" : ""
-              // } ${index === 5 ? "third_marginChanges" : ""}
-
-              // `}
-
+              className="Service_Icon_Container"
               data-aos="flip-left"
               data-aos-easing="ease-out-cubic"
               data-aos-duration="2000"
@@ -800,18 +780,13 @@ export const Service = ({
           data-aos-duration="1000"
         >
           <p className="Service_last_secound_layer_Head">
-            {/* Transforming Ambition Into Achievement */}
             {parse(policyProtect)}
             {""}
           </p>
           <p className="Service_last_secound_layer_text">
-            {/* Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. */}
             {parse(policyProtextp1)}
           </p>
           <p className="Service_last_secound_layer_text">
-            {/* Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. */}
             {parse(policyProtextp2)}
           </p>
         </div>

@@ -18,16 +18,10 @@ export const ServicePageFive = () => {
         metaDescription="Nurture, grow, and retain your best talent with structured performance, growth, and succession strategies-designed for impact, not just process."
         ServiceHeadName="Talent Management Solutions"
         ServiceHeadContent="Nurture, grow, and retain your best talent with structured performance, growth, and succession strategies-designed for impact, not just process."
-        // Para1Head="Lorem ipsum dolor"
         Para1Content1={`Great organizations aren’t built just by hiring the right people-but by managing, developing, and retaining them effectively. At <strong>Sapience Minds,</strong> our <strong>Talent Management Services</strong> are built around the core belief that your people are your biggest asset-and strategic talent management is key to long-term success.`}
         Para1Content2={`We help startups and SMEs develop frameworks that empower employees, improve performance, and drive business outcomes. Whether you're starting from scratch or evolving an existing system, we bring <strong>Fractional CHRO</strong> leadership to design and deploy effective programs.`}
         Para1Content3={`Our services focus on building personalized development paths, role clarity, leadership capability, and internal mobility. We create data-driven performance systems, competency models, and career frameworks that fuel engagement and accountability.`}
         Para2Head="Key Offerings:"
-        // Para2Content2="Lorem Ipsum is simply dummy text of the printing and typesetting
-        //     industry. Lorem Ipsum has been the industry's standard dummy text
-        //     ever since the 1500s, when an unknown printer took a galley of type
-        //     and scrambled it to make a type specimen book Lorem Ipsum is simply
-        //     dummy text of the printing and typesetting industry."
         keyofferinglist={[
           "Training Needs Analysis (TNA) and skill-gap assessments",
           "Leadership development and managerial training programs",
@@ -71,16 +65,12 @@ export const ServicePageFive = () => {
         img_7={Goal}
         path="talent-management"
         targetData="25"
-        // targetGoalData="24"
-        // targetClientData="100"
         targetClientRatingData="40"
         targetAwardsData="98"
         symbol1="%"
         symbol2="%"
-        // symbol3="%"
-        // symbol4="/"
         symbol5="%"
-                targetSevenData=""
+        targetSevenData=""
       />
     </div>
   );

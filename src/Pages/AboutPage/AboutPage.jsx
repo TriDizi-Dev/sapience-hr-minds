@@ -1,23 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./AboutPage.css";
-// import AboutMain1 from "../../assets/AboutPage/above_top_img.svg";
-// import AboutMain1 from "../../assets/AboutPage/above_top_img.svg";
-// import AboutMain1 from "../../assets/AboutPage/aboutUsHrImage.jpg";
 import AboutMain1 from "../../assets/AboutPage/AboutOur.jpg";
-
 import Orangelayer from "../../assets/AboutPage/orangeshade.svg";
 import Bluelayer from "../../assets/AboutPage/blushade.svg";
-// import Person from "../../assets/AboutPage/personImage.svg";
 import Person from "../../assets/AboutPage/Babitha_png2.png";
-
-// import TringleGroup from "../../assets/AboutPage/TriangleImages.svg";
 import TringleGroup from "../../assets/AboutPage/grp_triangle.svg";
 import TradeMark from "../../assets/AboutPage/trademark.svg";
-// import CircleGroup from "../../assets/AboutPage/CircleGroup.png";
 import CircleGroup from "../../assets/AboutPage/grp_circle.svg";
-// import SquareGroup from "../../assets/AboutPage/SquareGroup.png";
-import SquareGroup from "../../assets/AboutPage/babith_square.svg"
-// import SquareGroup from "../../assets/AboutPage/rectangleimg.svg"
+import SquareGroup from "../../assets/AboutPage/babith_square.svg";
 import plusIcon from "../../assets/AboutPage/Icon.svg";
 import Smallicon1 from "../../assets/AboutPage/Smallicon1.svg";
 import Smallicon2 from "../../assets/AboutPage/Smallicon2.svg";
@@ -275,20 +265,15 @@ export const AboutPage = () => {
   ];
   return (
     <>
-         <Helmet>
-        <title>
-        Sapience Minds-About Our Company
-        </title>
+      <Helmet>
+        <title>Sapience Minds-About Our Company</title>
         <meta
           name="description"
           content="Sapience Minds was founded with a clear mission to help startups and growing businesses establish strong HR foundations without the cost of a full-time CHRO. By offering Fractional CHRO services, we empower companies to access senior HR leadership on-demand, driving strategic decisions in talent acquisition, culture building, compliance, and performance. Our services are agile, scalable, and deeply aligned with each client’s business goals, ensuring people and performance work hand in hand."
         />
 
         {/* Open Graph Meta Tags (for WhatsApp, Facebook, LinkedIn) */}
-        <meta
-          property="og:title"
-          content="About Our Company"
-        />
+        <meta property="og:title" content="About Our Company" />
         <meta
           property="og:description"
           content="Sapience Minds was founded with a clear mission to help startups and growing businesses establish strong HR foundations without the cost of a full-time CHRO. By offering Fractional CHRO services, we empower companies to access senior HR leadership on-demand, driving strategic decisions in talent acquisition, culture building, compliance, and performance. Our services are agile, scalable, and deeply aligned with each client’s business goals, ensuring people and performance work hand in hand."
@@ -302,10 +287,7 @@ export const AboutPage = () => {
 
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="About Our Company"
-        />
+        <meta name="twitter:title" content="About Our Company" />
         <meta
           name="twitter:description"
           content="Sapience Minds was founded with a clear mission to help startups and growing businesses establish strong HR foundations without the cost of a full-time CHRO. By offering Fractional CHRO services, we empower companies to access senior HR leadership on-demand, driving strategic decisions in talent acquisition, culture building, compliance, and performance. Our services are agile, scalable, and deeply aligned with each client’s business goals, ensuring people and performance work hand in hand."
@@ -324,10 +306,24 @@ export const AboutPage = () => {
           </div>
           <div className="Text_Container" data-aos="fade-right">
             <p>
-            Sapience Minds was founded with a clear mission to help startups and growing businesses establish strong HR foundations without the cost of a full-time CHRO. By offering Fractional CHRO services, we empower companies to access senior HR leadership on-demand, driving strategic decisions in talent acquisition, culture building, compliance, and performance. Our services are agile, scalable, and deeply aligned with each client’s business goals, ensuring people and performance work hand in hand.
+              Sapience Minds was founded with a clear mission to help startups
+              and growing businesses establish strong HR foundations without the
+              cost of a full-time CHRO. By offering Fractional CHRO services, we
+              empower companies to access senior HR leadership on-demand,
+              driving strategic decisions in talent acquisition, culture
+              building, compliance, and performance. Our services are agile,
+              scalable, and deeply aligned with each client’s business goals,
+              ensuring people and performance work hand in hand.
             </p>
-            <p> 
-            Backed by over two decades of leadership experience, Sapience Minds delivers end-to-end HR services with precision and purpose. We go beyond traditional consulting by becoming embedded strategic partners offering frameworks, policies, and people solutions that are not only compliant and structured but also future-ready. Whether you're hiring your first employee or scaling a 100-member team, we bring the expertise and vision to help your organization thrive.
+            <p>
+              Backed by over two decades of leadership experience, Sapience
+              Minds delivers end-to-end HR services with precision and purpose.
+              We go beyond traditional consulting by becoming embedded strategic
+              partners offering frameworks, policies, and people solutions that
+              are not only compliant and structured but also future-ready.
+              Whether you're hiring your first employee or scaling a 100-member
+              team, we bring the expertise and vision to help your organization
+              thrive.
             </p>
           </div>
         </div>
@@ -345,14 +341,27 @@ export const AboutPage = () => {
         <div className="About_page_section2">
           <div className="Left_side_container">
             <h1 className="Head_Section2">About Babitha Remith</h1>
-            <p className="babitha_dgnatn">Founder & Director | Fractional CHRO | HR Transformation Expert</p>
+            <p className="babitha_dgnatn">
+              Founder & Director | Fractional CHRO | HR Transformation Expert
+            </p>
 
             <div className="Text_container_layer2">
               <p data-aos="fade-right">
-              With over 23 years of HR leadership experience in the technology sector, Babitha Remith brings deep expertise in building people-first organizations. Having held senior roles in global firms like IBM, Micro Focus, and ESI Group, she has led high-impact initiatives in talent management, performance improvement, and employee engagement.
+                With over 23 years of HR leadership experience in the technology
+                sector, Babitha Remith brings deep expertise in building
+                people-first organizations. Having held senior roles in global
+                firms like IBM, Micro Focus, and ESI Group, she has led
+                high-impact initiatives in talent management, performance
+                improvement, and employee engagement.
               </p>
               <p data-aos="fade-right">
-              A certified Talent Management Professional and Organizational Development expert, Babitha combines strategic thinking with a people-centered mindset. Her passion lies in helping businesses scale smartly with the right HR frameworks. Now, through Sapience Minds, she offers Fractional CHRO leadership to startups and SMBs-ensuring HR isn’t just a function, but a strategic driver of business success.
+                A certified Talent Management Professional and Organizational
+                Development expert, Babitha combines strategic thinking with a
+                people-centered mindset. Her passion lies in helping businesses
+                scale smartly with the right HR frameworks. Now, through
+                Sapience Minds, she offers Fractional CHRO leadership to
+                startups and SMBs-ensuring HR isn’t just a function, but a
+                strategic driver of business success.
               </p>
             </div>
           </div>
@@ -395,7 +404,6 @@ export const AboutPage = () => {
               data-aos="zoom-in"
               data-aos-duration="1000"
             ></img>
-            
           </div>
         </div>
         {/* <p className="babitha_name">Babitha Remith</p> */}
@@ -407,10 +415,14 @@ export const AboutPage = () => {
           Our Core Values
         </p>
         <p className="Section3_Heading2" data-aos="zoom-in">
-        Rooted in Values, Driven by People
+          Rooted in Values, Driven by People
         </p>
         <p className="Section3_Heading_para" data-aos="fade-right">
-        At Sapience Minds, our work is guided by principles that reflect the very heart of Human Resources trust, empathy, impact, and growth. These values shape every solution we provide, ensuring that our clients receive not only expert guidance but also a people-first approach that scales with their vision.
+          At Sapience Minds, our work is guided by principles that reflect the
+          very heart of Human Resources trust, empathy, impact, and growth.
+          These values shape every solution we provide, ensuring that our
+          clients receive not only expert guidance but also a people-first
+          approach that scales with their vision.
         </p>
         <div className="Section3_Container_Icons_Container">
           {Content.map((item, i) => (
@@ -470,7 +482,10 @@ export const AboutPage = () => {
           // data-aos-easing="linear"
           // data-aos-duration="1500"
         >
-         Explore answers to common queries about our HR services, Fractional CHRO solutions, and how Sapience Minds can support your business growth. Whether you're curious about compliance, talent strategies, or customized HR plans we’re here to simplify the complex.
+          Explore answers to common queries about our HR services, Fractional
+          CHRO solutions, and how Sapience Minds can support your business
+          growth. Whether you're curious about compliance, talent strategies, or
+          customized HR plans we’re here to simplify the complex.
         </p>
         <div className="Faq_Container">
           {questions.map((ques, id) => (
@@ -480,18 +495,18 @@ export const AboutPage = () => {
               onClick={() => changebool(ques?.id)}
               data-aos="fade-right"
             >
-              <div className="Content_Questions" >
+              <div className="Content_Questions">
                 <span className="Question">{ques.question}</span>
                 <span className="Icons_class">
                   {showdata && ques.id === clickedid ? (
-                    <IoIosArrowUp className="Icons_class_size"/>
+                    <IoIosArrowUp className="Icons_class_size" />
                   ) : (
-                    <IoIosArrowDown className="Icons_class_size"/>
+                    <IoIosArrowDown className="Icons_class_size" />
                   )}
                 </span>
               </div>
               {showdata && ques.id === clickedid && (
-                <div className="FaqAnswers" >
+                <div className="FaqAnswers">
                   <p>{ques.answer}</p>
                 </div>
               )}
@@ -508,5 +523,5 @@ export const AboutPage = () => {
       </div>
       <ToastContainer />
     </>
-  )
-}
+  );
+};

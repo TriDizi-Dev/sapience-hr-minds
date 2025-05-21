@@ -14,11 +14,6 @@ export const Navbar = () => {
   const [Education, setEducation] = useState(false);
   const location = useLocation();
 
-  // const handleNavList = () => {
-  //   setOpenNavlist(!openNavlist);
-  // };
-
-  
   const handleNavList = () => {
     setOpenNavlist((prev) => !prev);
   };
@@ -650,38 +645,6 @@ export const Navbar = () => {
                 )}
               </li>
 
-              {/* <Link to="/service" className="nav_link">
-                <li
-                  className="mobile_nav_items"
-                  onClick={() => handleNavList("services")}
-                >
-                  Services
-                  <div className="mobile_nav_underline_wrapper">
-                    <div
-                      className={`mobile_nav_underline ${
-                        navActive === "services" ? "active3" : ""
-                      }`}
-                    ></div>
-                  </div>
-                </li>
-              </Link> */}
-
-              {/* <Link to="/hrlearning" className="nav_link">
-                <li
-                  className="mobile_nav_items"
-                  onClick={() => handleNavList("hrlearning")}
-                >
-                  HR Learning
-                  <div className="mobile_nav_underline_wrapper">
-                    <div
-                      className={` ${
-                        navActive === "hrlearning" ? "mobile_nav_underline" : ""
-                      }`}
-                    ></div>
-                  </div>
-                </li>
-              </Link> */}
-
               <Link to="/blogs" className="nav_link">
                 <li
                   className="mobile_nav_items"
@@ -697,21 +660,6 @@ export const Navbar = () => {
                   </div>
                 </li>
               </Link>
-              {/* <Link to="/alliancepartner" className="nav_link">
-                <li
-                  className="mobile_nav_items"
-                  onClick={() => handleNavList("alliance")}
-                >
-                  Alliance Partner
-                  <div className="mobile_nav_underline_wrapper">
-                    <div
-                      className={`mobile_nav_underline ${
-                        navActive === "alliance" ? "active6" : ""
-                      }`}
-                    ></div>
-                  </div>
-                </li>
-              </Link> */}
               <div className="nav_mobile_button_outer">
                 <Link to="/contactus" className="nav_link">
                   <button onClick={() => setOpenNavlist(!openNavlist)}>

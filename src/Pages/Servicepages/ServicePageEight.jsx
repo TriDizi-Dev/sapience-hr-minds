@@ -21,19 +21,7 @@ export const ServicePageEight = () => {
         Para1Head="Lorem ipsum dolor"
         Para1Content1={`An effective <strong> Employee Benfits & Insurance consulting</strong> strategy is more than a checkbox-it’s a signal that you value your people and their well-being. At <strong>Sapience Minds,</strong> we help businesses of all sizes create robust, competitive benefits programs that attract top talent and foster long-term loyalty.`}
         Para1Content2={`From group insurance and wellness initiatives to retirement planning and financial education, we ensure your benefit packages are aligned with employee needs and market trends. Our advisory extends to vendor negotiation, compliance, and communication, so employees understand and utilize their perks fully.`}
-        // Para2Head="Lorem ipsum dolor"
         Para2Head2="Key Offerings:"
-        // Para2Content2="Lorem Ipsum is simply dummy text of the printing and typesetting
-        //     industry. Lorem Ipsum has been the industry's standard dummy text
-        //     ever since the 1500s, when an unknown printer took a galley of type
-        //     and scrambled it to make a type specimen book Lorem Ipsum is simply
-        //     dummy text of the printing and typesetting industry."
-        // List1="Goal setting, performance reviews, and KPI alignment"
-        // List2="Managing Performance Improvement Plans (PIPs) effectively"
-        // List3="Continuous performance feedback loops"
-        // List4="Employee education and communication"
-        // List5="Wellness and work-life integration programs"
-        // Para2Head21=""
         Para2Head21="1. Employee Benefits Strategy & Planning"
         Para2Head211="We work closely with HR teams and business leaders to develop a tailored, data-driven benefits strategy aligned with your business goals and workforce needs."
         keyofferinglist={[

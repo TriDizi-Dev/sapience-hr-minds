@@ -32,12 +32,6 @@ export const ServicePageFour = () => {
           "Strategic sourcing using modern platforms and professional networks",
           "Employer branding initiatives to enhance visibility among top talent",
         ]}
-        // List1="Training Needs Analysis (TNA) and skill-gap assessments"
-        // List2="Leadership development and managerial training programs"
-        // List3="Comprehensive onboarding and orientation for seamless employee integration"
-        // List4="High-growth and agile teams"
-        // List5="Inclusive, diverse, and values-aligned hiring"
-        // Para3Head="Lorem ipsum dolor"
         Para3Content1={`<strong>Client Benefit:</strong>`}
         paracontent3="Clients build a capable workforce that continuously adapts to industry demands and develops in alignment with business goals."
         serviceIcons2="Employer Branding Support"
@@ -70,16 +64,12 @@ export const ServicePageFour = () => {
         img_7={Goal}
         path="talent-acquisition-solutions"
         targetData="80"
-        // targetGoalData="24"
-        // targetClientData="100"
         targetClientRatingData="90"
         targetAwardsData="100"
         symbol1="%"
         symbol2="%"
-        // symbol3="%"
-        // symbol4="/"
         symbol5="%"
-                targetSevenData=""
+        targetSevenData=""
       />
     </div>
   );
