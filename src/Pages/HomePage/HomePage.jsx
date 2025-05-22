@@ -6,10 +6,6 @@ import dots from "../../assets/HomePage/homedots.svg";
 import leftvector from "../../assets/HomePage/leftvector.svg";
 import rightvector from "../../assets/HomePage/rightvector.svg";
 import { FaPeopleGroup } from "react-icons/fa6";
-import dummylogo from "../../assets/HomePage/logo_1_1.svg";
-import dummylogo_2 from "../../assets/HomePage/logo_2_2.png";
-import dummylogo_3 from "../../assets/HomePage/logo_3_3.png";
-import dummylogo_4 from "../../assets/HomePage/logo_4_4.png";
 import layer4 from "../../assets/HomePage/home_img.svg";
 import Smallicon1 from "../../assets/AboutPage/Smallicon1.svg";
 import Smallicon2 from "../../assets/AboutPage/icon_3.svg";
@@ -61,7 +57,7 @@ import client6 from "../../assets/HomePage/image6.png";
 import client7 from "../../assets/HomePage/image7.png";
 
 // import client8 from "../../assets/HomePage/image8.png"
-import client8 from "../../assets/HomePage/image8-removebg.png";
+import client8 from "../../assets/HomePage/image8-removebg.webp";
 
 // import client9 from "../../assets/HomePage/image9.png"
 // import client9 from "../../assets/HomePage/image9-removebg.png"
@@ -76,23 +72,23 @@ import client12 from "../../assets/HomePage/image12.webp";
 // import client13 from "../../assets/HomePage/image13-removebg.png"
 
 import client14 from "../../assets/HomePage/image14.webp";
-import client15 from "../../assets/HomePage/image15.png";
+import client15 from "../../assets/HomePage/image15.webp";
 // import client16 from "../../assets/HomePage/image16.png"
 // import client17 from "../../assets/HomePage/image17.png"
 import client17 from "../../assets/HomePage/image17-removebg.png";
 
-import client18 from "../../assets/HomePage/image18.png";
+import client18 from "../../assets/HomePage/image18.webp";
 // import client19 from "../../assets/HomePage/image19.jpg"
-import client19 from "../../assets/HomePage/image19-removebg.png";
+import client19 from "../../assets/HomePage/image19-removebg.webp";
 
-import client20 from "../../assets/HomePage/image20.png";
-import client21 from "../../assets/HomePage/image21.png";
+import client20 from "../../assets/HomePage/image20.webp";
+import client21 from "../../assets/HomePage/image21.webp";
 import client22 from "../../assets/HomePage/image22.png";
 // import client23 from "../../assets/HomePage/image23.png"
-import client23 from "../../assets/HomePage/image23-removebg.png";
+import client23 from "../../assets/HomePage/image23-removebg.webp";
 
 import client24 from "../../assets/HomePage/image24.png";
-import client25 from "../../assets/HomePage/image25.png";
+import client25 from "../../assets/HomePage/image25.webp";
 import { MdOutlinePlayCircleFilled } from "react-icons/md";
 
 export const HomePage = () => {
