@@ -21,13 +21,13 @@ import { PreFooter } from "../../Components/PreFooter/PreFooter";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 
-import man_1 from "../../assets/HomePage/Testimony_1.png";
-import man_2 from "../../assets/HomePage/man_2.png";
-import man_3 from "../../assets/HomePage/man_3.png";
-import man_4 from "../../assets/HomePage/man_4.png";
-import man_5 from "../../assets/HomePage/man_5.png";
-import man_6 from "../../assets/HomePage/man_6.png";
-import woman_1 from "../../assets/HomePage/woman_1.png";
+import man_1 from "../../assets/HomePage/Testimony_1.webp";
+import man_2 from "../../assets/HomePage/man_2.webp";
+import man_3 from "../../assets/HomePage/man_3.webp";
+import man_4 from "../../assets/HomePage/man_4.webp";
+import man_5 from "../../assets/HomePage/man_5.webp";
+import man_6 from "../../assets/HomePage/man_6.webp";
+import woman_1 from "../../assets/HomePage/woman_1.webp";
 import icon_1 from "../../assets/AboutPage/icon_1.svg";
 import icon_2 from "../../assets/AboutPage/icon_2.svg";
 

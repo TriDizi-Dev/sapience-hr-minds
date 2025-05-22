@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./HomePage.css";
 // import homeimg from "../../assets/HomePage/homeimg.svg";
-import homeimg from "../../assets/HomePage/Babitha_png.png";
+import homeimg from "../../assets/HomePage/Babitha_png.webp";
 import dots from "../../assets/HomePage/homedots.svg";
 import leftvector from "../../assets/HomePage/leftvector.svg";
 import rightvector from "../../assets/HomePage/rightvector.svg";
@@ -26,13 +26,13 @@ import bg2 from "../../assets/HomePage/bg2.svg";
 // import homevideo from "../../assets/HomePage/hmv.mp4";
 
 import homevideo from "../../assets/HomePage/Video.mp4";
-import man from "../../assets/HomePage/Testimony_1.png";
-import man_2 from "../../assets/HomePage/man_2.png";
-import man_3 from "../../assets/HomePage/man_3.png";
-import man_4 from "../../assets/HomePage/man_4.png";
-import man_5 from "../../assets/HomePage/man_5.png";
-import man_6 from "../../assets/HomePage/man_6.png";
-import woman_1 from "../../assets/HomePage/woman_1.png";
+import man from "../../assets/HomePage/Testimony_1.webp";
+import man_2 from "../../assets/HomePage/man_2.webp";
+import man_3 from "../../assets/HomePage/man_3.webp";
+import man_4 from "../../assets/HomePage/man_4.webp";
+import man_5 from "../../assets/HomePage/man_5.webp";
+import man_6 from "../../assets/HomePage/man_6.webp";
+import woman_1 from "../../assets/HomePage/woman_1.webp";
 import { PreFooter } from "../../Components/PreFooter/PreFooter";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { SwiperSlide, Swiper } from "swiper/react";
@@ -55,7 +55,7 @@ import client2 from "../../assets/HomePage/image2.png";
 import client4 from "../../assets/HomePage/image4-removebg.png";
 
 // import client5 from "../../assets/HomePage/image5.png"
-import client5 from "../../assets/HomePage/image5-removebg.png";
+import client5 from "../../assets/HomePage/image5-removebg.webp";
 
 import client6 from "../../assets/HomePage/image6.png";
 import client7 from "../../assets/HomePage/image7.png";
@@ -65,17 +65,17 @@ import client8 from "../../assets/HomePage/image8-removebg.png";
 
 // import client9 from "../../assets/HomePage/image9.png"
 // import client9 from "../../assets/HomePage/image9-removebg.png"
-import client9 from "../../assets/HomePage/groupJG-removebg.png";
+import client9 from "../../assets/HomePage/groupJG-removebg.webp";
 
-import client26 from "../../assets/HomePage/cfhash-removebg.png";
+import client26 from "../../assets/HomePage/cfhash-removebg.webp";
 
 import client10 from "../../assets/HomePage/image10.png";
 import client11 from "../../assets/HomePage/image11.png";
-import client12 from "../../assets/HomePage/image12.png";
+import client12 from "../../assets/HomePage/image12.webp";
 // import client13 from "../../assets/HomePage/image13.png"
 // import client13 from "../../assets/HomePage/image13-removebg.png"
 
-import client14 from "../../assets/HomePage/image14.png";
+import client14 from "../../assets/HomePage/image14.webp";
 import client15 from "../../assets/HomePage/image15.png";
 // import client16 from "../../assets/HomePage/image16.png"
 // import client17 from "../../assets/HomePage/image17.png"
