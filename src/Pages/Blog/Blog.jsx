@@ -14,7 +14,6 @@ import { useNavigate } from "react-router-dom";
 import icon_1 from "../../assets/AboutPage/icon_1.svg";
 import icon_2 from "../../assets/AboutPage/icon_2.svg";
 
-
 import Smallicon1 from "../../assets/AboutPage/Smallicon1.svg";
 import Smallicon2 from "../../assets/AboutPage/Smallicon2.svg";
 import { database, ref, get } from "../../Firebase/firebase";
@@ -155,18 +154,12 @@ function Blog() {
         const snapshot = await get(blogRef);
         if (snapshot.exists()) {
           const data = snapshot.val();
-          console.log("Data fetched from Firebase:", data);
-
           const blogList = Object.keys(data).map((key) => ({
             id: key,
             ...data[key],
             imageUrl: data[key].image_url || "", // Don't use ref() here!
           }));
-
-          console.log("Parsed blog list:", blogList);
           setBlogs(blogList);
-        } else {
-          console.log("No blog data found.");
         }
       } catch (error) {
         console.error("Error fetching blog data:", error);
@@ -180,9 +173,6 @@ function Blog() {
     const date = new Date(isoDateString);
     return date.toLocaleDateString("en-GB"); // Formats to dd/mm/yyyy
   };
-
-  console.log(Blogs, "BlogsBlogs");
-
   const handleSignleBlog = (ev, id) => {
     const cleanPath = id.replaceAll(" ", "-");
     navigate(`/blog/${cleanPath}`, { state: ev });
@@ -192,8 +182,8 @@ function Blog() {
     <div className="blog_page_main_outer">
       <Helmet>
         <title>
-        Sapience Minds-The Importance of Workforce Upskilling and Reskilling in Today’s
-          Economy
+          Sapience Minds-The Importance of Workforce Upskilling and Reskilling
+          in Today’s Economy
         </title>
         <meta
           name="description"
@@ -269,10 +259,15 @@ function Blog() {
             <div className="homepage_layer4_left">
               <p className="homepage_layer4_heading">Our Core Values</p>
               <h1 className="homepage_layer4_heading2">
-              Guided by Purpose, Driven by People
+                Guided by Purpose, Driven by People
               </h1>
               <p className="homepage_layer4_para">
-              At Sapience Minds, our values are the foundation of every partnership. We believe in integrity, collaboration, and a relentless commitment to empowering startups with people-first HR strategies that deliver real impact. Our approach is empathetic, strategic, and always aligned with your business goals.
+                At Sapience Minds, our values are the foundation of every
+                partnership. We believe in integrity, collaboration, and a
+                relentless commitment to empowering startups with people-first
+                HR strategies that deliver real impact. Our approach is
+                empathetic, strategic, and always aligned with your business
+                goals.
               </p>
 
               <div className="homepage_layer4_cards_outer">
@@ -286,7 +281,9 @@ function Blog() {
                   </div>
                   <p className="layer4_card_heading">Our Vision</p>
                   <p className="layer4_card_para">
-                  To be the most trusted HR partner for startups and emerging businesses, enabling sustainable growth through strategic people practices.
+                    To be the most trusted HR partner for startups and emerging
+                    businesses, enabling sustainable growth through strategic
+                    people practices.
                   </p>
                 </div>
                 <div className="homepage_layer4_card">
@@ -299,7 +296,9 @@ function Blog() {
                   </div>
                   <p className="layer4_card_heading">Our Mission</p>
                   <p className="layer4_card_para">
-                  To deliver flexible, executive-level HR solutions that empower founders, nurture culture, and scale teams, one smart decision at a time.
+                    To deliver flexible, executive-level HR solutions that
+                    empower founders, nurture culture, and scale teams, one
+                    smart decision at a time.
                   </p>
                 </div>
               </div>

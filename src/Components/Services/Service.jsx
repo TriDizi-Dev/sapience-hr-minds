@@ -178,7 +178,6 @@ export const Service = ({
         method: "POST",
         body: formPayload, // No 'Content-Type' header for FormData
       });
-      console.log(response, "resssssss");
 
       if (response.ok) {
         // alert("Form submitted successfully!");

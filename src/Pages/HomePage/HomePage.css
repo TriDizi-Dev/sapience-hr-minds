@@ -56,7 +56,7 @@
   height: 3.5vw;
   /* background-color: #7c5cfc; */
   background-color: #ffa59a;
-  color: #fff;
+  color: #ffffff;
   font-size: 1.2vw;
   font-weight: 600;
   border: none;
@@ -920,7 +920,7 @@
   /* background-color: #7c5cfc; */
   background-color: #ffa59a;
   border-radius: 4vw;
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -1186,7 +1186,7 @@
   /* background-color: #7c5cfc; */
   background-color: #ffa59a;
   border-radius: 4vw;
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
 }
 

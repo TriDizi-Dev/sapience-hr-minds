@@ -97,8 +97,6 @@ export const HomePage = () => {
   const [singleTestimonial, setSingleTestimonial] = useState(null);
   const swiperRef = useRef(null);
   const [Blogs, setBlogs] = useState([]);
-  console.log(Blogs, "BlogsBlogs");
-
   useEffect(() => {
     AOS.init({
       offset: 200,
@@ -288,15 +286,10 @@ export const HomePage = () => {
       for (let key in formData) {
         formPayload.append(key, formData[key]);
       }
-
-      console.log(formPayload, "formPayloadformPayload");
-
       const response = await fetch(scriptURL, {
         method: "POST",
         body: formPayload, // No 'Content-Type' header for FormData
       });
-      console.log(response, "resssssss");
-
       if (response.ok) {
         // alert("Form submitted successfully!");
         toast.success("Form submitted successfully!", {
@@ -370,18 +363,12 @@ export const HomePage = () => {
         const snapshot = await get(blogRef);
         if (snapshot.exists()) {
           const data = snapshot.val();
-          console.log("Data fetched from Firebase:", data);
-
           const blogList = Object.keys(data).map((key) => ({
             id: key,
             ...data[key],
             imageUrl: data[key].image_url || "", // Don't use ref() here!
           }));
-
-          console.log("Parsed blog list:", blogList);
           setBlogs(blogList);
-        } else {
-          console.log("No blog data found.");
         }
       } catch (error) {
         console.error("Error fetching blog data:", error);
@@ -658,9 +645,9 @@ export const HomePage = () => {
       <div className="homepage_layer3_outer_main">
         <div className="homepage_layer3_outer">
           <div className="homepage_layer3_part1">
-            <h6 className="layer3_part1_heading" data-aos="fade-left">
+            <p className="layer3_part1_heading" data-aos="fade-left">
               About Me
-            </h6>
+            </p>
             <p className="layer3_part1_heading2" data-aos="zoom-in">
               Meet Babitha – Your Fractional CHRO and Growth Enabler
             </p>
@@ -675,10 +662,10 @@ export const HomePage = () => {
           <div className="homepage_layer3_part2">
             {!isPlaying && (
               <div className="video_overlay">
-                <button className="play_button" onClick={handlePlay}>
+                <p className="play_button" onClick={handlePlay}>
                   {/* ▶ Play Video */}
                   <MdOutlinePlayCircleFilled />
-                </button>
+                </p>
               </div>
             )}
             <video

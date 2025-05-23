@@ -97,13 +97,10 @@ export const PreFooter = ({
         formPayload.append(key, formData[key]);
       }
 
-      console.log(formPayload, "formPayloadformPayload");
-
       const response = await fetch(scriptURL, {
         method: "POST",
         body: formPayload, // No 'Content-Type' header for FormData
       });
-      // console.log(response, "resssssss");
 
       if (response.ok) {
         toast.success("Form submitted successfully!", {

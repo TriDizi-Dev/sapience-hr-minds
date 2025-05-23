@@ -46,7 +46,6 @@ import "react-toastify/dist/ReactToastify.css";
 function Carrier() {
   const navigate = useNavigate();
   const [careers, setCareers] = useState([]);
-  console.log(careers, "careerscareers");
   const [Blogs, setBlogs] = useState([]);
 
   useEffect(() => {
@@ -57,18 +56,12 @@ function Carrier() {
         const snapshot = await get(blogRef);
         if (snapshot.exists()) {
           const data = snapshot.val();
-          console.log("Data fetched from Firebase:", data);
-
           const blogList = Object.keys(data).map((key) => ({
             id: key,
             ...data[key],
             imageUrl: data[key].image_url || "", // Don't use ref() here!
           }));
-
-          console.log("Parsed blog list:", blogList);
           setBlogs(blogList);
-        } else {
-          console.log("No blog data found.");
         }
       } catch (error) {
         console.error("Error fetching blog data:", error);
@@ -90,8 +83,6 @@ function Carrier() {
             ...data[key],
           }));
           setCareers(careerList); // Set the state with fetched data
-        } else {
-          console.log("No data available");
         }
       } catch (error) {
         console.error("Error fetching data: ", error);
@@ -258,14 +249,10 @@ function Carrier() {
       for (let key in formData) {
         formPayload.append(key, formData[key]);
       }
-
-      console.log(formPayload, "formPayloadformPayload");
-
       const response = await fetch(scriptURL, {
         method: "POST",
         body: formPayload,
       });
-      console.log(response, "resssssss");
       if (response.ok) {
         toast.success("Form submitted successfully!", {
           position: "top-right",
@@ -275,7 +262,6 @@ function Carrier() {
           pauseOnHover: true,
           draggable: true,
         });
-        console.log("submited succes", response);
         setFormData({
           Name: "",
           Email: "",

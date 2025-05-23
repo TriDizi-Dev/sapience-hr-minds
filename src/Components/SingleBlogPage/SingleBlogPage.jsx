@@ -33,7 +33,6 @@ function SingleBlogPage() {
     window.scrollTo(0, 0);
   }, []);
 
-  console.log(data, "data");
 
   const formatDate = (isoString) => {
     const date = new Date(isoString);
@@ -51,8 +50,6 @@ function SingleBlogPage() {
 
           // Remove inline styles by excluding them from attribs
           const filteredAttribs = { ...attribs };
-          console.log(filteredAttribs, "filteredAttribsfilteredAttribs");
-
           delete filteredAttribs.style;
 
           if (name === "p") {
@@ -104,18 +101,12 @@ function SingleBlogPage() {
         const snapshot = await get(blogRef);
         if (snapshot.exists()) {
           const data = snapshot.val();
-          console.log("Data fetched from Firebase:", data);
-
           const blogList = Object.keys(data).map((key) => ({
             id: key,
             ...data[key],
             imageUrl: data[key].image_url || "", // Don't use ref() here!
           }));
-
-          console.log("Parsed blog list:", blogList);
           setBlogsData(blogList);
-        } else {
-          console.log("No blog data found.");
         }
       } catch (error) {
         console.error("Error fetching blog data:", error);
@@ -125,7 +116,6 @@ function SingleBlogPage() {
     fetchBlogs();
   }, []);
 
-  console.log(data, "BlogsDataBlogsData");
   const DateFormate = (isoDateString) => {
     if (!isoDateString) return "";
     const date = new Date(isoDateString);

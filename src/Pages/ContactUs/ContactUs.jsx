@@ -39,15 +39,10 @@ const ContactForm = () => {
       for (let key in formData) {
         formPayload.append(key, formData[key]);
       }
-
-      console.log(formPayload, "formPayloadformPayload");
-
       const response = await fetch(scriptURL, {
         method: "POST",
         body: formPayload, // No 'Content-Type' header for FormData
       });
-      console.log(response, "resssssss");
-
       if (response.ok) {
         // alert("Form submitted successfully!");
         toast.success("Form submitted successfully!", {
@@ -58,7 +53,6 @@ const ContactForm = () => {
           pauseOnHover: true,
           draggable: true,
         });
-        console.log("submited succes", response);
         setFormData({
           Name: "",
           Email: "",

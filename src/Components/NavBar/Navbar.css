@@ -67,6 +67,7 @@
 .nav_link {
     text-decoration: none;
     color: inherit;
+    margin-top: .2vw;
 }
 
 .nav_underline.active1 {
@@ -116,7 +117,7 @@
     border-radius: 0.6vw;
     background-color: #ffa59a;
     /* background-color: #FFA59A; */
-    color: #ffff;
+    color: #ffffff;
     cursor: pointer;
 
 }

@@ -24,8 +24,6 @@ const SmallCard = () => {
             ...data[key],
           }));
           setCareers(careerList);
-        } else {
-          console.log("No data available");
         }
       } catch (error) {
         console.error("Error fetching data: ", error);

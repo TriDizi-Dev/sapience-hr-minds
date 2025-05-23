@@ -41,83 +41,83 @@ export const Footer = () => {
             <div className="services_outer">
               <h4 className="services_headeing">StartUp Consulting</h4>
               <Link to="/hr-compliance" className="nav_link">
-                <li className="footer_services_items">
+                <p className="footer_services_items">
                   HR Compliance and Policy Development
-                </li>
+                </p>
               </Link>
               <Link to="/hr-consulting" className="nav_link">
-                <li className="footer_services_items">
+                <p className="footer_services_items">
                   Customized HR Consulting and Advisory Services
-                </li>
+                </p>
               </Link>
               <Link to="/virtual-chro-and-outsourcing" className="nav_link">
-                <li className="footer_services_items">
+                <p className="footer_services_items">
                   Virtual CHRO and Outsourcing of HR Operations
-                </li>
+                </p>
               </Link>
             </div>
 
             <div className="services_outer">
               <h4 className="services_headeing">Talent Management</h4>
               <Link to="/talent-acquisition-solutions" className="nav_link">
-                <li className="footer_services_items">
+                <p className="footer_services_items">
                   Talent Acquisition Solutions
-                </li>
+                </p>
               </Link>
               <Link to="/talent-management" className="nav_link">
-                <li className="footer_services_items">
+                <p className="footer_services_items">
                   Talent Management Solutions
-                </li>
+                </p>
               </Link>
               <Link to="/talent-engagement" className="nav_link">
-                <li className="footer_services_items">
+                <p className="footer_services_items">
                   Talent Engagement & Retention
-                </li>
+                </p>
               </Link>
               <Link to="/recruitment-of-leadership" className="nav_link">
-                <li className="footer_services_items">
+                <p className="footer_services_items">
                   Recruitment of Leadership & Mid-Level Team
-                </li>
+                </p>
               </Link>
               <Link
                 to="/employee-benfits-and-insurance-consulting"
                 className="nav_link"
               >
-                <li className="footer_services_items">
+                <p className="footer_services_items">
                   Employee Benfits & Insurance consulting
-                </li>
+                </p>
               </Link>
             </div>
 
             <div className="services_outer">
               <h4 className="services_headeing">Education & Learning</h4>
               <Link to="/alliance-partner" className="nav_link">
-                <li className="footer_services_items">Alliance-Partner</li>
+                <p className="footer_services_items">Alliance-Partner</p>
               </Link>
               <Link to="/internship-hr-learning" className="nav_link">
-                <li className="footer_services_items">Internships</li>
+                <p className="footer_services_items">Internships</p>
               </Link>
               <Link to="/workshop-hr-learning" className="nav_link">
-                <li className="footer_services_items">Workshops</li>
+                <p className="footer_services_items">Workshops</p>
               </Link>
               <Link to="/webinar-hr-learning" className="nav_link">
-                <li className="footer_services_items">Webinars</li>
+                <p className="footer_services_items">Webinars</p>
               </Link>
             </div>
 
             <div className="services_outer">
               <h4 className="services_headeing">Company</h4>
               <Link to="/contactus" className="nav_link">
-                <li className="footer_services_items">Contact Us </li>
+                <p className="footer_services_items">Contact Us </p>
               </Link>
               <Link to="/about" className="nav_link">
-                <li className="footer_services_items">About Us </li>
+                <p className="footer_services_items">About Us </p>
               </Link>
               <Link to="/careers" className="nav_link">
-                <li className="footer_services_items">Careers</li>
+                <p className="footer_services_items">Careers</p>
               </Link>
               <Link to="/blogs" className="nav_link">
-                <li className="footer_services_items">Blogs</li>
+                <p className="footer_services_items">Blogs</p>
               </Link>
             </div>
           </div>

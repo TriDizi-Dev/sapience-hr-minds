@@ -31,8 +31,6 @@ export const Manageblogs = () => {
             imageUrl: data[key].image_url || "",
           }));
           setBlogs(blogList);
-        } else {
-          console.log("No blog data found.");
         }
       } catch (error) {
         console.error("Error fetching blog data:", error);
