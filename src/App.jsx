@@ -35,19 +35,31 @@ import CareerUpdate from "./Pages/careerCreation/updationCareerpage";
 import SmallCard from "./Components/managingCareers/managingCareers";
 import { useEffect, useState } from "react";
 import Loader from "./Components/Loader/Loader";
+import NotFound from "./Pages/NotFoundPage/NotFound";
 
 function Layout() {
   const location = useLocation();
-  const hideFooter =
-    location.pathname === "/blog-creation" ||
-    location.pathname === "/career-creation" ||
-    location.pathname === "/career-update";
+
+
+    const hideLayoutRoutes = ["/blog-creation", "/career-creation", "/career-update","blog-updation"];
+const isNotFound = ![
+  "/", "/about", "/alliance-partner", "/contactus", "/careers", "/service",
+  "/internship-hr-learning", "/workshop-hr-learning", "/webinar-hr-learning",
+  "/privacy", "/privacypolicy", "/termsandconditions", "/blogs", "/manageblogs",
+  "/blog-updation", "/managecareers", "/blog/:id", "/career-update",
+  "/hr-compliance", "/hr-consulting", "/virtual-chro-and-outsourcing",
+  "/talent-acquisition-solutions", "/talent-management", "/talent-engagement",
+  "/recruitment-of-leadership", "/employee-benfits-and-insurance-consulting"
+].includes(location.pathname);
+
+const hideFooter = hideLayoutRoutes.includes(location.pathname) || isNotFound;
 
   return (
     <>
       <HelmetProvider>
-        <Navbar />
+        {!hideFooter && <Navbar />}
         <Routes>
+          <Route path="*" element={<NotFound />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/alliance-partner" element={<AlliancePartner />} />
