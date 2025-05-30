@@ -33,7 +33,6 @@ function SingleBlogPage() {
     window.scrollTo(0, 0);
   }, []);
 
-
   const formatDate = (isoString) => {
     const date = new Date(isoString);
     return date.toLocaleDateString("en-US", {
@@ -48,7 +47,7 @@ function SingleBlogPage() {
         if (domNode.type === "tag") {
           const { name, children, attribs } = domNode;
 
-          // Remove inline styles by excluding them from attribs
+          // Remove inline styles by excluding them from attribssingle_blog_content_para aos-init aos-animate
           const filteredAttribs = { ...attribs };
           delete filteredAttribs.style;
 
@@ -64,7 +63,7 @@ function SingleBlogPage() {
             );
           }
 
-          if (name === "strong") {
+          if (name === "strong" || /^h[1-6]$/.test(name)) {
             return (
               <span
                 {...filteredAttribs}
