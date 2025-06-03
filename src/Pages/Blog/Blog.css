@@ -3,8 +3,9 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 4vw;
-  margin-top: 9vw;
+  margin-top: 5vw;
   width: 100%;
+  margin-bottom: 3vw;
   /* border: 1px solid red; */
 }
 
@@ -44,7 +45,8 @@
 }
 
 .blog_card:hover {
-  transform: scale(1.05); /* scale(2) is too big */
+  transform: scale(1.05);
+  /* scale(2) is too big */
   cursor: pointer;
   box-shadow: 0 1.5vw 2vw rgba(0, 0, 0, 0.2);
 }
@@ -76,7 +78,8 @@
   font-size: 0.95vw;
   text-align: left;
 }
-.blog_card_img_text::-webkit-scrollbar{
+
+.blog_card_img_text::-webkit-scrollbar {
   display: none;
 }
 
@@ -98,7 +101,7 @@
   /* padding-right: 2vw; */
   margin-top: 1.5vw;
   width: 95%;
-    /* color:rgb(58, 80, 121); */
+  /* color:rgb(58, 80, 121); */
 
 }
 

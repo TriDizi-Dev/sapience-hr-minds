@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, matchPath } from "react-router-dom";
 import "./App.css";
 import { HomePage } from "./Pages/HomePage/HomePage";
 import { AboutPage } from "./Pages/AboutPage/AboutPage";
@@ -40,20 +40,49 @@ import NotFound from "./Pages/NotFoundPage/NotFound";
 function Layout() {
   const location = useLocation();
 
+  const hideLayoutRoutes = [
+    "/blog-creation",
+    "/career-creation",
+    "/career-update",
+    "/blog-updation",
+    "managecareers",
+    "manageblogs",
+  ];
 
-    const hideLayoutRoutes = ["/blog-creation", "/career-creation", "/career-update","blog-updation"];
-const isNotFound = ![
-  "/", "/about", "/alliance-partner", "/contactus", "/careers", "/service",
-  "/internship-hr-learning", "/workshop-hr-learning", "/webinar-hr-learning",
-  "/privacy", "/privacypolicy", "/termsandconditions", "/blogs", "/manageblogs",
-  "/blog-updation", "/managecareers", "/blog/:id", "/career-update",
-  "/hr-compliance", "/hr-consulting", "/virtual-chro-and-outsourcing",
-  "/talent-acquisition-solutions", "/talent-management", "/talent-engagement",
-  "/recruitment-of-leadership", "/employee-benfits-and-insurance-consulting"
-].includes(location.pathname);
+  // This will be truthy if the current path matches /blog/:title
+  const isBlogDetail = matchPath("/blog/:title", location.pathname);
 
-const hideFooter = hideLayoutRoutes.includes(location.pathname) || isNotFound;
+  // Define all paths that should show layout (Navbar + Footer)
+  const showLayoutPaths = [
+    "/",
+    "/about",
+    "/alliance-partner",
+    "/contactus",
+    "/careers",
+    "/service",
+    "/internship-hr-learning",
+    "/workshop-hr-learning",
+    "/webinar-hr-learning",
+    "/privacy",
+    "/privacypolicy",
+    "/termsandconditions",
+    "/blogs",
+    "/hr-compliance",
+    "/hr-consulting",
+    "/virtual-chro-and-outsourcing",
+    "/talent-acquisition-solutions",
+    "/talent-management",
+    "/talent-engagement",
+    "/recruitment-of-leadership",
+    "/employee-benfits-and-insurance-consulting",
+  ];
 
+  // Check if current route is NOT in the allowed list AND doesn't match /blog/:title
+  const isNotFound =
+    !showLayoutPaths.includes(location.pathname) && !isBlogDetail;
+
+  // Hide Navbar/Footer only on specific routes or if it's a not-found page
+  const hideFooter = hideLayoutRoutes.includes(location.pathname) || isNotFound;
   return (
     <>
       <HelmetProvider>
@@ -107,7 +136,7 @@ const hideFooter = hideLayoutRoutes.includes(location.pathname) || isNotFound;
             path="/employee-benfits-and-insurance-consulting"
             element={<ServicePageEight />}
           ></Route>
-          <Route path="/blog/:id" element={<SingleBlogPage />}></Route>
+          <Route path="/blog/:title" element={<SingleBlogPage />}></Route>
           <Route path="/blog-creation" element={<CreateBlog />}></Route>
           <Route path="/career-creation" element={<CareerCreation />}></Route>
           <Route path="/manageblogs" element={<Manageblogs />}></Route>

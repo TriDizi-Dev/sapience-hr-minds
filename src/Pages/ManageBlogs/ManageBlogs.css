@@ -47,7 +47,8 @@
 }
 @media screen and (min-width: 320px) and (max-width: 720px) {
     .blog_page_layer1{
-        margin-top: 23vw;
+        margin-top: 10vw;
+        margin-bottom: 3vw;
     }
     .CreateBlogPage{
         border: 1px solid;
