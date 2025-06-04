@@ -36,6 +36,7 @@
 
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, set, push, get, remove, update  } from "firebase/database";
+import { getAuth } from "firebase/auth";
 import {
   getStorage,
   ref as storageRef,
@@ -69,10 +70,12 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const storage = getStorage(app);
+const auth = getAuth(app);
 
 export {
   database,
   storage,
+  auth,
   ref,
   set,
   push,
@@ -82,4 +85,5 @@ export {
   storageRef,
   uploadBytes,
   getDownloadURL,
+  
 };

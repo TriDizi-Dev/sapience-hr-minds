@@ -36,6 +36,9 @@ import SmallCard from "./Components/managingCareers/managingCareers";
 import { useEffect, useState } from "react";
 import Loader from "./Components/Loader/Loader";
 import NotFound from "./Pages/NotFoundPage/NotFound";
+import LoginPage from "./Components/LogInPage/LogIn";
+import Dashboard from "./Components/Dashboard/Dashboard";
+import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute";
 
 function Layout() {
   const location = useLocation();
@@ -45,8 +48,10 @@ function Layout() {
     "/career-creation",
     "/career-update",
     "/blog-updation",
-    "managecareers",
-    "manageblogs",
+    "/managecareers",
+    "/manageblogs",
+    "/login",
+    "/dashboard",
   ];
 
   // This will be truthy if the current path matches /blog/:title
@@ -137,12 +142,63 @@ function Layout() {
             element={<ServicePageEight />}
           ></Route>
           <Route path="/blog/:title" element={<SingleBlogPage />}></Route>
-          <Route path="/blog-creation" element={<CreateBlog />}></Route>
-          <Route path="/career-creation" element={<CareerCreation />}></Route>
-          <Route path="/manageblogs" element={<Manageblogs />}></Route>
-          <Route path="/blog-updation" element={<UpdateBlog />}></Route>
-          <Route path="/career-update" element={<CareerUpdate />} />
-          <Route path="/managecareers" element={<SmallCard />} />
+          <Route
+            path="/blog-creation"
+            element={
+              <ProtectedRoute>
+                <CreateBlog />
+              </ProtectedRoute>
+            }
+          ></Route>
+          <Route
+            path="/career-creation"
+            element={
+              <ProtectedRoute>
+                <CareerCreation />
+              </ProtectedRoute>
+            }
+          ></Route>
+          <Route
+            path="/manageblogs"
+            element={
+              <ProtectedRoute>
+                <Manageblogs />
+              </ProtectedRoute>
+            }
+          ></Route>
+          <Route
+            path="/blog-updation"
+            element={
+              <ProtectedRoute>
+                <UpdateBlog />
+              </ProtectedRoute>
+            }
+          ></Route>
+          <Route
+            path="/career-update"
+            element={
+              <ProtectedRoute>
+                <CareerUpdate />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/managecareers"
+            element={
+              <ProtectedRoute>
+                <SmallCard />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="/login" element={<LoginPage />} />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
         {!hideFooter && <Footer />}
       </HelmetProvider>

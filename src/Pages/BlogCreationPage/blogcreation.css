@@ -16,7 +16,7 @@
   height: 100%;
   padding: 7vw 0 1.5vw 0;
   border: 1px solid;
-  background-color: black;
+  background-color: #050038;
 }
 
 .blog_page_main_container {
@@ -212,7 +212,6 @@
     padding: 8vw 0 20vw 0;
     height: fit-content;
     border: none;
-    background-color: black;
   }
   .blog-form {
     row-gap: 2vw;
