@@ -1,3 +1,8 @@
+[build]
+  command = "npm run build" # Adjust to your build command
+  publish = "dist" # Adjust to your output folder
+  branch = "main" # Ensure correct branch
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
