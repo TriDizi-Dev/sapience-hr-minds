@@ -1,4 +1,6 @@
+
 import React, { useEffect, useState } from "react";
+
 import "./SingleBlogPage.css";
 import bannerimg from "../../assets/SingleBlog/blogbanner.jpg";
 import blogimg1 from "../../assets/Blogs/image1.png";
@@ -7,7 +9,7 @@ import blogimg3 from "../../assets/Blogs/image3.png";
 
 import background from "../../assets/SingleBlog/bbg2.svg";
 import triangle from "../../assets/SingleBlog/triangle.svg";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -18,8 +20,11 @@ import { database, ref, get } from "../../Firebase/firebase";
 function SingleBlogPage() {
   const location = useLocation();
   const navigate = useNavigate();
-  const data1 = location.state;
-  const [data, setData] = React.useState(data1);
+ const { blogId } = useParams();
+  const [data, setData] = useState(location.state || null);
+  console.log("location.state:", location.state);
+console.log("blogId from URL:", blogId);
+console.log("loaded blog data:", data);
   useEffect(() => {
     AOS.init({
       offset: 200,
@@ -92,28 +97,26 @@ function SingleBlogPage() {
   };
 
   const [BlogsData, setBlogsData] = useState([]);
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      const blogRef = ref(database, "blogs");
 
+  useEffect(() => {
+  if (!data && blogId) {
+    const fetchBlogById = async () => {
       try {
+        const blogRef = ref(database, `blogs/${blogId}`);
         const snapshot = await get(blogRef);
         if (snapshot.exists()) {
-          const data = snapshot.val();
-          const blogList = Object.keys(data).map((key) => ({
-            id: key,
-            ...data[key],
-            imageUrl: data[key].image_url || "", // Don't use ref() here!
-          }));
-          setBlogsData(blogList);
+          setData(snapshot.val());
+        } else {
+          console.warn("Blog not found");
         }
       } catch (error) {
-        console.error("Error fetching blog data:", error);
+        console.error("Error fetching blog:", error);
       }
     };
 
-    fetchBlogs();
-  }, []);
+    fetchBlogById();
+  }
+}, [data, blogId]);
 
   const DateFormate = (isoDateString) => {
     if (!isoDateString) return "";
