@@ -154,8 +154,9 @@ console.log("loaded blog data:", data);
         <div
           className="single_blog_banner_img"
           style={{
-            backgroundImage: `url(${data?.imageUrl})`,
+            backgroundImage: `url(${data?.image_url})`,
           }}
+          
         >
           <p className="single_blog_top_text">{`By ${
             data?.author_name
