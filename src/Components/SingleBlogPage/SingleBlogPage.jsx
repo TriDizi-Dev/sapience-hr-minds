@@ -17,6 +17,12 @@ import { Helmet } from "react-helmet-async";
 import parse, { domToReact } from "html-react-parser";
 import { database, ref, get } from "../../Firebase/firebase";
 
+const slugify = (text) =>
+  text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-") // Replace non-alphanumeric with hyphens
+    .replace(/^-+|-+$/g, "");
+    
 function SingleBlogPage() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -100,21 +106,31 @@ console.log("loaded blog data:", data);
 
   useEffect(() => {
   if (!data && blogId) {
-    const fetchBlogById = async () => {
+    const fetchBlogBySlug = async () => {
       try {
-        const blogRef = ref(database, `blogs/${blogId}`);
+        const blogRef = ref(database, "blogs");
         const snapshot = await get(blogRef);
         if (snapshot.exists()) {
-          setData(snapshot.val());
-        } else {
-          console.warn("Blog not found");
+          const allBlogs = snapshot.val();
+          const found = Object.keys(allBlogs)
+            .map((key) => ({
+              id: key,
+              ...allBlogs[key],
+            }))
+            .find((b) => slugify(b.title) === blogId);
+
+          if (found) {
+            setData(found);
+          } else {
+            console.warn("Blog not found");
+          }
         }
       } catch (error) {
         console.error("Error fetching blog:", error);
       }
     };
 
-    fetchBlogById();
+    fetchBlogBySlug();
   }
 }, [data, blogId]);
 
@@ -207,12 +223,12 @@ console.log("loaded blog data:", data);
                       </div>
                       <div className="blog_content_right">
                         <h6
-                          className="blog_content_right_text"
-                          onClick={() => {
-                            setData(data);
-                            window.scrollTo(0, 0);
-                            navigate(`/blog/${data?.title}`);
-                          }}
+                         onClick={() => {
+               const slug = slugify(data.title);
+               setData(data);
+              window.scrollTo(0, 0);
+             navigate(`/blog/${slug}`, { state: data });
+}}
                         >
                           Know More
                         </h6>
