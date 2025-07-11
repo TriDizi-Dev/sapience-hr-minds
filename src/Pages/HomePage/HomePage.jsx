@@ -86,7 +86,7 @@ import client21 from "../../assets/HomePage/image21.webp";
 import client22 from "../../assets/HomePage/image22.png";
 // import client23 from "../../assets/HomePage/image23.png"
 import client23 from "../../assets/HomePage/image23-removebg.webp";
-
+import clientss from "../../assets/HomePage/Profile.png"
 import client24 from "../../assets/HomePage/image24.png";
 import client25 from "../../assets/HomePage/image25.webp";
 import { MdOutlinePlayCircleFilled } from "react-icons/md";
@@ -235,6 +235,14 @@ export const HomePage = () => {
       img: woman_1,
       bottomname: "Seema S Rao",
       bottomtext: " Sr. VP - HR & Finance,  Wolken Software Pvt Ltd",
+    },
+    {
+      id: 8,
+      logo: "Logo",
+      para: `Collaborating with Sapience Minds has been a truly rewarding experience. Their professionalism, depth of insight, and commitment to excellence consistently stand out. Whether it's their strategic thinking or their ability to deliver impactful solutions, the team brings a level of dedication that is both rare and inspiring. It’s been a pleasure to work with such a forward-thinking and dependable partner.`,
+      img: clientss,
+      bottomname: "Krishna Prasad",
+      bottomtext: "Human Resources Manager, CodeFrontier Software Private Limited (Jillela Group)",
     },
   ];
 
