@@ -196,8 +196,16 @@ export const HomePage = () => {
       bottomname: "Sylvain Cotin",
       bottomtext: "Senior Human Resources Director, OpenText",
     },
-    {
+     {
       id: 3,
+      logo: "Logo",
+      para: `Collaborating with Sapience Minds has been a truly rewarding experience. Their professionalism, depth of insight, and commitment to excellence consistently stand out. Whether it's their strategic thinking or their ability to deliver impactful solutions, the team brings a level of dedication that is both rare and inspiring. It’s been a pleasure to work with such a forward-thinking and dependable partner.`,
+      img: clientss,
+      bottomname: "Krishna Prasad",
+      bottomtext: "Human Resources Manager, CodeFrontier Software Private Limited (Jillela Group)",
+    },
+    {
+      id: 4,
       logo: "Logo",
       para: `Babitha is a perfect example of an excellent Global HR director. She is focused, dependable & objectives-oriented. We worked with Babitha on various topics viz. Global & Local transformation, Talent management, CSR activities, campus hiring etc. She has exceptional skills in the HR field, besides being a helpful human with a sympathetic attitude. Her knowledge about tools, its impact on transition and mass demonstration/adoption skills are exceptional. Apart from the above, the collaboration with business leaders and leadership team was remarkable. Babitha has proven leadership skills in building and structuring the HR team to drive excellence and efficiency.`,
       img: man_3,
@@ -205,7 +213,7 @@ export const HomePage = () => {
       bottomtext: "Manager, ESI Group",
     },
     {
-      id: 4,
+      id: 5,
       logo: "Logo",
       para: `During our collaboration, I've come to appreciate her exceptional skills, her unfailing commitment and her ability to manage complex issues. In addition to her technical expertise, Babitha has demonstrated great communication skills. She is able to convey complex ideas clearly and concisely, making her a valuable asset to any team. Beyond her professional skills, Babitha is a reliable and collaborative colleague. Her positive attitude and ability to work with others makes a significant contribution to the team's dynamics. Integrating Babitha into your team means offer it a dynamic, efficient and creative collaborator`,
       img: man_4,
@@ -213,7 +221,7 @@ export const HomePage = () => {
       bottomtext: "Corporate HR Director, ESI Group ",
     },
     {
-      id: 5,
+      id: 6,
       logo: "Logo",
       para: `If you are looking for, a People First person, to upgrade the culture of your organization, look no further than Babitha. Her well curated Programmes and HR best practices have helped navigate departments through a journey of Organizational Transformation, both at Local and Global levels. Gifted with an exceptionally high EQ coupled with great listening and oratory skills, Babitha has consistently demonstrated Walk The Talk. With her Onboard, any organization can figure out novel ways of the managing its greatest asset of Human Resources and unleashing them as Self Driven Armies that can conquer the toughest of challenges`,
       img: man_5,
@@ -221,7 +229,7 @@ export const HomePage = () => {
       bottomtext: "Technical Experts Leader, ESI Group",
     },
     {
-      id: 6,
+      id: 7,
       logo: "Logo",
       para: `Babitha has a pleasing personality and extremely focussed, systematic approach. Great control on work life balance too. Possesses immense persuasive leadership skills and highly talented in all areas of`,
       img: man_6,
@@ -229,21 +237,14 @@ export const HomePage = () => {
       bottomtext: "Managing Director- India & South Asia, Martin Engineering",
     },
     {
-      id: 7,
+      id: 8,
       logo: "Logo",
       para: `We recently had the pleasure of working with Sapience Minds on our critical hiring needs. From the initial consultation to the final placement, their team exhibited professionalism, dedication, and a genuine commitment to finding the perfect fit for both the candidate and the employer. Sapience Minds took the time to understand our company's unique needs and culture, ensuring they matched us with candidates who not only had the required skills but also aligned with our values. Their meticulous screening process saved us countless hours and resulted in a shortlist of highly qualified individuals. One of the standout aspects of Sapience is their exceptional communication. They kept us informed at every stage of the recruitment process, providing regular updates and valuable insights. Their responsiveness and attention to detail made the entire experience seamless and stress-free. Thanks to Sapience Minds, we have successfully hired talented individuals. Their expertise and personalized approach have made a significant impact on our hiring process, and we look forward to continuing our partnership with them in the future. Are you stuck with critical hiring??? - You have Sapience Minds that goes above and beyond to deliver outstanding results!!`,
       img: woman_1,
       bottomname: "Seema S Rao",
       bottomtext: " Sr. VP - HR & Finance,  Wolken Software Pvt Ltd",
     },
-    {
-      id: 8,
-      logo: "Logo",
-      para: `Collaborating with Sapience Minds has been a truly rewarding experience. Their professionalism, depth of insight, and commitment to excellence consistently stand out. Whether it's their strategic thinking or their ability to deliver impactful solutions, the team brings a level of dedication that is both rare and inspiring. It’s been a pleasure to work with such a forward-thinking and dependable partner.`,
-      img: clientss,
-      bottomname: "Krishna Prasad",
-      bottomtext: "Human Resources Manager, CodeFrontier Software Private Limited (Jillela Group)",
-    },
+   
   ];
 
   const handleSignleBlog = (ev, id) => {
