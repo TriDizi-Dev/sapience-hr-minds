@@ -1,4 +1,6 @@
+
 import React, { useEffect, useState } from "react";
+
 import "./SingleBlogPage.css";
 import bannerimg from "../../assets/SingleBlog/blogbanner.jpg";
 import blogimg1 from "../../assets/Blogs/image1.png";
@@ -7,7 +9,7 @@ import blogimg3 from "../../assets/Blogs/image3.png";
 
 import background from "../../assets/SingleBlog/bbg2.svg";
 import triangle from "../../assets/SingleBlog/triangle.svg";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -15,11 +17,20 @@ import { Helmet } from "react-helmet-async";
 import parse, { domToReact } from "html-react-parser";
 import { database, ref, get } from "../../Firebase/firebase";
 
+const slugify = (text) =>
+  text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-") // Replace non-alphanumeric with hyphens
+    .replace(/^-+|-+$/g, "");
+    
 function SingleBlogPage() {
   const location = useLocation();
   const navigate = useNavigate();
-  const data1 = location.state;
-  const [data, setData] = React.useState(data1);
+ const { blogId } = useParams();
+  const [data, setData] = useState(location.state || null);
+  console.log("location.state:", location.state);
+console.log("blogId from URL:", blogId);
+console.log("loaded blog data:", data);
   useEffect(() => {
     AOS.init({
       offset: 200,
@@ -92,28 +103,36 @@ function SingleBlogPage() {
   };
 
   const [BlogsData, setBlogsData] = useState([]);
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      const blogRef = ref(database, "blogs");
 
+  useEffect(() => {
+  if (!data && blogId) {
+    const fetchBlogBySlug = async () => {
       try {
+        const blogRef = ref(database, "blogs");
         const snapshot = await get(blogRef);
         if (snapshot.exists()) {
-          const data = snapshot.val();
-          const blogList = Object.keys(data).map((key) => ({
-            id: key,
-            ...data[key],
-            imageUrl: data[key].image_url || "", // Don't use ref() here!
-          }));
-          setBlogsData(blogList);
+          const allBlogs = snapshot.val();
+          const found = Object.keys(allBlogs)
+            .map((key) => ({
+              id: key,
+              ...allBlogs[key],
+            }))
+            .find((b) => slugify(b.title) === blogId);
+
+          if (found) {
+            setData(found);
+          } else {
+            console.warn("Blog not found");
+          }
         }
       } catch (error) {
-        console.error("Error fetching blog data:", error);
+        console.error("Error fetching blog:", error);
       }
     };
 
-    fetchBlogs();
-  }, []);
+    fetchBlogBySlug();
+  }
+}, [data, blogId]);
 
   const DateFormate = (isoDateString) => {
     if (!isoDateString) return "";
@@ -151,8 +170,9 @@ function SingleBlogPage() {
         <div
           className="single_blog_banner_img"
           style={{
-            backgroundImage: `url(${data?.imageUrl})`,
+            backgroundImage: `url(${data?.image_url})`,
           }}
+          
         >
           <p className="single_blog_top_text">{`By ${
             data?.author_name
@@ -203,12 +223,12 @@ function SingleBlogPage() {
                       </div>
                       <div className="blog_content_right">
                         <h6
-                          className="blog_content_right_text"
-                          onClick={() => {
-                            setData(data);
-                            window.scrollTo(0, 0);
-                            navigate(`/blog/${data?.title}`);
-                          }}
+                         onClick={() => {
+               const slug = slugify(data.title);
+               setData(data);
+              window.scrollTo(0, 0);
+             navigate(`/blog/${slug}`, { state: data });
+}}
                         >
                           Know More
                         </h6>
