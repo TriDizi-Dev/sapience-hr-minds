@@ -246,6 +246,14 @@ export const HomePage = () => {
       bottomname: "Anup Nair",
       bottomtext: "Managing Director- India & South Asia, Martin Engineering",
     },
+    {
+      id: 9,
+      logo: "Logo",
+      para : "The workshop was an incredibly valuable experience that provided practical insights and actionable strategies tailored to our business needs. It was not just informative but also highly engaging, encouraging thoughtful discussion and real-time problem-solving. The impact was immediate — we left with a clearer direction, improved team alignment, and tools we could implement right away for the team. It is evident that the team truly understands how to drive meaningful results for the success." ,      
+      img: clientss,
+      bottomname: "Krishna Prasad",
+      bottomtext: "HR Manager - CodeFrontier Software",
+    },
   ];
 
   const handleSignleBlog = (ev, id) => {
