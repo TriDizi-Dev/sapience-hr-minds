@@ -253,7 +253,7 @@ export const HomePage = () => {
       img: clientss,
       bottomname: "Krishna Prasad",
       bottomtext: "HR Manager - CodeFrontier Software",
-    },
+    }, 
   ];
 
   const handleSignleBlog = (ev, id) => {
