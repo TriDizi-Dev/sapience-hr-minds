@@ -14,7 +14,7 @@ export const ServicePageEight = () => {
     <div>
       {" "}
       <Service
-        metaTitle="Sapience Minds-Employee Benfits & Insurance consulting"
+        metaTitle="Sapience Minds (OPC) Private Limited-Employee Benfits & Insurance consulting"
         metaDescription="Design compelling benefits that protect, support, and empower your workforce-without breaking your budget."
         ServiceHeadName=" Employee Benfits & Insurance consulting"
         ServiceHeadContent="Design compelling benefits that protect, support, and empower your workforce-without breaking your budget."

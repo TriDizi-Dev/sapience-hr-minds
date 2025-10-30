@@ -59,7 +59,7 @@ export const ServicePageOne = () => {
         img_5={img5}
         img_6={Setting}
         img_7={img6}
-        metaTitle="Sapience Minds-HR Compliance and Policy Development"
+        metaTitle="Sapience Minds (OPC) Private Limited-HR Compliance and Policy Development"
         metaDescription="Stay legally compliant and culturally aligned with HR policies tailored for growing businesses. Build trust, reduce risks, and foster a structured workplace from day one."
         path="hr-compliance"
         targetData="100"

@@ -266,7 +266,7 @@ export const AboutPage = () => {
   return (
     <>
       <Helmet>
-        <title>Sapience Minds-About Our Company</title>
+        <title>Sapience Minds (OPC) Private Limited-About Our Company</title>
         <meta
           name="description"
           content="Sapience Minds was founded with a clear mission to help startups and growing businesses establish strong HR foundations without the cost of a full-time CHRO. By offering Fractional CHRO services, we empower companies to access senior HR leadership on-demand, driving strategic decisions in talent acquisition, culture building, compliance, and performance. Our services are agile, scalable, and deeply aligned with each client’s business goals, ensuring people and performance work hand in hand."

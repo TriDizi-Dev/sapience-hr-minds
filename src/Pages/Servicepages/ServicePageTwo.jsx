@@ -13,7 +13,7 @@ export const ServicePageTwo = () => {
   return (
     <div>
       <Service
-        metaTitle="Sapience Minds-Customized HR Consulting and Advisory Services"
+        metaTitle="Sapience Minds (OPC) Private Limited-Customized HR Consulting and Advisory Services"
         metaDescription="Tailored HR guidance that aligns with your unique business needs whether you're building from the ground up or optimizing existing practices."
         ServiceHeadName="Customized HR Consulting and Advisory Services"
         ServiceHeadContent="Tailored HR guidance that aligns with your unique business needs whether you're building from the ground up or optimizing existing practices."

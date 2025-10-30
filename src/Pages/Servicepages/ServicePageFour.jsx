@@ -15,7 +15,7 @@ export const ServicePageFour = () => {
     <div>
       {" "}
       <Service
-        metaTitle="Sapience Minds-Talent Acquisition Solutions"
+        metaTitle="Sapience Minds (OPC) Private Limited-Talent Acquisition Solutions"
         metaDescription="Find the right people faster with structured, strategic hiring processes tailored for growing businesses. Build your dream team with expert-led recruitment strategies."
         ServiceHeadName="Talent Acquisition Solutions"
         ServiceHeadContent="Find the right people faster with structured, strategic hiring processes tailored for growing businesses. Build your dream team with expert-led recruitment strategies."

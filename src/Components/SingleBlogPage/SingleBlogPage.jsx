@@ -124,7 +124,7 @@ function SingleBlogPage() {
   return (
     <div className="single_blog_outer_main">
       <Helmet>
-        <title>{`Sapience Minds-${data?.title}`}</title>
+        <title>{`Sapience Minds (OPC) Private Limited-${data?.title}`}</title>
         <meta name="description" content={data?.content} />
 
         {/* Open Graph Meta Tags (for WhatsApp, Facebook, LinkedIn) */}

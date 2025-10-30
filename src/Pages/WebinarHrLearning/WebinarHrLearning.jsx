@@ -146,7 +146,7 @@ const WebinarHRLearning = () => {
         imgTitle="Webinar"
         questionTitle="Webinar"
         img={img}
-        metaTitle="Sapience Minds-Sapience Minds Webinars"
+        metaTitle="Sapience Minds (OPC) Private Limited-Sapience Minds Webinars"
         metaDescription="Your startup deserves more than just reactive HR. Whether you need structure, compliance, or a culture strategy, let’s have a conversation that moves your business forward. Book a discovery call or fill out the form and let’s shape a smarter, people-powered future for your company."
         PreviousHeading="Previous Webinars"
         Internship1="Recruitment Trends & Tools for the Future of Hiring"

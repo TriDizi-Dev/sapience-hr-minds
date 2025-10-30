@@ -14,7 +14,7 @@ export const ServicePageSeven = () => {
     <div>
       {" "}
       <Service
-        metaTitle="Sapience Minds-Recruitment of Leadership & Mid-Level Team"
+        metaTitle="Sapience Minds (OPC) Private Limited-Recruitment of Leadership & Mid-Level Team"
         metaDescription="Find the right leaders who can scale your vision without compromising your culture or pace."
         ServiceHeadName="Recruitment of Leadership & Mid-Level Team"
         ServiceHeadContent="Find the right leaders who can scale your vision without compromising your culture or pace."

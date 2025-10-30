@@ -182,7 +182,7 @@ function Blog() {
     <div className="blog_page_main_outer">
       <Helmet>
         <title>
-          Sapience Minds-The Importance of Workforce Upskilling and Reskilling
+          Sapience Minds (OPC) Private Limited-The Importance of Workforce Upskilling and Reskilling
           in Today’s Economy
         </title>
         <meta

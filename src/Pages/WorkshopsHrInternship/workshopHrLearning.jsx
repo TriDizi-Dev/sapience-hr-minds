@@ -151,7 +151,7 @@ const WorkshopsHrLearning = () => {
         imgTitle="Workshops"
         questionTitle="Workshop"
         img={img}
-        metaTitle="Sapience Minds-Sapience Minds Workshops"
+        metaTitle="Sapience Minds (OPC) Private Limited-Sapience Minds Workshops"
         metaDescription="Your startup deserves more than just reactive HR. Whether you need structure, compliance, or a culture strategy, let’s have a conversation that moves your business forward. Book a discovery call or fill out the form and let’s shape a smarter, people-powered future for your company."
         PreviousHeading="Previous Workshops"
         Internship1="Smart Hiring Strategies for HR Professionals"

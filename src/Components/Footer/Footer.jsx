@@ -168,7 +168,7 @@ export const Footer = () => {
       <div className="footer_bottom">
         <div className="footer_bottom_line"></div>
         <p className="footer_bottom_text">
-          Copyright © 2025 Sapience Minds, All Rights Reserved.
+          Copyright © 2025 Sapience Minds (OPC) Private Limited, All Rights Reserved.
         </p>
       </div>
     </div>

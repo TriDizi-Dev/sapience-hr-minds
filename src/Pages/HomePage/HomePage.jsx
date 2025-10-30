@@ -389,7 +389,7 @@ export const HomePage = () => {
     <div className="home_main">
       <Helmet>
         <title>
-          Sapience Minds-Sapience Minds-Your Trusted Fractional CHRO Partner for
+          Sapience Minds (OPC) Private Limited-Sapience Minds-Your Trusted Fractional CHRO Partner for
           Scalable HR Growth
         </title>
         <meta

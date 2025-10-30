@@ -194,7 +194,7 @@ export const AlliancePartner = () => {
   return (
     <>
       <Helmet>
-        <title>Sapience Minds-Expert Who Elevate Our Mission</title>
+        <title>Sapience Minds (OPC) Private Limited-Expert Who Elevate Our Mission</title>
         <meta
           name="description"
           content="At Sapience Minds, we collaborate with handpicked industry leaders who bring specialized knowledge and proven excellence to the table. These trusted partners expand our capabilities and ensure that every solution we offer is backed by expertise, innovation, and impact-giving your business access to the very best in HR, leadership, compliance, and beyond."
