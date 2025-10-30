@@ -33,7 +33,7 @@
     letter-spacing: .1vw;
     text-align: center;
     /* color: #000000; */
-      color: #3E4E6B;
+    color: #3E4E6B;
     margin-top: 2.2vw;
 }
 
@@ -58,7 +58,7 @@
     width: 39vw;
     /* 552px / 1440 * 100 */
     height: fit-content;
-   
+
 }
 
 
@@ -116,13 +116,13 @@
     line-height: 100%;
     /* letter-spacing: .1vw; */
     /* color: #000000; */
-      color: #3E4E6B;
+    color: #3E4E6B;
     margin-top: 2.2vw;
 }
 
 .Left_side_container {
     margin-top: -15vw;
-  color:rgb(58, 80, 121);
+    color: rgb(58, 80, 121);
 }
 
 .Text_container_layer2 {
@@ -197,28 +197,29 @@
     width: 2.2vw;
 }
 
-.babitha_name{
-    float:right; 
-    margin-top:-12.5vw; 
-    margin-right:15vw; 
-    font-size:3vw; 
-    font-weight:600;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3)
-}
-.babitha_designation{
-    float:right; 
-    margin-top:-9vw; 
-    margin-right:11vw; 
-    width:29vw; 
-    font-size:1.7vw; 
-    font-weight:600; 
+.babitha_name {
+    float: right;
+    margin-top: -12.5vw;
+    margin-right: 15vw;
+    font-size: 3vw;
+    font-weight: 600;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3)
 }
 
-.babitha_dgnatn{
+.babitha_designation {
+    float: right;
+    margin-top: -9vw;
+    margin-right: 11vw;
+    width: 29vw;
+    font-size: 1.7vw;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3)
+}
+
+.babitha_dgnatn {
     font-weight: 500;
-        font-size: 1.1vw;
-        width: 40vw;
+    font-size: 1.1vw;
+    width: 40vw;
 }
 
 .Section3_Main_Container {
@@ -252,12 +253,13 @@
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .Single_container_Icon:nth-child(3) {
     width: 19vw;
 }
 
 
-.Single_container_Icon:hover{
+.Single_container_Icon:hover {
     transform: scale(1.03);
     box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2);
     border-radius: 0.5vw;
@@ -300,8 +302,8 @@
     font-weight: 600;
     font-size: 1vw;
     /* color: #000000; */
-    
-  color:rgb(58, 80, 121);
+
+    color: rgb(58, 80, 121);
     margin-top: 1vw;
     height: 3.5vw;
 }
@@ -330,13 +332,13 @@
 .Section4_Main_Heading {
     /* font-family: Montserrat; */
     font-weight: 700;
-    font-size: 3.3vw;
+    font-size: 3.1vw;
     line-height: 3.8vw;
     /* letter-spacing: .1vw; */
     text-align: center;
-    width: 54vw;
+    width: 84vw;
     margin: 0 auto;
-          color: #3E4E6B;
+    color: #3E4E6B;
 }
 
 
@@ -352,11 +354,11 @@
 }
 
 #sub_count {
-    font-weight: 700 ;
-    font-size: 3.1vw ;
+    font-weight: 700;
+    font-size: 3.1vw;
     line-height: 100%;
     /* color: black ; */
-          color: #3E4E6B;
+    color: #3E4E6B;
 
     /* letter-spacing: 0%; */
     text-align: center;
@@ -376,7 +378,7 @@
     line-height: 100%;
     /* letter-spacing: 0%; */
     text-align: center;
-      color: #3E4E6B;
+    color: #3E4E6B;
 
 }
 
@@ -557,7 +559,7 @@
     .Text_container_layer2 p {
         font-size: 4vw;
         line-height: 5.5vw;
-        text-align:justify;
+        text-align: justify;
     }
 
     .Right_side_Images_container {
@@ -609,27 +611,28 @@
     }
 
 
-    .babitha_name{
+    .babitha_name {
         /* float:right;  */
-        margin-top:-142.5vw; 
-        margin-right:28vw; 
-        font-size:5.5vw; 
-        font-weight:600;
+        margin-top: -142.5vw;
+        margin-right: 28vw;
+        font-size: 5.5vw;
+        font-weight: 600;
         text-align: center;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3)
-    }
-    .babitha_designation{
-        /* float:right;  */
-        text-align: center;
-        margin-top:-134.5vw; 
-        margin-right:25vw; 
-        width:50vw; 
-        font-size:3vw; 
-        font-weight:600; 
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3)
     }
 
-    .babitha_dgnatn{
+    .babitha_designation {
+        /* float:right;  */
+        text-align: center;
+        margin-top: -134.5vw;
+        margin-right: 25vw;
+        width: 50vw;
+        font-size: 3vw;
+        font-weight: 600;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3)
+    }
+
+    .babitha_dgnatn {
         margin-top: -75vw;
         font-size: 4vw;
         width: 70vw;
@@ -708,7 +711,7 @@
     .Section4_Main_Heading {
         font-size: 6vw;
         line-height: 8vw;
-        width: 80%;
+        width: 85%;
     }
 
     .Missions_container {
@@ -719,7 +722,7 @@
         gap: 6vw;
     }
 
-  
+
 
     .Sub_Missions {
         display: flex;
@@ -845,9 +848,11 @@
     .Icons_class_size {
         font-size: 5vw;
     }
-    .Single_container_Icon:nth-child(3){
+
+    .Single_container_Icon:nth-child(3) {
         width: 90%;
     }
+
     #sub_count {
         font-size: 8vw;
     }

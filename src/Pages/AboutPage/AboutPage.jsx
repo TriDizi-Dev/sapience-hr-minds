@@ -445,7 +445,7 @@ export const AboutPage = () => {
 
       <div className="Section4_Main_Container">
         <p className="Section4_Main_Heading">
-          Our Mission is To Help Easy Organize Your Employee
+          Our mission is to build HR systems that empower startups to scale with purpose, performance, and people-first leadership.
         </p>
         <div className="Missions_container" ref={ref}>
           <div className="Sub_Missions">

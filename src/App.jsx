@@ -118,8 +118,9 @@ function Layout() {
           ></Route>
           <Route path="/blogs" element={<Blog />}></Route>
           {/* <Route path="/singleBlog" element={<SingleBlogPage />}></Route> */}
-          <Route path="/hr-compliance" element={<ServicePageOne />}></Route>
-          <Route path="/hr-consulting" element={<ServicePageTwo />}></Route>
+          <Route path="/blog/:blogId" element={<SingleBlogPage />} />
+       <Route path="/hr-compliance" element={<ServicePageOne />}></Route>
+        <Route path="/hr-consulting" element={<ServicePageTwo />}></Route>
           <Route
             path="/virtual-chro-and-outsourcing"
             element={<ServiceThree />}
@@ -141,7 +142,7 @@ function Layout() {
             path="/employee-benfits-and-insurance-consulting"
             element={<ServicePageEight />}
           ></Route>
-          <Route path="/blog/:title" element={<SingleBlogPage />}></Route>
+          {/* <Route path="/blog/:title" element={<SingleBlogPage />}></Route> */}
           <Route
             path="/blog-creation"
             element={
