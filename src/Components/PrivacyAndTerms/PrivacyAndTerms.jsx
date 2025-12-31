@@ -208,7 +208,7 @@ function PrivacyAndTerms({
                 </a>
               </p>
               <p>
-                <a href="tel:+919606939773">+91 90360 62378</a>
+                <a href="tel:+919606939773">+91 9606939773</a>
               </p>
             </div>
           </div>
