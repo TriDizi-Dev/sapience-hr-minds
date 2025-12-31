@@ -159,19 +159,13 @@ function TermsAndConditions({
               className="privacy_terms_content_para_inner"
             >
               <p>For any privacy-related queries, reach out to us at:</p>
-              {/* <p>Email: reachus@sapienceminds.com</p>
-              <p>Phone: +91 90360 62378</p> */}
-              <p>
+               <p>
                 <a href="mailto:reachus@sapienceminds.com">
                   reachus@sapienceminds.com
                 </a>
               </p>
               <p>
-<<<<<<< HEAD
-                <a href="tel:+919606939773">+91 90360 62378</a>
-=======
-                <a href="tel:+919036062378">+91 90360 62378</a>
->>>>>>> 7ee975a7fa021053f9c9b349a6202067e5c79458
+                <a href="tel:+919606939773">+91 9606939773</a>
               </p>
             </div>
           </div>
