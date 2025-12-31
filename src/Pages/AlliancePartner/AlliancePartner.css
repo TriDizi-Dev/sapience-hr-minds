@@ -1,0 +1,792 @@
+.AlliancePartner_Main_Container {
+    text-align: center;
+    position: relative;
+    margin-top: 9.1vw;
+
+} 
+
+.BlueLayer_HeroBanner {
+    position: absolute;
+    top: -25vw;
+    height: auto;
+    width: auto;
+    z-index: -1;
+}
+
+.Image_Conatiner img {
+    width: 88vw;
+    height: auto;
+}
+
+.Image_Upper_Text_Container {
+    width: 63vw;
+    height: auto;
+    box-shadow: 0px 10px 36px 0px #00000026;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    position: relative;
+    top: -11vw;
+    padding: 2.5vw 3vw 4vw 3vw;
+}
+
+.Header_Text {
+    /* font-family: Roboto; */
+    font-weight: 700;
+    font-size: 2.3vw;
+    /* line-height: 45px; */
+    text-align: center;
+    margin-top: -1vw;
+          color: #3E4E6B;
+
+}
+
+.Header_Sub_Text {
+    /* font-family: Roboto; */
+    font-weight: 400;
+    font-size: 1.5vw;
+    text-align: center;
+    margin-top: 3vw;
+    color: #0C0C0D;
+}
+
+.Section2_Layer_AlliancePartner {
+    display: flex;
+    width: 98vw;
+    justify-content: center;
+    gap: 4vw;
+    margin-top: 2vw;
+    height: fit-content;
+    /* align-items: first baseline; */
+}
+
+.Left_Container_AlliancePartner {
+    width: 52vw;
+    margin-top: 0vw;
+}
+
+.Right_Container_AlliancePartner {
+    /* position: relative; */
+    width: 33vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2vw;
+}
+
+
+.alliance_right_said {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.1vw;
+}
+
+.alliance_right_said h3 {
+    font-size: 2.5vw;
+    margin-top: -2vw;
+          color: #3E4E6B;
+
+    /* margin-bot  color:rgb(58, 80, 121);
+tom: 0.5vw; */
+}
+
+.alliance_right_said p {
+    font-size: 1.5vw;
+    font-weight: 500;
+      color:rgb(58, 80, 121);
+
+}
+
+.SquareIcons_Cont_img img,
+.Person_Cont_img img {
+    /* position: absolute; */
+}
+
+.SquareIcons_Cont_img img {
+    width: 33vw;
+    /* top: 2vw;
+    left: 0vw; */
+}
+
+.Person_Cont_img img {
+    width: 30vw;
+    height: 30vw;
+    /* top: -3vw;
+    left: 0vw; */
+    border-radius: 0.8vw;
+}
+
+.Heading_text_AlliancePartner {
+    /* font-family: Roboto; */
+    font-weight: 700;
+    font-size: 2.6vw;
+    text-align: justify;
+          color: #3E4E6B;
+
+}
+
+.para1_text_AlliancePartner,
+.para2_text_AlliancePartner {
+    /* font-family: Roboto; */
+    font-weight: 400;
+    font-size: 1vw;
+    text-align: justify;
+    color: #0C0C0D;
+}
+
+.para1_text_AlliancePartner {
+    margin-top: 1.8vw;
+}
+
+.para2_text_AlliancePartner {
+    margin-top: 1.5vw;
+}
+
+.Section3_Alliance_Main_Container {
+    margin-top: 8vw;
+}
+
+.layer6_cards_outer {
+    /* this below cards section is for the testimonial cards css home page applied once check it  */
+}
+
+.Section3_Alliance_Heading_para {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.2vw;
+    line-height: 2vw;
+    /* letter-spacing: .01vw; */
+    width: 82vw;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 2vw;
+    color: #000000B2;
+}
+
+.Section3_Alliance_Container_Icons_Container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: start;
+    margin-top: 4vw;
+    gap: 7vw 4vw;
+    position: relative;
+}
+
+.Single_Alliance_container_Icon {
+    width: 18vw;
+    /* height: 265px; */
+    text-align: center;
+}
+
+.Image_Alliance_container_image {
+    width: fit-content;
+    padding: 1vw;
+    margin: 0 auto;
+    border-radius: 1vw;
+    background-color: #F2F2F2;
+}
+
+.Image_Alliance_container_image img {
+    width: 4vw;
+    height: 4vw;
+}
+
+.Cards_Alliance_Heading {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1vw;
+    /* line-height: 100%; */
+    /* letter-spacing: 0%; */
+    text-align: center;
+    color: #000000;
+    margin-top: 1vw;
+}
+
+.Horizontal_Alliance_row {
+    border: .1vw solid #000000B2;
+    margin-top: 0.5vw;
+}
+
+.Cards_Alliance_Sub_head {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1.1vw;
+    color: #000000;
+    margin-top: 1vw;
+    height: 3vw;
+}
+
+.Cards_Alliance_Name {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.1vw;
+    line-height: 1.5vw;
+    text-align: center;
+    color: #000000B2;
+    margin-top: .8vw;
+}
+
+.Section3_Alliance_Heading1 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.8vw;
+    line-height: 100%;
+    color: #000000B2;
+    /* letter-spacing: 0%; */
+}
+
+.Section3_Alliance_Heading2 {
+    font-weight: 700;
+    font-size: 3.2vw;
+    line-height: 100%;
+    letter-spacing: .1vw;
+    text-align: center;
+    color: #000000;
+    margin-top: 2.2vw;
+}
+
+.orangeLayer_Contaner {
+    position: absolute;
+    right: 0;
+    bottom: -20vw;
+}
+
+.orangeLayer_Contaner img {
+    width: 50vw;
+}
+
+.Alliance_layer4_part1 {
+    text-align: center;
+}
+
+.Alliance_layer4_part1_heading {
+    font-size: 1.8vw;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.Alliance_layer4_part1_heading2 {
+    font-size: 3.4vw;
+    font-weight: 700;
+    margin-top: 1vw;
+}
+
+.Alliance_layer4_outer_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vw;
+    background-color: rgba(235, 235, 255, 1);
+}
+
+.Alliance_layer4_outer {
+    margin-top: 3.5vw;
+    width: 94vw;
+}
+
+.Alliance_layer4_cards_outer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4vw;
+}
+
+.Alliance_layer4_card {
+    width: 29vw;
+    height: 18vw;
+    display: flex;
+    flex-direction: column;
+    padding: 1.9vw 0 1.5vw 3vw;
+    background-color: white;
+    border-radius: 1vw;
+    margin-bottom: 4vw;
+}
+
+.Alliance_layer4_card_logo {
+    font-size: 0.8;
+    font-weight: 700;
+}
+
+.Alliance_layer4_card_para {
+    font-size: 1.2vw;
+    font-weight: 400;
+    width: 24vw;
+    margin-top: 1vw;
+}
+
+.Alliance_layer4_card_bottom {
+    display: flex;
+    gap: 1vw;
+    margin-top: 1vw;
+
+}
+
+.Alliance_card_bottom_heading {
+    font-size: 1.2vw;
+    font-weight: 600;
+    margin: 0;
+}
+
+.Alliance_card_bottom_para {
+    font-size: 1.1vw;
+    font-weight: 400;
+    margin: 0;
+}
+
+.Alliance_card_bottom_logo {
+    width: 3.5vw;
+}
+
+.Alliance_Pre_Footer_Container {
+    margin-top: 8vw;
+    margin-bottom: 5vw;
+}
+
+.right_Header_Text {
+    display: none;
+}
+
+.Alianceparter_layer4_outer_main {
+    margin-top: 0vw;
+    padding: 2vw;
+    position: relative;
+}
+
+.Aliancceparter_layer4_outer {
+    display: flex;
+    justify-content: center;
+    margin-top: 3vw;
+}
+
+.aliancepartner_layer4_heading {
+    font-size: 1.7vw;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    margin-top: 4vw;
+
+}
+
+.aliancepartner_layer4_heading2 {
+    font-size: 3vw;
+    font-weight: 700;
+    margin-top: 1vw;
+    line-height: 4.4vw;
+    text-align: center;
+          color: #3E4E6B;
+
+}
+
+.Alianceparter_layer4_para {
+    font-size: 1.2vw;
+    font-weight: 400;
+    text-align: justify;
+    margin-top: 1vw;
+}
+
+.Aliancepartenr_layer4_cards_outer {
+    /* width: 48vw; */
+    display: flex;
+    gap: 3vw;
+    justify-content: center;
+    margin-top: 3vw;
+}
+
+.Alliancepartner_layer4_card {
+    width: 45vw;
+    /* height: 18vw; */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+}
+
+.Alliancepartner_layer4_card_logo {
+    width: 4.2vw;
+    height: 4.2vw;
+    background-color: rgba(242, 242, 242, 1);
+    border-radius: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Alliancepartner_layer4_logo {
+    width: 2vw;
+    height: 2vw;
+}
+
+.Alliancepartner_layer4_card_heading {
+    font-size: 1.2vw;
+    font-weight: 600;
+    height: 9vh;
+          color: #3E4E6B;
+
+}
+
+.Aliancepartner_card_para {
+    font-size: 1.2vw;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+    /* width: 19vw; */
+}
+.List_main_aliancepartener{
+margin-left: 2vw;
+}
+
+.alliance_right_button {
+  position: relative;
+  width: 15vw;
+  height: 3.5vw;
+  margin-top: 4vw;
+  background: none;
+  /* color: #7c5cfc; */
+  color: #ffa59a;
+  /* border: 0.1vw solid #7c5cfc; */
+  border: 0.1vw solid #ffa59a;
+  font-size: 1.2vw;
+  font-weight: 600;
+  border-radius: 1.9vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5vw;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+/* Liquid Fill Effect */
+.liquid {
+  /* background: linear-gradient(#7c5cfc 0 0) no-repeat calc(200% - var(--p, 0%)) 100% / 200% var(--p, 0.2em); */
+  background: linear-gradient(#ffa59a 0 0) no-repeat calc(200% - var(--p, 0%))
+    100% / 200% var(--p, 0.2em);
+  transition: 0.3s var(--t, 0s),
+    background-position 0.3s calc(0.3s - var(--t, 0s));
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+    .Alliancepartner_layer4_card_logo {
+        width: 13vw;
+        height: 13vw;
+        border-radius: 10vw;
+    }
+
+    .Aliancepartner_card_para {
+        width: 80vw;
+        /* text-align: center; */
+        margin: 0;
+        font-size: 3.5vw;
+    }
+
+    .Alliancepartner_layer4_card_heading,
+    .layer4_card_para {
+        font-size: 4vw;
+        text-align: center;
+    }
+
+    .Alliancepartner_layer4_logo {
+        width: 7vw;
+        height: 7vw;
+    }
+
+    .Alianceparter_layer4_para {
+        font-size: 4vw;
+        width: 90vw;
+        text-align: center;
+    }
+
+    .Alliancepartner_layer4_card {
+        width: 90vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2vw;
+    }
+
+    .Aliancepartenr_layer4_cards_outer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* width: 90vw; */
+    }
+    .List_main_aliancepartener{
+        margin-top: -5vw;
+    }
+
+    .Aliancceparter_layer4_outer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    .aliancepartner_layer4_heading {
+        font-size: 4.5vw;
+        text-align: center;
+    }
+
+    .aliancepartner_layer4_heading2 {
+        font-size: 6vw;
+        line-height: 8vw;
+        width: 90vw;
+        text-align: center;
+    }
+
+    .Image_Conatiner img {
+        height: 60vw;
+        object-fit: cover;
+        border-radius: 2vw;
+    }
+
+    .Image_Upper_Text_Container {
+        width: 75vw;
+    }
+
+    .Header_Text {
+        font-size: 5vw;
+
+    }
+
+    .right_Header_Text {
+        display: block;
+        /* position: absolute; */
+        /* top: -20vw;
+        left: 12vw; */
+        font-size: 6vw;
+        font-weight: 600;
+    }
+
+    .Person_Cont_img img {
+        width: 100%;
+    }
+
+    .Heading_text_AlliancePartner {
+        display: none;
+    }
+
+    .Header_Sub_Text {
+        font-size: 3vw;
+        text-align: justify;
+        margin-top: 1vw;
+    }
+
+    .Image_Upper_Text_Container {
+        top: -25vw;
+    }
+
+    .Section2_Layer_AlliancePartner {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+        row-gap: 6vw;
+    }
+
+    .Right_Container_AlliancePartner {
+        width: 80%;
+    }
+
+    .Person_Cont_img img {
+        width: 80vw;
+        height: 80vw;
+        border-radius: 1vw;
+        left: 0;
+    }
+
+    .SquareIcons_Cont_img img {
+        width: 100%;
+        /* left: 5vw; */
+    }
+
+    .Left_Container_AlliancePartner {
+        width: 80%;
+    }
+
+    .Heading_text_AlliancePartner {
+        font-size: 6vw;
+        text-align: center;
+    }
+
+    .para1_text_AlliancePartner,
+    .para2_text_AlliancePartner {
+        font-size: 4vw;
+    }
+
+    .Section3_Alliance_Main_Container {
+        margin-top: 10vw;
+        /* width: 80%; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Section3_Alliance_Heading1 {
+        font-size: 5vw;
+        width: 80%;
+    }
+
+    .Section3_Alliance_Heading2 {
+        font-size: 6vw;
+        width: 80%;
+        line-height: 7vw;
+    }
+
+    .Section3_Alliance_Heading_para {
+        width: 80%;
+        font-size: 4vw;
+        line-height: 6vw;
+        text-align: justify;
+        margin: 4vw auto 2vw auto;
+    }
+
+    .Section3_Alliance_Container_Icons_Container {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .Single_Alliance_container_Icon {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Image_Alliance_container_image {
+        width: 20vw;
+        height: 20vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2vw;
+    }
+
+    .Image_Alliance_container_image img {
+        object-fit: cover;
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .Horizontal_Alliance_row {
+        width: 90%;
+    }
+
+    .Cards_Alliance_Sub_head {
+        font-size: 5vw;
+        height: fit-content;
+    }
+
+    .Cards_Alliance_Name {
+        font-size: 4vw;
+        width: 80%;
+        line-height: 6vw;
+    }
+
+    .Cards_Alliance_Heading {
+        font-size: 4vw;
+    }
+
+    .BlueLayer_HeroBanner {
+        width: 100%;
+    }
+
+    .BlueLayer_HeroBanner img {
+        width: 100%;
+    }
+
+    .Alliance_layer4_part1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Alliance_layer4_part1_heading {
+        font-size: 5vw;
+    }
+
+    .Alliance_layer4_part1_heading2 {
+        font-size: 6vw;
+        width: 80%;
+    }
+
+    .Alliance_layer4_cards_outer {
+        margin-top: 3vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Alliance_layer4_card {
+        width: 80%;
+        height: fit-content;
+        padding: 3vw;
+    }
+
+    .Alliance_layer4_card_logo {
+        font-size: 5vw;
+    }
+
+    .Alliance_layer4_card_para {
+        width: 100%;
+        font-size: 4vw;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        text-align: justify;
+    }
+
+    .card_bottom_logo,
+    .Alliance_card_bottom_logo {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .Alliance_card_bottom_heading {
+        font-size: 4vw;
+    }
+
+    .Alliance_card_bottom_para {
+        font-size: 4vw;
+    }
+
+    .Alliance_layer4_card_bottom {
+        column-gap: 3vw;
+    }
+
+    .AlliancePartner_Main_Container {
+        margin-top: 18vw;
+    }
+
+    .alliance_right_said {
+        row-gap: 1vw;
+    }
+
+    .alliance_right_said h3 {
+        font-size: 5vw;
+        margin-bottom: 2vw;
+    }
+
+    .alliance_right_said p {
+        font-size: 3vw;
+    }
+      .alliance_right_button {
+    width: 40vw;
+    height: 10vw;
+    font-size: 3.5vw;
+    border-radius: 2vw;
+    display: flex;
+    gap: 1.5vw;
+    justify-content: center;
+    align-items: center;
+  }
+}

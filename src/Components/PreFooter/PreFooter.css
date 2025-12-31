@@ -1,0 +1,188 @@
+.PreFooter_Main {
+    width: 88vw;
+    height: 25vw;
+    margin: 0 auto;
+    background-color: #020133;
+    /* padding: 2vw 4vw;     */
+    border-radius: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+}
+
+.Heading_PreFooter {
+    /* font-family: Montserrat; */
+    font-weight: 700;
+    font-size: 3.5vw;
+    line-height: 100%;
+    letter-spacing: .05vw;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 2vw;
+}
+
+.Para_PreFooter {
+    width: 90%;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.1vw;
+    line-height: 1.6vw;
+    letter-spacing: .01vw;
+    color: #FFFFFF;
+    margin-top: -1vw;
+    text-align: center;
+}
+
+.Button1,
+.Button22 {
+    width: 14vw;
+    height: 4vw;
+    border-radius: 20px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1.1vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    border: none;
+    cursor: pointer;
+}
+.Button1:hover,
+.Button22:hover{
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(190, 188, 188, 0.589);
+    transition: .5s linear;
+ }
+
+.Button22 {
+    background-color: #FFA59A;
+    color: #FFFFFF;
+}
+
+.Button1 {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.Buttons_Container {
+    display: flex;
+    gap: 2vw;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-box {
+    position: relative;
+    background: white;
+    padding: 2vw;
+    border-radius: 1vw;
+    width: 38vw;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+
+}
+
+.modal-box h2 {
+    font-size: 1.5vw;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.Label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 1vw;
+    color: rgb(58, 80, 121);
+;
+}
+
+.Input {
+    padding: .5vw;
+    border-radius: .5vw;
+    border: 1px solid #ccc;
+    font-size: .8vw;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-buttons button {
+    padding: .5vw 1vw;
+    border: none;
+    border-radius: .6vw;
+    background-color: #FFA59A;
+    color: white;
+    cursor: pointer;
+}
+
+.form-buttons button[type="button"] {
+    background-color: #758cba;
+}
+
+.form textarea {
+    resize: none;
+    height: 12vh;
+}
+.Cancel_and_form_head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #3E4E6B;
+
+}
+.Icons_X{
+    cursor: pointer;
+    font-size: 1.4vw;
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+    .Label {
+        padding: 1vw;
+        font-size: 3vw;
+    }
+
+    .Input {
+        font-size: 2vw;
+        padding: 1.2vw;
+
+    }
+
+    .modal-box {
+        background: white;
+        padding: 4vw;
+        border-radius: 1vw;
+        width: 80vw;
+    }
+
+    .modal-box h2 {
+        font-size: 4vw;
+    }
+
+    .form textarea {
+        height: 10vh;
+    }
+    .Icons_X{
+        cursor: pointer;
+        font-size: 3vw;
+    }
+
+}
