@@ -26,7 +26,7 @@ export const Footer = () => {
 
           <p className="Contact_heading">Call Us</p>
           <p className="Contact_sub_headings">
-            <a href="tel:+919606939773">+91 9606939773</a>
+            <a href="tel:+919606939772">+91 9606939772</a>
           </p>
 
           <p className="Contact_heading">Email us</p>

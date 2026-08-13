@@ -181,14 +181,14 @@ const ContactForm = () => {
           <h3>Info</h3>
           <div>
             {/* <p>reachus@sapienceminds.com</p>
-            <p>+91 9606939773</p> */}
+            <p>+91 9606939772</p> */}
             <p>
               <a href="mailto:reachus@sapienceminds.com">
                 reachus@sapienceminds.com
               </a>
             </p>
             <p>
-              <a href="tel:+919606939773">+91 9606939773</a>
+              <a href="tel:+919606939772">+91 9606939772</a>
             </p>
 
             <p>Bengaluru, Karnataka, India</p>
