@@ -1,0 +1,149 @@
+/* NotFound.css */
+.notfound-container {
+    text-align: center;
+    padding: 4rem 1.5rem;
+    font-family: sans-serif;
+    background-color: #fff;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.notfound-404-wrapper {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.notfound-404-background {
+    font-size: 130px;
+    font-weight: bold;
+    color: #f3f4f6;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    user-select: none;
+    z-index: 0;
+}
+
+.notfound-circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 6px solid #4f7cf7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #fff;
+    z-index: 1;
+    animation: TopButtom 3s infinite linear .2s;
+}
+
+@keyframes TopButtom {
+    0% {
+        transform: translateY(0%);
+    }
+
+    25% {
+        transform: translateY(-10%);
+
+    }
+    50% {
+        transform: translateY(0%);
+
+    }
+    75% {
+        transform: translateY(15%);
+
+    }
+    100%{
+                transform: translateY(0%);
+
+    }
+}
+
+.notfound-circle-text {
+    font-size: 32px;
+    font-weight: bold;
+    color: #4f7cf7;
+}
+
+.notfound-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #1e1e2d;
+}
+
+.notfound-subtitle {
+    font-size: 16px;
+    color: #6b7280;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.notfound-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.notfound-home-btn {
+    background-color: #4f7cf7;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(79, 124, 247, 0.3);
+    min-width: 120px;
+}
+
+.notfound-back-btn {
+    background-color: #fff;
+    color: #4f7cf7;
+    border: 2px solid #e5e7eb;
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    min-width: 120px;
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+    .notfound-404-background {
+        font-size: 80px;
+    }
+
+    .notfound-circle {
+        width: 90px;
+        height: 90px;
+    }
+
+    .notfound-circle-text {
+        font-size: 24px;
+    }
+
+    .notfound-title {
+        font-size: 20px;
+    }
+
+    .notfound-subtitle {
+        font-size: 14px;
+    }
+
+    .notfound-home-btn,
+    .notfound-back-btn {
+        font-size: 14px;
+        padding: 0.6rem 1.2rem;
+    }
+}

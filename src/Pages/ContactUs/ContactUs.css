@@ -1,0 +1,250 @@
+.reach-container {
+  position: relative;
+  height: 100dvb;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 9vw;
+  margin-bottom: 4vw;
+}
+
+.reach-box {
+  width: 88%;
+  height: 110%;
+  display: flex;
+  background: white;
+  position: relative;
+  /* padding: 200px 40px 40px 40px; */
+  box-sizing: border-box;
+  /* margin-bottom: 6vw; */
+  box-shadow: 0px 0px 47px 3px #00000040;
+}
+
+.diamond {
+  position: absolute;
+  top: 4vw;
+  left: 4vw;
+  width: 3.2vw;
+  height: 3.2vw;
+  border: .4vw solid black;
+  transform: rotate(45deg);
+}
+
+.left-accent,
+.right-accent {
+  position: absolute;
+  background: #ED7272;
+}
+
+.left-accent {
+  width: 4vw;
+  height: 3vw;
+  left: 0;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+.right-accent {
+  width: 14vw;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
+.reach-form {
+  position: absolute;
+  top: 8vw;
+  left: 16vw;
+  width: 28vw;
+}
+
+.reach-form h2 {
+
+  font-weight: 700;
+  font-size: 2vw;
+  line-height: 100%;
+  /* letter-spacing: 0%; */
+  text-transform: capitalize;
+  /* color: #000000; */
+        color: #3E4E6B;
+
+}
+
+.subtext {
+  margin-top: 1vw;
+  color: #000000;
+  /* font-family: Inter; */
+  font-weight: 300;
+  font-size: 1.1vw;
+  /* line-height: 100%; */
+  letter-spacing: .01vw;
+  text-transform: capitalize;
+
+}
+
+.reach-form label {
+  display: block;
+  margin-top: 1.5vw;
+  /* font-family: Inter; */
+  font-weight: 700;
+  font-size: 1.6vw;
+  text-transform: capitalize;
+        color: #3E4E6B;
+}
+
+.reach-form input,
+.reach-form textarea {
+  width: 100%;
+  border: none;
+  border-bottom: .2vw solid #D4CDCD;
+  outline: none;
+  /* padding: 5px 0; */
+  margin-top: .8vw;
+  font-size: 1vw;
+  height: 1.8vw;
+  resize: none;
+}
+.from-sub-container{
+  display: flex;
+  flex-direction: column;
+  align-items:start;
+}
+.reach-form button {
+  width: 100%;
+  margin-top: 1.2vw;
+  /* padding: .8vw 1.5vw; */
+  background: #FFA59A;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  height: 3.5vw;
+  font-size: 1.5vw;
+}
+
+.reach-info {
+  background: #232020;
+  color: white;
+  padding: 3vw;
+  position: absolute;
+  width: 31vw;
+  height: 22vw;
+  top: 10vw;
+  right: 0;
+}
+
+.corner-box {
+  position: absolute;
+  width: 4vw;
+  height: 3.2vw;
+  background: #ED7272;
+  top: -1.5vw;
+  left: -2vw;
+}
+
+.reach-info h3 {
+  font-size: 1.8vw;
+  font-weight: bold;
+  /* margin-bottom: 20px; */
+  margin-left: 1.5vw;
+  margin-top: 2vw;
+}
+
+.reach-info p {
+  margin: 1.5vw 0vw 0vw 5vw;
+  columns: #FFFAFA;
+  /* font-family: Inter; */
+  font-weight: 300;
+  font-size: 1vw;
+  letter-spacing: 0.08vw;
+}
+.reach-info p a{
+  color: white;
+  text-decoration: none;
+}
+
+.social-icons {
+  position: absolute;
+  bottom: 3vw;
+  left: .8vw;
+  display: flex;
+  gap: 1.5vw;
+}
+
+.social-icons svg {
+  font-size: 2.3vw;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+
+  .reach-box{
+    height: 85%;
+  }
+  .reach-container{
+    height:120vw;
+    margin-top: 18vw;
+   align-items: start;
+   margin-bottom: -5vw;
+  }
+
+  .diamond{
+    width: 5vw;
+    height: 5vw;
+  }
+  .corner-box{
+    width: 5vw;
+    height: 5vw;
+  }
+  .reach-form{
+    width: 40vw;
+    left: 10vw;
+    top: 12vw;
+  }
+  .reach-form h2{
+    font-size: 5vw;
+  }
+  .subtext{
+    font-size: 3vw;
+    font-family: 'Poppins', sans-serif;
+  }
+  .reach-form label{
+    font-size: 4vw;
+  }
+  .reach-form input, .reach-form textarea{
+    height: 4vw;
+    font-size: 3vw;
+    padding: 1vw 1vw 3vw 1vw;
+  }
+  .reach-info h3{
+    margin-top: -10vw;
+    font-size: 5vw;
+    text-align: start;
+  }
+  .reach-info p{
+    margin: 3vw 0 0 0vw;
+    font-size: 1.9vw;
+    width: 30vw;
+  }
+  .reach-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35vw;
+    height: 50vw;
+
+  }
+  .reach-form button{
+    font-size: 5vw;
+    height: 9vw;
+    padding: 0.5vw;
+    border-radius: 5vw;
+  }
+
+  .social-icons svg{
+    font-size: 3vw;
+  }
+}

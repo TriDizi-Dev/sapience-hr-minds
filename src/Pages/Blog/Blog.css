@@ -1,0 +1,228 @@
+.blog_card_outer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4vw;
+  margin-top: 5vw;
+  width: 100%;
+  margin-bottom: 3vw;
+  /* border: 1px solid red; */
+}
+
+/* .blog_card {
+  width: 25vw;
+  height: fit-content;
+  position: relative;
+  background-color: white;
+  box-shadow: 0 1.5vw 2vw rgba(0, 0, 0, 0.1);
+  margin-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  align-items: center;
+  padding-bottom: 0.5vw;
+  transition: 2s ease-in-out;
+}
+.blog_card:hover{
+  transform: scale(2);
+  cursor: pointer;
+  box-shadow: 0 1.5vw 2vw rgba(246, 66, 66, 0.1);
+} */
+
+.blog_card {
+  width: 25vw;
+  height: fit-content;
+  position: relative;
+  background-color: white;
+  box-shadow: 0 1.5vw 2vw rgba(0, 0, 0, 0.1);
+  margin-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  align-items: center;
+  padding-bottom: 0.5vw;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.blog_card:hover {
+  transform: scale(1.05);
+  /* scale(2) is too big */
+  cursor: pointer;
+  box-shadow: 0 1.5vw 2vw rgba(0, 0, 0, 0.2);
+}
+
+
+.blog_card_img_content {
+  /* background-color: rgba(68, 21, 255, 0.826); */
+  background-color: #758CBA;
+  width: 20vw;
+  height: 8vw;
+  border-radius: 1vw;
+  position: absolute;
+  top: 4vw;
+  left: 2.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  word-spacing: 0vw;
+  color: white;
+  /* opacity: 1; */
+}
+
+.blog_card_img_text {
+  width: 19.5vw;
+  height: 7vw;
+  overflow-y: scroll;
+  padding-left: 0.5vw;
+  font-size: 0.95vw;
+  text-align: left;
+}
+
+.blog_card_img_text::-webkit-scrollbar {
+  display: none;
+}
+
+.blog_img {
+  width: 24vw;
+  height: 15vw;
+  /* margin-top: -1.5vw; */
+  border-radius: 1vw;
+  /* filter: blur(1px) */
+}
+
+.blog_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: auto;
+  /* height: 0vw; */
+  /* padding-left: 0.8vw; */
+  /* padding-right: 2vw; */
+  margin-top: 1.5vw;
+  width: 95%;
+  /* color:rgb(58, 80, 121); */
+
+}
+
+.blog_content_heading {
+  font-size: 0.7vw;
+  font-weight: 700;
+  /* width: 10vw; */
+}
+
+.blog_content_date {
+  font-size: 0.8vw;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 0.5vw;
+}
+
+.blog_content_right_text {
+  font-size: 0.9vw;
+  font-weight: 500;
+  border-bottom: 0.2vw solid rgba(124, 92, 252, 0.42);
+  cursor: pointer;
+}
+
+.blog_page_layer1 {
+  position: relative;
+}
+
+.backgroud_glow {
+  position: absolute;
+  width: 90vw;
+  height: 90vw;
+  top: 30vw;
+  left: 0;
+  z-index: -1;
+}
+
+.blog_prefooter {
+  margin-top: 5vw;
+  margin-bottom: 3vw;
+}
+
+
+.blogpage_layer4_outer_main {
+  margin-top: 6vw;
+  padding: 2vw;
+  position: relative;
+}
+
+.blog_left_content {
+  width: 70%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+  .blog_page_layer1 {
+    /* border: 2px solid red; */
+    margin-top: 8vw;
+  }
+
+  .blog_card_outer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .blog_card {
+    width: 85vw;
+    height: 90vw;
+    margin-top: 7vw;
+  }
+
+  .blog_img {
+    width: 85vw;
+    height: 65vw;
+    border-radius: 2vw;
+  }
+
+  .blog_content_heading {
+    font-size: 3vw;
+    width: 54vw;
+    margin-top: 2vw;
+  }
+
+  .blog_content_date {
+    font-size: 3vw;
+  }
+
+  .blog_left_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .blog_content_right_text {
+    font-size: 2.5vw;
+    margin-top: 2vw;
+  }
+
+  .blog_content {
+    padding: 1vw 2vw 1vw 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  .blog_card_img_content {
+    width: 75vw;
+    height: 30vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 4vw;
+    top: 15vw;
+
+  }
+
+  .blog_card_img_text {
+    font-size: 3vw;
+    width: 90%;
+    height: 20vw;
+  }
+}
